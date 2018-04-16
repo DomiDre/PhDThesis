@@ -1,0 +1,74 @@
+\documentclass[12pt,
+               paper=a4,
+               BCOR=8mm,
+               bibliography=totoc,
+               a4paper,
+               titlepage,
+               english,
+               listof=totoc,
+               % cleardoublepage=plain,
+               % open=right,
+              ]{scrbook}
+\providecommand{\main}{.}
+
+\input{\main/config/packages}
+\input{\main/bibliography}
+\input{\main/config/config}
+\input{\main/config/aliases}
+
+\graphicspath{{\main/images/}}
+\begin{document}
+% Title page
+\frontmatter % start roman numbering
+\include{\main/components/titlepage/titlepage}
+
+\frontmatter % restart roman numbering
+% Abstract
+\addchap*{Abstract}
+\subfile{\main/components/abstract/abstract}
+\addchap*{Kurzfassung}
+\subfile{\main/components/abstract/abstractGerman}
+% \end{abstract}
+
+\cleardoublepage
+\pdfbookmark{\contentsname}{toc} %add table of content to outlines
+\tableofcontents
+
+\mainmatter % starts arabic numbering
+\subfile{\main/chapters/monolayers/monolayers}
+% \cleardoublepage
+
+% \subfile{./chapters/colloidal_crystal/colloidal_crystal_report}
+
+% \cleardoublepage
+% \subfile{./chapters/monolayer_of_cobaltferr ite_cubes_spheres/monolayer_cobaltferrite}
+
+% \cleardoublepage
+% \subfile{./chapters/two_layers_of_cobaltferrite_nanopraticles/twolayer_cobaltferrite}
+
+% \cleardoublepage
+% \subfile{./chapters/oriented_hematite_spindles/hematite_spindles}
+
+% \cleardoublepage
+% \subfile{./chapters/superball/superball_report}
+
+% \cleardoublepage
+% \subfile{./chapters/mesocrystal_gisans/mesocrystal_gisans}
+
+% \cleardoublepage
+% \subfile{./chapters/software/software_report}
+
+% \cleardoublepage
+% \subfile{./chapters/other_projects/other_projects}
+
+% \cleardoublepage
+% \subfile{./chapters/beam_times/beam_times}
+
+\listoffigures
+
+\listoftables
+
+% \bibliographystyle{plain}
+% \bibliography{literature}
+\printbibliography
+\end{document}

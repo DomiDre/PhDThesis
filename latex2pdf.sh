@@ -1,0 +1,4 @@
+pdflatex dresen_thesis -draftmode
+biber dresen_thesis
+pdflatex dresen_thesis -draftmode
+pdflatex dresen_thesis
