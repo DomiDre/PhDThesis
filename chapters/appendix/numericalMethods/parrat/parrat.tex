@@ -1,0 +1,56 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+\renewcommand{\thisPath}{\main/chapters/appendix/numericalMethods/parrat}
+\begin{document}
+\section{Parrats algorithm}\label{ch:appendix:numericalMethods:parrat}
+Parrats algorithm is a fast algorithm to calculate the specular reflectivity for a given model of a thin film.
+We present a short, intuitive derivation, which should help to understand its logic. The problem in x-ray and neutron reflectometry is essentially to solving the 1-dim.
+Schr\"odinger equation for a locally varying potential
+\begin{equation}
+H \eq \frac{\hbar^2 k^2}{2m_n} + \left<V(z)\right>,
+\end{equation}
+with
+\begin{equation}
+\left<V(z)\right> \, = \, 4\pi \frac{\hbar^2}{2 m_n} \mathrm{SLD}(z).
+\end{equation}
+$\left<V(z)\right> $ is given by the lateral averaged scattering length of the scattering nuclei in the studied thin film at height $z$. The film is considered to be semi-infinite, where for $z \rightarrow -\infty$, the SLD takes the value of the substrate. 
+
+Parrats algorithm can be derived from the scattering matrix formalism, where the scattering matrix describes for a given system, how incoming amplitudes of basis states transform to the outgoing amplitudes
+\begin{equation}
+\begin{pmatrix}\psi_\mathrm{left}^\mathrm{out}\\\psi_\mathrm{right}^\mathrm{out}\end{pmatrix} \, = \, S \begin{pmatrix}\psi_\mathrm{left}^\mathrm{in}\\\psi_\mathrm{right}^\mathrm{in}\end{pmatrix}.
+\end{equation}
+The structure of the $S$-matrix is given by the reflectivity and transmission amplitudes
+\begin{equation}
+S \, = \, \begin{pmatrix}
+r& t^\prime\\
+t& r^\prime
+\end{pmatrix},
+\end{equation}
+where the amplitudes quantify the proportions of the incoming states changing into the outgoing states
+for basis states normalized to their flux, the $S$-matrix is unitary and calculations are numerically stable (in strong contrast to transfer matrix calculations, which diverge numerically for large systems)
+in the $S$-matrix formalism, systems can be separated and the $S$-matrix of the separated system can be calculated individually. Separate $S$-matrices $S_1, \, S_2$ can be merged to a single $S$-matrix in the end via the composition formulas
+\begin{align}
+r &= r_1 + t_1^{\prime} r_2 \left( 1-r_1^{\prime} r_2 \right)^{-1} t_1, \\
+t &= t_2\left( 1-r_1^{\prime} r_2 \right)^{-1} t_1, \\
+t^{\prime} &= t_1^{\prime} \left( 1- r_2 r_1^{\prime} \right)^{-1} t_2^{\prime}, \\
+r^{\prime} &= r_2^{\prime} + t_2 r_1^{\prime} \left( 1-r_2 r_1^{\prime} \right)^{-1} t_2^{\prime},
+\end{align}
+which basically represent Feynman paths summing over all possible reflections and transmissions.
+Parrats algorithm basically takes the first formula for the reflection amplitude $r$ of the composition rules and simplifies the given system to subsequent step potentials, for which each individual scattering matrix is given by Fresnel's formula
+\begin{equation}
+S_\mathrm{Fresnel} \, = \, \frac{1}{k_1+k_2} \begin{pmatrix}
+k_1-k_2& 2 \sqrt{k_1 k_2}\\
+2 \sqrt{k_1 k_2} & k_2 - k_1
+\end{pmatrix},
+\end{equation}
+with $k_i$ the wave vector on the individual side of the step potential, evaluated by $\hbar k\,=\,\sqrt{2m(E-V_i)}$.
+The translation across a constant potential of width $a$ is given by the scattering matrix 
+\begin{equation}
+S_\mathrm{Translation} \, = \, \begin{pmatrix}
+0 & e^{-\imag k a}\\
+e^{-\imag k a} & 0
+\end{pmatrix}.
+\end{equation}
+Parrats algorithm does not allow to reuse results obtained for periodic parts in a system as the calculated reflection amplitude is only one fourth of the scattering matrix. However if one includes in the algorithm the calculation of the complete $2\times2$ $S$-matrix, one can greatly decrease the calculation time needed for large and periodic systems (one pays the price of calculating four times the amount needed for the reflection amplitude, but on the other hand only needs to calculate the scattering matrix of a periodic part once)
+however as increasing roughness across a layer system might destroy any periodicity it remains questionable if this algorithm enhancement is of use in any real life application
+\end{document}

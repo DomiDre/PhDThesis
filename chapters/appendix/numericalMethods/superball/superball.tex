@@ -1,0 +1,38 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+\renewcommand{\thisPath}{\main/chapters/appendix/numericalMethods/superball}
+\begin{document}
+\section{Superball Form Factor}\label{ch:appendix:numericalMethods:superballFormfactor}
+
+The volume of a single superball is defined by all points $(x,\, y,\, z)$ that solve
+\begin{align}
+x^{2p} + y^{2p} + z^{2p} < R^{2p},
+\end{align}
+where R is the radius of the superball.  The case $p=1$ is equivalent to the definition of a sphere and the case $p=\infty$ corresponds to a cube with edge length $a=2R$. 
+The single-particle form factor $P(q)$, including size and orientation distribution, is calculated in Cartesian coordinates by evaluating
+\begin{align}
+I(q) = I_0 \Delta \rho^2
+\frac{\int \int \int \dint \varphi \dint \theta \dint \tilde{R}  \sin (\theta) g(\tilde{R})  V_p^2 P(q)}
+{\int \int \int \dint \varphi \dint \theta \dint \tilde{R} \sin (\theta)  g(\tilde{R}) }, 
+\label{eq:superball_intensity_equation}
+\end{align}
+where the oriented form factor is calculated by
+\begin{eqnarray}
+V_p^2 P(q) &=& \realpart (V_p p(q))^2 + \imagpart (V_p p(q))^2\\
+\realpart (V_p p(q)) &=& \frac{2R^3}{q_z R} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \cos(R q_x x + R q_y y)  \sin (q_z R \zeta),\\
+\imagpart (V_p p(q)) &=& \frac{2R^3}{q_z R} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \sin(R q_x x + R q_y y) \sin (q_z R \zeta),\\
+\gamma &=& \sqrt[2p]{1-x^{2p}}, \\
+\zeta &= &\sqrt[2p]{1-x^{2p} -y^{2p}},
+\end{eqnarray}
+and a log-normal size distribution is applied with
+\begin{align}
+g(R) = \frac{1}{\sqrt{2 \pi} \sigma_R R} \exp \Bigg[ - \frac{1}{2} \bigg(\frac{\log(R) - \log(R_0)}{\sigma_R} \bigg)^2 \Bigg]. 
+\end{align}
+Using the integration method dqag from the fortran library QUADPACK (uses Gauss-Kronrod quadrature algorithm, works reliably with functions on real numbers with double precision) the real and imaginary part of the form factor amplitude is evaluated numerically at the given $q$ values.
+As $5$ integrals the evaluation is computationally intensive and efficient algorithms have to be applied.
+The size distribution is evaluated using Gauss-Hermite quadrature as described in \ref{ch:appendix:numericalMethods:sizeDistributions}. 
+For the orientation distribution, the cube symmetry of the superball reduces the orientation averaging to angles $\varphi,\, \theta \in (0, 90 ^\circ)$. 
+Sanity checks at multiple points in the parameter space have shown that a trapezoidal rule with $3^{\circ}$ step-size is sufficient for convergence.
+% Calculating the superball form factor for 200 $q$-values takes on a modern eight-core system about half an hour, if the size and orientation distribution integration is performed over $30$ steps each ($3 ^\circ$ steps). 
+The result is multiplied with a scaling constant $I_0=N/V$ and scattering contrast $\Delta \rho^2$ to respect the particle concentration and scattering contrast relative to the medium.
+\end{document}

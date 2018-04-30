@@ -1,0 +1,39 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+
+\begin{document}
+\section{Numerical Evaluation of Size Distributions}\label{ch:appendix:numericalMethods:sizeDistributions}
+Even with the most of efforts it is yet unavoidable to have a certain size distribution in every batch of nanoparticles in the range of $5 - 15 \%$.
+Therefore, a very common part in every presented model of this thesis are integral containing gaussian or lognormal distribution function to phenomenologically represent the spread in size. Where the gaussian function can be reasoned with by the central limit theorem, the lognormal distribution is used to further implement the bound of having only non-negative parameter values.
+
+Both integrals can be treated as the same problem after a variable substitution. 
+The gaussian size distribution integral
+\begin{align}
+\bar{f}(\mu) \eq \int_{-\infty}^\infty f(x) \frac{1}{\sqrt{2\pi} \sigma} \exp \Bigg[- \frac{1}{2} \bigg(\frac{x-\mu}{\sigma}\bigg)^2 \Bigg] \dint x,
+\end{align}
+transforms via $x \eq \mu + \sqrt{2} t \sigma$ like the lognormal size-distribution integral
+\begin{align}
+\bar{f}(\mu) \eq \int_{0}^\infty f(x) \frac{1}{\sqrt{2\pi} \sigma x} \exp \Bigg[- \frac{1}{2} \bigg(\frac{\log(x)-\log(\mu)}{\sigma}\bigg)^2 \Bigg] \dint x
+\end{align}
+by $x \eq \mu \exp(\sqrt{2} t \sigma)$ to
+
+\begin{align}
+\bar{f}(\mu) \eq \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty f(t) \exp \big(- t^2 \big) \dint t.
+\end{align}
+
+When this function can not be solved analytically and the computation efficiency is of importance, this type of integral is best solved by applying Gauss-Hermite quadrature. Here, the integral is approximated by
+\begin{align}
+\int_{-\infty}^\infty f(t) \exp \big(- t^2 \big) \dint t \approx \sum_{i=1}^{n} w_i f(t_i),
+\end{align}
+where $t_{i}$ are the roots of the $n-\mathrm{th}$ Hermite polynomial defined by
+\begin{align}
+H_n (x) \eq \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k}
+\end{align}
+and the weights $w_{i}$ can be calculated by
+\begin{align}
+w_i \eq \frac{2^{n-1} n! \sqrt{\pi}}{n^2 [H_{n-1}(t_i)]^2}.
+\end{align}
+The order $n$ determines how many function calls are evaluated to estimate the integral. 
+In general both roots and the weights are tabulated for various orders of $n$ and it is straight forward to evaluate integrals by Gauss-Hermite quadrature. 
+Generally, a Gauss-Hermite quadrature of order $n$ gives the exact result when f(t) is a polynomial of degree $2n-1$ or less.
+\end{document}
