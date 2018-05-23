@@ -1,13 +1,13 @@
 \documentclass[12pt,
-               paper=a4,
-               BCOR=8mm,
-               bibliography=totoc,
-               a4paper,
-               titlepage,
-               listof=totoc,
-               % cleardoublepage=plain,
-               % open=right,
-              ]{scrbook}
+  paper=a4,
+  BCOR=8mm,
+  bibliography=totoc,
+  a4paper,
+  titlepage,
+  listof=totoc,
+  % cleardoublepage=plain,
+  % open=right,
+ ]{scrbook}
 \providecommand{\main}{.}
 
 \input{\main/config/packages}
@@ -18,10 +18,10 @@
 \graphicspath{{\main/images/}}
 \begin{document}
 % Title page
-\frontmatter % start roman numbering
+\frontmatter % start Roman numbering
 \include{\main/components/titlepage/titlepage}
 
-\frontmatter % restart roman numbering
+\frontmatter % restart Roman numbering
 % Abstract
 \addchap*{Abstract}
 \subfile{\main/components/abstract/abstract}
@@ -33,7 +33,7 @@
 \pdfbookmark{\contentsname}{toc} %add table of content to outlines
 \tableofcontents
 
-\mainmatter % starts arabic numbering
+\mainmatter % starts Arabic numbering
 
 \subfile{\main/chapters/introduction/introduction}
 \subfile{\main/chapters/theoreticalBackground/theoreticalBackground}
