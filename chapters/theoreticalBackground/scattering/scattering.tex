@@ -12,16 +12,9 @@ In this work, multiple x-ray and neutron scattering techniques are applied to st
 To understand the rich information that is obtained by those techniques, \refsec{sec:theoreticalBackground:scattering:scatteringTheory} presents in the following a brief introduction to the general scattering theory and \refsec{sec:theoreticalBackground:scattering:interactionWithMatter} to the interaction of x-ray and neutrons with matter.
 Then the theory behind the mainly applied techniques are discussed: small-angle scattering (\refsec{sec:theoreticalBackground:scattering:SASNanoparticles}), grazing-incidence small-angle scattering (\refsec{sec:theoreticalBackground:scattering:GISAS}) and reflectometry (\refsec{sec:theoreticalBackground:scattering:reflectometry}).
 \subsection{Scattering Theory}\label{sec:theoreticalBackground:scattering:scatteringTheory}
-Scattering theory describes the scattering of waves and particles from a scattering center as depicted in \reffig{fig:theoreticalBackground:scattering:scatteringTheory:scatteringProcess}. 
-\begin{figure}[tb]
-  \centering
-  \includegraphics{scatteringTheory_scatterProcess}
-  \caption{\label{fig:theoreticalBackground:scattering:scatteringTheory:scatteringProcess}General scattering process. An incoming wave with wave vector $\vec{k}_i$ (green) interacts with a scattering center (yellow) and produces an outgoing wave with wave vector $\vec{k}_o$ (red).}
-\end{figure}
-
-An incoming wave $\vec{k}_i$ with defined direction can interact with a scattering center and due to this deviate from its straight path, exiting as outgoing wave $\vec{k}_o$. 
-If energy is conserved ($|\vec{k}_i| = |\vec{k}_f|$) the process is called elastic and otherwise inelastic.
-The vector describing the change from one vector to the other is conventionally noted by
+In quantum mechanics, scattering theory describes the scattering of particles, \textit{e.g.} neutrons or x-ray photons, from a scattering center as depicted in \reffig{fig:theoreticalBackground:scattering:scatteringTheory:scatteringProcess}. An incoming wave $\vec{k}_i$ with defined direction can interact with a scattering center and due to this deviate from its straight path, exiting as outgoing wave $\vec{k}_o$. 
+If energy is conserved ($|\vec{k}_i| = |\vec{k}_o|$) the process is called elastic and otherwise inelastic.
+The vector describing the change from one momentum to the other is noted by
 \begin{align}
   \vec{q} \eq \vec{k}_o - \vec{k}_i.
 \end{align}
@@ -31,21 +24,27 @@ For an elastic process the magnitude of $\vec{q}$ is directly determined by the 
 \end{align}
 where it is used that $|\vec{k}_i| = \frac{2 \pi}{\lambda}$.
 
-The scattering theory describes the transition probability in dependence of the properties of the incoming wave, scattering center and their interaction potential. 
-Thereby it provides the expected scattering intensity for a given model, which can be compared to experimental observations. 
-Mathematically, the problem that needs to be solved is the Schr\"odinger equation
+\begin{figure}[tb]
+  \centering
+  \includegraphics{scatteringTheory_scatterProcess}
+  \caption{\label{fig:theoreticalBackground:scattering:scatteringTheory:scatteringProcess}General scattering process. An incoming wave with wave vector $\vec{k}_i$ (green) interacts with a scattering center (yellow) and produces an outgoing wave with wave vector $\vec{k}_o$ (red).}
+\end{figure}
+
+Scattering theory determines the transition probabilities for an particle to go from an incoming state to an outgoing state - respectively defined by their energy, momentum and polarization - in dependence of the properties of the particles, the scattering center and their interaction potential.
+Thereby it provides a method to calculate from a model the expected scattering intensity, which can be compared to an actual scattering experiment.
+Considering only non-relativistic physics, the problem that needs to be solved for this is the Schr\"odinger equation
 \begin{align}
   \label{eq:theoreticalBackground:scattering:scatteringTheory:schrodingerEquation}
   \bigg(\frac{p^2}{2m} + V \bigg) \ket{\psi} \eq E \ket{\psi},
 \end{align}
-with the boundary condition $V(\vec{r}) \eq 0$ for $\vec{r}$ outside the scattering region. Here it is assumed that the scattering particles are non-interacting, which is a well approximation for photons and neutrons. 
+with the boundary condition $V(\vec{r}) \eq 0$ for $\vec{r}$ outside the scattering region. In quantum mechanics, it is assumed that the scattering particles are non-interacting among themselves, which is a well approximation for photons and neutrons. 
 The interaction between the wave and the scattering center is described completely by $V(\vec{r})$ and is discussed in further detail in \refsec{sec:theoreticalBackground:scattering:interactionWithMatter}. 
 To solve \refeq{eq:theoreticalBackground:scattering:scatteringTheory:schrodingerEquation}, one defines the Hamiltonians
 \begin{align}
   H_0 &\eq \frac{p^2}{2m},\\
   H &\eq H_0 + V,
 \end{align}
-and define $\ket{\phi}$ as the solution of the free Schr\"odinger equation
+and defines $\ket{\phi}$ as the eigenstates of the free Schr\"odinger equation
 \begin{align}
   H_0 \ket{\phi} &\eq E \ket{\phi}.\\
 \end{align}
@@ -53,7 +52,7 @@ Now, naively, the Schr\"odinger equation can be rearranged as
 \begin{align}
   \ket{\psi} &\eq \frac{1}{E - H_0} V \ket{\psi},
 \end{align}
-but this would not fulfil the boundary condition for $V(\vec{r}) = 0$ and has an ill-defined denominator. 
+but this would not fulfil the boundary condition for $V(\vec{r}) = 0$ and has an ill-defined denominator for the eigenstates. 
 Therefore, the correct solution needs the addition of the free particle solution and a definition how the pole is supposed to be treated. 
 The latter is done by adding a infinitely small and positively complex value $i\epsilon$ to the denominator. The resulting equation
 \begin{align}
@@ -63,39 +62,56 @@ is known as the Lippmann-Schwinger equation and it solves the Schr\"odinger equa
 In position space, it reads as integral equation
 \begin{align}
   \psi (\vec{r}) &\eq \phi(\vec{r}) + \int \dint \vec{r}^\prime \bra{\vec{r}}\frac{1}{E - H_0 + i \epsilon} \ket{\vec{r}^\prime} V (\vec{r}^\prime)\psi (\vec{r}^\prime),
+  \label{eq:theoreticalBackground:scattering:scatteringTheory:LippmanSchwingerIntegralEquation}
 \end{align}
 where it is used that the single-particle potential is diagonal in position space $\bra{\vec{r}} V \ket{\vec{r}^\prime} = V(\vec{r}) \delta(\vec{r} - \vec{r}^\prime)$. 
-The solution for the free Hamiltonian is given by as a plane wave solution
+The simplest solution for the free Hamiltonian is given by a plane wave
 \begin{align}
-  \phi(\vec{r}) \eq e^{i\vec{k} \cdot \vec{r}},
+  \phi_{\vec{k}}(\vec{r}) \eq e^{i\vec{k} \cdot \vec{r}}.
 \end{align}
-and the matrix element within the integral is solved by
+As a plane wave extends infinitely in space with constant amplitude, plane waves are not normalizable.
+To describe physical particles with finite width, a superposition of plane waves can be used
 \begin{align}
-  \bra{\vec{r}}\frac{1}{E - H_0 + i \epsilon} \ket{\vec{r}^\prime} \eq -\frac{2m}{4 \pi \hbar^2} \frac{e^{ik|\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|}.
+  \varphi(\vec{r}) \eq \frac{1}{\sqrt{2 \pi}^3} \int \dint \vec{k} \hat{\varphi} (\vec{k}) \phi_{\vec{k}}(\vec{r}),
+\end{align}
+where $\hat{\varphi} (\vec{k})$ describes the probability amplitude for a momentum $\vec{k}$ and is essentially the Fourier transform of $\varphi(\vec{r})$. 
+However, as there is no term that couples momenta $\vec{k}$ and $\vec{k}^\prime$, it is sufficient to solve the Schr\"odinger equation just for a single plane wave and form the wave packet in the end.
+
+The matrix element within the integral equation \refeq{eq:theoreticalBackground:scattering:scatteringTheory:LippmanSchwingerIntegralEquation} can be solved straight-forward in momentum space using the residue theorem and results in
+\begin{align}
+  \bra{\vec{r}}\frac{1}{E - H_0 + i \epsilon} \ket{\vec{r}^\prime} \eq -\frac{m}{2 \pi \hbar^2} \frac{e^{ik|\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|}.
 \end{align}
 Thus the integral representation of the Lippmann-Schwinger equation is
 \begin{align}
-  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \int \dint \vec{r}^\prime \frac{e^{ik|\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|} V (\vec{r}^\prime)\psi (\vec{r}^\prime).
+  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{m}{2 \pi\hbar^2} \int \dint \vec{r}^\prime \frac{e^{ik|\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|} V (\vec{r}^\prime)\psi (\vec{r}^\prime).
 \end{align}
-The resulting wave function can be nicely interpret as a superposition of the incoming plane wave with spherical waves generated at $\vec{r}^\prime$, modulated by the interaction potential $V(\vec{r}^\prime)$ and the wave field at this point.
+The resulting wave function can be nicely interpret as a sum of the incoming plane wave and the scattered wave, which is itself a superposition of spherical waves generated at $\vec{r}^\prime$ and that is modulated by the interaction potential $V(\vec{r}^\prime)$ and the wave field at this point.
+
 In a standard experimental setup, the detector is often at a position that is far away relative to the scattering volume $r^\prime \ll r$. 
 Therefore a good approximation and large simplification in calculation is
 \begin{align}
-  |\vec{r} - \vec{r}^\prime| \eq r - \frac{\vec{r} \cdot \vec{r}^\prime}{r} + \mathcal{O}\bigg(\frac{{r^\prime}^2}{r}\bigg),\\
-  \frac{1}{|\vec{r} - \vec{r}^\prime|} \eq \frac{1}{r} + \mathcal{O}\bigg(\frac{r^\prime}{r^2} \bigg),
+  |\vec{r} - \vec{r}^\prime| \eq& r - \frac{\vec{r} \cdot \vec{r}^\prime}{r} + \mathcal{O}\bigg(\frac{{r^\prime}^2}{r}\bigg),\\
+  \frac{1}{|\vec{r} - \vec{r}^\prime|} \eq& \frac{1}{r} + \mathcal{O}\bigg(\frac{r^\prime}{r^2} \bigg),\\
+  \vec{k}^\prime \eq& k \vec{r} / r,
 \end{align}
-then the Lippmann-Schwinger equation reads
+where the latter reads that as the detector is far away relative to the sample size, the outgoing wave points essentially into the direction of the detector. 
+Then the Lippmann-Schwinger equation reads
 \begin{align}
-  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{k}^\prime \cdot \vec{r}^\prime} V (\vec{r}^\prime)\psi (\vec{r}^\prime),
+  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{m}{2 \pi\hbar^2} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{k} \cdot \vec{r}^\prime} V (\vec{r}^\prime)\psi (\vec{r}^\prime),
 \end{align}
-where it was again used that the detector is far away relative to the sample size and thus the outgoing wave points essentially into the direction of the detector  $\vec{k}^\prime = k \vec{r} / r$.
+and the scattered wave only reads as a single spherical wave $e^{ikr} / r$ with an amplitude determined by the interaction of the wave function with the scattering center potential.
 
 The Lippmann-Schwinger equation can be used to solve the scattering problem for any potential $V$ iteratively by starting on the right hand side of the equation with the free particle solution for $\psi (\vec{r})$ and then putting the solution back into the Lippmann-Schwinger equation, \etc.
 The first iteration 
 \begin{align}
-  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} V (\vec{r}^\prime),\label{eq:theoreticalBackground:scattering:scatteringTheory:firstBornApproximation}
+  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{m}{2 \pi\hbar^2} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} V (\vec{r}^\prime),\label{eq:theoreticalBackground:scattering:scatteringTheory:firstBornApproximation}
 \end{align}
 is known as the Born approximation and is the starting point for many further calculations. It fully describes the case where the wave undergoes only a single scattering event as it passes through the sample. 
+
+Finally, the measured quantity in an experiment is the differential cross section, which can be read from the derived equation as the squared amplitude of the spherical wave. In Born approximation this is
+\begin{align}
+  \frac{\dint \sigma}{\dint \Omega} \eq \bigg( \frac{m}{2 \pi\hbar^2} \int \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} V (\vec{r}^\prime) \bigg)^2.
+\end{align}
 
 \subsection{Interaction of X-rays and Neutrons with Matter}\label{sec:theoreticalBackground:scattering:interactionWithMatter}
 To solve the Lippmann-Schwinger equation it is necessary to know how the scattering wave and the sample interact with each other, which is represented by the potential $V$. In the case of x-rays, the dominant coupling to consider is the interaction of the x-ray photons with the electron shells of the atoms making up the material. For neutrons however the coupling to the electrons is negligible in contrast to the interaction with the nucleus of the atoms. In the following both interactions and how to evaluate them for different materials is presented in more detail.
