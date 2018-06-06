@@ -67,7 +67,7 @@ In position space, it reads as integral equation
 where it is used that the single-particle potential is diagonal in position space $\bra{\vec{r}} V \ket{\vec{r}^\prime} = V(\vec{r}) \delta(\vec{r} - \vec{r}^\prime)$. 
 The solution for the free Hamiltonian is given by as a plane wave solution
 \begin{align}
-  \phi(\vec{r}) \eq \frac{1}{(2\pi\hbar)^{3/2}} e^{i\vec{k} \cdot \vec{r}},
+  \phi(\vec{r}) \eq e^{i\vec{k} \cdot \vec{r}},
 \end{align}
 and the matrix element within the integral is solved by
 \begin{align}
@@ -75,7 +75,7 @@ and the matrix element within the integral is solved by
 \end{align}
 Thus the integral representation of the Lippmann-Schwinger equation is
 \begin{align}
-  \psi (\vec{r}) &\eq \frac{1}{(2\pi\hbar)^{3/2}} e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \int \dint \vec{r}^\prime \frac{e^{ik|\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|} V (\vec{r}^\prime)\psi (\vec{r}^\prime).
+  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \int \dint \vec{r}^\prime \frac{e^{ik|\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|} V (\vec{r}^\prime)\psi (\vec{r}^\prime).
 \end{align}
 The resulting wave function can be nicely interpret as a superposition of the incoming plane wave with spherical waves generated at $\vec{r}^\prime$, modulated by the interaction potential $V(\vec{r}^\prime)$ and the wave field at this point.
 In a standard experimental setup, the detector is often at a position that is far away relative to the scattering volume $r^\prime \ll r$. 
@@ -86,18 +86,38 @@ Therefore a good approximation and large simplification in calculation is
 \end{align}
 then the Lippmann-Schwinger equation reads
 \begin{align}
-  \psi (\vec{r}) &\eq \frac{1}{(2\pi\hbar)^{3/2}} e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{k}^\prime \cdot \vec{r}^\prime} V (\vec{r}^\prime)\psi (\vec{r}^\prime),
+  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{k}^\prime \cdot \vec{r}^\prime} V (\vec{r}^\prime)\psi (\vec{r}^\prime),
 \end{align}
-where it was used that the outgoing wave points into the direction of the detector  $\vec{k}^\prime = k \vec{r} / r$.
+where it was again used that the detector is far away relative to the sample size and thus the outgoing wave points essentially into the direction of the detector  $\vec{k}^\prime = k \vec{r} / r$.
+
 The Lippmann-Schwinger equation can be used to solve the scattering problem for any potential $V$ iteratively by starting on the right hand side of the equation with the free particle solution for $\psi (\vec{r})$ and then putting the solution back into the Lippmann-Schwinger equation, \etc.
 The first iteration 
 \begin{align}
-  \psi (\vec{r}) &\eq \frac{1}{(2\pi\hbar)^{3/2}} e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \frac{1}{(2\pi\hbar)^{3/2}} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} V (\vec{r}^\prime),
+  \psi (\vec{r}) &\eq e^{i\vec{k} \cdot \vec{r}} - \frac{2m}{4 \pi\hbar^2} \frac{e^{ikr}}{r} \int \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} V (\vec{r}^\prime),\label{eq:theoreticalBackground:scattering:scatteringTheory:firstBornApproximation}
 \end{align}
 is known as the Born approximation and is the starting point for many further calculations. It fully describes the case where the wave undergoes only a single scattering event as it passes through the sample. 
 
 \subsection{Interaction of X-rays and Neutrons with Matter}\label{sec:theoreticalBackground:scattering:interactionWithMatter}
+To solve the Lippmann-Schwinger equation it is necessary to know how the scattering wave and the sample interact with each other, which is represented by the potential $V$. In the case of x-rays, the dominant coupling to consider is the interaction of the x-ray photons with the electron shells of the atoms making up the material. For neutrons however the coupling to the electrons is negligible in contrast to the interaction with the nucleus of the atoms. In the following both interactions and how to evaluate them for different materials is presented in more detail.
+
+...
 \subsection{Small-Angle Scattering from Nanoparticles}\label{sec:theoreticalBackground:scattering:SASNanoparticles}
+Small-angle scattering is a technique to study nanometer sized objects when the wavelength of the scattered particle is in the order of a few {\aa}ngstr\"om. 
+Here, the forward scattering of a collimated beam through a sample is measured on a position sensitive detector around an opening angle in the order of $2 \theta \eq 0.1^\circ - 10^\circ$. 
+As the magnitude of the scattering vector $q$ is proportional to $\sin(\theta)$ and $q$ is inversely proportional to the probed length scale, smaller scattering angles $\theta$ mean that larger length scales are probed. 
+
+In the following, the application of small-angle scattering to the study of nanoparticles in dispersion is described. 
+In a first step, let's consider for that the sample consists of monodisperse nanoparticles in dispersion. 
+The potential $V(\vec{r})$ in the Born approximation formula \refeq{eq:theoreticalBackground:scattering:scatteringTheory:firstBornApproximation} can be written as the sum of a constant background $V_m$ for the solvent and a position dependant potential for the nanoparticles $V_{np}$ in the solvent. The nanoparticle potential can be further rewritten as convolution of a potential $V_{p}(\vec{r})$ describing a single nanoparticle in the solvent and a function $s(\vec{r})$ describing the position of the nanoparticles. In total, we get
+\begin{align}
+  V(\vec{r}) \eq V_{m} + (s * V_{p})(\vec{r}),\\
+  s(\vec{r}) \eq \sum_i \delta(\vec{r} - \vec{r}_i).
+\end{align}
+Inserting this into the integral, the integral over the constant term is essentially a definition of $\delta (\vec{q})$ and can be ignored as it is 0 for $\vec{q} \neq 0$ and the convolution theorem helps to turn the integral over a convolution to a product of integrals
+\begin{align}
+  \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} (s * V_{p})(\vec{r}) = \bigg[\int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} s(\vec{r})\bigg] \bigg[\int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} V_{p}(\vec{r}) \bigg].
+\end{align}
+The first factor is called the structure factor and the second the form factor. Where the latter describes the scattering due to the shape and properties of the nanoparticle, the first modulates the scattering due to the relative positions. 
 \subsection{Grazing Incidence Small-Angle Scattering from a Surface}\label{sec:theoreticalBackground:scattering:GISAS}
 \subsection{Reflectometry}\label{sec:theoreticalBackground:scattering:reflectometry}
 \end{document}
