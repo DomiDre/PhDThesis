@@ -1,0 +1,70 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+
+\begin{document}
+\section{Green's Function of Free Schr\"odinger Equation}\label{ch:appendix:calculations:greenFunctionFreeHamiltonian}
+The Green's function of the free Hamiltonian is defined as
+\begin{align}
+  G_0^{R/A} (E) \eq \frac{1}{E - H_0 \pm i \epsilon},
+\end{align}
+and fulfils in position space the equation
+\begin{align}
+  \bigg(E + \frac{\hbar^2}{2m} \Delta \bigg)G_0^{R/A}(\vec{r}, \vec{r}^\prime | E)
+  \eq \delta(\vec{r} - \vec{r}^\prime).
+  \label{eq:appendix:calculations:greenFunctionFreeHamiltonian:definingEquation}
+\end{align}
+
+In the following a explicit representation of the Green's function in position space
+\begin{align}
+  G_0^{R/A}(\vec{r}, \vec{r}^\prime | E) \eq \bra{\vec{r}} \frac{1}{E - H_0 \pm i \epsilon} \ket{\vec{r}^\prime}
+\end{align}
+is presented.
+The derivation will show that depending on the sign of the small imaginary factor $\epsilon$, one receives spherical waves that are either radiating from a source (retarded) or irradiating towards a source (advanced).
+
+To obtain the representation in position space, one can use the eigenfunctions of the momentum operator in position space
+\begin{align}
+  \braket{\vec{r}|\vec{k}} \eq \frac{1}{\sqrt{2 \pi}^3} e^{i \vec{k} \cdot \vec{r}},
+\end{align}
+and that the free Hamiltonian is diagonal in momentum space.
+Inserting both into the matrix element one obtains
+\begin{align}
+  G_0^{R/A}(\vec{r}, \vec{r}^\prime | E) \eq & \int \dint \vec{k} \int \dint \vec{k}^\prime \braket{\vec{r} | \vec{k}} \bra{\vec{k}} \frac{1}{E - H_0 \pm i \epsilon} \ket{\vec{k}^\prime} \braket{\vec{k}^\prime | \vec{r}^\prime}\\
+  \eq & \frac{1}{(2\pi)^3} \int \dint \vec{k} e^{i \vec{k} \cdot \vec{r}} \frac{1}{E - \hbar^2 k^2 / 2m \pm i \epsilon} e^{-i \vec{k} \cdot \vec{r}^\prime}.
+\end{align}
+For brevity set $\vec{x} \eq \vec{r} - \vec{r}^\prime$.
+Then this integral is best solved in spherical coordinates where $\theta$ is set to be the angle between $\vec{k}$ and $\vec{x}$.
+Then one only needs to solve
+\begin{align}
+  G_0^{R/A}(\vec{x} | E) \eq \frac{1}{(2\pi)^2} \int_0^\infty \dint k k^2 \int_0^{\pi} \dint \theta \sin(\theta) e^{i k x \cos(\theta)} \frac{1}{E - \hbar^2 k^2 / 2m \pm i \epsilon}.
+\end{align}
+The integral over $\theta$ is trivially solved by the substitution $u = \cos(\theta)$ and one observes at this point already that the solution only depends on the magnitude of $\vec{x}$
+\begin{align}
+  G_0^{R/A}(x | E) \eq -i \frac{2m}{x\hbar^2} \frac{1}{(2\pi)^2} \int_0^\infty \dint k \frac{k}{2mE/\hbar^2 -  k^2 \pm i \epsilon} (e^{i k x} - e^{-i k x}).
+\end{align}
+By substituting $k \rightarrow -k$ in the addend containing $e^{-ikx}$ the integral can be further simplified to
+\begin{align}
+  G_0^{R/A}(x | E) \eq -i \frac{2m}{x\hbar^2} \frac{1}{(2\pi)^2} \int_{-\infty}^\infty \dint k \frac{k}{2mE/\hbar^2 -  k^2 \pm i \epsilon} e^{i k x}.
+\end{align}
+The integrand vanishes for $k \rightarrow \pm \infty$ and the integral can be written as a complex contour integral that is closed in the upper complex half plane, where it is further exponentially suppressed for positive complex numbers.
+Rewriting the denominator, using that $\epsilon$ is an arbitrary small number
+\begin{align}
+  G_0^{R/A}(x | E) \eq i \frac{2m}{x\hbar^2} \frac{1}{(2\pi)^2} \oint \dint z \frac{z}{(z - \sqrt{2mE}/\hbar \pm i \epsilon)(z + \sqrt{2mE}/\hbar \pm i \epsilon)} e^{i z x},
+\end{align}
+we see that the integrand has poles at $z_1 \eq \sqrt{2mE}/\hbar \pm i \epsilon$ and $z_2 \eq -(\sqrt{2mE}/\hbar \pm i \epsilon)$ and that we can apply Cauchy's residue theorem\footnote{
+  In short the residue theorem states that for a rectifiable curve in the complex plane, the line integral of $f(z)$ is given by
+  \begin{align}
+    \oint_\gamma \dint z f(z) \eq 2 \pi i \sum_{k=1}^n I(\gamma, a_k) \mathrm{Res}(f, a_k)\nonumber,
+  \end{align}
+  where $I(\gamma, a_k)$ is the winding number of $\gamma$ around $a_k$, and is equal to 1 for a positively oriented simple closed curve. The residue is determined from the Laurent series expansion of f around $a_k$, $f(z) \eq \sum_{n=-\infty}^\infty c_n (z-a_k)$, as the factor in front of $(z - a_k)^{-1}$, namely $\mathrm{Res}(f, a_k) \eq c_{-1}$.
+}.
+At this point it becomes apparent that the sign of $\epsilon$ determines which pole has to be considered.
+As the integral is closed in the upper complex plane, only the pole with a positive complex part has to be considered.
+In the case of the retarded Green's function that is $z_1$ and for the advanced Green's function $z_2$.
+
+Finally, applying the residue theorem, replacing $x \eq |\vec{r} - \vec{r}^\prime|$ and for brevity using the dispersion relation of the free Hamiltonian $k \eq \sqrt{2mE}/\hbar$, the two solutions for \refeq{eq:appendix:calculations:greenFunctionFreeHamiltonian:definingEquation} are
+\begin{align}
+  G_0^R(\vec{r},  \vec{r}^\prime | k) \eq - \frac{m}{ 2\pi\hbar^2}  \frac {e^{i k |\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|},\\
+  G_0^A(\vec{r},  \vec{r}^\prime | k) \eq - \frac{m}{ 2\pi\hbar^2}  \frac {-e^{i k |\vec{r} - \vec{r}^\prime|}}{|\vec{r} - \vec{r}^\prime|}.
+\end{align}
+As in scattering theory one is interested in waves that are radiating away from the scattering center, the retarded solution $G_0^R(\vec{r},  \vec{r}^\prime | k)$ is the one that needs to be considered.
+\end{document}
