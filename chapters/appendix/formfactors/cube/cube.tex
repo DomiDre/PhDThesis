@@ -20,10 +20,10 @@ and the integration over all orientations is subsequently performed
 \begin{align}
   P_\mathrm{cube} (q) \eq \frac{1}{4 \pi} \int_0^{2\pi} \dint \phi \int_0^{\pi} \dint \theta \sin(\theta) \biggl| p^\mathrm{orientated}_\mathrm{cube} (\vec{q}) \biggr|^2.
 \end{align}
-There is no analytical solution to this integral, therefore it has to be evaluated numerically. This can efficiently be done by applying a Gauss-Legendre quadrature rule. Here the integrals are replaced by sums 
+There is no analytical solution to this integral, therefore it has to be evaluated numerically. This can for example be done by applying a Gauss-Legendre quadrature rule. Here the integrals are replaced by sums via the rule
 \begin{align}
   \int_0^{2\pi} f(x) \dint x \approx \pi \sum_{i=1}^n w_i f(\pi (x_i + 1)),\\
   \int_0^{\pi} f(x) \dint x \approx \frac{\pi}{2} \sum_{i=1}^n w_i f\biggl(\frac{\pi}{2} (x_i + 1) \biggr),
 \end{align}
-where $x_i$ and $w_i$ depend on the order of the quadrature rule and can be quickly looked up from tables to orders up to $n = 100$, where an order of $n = 10$ is sufficient for convergence in every relevant case.
+where $x_i$ and $w_i$ depend on the order of the quadrature rule and can be quickly looked up from tables to orders up to $n = 100$, where an order of $n = 20$ is sufficient for convergence in the cases relevant in this work.
 \end{document}
