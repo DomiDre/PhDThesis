@@ -125,20 +125,26 @@ Thus the incoming current and scattered current is evaluated to be
 and with this the incoming flux per unit area is determined to $\Phi_i \eq \vec{j}_i \cdot \hat{k}$, and the scattered flux per surface area to $\Phi_o \eq \vec{j}_o \cdot \dint \vec{S}$, where $\dint \vec{S} \eq r^2 \dint \Omega \hat{r}$.
 Experimentally one measures the flux of scattered particles to a solid angle and normalizes this to the corresponding flux of incoming particles. This ratio is known as the differential cross section and plugging in the previous results, it is calculated in Born approximation via
 \begin{align}
-  \frac{\dint \sigma}{\dint \Omega} \eq \frac{\Phi_o}{\Phi_i \dint \Omega} \eq \bigg| \frac{m}{2 \pi\hbar^2} \int \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} V (\vec{r}^\prime) \bigg|^2.
-  \label{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionBornApproximation}
+  \frac{\dint \sigma}{\dint \Omega} \eq \frac{\Phi_o}{\Phi_i \dint \Omega} \eq \bigg| \frac{m}{2 \pi\hbar^2} \int \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} V (\vec{r}^\prime) \bigg|^2.\label{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionIntegralOverPotential}
 \end{align}
 
 \subsection{Interaction of X-rays and Neutrons with Matter}\label{sec:theoreticalBackground:scattering:interactionWithMatter}
 To calculate the differential cross section, it is necessary to know how the scattering wave and the sample interact with each other, which is represented by the potential $V$.
+Even though in the previous chapter, the differential cross section is derived for quantum mechanical particles, it is shown in \refapp{ch:appendix:calculations:scatteringTheoryElectromagneticWaves} that a similar formula results for x-rays from classical electrodynamics.
 In the case of x-rays, the dominant coupling to consider is the electromagnetic interaction of the x-ray photons with the electron shells of the atoms making up the material.
-In \refapp{ch:appendix:calculations:scatteringTheoryElectromagneticWaves} scattering theory is derived from classical electrodynamics resulting in the result that the differential cross section is given by
+When an electron cloud is considered to oscillate in phase with the incoming x-ray, the differential cross section is modelled as
 \begin{align}
-  \frac{\dint \sigma}{\dint \Omega} \eq |\hat{e}_i \cdot \hat{e}_f|^2 \biggl|\int \dint V^\prime e^{-i \vec{q} \cdot \vec{r}^\prime}  r_e \rho_e (\vec{r}^\prime) \biggr|^2 ,
+  \frac{\dint \sigma}{\dint \Omega} \eq |\hat{e}_i \cdot \hat{e}_f|^2 \biggl| \int \dint V e^{-i \vec{q} \cdot \vec{r}}  r_e \rho_e (\vec{r}) \biggr|^2.
 \end{align}
+Here $|\hat{e}_i \cdot \hat{e}_f|^2$ is a polarization factor depending on the geometry and the source of the experiment, $r_e \approx 2.8\,\unit{fm}$ is the classical electron radius and $\rho_e$ the density distribution of the electron cloud.
+This result is known as Thomson scattering.
+In general the electronic structure and response of materials is very complex and highly dependant on the energy of the incoming photon.
+In the derivation of the formula above it is assumed that the electron cloud follows the incoming wave via Newton's law $\vec{F} \eq m \vec{a} \eq -e\vec{E}$.
+This neglects resonance, absorption and dispersion effects.
+Those become important whenever the energy of x-ray is close to electronic transitions in the material or is high enough that it  ejects electrons from their respective positions.
+However in the frame of this work, such effects are negligible and further discussions about it can be found in literature \cite{AlsNielsen_2011_Eleme}.
 
-
-For neutrons two fundamental interactions with a material exist.
+For neutrons on the other hand, two fundamental interactions with a material exist.
 On the one hand the neutron scatters via the short-ranged residual strong interaction with the atomic nuclei and on the other the magnetic moment of the neutron contributes to a scattering via the electromagnetic interaction with the internal magnetic field of the sample.
 For the nuclear scattering, the length scale of the residual strong force is on the order of $\mathcal{O} (10^{-15} \unit{m})$, whereas the wavelength of thermal neutrons $\mathcal{O} (10^{-10} \unit{m})$ is much larger.
 The nucleus can therefore be considered point-like and the potential for the scattering of a free neutron from a collection of nuclei positioned at $\vec{r}_j$ can be modelled by a sum of Fermi pseudopotentials
@@ -163,6 +169,91 @@ where the value of $\rho(\vec{r})$ is determined by summing over the bound scatt
 \begin{align}
   \rho(\vec{r}) \eq \frac{1}{V_{uc}} \sum_i^n b_i.
 \end{align}
+The differential cross section is thus obtained for neutrons from evaluating
+\begin{align}
+  \frac{\dint \sigma}{\dint \Omega} \eq \bigg| \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} \rho (\vec{r}) \bigg|^2.
+  \label{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionBornApproximation}
+\end{align}
+It is interesting to note here that for x-rays, up to the polarization factor, the same formula applies when the x-ray scattering length density is identified from the electron density as $\rho \eq r_e \rho_e$.
+Therefore, every following discussion starting from this equation includes both the scattering of x-rays from the electron clouds of matter and the scattering of neutrons from the nuclear structure.
+
+The magnetic scattering of neutrons from the magnetic structure of the material can be included by adding a Zeeman potential to the Hamiltonian
+\begin{align}
+  V_m (\vec{r}) \eq - \vec{\mu}_n \cdot \vec{B},
+\end{align}
+where $\vec{\mu}_n$ is the magnetic moment of the neutron, which has a magnitude of $\mu_n \eq 9.662 \cdot 10^{-27} \, \unit{JT^{-1}}$.
+The quantum mechanical nature of the spin is ignored for brevity at the moment for the following discussion.
+The potential tries to align the neutron magnetic moment to the magnetic field to minimize the energy.
+Additionally, the magnetic field also leads to a precession of $\vec{\mu}_n$ around $\vec{B}$ according to the Landau-Lifshitz equation
+\begin{align}
+  \dot{\vec{\mu}}_n \eq \gamma  \vec{\mu}_n \times \vec{B},
+\end{align}
+which can lead to a flipping of the neutron spin, from a classical point of view, when the polarization of the neutron is not aligned with the magnetic field. Here, $\gamma$ is the gyromagnetic ratio of the neutron $\gamma \eq -1.83 \cdot 10^8 \, \unit{T^{-1} s^{-1}} $
+
+A magnetic sample generates a field for once by the orbital motion of the electrons $\vec{B}_L$, given by the Biot-Savart law, and by the electron spins $\vec{B}_S$ which can be modelled for a single electron at position $\vec{r}_i$ by a dipole field
+\begin{align}
+  \vec{B}_L \eq& -\frac{\mu_0 e}{4 \pi} \vec{v} \times \vec{\nabla} \frac{ 1}{|\vec{r} - \vec{r}_i|}\\
+  \vec{B}_S \eq& \frac{\mu_0}{4\pi} \vec{\nabla} \times \biggl(\vec{\mu}_e \times \vec{\nabla} \frac{ 1}{|\vec{r} - \vec{r}_i|} \biggr)
+\end{align}
+The contribution of the orbital movement is relatively complex to evaluate as it depends on the specific shell and atom the electrons state is in.
+In most cases it is considered as a small contribution relatively to the spin magnetization and is therefore neglected in this work \cite{Zhu_2005_Moder}.
+Focusing on the spin-dependant interaction one can use the Fourier identity
+\begin{align}
+   \frac{1}{|\vec{r} - \vec{r}_i|} \eq \frac{1}{2 \pi^2} \int \dint \vec{q} \frac{e^{i \vec{q} \cdot (\vec{r} - \vec{r}_i)}}{q^2},
+\end{align}
+and replace the magnetic moment of a single electron $\vec{\mu}_e$ at position $\vec{r}_i$ by the integral over a spin-density
+\begin{align}
+  \vec{\mu}_e \rightarrow \mu_B \int \dint \vec{r}^\prime \vec{s}_e(\vec{r}^\prime),
+\end{align}
+with $\mu_B \approx 9.274 \cdot 10^{-24} \, \unit{JT^{-1}}$ (ignoring the anomalous magnetic dipole moment of the electron), to write the integral over the potential in \refeq{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionIntegralOverPotential} for the spin-dependant interaction as
+\begin{align}
+  f_M (\vec{q}) \eq &- \frac{m_n}{2\pi \hbar^2} \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}}\vec{\mu}_n \cdot \vec{B}_S (\vec{r})\\
+  \eq &- \frac{\mu_0 \mu_B m_n}{(2\pi)^4 \hbar^2}  \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}}\vec{\mu}_n \cdot \biggl[ \vec{\nabla} \times \biggl(\int \dint \vec{r}^\prime \vec{s}_e(\vec{r}^\prime) \times \vec{\nabla} \int \dint \vec{q}^\prime \frac{e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)}}{q^{\prime 2}} \biggr) \biggr].
+\end{align}
+Using
+\begin{align}
+  \vec{\nabla}e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)} \eq& i \vec{q} e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)},\\
+  \int \dint \vec{r} e^{i(\vec{q}^\prime - \vec{q}) \cdot \vec{r}} \eq& (2 \pi)^3 \delta(\vec{q}^\prime - \vec{q}),\\
+  \hat{q} \eq \frac{\vec{q}}{q}
+\end{align}
+the integral reads
+\begin{align}
+  f_M (\vec{q}) \eq & \frac{\mu_0 \mu_B m_n}{2 \pi \hbar^2} \vec{\mu}_n \cdot \biggl[ \hat{q} \times \biggl( \int \dint \vec{r}^\prime e^{- i \vec{q} \cdot \vec{r}^\prime} \vec{s}_e(\vec{r}^\prime) \times \hat{q}\biggr) \biggr].
+\end{align}
+Considering the case of a constant spin direction $\vec{s}_e (\vec{r}^\prime) \eq s_e (\vec{r}^\prime) \hat{s}$, the direction and magnitude separate into
+\begin{align}
+  f_M (\vec{q}) \eq & \hat{\mu}_n \cdot \biggl[ \underbrace{ \hat{q} \times \biggl( \hat{s} \times \hat{q}\biggr) }_{\eq \hat{s}_\perp}\biggr] \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n   \int \dint \vec{r}^\prime e^{- i \vec{q} \cdot \vec{r}^\prime} s_e(\vec{r}^\prime).
+\end{align}
+The two cross products reduce $\hat{s}$ only to the contribution that is perpendicular to $\vec{q}$ as is evident by applying the Grassman identity $\vec{a} \times (\vec{b} \times \vec{c}) \eq (\vec{a} \cdot \vec{c}) \vec{b} - (\vec{a} \cdot \vec{b}) \vec{c}$.
+This result means that only when the spins of a material are aligned perpendicularly to the scattering vector, one measures a magnetic scattering contribution.
+The prefactor consist of only natural constants and evaluates to
+\begin{align}
+  \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n \approx 2.699\,\cdot 10^{-5} \,\unit{\angstrom}.
+\end{align}
+By defining the magnetic scattering length density by
+\begin{align}
+  \rho_\mathrm{mag} (\vec{r}) \eq \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n s_e (\vec{r}),
+\end{align}
+one obtains a similar formula for the magnetic scattering amplitude contribution to the differential cross section as for the nuclear contribution
+\begin{align}
+  f_M (\vec{q}) \eq & \hat{\mu}_n \cdot \hat{s}_\perp \int \dint \vec{r} e^{- i \vec{q} \cdot \vec{r}} \rho_\mathrm{mag}(\vec{r}).
+\end{align}
+To include the quantum mechanical nature of the neutron spin, one has to note that the three components of the neutron magnetic moment are actually given in terms of the spin operator
+\begin{align}
+  \mu_n^i \eq \mu_n \hat{\sigma}_i,
+\end{align}
+\begin{align}
+  \hat{\sigma}_x \eq \begin{pmatrix} 0 & 1 \\1 & 0 \end{pmatrix},\,\,
+  \hat{\sigma}_y \eq \begin{pmatrix} 0 & -i \\i & 0 \end{pmatrix},\,\,
+  \hat{\sigma}_z \eq \begin{pmatrix} 1 & 0 \\0 & -1 \end{pmatrix},
+\end{align}
+which can be represented by the three Pauli matrices.
+In an experiment with polarized neutrons, the polarization of the incoming beam is defined and stabilized by a weak magnetic guide field, which defines the $z$ direction in terms of the spin operator.
+When $\hat{s}_\perp$ is parallel (antiparallel) to $z$, $f_M$ contributes with a positive (negative) sign to the differential cross section and the direction of the spin is conserved during the scattering.
+On the other hand, when $\hat{s}_\perp$ is perpendicular to $z$, either $\hat{\sigma}_x$ or $\hat{\sigma}_y$ act and the neutron spin flips therefore during the scattering.
+In this experiment situation one would measure the magnetic scattering contributions therefore in the spin-flip channel.
+This subtle difference allows through careful analysis of the four scattering channels to measure the direction of the magnetization in the plane perpendicular to the scattering vector.
+
 \subsection{Coherence \& Instrumental Resolution}\label{sec:theoreticalBackground:scattering:CoherenceInstrumentalResolution}
 Also important to talk about
 
