@@ -2,8 +2,8 @@
 
 Color palette:
 - #0EA8DF #MatNat Blau
-- #FAAB2D #HumWis Orange
-- #793394 #Philo Violett
 - #EE292F #Medizin Rot
-- #7F0128 #Rechtswis Bordeaux
+- #FAAB2D #HumWis Orange
 - #76C152 #Wiwi Gruen
+- #7F0128 #Rechtswis Bordeaux
+- #793394 #Philo Violett
