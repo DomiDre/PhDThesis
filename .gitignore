@@ -223,3 +223,7 @@ TSWLatexianTemp*
 
 # files that are maybe added later or not
 /tmp/*
+
+# ignore image files in the data folder
+/data/*png
+/data/*tif
