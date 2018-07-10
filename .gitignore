@@ -225,5 +225,5 @@ TSWLatexianTemp*
 /tmp/*
 
 # ignore image files in the data folder
-/data/*png
-/data/*tif
+/data/**/*.png
+/data/**/*.tif
