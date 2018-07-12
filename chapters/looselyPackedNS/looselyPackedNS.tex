@@ -4,7 +4,7 @@
 \begin{document}
 \chapter{Loosely-packed nanostructures}\label{ch:looselyPackedNS}
 Magnetic nanospheres can nowadays be routinely synthesized from a large choice of materials \cite{Gubin_2005_Magne}.
-Magnetite/Maghemite ($\ch{Fe3O4}$ , $\gamma - \ch{Fe2O3}$) is a common choice for the study of nanomagnetism as it shows strong ferromagnetism and is widely available.
+Magnetite ($\ch{Fe3O4}$) is a common choice for the study of nanomagnetism as it shows strong ferromagnetism and is widely available.
 Due to this extensive research it is now possible to synthesize iron oxide nanoparticles that are highly tunable in size and shape \cite{Wetterskog_2014_Preci}.
 In this work, two batches of iron oxide nanospheres in the size range of $11 \unit{nm}$ (IOS-11) and $7 \unit{nm}$ (IOS-7) are studied for their individual structural and magnetic properties.
 Furthermore, loosely packed layers of the nanoparticles, created by spin coating the particles from dispersion on a substrate, are studied.
@@ -74,10 +74,39 @@ Transmission electron microscopy allows to estimate the size from a local snapsh
 A better estimate to quantify the average particle size and size distribution in a dispersion is given by small-angle scattering.
 As the particle beam, which has an extension of a few $100 \unitmu$, hits an volume of the dispersion that typically contains $\approx \mathcal{O} (10^{12})$ particles, the estimated parameters from modelling small-angle scattering data is much more representative for the average particle in dispersion than electron microscopy.
 
-Small-angle x-ray scattering experiments were performed on both samples at the \textsc{GALAXI} instrument in the \textsc{Forschungszentrum J\"ulich}, which is described in \refapp{ch:appendix:lss:galaxi}.
+Small-angle x-ray scattering (SAXS) experiments were performed on both samples at the \textsc{GALAXI} instrument in the \textsc{Forschungszentrum J\"ulich}, which is described in \refapp{ch:appendix:lss:galaxi}.
+Additionally, small-angle neutron scattering (SANS) experiments were performed on the same nanoparticles at the \textsc{D33} instrument at the \textsc{Institute Laue-Langevin} that is described in \refapp{ch:appendix:lss:d33}.
+To determine the size of the particles, the data from both experiments is fitted simultaneously to one model.
+The particles are modelled as spherical magnetite particles with a brush of oleic acid coated around them.
+The particles were dispersed in cyclohexane for the SAXS experiment, and in deuterated toluene for the SANS experiment.
+The solvents are chosen to increase the contrast with respect to the oleic acid in the case of SAXS and to minimize the incoherent scattering from hydrogen in the case of SANS.
+
+As in the case of transmission electron microscopy, it is necessary for IOS-7 to add a second mode of particle sizes to obtain a good fit of the data.
+The obtained sizes, size distributions are in good agreement to the local result from electron microscopy.
 
 
-\section{Preparation of Monolayers}
+\begin{figure}[tb]
+  \centering
+  \includegraphics{looselyPackedNP_SAS_IOS-11_SAXSFit}
+  \includegraphics{looselyPackedNP_SAS_IOS-7_SAXSFit}
+  \caption{\label{fig:looselyPackedNP:nanoparticle:sas}Small-angle x-ray and neutron scattering for IOS-11 (left) and IOS-7 (right). The x-ray and neutron datasets are fitted simultaneously to a spherical core-shell model to estimate the average size of the particle size and surfactant shell.}
+\end{figure}
+
+\begin{table}[tb]
+  \centering
+  \begin{tabular}{ c | l | l }
+      & IOS-11 & IOS-7 \\
+    \hline
+    $N_1$       & $1$                   & $0.7(1)$   \\
+    $\mu_1$     & $10.95(5) \unit{nm}$  & $6.97(6) \unit{nm}$ \\
+    $\sigma_1$  & $6.6(4) \unit{\%}$    & $11(1) \unit{\%}$ \\
+    $N_2$       & 0                     & $0.3(1)$  \\
+    $\mu_2$     & -                     & $6.0(6) \unit{nm}$ \\
+    $\sigma_2$  & -                     & $29(4) \unit{\%}$ \\
+    \hline
+  \end{tabular}
+\end{table}
+\section{Preparation of Loosely-Packed Layers}
 
 \section{Nuclear Structure}
 
