@@ -1,28 +1,28 @@
 #[[Fit Statistics]]
 #    # fitting method   = leastsq
-#    # function evals   = 67
+#    # function evals   = 81
 #    # data points      = 20
 #    # variables        = 5
-#    chi-square         = 9.56069013
+#    chi-square         = 9.56069014
 #    reduced chi-square = 0.63737934
-#    Akaike info crit   = -4.76144719
-#    Bayesian info crit = 0.21721418
+#    Akaike info crit   = -4.76144717
+#    Bayesian info crit = 0.21721420
 #[[Variables]]
-#    logmu0:   6.96989408 +/- 0.06316207 (0.91%) (init = 7)
-#    logstd0:  0.10771506 +/- 0.01117396 (10.37%) (init = 0.13)
-#    N1:       0.30631876 +/- 0.11141737 (36.37%) (init = 1)
-#    logmu1:   6.05829765 +/- 0.59539925 (9.83%) (init = 4)
-#    logstd1:  0.28720507 +/- 0.04122022 (14.35%) (init = 0.1)
+#    logmu0:   6.96988472 +/- 0.06316341 (0.91%) (init = 7)
+#    logstd0:  0.10771219 +/- 0.01117556 (10.38%) (init = 0.13)
+#    N1:       0.30634687 +/- 0.11148540 (36.39%) (init = 1)
+#    logmu1:   6.05844707 +/- 0.59584577 (9.83%) (init = 2.5)
+#    logstd1:  0.28720942 +/- 0.04123949 (14.36%) (init = 0.3)
 #[[Correlations]] (unreported correlations are < 0.100)
 #    C(N1, logmu1)       =  0.903
 #    C(logstd0, N1)      = -0.841
-#    C(logstd0, logmu1)  = -0.747
-#    C(logmu1, logstd1)  =  0.624
+#    C(logstd0, logmu1)  = -0.748
+#    C(logmu1, logstd1)  =  0.625
 #    C(logmu0, logstd1)  = -0.563
 #    C(logmu0, logmu1)   = -0.437
 #    C(N1, logstd1)      =  0.412
 #    C(logstd0, logstd1) = -0.306
-#    C(logmu0, N1)       = -0.247
+#    C(logmu0, N1)       = -0.248
 #    C(logmu0, logstd0)  =  0.129
 
 #bin_center	count	error

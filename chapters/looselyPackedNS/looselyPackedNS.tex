@@ -81,31 +81,122 @@ The particles are modelled as spherical magnetite particles with a brush of olei
 The particles were dispersed in cyclohexane for the SAXS experiment, and in deuterated toluene for the SANS experiment.
 The solvents are chosen to increase the contrast with respect to the oleic acid in the case of SAXS and to minimize the incoherent scattering from hydrogen in the case of SANS.
 
-As in the case of transmission electron microscopy, it is necessary for IOS-7 to add a second mode of particle sizes to obtain a good fit of the data.
-The obtained sizes, size distributions are in good agreement to the local result from electron microscopy.
-
+As in the case of transmission electron microscopy, it is necessary for IOS-7 to add a second mode of particle sizes to the model.
+Furthermore, to obtain a good model for the SANS data, it is necessary that the scattering length density of the oleic acid shell is allowed to vary freely between the bulk value for the solvent and the bulk value for oleic acid, as the solvent could mix in between the oleic acid brushes of the nanoparticles.
+The best fit parameters are tabulated in \reftab{tab:looselyPackedNP:nanoparticle:sas} and the obtained sizes and size distributions by the model are in good agreement to the local result from electron microscopy.
+Only the second mode of the IOS-7 batch is best fitted in the SAS data with a smaller diameter of $2.5 \unit{nm}$ instead of the obtained $6 \unit{nm}$ in electron microscopy.
 
 \begin{figure}[tb]
   \centering
-  \includegraphics{looselyPackedNP_SAS_IOS-11_SAXSFit}
-  \includegraphics{looselyPackedNP_SAS_IOS-7_SAXSFit}
+  \includegraphics{looselyPackedNP_SAS_IOS-11_SASFit}
+  \includegraphics{looselyPackedNP_SAS_IOS-7_SASFit}
   \caption{\label{fig:looselyPackedNP:nanoparticle:sas}Small-angle x-ray and neutron scattering for IOS-11 (left) and IOS-7 (right). The x-ray and neutron datasets are fitted simultaneously to a spherical core-shell model to estimate the average size of the particle size and surfactant shell.}
 \end{figure}
 
 \begin{table}[tb]
   \centering
+  \caption{\label{tab:looselyPackedNP:nanoparticle:sas}Parameters for the spherical core-shell model of IOS-11 and IOS-7.}
   \begin{tabular}{ c | l | l }
       & IOS-11 & IOS-7 \\
     \hline
-    $N_1$       & $1$                   & $0.7(1)$   \\
-    $\mu_1$     & $10.95(5) \unit{nm}$  & $6.97(6) \unit{nm}$ \\
-    $\sigma_1$  & $6.6(4) \unit{\%}$    & $11(1) \unit{\%}$ \\
-    $N_2$       & 0                     & $0.3(1)$  \\
-    $\mu_2$     & -                     & $6.0(6) \unit{nm}$ \\
-    $\sigma_2$  & -                     & $29(4) \unit{\%}$ \\
+    $R$
+      & $5.272(7) \unit{nm}$
+      & $3.490(5) \unit{nm}$\\
+    $R_2$
+      &
+      & $1.25(2) \unit{nm}$\\
+    $D$
+      & $1.87(3) \unit{nm}$
+      & $1.90(4) \unit{nm}$\\
+    $\sigma_R$
+      & $6.0(2) \,\%$
+      & $9.2(1) \,\%$\\
+    $\sigma_{R_2}$
+      &
+      & $31(2) \,\%$\\
+    \hline
+    $N/V^\mathrm{saxs}$
+      & $0.532(3) \cdot 10^{-8} \angstrom^{-3}$
+      & $0.305(2) \cdot 10^{-8} \angstrom^{-3}$\\
+    $N/V_2^\mathrm{saxs}$
+      &
+      & $0.167(1) \cdot 10^{-8} \angstrom^{-3}$\\
+    $bg^\mathrm{saxs}$
+      & $0.009(1) \unit{cm}^{-1}$
+      & $0.0011(2) \unit{cm}^{-1}$\\
+    $N/V^\mathrm{sans}$
+      & $0.272(7)\cdot 10^{-8} \angstrom^{-3}$
+      & $0.71(3) \cdot 10^{-8} \angstrom^{-3}$\\
+    $N/V_2^\mathrm{sans}$
+      &
+      & $0.39(1) \cdot 10^{-8} \angstrom^{-3}$\\
+    $\rho_\mathrm{shell}^\mathrm{sans}$
+      & $2.58(7) \cdot 10^{-6} \angstrom^{-2}$
+      & $3.38(9) \cdot 10^{-6} \angstrom^{-2}$\\
+    $\Delta \theta_\mathrm{s. a.}$
+      & $0.172(7) ^\circ$
+      & $0.23(2) ^\circ$\\
+    $\Delta \theta_\mathrm{l. a.}$
+      & $0.204(6) ^\circ$
+      & $0.394(8) ^\circ$\\
+    \hline
+    $\rho_\mathrm{core}^\mathrm{saxs}$
+      & \multicolumn{2}{c}{$41.469 \cdot 10^{-6} \angstrom^{-2}$}\\
+    $\rho_\mathrm{shell}^\mathrm{saxs}$
+      & \multicolumn{2}{c}{$8.514 \cdot 10^{-6} \angstrom^{-2}$}\\
+    $\rho_\mathrm{solvent}^\mathrm{saxs}$
+      & \multicolumn{2}{c}{$7.554 \cdot 10^{-6} \angstrom^{-2}$}\\
+    $\rho_\mathrm{core}^\mathrm{sans}$
+      & \multicolumn{2}{c}{$6.941 \cdot 10^{-6} \angstrom^{-2}$}\\
+    $\rho_\mathrm{solvent}^\mathrm{sans}$
+      & \multicolumn{2}{c}{$5.664 \cdot 10^{-6} \angstrom^{-2}$}\\
+    $bg^\mathrm{sans}$
+      & \multicolumn{2}{c}{$0 \unit{cm}^{-1}$}\\
+      $\lambda^\mathrm{sans}$
+        & \multicolumn{2}{c}{$5.9984 \unit{\angstrom}$}\\
+      $\Delta \lambda / \lambda ^\mathrm{sans}$
+        & \multicolumn{2}{c}{$4.247 \, \%$}\\
     \hline
   \end{tabular}
 \end{table}
+
+To study the magnetic structure of the individual nanoparticles, polarized small-angle neutron scattering is applied.
+A magnetic field of $B\eq 515 \unit{mT}$ is applied perpendicular \& horizontal to the beam direction and the scattered neutrons are counted on a position-sensitive detector for up and down polarized neutrons without polarization analysis after the scattering.
+The same model and parameters as obtained from the nuclear small-angle scattering is used and extended by a spherical magnetic form factor.
+The magnetic SLD of the core is fitted as parameter and possibly it is allowed that the magnetic radius of the particle is smaller by a size of $d_\mathrm{dead}$ due to a magnetically dead surface layer.
+From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:theoreticalBackground:scattering:magneticSLD}
+\begin{align}
+  M \eq& \mu_B s_e \eq \frac{2 \pi \hbar^2}{m_n \mu_0 \mu_n} \rho_\mathrm{mag},\\
+  \frac{M}{[\unit{kA m^{-1}}]} \eq& 343.592 \cdot \frac{\rho_\mathrm{mag}}{[10^{-6} \angstrom^{-2}]}.
+\end{align}
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics{looselyPackedNP_SAS_IOS-11_SANSPOLFit}
+  \includegraphics{looselyPackedNP_SAS_IOS-7_SANSPOLFit}
+  \caption{\label{fig:looselyPackedNP:nanoparticle:sanspol}Polarized small-angle neutron scattering for IOS-11 (left) and IOS-7 (right).}
+\end{figure}
+
+\begin{table}[tb]
+  \centering
+  \caption{\label{tab:looselyPackedNP:nanoparticle:sanspol}Parameters for the magnetic sphere form factor of the particles IOS-11 and IOS-7.}
+  \begin{tabular}{ c | l | l }
+      & IOS-11 & IOS-7 \\
+    \hline
+    $\rho_\mathrm{mag}$
+      & $0.51(3) \unit{10^{-6} \angstrom^{-2}}$
+      & $0.20(2) \unit{10^{-6} \angstrom^{-2}}$\\
+    $d_\mathrm{dead}$
+      & $3(1) \unit{nm}$
+      & $0 \unit{nm}$\\
+    \hline
+    $M$
+    & $175(10) \unit{kAm^{-1}}$
+    & $69(7) \unit{kAm^{-1}}$\\
+    \hline
+  \end{tabular}
+\end{table}
+
 \section{Preparation of Loosely-Packed Layers}
 
 \section{Nuclear Structure}

@@ -59,7 +59,7 @@ temIOS7.Nbins = bins
 lengths = temIOS7.load_csv(cwd + "/7nmIO/KWi338_001_counted.csv")
 temIOS7.load(lengths)
 temIOS7.prepare_length_histogram(density=True)
-temIOS7.fit_lognormal_bimodal_density(7, 0.13, 0.1, 4, 0.1)
+temIOS7.fit_lognormal_bimodal_density(7, 0.13, 0.3, 2.5, 0.3)
 temIOS7.export_fit_result(cwd + "/KWi338_size_dist.xy")
 
 #Plot Fit:

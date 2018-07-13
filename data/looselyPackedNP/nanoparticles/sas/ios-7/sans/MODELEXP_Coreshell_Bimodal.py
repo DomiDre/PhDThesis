@@ -5,7 +5,7 @@
 
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
-from modelexp.experiments.sas import SimultaneousSaxsSans
+from modelexp.experiments.sas import Sans
 from modelexp.models.sas import SphereCS, InstrumentalResolution
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
@@ -156,46 +156,36 @@ class SphereCS_Bimodal(SphereCS):
 
 
 
-saxs_sldCore = sld_xray_GALAXI['Magnetite'].real
-saxs_sldShell = sld_xray_GALAXI['Oleic Acid'].real
-saxs_sldSolvent = sld_xray_GALAXI['Cyclohexane'].real
-
 sans_sldCore = sld_neutrons_5A['Magnetite']
 sans_sldShell = sld_neutrons_5A['Oleic Acid']
 sans_sldSolvent = sld_neutrons_5A['Toluene-d8']
 
 app = App()
-app.setExperiment(SimultaneousSaxsSans)
+app.setExperiment(Sans)
 dataRef = app.setData(XyeData)
 
-dataRef.loadFromFile('saxs_KWi338.xye', ['saxs'])
-dataRef.loadFromFile('023564_N.dat', ['sans', 'sa']) #sans_KWi338_N_8m.dat
-dataRef.loadFromFile('023567_N.dat', ['sans', 'la']) # sans_KWi338_N_2m.dat
+dataRef.loadFromFile('../023564_N.dat', ['sa']) #sans_KWi338_N_8m.dat
+dataRef.loadFromFile('../023567_N.dat', ['la']) # sans_KWi338_N_2m.dat
 
 dataRef.sliceDomain(1e-2, 0.5)
 dataRef.plotData()
 
 modelRef = app.setModel(SphereCS_Bimodal, InstrumentalResolution)
-modelRef.setParam("r1", 34.9007522362368,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("r2", 12.48,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("r1", 34.96,  minVal = 0, maxVal = 80, vary = False)
+modelRef.setParam("r2", 11.6,  minVal = 0, maxVal = 80, vary = False)
+modelRef.setParam("d", 18.96,  minVal = 0, maxVal = 30, vary = True)
 modelRef.setParam("sigR1", 0.0942,  minVal = 0, maxVal = 0.2, vary = False)
 modelRef.setParam("sigR2", 0.2896,  minVal = 0, maxVal = 0.8, vary = False)
-modelRef.setParam("fraction", 0.3529,  minVal = 0.1, maxVal = 1, vary = True)
-modelRef.setParam("i0_saxs", 0.47500000000000003,  minVal = 0, maxVal = 1, vary = True)
-modelRef.setParam("bg_saxs", 0.0011400000000000002,  minVal = 0, maxVal = 0.02, vary = False)
+modelRef.setParam("fraction", 0.3079,  minVal = 0.1, maxVal = 1, vary = False)
+modelRef.setParam("i0", 1.1,  minVal = 0, maxVal = 10, vary = True)
+modelRef.setParam("bg", 0.0,  minVal = 0, maxVal = 0.02, vary = False)
+modelRef.setParam("sldShell", 3.3751693454419203e-06,  minVal = 3.12e-08, maxVal = 5.664e-06, vary = True)
+modelRef.setParam("dTheta_sa", 0.004096000000000001,  minVal = 0.001, maxVal = 0.01, vary = True)
+modelRef.setParam("dTheta_la", 0.006869799874829066,  minVal = 0.001, maxVal = 0.01, vary = True)
 
-modelRef.setConstantParam("sldShell_sans", 3.3751693454419203e-06)
-modelRef.setConstantParam("i0_sans", 1.1)
-modelRef.setConstantParam("bg_sans", 0.0)
-modelRef.setConstantParam("dTheta_sa", 0.004096000000000001)
-modelRef.setConstantParam("dTheta_la", 0.006869799874829066)
-modelRef.setConstantParam("d", 18.96)
 modelRef.setConstantParam("sigD", 0)
-modelRef.setConstantParam("sldCore_saxs", saxs_sldCore)
-modelRef.setConstantParam("sldShell_saxs", saxs_sldShell)
-modelRef.setConstantParam("sldSolvent_saxs", saxs_sldSolvent)
-modelRef.setConstantParam("sldCore_sans", sans_sldCore)
-modelRef.setConstantParam("sldSolvent_sans", sans_sldSolvent)
+modelRef.setConstantParam("sldCore", sans_sldCore)
+modelRef.setConstantParam("sldSolvent", sans_sldSolvent)
 modelRef.setConstantParam('wavelength', 5.9984)
 modelRef.setConstantParam('dWavelength', 0.04247)
 modelRef.updateModel()

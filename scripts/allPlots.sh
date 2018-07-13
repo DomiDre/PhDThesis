@@ -5,3 +5,5 @@ python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/tem/7nm
 python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/tem/THESIS_temHistogram.py'
 python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/sas/ios-7/THESIS_saxssans.py'
 python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/sas/ios-11/THESIS_saxssans.py'
+python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/sanspol/ios-7/THESIS_sanspol.py'
+python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/sanspol/ios-11/THESIS_sanspol.py'

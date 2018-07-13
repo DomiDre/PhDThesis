@@ -30,9 +30,7 @@ saxs_legend_label = "SAXS @ GALAXI"
 sans_legend_label = "SANS @ D33"
 
 saxs_pngfile = Chapter+'_SAS_'+\
-                sample_name+"_SAXSFit.png"
-sans_pngfile = Chapter+'_SAS_'+\
-                sample_name+"_SANSFit.png"
+                sample_name+"_SASFit.png"
 
 #load data
 data = MultiData(XyemData)
