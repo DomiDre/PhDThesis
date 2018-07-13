@@ -2,6 +2,49 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 
 \begin{document}
-\section{Magnetization of a Classical Magnetic Moment}\label{ch:appendix:calculations:magnetizationClassicalSpin}
+\section{Magnetization of a Superparamagnetic Spin}\label{ch:appendix:calculations:magnetizationClassicalSpin}
+In this work, nanoparticles that comprise of a ferromagnetic domain of $\gg 1000$ collinear spins are commonly discussed.
+When many spins couple to form a super spin, the quantum mechanic results converge with the results from classical calculations for large spin quantum numbers.
+Therefore, in the following the magnetization behaviour of a super spin is discussed in the context of classical physics.
 
+First, the behaviour of a paramagnetic spin with magnetic moment $\vec{\mu}$ is discussed.
+The spin is under the influence of an external magnetic field $\vec{H}$ and the temperature $T$.
+The magnetic field tries to align the magnetic moment to minimize the Zeeman potential
+\begin{align}
+  V = - \mu_0 \vec{\mu} \cdot \vec{H}.
+\end{align}
+
+As the temperature $T$ is fixed, the canonical partition function has to be evaluated to determine the equilibrium state that maximizes the entropy for the given temperature.
+It is given by integrating over all possible orientations of $\vec{\mu}$.
+When $\theta$ is set as the angle between $\vec{\mu}$ and $\vec{H}$ this is evaluated by
+\begin{align}
+  Z \eq& \int_0^{2\pi} \dint \phi \int_0^\pi \dint \theta \sin(\theta) \exp \biggl(\frac{\mu \mu_0 H}{k_B T} \cos(\theta) \biggr)\\
+  \eq& 4 \pi \frac{k_B T}{ \mu \mu_0 H} \sinh \biggl( \frac{\mu \mu_0 H}{k_B T} \biggr).
+\end{align}
+Then the free energy is given by
+\begin{align}
+  F \eq& -k_B T \log(Z)\\
+  \eq& -k_B T \log \biggl( 4 \pi \frac{k_B T}{ \mu \mu_0 H}  \sinh \biggl( \frac{\mu \mu_0 H}{k_B T} \biggr) \biggr),
+\end{align}
+and the expectation value of the magnetization
+\begin{align}
+  \tilde{M} \eq& - \frac{1}{\mu_0 } \frac{\partial F}{\partial H}\\
+  \eq& \frac{k_B T}{\mu_0 } \frac{\partial}{\partial H} \log \biggl( 4 \pi \frac{k_B T}{ \mu \mu_0 H}  \sinh \biggl( \frac{\mu \mu_0 H}{k_B T} \biggr) \biggr)\\
+  \eq& \frac{k_B T}{\mu_0 } \Biggl(
+    \underbrace{\frac{\partial}{\partial H} \log \biggl( 4 \pi \frac{k_B T}{ \mu \mu_0} \biggr)}_{\eq 0}
+  + \underbrace{\frac{\partial}{\partial H} \log \biggl( \frac{1}{H} \biggr)}_{\eq - \frac{1}{H}}
+  + \underbrace{\frac{\partial}{\partial H}\log  \biggl(  \sinh \biggl( \frac{\mu \mu_0 H}{k_B T} \biggr) \biggr) \Biggr)}_{\eq \frac{\mu \mu_0}{k_B T} \coth \biggl( \frac{\mu \mu_0 H}{k_B T} \biggr) \biggr)}\\
+  \eq& \mu \biggl(\coth \biggl( \frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr).
+\end{align}
+This function is known as the Langevin function and describes the dependance of the magnetization for a single magnetic moment with respect to temperature and magnetic field.
+For a collection of $N$ independent particles the magnetization can be summed up.
+Typically, the magnetization is normalized to the volume of magnetic material $V$
+\begin{align}
+  M \eq \frac{N \mu}{V} \biggl(\coth \biggl( \frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr).
+\end{align}
+The prefactor is a material constant, known as the saturation magnetization $M_s$.
+When the volume is written as collection of the single particle volumes $V \eq N V_p$, the relation between $mu$, $M_s$ and $V_p$ becomes clear as
+\begin{align}
+  M_s \eq \frac{\mu}{V_p}.
+\end{align}
 \end{document}
