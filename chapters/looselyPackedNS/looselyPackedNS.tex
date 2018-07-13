@@ -160,8 +160,24 @@ Only the second mode of the IOS-7 batch is best fitted in the SAS data with a sm
   \end{tabular}
 \end{table}
 
-To study the magnetic structure of the individual nanoparticles, polarized small-angle neutron scattering is applied.
-A magnetic field of $B\eq 515 \unit{mT}$ is applied perpendicular \& horizontal to the beam direction and the scattered neutrons are counted on a position-sensitive detector for up and down polarized neutrons without polarization analysis after the scattering.
+To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion as described in \refapp{app:additionalExperimentalTechniques:vsm} and polarized small-angle neutron scattering (SANSPOL) is applied to measure the magnetic scattering of the individual nanoparticles.
+Both techniques allow to a certain extent to model the average individual nanoparticle magnetization and are compared in the following.
+To evaluate the VSM data a Langevin curve with a log-normal distribution $p(x; \mu, \sigma)$ of the magnetic moment and a possible excess susceptibility is fitted as described by
+\begin{align}
+  L(H; \mu) \eq& \biggl( \coth \biggl(\frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr),\\
+  M(H) \eq& M_s \int \dint \mu^\prime L(H; \mu^\prime) p(\mu^\prime; \mu, \sigma_{\mu}) + \chi H.
+\end{align}
+Here $M_s$ is the saturation magnetization, $\mu$ the magnetic moment of one nanoparticle and $\chi$ the excess susceptibility.
+The data and best-fit model are shown in \reffig{fig:looselyPackedNP:nanoparticle:vsm} and the numerical values are given in \reftab{tab:looselyPackedNP:nanoparticle:vsmSanspol}.
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics{looselyPackedNP_VSM_IOS-11}
+  \includegraphics{looselyPackedNP_VSM_IOS-7}
+  \caption{\label{fig:looselyPackedNP:nanoparticle:vsm}Room temperature vibrating sample magnetometry for IOS-11 (left) and IOS-7 (right).}
+\end{figure}
+
+For SANSPOL, a magnetic field of $B\eq 515 \unit{mT}$ is applied perpendicular \& horizontal to the beam direction and the scattered neutrons are counted on a position-sensitive detector for up and down polarized neutrons without polarization analysis after the scattering.
 The same model and parameters as obtained from the nuclear small-angle scattering is used and extended by a spherical magnetic form factor.
 The magnetic SLD of the core is fitted as parameter and possibly it is allowed that the magnetic radius of the particle is smaller by a size of $d_\mathrm{dead}$ due to a magnetically dead surface layer.
 From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:theoreticalBackground:scattering:magneticSLD}
@@ -179,9 +195,26 @@ From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:th
 
 \begin{table}[tb]
   \centering
-  \caption{\label{tab:looselyPackedNP:nanoparticle:sanspol}Parameters for the magnetic sphere form factor of the particles IOS-11 and IOS-7.}
+  \caption{\label{tab:looselyPackedNP:nanoparticle:vsmSanspol}Parameters for the magnetic structure of the nanospheres obtained from VSM and SANSPOL.}
   \begin{tabular}{ c | l | l }
       & IOS-11 & IOS-7 \\
+    \hline
+    \multicolumn{3}{c}{VSM}\\
+    \hline
+    $M_s$
+      & $204.9(3) \unit{kAm^{-1}}$
+      & $68(1) \unit{kAm^{-1}}$\\
+    $\mu$
+      & $12418(33) \, \mu_B$
+      & $3511(103) \, \mu_B$\\
+    $\sigma_{\mu}$
+      & $33(1) \, \%$
+      & $32(6) \, \%$\\
+    $\chi$
+      & $17.0(3) \cdot \unit{10^{-6}}$
+      & $3.1(7) \cdot \unit{10^{-6}}$\\
+    \hline
+    \multicolumn{3}{c}{SANSPOL}\\
     \hline
     $\rho_\mathrm{mag}$
       & $0.51(3) \unit{10^{-6} \angstrom^{-2}}$
@@ -189,10 +222,9 @@ From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:th
     $d_\mathrm{dead}$
       & $3(1) \unit{nm}$
       & $0 \unit{nm}$\\
-    \hline
     $M$
-    & $175(10) \unit{kAm^{-1}}$
-    & $69(7) \unit{kAm^{-1}}$\\
+      & $175(10) \unit{kAm^{-1}}$
+      & $69(7) \unit{kAm^{-1}}$\\
     \hline
   \end{tabular}
 \end{table}
