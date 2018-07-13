@@ -161,13 +161,42 @@ Only the second mode of the IOS-7 batch is best fitted in the SAS data with a sm
 \end{table}
 
 To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion as described in \refapp{app:additionalExperimentalTechniques:vsm} and polarized small-angle neutron scattering (SANSPOL) is applied to measure the magnetic scattering of the individual nanoparticles.
-Both techniques allow to a certain extent to model the average individual nanoparticle magnetization and are compared in the following.
-To evaluate the VSM data a Langevin curve with a log-normal distribution $p(x; \mu, \sigma)$ of the magnetic moment and a possible excess susceptibility is fitted as described by
+Both techniques allow to model the average individual nanoparticle magnetization and the results should be in agreement with one another.
+
+For SANSPOL, a magnetic field of $B\eq 515 \unit{mT}$ was applied perpendicular \& horizontal to the beam direction and the scattered neutrons are counted on a position-sensitive detector for up and down polarized neutrons without polarization analysis after the scattering.
+The same model and parameters as obtained from the nuclear small-angle scattering is used and extended by a spherical magnetic form factor.
+The magnetic SLD of the core is fitted as parameter and possibly it is allowed that the magnetic radius of the particle is smaller by a size of $d_\mathrm{dead}$ due to a magnetically dead surface layer.
+From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:theoreticalBackground:scattering:magneticSLD}
+\begin{align}
+  M \eq& \mu_B s_e \eq \frac{2 \pi \hbar^2}{m_n \mu_0 \mu_n} \rho_\mathrm{mag},\\
+  \frac{M}{[\unit{kA m^{-1}}]} \eq& 343.592 \cdot \frac{\rho_\mathrm{mag}}{[10^{-6} \angstrom^{-2}]}.
+\end{align}
+The obtained model is shown in \reffig{fig:looselyPackedNP:nanoparticle:sanspol} and the results in \reftab{tab:looselyPackedNP:nanoparticle:vsmSanspol}.
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics{looselyPackedNP_SAS_IOS-11_SANSPOLFit}
+  \includegraphics{looselyPackedNP_SAS_IOS-7_SANSPOLFit}
+  \caption{\label{fig:looselyPackedNP:nanoparticle:sanspol}Polarized small-angle neutron scattering for IOS-11 (left) and IOS-7 (right).}
+\end{figure}
+
+
+For the VSM data, it is assumed that the dispersion is compromised of homogeneously magnetized, non-interacting particles that can be represented by a single classical super spin.
+In \refapp{ch:appendix:calculations:magnetizationClassicalSpin}, it is shown that in this case the magnetization is given by a Langevin curve.
+A log-normal distribution $p(x; \mu, \sigma)$ is included in the model for the magnetic moment to account for particle size distribution and a possible excess susceptibility is added to the model.
+In total the fitted model is described by
 \begin{align}
   L(H; \mu) \eq& \biggl( \coth \biggl(\frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr),\\
   M(H) \eq& M_s \int \dint \mu^\prime L(H; \mu^\prime) p(\mu^\prime; \mu, \sigma_{\mu}) + \chi H.
 \end{align}
-Here $M_s$ is the saturation magnetization, $\mu$ the magnetic moment of one nanoparticle and $\chi$ the excess susceptibility.
+Here, $M_s$ is the saturation magnetization, $\mu$ the magnetic moment of one nanoparticle and $\chi$ the excess susceptibility.
+To properly obtain the saturation magnetization in units of $\unit{kAm{-1}}$, the exact volume of magnetic material in dispersion needs to be known and the measured magnetization data scaled accordingly.
+The volume of the magnetic material can be estimated either by gravimetric methods or also by using the results obtained from small-angle scattering.
+As one parameter in the small-angle scattering model is the number of particles per volume $N/V$ and another the volume of the particle $V_p$, the magnetic volume per dispersion volume is given by
+\begin{align}
+  \alpha \eq \frac{N V_p}{V}.
+\end{align}
+This ratio is multiplied with the volume of dispersion measured in the VSM experiment to obtain the volume that the final data is scaled to.
 The data and best-fit model are shown in \reffig{fig:looselyPackedNP:nanoparticle:vsm} and the numerical values are given in \reftab{tab:looselyPackedNP:nanoparticle:vsmSanspol}.
 
 \begin{figure}[tb]
@@ -177,21 +206,6 @@ The data and best-fit model are shown in \reffig{fig:looselyPackedNP:nanoparticl
   \caption{\label{fig:looselyPackedNP:nanoparticle:vsm}Room temperature vibrating sample magnetometry for IOS-11 (left) and IOS-7 (right).}
 \end{figure}
 
-For SANSPOL, a magnetic field of $B\eq 515 \unit{mT}$ is applied perpendicular \& horizontal to the beam direction and the scattered neutrons are counted on a position-sensitive detector for up and down polarized neutrons without polarization analysis after the scattering.
-The same model and parameters as obtained from the nuclear small-angle scattering is used and extended by a spherical magnetic form factor.
-The magnetic SLD of the core is fitted as parameter and possibly it is allowed that the magnetic radius of the particle is smaller by a size of $d_\mathrm{dead}$ due to a magnetically dead surface layer.
-From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:theoreticalBackground:scattering:magneticSLD}
-\begin{align}
-  M \eq& \mu_B s_e \eq \frac{2 \pi \hbar^2}{m_n \mu_0 \mu_n} \rho_\mathrm{mag},\\
-  \frac{M}{[\unit{kA m^{-1}}]} \eq& 343.592 \cdot \frac{\rho_\mathrm{mag}}{[10^{-6} \angstrom^{-2}]}.
-\end{align}
-
-\begin{figure}[tb]
-  \centering
-  \includegraphics{looselyPackedNP_SAS_IOS-11_SANSPOLFit}
-  \includegraphics{looselyPackedNP_SAS_IOS-7_SANSPOLFit}
-  \caption{\label{fig:looselyPackedNP:nanoparticle:sanspol}Polarized small-angle neutron scattering for IOS-11 (left) and IOS-7 (right).}
-\end{figure}
 
 \begin{table}[tb]
   \centering
@@ -202,16 +216,16 @@ From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:th
     \multicolumn{3}{c}{VSM}\\
     \hline
     $M_s$
-      & $204.9(3) \unit{kAm^{-1}}$
+      & $183.0(3) \unit{kAm^{-1}}$
       & $68(1) \unit{kAm^{-1}}$\\
     $\mu$
-      & $12418(33) \, \mu_B$
+      & $12442(33) \, \mu_B$
       & $3511(103) \, \mu_B$\\
     $\sigma_{\mu}$
       & $33(1) \, \%$
       & $32(6) \, \%$\\
     $\chi$
-      & $17.0(3) \cdot \unit{10^{-6}}$
+      & $15.3(3) \cdot \unit{10^{-6}}$
       & $3.1(7) \cdot \unit{10^{-6}}$\\
     \hline
     \multicolumn{3}{c}{SANSPOL}\\
@@ -220,7 +234,7 @@ From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:th
       & $0.51(3) \unit{10^{-6} \angstrom^{-2}}$
       & $0.20(2) \unit{10^{-6} \angstrom^{-2}}$\\
     $d_\mathrm{dead}$
-      & $3(1) \unit{nm}$
+      & $0.3(1) \unit{nm}$
       & $0 \unit{nm}$\\
     $M$
       & $175(10) \unit{kAm^{-1}}$
@@ -228,6 +242,18 @@ From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:th
     \hline
   \end{tabular}
 \end{table}
+
+On a first glance, the values of the magnetization obtained by both experiments is well within the error bounds and they are self-consistent for IOS-11.
+However, for the smaller nanospheres IOS-7 the obtained saturation magnetization is a size too small.
+By estimating the magnetic volume from the magnetic moment and saturation magnetization by
+\begin{align}
+  V_p^\mathrm{mag} \eq \frac{\mu}{M_s},
+\end{align}
+a magnetic radius of $r^\mathrm{mag} \eq 4.8 \unit{nm}$ is obtained, which is larger than the particle size determined from small-angle scattering.
+When the magnetic radius is limited by the physical radius obtained from SAS, the saturation magnetization in VSM needs to be at least $M_s \geq 183 \unit{kAm^{-1}}$ for the given magnetic moment $mu$.
+Such a large magnetization on the other hand would need a large dead magnetic layer of $d_\mathrm{dead} \geq 1 \unit{nm}$ to be consistent with the SANSPOL data.
+At this point the data is not unambiguous, which can partly be attributed to complications arising from the bimodal particle content and the large size distributions.
+The focus of discussion is therefore on the batch of bigger particle size IOS-11 first in the following.
 
 \section{Preparation of Loosely-Packed Layers}
 

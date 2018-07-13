@@ -10,7 +10,7 @@ from modelexp.models.magnetometry import Langevin
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
-datafile = 'finalPMK18.xy'
+datafile = 'PMK18_20muL_4cmTeflonPara_BGLinSub_rescale.xye'
 
 app = App()
 app.setExperiment(Vsm)
@@ -20,10 +20,10 @@ dataRef.loadFromFile(datafile)
 dataRef.plotData()
 
 modelRef = app.setModel(Langevin)
-modelRef.setParam("Ms", 204.94725380743165,  minVal = 0, maxVal = 300, vary = True)
-modelRef.setParam("mu", 12418.235571179048,  minVal = 0, maxVal = 50000, vary = True)
-modelRef.setParam("chi", 13.493005717350258,  minVal = -100, maxVal = 100, vary = True)
-modelRef.setParam("sigMu", 0.3283108705014714,  minVal = 0, maxVal = 0.8, vary = True)
+modelRef.setParam("Ms", 183.0,  minVal = 0, maxVal = 300, vary = True)
+modelRef.setParam("mu", 12441.905557377713,  minVal = 0, maxVal = 50000, vary = True)
+modelRef.setParam("chi", 12.200000000000003,  minVal = -100, maxVal = 100, vary = True)
+modelRef.setParam("sigMu", 0.3241462057074713,  minVal = 0, maxVal = 0.8, vary = True)
 
 app.setFit(LevenbergMarquardt)
 

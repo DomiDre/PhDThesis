@@ -31,7 +31,7 @@ dataRef.sliceDomain(1e-2, 0.5)
 dataRef.plotData()
 
 modelRef = app.setModel(SphereCSBimodal, [Magnetic, InstrumentalResolution])
-modelRef.setParam("magSldCore", 2.0267328111702175e-07,  minVal = 0, maxVal = 1e-06, vary = True)
+modelRef.setParam("magSldCore", 2.0267328111702175e-07,  minVal = 0, maxVal = 2e-06, vary = True)
 modelRef.setParam("dDead1", 0.0,  minVal = 0, maxVal = 30, vary = False)
 modelRef.setParam("dDead2", 0.0,  minVal = 0, maxVal = 30, vary = False)
 
