@@ -40,7 +40,6 @@ modelRef.setParam("sigR1", 0.07549776216868476,  minVal = 0, maxVal = 0.2, vary 
 modelRef.setParam("sigR2", 0.6050139188259823,  minVal = 0, maxVal = 1.5, vary = True)
 modelRef.setParam("fraction", 0.5363056033284519,  minVal = 0.1, maxVal = 1, vary = True)
 modelRef.setParam("i0_saxs", 0.609330304519774,  minVal = 0, maxVal = 5, vary = True)
-modelRef.setParam("i0_saxs", 0.609330304519774,  minVal = 0, maxVal = 5, vary = True)
 modelRef.setParam("bg_saxs", 0.00134,  minVal = 0, maxVal = 0.02, vary = False)
 
 modelRef.setParam("d", 18.896805666596023,  minVal = 0, maxVal = 30, vary = True)

@@ -20,10 +20,10 @@ dataRef.loadFromFile(datafile)
 dataRef.plotData()
 
 modelRef = app.setModel(Langevin)
-modelRef.setParam("Ms", 183.0,  minVal = 0, maxVal = 300, vary = True)
-modelRef.setParam("mu", 12441.905557377713,  minVal = 0, maxVal = 50000, vary = True)
-modelRef.setParam("chi", 12.200000000000003,  minVal = -100, maxVal = 100, vary = True)
-modelRef.setParam("sigMu", 0.3241462057074713,  minVal = 0, maxVal = 0.8, vary = True)
+modelRef.setParam("Ms", 180.29999999999998,  minVal = 0, maxVal = 300, vary = True)
+modelRef.setParam("mu", 12750.0,  minVal = 0, maxVal = 50000, vary = True)
+modelRef.setParam("chi", 13.800000000000011,  minVal = -100, maxVal = 100, vary = True)
+modelRef.setParam("sigMu", 0,  minVal = 0, maxVal = 0.8, vary = False)
 
 app.setFit(LevenbergMarquardt)
 
