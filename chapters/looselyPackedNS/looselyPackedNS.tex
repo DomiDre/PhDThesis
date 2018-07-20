@@ -3,9 +3,9 @@
 
 \begin{document}
 \chapter{Loosely-packed nanostructures}\label{ch:looselyPackedNS}
-Magnetic nanospheres can nowadays be routinely synthesized from a large choice of materials \cite{Gubin_2005_Magne}.
+Magnetic nanospheres are nowadays routinely synthesized from a large choice of materials \cite{Gubin_2005_Magne}.
 Magnetite ($\ch{Fe3O4}$) is a common choice for the study of nanomagnetism as it shows strong ferromagnetism and is widely available.
-Due to this extensive research it is now possible to synthesize iron oxide nanoparticles that are highly tunable in size and shape \cite{Wetterskog_2014_Preci}.
+Due to extensive research, it is now possible to synthesize iron oxide nanoparticles that are highly tunable in size and shape \cite{Wetterskog_2014_Preci}.
 In this work, two batches of iron oxide nanospheres in the size range of $11 \unit{nm}$ (IOS-11) and $7 \unit{nm}$ (IOS-7) are studied for their individual structural and magnetic properties.
 Furthermore, loosely packed layers of the nanoparticles, created by spin coating the particles from dispersion on a substrate, are studied.
 The magnetic properties of the nanostructure are compared to the individual nanoparticle properties and compared to model calculations to search for emergent effects arising from dipolar interparticle interaction.
@@ -13,7 +13,7 @@ The magnetic properties of the nanostructure are compared to the individual nano
 \section{Spherical iron oxide nanoparticles}
 Iron oxide nanoparticles were obtained from a collaboration with the group of Prof. Tremel from the inorganic chemistry department of the university of Mainz.
 Briefly, they were prepared by following a popular synthesis route where first iron oleate is prepared from iron(III) chloride and then nanospheres are obtained by a controlled thermal decomposition of the oleate in a high boiling solvent (1-Octadecene).
-A similar synthesis procedure is used in \refsec{ch:monolayers} for the preparation of cobalt iron oxide nanocubes and is explained in that section in more detail.
+A similar synthesis procedure is used in \refsec{ch:monolayers} for the preparation of cobalt ferrite nanocubes and is explained in that section in more detail.
 
 \begin{figure}[tb]
   \centering
@@ -29,21 +29,21 @@ In \reffig{fig:looselyPackedNP:nanoparticle:temSizeDist}, the counted diameters 
 \begin{align}
   p(d; \mu, \sigma) \eq \frac{1}{\sqrt{2\pi} \sigma d} \exp \biggl( - \frac{\log(d) - \log(\mu)}{2 \sigma^2} \biggr),
 \end{align}
-where the parameters $\mu$ and $\sigma$ relate to the expectation value and standard deviation of the distribution via
+where the parameters $\mu$ and $\sigma$ relate to the expectation value and standard deviation of the probability distribution via
 \begin{align}
   E[d] \eq& \mu e^{\sigma^2/2} \approx \mu,\\
   Std[d] \eq& \mu e^{\sigma^2/2} \sqrt{e^{\sigma^2} - 1} \approx \mu \sigma,\\
 \end{align}
 with the approximations being valid for $\sigma^2 \ll 1$.
 The log-normal distribution is generally used to model nanoparticle size distribution phenomenologically as it allows only for positive numbers.
-As all size distributions are in the order of $10 \, \%$ in this work, it follows that the width parameter is $\sigma \approx \mathcal{O}(0.1)$ and with the approximations $\mu$ can be treated as the expectation value and $\sigma$ as the relative standard deviation.
+With size distributions being commonly in the order of $10 \, \%$ in this work, it follows that the width parameter is $\sigma \approx \mathcal{O}(0.1)$ and therefore using the above approximations, $\mu$ can be treated as the expectation value and $\sigma$ as the relative standard deviation.
 
-The batch IOS-11 is well described by a single log-normal function. The second batch, however, has a broader size distribution with additionally smaller particles inside.
-In this case a bimodal log-normal distribution is better suited
+The batch IOS-11 is well described by a single log-normal function.
+The second batch, however, has a broader size distribution and a bimodal log-normal distribution is better suited to describe the probability distribution
 \begin{align}
-  p(d) \eq N_1 p_1(d; \mu_1, \sigma_1) + N_2 p_2(d; \mu_2, \sigma_2),
+  p_\mathrm{bimodal}(d) \eq \alpha p_1(d; \mu_1, \sigma_1) + (1 - \alpha) p_2(d; \mu_2, \sigma_2),
 \end{align}
-with $N_1 + N_2 = 1$.
+where $\alpha$ is the fraction of the first mode.
 Here, the batch is described by being one part particles with a narrow size distribution and one part with a broad size distribution.
 The estimated parameters for both samples are listed in \reftab{tab:looselyPackedNP:nanoparticle:temModel}.
 \begin{figure}[tb]
@@ -54,10 +54,9 @@ The estimated parameters for both samples are listed in \reftab{tab:looselyPacke
       \begin{tabular}{ c | l | l }
           & IOS-11 & IOS-7 \\
         \hline
-        $N_1$       & $1$                   & $0.7(1)$   \\
+        $\alpha$    & $1$                   & $0.7(1)$   \\
         $\mu_1$     & $10.95(5) \unit{nm}$  & $6.97(6) \unit{nm}$ \\
         $\sigma_1$  & $6.6(4) \unit{\%}$    & $11(1) \unit{\%}$ \\
-        $N_2$       & 0                     & $0.3(1)$  \\
         $\mu_2$     & -                     & $6.0(6) \unit{nm}$ \\
         $\sigma_2$  & -                     & $29(4) \unit{\%}$ \\
         \hline
@@ -83,9 +82,10 @@ The solvents are chosen to increase the contrast with respect to the oleic acid 
 
 As in the case of transmission electron microscopy, it is necessary for IOS-7 to add a second mode of particle sizes to the model.
 Furthermore, to obtain a good model for the SANS data, it is necessary that the scattering length density of the oleic acid shell is allowed to vary freely between the bulk value for the solvent and the bulk value for oleic acid, as the solvent could mix in between the oleic acid brushes of the nanoparticles.
-Free oleic acid in the solvent can form micelles, therefore the model includes another spherical form factor for particles with the radius and scattering length density equal to the shell of the nanoparticles.
+Free oleic acid in the solvent can form micelles, in the case of IOS-7 this has to be included in the model for a good fit of the data by adding another spherical form factor for particles with the radius and scattering length density equal to the shell of the nanoparticles.
+The fit parameter $n_\mathrm{OA}$ quantifies then the number density of the oleic acid micelles in dispersion.
 The best fit parameters are tabulated in \reftab{tab:looselyPackedNP:nanoparticle:sas} and the obtained sizes and size distributions by the model are in good agreement to the local result from electron microscopy.
-Only the second mode of the IOS-7 batch is best fitted in the SAS data with a smaller diameter of $2.5 \unit{nm}$ instead of the obtained $6 \unit{nm}$ in electron microscopy.
+Only the second mode of the IOS-7 batch is best fitted in the SAS data with a smaller diameter of $2.2 \unit{nm}$ and a size distribution of $56\,\%$ instead of the obtained $6 \unit{nm}$ and $29\,\%$ in electron microscopy.
 
 \begin{figure}[tb]
   \centering
@@ -101,48 +101,45 @@ Only the second mode of the IOS-7 batch is best fitted in the SAS data with a sm
       & IOS-11 & IOS-7 \\
     \hline
     $R$
-      & $5.272(7) \unit{nm}$
-      & $3.52(1) \unit{nm}$\\
+      & $5.276(8) \unit{nm}$
+      & $3.53(1) \unit{nm}$\\
     $R_2$
       &
-      & $0.9(3) \unit{nm}$\\
+      & $1.00(2) \unit{nm}$\\
     $D$
-      & $1.87(3) \unit{nm}$
-      & $1.89(4) \unit{nm}$\\
+      & $1.90(6) \unit{nm}$
+      & $1.90 \unit{nm}$\\
     $\sigma_R$
       & $6.0(2) \,\%$
-      & $7.5(6) \,\%$\\
+      & $6.8(9) \,\%$\\
     $\sigma_{R_2}$
       &
-      & $61(8) \,\%$\\
+      & $59(4) \,\%$\\
     \hline
-    $N/V^\mathrm{saxs}$
-      & $0.532(3) \cdot 10^{-8} \angstrom^{-3}$
-      & $0.33(11) \cdot 10^{-8} \angstrom^{-3}$\\
-    $N/V_2^\mathrm{saxs}$
-      &
-      & $0.28(9) \cdot 10^{-8} \angstrom^{-3}$\\
+    $\alpha$
+      & $1$\\
+      & $40(4) \,\%$\\
+    $n^\mathrm{saxs}$
+      & $0.533(3) \cdot 10^{-8} \angstrom^{-3}$
+      & $0.6(1) \cdot 10^{-8} \angstrom^{-3}$\\
     $bg^\mathrm{saxs}$
       & $0.009(1) \unit{cm}^{-1}$
-      & $0.0011(2) \unit{cm}^{-1}$\\
-    $N/V^\mathrm{sans}$
-      & $0.272(7)\cdot 10^{-8} \angstrom^{-3}$
-      & $0.15(6) \cdot 10^{-8} \angstrom^{-3}$\\
-    $N/V_2^\mathrm{sans}$
-      &
-      & $0.13(6) \cdot 10^{-8} \angstrom^{-3}$\\
+      & $0.00134 \unit{cm}^{-1}$\\
+    $n^\mathrm{sans}$
+      & $0.27(1)\cdot 10^{-8} \angstrom^{-3}$
+      & $0.73(9) \cdot 10^{-8} \angstrom^{-3}$\\
     $\rho_\mathrm{shell}^\mathrm{sans}$
-      & $2.58(7) \cdot 10^{-6} \angstrom^{-2}$
-      & $1.2(3) \cdot 10^{-6} \angstrom^{-2}$\\
+      & $2.6(1) \cdot 10^{-6} \angstrom^{-2}$
+      & $2.6    \cdot 10^{-6} \angstrom^{-2}$\\
     $\Delta \theta_\mathrm{s. a.}$
-      & $0.18(1) ^\circ$
-      & $0.18 ^\circ$\\
+      & $0.0031(2)$
+      & $0.0031$\\
     $\Delta \theta_\mathrm{l. a.}$
-      & $0.21(1) ^\circ$
-      & $0.21 ^\circ$\\
-    $N/V_\mathrm{OA}$
+      & $0.0036(2)$
+      & $0.0036$\\
+    $n_\mathrm{OA}$
       &
-      & $1.0(1) \cdot 10^{-8} \angstrom^{-3}$\\
+      & $0.66(8) \cdot 10^{-8} \angstrom^{-3}$\\
     \hline
     $\rho_\mathrm{core}^\mathrm{saxs}$
       & \multicolumn{2}{c}{$41.469 \cdot 10^{-6} \angstrom^{-2}$}\\
@@ -186,17 +183,14 @@ The obtained model is shown in \reffig{fig:looselyPackedNP:nanoparticle:sanspol}
 
 
 For the VSM data, it is assumed that the dispersion is compromised of homogeneously magnetized, non-interacting particles that can be represented by a single classical super spin.
-In \refapp{ch:appendix:calculations:magnetizationClassicalSpin}, it is shown that in this case the magnetization is given by a Langevin curve.
-A log-normal distribution $p(x; \mu, \sigma)$ is included in the model for the magnetic moment to account for particle size distribution and a possible excess susceptibility is added to the model.
-In total the fitted model is described by
+In \refapp{ch:appendix:calculations:magnetizationClassicalSpin}, it is shown that in this case the magnetization is given by a Langevin curve
 \begin{align}
-  L(H; \mu) \eq& \biggl( \coth \biggl(\frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr),\\
-  M(H) \eq& M_s \int \dint \mu^\prime L(H; \mu^\prime) p(\mu^\prime; \mu, \sigma_{\mu}) + \chi H.
+  M(H) \eq& M_s \biggl( \coth \biggl(\frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr) + \chi H.
 \end{align}
 Here, $M_s$ is the saturation magnetization, $\mu$ the magnetic moment of one nanoparticle and $\chi$ the excess susceptibility.
 To properly obtain the saturation magnetization in units of $\unit{kAm{-1}}$, the exact volume of magnetic material in dispersion needs to be known and the measured magnetization data scaled accordingly.
 The volume of the magnetic material can be estimated either by gravimetric methods or also by using the results obtained from small-angle scattering.
-As one parameter in the small-angle scattering model is the number of particles per volume $N/V$ and another the volume of the particle $V_p$, the magnetic volume per dispersion volume is given by
+As one parameter in the small-angle scattering model is the number of particles per volume $n \eq N/V$ and another the volume of the particle $V_p$, the magnetic volume per dispersion volume is given by
 \begin{align}
   \alpha \eq \frac{N V_p}{V}.
 \end{align}
@@ -220,44 +214,48 @@ The data and best-fit model are shown in \reffig{fig:looselyPackedNP:nanoparticl
     \multicolumn{3}{c}{VSM}\\
     \hline
     $M_s$
-      & $180.0(3) \unit{kAm^{-1}}$
-      & $309(3) \unit{kAm^{-1}}$\\
+      & $153.0(2) \unit{kAm^{-1}}$
+      & $168.0(1) \unit{kAm^{-1}}$\\
     $\mu$
-      & $12750(33) \, \mu_B$
-      & $3772(43) \, \mu_B$\\
-    $\sigma_{\mu}$
-      & $33(1) \, \%$
-      & \\
+      & $12750(30) \, \mu_B$
+      & $3770(40) \, \mu_B$\\
     $\chi$
-      & $15.3(3) \cdot \unit{10^{-6}}$
-      & $23.5(2) \cdot \unit{10^{-6}}$\\
+      & $11.8(2) \mu_0$
+      & $10.2(9) \mu_0$\\
+    \hline
+    $r_m$
+      & $5.69(2) \unit{nm}$
+      & $3.68(4) \unit{nm}$\\
     \hline
     \multicolumn{3}{c}{SANSPOL}\\
     \hline
     $\rho_\mathrm{mag}$
-      & $0.51(3) \unit{10^{-6} \angstrom^{-2}}$
-      & $0.47(3) \unit{10^{-6} \angstrom^{-2}}$\\
+      & $0.52(3) \unit{10^{-6} \angstrom^{-2}}$
+      & $0.33(2) \unit{10^{-6} \angstrom^{-2}}$\\
     $d_\mathrm{dead}$
       & $0.3(1) \unit{nm}$
       & $0 \unit{nm}$\\
+    \hline
     $M$
-      & $175(10) \unit{kAm^{-1}}$
-      & $161(10) \unit{kAm^{-1}}$\\
+      & $179(10) \unit{kAm^{-1}}$
+      & $112(9) \unit{kAm^{-1}}$\\
     \hline
   \end{tabular}
 \end{table}
 
-On a first glance, the values of the magnetization obtained by both experiments is well within the error bounds and they are self-consistent for IOS-11.
-However, for the smaller nanospheres IOS-7 the obtained saturation magnetization is a size too small.
+While being in the same order of magnitude, the determined saturation magnetizations from SANSPOL and VSM are not consistent within the error bars for both samples.
+This can mostly be attributed to the uncertainty introduced into the VSM data when scaling it to the magnetic volume content.
 By estimating the magnetic volume from the magnetic moment and saturation magnetization by
 \begin{align}
   V_p^\mathrm{mag} \eq \frac{\mu}{M_s},
 \end{align}
-a magnetic radius of $r^\mathrm{mag} \eq 4.8 \unit{nm}$ is obtained, which is larger than the particle size determined from small-angle scattering.
-When the magnetic radius is limited by the physical radius obtained from SAS, the saturation magnetization in VSM needs to be at least $M_s \geq 183 \unit{kAm^{-1}}$ for the given magnetic moment $mu$.
-Such a large magnetization on the other hand would need a large dead magnetic layer of $d_\mathrm{dead} \geq 1 \unit{nm}$ to be consistent with the SANSPOL data.
-At this point the data is not unambiguous, which can partly be attributed to complications arising from the bimodal particle content and the large size distributions.
-The focus of discussion is therefore on the batch of bigger particle size IOS-11 first in the following.
+a magnetic radius is obtained by
+\begin{align}
+  r_m \eq \sqrt[3]{\frac{3 V_p}{4 \pi}}.
+\end{align}
+This is in both cases bigger than the physical particle size, which suggests an under-estimation of the saturation magnetization in VSM.
+On the other hand the splitting of the the two polarization channels is very weak for IOS-7, and therefore estimating the parameter for the magnetic scattering length density is limited by the statistical noise.
+These limitations have to be kept in mind when comparing the nanoparticle properties in the later step with the properties of a loosely-packed collection of nanoparticles.
 
 \section{Preparation of Loosely-Packed Layers}
 

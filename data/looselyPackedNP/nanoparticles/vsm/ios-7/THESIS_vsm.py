@@ -26,7 +26,7 @@ data.loadFromFile(datfile)
 B, M, sM, Mmodel = data.getData()
 
 min_B, max_B = min(B), max(B)
-min_M, max_M = -390, 390
+min_M, max_M = -210, 210
 T = 298
 
 fig = plt.figure()

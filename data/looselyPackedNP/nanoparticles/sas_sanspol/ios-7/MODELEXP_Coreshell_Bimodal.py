@@ -5,8 +5,8 @@
 
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
-from modelexp.experiments.sas import SimultaneousSaxsSans
-from modelexp.models.sas import SphereCSBimodalOA, InstrumentalResolution
+from modelexp.experiments.sas import SimultaneousSaxsSansSanspol
+from modelexp.models.sas import SphereCSBimodalOA, InstrumentalResolution, Magnetic
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -23,17 +23,21 @@ sans_sldShell = sld_neutrons_5A['Oleic Acid']
 sans_sldSolvent = sld_neutrons_5A['Toluene-d8']
 
 app = App()
-app.setExperiment(SimultaneousSaxsSans)
+app.setExperiment(SimultaneousSaxsSansSanspol)
 dataRef = app.setData(XyeData)
 
 dataRef.loadFromFile('saxs_KWi338.xye', ['saxs'], 0.001)
 dataRef.loadFromFile('023564_N.dat', ['sans', 'sa']) #sans_KWi338_N_8m.dat
 dataRef.loadFromFile('023567_N.dat', ['sans', 'la']) # sans_KWi338_N_2m.dat
+dataRef.loadFromFile('sanspol_KWi338_8m_p.dat', ['sans', 'p', 'sa'])
+dataRef.loadFromFile('sanspol_KWi338_2m_p.dat', ['sans', 'p', 'la'])
+dataRef.loadFromFile('sanspol_KWi338_8m_m.dat', ['sans', 'm', 'sa'])
+dataRef.loadFromFile('sanspol_KWi338_2m_m.dat', ['sans', 'm', 'la'])
 
 dataRef.sliceDomain(1e-2, 0.5)
 dataRef.plotData()
 
-modelRef = app.setModel(SphereCSBimodalOA, InstrumentalResolution)
+modelRef = app.setModel(SphereCSBimodalOA, [Magnetic, InstrumentalResolution])
 modelRef.setParam("r1", 35.25471695947235,  minVal = 0, maxVal = 80, vary = True)
 modelRef.setParam("r2", 9.52,  minVal = 0, maxVal = 80, vary = True)
 modelRef.setParam("sigR1", 0.0698,  minVal = 0, maxVal = 0.2, vary = True)
@@ -48,6 +52,9 @@ modelRef.setParam("bg_sans", 0.0,  minVal = 0, maxVal = 0.02, vary = False)
 modelRef.setParam("sldShell_sans", 2.5772256e-06,  minVal = 3.12e-08, maxVal = 5.664e-06, vary = False)
 
 modelRef.setParam("i0Oleic", 0.6599999999999999,  minVal = 0, maxVal = 2, vary = True)
+modelRef.setParam("magSldCore", 3.259326126120011e-07,  minVal = 0, maxVal = 2e-06, vary = True)
+modelRef.setParam("dDead1", 0.0,  minVal = 0, maxVal = 90, vary = False)
+modelRef.setParam("dDead2", 0.0,  minVal = 0, maxVal = 90, vary = False)
 
 modelRef.setConstantParam("dTheta_sa", 0.0030600000000000002)
 modelRef.setConstantParam("dTheta_la", 0.0035800000000000003)

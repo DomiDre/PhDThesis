@@ -44,8 +44,10 @@ sldData = MultiData(XyData)
 sldData.loadFromFile(sld_file)
 saxs_r1, saxs_sld1 = sldData.getDatasetBySuffix('saxs_model1').getData()
 saxs_r2, saxs_sld2 = sldData.getDatasetBySuffix('saxs_model2').getData()
+saxs_r3, saxs_sld3 = sldData.getDatasetBySuffix('saxs_model3').getData()
 sans_r1, sans_sld1 = sldData.getDatasetBySuffix('sans_sa_model1').getData()
 sans_r2, sans_sld2 = sldData.getDatasetBySuffix('sans_sa_model2').getData()
+sans_r3, sans_sld3 = sldData.getDatasetBySuffix('sans_sa_model3').getData()
 
 saxs_q_min, saxs_q_max = min(saxs_q), max(saxs_q)
 sans_q_min, sans_q_max = min(sans_sa_q), max(sans_la_q)
@@ -88,13 +90,17 @@ ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
 ax_sld.plot(saxs_r1, saxs_sld1, marker='None',
-  color=colors['saxs_data'])
+  color=colors['saxs_data'], zorder=3)
 ax_sld.plot(saxs_r2, saxs_sld2, marker='None',
-  color=color_variant(colors['saxs_data'], -100), alpha=0.5)
+  color=color_variant(colors['saxs_data'], -100), alpha=0.7, zorder=2)
+ax_sld.plot(saxs_r3, saxs_sld3, marker='None',
+  color=color_variant(colors['oleicAcid'], -0), alpha=0.9)
 ax_sld.plot(sans_r1, sans_sld1, marker='None',
-  color=colors['sans_sa_data'])
+  color=colors['sans_sa_data'], zorder=3)
 ax_sld.plot(sans_r2, sans_sld2, marker='None',
-  color=color_variant(colors['sans_sa_data'], -100), alpha=0.5)
+  color=color_variant(colors['sans_sa_data'], -100), alpha=0.7, zorder=2)
+ax_sld.plot(sans_r3, sans_sld3, marker='None',
+  color=color_variant(colors['oleicAcid'], -50), alpha=0.9)
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel("$SLD \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 2, 4, 6, 8])
