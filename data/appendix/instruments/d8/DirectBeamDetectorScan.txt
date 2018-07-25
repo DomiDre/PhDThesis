@@ -1,0 +1,476 @@
+;RAW4.00
+[RawHeader]
+Date=05/15/2018
+EstimatedTotalTime=0
+FurtherDQLReading=0
+HardwareIndicator=65519
+MeasuredTotalTime=0
+MeasurementFlag=1
+NumberOfMeasuredRanges=1
+NumberOfRanges=1
+Time=16:29:56
+
+[HardwareConfiguration]
+AbsorptionFactor=0
+ActivateAbsorber=0
+Alpha1=1.5406
+Alpha2=1.54439
+AlphaAverage=1.54184
+AlphaRatio=0.5
+Analyzer=0
+Anode=Cu
+AntiScatteringSlit=0.15
+BeamOpticsFlags=36
+Beta=1.39222
+BetaRelativeIntensity=0
+DeactivateAbsorber=0
+DetectorSlit=0
+DivergenceSlit=0
+GoniometerControl=9999
+GoniometerDiameter=435
+GoniometerModel=516
+GoniometerStage=0
+Monochromator=0
+NearSampleSlit=0
+PrimarySollerSlit=2
+SampleChanger=0
+SecondSollerSlit=2
+SynchronousAxis=0
+ThinFilmAttachment=0
+WaveUnit=A
+
+[VarInfo]
+Type=CREATOR
+Flags=0
+Value=XRD Commander
+
+[VarInfo]
+Type=OSUSER
+Flags=0
+Value=Administrator
+
+[VarInfo]
+Type=USER
+Flags=0
+Value=Administrator
+
+[VarInfo]
+Type=SITE
+Flags=0
+Value=Jülich / Germany
+
+[VarInfo]
+Type=SAMPLEID
+Flags=0
+Value=Direct beam
+
+[RangeHeader]
+ActuallyUsedLambda=1.5406
+AdditionalDetectorMask=0
+DataRecordLength=4
+DelayTime=0
+DisplayPlaneNumber=0
+EstimatedScanTime=0
+ExtraParametersMask=0
+GeneratorCurrent=40
+GeneratorVoltage=40
+Increment=0.002
+Increment3=0
+NumberOfCompletedData=301
+NumberOfCounts=1
+NumberOfDetectors=1
+NumberOfDrives=6
+NumberOfEncoderDrives=0
+NumberOfMeasuredData=301
+NumberOfVaryingParameters=0
+RangeStartTime=1108869120
+RotationSpeed=0
+ScanMode=1
+ScanType=Detector Scan
+SimulatedMeasConditions=0
+SlitChangerIn=9999
+SmootingWidth=0
+Start=-0.3
+Steps=301
+SynchronousRotation=0
+Time=0.30006
+
+[Drive]
+DriveFlags=1
+DriveName=Theta
+DriveNumber=1
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=0
+
+[Drive]
+DriveFlags=1
+DriveName=2Theta
+DriveNumber=2
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=-0.3
+
+[Drive]
+DriveFlags=0
+DriveName=z
+DriveNumber=14
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=-2.99999
+
+[Drive]
+DriveFlags=0
+DriveName=chi-
+DriveNumber=15
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=0
+
+[Drive]
+DriveFlags=0
+DriveName=KEC
+DriveNumber=16
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=3.5
+
+[Drive]
+DriveFlags=1
+DriveName=Rotary Absorber
+DriveNumber=20
+DriveOffset=0
+OffsetIndex=0
+OscillationAmplitude=0
+OscillationSpeed=0
+StartPosition=0
+
+[Detector]
+AmplifierGain=50
+ConstantDeadTime=0
+DetectorFlags=256
+DetectorName=Detector 1
+DetectorNumber=1
+DetectorType=1
+Discriminator1LowerLevel=0.8
+Discriminator1WindowWidth=1.4
+Discriminator2LowerLevel=0
+Discriminator2WindowWidth=0
+HighVoltage=715
+PileUpTime=0
+PulseShaping=9999
+TTLDetectorName=
+
+[Data]
+     Angle, Det1Disc1,
+      -0.3,         1,
+    -0.298,         0,
+    -0.296,         0,
+    -0.294,         0,
+    -0.292,         0,
+     -0.29,         2,
+    -0.288,         0,
+    -0.286,         1,
+    -0.284,         0,
+    -0.282,         0,
+     -0.28,         1,
+    -0.278,         0,
+    -0.276,         2,
+    -0.274,         0,
+    -0.272,         1,
+     -0.27,         2,
+    -0.268,         1,
+    -0.266,         0,
+    -0.264,         3,
+    -0.262,         1,
+     -0.26,         3,
+    -0.258,         3,
+    -0.256,         4,
+    -0.254,         2,
+    -0.252,         2,
+     -0.25,         0,
+    -0.248,         6,
+    -0.246,         3,
+    -0.244,         2,
+    -0.242,         2,
+     -0.24,         1,
+    -0.238,         4,
+    -0.236,         0,
+    -0.234,         1,
+    -0.232,         3,
+     -0.23,         4,
+    -0.228,         4,
+    -0.226,         4,
+    -0.224,         7,
+    -0.222,         1,
+     -0.22,         5,
+    -0.218,         4,
+    -0.216,         6,
+    -0.214,        10,
+    -0.212,         8,
+     -0.21,        14,
+    -0.208,         7,
+    -0.206,        11,
+    -0.204,        13,
+    -0.202,        11,
+      -0.2,        12,
+    -0.198,        12,
+    -0.196,        11,
+    -0.194,        14,
+    -0.192,        13,
+     -0.19,         8,
+    -0.188,        13,
+    -0.186,        20,
+    -0.184,        21,
+    -0.182,        22,
+     -0.18,        18,
+    -0.178,        18,
+    -0.176,        21,
+    -0.174,        24,
+    -0.172,        21,
+     -0.17,        23,
+    -0.168,        20,
+    -0.166,        21,
+    -0.164,        22,
+    -0.162,        27,
+     -0.16,        25,
+    -0.158,        18,
+    -0.156,        24,
+    -0.154,        26,
+    -0.152,        34,
+     -0.15,        27,
+    -0.148,        31,
+    -0.146,        29,
+    -0.144,        32,
+    -0.142,        33,
+     -0.14,        42,
+    -0.138,        39,
+    -0.136,        49,
+    -0.134,        44,
+    -0.132,        42,
+     -0.13,        38,
+    -0.128,        39,
+    -0.126,        57,
+    -0.124,        48,
+    -0.122,        58,
+     -0.12,        56,
+    -0.118,        63,
+    -0.116,        57,
+    -0.114,        68,
+    -0.112,        60,
+     -0.11,        58,
+    -0.108,        58,
+    -0.106,        54,
+    -0.104,        74,
+    -0.102,        65,
+      -0.1,        74,
+    -0.098,        69,
+    -0.096,        68,
+    -0.094,        74,
+    -0.092,        77,
+     -0.09,        73,
+    -0.088,        70,
+    -0.086,        92,
+    -0.084,        98,
+    -0.082,        95,
+     -0.08,       102,
+    -0.078,       104,
+    -0.076,       108,
+    -0.074,       146,
+    -0.072,       149,
+     -0.07,       181,
+    -0.068,       205,
+    -0.066,       260,
+    -0.064,       316,
+    -0.062,       407,
+     -0.06,       499,
+    -0.058,       650,
+    -0.056,       893,
+    -0.054,      1097,
+    -0.052,      1506,
+     -0.05,      2116,
+    -0.048,      2870,
+    -0.046,      3754,
+    -0.044,      5052,
+    -0.042,      6647,
+     -0.04,      8727,
+    -0.038,     11073,
+    -0.036,     14175,
+    -0.034,     18093,
+    -0.032,     22819,
+     -0.03,     28864,
+    -0.028,     36487,
+    -0.026,     44226,
+    -0.024,     53789,
+    -0.022,   69053.6,
+     -0.02,   79427.6,
+    -0.018,   94156.4,
+    -0.016,    108581,
+    -0.014,    124663,
+    -0.012,    139065,
+     -0.01,    154668,
+    -0.008,    167557,
+    -0.006,    176480,
+    -0.004,    186983,
+    -0.002,    193777,
+1.73472e-017,    194332,
+     0.002,    196065,
+     0.004,    189597,
+     0.006,    182605,
+     0.008,    169495,
+      0.01,    156682,
+     0.012,    141710,
+     0.014,    125142,
+     0.016,    112252,
+     0.018,   97348.4,
+      0.02,   81829.2,
+     0.022,   69281.6,
+     0.024,     57760,
+     0.026,   47066.8,
+     0.028,     35539,
+      0.03,     31450,
+     0.032,     26464,
+     0.034,     22233,
+     0.036,     18552,
+     0.038,     16166,
+      0.04,     14058,
+     0.042,     12182,
+     0.044,     10876,
+     0.046,      9346,
+     0.048,      8260,
+      0.05,      7380,
+     0.052,      6345,
+     0.054,      5470,
+     0.056,      4488,
+     0.058,      3899,
+      0.06,      3193,
+     0.062,      2668,
+     0.064,      2047,
+     0.066,      1773,
+     0.068,      1408,
+      0.07,      1157,
+     0.072,       955,
+     0.074,       797,
+     0.076,       622,
+     0.078,       554,
+      0.08,       510,
+     0.082,       414,
+     0.084,       360,
+     0.086,       288,
+     0.088,       254,
+      0.09,       218,
+     0.092,       196,
+     0.094,       168,
+     0.096,       150,
+     0.098,       122,
+       0.1,        98,
+     0.102,        78,
+     0.104,        86,
+     0.106,        60,
+     0.108,        47,
+      0.11,        46,
+     0.112,        51,
+     0.114,        34,
+     0.116,        23,
+     0.118,        19,
+      0.12,        12,
+     0.122,        10,
+     0.124,         8,
+     0.126,        13,
+     0.128,         9,
+      0.13,         2,
+     0.132,         2,
+     0.134,         3,
+     0.136,         3,
+     0.138,         2,
+      0.14,         3,
+     0.142,         2,
+     0.144,         0,
+     0.146,         1,
+     0.148,         1,
+      0.15,         2,
+     0.152,         1,
+     0.154,         2,
+     0.156,         1,
+     0.158,         1,
+      0.16,         2,
+     0.162,         2,
+     0.164,         1,
+     0.166,         1,
+     0.168,         0,
+      0.17,         2,
+     0.172,         0,
+     0.174,         0,
+     0.176,         0,
+     0.178,         1,
+      0.18,         0,
+     0.182,         0,
+     0.184,         0,
+     0.186,         2,
+     0.188,         1,
+      0.19,         1,
+     0.192,         1,
+     0.194,         1,
+     0.196,         1,
+     0.198,         1,
+       0.2,         0,
+     0.202,         0,
+     0.204,         0,
+     0.206,         2,
+     0.208,         0,
+      0.21,         0,
+     0.212,         2,
+     0.214,         1,
+     0.216,         0,
+     0.218,         0,
+      0.22,         0,
+     0.222,         2,
+     0.224,         1,
+     0.226,         0,
+     0.228,         0,
+      0.23,         1,
+     0.232,         0,
+     0.234,         1,
+     0.236,         0,
+     0.238,         2,
+      0.24,         0,
+     0.242,         0,
+     0.244,         0,
+     0.246,         0,
+     0.248,         0,
+      0.25,         1,
+     0.252,         1,
+     0.254,         1,
+     0.256,         1,
+     0.258,         1,
+      0.26,         1,
+     0.262,         0,
+     0.264,         0,
+     0.266,         0,
+     0.268,         0,
+      0.27,         0,
+     0.272,         0,
+     0.274,         0,
+     0.276,         0,
+     0.278,         0,
+      0.28,         1,
+     0.282,         0,
+     0.284,         0,
+     0.286,         1,
+     0.288,         0,
+      0.29,         0,
+     0.292,         1,
+     0.294,         1,
+     0.296,         0,
+     0.298,         0,
+       0.3,         0,
