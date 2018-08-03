@@ -9,3 +9,6 @@ python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/sanspol
 python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/sanspol/ios-11/THESIS_sanspol.py'
 python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/vsm/ios-7/THESIS_vsm.py'
 python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/nanoparticles/vsm/ios-11/THESIS_vsm.py'
+python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/lps-7/sem/THESIS_sem.py'
+python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/lps-7/sem/THESIS_semTop.py'
+python -u '/home/dominique/PhD/Thesis/data/looselyPackedNP/lps-7/sem/THESIS_semProjection.py'

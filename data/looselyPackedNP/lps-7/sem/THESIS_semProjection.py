@@ -7,12 +7,12 @@ plt.style.use('phdthesis')
 import numpy as np
 from EM.sem_fft import SEM_FFT
 
-semFilepath = cwd+"/ES-S14_side_03.tif"
+semFilepath = cwd+"/ES-S17_xs_05.tif"
 chapter = 'looselyPackedNP'
-sample_name = 'ES_S14'
+sample_name = 'ES_S17'
 savefile = chapter+'_SEMprojection_'+sample_name
 
-y0 = 138
+y0 = 213
 
 Osem = SEM_FFT()
 Osem.load_tif_file(semFilepath)
@@ -25,10 +25,11 @@ left, bottom = 0.18, 0.15
 fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax.plot(Osem.y, projected_data, marker='None')
-Osem.annotate_point_pair(ax, "90 nm", (0, 130), (90,130), text_offset=15, x_shift=15)
+Osem.annotate_point_pair(ax, "50 nm", (0, 200), (50,200), text_offset=15, x_shift=15)
 ax.set_xlabel("$ \mathit{z} \, / \, nm$")
 ax.set_ylabel("$ I \, / \, a.u.$")
-ax.set_xlim(-30, 149)
+ax.set_xlim(-50, 149)
+ax.set_ylim(110, 249)
 
 
 fig.savefig(cwd+'/'+savefile)
