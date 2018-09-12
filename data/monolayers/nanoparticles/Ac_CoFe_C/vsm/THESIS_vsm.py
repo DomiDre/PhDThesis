@@ -14,6 +14,13 @@ import numpy as np
 
 from modelexp.data import XyemData, MultiData
 
+datfile = 'fit_result.dat'
+
+chapter = 'monolayer'
+sample_name = 'Ac_CoFe_C'
+
+savefile = chapter + '_VSM_' + sample_name
+
 def getValueWithErrorString(parameter, modifier=1):
   val = parameter['value']*modifier
   std = parameter['std']*modifier
@@ -34,14 +41,6 @@ def getValueWithErrorString(parameter, modifier=1):
   else:
     result = f"{val}"
   return result
-
-datfile = 'fit_result.dat'
-
-chapter = 'monolayer'
-sample_name = 'Ol_CoFe_C'
-
-savefile = chapter + '_VSM_' + sample_name
-
 data = XyemData()
 data.loadFromFile(datfile)
 B, M, sM, Mmodel = data.getData()
@@ -51,7 +50,7 @@ fitData.loadFromFile(datfile)
 fit_params = fitData.params
 
 min_B, max_B = min(B), max(B)
-min_M, max_M = -90, 90
+min_M, max_M = -310, 360
 T = 298
 
 fig = plt.figure()
@@ -64,6 +63,7 @@ ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
             label='VSM\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
 ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
 
+
 ax.text(0.03, 0.97,
   f'$M_s \,=\,{getValueWithErrorString(fit_params["Ms"])}\, '+'kAm^{-1}$\n'+
   f'$\mu \,=\,{getValueWithErrorString(fit_params["mu"])}\, \mu_B$',
@@ -71,6 +71,7 @@ ax.text(0.03, 0.97,
   horizontalalignment='left',
   verticalalignment='top',
   transform=ax.transAxes)
+
 ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, T$")
 ax.set_ylabel(r"$\mathit{M} \, / \, kAm^{-1}$")
 

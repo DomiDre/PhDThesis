@@ -18,14 +18,14 @@ from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_vari
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
-sample_name = 'Ol_CoFe_C'
+sample_name = 'Ac_CoFe_C'
 Chapter = 'monolayers'
 fit_file = cwd + "/fit_result.dat"
 sld_file = cwd + "/fit_sld.dat"
 
 
 q_min, q_max = 1e-2, 0.25
-I_min, I_max = 1.5e-2, 3e1
+I_min, I_max = 8e-4, 2e1
 
 sanspol_p_legend_label = "I(+) SANSPOL @ D33"
 sanspol_m_legend_label = "I(-) SANSPOL @ D33"

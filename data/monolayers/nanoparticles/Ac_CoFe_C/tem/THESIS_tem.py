@@ -20,6 +20,6 @@ sample_name = 'Ac_CoFe_C'
 savefile = chapter+'_TEM_'+sample_name
 
 fig, ax = uzkChemTem.pretty_plot(
-  temFilepath, y0=200, pixel_per_nm=0.26517*0.9049)
+  temFilepath, y0=200, pixel_per_nm=3.7710*0.9049)
 fig.savefig(cwd+'/'+savefile, bbox_inches='tight')
 fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')

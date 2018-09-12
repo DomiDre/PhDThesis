@@ -36,22 +36,44 @@ def color_variant(hex_color, brightness_offset=1):
       new_rgb_hex.append(new_hex)
     return "#" + "".join(new_rgb_hex)
 
+def getValueWithErrorString(parameter, modifier=1):
+  val = parameter.value*modifier
+  std = parameter.stderr*modifier
+  result = ''
+  if (std > 0):
+    power = np.floor(np.log10(std))
+    cutted_std = int(np.round(std/(10**power)))
+    cutted_val = np.round(val, int(-power))
+    if power < 0:
+      format_str = '{:.'+str(int(-power))+'f}'
+      cutted_val = format_str.format(cutted_val)
+      # cutted_val = str(cutted_val).ljust(int(-power)+2,'0')
+    elif power >= 0:
+      cutted_val = str(int(cutted_val))
+      cutted_std = str(int(cutted_std * 10**power))
+
+    result = f"{cutted_val}({cutted_std})"
+  else:
+    result = f"{val}"
+  return result
+
 chapter = 'monolayers'
-sample_name = 'Ol_CoFe_C'
+sample_name = 'Ac_CoFe_C'
 savefile = f'{chapter}_TEM_{sample_name}_sizeDist'
 
-left_xlim, right_xlim = 7, 17
+left_xlim, right_xlim = 7, 15.9
 left, bottom = 0.16, 0.15
 
-bins = 20
+bins = 15
 
 temOlCoFeC = TEMSpheres()
 temOlCoFeC.Nbins = bins
-lengths = temOlCoFeC.load_csv(cwd + "/EF2851_4_counted.xls")
+lengths = temOlCoFeC.load_csv(cwd + "/EF2932_6_scaled_by_0-9049_results.csv")
 temOlCoFeC.load(lengths)
 temOlCoFeC.prepare_length_histogram(density=True)
 temOlCoFeC.fit_lognormal(11, 0.1, density=True)
-temOlCoFeC.export_fit_result(cwd + "/Ol_CoFe_C_size_dist.xy")
+temOlCoFeC.export_fit_result(cwd + "/Ac_CoFe_C_size_dist.xy")
+fit_params = temOlCoFeC.fitresults.params
 
 #Plot Fit:
 fig = plt.figure()
@@ -69,7 +91,7 @@ ax.errorbar(
   temOlCoFeC.bins, temOlCoFeC.counts, temOlCoFeC.errors, ls='None',
   color=color_variant(cycle[0], -100),
   alpha=0.7,
-  label='Ol-CoFe-C'
+  label='Ac-CoFe-C'
 )
 
 x_for_fit_display = np.linspace(left_xlim, right_xlim, 500)
@@ -77,10 +99,19 @@ x_for_fit_display = np.linspace(left_xlim, right_xlim, 500)
 ax.plot(x_for_fit_display,\
   temOlCoFeC.lognormal(temOlCoFeC.p_result, x_for_fit_display),\
   color='black', marker='None')
+
+ax.text(0.07, 0.85,
+  f'$\mu \,=\,{getValueWithErrorString(fit_params["logmu"])}\, nm$\n'+
+  f'$\sigma \,=\,{getValueWithErrorString(fit_params["logstd"], 100)}\, \%$',
+  color='black',
+  horizontalalignment='left',
+  verticalalignment='top',
+  transform=ax.transAxes)
+
 ax.set_xlabel('$\mathit{d} \, / \, nm$')
 ax.set_ylabel("$p(d)$")
 ax.set_xlim([left_xlim, right_xlim])
-ax.set_ylim([0, 0.55])
+ax.set_ylim([0, 0.65])
 ax.legend(loc='upper left')
 fig.savefig(cwd + '/' + savefile)
 fig.savefig(thesisimgs + '/' + savefile)
