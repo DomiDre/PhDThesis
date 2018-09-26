@@ -1,0 +1,59 @@
+#Fitting first order peak of GISAXS data
+#Date of execution: 2018-09-26 17:06:40.225317
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Pen2_2_ai_0-11.h5
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 17
+    # data points      = 13
+    # variables        = 3
+    chi-square         = 42.1990191
+    reduced chi-square = 4.21990191
+    Akaike info crit   = 21.3068190
+    Bayesian info crit = 23.0016671
+[[Variables]]
+    A:    4.9472e-05 +/- 8.2235e-07 (1.66%) (init = 5e-05)
+    mu:   0.43669784 +/- 2.8859e-04 (0.07%) (init = 0.436)
+    sig:  0.02100083 +/- 5.2606e-04 (2.50%) (init = 0.023)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(A, sig) = -0.774
+a = 14.38794696219119 +/- 0.009508097188858368
+BeamWidthCorrectedSig = 0.01924771837746305 +/- 0.0005887126155223441
+d_coh = 326.4379280682172 +/- 9.984462712409297
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hex1_2_ai_0-11.h5
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 17
+    # data points      = 13
+    # variables        = 3
+    chi-square         = 73.2179098
+    reduced chi-square = 7.32179098
+    Akaike info crit   = 28.4703791
+    Bayesian info crit = 30.1652272
+[[Variables]]
+    A:    6.8964e-05 +/- 1.4162e-06 (2.05%) (init = 5e-05)
+    mu:   0.44174570 +/- 2.5087e-04 (0.06%) (init = 0.4417)
+    sig:  0.01505397 +/- 3.7548e-04 (2.49%) (init = 0.015)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(A, sig) = -0.777
+a = 14.223534613690617 +/- 0.008077725173331076
+BeamWidthCorrectedSig = 0.012492473583861104 +/- 0.0004953981255353962
+d_coh = 502.95766206756423 +/- 19.945151881996317
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hep1_2_ai_0-11.h5
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 29
+    # data points      = 13
+    # variables        = 3
+    chi-square         = 952.339315
+    reduced chi-square = 95.2339315
+    Akaike info crit   = 61.8216365
+    Bayesian info crit = 63.5164846
+[[Variables]]
+    A:    1.3671e-04 +/- 7.6552e-06 (5.60%) (init = 5e-05)
+    mu:   0.47467414 +/- 5.7146e-04 (0.12%) (init = 0.477)
+    sig:  0.01224965 +/- 7.5461e-04 (6.16%) (init = 0.012)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(A, sig) = -0.774
+a = 13.236839172143181 +/- 0.01593582156509527
+BeamWidthCorrectedSig = 0.008915931331505566 +/- 0.0010745950933448356
+d_coh = 704.7144121643422 +/- 84.93589972426533

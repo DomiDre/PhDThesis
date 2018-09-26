@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 plt.style.use('phdthesis')
 
 import numpy as np
+import lmfit
+import datetime as dt
+
 from GALAXI.dd_gisaxs.dd_gisaxs import DDGISAXS
 import matplotlib.colors as mcolors
 import matplotlib.patheffects as PathEffects
@@ -53,7 +56,43 @@ def plot_q_square_lines(q10, ax):
   ax.axvline(-q32, color='black', ymin=ymin, ymax=ymax, marker='None')
   ax.axvline(-q33, color='black', ymin=ymin, ymax=ymax, marker='None')
 
-def plot_gisas(filepath, sample_name, q10):
+def lorentzian(x, p):
+  A = p['A'].value
+  mu = p['mu'].value
+  sig = p['sig'].value
+  return A * 1./( ((x-mu)/sig)**2 + 1 )
+
+def fit_peak(f, Ainit, muinit, siginit, q, I, sI, vary_A=True, vary_mu=True, vary_sig=True):
+  def residuum(p, q, I, sI):
+    return (I - lorentzian(q, p))/sI
+  dq = 0.03
+  sig_beam_width = 0.0084 # nm-1
+  error_sig_beam_width = 0.0003 # nm-1
+
+  p = lmfit.Parameters()
+  p.add('A', Ainit, min=0, vary=vary_A)
+  p.add('mu', muinit, vary=vary_mu)
+  p.add('sig', siginit, min=0, vary=vary_sig)
+
+  fit_range = np.logical_and(muinit-dq < q, q < muinit+dq)
+  fit_result = lmfit.minimize(residuum,\
+            p, args=(q[fit_range], I[fit_range], sI[fit_range]))
+  p_result = fit_result.params
+  print(lmfit.fit_report(fit_result))
+  f.write(lmfit.fit_report(fit_result)+'\n')
+  f.write(f"a = {2*np.pi/p_result['mu'].value} +/- {2*np.pi*p_result['mu'].stderr/p_result['mu'].value**2}\n")
+  corrected_sig = np.sqrt(p_result['sig'].value**2 - sig_beam_width**2)
+  error_corrected_sig = np.sqrt(
+    (p_result['sig'].value/np.sqrt(p_result['sig'].value**2 - sig_beam_width**2) * p_result['sig'].stderr)**2 +
+    (sig_beam_width/np.sqrt(p_result['sig'].value**2 - sig_beam_width**2) * error_sig_beam_width)**2
+  )
+  f.write(f"BeamWidthCorrectedSig = {corrected_sig} +/- {error_corrected_sig}\n")
+  d_coh = 2*np.pi / corrected_sig
+  error_d_coh = 2*np.pi / corrected_sig**2 * error_corrected_sig
+  f.write(f"d_coh = {d_coh} +/- {error_d_coh}\n")
+  return p_result
+
+def plot_gisas(filepath, sample_name, f, A10, q10, dq10):
   savefile = chapter + '_GISAXS_' + sample_name
   obj = DDGISAXS()
   obj.set_sdd(default_sdd)
@@ -66,7 +105,9 @@ def plot_gisas(filepath, sample_name, q10):
   data = obj.get_data()
   qyslice, I_qyslice, sI_qyslice = obj.get_qy_slice(qz_min, qz_max)
 
-
+  if dq10 is not None:
+    f.write(f'#Fitting {filepath}\n')
+    p_lorentzian = fit_peak(f, A10, q10, dq10, qyslice, I_qyslice, sI_qyslice)
 
   x0, y0 = 0.13, 0.17
   width, height = 1 - x0 - 0.01, 1 - y0 - 0.01
@@ -106,6 +147,13 @@ def plot_gisas(filepath, sample_name, q10):
     qyslice[data_right], I_qyslice[data_right], sI_qyslice[data_right],
     linestyle='None', capsize=0, elinewidth=1, color='#ca0020'
   )
+  if dq10 is not None:
+    plot_width = 0.1
+    plot_lorentzian = np.logical_and(p_lorentzian['mu'].value-plot_width < qyslice, qyslice < p_lorentzian['mu'].value+plot_width)
+    ax2.plot(
+      qyslice[plot_lorentzian], lorentzian(qyslice[plot_lorentzian], p_lorentzian),
+      linestyle='-', marker='None', color='black', zorder=10, alpha=0.5
+    )
   ax2.set_yscale('log')
   ax2.get_yaxis().set_visible(False)
   plt.setp(ax.get_xticklabels(), visible=False)
@@ -119,7 +167,10 @@ def plot_gisas(filepath, sample_name, q10):
   fig.savefig(cwd + '/' + savefile)
   fig.savefig(thesisimgs+'/'+savefile)
 
-plot_gisas(cwd+"/DD192_Hep1_2_ai_0-11.h5", 'ML-SV-HepOct', 0.50)
-plot_gisas(cwd+"/DD192_Hex1_2_ai_0-11.h5", 'ML-SV-HexOct', 0.44)
-plot_gisas(cwd+"/DD192_Hex2_2_ai_0-11.h5", 'ML-SV-HexTet', 0.443)
-plot_gisas(cwd+"/DD192_Pen2_2_ai_0-11.h5", 'ML-SV-PenOct', 0.4769)
+with open('peak_fit_parameters', 'w') as f:
+  f.write('#Fitting first order peak of GISAXS data\n')
+  f.write(f'#Date of execution: {dt.datetime.now()}\n')
+  plot_gisas(cwd+"/DD192_Hex2_2_ai_0-11.h5", 'ML-SV-HexTet', f, 5e-5, 0.439, None)
+  plot_gisas(cwd+"/DD192_Pen2_2_ai_0-11.h5", 'ML-SV-PenOct', f, 5e-5, 0.436, 2.3e-2)
+  plot_gisas(cwd+"/DD192_Hex1_2_ai_0-11.h5", 'ML-SV-HexOct', f, 5e-5, 0.4417, 1.5e-2)
+  plot_gisas(cwd+"/DD192_Hep1_2_ai_0-11.h5", 'ML-SV-HepOct', f, 5e-5, 0.477, 1.2e-2)
