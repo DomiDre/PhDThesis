@@ -1,0 +1,45 @@
+\documentclass[12pt,
+  paper=a4,
+  BCOR=8mm,
+  bibliography=totoc,
+  a4paper,
+  titlepage,
+  listof=totoc,
+  % cleardoublepage=plain,
+  % open=right,
+ ]{scrbook}
+\providecommand{\main}{.}
+
+\input{\main/config/packages}
+\input{\main/bibliography}
+\input{\main/config/config}
+\input{\main/config/aliases}
+
+\graphicspath{{\main/images/}}
+\begin{document}
+% Title page
+\frontmatter % start Roman numbering
+\include{\main/components/titlepage/titlepage}
+
+\frontmatter % restart Roman numbering
+% Abstract
+\addchap*{Abstract}
+\subfile{\main/components/abstract/abstract}
+\addchap*{Kurzfassung}
+\subfile{\main/components/abstract/abstractGerman}
+
+\cleardoublepage
+\pdfbookmark{\contentsname}{toc} %add table of content to outlines
+\tableofcontents
+
+\mainmatter % starts Arabic numbering
+
+\subfile{\main/chapters/introduction/introduction}
+\listoffigures
+
+\listoftables
+
+% \bibliographystyle{plain}
+% \bibliography{literature}
+\printbibliography
+\end{document}

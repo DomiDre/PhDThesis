@@ -1,0 +1,60 @@
+% FONT DISPLAY
+% \renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\familydefault}{\sfdefault} % set all fonts except math to sans-serif (Computer Modern)
+% \usepackage{arev}
+\usepackage{textcomp}
+\usepackage{siunitx}
+
+\usepackage{helvet} % set all font to Helvetica
+\usepackage[italic]{mathastext}
+% 'isomath' sets upper case Greek letters italic in accordance with the International Standard ISO 80000-2
+\usepackage{isomath}
+\usepackage[T1]{fontenc} % load font family T1 (west-European codec)
+\usepackage[utf8]{inputenc}
+
+% IMAGE DISPLAY
+\usepackage%[draft] % plot graphics in draft mode to save compilation time
+           {graphicx}
+\usepackage{float} % for better handling of floating objects, provides the H option
+
+
+% BIBLIOGRAPHY
+\usepackage[
+    backend=biber,
+    natbib=true,
+    style=chem-angew,
+    doi=true,
+    url=false,
+    eprint=true,
+    backref=true,
+    bibencoding=ascii
+    ]{biblatex}
+% \usepackage[nottoc,numbib]{tocbibind}
+
+% ADDITIONAL PACKAGES
+\usepackage{subfiles} % to include chapters as sub files
+\usepackage{amsmath} % for additional equation options, align etc.
+\usepackage{amssymb} %  additional math symbols, also loads amsfonts
+\usepackage{pdfpages} % to include PDF files with includepdf
+\usepackage{scrhack}
+\usepackage{caption} % for proper image captions
+   \captionsetup{format=hang}
+\usepackage{wrapfig} % for text wrapped images
+% \usepackage[none]{hyphenat} %hyphenation package, turn off hyphens
+\usepackage[bookmarks,
+            raiselinks,
+            pageanchor,
+            hyperindex,
+            colorlinks,
+            pdfpagelabels,
+            linktoc=all,
+            citecolor=black,
+            linkcolor=black,
+            urlcolor=black,
+            filecolor=black,
+            menucolor=black]{hyperref} %bookmarks in black, click-able in PDF
+\usepackage{titling} % for abstract
+\usepackage{braket}
+%\usepackage{bbold}
+%\usepackage{appendix}
+\usepackage{chemformula}
