@@ -2,7 +2,7 @@ import sys, os
 thesisimgs = os.environ['phdthesisimgs']
 cwd = sys.path[0]
 import matplotlib.pyplot as plt
-plt.style.use('phdthesis')
+# plt.style.use('phdthesis')
 
 import numpy as np
 import lmfit
@@ -60,14 +60,14 @@ def lorentzian(x, p):
   A = p['A'].value
   mu = p['mu'].value
   sig = p['sig'].value
-  return A * 1./( ((x-mu)/sig)**2 + 1 )
+  return A * 1./( 4*((x-mu)/sig)**2 + 1 )
 
 def fit_peak(f, Ainit, muinit, siginit, q, I, sI, vary_A=True, vary_mu=True, vary_sig=True):
   def residuum(p, q, I, sI):
     return (I - lorentzian(q, p))/sI
   dq = 0.03
-  sig_beam_width = 0.0084 # nm-1
-  error_sig_beam_width = 0.0003 # nm-1
+  sig_beam_width = 0.0195 # nm-1
+  error_sig_beam_width = 0.0007 # nm-1
 
   p = lmfit.Parameters()
   p.add('A', Ainit, min=0, vary=vary_A)
@@ -87,8 +87,8 @@ def fit_peak(f, Ainit, muinit, siginit, q, I, sI, vary_A=True, vary_mu=True, var
     (sig_beam_width/np.sqrt(p_result['sig'].value**2 - sig_beam_width**2) * error_sig_beam_width)**2
   )
   f.write(f"BeamWidthCorrectedSig = {corrected_sig} +/- {error_corrected_sig}\n")
-  d_coh = 2*np.pi / corrected_sig
-  error_d_coh = 2*np.pi / corrected_sig**2 * error_corrected_sig
+  d_coh = 4*np.pi**2 / corrected_sig
+  error_d_coh = 4*np.pi**2 / corrected_sig**2 * error_corrected_sig
   f.write(f"d_coh = {d_coh} +/- {error_d_coh}\n")
   return p_result
 
@@ -99,8 +99,8 @@ def plot_gisas(filepath, sample_name, f, A10, q10, dq10):
   obj.set_beamcenter(default_beamcenter[0], default_beamcenter[1])
   obj.load_h5(filepath)
   qy, qz = obj.get_qyqz()
-  qy *= 10
-  qz *= 10
+  qy *= 10 #transform to nm-1
+  qz *= 10 #transform to nm-1
 
   data = obj.get_data()
   qyslice, I_qyslice, sI_qyslice = obj.get_qy_slice(qz_min, qz_max)
@@ -171,6 +171,6 @@ with open('peak_fit_parameters', 'w') as f:
   f.write('#Fitting first order peak of GISAXS data\n')
   f.write(f'#Date of execution: {dt.datetime.now()}\n')
   plot_gisas(cwd+"/DD192_Hex2_2_ai_0-11.h5", 'ML-SV-HexTet', f, 5e-5, 0.439, None)
-  plot_gisas(cwd+"/DD192_Pen2_2_ai_0-11.h5", 'ML-SV-PenOct', f, 5e-5, 0.436, 2.3e-2)
-  plot_gisas(cwd+"/DD192_Hex1_2_ai_0-11.h5", 'ML-SV-HexOct', f, 5e-5, 0.4417, 1.5e-2)
-  plot_gisas(cwd+"/DD192_Hep1_2_ai_0-11.h5", 'ML-SV-HepOct', f, 5e-5, 0.477, 1.2e-2)
+  plot_gisas(cwd+"/DD192_Pen2_2_ai_0-11.h5", 'ML-SV-PenOct', f, 5e-5, 0.436, 4.6e-2)
+  plot_gisas(cwd+"/DD192_Hex1_2_ai_0-11.h5", 'ML-SV-HexOct', f, 5e-5, 0.4417, 3e-2)
+  plot_gisas(cwd+"/DD192_Hep1_2_ai_0-11.h5", 'ML-SV-HepOct', f, 5e-5, 0.477, 2.4e-2)

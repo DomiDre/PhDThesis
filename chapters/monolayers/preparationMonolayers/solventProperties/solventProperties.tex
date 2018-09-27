@@ -55,37 +55,35 @@
       \hline
       ML-SV-PenOct
         & $0.4367(3)$
-        & $0.0210(5)$
+        & $0.042(1)$
         & $14.39(1)$
-        & $326(10)$\\
+        & $1061(35)$\\
       ML-SV-HexOct
         & $0.43417(3)$
-        & $0.0151(4)$
+        & $0.0301(8)$
         & $14.22(1)$
-        & $503(20)$\\
+        & $1721(86)$\\
       ML-SV-HepOct
         & $0.4747(6)$
-        & $0.0122(8)$
+        & $0.024(2)$
         & $13.24(2)$
-        & $705(85)$\\
+        & $2662(477)$\\
       \hline
     \end{tabular}
   \end{table}
 
-  In \reftab{tab:monolayers:solventProperties:GisaxsLatticeParams}, the position and width of the first order peak for the three different samples prepared with 1-octadecene is listed.
-  The inverse width of the structure factor peaks is a direct measure of the coherence length of the lattice \cite{Renaud_2009_Probi}.
-  Therefore GISAXS provides here a direct measure of the lattice constant and the coherence length of the square lattice.
-  The parameters are estimated by fitting a Lorentzian function
+  Within the theory of paracrystals, GISAXS provides a direct measure of the lattice constant and the coherence length of the square lattice via the position and the inverse width of the structure factor peaks \cite{Renaud_2009_Probi}.
+  For gaussian disorder, the peak broadening of the first order peak is described by a Lorentzian function
   \begin{align}
-    I(q_y) \eq \frac{A} {((q_y - q_{10})/\Delta q_{10})^2 + 1},
+    I(q_y) \eq \frac{A} {1 + 4((q_y - q_{10})/\Delta q_{10})^2},
   \end{align}
-  to the intensity around the (10) peak.
-  The lattice constant and coherence length is then obtained by
+  which has as parameters the intensity $A$ of the (10) peak with position $q_{10}$ and FWHM $\Delta q_{10}$.
+  The lattice constant and coherence length is then given by
   \begin{align}
     a &\eq \frac{2 \pi}{q_{10}}, \\
-    d_{coh.} &\eq \frac{2 \pi}{\sqrt{ \Delta q_{10}^2 - \Delta q_{D.B.}^2 }},
+    d_{coh.} &\eq \frac{4 \pi^2}{\sqrt{ \Delta q_{10}^2 - \Delta q_{D.B.}^2 }},
   \end{align}
-  with $\Delta q_{D.B.} \eq 0.0083(3) \unit{nm^{-1}}$ the width of the direct beam, which is shown in \reffig{fig:appendix:lss:galaxi:directBeam}.
+  where the FWHM of the peak is corrected for $\Delta q_{D.B.} \eq 0.0195(7) \unit{nm^{-1}}$, the FWHM of the direct beam, which is given in \reffig{fig:appendix:lss:galaxi:directBeam}. In \reftab{tab:monolayers:solventProperties:GisaxsLatticeParams}, the position and width of the first order peak for the three different samples prepared with 1-octadecene is listed.
 
   The table shows that for increasing order of alkane, the lattice constant reduces and the coherence length increases.
   Both can be explained by an improved packing of the square lattice and therefore this is in agreement with the qualitative observation that higher alkanes increase the sample quality.

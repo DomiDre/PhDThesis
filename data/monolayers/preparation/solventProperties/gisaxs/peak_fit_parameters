@@ -1,5 +1,5 @@
 #Fitting first order peak of GISAXS data
-#Date of execution: 2018-09-26 17:06:40.225317
+#Date of execution: 2018-09-27 13:41:40.724870
 #Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Pen2_2_ai_0-11.h5
 [[Fit Statistics]]
     # fitting method   = leastsq
@@ -11,14 +11,14 @@
     Akaike info crit   = 21.3068190
     Bayesian info crit = 23.0016671
 [[Variables]]
-    A:    4.9472e-05 +/- 8.2235e-07 (1.66%) (init = 5e-05)
+    A:    4.9472e-05 +/- 8.2222e-07 (1.66%) (init = 5e-05)
     mu:   0.43669784 +/- 2.8859e-04 (0.07%) (init = 0.436)
-    sig:  0.02100083 +/- 5.2606e-04 (2.50%) (init = 0.023)
+    sig:  0.04200165 +/- 0.00105211 (2.50%) (init = 0.046)
 [[Correlations]] (unreported correlations are < 0.100)
     C(A, sig) = -0.774
-a = 14.38794696219119 +/- 0.009508097188858368
-BeamWidthCorrectedSig = 0.01924771837746305 +/- 0.0005887126155223441
-d_coh = 326.4379280682172 +/- 9.984462712409297
+a = 14.387946961784396 +/- 0.009508096693182694
+BeamWidthCorrectedSig = 0.03720065385049476 +/- 0.0012432735636572143
+d_coh = 1061.2291322355986 +/- 35.46706814331593
 #Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hex1_2_ai_0-11.h5
 [[Fit Statistics]]
     # fitting method   = leastsq
@@ -32,12 +32,12 @@ d_coh = 326.4379280682172 +/- 9.984462712409297
 [[Variables]]
     A:    6.8964e-05 +/- 1.4162e-06 (2.05%) (init = 5e-05)
     mu:   0.44174570 +/- 2.5087e-04 (0.06%) (init = 0.4417)
-    sig:  0.01505397 +/- 3.7548e-04 (2.49%) (init = 0.015)
+    sig:  0.03010793 +/- 7.5096e-04 (2.49%) (init = 0.03)
 [[Correlations]] (unreported correlations are < 0.100)
     C(A, sig) = -0.777
-a = 14.223534613690617 +/- 0.008077725173331076
-BeamWidthCorrectedSig = 0.012492473583861104 +/- 0.0004953981255353962
-d_coh = 502.95766206756423 +/- 19.945151881996317
+a = 14.223534613687882 +/- 0.008077725349012023
+BeamWidthCorrectedSig = 0.022939868889715203 +/- 0.0011513018675504976
+d_coh = 1720.9521900126063 +/- 86.37082800481649
 #Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hep1_2_ai_0-11.h5
 [[Fit Statistics]]
     # fitting method   = leastsq
@@ -51,9 +51,9 @@ d_coh = 502.95766206756423 +/- 19.945151881996317
 [[Variables]]
     A:    1.3671e-04 +/- 7.6552e-06 (5.60%) (init = 5e-05)
     mu:   0.47467414 +/- 5.7146e-04 (0.12%) (init = 0.477)
-    sig:  0.01224965 +/- 7.5461e-04 (6.16%) (init = 0.012)
+    sig:  0.02449929 +/- 0.00150921 (6.16%) (init = 0.024)
 [[Correlations]] (unreported correlations are < 0.100)
     C(A, sig) = -0.774
-a = 13.236839172143181 +/- 0.01593582156509527
-BeamWidthCorrectedSig = 0.008915931331505566 +/- 0.0010745950933448356
-d_coh = 704.7144121643422 +/- 84.93589972426533
+a = 13.236839172135086 +/- 0.015935822007223172
+BeamWidthCorrectedSig = 0.014831227836043872 +/- 0.0026574898241899713
+d_coh = 2661.8441871963064 +/- 476.9547012056625

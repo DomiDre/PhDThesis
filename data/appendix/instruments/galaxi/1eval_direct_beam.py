@@ -63,3 +63,4 @@ fig.tight_layout()
 
 fig.savefig(cwd + '/' + savefile)
 fig.savefig(thesisimgs+'/'+savefile)
+plt.show()
