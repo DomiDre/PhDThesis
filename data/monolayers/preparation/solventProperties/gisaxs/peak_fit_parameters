@@ -1,5 +1,5 @@
 #Fitting first order peak of GISAXS data
-#Date of execution: 2018-09-27 13:41:40.724870
+#Date of execution: 2018-09-27 15:35:20.063471
 #Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Pen2_2_ai_0-11.h5
 [[Fit Statistics]]
     # fitting method   = leastsq

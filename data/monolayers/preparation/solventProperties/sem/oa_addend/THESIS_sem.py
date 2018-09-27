@@ -13,7 +13,7 @@ plt.style.use('phdthesis')
 from EM.sem_fft import SEM_FFT
 
 
-def plot_tiffile(semFilepath, sample_name):
+def plot_tiffile(semFilepath, sample_name, sample_label):
   chapter = 'monolayers'
   savefile = chapter + '_SEM_' + sample_name
 
@@ -21,14 +21,11 @@ def plot_tiffile(semFilepath, sample_name):
   semFFT.load_tif_file(semFilepath)
   # semFFT.plot_sem_image()
   # semFFT.show()
-  semFFT.pretty_plot(200, 100, 736, 624, 100, sample_name)
+  semFFT.pretty_plot(200, 100, 736, 624, 100, sample_label)
   semFFT.fig.savefig(cwd + '/' + savefile, bbox_inches='tight')
   semFFT.fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')
 
-# plot_tiffile(cwd+"/DD192_Hep_1_2_control_08.tif", 'ML-SV-HepOct')
-# plot_tiffile(cwd+"/DD192_Hex1_2_10.tif", 'ML-SV-HexOct')
-# plot_tiffile(cwd+"/DD192_Hex2_2_03.tif", 'ML-SV-HexTet')
-# plot_tiffile(cwd+"/DD192_Pen2_2_109.tif", 'ML-SV-PenOct')
-# plot_tiffile(cwd+"/DD172_1_04.tif", 'Ol-CoFe-C-Hex')
-# plot_tiffile(cwd+"/DD200_8_05.tif", 'Ol-Fe-C-HepOct')
-plot_tiffile(cwd+"/DD117_03_09.tif", 'Ol-CoFe-S-HexOct')
+plot_tiffile(cwd+"/DD212_5_05.tif", 'ML-OA-5e-6', 'ML-OA-5$\cdot10^{-6}$')
+plot_tiffile(cwd+"/DD212_6_06.tif", 'ML-OA-1e-5', 'ML-OA-1$\cdot10^{-5}$')
+plot_tiffile(cwd+"/DD212_7_03.tif", 'ML-OA-5e-5', 'ML-OA-5$\cdot10^{-5}$')
+plot_tiffile(cwd+"/DD212_8_04.tif", 'ML-OA-1e-4', 'ML-OA-1$\cdot10^{-4}$')

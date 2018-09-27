@@ -2,7 +2,7 @@ import sys, os
 thesisimgs = os.environ['phdthesisimgs']
 cwd = sys.path[0]
 import matplotlib.pyplot as plt
-# plt.style.use('phdthesis')
+plt.style.use('phdthesis')
 
 import numpy as np
 import lmfit
