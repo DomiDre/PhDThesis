@@ -1,0 +1,66 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+
+\begin{document}
+  To discuss the expected magnetic structure of ordered nanostructures, dynamic micromagnetic simulations are performed and used to estimate the relevant energy scales.
+  The evolution of a nanoparticle superspin $\hat{\mu}_i$ in an assembly can be modeled by using the Landau-Lifshitz-Gilbert equation
+  \begin{align}
+    \frac{\dint \hat{\mu}_i}{\dint t} \eq - \frac{\gamma}{1 + \alpha^2} \biggl( \hat{\mu}_i \times \vec{B}_i^\mathsf{eff} + \alpha \hat{\mu}_i \times \bigl(\hat{\mu}_i \times \vec{B}_i^\mathsf{eff} \bigr) \biggr),
+  \end{align}
+  with $\gamma$ the electron gyromagnetic ratio and $\alpha$ the Gilbert damping constant.
+  For simplicity, it is assumed that all superspins are of equal magnitude $\mu \eq M_s V$, and $\hat{\mu}$ is of unit length.
+  The effective magnetic field $\vec{B}_i^\mathsf{eff}$ at the position of the magnetic moment is a sum of multiple contributions
+  \begin{align}
+    \vec{B}_i^\mathsf{eff} \eq \vec{B}^\mathsf{ext} + \vec{B}^\mathsf{ani}_i + \vec{B}^\mathsf{dip-dip}_i + \vec{B}^\mathsf{therm}_i,
+  \end{align}
+  given by the externally applied field $\vec{B}^\mathsf{ext}$, the magnetic anisotropy $\vec{B}^\mathsf{ani}_i$, the dipole-dipole interaction with surrounding superspins $\vec{B}^\mathsf{dip-dip}_i$ and a white noise field $\vec{B}^\mathsf{therm}_i$ to simulate thermal effects.
+  The fields are generally determined from their respective energy terms via the thermodynamic relation
+  \begin{align}
+    \vec{B}_i \eq - \frac{1}{\mu} \frac{\dint E}{\dint \hat{\mu}_i}
+  \end{align}
+
+  For the anisotropy field, either uniaxial or cubic anisotropy can be implemented where the latter is the observed anisotropy of iron oxide/cobalt ferrite in literature and the first is commonly observed for nanoparticles.
+  The anisotropy field are given by
+  \begin{align}
+    \vec{B}^\mathsf{ani}_{i, \,\mathsf{uniaxial}} &\eq \frac{2 K V}{\mu} \bigl( \hat{\mu}_i \cdot \hat{n} \bigr) \hat{n},\\
+    \vec{B}^\mathsf{ani}_{i, \,\mathsf{cubic}} &\eq \frac{2 V}{\mu} \begin{pmatrix}
+      \biggl(K_1 (1 - \hat{\mu}_{i, x}^2) + K_2 (\hat{\mu}_{i, y} \hat{\mu}_{i, z})^2 \biggr) \hat{\mu}_{i, x} \\
+      \biggl(K_1 (1 - \hat{\mu}_{i, y}^2) + K_2 (\hat{\mu}_{i, x} \hat{\mu}_{i, z})^2 \biggr) \hat{\mu}_{i, y} \\
+      \biggl(K_1 (1 - \hat{\mu}_{i, z}^2) + K_2 (\hat{\mu}_{i, x} \hat{\mu}_{i, y})^2 \biggr) \hat{\mu}_{i, z}
+      \end{pmatrix}.
+  \end{align}
+
+  The dipole-dipole field is evaluated for each particle by summing the dipole fields produced by the other superspins
+  \begin{align}
+    \vec{B}^\mathsf{dip-dip}_i \eq \frac{\mu \mu_0}{4 \pi}  \sum_{i \neq j} \frac{3 \hat{r}_{ij}  (\mu_j \cdot \hat{r}_{ij}) - \mu_j}{r_{ij}^3},
+  \end{align}
+  with $\hat{r}_{ij}$ the unit vector describing the direction from the position of $\mu_j$ to $\mu_i$ and $r_{ij}$ the magnitude of the distance.
+
+  A statistical noise field $\vec{B}^\mathsf{therm}_i$ is added to simulate interaction of the superspin with microscopic degrees of freedom and account for thermal effects.
+  It is assumed that $\vec{B}^\mathsf{therm}_i$ follows a Gaussian stochastic process and has the statistical properties
+  \begin{align}
+    \braket{B^\mathsf{therm}_i (t)} &\eq 0,\\
+    \braket{B^\mathsf{therm}_i (t) B^\mathsf{therm}_j (s)} &\eq 2 D \delta_{ij} \delta(t - s),
+  \end{align}
+  saying that the field strength averages around 0 and is uncorrelated in time and space.
+  The factor $D$ is determined by studying the stationary solutions of the Fokker-Planck equation associated with the stochastic Landau-Lifshitz-Gilbert equation to \cite{Garcia_1998_Lange}
+  \begin{align}
+    D \eq \frac{\alpha}{1 + \alpha^2} \frac{k_B T}{\gamma \mu}.
+  \end{align}
+
+  The numerical implementation is then performed by initializing a system of magnetic moments, tabulate their respective positions and distances to one another, and the system is evolved in discrete time steps by recursively applying Heun's method \cite{Sueli_2003_Anint} to the set of ordinary differential equations.
+  Random gaussian numbers needed for the simulation of thermal noise are generated using the Box-Mueller transform \cite{Box_1957_Anoteo}.
+  After each time step, the magnetic moment vectors are normalized to avoid numerical instabilities.
+
+
+  For nanoparticles with long range order in two dimensions, in general five structural lattices are possible by the crystallographic restriction theorem: the square, hexagonal, rectangular, rhombic and oblique lattice.
+  In this work, the square and hexagonal lattice are discussed, which can be obtained from densely packing nanocubes and nanospheres, respectively, in the plane.
+  When only dipolar interaction between magnetic nanoparticles is considered on these lattices, different energetic ground states emerge for the two lattice types.
+  On the hexagonal lattice the ground state is super ferromagnetic, whereas it is super antiferromagnetic for the square lattice as will be discussed in the following for both lattices separately.
+
+  \subsubsection{Square Lattice}
+    
+
+  \subsubsection{Hexagonal Lattice}
+
+\end{document}
