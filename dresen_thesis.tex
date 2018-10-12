@@ -14,6 +14,8 @@
 \input{\main/bibliography}
 \input{\main/config/config}
 \input{\main/config/aliases}
+\makeglossary
+\loadglsentries{\main/components/glossary/glossary}
 
 \graphicspath{{\main/images/}}
 \begin{document}
@@ -50,5 +52,7 @@
 
 % \bibliographystyle{plain}
 % \bibliography{literature}
+\glsaddall
+\printglossary[nonumberlist]
 \printbibliography
 \end{document}

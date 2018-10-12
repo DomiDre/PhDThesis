@@ -12,3 +12,8 @@ find . -type f -name '*.toc' -delete
 find . -type f -name '*.run.xml' -delete
 find . -type f -name '*.synctex.gz' -delete
 find . -type f -name '*.pdf' -delete
+find . -type f -name '*.glg' -delete
+find . -type f -name '*.glo' -delete
+find . -type f -name '*.gls' -delete
+find . -type f -name '*.glsdefs' -delete
+find . -type f -name '*.ist' -delete
