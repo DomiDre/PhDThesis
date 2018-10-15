@@ -18,7 +18,11 @@
 
   To understand the magnetism of matter, which is generally neutrally charged on the macroscopic scale, the motion of the electrons in the atoms needs to be evaluated\footnote{the direct contribution of the nucleus motion to the magnetism is approximately three orders of magnitude weaker due to the higher mass of the proton and neutrons relative to the electron}.
   The magnetic moment of an electron arises from the spin and orbital motion, which depends on the state the individual particle is in.
-  Due to the quantum mechanical nature of the electron, the magnetic moment also needs to be treated quantum mechanically.
+  Due to the quantum mechanical nature of the electron, the magnetic moment also needs to be treated quantum mechanically, where it is given for a bound electron by the sum of the operators for the orbital motion and the spin \cite{Coey_2010_Magne}
+  \begin{align}
+    \vec{\mu} \eq \gamma (\vec{L} + g_S \vec{S}),
+  \end{align}
+  with $\gamma \eq -e/2m_e$ the gyromagnetic ratio and $g_S \eq 2.00231930436146(56)$ the g-factor that is determined to high precision theoretically and experimentally \cite{Aoyama_2012_Tenth, Hanneke_2011_Cavit}.
   In fact, the Bohr-van-Leeuwen theorem shows that for a purely classical system in thermal equilibrium, the magnetization is always zero.
   The various types of magnetism that are observed within different materials in nature can then be understood by the different structures and the effective couplings of the electrons, which in turn determines the direction of the many magnetic moments within the matter.
   The most popular types that are observed throughout this work are described in the following.
@@ -46,11 +50,11 @@
     To determine the magnetization of a paramagnetic material at finite temperature and fields, Boltzmann statistics can be applied to obtain the partition function of the system and from this the magnetization.
     In the classical approach, this leads to the formula for Langevin paramagnetism as shown in \refapp{ch:appendix:calculations:magnetizationClassicalSpin}
     \begin{align}
-      M \eq n \mu_e \Biggl( \coth \biggl(\frac{\mu_e B}{k T} \biggr) - \frac{k T}{\mu_e B} \Biggr).
+      M \eq n \mu_e \Biggl( \coth \biggl(\frac{\mu_e B}{k_B T} \biggr) - \frac{k_B T}{\mu_e B} \Biggr).
     \end{align}
-    For electrons, the energy scale of the Zeeman levels is $\mu_e B \ll kT$ and therefore
+    For electrons, the energy scale of the Zeeman levels is $\mu_e B \ll k_B T$ and therefore
     \begin{align}
-      M \approx \underbrace{\frac{n \mu_e^2}{3kT}}_{\eq \chi_P} B,
+      M \approx \underbrace{\frac{n \mu_e^2}{3k_B T}}_{\eq \chi_P} B,
     \end{align}
     which shows that the paramagnetic susceptibility is positive and has a temperature dependance according to the Curie law $M \propto T^{-1}$.
 
@@ -87,7 +91,7 @@
       \begin{align}
         E_\mathsf{ani} \eq K V \sin(\theta)^2,
       \end{align}
-      with $K$ a material dependent anisotropy constant and $V$ the volume of the material.
+      with $K$ the material-dependent anisotropy energy density and $V$ the volume of the material.
 
       For cubic crystal systems, the anisotropy energy is given by
       \begin{align}
@@ -96,7 +100,7 @@
           \frac{K_2 V}{16} \biggl( \sin(2 \theta)^2 \sin(2 \phi)^2 \sin(\theta)^2 \biggr),
       \end{align}
       where $\phi, \, \theta$ are the angle between the (001) direction and the magnetization direction in spherical coordinates.
-      For $K_1 > 0$ and $K_2 > -9 K_1$ the \{100\} directions of the cubic system are the easy axis and for other values either \{110\} or \{111\} are the easy-axis.
+      For $K_1 > 0$ and $K_2 > -9 K_1$ the \{100\} directions of the cubic system are the easy axis and for other values either \{110\} or \{111\} are the easy-axis, depending on the ratio of $K_1$ and $K_2$.
 
     \subsubsection{Magnetostatic Self-Energy}
       An extended magnetic material produces a stray field, which adds a magnetostatic self-energy to the system that counteracts the magnetization.
@@ -123,13 +127,41 @@
       \begin{align}
         E_{ms} \eq -\frac{\mu_0}{2} \int_V \vec{M} \cdot \vec{H}_d \dint V
       \end{align}
-      To minimize the magnetostatic energy, it becomes above a material dependent crystallite size energetically favorable to create separate domains of regions of coherent spin alignment and therefore vary the magnetization direction across the material.
+      To minimize the magnetostatic energy, it becomes above a material-dependent crystallite volume energetically favorable to create separate domains of regions with coherent spin alignment and therefore vary the magnetization direction across the material.
       The average domain size is then determined by the balance of energy needed to keep the domain walls and the energy gained from minimizing the self-energy.
 
     The domain formation and the magnetic anisotropy both result in the characteristic hysteretic magnetization behaviour observed for ferromagnetic and ferrimagnetic bulk materials below the order temperature.
     % Upon exposure to a sufficiently strong external magnetic field a hyst, with a remanent magnetization $M_R$ at removal of the field and the need of a coercive field $B_C$ to return the magnetization of the material to zero.
 
   \subsection{Superparamagnetism}
-    When the crystallite size of a ferromagnetic material is reduced, domain formation is no longer energetically favorable below a material dependent size, which is typically in the order of nanometers.
-    At this point, the individual electron magnetic moments in the crystallites can align to one another in a single domain and add to a coherent superspin.
+    When the crystallite size of a ferro- or ferrimagnetic material is reduced, domain formation is no longer energetically favorable below a material-dependent size, which is typically in the order of nanometers.
+    At this point, the individual electron magnetic moments in the crystallites can align to one another in a single domain via the exchange interaction and add to a coherent superspin.
+    If the thermal energy is high enough to overcome the energy barrier from the magnetic anisotropy, the superspin of the single domain can freely rotate and the material is said to be in a superparamagnetic phase.
+    In this magnetic phase, no hysteresis is observed, but the material still shows a large magnetization, comparable to the ferromagnetic state, when exposed to an external magnetic field.
+    The magnetization for an ensemble of monodisperse and non-interacting superparamagnetic particles can be described by the same Langevin function, which is used in paramagnetism
+    \begin{align}
+      M \eq M_s \Biggl( \coth \biggl(\frac{\mu B}{k_B T} \biggr) - \frac{k_B T}{\mu B} \Biggr),
+    \end{align}
+    where this time $\mu$ is the magnetic moment of the individual particle and $M_s \eq \mu / V_p$ is a material-dependent constant.
+    Due to additional surface effects and possible disorder in the nanoparticle, the nanoparticle $M_s$ of a specific material does not need to coincide with the bulk value.
+
+    The time scale at which an uniaxial particle superspin flips by overcoming the anisotropy energy barrier due to thermal motion is called the N\'eel relaxation time $\tau_N$ and given by the N\'eel-Arrhenius equation
+    \begin{align}
+      \tau_N \eq \tau_0 \exp \biggl( \frac{KV}{k_B T} \biggr),
+    \end{align}
+    where $K$ is the material-dependent anisotropy energy density, $V$ the particle volume and $\tau_0$ the attempt time, which is typically in the order of $0.1 - 1 \unit{ns}$ and also material-dependent.
+
+    When the magnetization of a material is measured on a timescale of $\tau_m \gg \tau_N$, the material will show the superparamagnetic magnetization behaviour as the spin flips several times during the measurement.
+    If the temperature is lowered such that $\tau_m < \tau_N$, the material will appear to be in a blocked state and show a hysteretic magnetization behaviour.
+    The transition temperature, called the blocking temperature, can be determined by setting $\tau_m \eq \tau_N$
+    \begin{align}
+      T_B \eq \frac{KV}{k_B \log(\tau_m/\tau_0)},
+    \end{align}
+    where for typically $\tau_m \approx 1 \unit{s}$, the value of the logarithm is in the order of $20 - 25$.
+
+    Superparamagnetic particles present an interesting system to study dipolar magnetic effects.
+    The magnetic moment of a particle $\mu$ is typically four order of magnitudes larger than the magnetic moment of a single electron and dipolar interaction of single domains is therefore still relevant on nanometer length scales.
+    As the dipolar field is directional and there is magnetic anisotropy for every domain in the system, the emergent ground state for a system of single domains will highly depend on the choice of material and relative orientation and position of the particles as will be shown.
+
+
 \end{document}

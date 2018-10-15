@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="2.95in"
-   height="2.5in"
-   viewBox="0 0 265.50001 225"
+   width="3.5in"
+   height="1.5in"
+   viewBox="0 0 315.00001 135"
    id="svg2"
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -24,44 +24,47 @@
     <marker
        inkscape:stockid="Arrow2Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow2Mend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path899"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(0.6) rotate(180) translate(0,0)" />
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="marker1138"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path1136"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(1.1) rotate(180) translate(1,0)" />
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow2Lend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path893"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(1.1) rotate(180) translate(1,0)" />
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow2Mend"
@@ -672,8 +675,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.3982705"
-     inkscape:cx="107.4769"
-     inkscape:cy="124.32266"
+     inkscape:cx="234.12064"
+     inkscape:cy="137.46941"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -683,7 +686,9 @@
      inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:snap-global="true">
+     inkscape:snap-global="true"
+     inkscape:measure-start="240,255"
+     inkscape:measure-end="240,160">
     <inkscape:grid
        type="xygrid"
        id="grid1972" />
@@ -704,9 +709,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-827.36216)">
+     transform="translate(0,-917.36216)">
     <g
-       id="g2308">
+       id="g2308"
+       transform="translate(-13.125,97.5)">
       <path
          inkscape:connector-curvature="0"
          id="path870"
@@ -770,42 +776,42 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-09)"
-       d="M 103.125,989.86857 V 967.98716"
+       d="M 230.72494,975.60217 V 953.72076"
        id="path870-40"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-0-2)"
-       d="M 140.625,989.86857 V 967.98716"
+       d="M 268.22494,975.60217 V 953.72076"
        id="path870-4-3"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-7)"
-       d="m 103.125,1000.0661 v 10.1086"
+       d="m 230.72494,985.7997 v 10.1086"
        id="path870-7-4"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-7-7-6)"
-       d="M 121.875,1017.9936 V 996.11216"
+       d="M 249.47494,1003.7272 V 981.84576"
        id="path870-1-0-1"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-7-2-1-1)"
-       d="M 159.375,1017.9936 V 996.11216"
+       d="M 286.97494,1003.7272 V 981.84576"
        id="path870-1-6-8-3"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-2-9)"
-       d="m 103.125,1046.1186 v -21.8814"
+       d="m 230.72494,1031.8522 v -21.8814"
        id="path870-7-9-0"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-0-3-1-9)"
-       d="m 140.625,1046.1186 v -21.8814"
+       d="m 268.22494,1031.8522 v -21.8814"
        id="path870-4-4-6-2"
        inkscape:connector-curvature="0" />
     <g
        id="g2322"
-       transform="translate(-7.5000007)">
+       transform="translate(-73.125,97.5)">
       <path
          inkscape:connector-curvature="0"
          id="path870-6"
@@ -870,59 +876,59 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="29.311241"
-       y="850.41553"
+       x="16.186241"
+       y="947.91553"
        id="text2340"><tspan
          sodipodi:role="line"
          id="tspan2338"
-         x="29.311241"
-         y="850.41553"
+         x="16.186241"
+         y="947.91553"
          style="stroke-width:0.9375px">Ferro-</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="178.24332"
-       y="850.0246"
+       x="112.61832"
+       y="947.5246"
        id="text2340-0"><tspan
          sodipodi:role="line"
          id="tspan2338-2"
-         x="178.24332"
-         y="850.0246"
+         x="112.61832"
+         y="947.5246"
          style="stroke-width:0.9375px">Antiferro-</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="77.402908"
-       y="961.82391"
+       x="205.00284"
+       y="947.5575"
        id="text2340-0-5"><tspan
          sodipodi:role="line"
          id="tspan2338-2-8"
-         x="77.402908"
-         y="961.82391"
+         x="205.00284"
+         y="947.5575"
          style="stroke-width:0.9375px">Ferrimagnetic</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-7-0)"
-       d="m 140.625,1000.0661 v 10.1086"
+       d="m 268.22494,985.7997 v 10.1086"
        id="path870-7-4-8"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-7-5)"
-       d="m 121.875,971.94106 v 10.1086"
+       d="m 249.47494,957.67466 v 10.1086"
        id="path870-7-4-7"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-7-3)"
-       d="m 159.375,971.94106 v 10.1086"
+       d="m 286.97494,957.67466 v 10.1086"
        id="path870-7-4-2"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-7-30)"
-       d="m 159.375,1028.1911 v 10.1086"
+       d="m 286.97494,1013.9247 v 10.1086"
        id="path870-7-4-77"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-8-7-6)"
-       d="m 121.875,1028.1911 v 10.1086"
+       d="m 249.47494,1013.9247 v 10.1086"
        id="path870-7-4-1"
        inkscape:connector-curvature="0" />
   </g>
