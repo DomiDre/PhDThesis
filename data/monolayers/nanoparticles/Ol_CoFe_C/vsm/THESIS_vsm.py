@@ -52,7 +52,7 @@ fit_params = fitData.params
 
 min_B, max_B = min(B), max(B)
 min_M, max_M = -90, 90
-T = 298
+T = 300
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16
@@ -79,4 +79,3 @@ ax.set_ylim(min_M, max_M)
 ax.legend(loc='lower right')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
-plt.show()

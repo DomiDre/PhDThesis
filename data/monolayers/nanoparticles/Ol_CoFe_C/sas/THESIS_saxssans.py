@@ -20,11 +20,11 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'Ol_CoFe_C'
 Chapter = 'monolayers'
-saxs_fit_file = cwd + "/saxs/fit_result.dat"
-saxs_sld_file = cwd + "/saxs/fit_sld.dat"
+saxs_fit_file = cwd + "/superballModel/saxs/fit_result.dat"
+saxs_sld_file = cwd + "/superballModel/saxs/fit_sld.dat"
 
-sans_fit_file = cwd + "/sans/fit_result.dat"
-sans_sld_file = cwd + "/sans/fit_sld.dat"
+sans_fit_file = cwd + "/superballModel/sans/fit_result.dat"
+sans_sld_file = cwd + "/superballModel/sans/fit_sld.dat"
 
 q_min, q_max = 1e-2, 0.25
 I_min, I_max = 8e-4, 2e2
