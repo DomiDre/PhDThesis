@@ -124,6 +124,13 @@
           & $0.268(8) \cdot 10^{-6} \angstrom^{-2}$
           & $0.423(7) \cdot 10^{-6} \angstrom^{-2}$\\
         \hline
+        $V_p$
+          & $1030(10) \unit{nm^3}$
+          & $726(5) \unit{nm}$\\
+        $M^\mathrm{sans}$
+          & $92(3) \unit{kAm^{-1}}$
+          & $145(2) \unit{kAm^{-1}}$\\
+        \hline
       \end{tabular}
     \end{table}
     The superball model result confirms the qualitative observation that the Ol-CoFe-C nanoparticles have a smaller size distribution than the Ac-CoFe-C cubes.
@@ -146,44 +153,159 @@
     This can be compared to the saturation magnetization obtained from measuring a liquid dispersions of nanoparticles on a vibrating sample magnetometer (VSM) as shown in \reffig{fig:monolayers:nanoparticle:vsm}, which results in magnetizations of $70 \unit{kAm^{-1}}$ for Ol-CoFe-C and $275 \unit{kAm^{-1}}$ for Ac-CoFe-C at the same magnetic field of $1.2 \unit{T}$.
     The result obtained for Ol-CoFe-C appears reasonable and in agreement for both experiments considering that measuring liquid samples in vibrating sample magnetometry can have larger systematic errors due to the movement of the liquid.
     For Ac-CoFe-C, the results are off, however, by nearly a factor of two.
-
-    To study the impact of the chosen superball model on the result of the magnetic scattering density, the simple model of a sphere was also fit to the date of both samples.
-    This model neglects the cubic shape and is less realistic, but is a good reference point for parameter values as the model has the fewest number of parameters and is less prone to systematic errors in the fitting routine due to correlated parameters.
-
-    % spherical fits
-
-    And on the other hand, the VSM data has to be scaled to the measured magnetic volume to compare the magnetizations of the material as described.
-    This is being done, by estimating first the particle magnetic moment from the superparamagnetic curve by performing a Langevin fit, and then assuming that the particle volume estimated from SAXS to present the magnetic volume of the particle, which might be wrong due to surface effects in the nanoparticle.
-    A combination of systematic errors from the measurement and the scaling protocol might explain the quantitative offset in the VSM and SANSPOL data.
     But importantly, on a qualitative level, both experiments agree in the result that the nanoparticles from the oleate route are weakly magnetic, while the particles from the acetylacetonates are stronger magnetic.
 
     \begin{figure}[tb]
       \centering
-      \includegraphics{monolayer_VSM_10K_Ac_CoFe_C}
-      \includegraphics{monolayer_VSM_10K_Ac_CoFe_C}
-      \caption{\label{fig:monolayers:nanoparticle:vsm10K}Low temperature hysteresis measurement of frozen Ol-CoFe-C (upper left) and Ac-CoFe-C (lower left) using the same samples as in \reffig{fig:monolayers:nanoparticle:vsm}.}
+      \includegraphics{monolayers_SAS_Ac_CoFe_C_SASSphereModelFit}
+      \includegraphics{monolayers_SAS_Ac_CoFe_C_SANSPOLSphereModelFit}
+      \includegraphics{monolayers_SAS_Ac_CoFe_C_SASCubeModelFit}
+      \includegraphics{monolayers_SAS_Ac_CoFe_C_SANSPOLCubeModelFit}
+      \caption{\label{fig:monolayers:nanoparticle:sas:SphereCubeFit}Best sphere and cube model fit to the same SAS data of Ac-CoFe-C fitted in \reffig{fig:monolayers:nanoparticle:sas:AcOlCoFeC}.}
     \end{figure}
-    
-    At a low temperature as $10 \unit{K}$, the dispersions are frozen and the nanoparticles can be considered as disordered and additionally both the Brown and N\'eel relaxation of the superspin moment is surpressed.
-    At this temperature the single-domain particle is characterized, assuming that the nanoparticles are non-interacting.
+
+    To understand this quantitative discrepancy, it's worthwhile to study the impact of the chosen shape model of the nanoparticle on the result of the magnetic scattering density.
+    Where the  superball model appears seems to be reasonable from a physical point of view, the simpler models of a perfect sphere and cube are also fit to the date of both samples for comparison.
+    These model provide a good reference point for the parameter values and as the models have one less parameter, they are additionally less prone to systematic errors in the fitting routine due to parameter correlations.
+    The result of the cubic and spherical fit are shown in \reffig{fig:monolayers:nanoparticle:sas:SphereCubeFit} with the relevant parameters listed in \reftab{tab:monolayers:nanoparticle:sasSphereCubeFit}.
+
+    \begin{table}[ht]
+      \centering
+      \caption{\label{tab:monolayers:nanoparticle:sasSphereCubeFit}Relevant parameters of the sphere and cube fit to the small-angle scattering data of Ac-CoFe-C, the complete set of parameters is found in \refapp{ch:appendix:modelparameters:monolayers:sas_olac_cofe_c}.}
+      \begin{tabular}{ c | l | l }
+          & Sphere & Cube \\
+        \hline
+        $R, \, a$
+          & $5.56(2) \unit{nm}$
+          & $9.01(2) \unit{nm}$\\
+        $\sigma_R, \, \sigma_a$
+          & $13.0(3) \,\%$
+          & $10.7(2) \,\%$\\
+        $D$
+          & $1.46(4) \unit{nm}$
+          & $1.03(4) \unit{nm}$\\
+        $\rho_\mathrm{mag}^\mathrm{sans}$
+          & $0.596(8) \cdot 10^{-6} \angstrom^{-2}$
+          & $0.429(7) \cdot 10^{-6} \angstrom^{-2}$\\
+        \hline
+        $V_p$
+          & $720(4) \unit{nm^{3}}$
+          & $731(3) \unit{nm^{3}}$\\
+        $M^\mathrm{sans}$
+          & $205(3) \unit{kAm^{-1}}$
+          & $147(2) \unit{kAm^{-1}}$\\
+        \hline
+      \end{tabular}
+    \end{table}
+
+    It's clearly visible by looking at the SAXS data that the spherical model underestimates the intensity of the first order peak, while the cube model overestimates it, whereas the superball was able to adjust in between.
+    The determined particle volume on the other hand varies only weakly from the specific choice of the different model.
+    From the SANSPOL data, it is visible that parameters such as the shell thickness, particle magnetization, as well as the particle concentration and the estimated nuclear scattering length densities (listed in Appendix), are strongly affected by the choice of model in the fitting process.
+    This becomes especially visible in that the cube model results in a smaller shell thickness and magnetization, whereas the sphere model suggests values that are in the order of $30 - 50 \unit{\%}$ higher.
+
+    Conclusively, this comparison helps to estimate the parameter range and variation that has to be accepted without restricting specific parameters or forcing certain parameters by including results from complementary experiments.
+
+    \begin{figure}[tb]
+      \centering
+      \includegraphics{monolayer_VSM_10K_Ac_CoFe_C}
+      \includegraphics{monolayer_VSM_10K_Ac_CoFe_C}
+      \caption{\label{fig:monolaye rs:nanoparticle:vsm10K}Low temperature hysteresis measurement of frozen Ol-CoFe-C (upper left) and Ac-CoFe-C (lower left) using the same samples as in \reffig{fig:monolayers:nanoparticle:vsm}.}
+    \end{figure}
+
+    To study the samples further, the dispersions are measured in VSM at a low temperature of $10 \unit{K}$, where they are frozen and the nanoparticles can be considered as disordered and additionally both the Brown and N\'eel relaxation of the superspin moment are suppressed.
+    At this temperature the blocked single-domain particle is thus observed, assuming that the nanoparticles are non-interacting.
+
+    % include PPMS DD67 & discussion
+
 
     \begin{figure}[tb]
       \centering
       \includegraphics{monolayer_XRD_Ol_CoFe_C}
-      \includegraphics{monolayer_XRD_Ac_CoFe_C}
-      \caption{\label{fig:monolayers:nanoparticle:xrd}X-ray diffraction of Ol-CoFe-C (left) and Ac-CoFe-C (right) with a Rietveld refinement assuming an inverse spinell structure.}
-    \end{figure}
-
-    An explanation for the weak magnetic properties of the oleate synthesized particles is found in literature and confirmed when looking at X-ray diffraction data as shown in \reffig{fig:monolayers:nanoparticle:xrd}.
-    Where the particles from acetylacetonates are well fitted by the inverse spinell structure, which one expects for cobalt ferrite, Ol-CoFe-C deviates strongly from this.
-    The peaks are visibly broadened in comparison, the relative intensities of the peaks do not match and an additional peak around $q \eq 3.5 \unit{\angstrom^{-1}}$ is visible.
-    Earlier works on nanoparticles synthesized from oleates \cite{Bodnarchuk_2009_Excha, Wetterskog_2013_Anoma} report already that instead of pure phased cobalt ferrite particles, core-shell particles with an antiferromagnetic w\"ustite core are obtained during the oleate synthesis due to the reductive environment of the synthesis.
-    And indeed, including a w\"ustite phase in the Rietveld refinement greatly improves the model as shown in \reffig{fig:monolayers:nanoparticle:xrdWustite}.
-
-    \begin{figure}[tb]
-      \centering
       \includegraphics{monolayer_XRD_CoFe2O4WustiteFit_Ol_CoFe_C}
-      \caption{\label{fig:monolayers:nanoparticle:xrdWustite}X-ray diffraction of Ol-CoFe-C with a Rietveld refinement assuming a combination of cobalt ferrite and w\"ustite.}
+      \includegraphics{monolayer_XRD_Ac_CoFe_C}
+      \caption{\label{fig:monolayers:nanoparticle:xrd}X-ray diffraction of Ol-CoFe-C (upper left) and Ac-CoFe-C (lower left) with a Rietveld refinement assuming an inverse spinell structure. Additionally, Ol-CoFe-C was refined assuming a combination of an inverse spinell phase and a w\"ustite phase (upper right).}
     \end{figure}
 
+    An explanation for the especially weak magnetic properties of the oleate synthesized particles is found in literature and confirmed when looking at X-ray diffraction (XRD) data shown in \reffig{fig:monolayers:nanoparticle:xrd}.
+    The XRD data was measured in cooperation with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague, where the experimental details are found in \refapp{app:additionalExperimentalTechniques:xrd}.
+    For both diffraction data sets a Rietveld analysis was performed, where the expected inverse spinell structure of cobalt ferrite (space group Fd-3m) was fitted.
+    The order of adding parameters to the refinement was in all cases the same, where first global parameters as the scale factor and background are estimated, and then the lattice parameter, peak shape and temperature displacement parameters.
+    The detailed list of all parameters can be found in \refapp{ch:appendix:modelparameters:monolayers:xrd_olac_cofe_c} and the most relevant for the discussion in the following in \reftab{tab:monolayers:nanoparticle:xrd}.
+    The particles from acetylacetonates are reasonably well fitted by the structure model of \ch{CoFe2O4} with a $\chi^2 \eq 2.0$.
+    On the other hand, Ol-CoFe-C can not be fitted well by assuming a single phase model only as visible in the upper left figure of \reffig{fig:monolayers:nanoparticle:xrd}.
+    The relative intensity of the peaks do not match well and deviate especially around $q \eq 3 \unit{\angstrom^{-1}}$.
+    Earlier works on nanoparticles synthesized from oleates \cite{Bodnarchuk_2009_Excha, Wetterskog_2013_Anoma} report already that instead of pure phased cobalt ferrite particles, core-shell particles with an w\"ustite core are obtained during the oleate synthesis due to the reductive environment of the synthesis.
+    And indeed, including a w\"ustite phase in the Rietveld analysis greatly improves the model as shown in the upper right image of \reffig{fig:monolayers:nanoparticle:xrd} and reduce the $\chi^2 \eq 13.1$ from only the single phase fit to $\chi^2 \eq 3.6$.
+    The shown structure models neglect the cubic shape of the particles and possibly preferred orientation in the sample.
+    Also some temperature displacement parameters have not been fitted in the analysis but kept at $0$, as they tend to diverge to nonphysical negative values, when they are included in the analysis, which suggests that even higher quality diffraction data is necessary to resolve them properly.
+
+    Additionally to providing information about the phases of the nanoparticles, the Rietveld analysis provides information about the average size of the coherently scattering crystallites in the sample via the Scherrer equation
+    \begin{equation}
+      \tau \eq \frac{K \lambda}{\beta \cos(\theta)},
+    \end{equation}
+    with 
+
+    \begin{table}[h]
+      \centering
+      \caption{\label{tab:monolayers:nanoparticle:xrd}Most relevant parameters of the XRD Rietveld analysis of Ol-CoFe-C and Ac-CoFe-C.}
+      \begin{tabular}{ c | l | l }
+          & Ol-CoFe-C & Ac-CoFe-C \\
+        \hline
+        $R$
+          & $5.62(2) \unit{nm}$
+          & $4.29(4) \unit{nm}$\\
+        $\sigma_R$
+          & $9.27(8) \,\%$
+          & $11.9(1) \,\%$\\
+        $D$
+          & $1.633(8) \unit{nm}$
+          & $1.16(4) \unit{nm}$\\
+        $p$
+          & $1.54(3) \unit{nm}$
+          & $2.66(9) \unit{nm}$\\
+        $\rho_\mathrm{mag}^\mathrm{sans}$
+          & $0.268(8) \cdot 10^{-6} \angstrom^{-2}$
+          & $0.423(7) \cdot 10^{-6} \angstrom^{-2}$\\
+        \hline
+        $n^\mathrm{saxs}$
+          & $0.02637(6) \cdot 10^{-8} \angstrom^{-3}$
+          & $0.0259(3) \cdot 10^{-8} \angstrom^{-3}$\\
+        $n^\mathrm{sans}$
+          & $0.198(1) \cdot 10^{-8} \angstrom^{-3}$
+          & $0.20(1) \cdot 10^{-8} \angstrom^{-3}$\\
+        $\rho_\mathrm{core}^\mathrm{sans}$
+          & $6.397(1) \cdot 10^{-6} \angstrom^{-2}$
+          & $6.631(1) \cdot 10^{-6} \angstrom^{-2}$\\
+        $\Delta \theta_\mathrm{s. a.}$
+          & $0.00090(8)$
+          & $0.00315(9)$\\
+        $\Delta \theta_\mathrm{l. a.}$
+          & $0.00142(3)$
+          & $0.0038(1)$\\
+        $bg^\mathrm{saxs}$
+          & $0.00114 \unit{cm}^{-1}$
+          & $0.0 \unit{cm}^{-1}$\\
+        $bg^\mathrm{sans}$
+          & $0.0158(2) \unit{cm}^{-1}$
+          & $0.0041(3) \unit{cm}^{-1}$\\
+        $\rho_\mathrm{shell}^\mathrm{sans}$
+          & $0.47(1) \cdot 10^{-6} \angstrom^{-2}$
+          & $1.39(1) \cdot 10^{-6} \angstrom^{-2}$\\
+        \hline
+        $\rho_\mathrm{core}^\mathrm{saxs}$
+          & \multicolumn{2}{c}{$41.749 \cdot 10^{-6} \angstrom^{-2}$}\\
+        $\rho_\mathrm{solvent}^\mathrm{saxs}$
+          & \multicolumn{2}{c}{$6.461 \cdot 10^{-6} \angstrom^{-2}$}\\
+        $\rho_\mathrm{solvent}^\mathrm{sans}$
+          & \multicolumn{2}{c}{$5.664 \cdot 10^{-6} \angstrom^{-2}$}\\
+        $\lambda^\mathrm{sans}$
+          & \multicolumn{2}{c}{$5.9984 \unit{\angstrom}$}\\
+        $\Delta \lambda / \lambda ^\mathrm{sans}$
+          & \multicolumn{2}{c}{$4.247 \, \%$}\\
+        \hline
+      \end{tabular}
+    \end{table}
+    %weiter XRD diskutieren
+
+    %zusammenfassend Kapitel abrunden
 \end{document}

@@ -20,14 +20,14 @@ app.setExperiment(Sans)
 dataRef = app.setData(XyeData)
 
 
-dataRef.loadFromFile('../../experimental_data/AH11_nuclear_SA.dat', ['sa'])
-dataRef.loadFromFile('../../experimental_data/AH11_nuclear_LA_scaled.dat', ['la'])
+dataRef.loadFromFile('../../../experimental_data/AH11_nuclear_SA.dat', ['sa'])
+dataRef.loadFromFile('../../../experimental_data/AH11_nuclear_LA_scaled.dat', ['la'])
 dataRef.sliceDomain(0., 0.25)
 dataRef.plotData()
 #    bg:          0 (fixed)
 
 modelRef = app.setModel(CubeCS, InstrumentalResolution)
-modelRef.setParam("i0", 0.19540000000000002,  minVal = 0, maxVal = 0.2, vary = True)
+modelRef.setParam("i0", 0.19540000000000002,  minVal = 0, maxVal = 0.5, vary = True)
 modelRef.setParam("d", 10.302942403473624,  minVal = 0, maxVal = 30, vary = True)
 modelRef.setParam("bg", 0.00412688899449506,  minVal = 0, maxVal = 0.02, vary = True)
 modelRef.setParam("sldCore", 6.746724e-06,  minVal = 4.293e-06, maxVal = 7.289e-06, vary = True)
