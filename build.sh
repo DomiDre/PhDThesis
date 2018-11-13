@@ -1,4 +1,4 @@
-pdflatex dresen_thesis.tex
+pdflatex dresen_thesis.tex -draftmode
 biber dresen_thesis
 makeglossaries dresen_thesis
 pdflatex dresen_thesis.tex
