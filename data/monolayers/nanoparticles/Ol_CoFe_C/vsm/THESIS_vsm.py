@@ -51,7 +51,7 @@ fitData.loadFromFile(datfile)
 fit_params = fitData.params
 
 min_B, max_B = min(B), max(B)
-min_M, max_M = -90, 90
+min_M, max_M = -130, 130
 T = 300
 
 fig = plt.figure()
@@ -61,7 +61,7 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
 ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
-            label='VSM\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
+            label='Ol-CoFe-C\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
 ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
 
 ax.text(0.03, 0.97,
