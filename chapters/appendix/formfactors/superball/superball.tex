@@ -4,24 +4,82 @@
 \begin{document}
 \section{Superball Form Factor}\label{ch:appendix:numericalMethods:superballFormfactor}
 
-Nanoparticles synthesized from thermal decomposition in the size range of $10 \unit{nm}$ do not form perfectly shaped cubes but show visible rounded edges at high magnification in electron microscopy images.
+The nanoparticles synthesized in this work from thermal decomposition, in the size range of $10 \unit{nm}$, do not form perfectly shaped cubes but show visible rounded edges at high magnification in electron microscopy images.
 This subtle difference in shape has an effect on the diffraction pattern measured in small-angle scattering.
 For this purpose, a model that is closer to the observed reality than a purely cubic or spherical model is developed in the following.
-A superball is a geometric body that is in between a cube and a sphere. The volume of a superball is defined by all points $(x,\, y,\, z)$ that solve
+A superball is a geometric body that is in between a cube and a sphere.
+The volume of a superball is defined by all points $(x,\, y,\, z)$ that solve
 \begin{align}
 x^{2p} + y^{2p} + z^{2p} < R^{2p},
 \end{align}
 where R is the radius.  The case $p=1$ is equivalent to the definition of a sphere and the case $p=\infty$ corresponds to a cube with edge length $a=2R$.
-The amplitude $\tilde{p}(q)$ of the single-particle form factor of an oriented superball formfactor is derived in cartesian coordinates by solving
+The edge length definition can also be used in terms of a superball, where it represents the length along one main coordinate axis.
+
+To calculate the volume and radius of gyration of a superball, a transformation analogue to the spherical coordinate transformation helps to make use of the symmetries of the superball body by
 \begin{align}
-  \tilde{p}(q) \eq& \frac{1}{V_p} \int_{V} \dint \vec{r} \rho(\vec{r}) e^{i \vec{q} \cdot \vec{r}}\\
+  x &\eq R \cos^{p^{-1}}(\phi) \sin^{p^{-1}}(\theta),\\
+  y &\eq R \sin^{p^{-1}}(\phi) \sin^{p^{-1}}(\theta),\\
+  z &\eq R \cos^{p^{-1}}(\theta)
+\end{align}
+The Jacobi determinant for the coordinate transformation in integral equations evaluates to
+\begin{align}
+  \det(J(x,y,z)) \eq \frac{r^2}{p^2} \sin^{p^{-1}}(\theta) \biggl(\cos(\phi) \sin(\phi) \cos(\theta) \sin(\theta)\biggr)^{p^{-1}-1}.
+\end{align}
+Using this transformation, the integral to determine the volume is given by
+\begin{align}
+  V \eq \frac{8}{p^2}
+    \int_{0}^R  r^2 \dint r
+    \int_{0}^{\frac{\pi}{2}} \cos^{p^{-1}-1}(\phi) \sin^{p^{-1}-1}(\phi) \dint \phi
+    \int_{0}^{\frac{\pi}{2}} \cos^{p^{-1}-1}(\theta) \sin^{2p^{-1}-1}(\theta) \dint \theta,
+\end{align}
+where only one octant needs to be explicitly integrated over.
+The integral over $r$ is trivial, whereas for the integrals over $\phi$ and $\theta$ the definition of Euler's Beta integral \cite{Olver_2010_Handb}
+\begin{align}
+  B(x, y) \eq 2 \int_0^{\pi/2} \cos^{2x-1}(\alpha) \sin^{2y-1}(\alpha) \dint \alpha,
+\end{align}
+and the identity with the gamma function
+\begin{align}
+  B(x, y) \eq \frac{\Gamma(x) \Gamma(y)}{\Gamma(x+y)}
+\end{align}
+is used to obtain
+\begin{align}
+  V \eq \frac{a^3}{12 p^2} \frac{\Gamma^3 \Bigl(\frac{1}{2p} \Bigr)}{\Gamma \Bigl(\frac{3}{2p} \Bigr)}.
+\end{align}
+
+The radius of gyration around the main axes is calculated by solving the integral
+\begin{align}
+  r_g^2 \eq \frac{1}{V} \int_V x^2 + y^2 \dint^3 r,
+\end{align}
+which is solved using the same coordinate transformation and identities as used to determine the volume and results in
+\begin{align}
+  r_g^2 \eq \frac{3 a^2}{10} \frac{\Gamma^2 \Bigl(\frac{3}{2p} \Bigr)}{\Gamma \Bigl(\frac{1}{2p} \Bigr) \Gamma \Bigl(\frac{5}{2p} \Bigr)}.
+\end{align}
+
+Looking at a superball in the plane $z \eq 0$, the diagonal $d$ between two opposing rounded corners can be related to the edge length of the cube geometrically by
+\begin{align}
+  d \eq \sqrt{2}^{1-p^{-1}}a,
+\end{align}
+which yields an equation to determine $p$ by measuring two from an imaging experiment by
+\begin{align}
+  p \eq \frac{1}{1 + 2\log_2(a/d)}.
+\end{align}
+
+The calculation of the formfactor amplitude can however not be solved this way and has to be done numerically.
+For this purpose, cartesian coordinates provide the best setup for a fast and numerically stable algorithm that has been developed and used within this work.
+The amplitude $\tilde{p}(q)$ of the oriented superball formfactor is derived in cartesian coordinates by solving
+\begin{align}
+  \tilde{p}(q) \eq& \frac{1}{V_p} \int_{V} \dint \vec{r} e^{i \vec{q} \cdot \vec{r}}\\
   \eq& \frac{R^3}{V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \int_{-\zeta}^{\zeta} \dint z  e^{iR(q_x x + q_y y + q_z z)},\\
   \eq& \frac{2R^3}{q_z R V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y  e^{i (q_x x R + q_y y R)} sin(q_z R \zeta),\\
   \mathrm{with}\nonumber\\
   \gamma \eq& \sqrt[2p]{1-x^{2p}}, \\
   \zeta \eq& \sqrt[2p]{1-x^{2p} -y^{2p}}.
 \end{align}
-The integral can be further simplified by splitting the integral into one for the real and one for the imaginary part
+The integral can be further simplified by splitting the integral into one for the real and one for the imaginary part using Euler's identity
+\begin{align}
+  e^{ix} \eq \cos(x) + i \sin(x),
+\end{align}
+which yields
 \begin{align}
   \realpart (\tilde{p}(q)) &=& \frac{2R^3}{q_z R V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \cos(R q_x x + R q_y y)  \sin (q_z R \zeta),\\
   \imagpart (\tilde{p}(q)) &=& \frac{2R^3}{q_z R V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \sin(R q_x x + R q_y y) \sin (q_z R \zeta).
