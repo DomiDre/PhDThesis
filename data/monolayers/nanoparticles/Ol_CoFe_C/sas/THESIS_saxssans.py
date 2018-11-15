@@ -74,6 +74,13 @@ ax.errorbar(sans_la_q, sans_la_I-bg, sans_la_sI,\
 ax.plot(sans_la_q, sans_la_Imodel-bg, marker='None', linestyle='-',\
   color=colors['saxs_sans_model'], zorder=1, alpha=0.5)
 
+
+ax.text(0.12, 0.2, 'Ol-CoFe-C',
+  horizontalalignment='left',
+  verticalalignment='bottom',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
+  
 ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')

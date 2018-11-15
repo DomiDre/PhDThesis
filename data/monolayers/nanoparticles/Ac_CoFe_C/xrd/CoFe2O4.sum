@@ -1,0 +1,163 @@
+
+
+        **********************************************************
+        ** PROGRAM FullProf.2k (Version 6.20 - Jan2018-ILL JRC) **
+        **********************************************************
+                       M U L T I -- P A T T E R N
+            Rietveld, Profile Matching & Integrated Intensity
+                 Refinement of X-ray and/or Neutron Data
+
+
+    Date: 06/11/2018  Time: 13:47:20.561
+
+ => PCR file code: CoFe2O4
+ => DAT file code: AH11.dat             -> Relative contribution: 1.0000
+ => Title: AH11
+
+ ==> CONDITIONS OF THIS RUN FOR PATTERN No.:  1
+
+ => Global Refinement of X-ray powder diffraction data
+ => Global Refinement of X-ray powder diffraction data
+    Bragg-Brentano(X-rays) or Debye-Scherrer geometry(Neutrons)
+ => The    7th default profile function was selected
+
+ => X-Y type of data: 2theta/TOF/E(Kev) Intens sigma for pattern:  1
+ => Wavelengths:  1.54056 1.54439
+ => Cos(Monochromator angle)=   0.0000
+ => Absorption correction (AC), muR-eff =   0.0000  0.0000
+ => Base of peaks: 2.0*HW*   40.00
+ ==> Angular range, step and number of points:
+     2Thmin:       5.169000  2Thmax:      79.867004  Step:       0.026010  No. of points:   2874
+ =>-------> Pattern#  1
+ => Crystal Structure Refinement for phase: 1
+ => The density (volumic mass) of phase 1 is:    5.269 g/cm3
+ => Scor: 3.9856
+
+ ==> RESULTS OF REFINEMENT:
+
+
+ => No. of fitted parameters:   17
+
+
+------------------------------------------------------------------------------
+ => Phase No.  1 Name: CoFe2O4                           F d -3 m
+------------------------------------------------------------------------------
+
+ =>  No. of reflections for pattern#:   1:    94/2
+
+
+ ==> ATOM PARAMETERS:
+
+  Name      x     sx       y     sy       z      sz      B   sB   occ. socc.  Mult
+ FeTet   0.12500(   0)  0.12500(   0)  0.12500(   0)  0.000(  0)  1.000(  0)    8
+ CoOct   0.50000(   0)  0.50000(   0)  0.50000(   0)  0.000(  0)  1.000(  0)   16
+ FeOct   0.50000(   0)  0.50000(   0)  0.50000(   0)  0.000(  0)  1.000(  0)   16
+ O       0.25427(  36)  0.25427(  36)  0.25427(  36)  0.000(  0)  4.000(  0)   32
+
+ ==> PROFILE PARAMETERS FOR PATTERN#  1
+
+ => Cell parameters      :
+                              8.39467   0.00017
+                              8.39467   0.00017
+                              8.39467   0.00017
+                             90.00000   0.00000
+                             90.00000   0.00000
+                             90.00000   0.00000
+
+ => overall scale factor :      0.000000688     0.000000001
+ => Eta(p-v) or m(p-vii) :    0.00000   0.00000
+ => Overall tem. factor  :    2.65779   0.04889
+ => Halfwidth parameters :    0.00000   0.00000
+                              0.00000   0.00000
+                              0.00000   0.00000
+ => Preferred orientation:    0.00000   0.00000
+                              0.00000   0.00000
+ => Asymmetry parameters :    0.00000   0.00000
+                              0.00000   0.00000
+                              0.00000   0.00000
+                              0.00000   0.00000
+ => X and y parameters   :    0.00000   0.00000
+                              0.96939   0.00629
+ => Strain parameters    :    0.00000   0.00000
+                              0.00000   0.00000
+                              0.00000   0.00000
+ => Size parameters (G,L):    0.00000   0.00000
+                              0.00000   0.00000
+
+ => Add. shape parameters:
+                              0.00000   0.00000
+                              0.00000   0.00000
+
+
+
+ ==> GLOBAL PARAMETERS FOR PATTERN#  1
+
+
+ => Zero-point:     0.0000    0.0000
+ => Chebychev Polynomials Background Parameters ==>
+                               2414.3      1.1242
+                              -1200.5      1.7049
+                               131.52      1.6649
+                               25.891      1.5420
+                               132.32      1.4710
+                              -415.08      1.4253
+                               347.44      1.3266
+                              -98.261      1.3435
+                              -75.882      1.2194
+                               69.868      1.2591
+                              -43.312      1.0806
+                              -42.747      1.1411
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+                               0.0000      0.0000
+
+ => Cos( theta)-shift parameter :   0.0000  0.0000
+ => Sin(2theta)-shift parameter :   0.0000  0.0000
+
+ ==> RELIABILITY FACTORS WITH ALL NON-EXCLUDED POINTS FOR PATTERN:  1
+
+  => Cycle:  1 => MaxCycle: 10
+ => N-P+C:  2857
+ =>  R-factors (not corrected for background) for Pattern:  1
+ => Rp:  2.19     Rwp:  2.82     Rexp:    1.99 Chi2:  2.00      L.S. refinement
+ => Conventional Rietveld R-factors for Pattern:  1
+ => Rp:  35.0     Rwp:  24.0     Rexp:   16.97 Chi2:  2.00
+ => Deviance:  0.575E+04     Dev*  :   2.012
+ => DW-Stat.:    0.5219     DW-exp:     1.8960
+ => N-sigma of the GoF:       37.903
+
+ ==> RELIABILITY FACTORS FOR POINTS WITH BRAGG CONTRIBUTIONS FOR PATTERN:  1
+
+ => N-P+C:  2857
+ =>  R-factors (not corrected for background) for Pattern:  1
+ => Rp:  2.19     Rwp:  2.82     Rexp:    1.99 Chi2:  2.00      L.S. refinement
+ => Conventional Rietveld R-factors for Pattern:  1
+ => Rp:  35.0     Rwp:  24.0     Rexp:   16.97 Chi2:  2.00
+ => Deviance:  0.575E+04     Dev*  :   2.012
+ => DW-Stat.:    0.5219     DW-exp:     1.8960
+ => N-sigma of the GoF:       37.903
+
+ => Global user-weigthed Chi2 (Bragg contrib.):   2.00
+
+     -----------------------------------------------------
+     BRAGG R-Factors and weight fractions for Pattern #  1
+     -----------------------------------------------------
+
+ => Phase:  1     Name: CoFe2O4
+ => Bragg R-factor:   8.39       Vol:  591.576( 0.021)  Fract(%):  100.00( 0.21)
+ => Rf-factor=  6.17             ATZ:     1081151.125   Brindley:  1.0000
+
+
+              CPU Time:     0.246 seconds
+                            0.004 minutes
+
+ => Run finished at:     Date: 06/11/2018  Time: 13:47:20.802

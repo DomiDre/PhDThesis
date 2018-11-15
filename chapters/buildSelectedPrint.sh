@@ -1,0 +1,3 @@
+pdflatex selected_print
+biber selected_print
+pdflatex selected_print.tex

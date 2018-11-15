@@ -12,9 +12,10 @@ plt.style.use('phdthesis')
 
 import numpy as np
 
-from modelexp.data import XyeData
+from modelexp.data import XyeData, XyemData, MultiData
 
-datfile = 'AH11_10K_LangevinSAXSscaled.xye'
+datfile = './rescale/AH11_10K_LangevinSAXSscaled.xye'
+paramfile = './fit_result.dat'
 
 chapter = 'monolayer'
 sample_name = 'Ac_CoFe_C'
@@ -25,8 +26,16 @@ data = XyeData()
 data.loadFromFile(datfile)
 B, M, sM = data.getData()
 
+
+fitData = MultiData(XyemData)
+fitData.loadFromFile(paramfile)
+fit_params = fitData.params
+chi = fit_params['chi']['value']
+chi = -0.0366315 * 4.631539113631906 * 1000
+M -= chi*B
+
 min_B, max_B = min(B), max(B)
-min_M, max_M = -999, 999
+min_M, max_M = -390, 390
 T = 10
 
 fig = plt.figure()

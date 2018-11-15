@@ -95,7 +95,16 @@ ax.errorbar(sanspol_m_la_q, sanspol_m_la_I, sanspol_m_la_sI,\
   zorder=0, capsize=0, marker='.')
 ax.plot(sanspol_m_la_q, sanspol_m_la_Imodel, marker='None', linestyle='-',\
   color=colors['sanspol_m_model'], zorder=1)
-
+ax.text(0.12, 0.2, 'Ac-CoFe-C',
+  horizontalalignment='left',
+  verticalalignment='bottom',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
+ax.text(0.02, 0.98, 'Cube Model',
+  horizontalalignment='left',
+  verticalalignment='top',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
 ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')
@@ -108,7 +117,7 @@ ax_sld.plot(sanspol_p_la_r, sanspol_p_la_sld, marker='None',
   color=colors['sanspol_sld'])
 ax_sld.plot(sanspol_p_la_rMag, sanspol_p_la_sldMag, marker='None',
   color=colors['sanspol_sldMag'])
-ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
+ax_sld.set_xlabel("$\mathit{a}/2 \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel("$SLD \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 2, 4, 6, 8])
 ax_sld.set_yticks([0, 2, 4, 6, 8])

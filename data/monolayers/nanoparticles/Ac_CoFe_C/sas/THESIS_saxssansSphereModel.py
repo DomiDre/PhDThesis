@@ -73,7 +73,16 @@ ax.errorbar(sans_la_q, sans_la_I-bg, sans_la_sI,\
   zorder=0, capsize=0, marker='.', alpha=0.5)
 ax.plot(sans_la_q, sans_la_Imodel-bg, marker='None', linestyle='-',\
   color=colors['saxs_sans_model'], zorder=1, alpha=0.5)
-
+ax.text(0.12, 0.2, 'Ac-CoFe-C',
+  horizontalalignment='left',
+  verticalalignment='bottom',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
+ax.text(0.02, 0.98, 'Sphere Model',
+  horizontalalignment='left',
+  verticalalignment='top',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
 ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')

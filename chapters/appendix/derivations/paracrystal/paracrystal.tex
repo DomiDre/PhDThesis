@@ -1,0 +1,93 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+
+\begin{document}
+\section{Paracrystals and Disorder of the 2nd Kind}\label{ch:appendix:calculations:paracrystal}
+The structure factor from $N$ scattering centers is, as described in \refeq{eq:theoreticalBackground:scattering:scatteringTheory:structureFactor}, given by
+\begin{align}
+  S(\vec{q}) \eq \frac{1}{N} \sum_{j, k}^{\infty} e^{i\vec{q} \cdot (\vec{x}_j - \vec{x}_k)}.
+\end{align}
+For a regularly ordered structure, this results in sharp peaks when the scattering vector is such that it corresponds to a regular lattice spacing via $\vec{q} \cdot \Delta \vec{x} \eq 2 \pi n$ where the width of the peaks is determined by instrumental resolution and finite size of the lattice.
+
+In atomic crystals, the atoms can fluctuate from their mean position due to thermal excitation.
+This is termed as disorder of the first kind as it preserves the long range order and it can be accounted for by a Debye-Waller factor
+\begin{align}
+  I \rightarrow I e^{-q^2 \braket{u^2}/3},
+\end{align}
+where u is the atomic displacement.
+Disorder of the first kind reduces the peak height but does not further broaden the peak width.
+
+On the other hand, especially in the case of nanostructured materials, the position of the nearest neighbour of a scatterer can also be systematically shifted from the mean position.
+From the point of view of a single scattering center, this systematic offset of the nearest neighbour propagates to the next-nearest neighbour, the next-to-next nearest neighbour and so forth, increasing the uncertainty of the position ever larger the further away.
+This systematic displacement is termed disorder of the second kind or paracrystalline order and it effectively leads to an additional broadening of the peak.
+
+The paracrystal is typically derived in one dimension and then extended to higher dimensions by convolution.
+The nearest neighbour probability distribution is noted as $p_1(x) \eq p(x-a)$, where $a$ is the lattice constant of the regular chain and $p$ the probability distribution for the displacement from the ideal structure for the nearest neighbour.
+The probability for the $n$-th lattice site offset is then calculated by the convoluting the probability distribution of the nearest neighbour offset $n$ times
+\begin{align}
+  p_n (x) \eq \circledast^{|n|} p(x-a).
+\end{align}
+Implementing the probability distributions in the formula for the structure factor of a one dimensional regular lattice, it reads
+\begin{align}
+  S(q) \eq \sum_{n\eq -N/2}^{N/2} \int_{- \infty}^\infty p_n(x) e^{i q x} \dint x.
+\end{align}
+The ideal lattice is returned at this point, when as probability distribution the Delta distribution $p(x) \eq \delta(x)$ is used.
+
+The integral that appears in the structure factor, is just the Fourier transform of $p_n(x)$.
+Using the convolution theorem and the property of the Fourier transform for a variable shift, it can be given as
+\begin{align}
+  \mathcal{F} [p_n](q) \eq e^{-inqa} P^{|n|}(q).
+\end{align}
+where $P(q)$ is the Fourier transform of the nearest neighbour offset probability distribution $P(q) \eq \mathcal{F} [p](q)$.
+The structure factor is then
+\begin{align}\begin{split}
+  S(q) \eq& \sum_{n\eq -N/2}^{N/2} e^{-inqa} P^{|n|}(q)\\
+  \eq& -1 + 2\Re e\sum_{n\eq 0}^{N/2} \Bigl(e^{iqa} P(q) \Bigr)^n\\
+  \underset{N \rightarrow \infty}{\Rightarrow}& \frac{1 - P^2(q)}{1 - 2 P(q) \cos(qa) + P^2(q)}.\label{eq:appendix:calculations:paracrystal:StructureFactor}
+\end{split}\end{align}
+Where it was used that the sum of a complex number with it's complex conjugate is just two times it's real part, the geometric sum is then performed and the lattice is assumed to be infinite.
+It is however enough to assume that the lattice is larger than the coherence length, which is discussed in the following for the case of the Gaussian probability distribution.
+
+The Gaussian probability distribution is given by
+\begin{align}
+  p(x) \eq \frac{1}{\sqrt{2 \pi} \sigma} \exp \biggl( - \frac{x^2}{2 \sigma^2}\biggr),
+\end{align}
+where $\sigma$ is the uncertainty in the nearest neighbour position.
+As the convolution of two Gaussians with uncertainty $\sigma_1$ and $\sigma_2$ is again a Gaussian with uncertainty $\sigma^2 \eq \sigma_1^2 + \sigma_2^2$, the uncertainty in position of the $n$-th lattice site is given by a Gaussian with uncertainty $\sigma_n \eq \sqrt{n} \sigma$.
+The coherence length of the paracrystal is then defined as the length scale $L_\mathrm{coh} \eq n a$, where the uncertainty is equal to the lattice spacing $\sigma_n \eq a$, which reads
+\begin{align}
+  L_\mathrm{coh} \eq \frac{a^3}{\sigma^2}.\label{eq:appendix:calculations:paracrystal:CoherenceLength}
+\end{align}
+Beyond this length scale, the lattice appears disordered as the uncertainty in position becomes too large.
+
+To discuss the structure factor for the Gaussian probability distribution in the framework of the paracrystal model, the Fourier transform
+\begin{align}
+  P(q) \eq e^{-\frac{q^2 \sigma^2}{2}},
+\end{align}
+is inserted in \refeq{eq:appendix:calculations:paracrystal:StructureFactor} and after some reorganization it is given by
+\begin{align}
+  S(q) \eq \frac{\coth(q^2 \sigma^2/4)}{1 + \frac{1 - \cos(qa)}{1 - \cosh(q^2 \sigma^2/2)}}.
+\end{align}
+At the peak positions $q_{p, n} \eq 2 \pi n/a$, the cosine is one and the structure factor has the value
+\begin{align}
+  S(q_{p, n}) \eq \coth \Bigl( \frac{n^2 \pi^2 \sigma^2}{a^2} \Bigr) \underset{\sigma \ll a}{\approx} \frac{a^2}{n^2 \pi^2 \sigma^2},
+\end{align}
+where it is assumed that the uncertainty in the nearest neighbour position is small in comparison to the lattice constant.
+In the small-q region where the peaks are well defined $q \sigma \ll 1$, the structure factor can be approximated around the peak position by a Lorentz function, which becomes apparent when the cosine is expanded around $q_{p, n}$ by $\cos(qa) \approx 1 - \Delta q^2 a^2 /2$ (with $\Delta q \eq q - q_{p, n}$) and the cosine hyperbolicus around zero $\cosh(x) \approx 1 + x^2/2$ is used
+\begin{align}
+  S(q) \approx \frac{S(q_{p, n})}{1 + \biggl(2\frac{\Delta q}{q_{p,n}^2 \sigma^2/a} \biggr)^2}.
+\end{align}
+From this, the FWHM of the Lorentzian $\gamma_n$ for the $n$-th peak reads as
+\begin{align}\begin{split}
+  \gamma_n \eq& \frac{q_{p,n}^2 \sigma^2}{a}\\
+  \eq& \frac{4 \pi^2 n^2 \sigma^2}{a^3},
+\end{split}\end{align}
+from which it becomes visible that the peak width broadens with the square of increasing order of the peak.
+This is characteristic for disorder of the second kind and can be used to distinguish it from broadening due to finite size effects.
+
+Using \refeq{eq:appendix:calculations:paracrystal:CoherenceLength}, the coherence length can be related to the inverse of the FWHM by
+\begin{align}
+  L_\mathrm{coh} \eq \frac{4 \pi^2 n^2}{\gamma_n},\label{eq:appendix:calculations:paracrystal:CoherenceFWHMEquation}
+\end{align}
+which is used to extract from the line profile a measure of the coherence length for a paracrystal.
+\end{document}

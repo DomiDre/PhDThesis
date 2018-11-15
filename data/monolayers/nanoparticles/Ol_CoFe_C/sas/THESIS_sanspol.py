@@ -96,6 +96,13 @@ ax.errorbar(sanspol_m_la_q, sanspol_m_la_I, sanspol_m_la_sI,\
 ax.plot(sanspol_m_la_q, sanspol_m_la_Imodel, marker='None', linestyle='-',\
   color=colors['sanspol_m_model'], zorder=1)
 
+
+ax.text(0.12, 0.2, 'Ol-CoFe-C',
+  horizontalalignment='left',
+  verticalalignment='bottom',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
+  
 ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')
