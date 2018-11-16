@@ -27,5 +27,10 @@ def plot_tiffile(semFilepath, sample_name, outfile, scalebar=100, x0=None, y0=No
 
 # plot_tiffile(cwd+"/DD205_4_1L_02.tif", 'ML-Ac-CoFe-C', 'ML-Ac-CoFe-C_img1', 500, 0.57, 0.9)
 # plot_tiffile(cwd+"/DD205_4_1L_08.tif", 'ML-Ac-CoFe-C', 'ML-Ac-CoFe-C_img2', 100, 0.57, 0.9)
-plot_tiffile(cwd+"/DD205_4xs_08.tif", 'ML-Ac-CoFe-C', 'ML-Ac-CoFe-C_img3', 500, 0.57, 0.9)
+# plot_tiffile(cwd+"/DD205_4xs_08.tif", 'ML-Ac-CoFe-C', 'ML-Ac-CoFe-C_img3', 500, 0.57, 0.9)
 # plot_tiffile(cwd+"/DD205_4xs_06.tif", 'ML-Ac-CoFe-C', 'ML-Ac-CoFe-C_img4', 100, 0.57, 0.9)
+
+# plot_tiffile(cwd+"/DD172_28_afterD33_02.tif", 'ML-Ac-CoFe-C-2', 'ML-Ac-CoFe-C-2_img1', 500, 0.52, 0.9)
+# plot_tiffile(cwd+"/DD175_28_04.tif", 'ML-Ac-CoFe-C-2', 'ML-Ac-CoFe-C-2_img2', 100, 0.52, 0.9)
+# plot_tiffile(cwd+"/DD175_23xs_07.tif", 'ML-Ac-CoFe-C-2', 'ML-Ac-CoFe-C-2_img3', 500, 0.52, 0.9)
+# plot_tiffile(cwd+"/DD175_23xs_09.tif", 'ML-Ac-CoFe-C-2', 'ML-Ac-CoFe-C-2_img4', 100, 0.52, 0.9)
