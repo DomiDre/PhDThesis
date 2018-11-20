@@ -3,13 +3,13 @@
 
 \begin{document}
   The optimal concentration of the nanoparticles in dispersion for a monolayer on a given wafer surface area can be roughly estimated geometrically from the average particle to particle distance on the square lattice $a_{p-p}$.
-  Assuming a perfect square lattice expanding over the wafer area $A_{\textsf{wafer}}$, the number of nanocubes is determined by
+  Assuming a perfect square lattice expanding over the wafer area $A_{\textsf{wafer}}$, the number of nanocubes $N$ is determined by
   \begin{align}
     N \eq \frac{A_{\textsf{wafer}}}{a_{p-p}^2}.
   \end{align}
   When the volume of a dispersion $V_{\textsf{disp.}}$ is dropped on the wafer, the number of particles in the drop is given by
   \begin{align}
-    N \eq \frac{c_V V_{\textsf{disp}}}{V_p},
+    N \eq \frac{c_V V_{\textsf{disp.}}}{V_p},
   \end{align}
   where $c_V$ is the particle volume concentration of the dispersion and $V_p$ the volume of a single nanocube.
   The average nanoparticle volume is known from the small-angle scattering model, and the particle volume concentration can be estimated by
@@ -19,9 +19,9 @@
   using the the particle mass concentration $c_m$ of the dispersion that is estimated from gravimetry, or more exact from a thermogravimetric analysis, and the density $\rho$ of the particle that can be estimated using the literature value.
   Combining these equations, the particle mass concentration of the dispersion needs to be tuned to the value
   \begin{align}\label{eq:monolayers:preparation:particleConcentration}
-    c_m \eq \rho \frac{A_{\textsf{wafer}}}{V_{\textsf{disp}}} \frac{V_p}{a_{p-p}^2}
+    c_m \eq \rho \frac{A_{\textsf{wafer}}}{V_{\textsf{disp.}}} \frac{V_p}{a_{p-p}^2}
   \end{align}
-  Typically, for ferrite nanocubes with the size in the order of $10 \unit{nm}$ with an oleic acid shell in the order of $2 \unit{nm}$, the optimal mass concentration for a drop of $50 \unit{\text{\textmu} L}$ on a $10\times 10 \unit{mm^2}$ wafer is in the order of $0.1 \unit{mg/mL}$.
+  Typically, for ferrite nanocubes with a size in the order of $10 \unit{nm}$ and with an oleic acid shell in the order of $2 \unit{nm}$, the optimal mass concentration for a drop of $50 \unit{\text{\textmu} L}$ on a $10\times 10 \unit{mm^2}$ wafer is in the order of $0.1 \unit{mg/mL}$.
   Using this calculated estimate, the optimal particle concentration can be determined for a batch of nanoparticles by a short experimental drop casting series around this value.
   In the case of a non-square lattices, \refeq{eq:monolayers:preparation:particleConcentration} has to account for the reduced coverage by including an additional factor for the packing density $\eta$ in the plane and $a_{p-p}^2$ has to be replaced by the average maximum cross-section the particle is taking in the lattice.
   For a perfect circle packing, which is expected for densely packed spheres in two dimensions, the packing density is straight forward to evaluate to $\eta \eq \pi \sqrt{3} / 6 \approx 0.9069$ and the cross-section is given by $\pi r^2$.

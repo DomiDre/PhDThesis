@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.reflectometry import Reflectometry
-from modelexp.models.reflectometry import Substrate, InstrumentalResolution
+from modelexp.models.reflectometry import Substrate, InstrumentalResolution, ShiftQ
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -21,16 +21,17 @@ dataRef.loadFromFile('../../transform_data/SiWafer.xye')
 dataRef.sliceDomain(0.01, 0.25)
 dataRef.plotData()
 
-modelRef = app.setModel(Substrate, InstrumentalResolution)
+modelRef = app.setModel(Substrate, [InstrumentalResolution, ShiftQ])
 
-modelRef.setParam("bg", 3e-06,  minVal = 0.0, maxVal = 0.0001, vary = True)
-modelRef.setParam("roughness", 9.32,  minVal = 0.0, maxVal = 20, vary = True)
-modelRef.setParam("sldSubstrate", 1.9686962563206795e-05,  minVal = 0, maxVal = 5e-05, vary = True)
-modelRef.setParam("dTheta", 0.0,  minVal = 0, maxVal = 0.001, vary = False)
-modelRef.setParam("dWavelength", 0.0543,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("bg", 3.9e-06,  minVal = 0.0, maxVal = 0.0001, vary = True)
+modelRef.setParam("qShift", -0.0007600000000000003,  minVal = -0.01, maxVal = 0.01, vary = True)
+modelRef.setParam("dWavelength", 0.0524,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("roughness", 9.82,  minVal = 0.0, maxVal = 20, vary = True)
 
+modelRef.setConstantParam("sldSubstrate", 2.061e-05)
 modelRef.setConstantParam("i0", 1)
 modelRef.setConstantParam('wavelength', 1.5418)
+modelRef.setConstantParam("dTheta", 0.0)
 modelRef.updateModel()
 
 fit = app.setFit(LevenbergMarquardt)

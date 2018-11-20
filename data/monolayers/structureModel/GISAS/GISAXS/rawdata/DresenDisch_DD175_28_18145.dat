@@ -1,0 +1,175 @@
+### NICOS data file, created at 2017-05-09 17:09:31
+#                  filename : DresenDisch_DD175_28_18145.dat
+#                    number : 18145
+#                  filepath : /home/jcns/data/2017/P231_DresenDisch/data/DresenDisch_DD175_28_18145.dat
+#                      info : timescan(1, t=120)
+### Experiment information
+#          Exp_localcontact : e.kentzinger@fz-juelich.de 
+#              Exp_proposal : P231_DresenDisch 
+#                Exp_remark :  
+#                 Exp_title : magnetic NP 
+#                 Exp_users : DresenDisch 
+#                galaxi_doi :  
+#           galaxi_facility : FZ-Juelich 
+#         galaxi_instrument : GALAXI 
+#        galaxi_responsible : Ulrich Ruecker <u.ruecker@fz-juelich.de> 
+### Sample and alignment
+#         Sample_samplename : DD175_28 
+### Offsets
+#                b1b_offset : 0.0 mm
+#                b1h_offset : 0.0 mm
+#                b1y_offset : 0.0 mm
+#                b1z_offset : 0.0 mm
+#                b2b_offset : 0.0 mm
+#                b2h_offset : 0.0 mm
+#                b2y_offset : 0.0 mm
+#                b2z_offset : 0.0 mm
+#                b3b_offset : 0.0 mm
+#                b3h_offset : 0.0 mm
+#                b3y_offset : 0.0 mm
+#                b3z_offset : 0.0 mm
+#               bspy_offset : 0.0 mm
+#               bspz_offset : 0.0 mm
+#               bssy_offset : 0.0 mm
+#               detz_offset : 0.0 mm
+#             dofchi_offset : 0.0 rev
+#              dofom_offset : 0.0 rev
+#               pchi_offset : 0.0 deg
+#                pom_offset : 0.0 deg
+#              prefz_offset : 0.0 mm
+#                 py_offset : 0.0 mm
+#                 pz_offset : 0.0 mm
+#               roby_offset : 0.0 mm
+#               robz_offset : 0.0 mm
+#                roy_offset : 0.0 steps
+#                roz_offset : 0.0 steps
+### Precisions/tolerances
+#             b1b_precision : 0.01 mm
+#             b1h_precision : 0.01 mm
+#             b1y_precision : 0.01 mm
+#             b1z_precision : 0.01 mm
+#             b2b_precision : 0.01 mm
+#             b2h_precision : 0.01 mm
+#             b2y_precision : 0.01 mm
+#             b2z_precision : 0.01 mm
+#             b3b_precision : 0.01 mm
+#             b3h_precision : 0.01 mm
+#             b3y_precision : 0.01 mm
+#             b3z_precision : 0.01 mm
+#            bspy_precision : 0.01 mm
+#            bspz_precision : 0.01 mm
+#            bssy_precision : 0.01 mm
+#            detz_precision : 0.01 mm
+#          dofchi_precision : 0.01 rev
+#           dofom_precision : 0.01 rev
+#            pchi_precision : 0.0008 deg
+#             pom_precision : 0.0008 deg
+#           prefz_precision : 0.01 mm
+#              py_precision : 0.01 mm
+#              pz_precision : 0.01 mm
+#            roby_precision : 0.01 mm
+#            robz_precision : 0.01 mm
+#             roy_precision : 0.5 steps
+#             roz_precision : 0.5 steps
+### Devices in busy or error status
+#               roby_status : warn: ON [ PositionOk Sync], below user limit (0.500 mm)
+### Device positions and sample environment state
+#            absorber_value : 1.000
+#          absorber00_value : out
+#          absorber01_value : out
+#          absorber02_value : out
+#          absorber03_value : out
+#          absorber04_value : out
+#          absorber05_value : out
+#          absorber06_value : out
+#          absorber07_value : out
+#          absorber08_value : out
+#          absorber09_value : out
+#          absorber10_value : out
+#          absorber11_value : out
+#          absorber12_value : out
+#          absorber13_value : out
+#          absorber14_value : out
+#                  b1_value : 0.51 0.50 mm
+#                 b1b_value : 0.505 mm
+#                 b1h_value : 0.504 mm
+#                 b1y_value : 17.240 mm
+#                 b1z_value : 13.551 mm
+#                  b2_value : 0.50 0.50 mm
+#                 b2b_value : 0.496 mm
+#                 b2h_value : 0.496 mm
+#                 b2y_value : 9.551 mm
+#                 b2z_value : 16.502 mm
+#                  b3_value : 0.90 0.90 mm
+#                 b3b_value : 0.900 mm
+#                 b3h_value : 0.898 mm
+#                 b3y_value : 4.702 mm
+#                 b3z_value : 12.049 mm
+#                bspy_value : -1.698 mm
+#                bspz_value : -12.200 mm
+#                bssy_value : -100.000 mm
+#         detdistance_value : 1731 mm
+#         detectube01_value : up
+#         detectube02_value : up
+#         detectube03_value : down
+#         detectube04_value : down
+#                detz_value : 40.000 mm
+#              dofchi_value : 0.000 rev
+#               dofom_value : 0.000 rev
+#         gen_current_value : 2.860 mA
+#         gen_voltage_value : 69.790 kV
+#            interval_value : 48.000 h
+#        ionichamber1_value : 30.000 cps
+#    ionichamber1_int_value : 4756973 counts
+#    ionichamber1_off_value : 0.000 cps
+#        ionichamber2_value : -16.000 cps
+#    ionichamber2_int_value : 590311 counts
+#    ionichamber2_off_value : 0.000 cps
+#                pchi_value : -0.850 deg
+#           pindiode1_value : 14.000 cps
+#       pindiode1_int_value : 8400 counts
+#      pindiode1_move_value : out
+#       pindiode1_off_value : 0.000 cps
+#         pindiodecal_value : -1.000 cps
+#     pindiodecal_int_value : -600 counts
+#     pindiodecal_off_value : 0.000 cps
+#      pindiodesample_value : 10.000 cps
+#  pindiodesample_int_value : 7374 counts
+# pindiodesample_move_value : out
+#  pindiodesample_off_value : 0.000 cps
+#            pintimer_value : 0 s
+#                 pom_value : 0.000 deg
+#               prefz_value : 157.500 mm
+#              pump02_value : 0
+#              pump03_value : 0
+#                  py_value : 0.750 mm
+#                  pz_value : 20.000 mm
+#                roby_value : 0.000 mm
+#                robz_value : 17.500 mm
+#                 roy_value : 575.0 steps
+#                 roz_value : -960.0 steps
+#             shutter_value : close
+#               Space_value : 1606.691 GiB
+#             spotpos_value : 0.000 um
+#           stigmator_value : 133.339 mA
+#                time_value : 7.269 h
+#            tubecond_value : GREEN
+#              uptime_value : 296.321 h
+#              vacuum_value : 7.33e-08 mbar
+#         vacuumtube1_value : 0.140 mbar
+#         vacuumtube2_value : 0.068 mbar
+#         vacuumtube3_value : 0.068 mbar
+#           vavalve01_value : open
+#           vavalve02_value : open
+#           vavalve03_value : open
+#           vavalve04_value : close
+#           vavalve05_value : open
+#           vavalve06_value : open
+#           vevalve01_value : close
+#           vevalve02_value : close
+#           vevalve03_value : close
+### Scan data
+# etime	;	pilatus	ionichamber1_int	ionichamber2_int	   pindiode1_int	 pindiodecal_int	pindiodesample_int
+# s	;	-	                 counts	                 counts	                 counts	                 counts	                 counts
+120.3	;	DresenDisch_DD175_28_18145.1.tif	           9527361	           1185802	             16800	             -1200	             14559
+### End of NICOS data file DresenDisch_DD175_28_18145.dat
