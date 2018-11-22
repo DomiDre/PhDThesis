@@ -46,7 +46,7 @@ def get_clean_data(data):
 data = MultiData(XyemData)
 data.loadFromFile(fit_file)
 q, I, sI, Imodel = get_clean_data(data)
-print(data.chi2)
+# print(data.chi2)
 #load sld
 sldData = MultiData(XyData)
 sldData.loadFromFile(sld_file)

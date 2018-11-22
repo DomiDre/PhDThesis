@@ -39,7 +39,8 @@ def rescale_file_M(datafile, outfile):
   langevinScale.rescale_with_factor(rescale_factor)
   langevinScale.save(outfile)
 
-rescale_file_T('../rawdata/DD172_6_ZFCw_100OE.DAT', f'{samplename}_ZFC_LangevinSAXSscaled.xye')
-rescale_file_T('../rawdata/DD172_6_FCW_100OE.DAT', f'{samplename}_FCw_LangevinSAXSscaled.xye')
-rescale_file_M('../rawdata/DD172_6_HYST_300K.DAT', f'{samplename}_300K_LangevinSAXSscaled.xye')
-rescale_file_M('../rawdata/DD172_6_HYST_10K.DAT', f'{samplename}_10K_LangevinSAXSscaled.xye')
+# rescale_file_T('../rawdata/DD172_6_ZFCw_100OE.DAT', f'{samplename}_ZFC_LangevinSAXSscaled.xye')
+# rescale_file_T('../rawdata/DD172_6_FCW_100OE.DAT', f'{samplename}_FCw_LangevinSAXSscaled.xye')
+# rescale_file_M('../rawdata/DD172_6_HYST_300K.DAT', f'{samplename}_300K_LangevinSAXSscaled.xye')
+# rescale_file_M('../rawdata/DD172_6_HYST_10K.DAT', f'{samplename}_10K_LangevinSAXSscaled.xye')
+rescale_file_M('../rawdata/DD172_6_HYST_10K_FC_1T.DAT', f'{samplename}_10K_FC1T_LangevinSAXSscaled.xye')

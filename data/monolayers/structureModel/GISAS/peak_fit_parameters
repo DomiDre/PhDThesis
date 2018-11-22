@@ -1,0 +1,23 @@
+#Fitting first order peak of GISAXS data
+#Date of execution: 2018-11-22 16:41:54.709961
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/structureModel/GISAS/GISAXS/DD175_28.h5
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 25
+    # data points      = 13
+    # variables        = 3
+    chi-square         = 149.767503
+    reduced chi-square = 14.9767503
+    Akaike info crit   = 37.7737518
+    Bayesian info crit = 39.4685999
+[[Variables]]
+    A:    6.3060e-05 +/- 1.5330e-06 (2.43%) (init = 0.000128)
+    mu:   0.47336759 +/- 5.7396e-04 (0.12%) (init = 0.4726)
+    sig:  0.05334303 +/- 0.00240176 (4.50%) (init = 0.05)
+    c:    2e-07 (fixed)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(A, sig)  = -0.765
+    C(mu, sig) =  0.102
+a = 13.27337465361962 +/- 0.016093946853581405
+BeamWidthCorrectedSig = 0.04965106623664998 +/- 0.0025949491254226146
+d_coh = 795.1172169433978 +/- 41.555778820167916
