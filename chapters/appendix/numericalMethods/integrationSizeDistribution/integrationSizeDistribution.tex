@@ -2,41 +2,45 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 
 \begin{document}
-\section{Numerical Evaluation of Size Distributions}\label{ch:appendix:numericalMethods:sizeDistributions}
-Even with the most of efforts it is yet unavoidable to have a certain size distribution in every batch of nanoparticles in the range of $5 - 15 \%$.
-Therefore, a very common part in every presented model of this thesis are integral containing gaussian or lognormal distribution function to phenomenologically represent the spread in size. Where the gaussian function can be reasoned with by the central limit theorem, the lognormal distribution is used to further implement the bound of having only non-negative parameter values.
+  \section{Numerical Evaluation of Size Distributions}\label{ch:appendix:numericalMethods:sizeDistributions}
+    Even with the most of efforts it is yet unavoidable to have a certain size distribution in every batch of nanoparticles, which is for good cases in the range of $5 - 15 \%$.
+    Therefore, a very common part in every presented model of this thesis are integrals containing gaussian or lognormal  distribution functions to phenomenologically represent the spread in size.
+    Where the gaussian function can be reasoned with by the central limit theorem, the lognormal distribution is used to further implement the bound of having only non-negative parameter values.
 
-Both integrals can be treated as the same problem after a variable substitution. 
-The gaussian size distribution integral
-\begin{align}
-\bar{f}(\mu) \eq \int_{-\infty}^\infty f(x) \frac{1}{\sqrt{2\pi} \sigma} \exp \Bigg[- \frac{1}{2} \bigg(\frac{x-\mu}{\sigma}\bigg)^2 \Bigg] \dint x,
-\end{align}
-transforms via $x \eq \mu + \sqrt{2} t \sigma$ like the lognormal size-distribution integral
-\begin{align}
-\bar{f}(\mu) \eq \int_{0}^\infty f(x) \frac{1}{\sqrt{2\pi} \sigma x} \exp \Bigg[- \frac{1}{2} \bigg(\frac{\log(x)-\log(\mu)}{\sigma}\bigg)^2 \Bigg] \dint x
-\end{align}
-by $x \eq \mu \exp(\sqrt{2} t \sigma)$ to
+    Both integrals can be treated as the same problem after a variable substitution.
+    The gaussian size distribution integral
+    \begin{align}
+    \bar{f}(\mu,\, \sigma) \eq \int_{-\infty}^\infty f(x) \frac{1}{\sqrt{2\pi} \sigma} \exp \Bigg[- \frac{1}{2} \bigg(\frac{x-\mu}{\sigma}\bigg)^2 \Bigg] \dint x,
+    \end{align}
+    transforms via $x \eq \mu + \sqrt{2} t \sigma$ like the lognormal size-distribution integral
+    \begin{align}
+    \bar{f}(\mu,\, \sigma) \eq \int_{0}^\infty f(x) \frac{1}{\sqrt{2\pi} \sigma x} \exp \Bigg[- \frac{1}{2} \bigg(\frac{\log(x)-\log(\mu)}{\sigma}\bigg)^2 \Bigg] \dint x
+    \end{align}
+    via $x \eq \mu \exp(\sqrt{2} t \sigma)$ to
 
-\begin{align}
-\bar{f}(\mu) \eq \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty f(t) \exp \big(- t^2 \big) \dint t.
-\end{align}
+    \begin{align}
+    \bar{f}(\mu,\,\sigma) \eq \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty f(t) \exp \big(- t^2 \big) \dint t.
+    \end{align}
 
-When this function can not be solved analytically and the computation efficiency is of importance, this type of integral is best solved by applying Gauss-Hermite quadrature. Here, the integral is approximated by
-\begin{align}
-\int_{-\infty}^\infty f(t) \exp \big(- t^2 \big) \dint t \approx \sum_{i=1}^{n} w_i f(t_i),
-\end{align}
-where $t_{i}$ are the roots of the $n-\mathrm{th}$ Hermite polynomial defined by
-\begin{align}
-H_n (x) \eq \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k}
-\end{align}
-and the weights $w_{i}$ are calculated by
-\begin{align}
-w_i \eq \frac{2^{n-1} n! \sqrt{\pi}}{n^2 [H_{n-1}(t_i)]^2}.
-\end{align}
-The order $n$ determines how many function calls are evaluated to estimate the integral. 
-In general both roots and the weights are tabulated for various orders of $n$ and it is straight forward to evaluate integrals by Gauss-Hermite quadrature. 
+    When this function can not be solved analytically and computational efficiency is of importance, this type of integral is best solved by applying a Gauss-Hermite quadrature.
+    Here, the integral is approximated by
+    \begin{align}
+    \int_{-\infty}^\infty f(t) \exp \big(- t^2 \big) \dint t \approx \sum_{i=1}^{n} w_i f(t_i),
+    \end{align}
+    which solves the integral exactly if $f(t)$ is given by a polynomial of order $2n-1$ or less \cite{Olver_2010_Handb}.
 
-A Gauss-Hermite quadrature of order $n$ gives the exact result when f(t) is a polynomial of degree $2n-1$ or less.
-For a typical form factor of a nanoparticle with an extent of $a \eq 10 \unit{nm}$ and a size distribution of $\sigma \eq 10 \unit{\%}$, a Gauss-Hermite quadrature of order $n=10$ is already sufficient to evaluate the integral correctly up to the fourth order maximum of the formfactor.
-For higher order maxima, or larger size distributions higher order Gauss-Quadratures in the order of $n\eq50$ should be used to ensure convergence.
+    In the Gauss-Hermite quadrature, the $t_{i}$ are the roots of the $n-\mathrm{th}$ Hermite polynomial defined by
+    \begin{align}
+    H_n (x) \eq \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k}
+    \end{align}
+    and the weights $w_{i}$ are calculated by
+    \begin{align}
+    w_i \eq \frac{2^{n-1} n! \sqrt{\pi}}{n^2 [H_{n-1}(t_i)]^2}.
+    \end{align}
+    The order $n$ of the quadrature determines how many function calls are evaluated to estimate the integral.
+    Either both, the roots and the weights, are found tabulated in literature or it is straight forward to use public packages such as NumPy to obtain them for up to an order of $100$ \cite{Oliphant_2006_Guide} within fractions of a second.
+
+    For a typical form factor of a nanoparticle with an extent of $a \eq 10 \unit{nm}$ and a size distribution of $\sigma \eq 10 \unit{\%}$, a Gauss-Hermite quadrature of order $n=10$ is already sufficient to evaluate the integral correctly up to the fourth order maximum of the formfactor.
+    If even higher order peaks of the formfactor are of interest, or if larger size distributions are involved, higher order quadrature rules in the order of magnitude $n\eq50$ should be used to ensure convergence.
+    It should nonetheless always be checked for convergence by comparing the obtained result with a higher order quadrature rule to confirm that that the numerical error is below a tolerance limit.
 \end{document}
