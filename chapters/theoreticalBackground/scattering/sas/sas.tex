@@ -36,9 +36,11 @@
     \end{align}
     can then be evaluated in the Born approximation by inserting the scattering length density in \refeq{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionBornApproximation}
     \begin{align}
-      \frac{\dint \Sigma}{\dint \Omega}
-      \eq& \frac{1}{V} \bigg| \int_V \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} \rho (\vec{r}^\prime) \bigg|^2 \\
-      \eq& \frac{1}{V} \bigg| \int_{V} \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} \biggl( s * \Delta \rho_{p}) \biggr) (\vec{r}^\prime) + \underbrace{\int_{V} \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} \rho_s }_{(2 \pi)^3 \delta(\vec{q}) \rho_s} \bigg|^2.
+      \begin{split}
+        \frac{\dint \Sigma}{\dint \Omega}
+        \eq& \frac{1}{V} \bigg| \int_V \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} \rho (\vec{r}^\prime) \bigg|^2 \\
+        \eq& \frac{1}{V} \bigg| \int_{V} \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} \biggl( s * \Delta \rho_{p}) \biggr) (\vec{r}^\prime) + \underbrace{\int_{V} \dint \vec{r}^\prime e^{-i\vec{q} \cdot \vec{r}^\prime} \rho_s }_{(2 \pi)^3 \delta(\vec{q}) \rho_s} \bigg|^2.
+      \end{split}
     \end{align}
     The integral over the constant solvent scattering length density is evaluated to zero for $\vec{q} \neq 0$.
     The case of $\vec{q} \eq 0$ corresponds to forward scattering, which is not studied in small-angle scattering as the direct beam is in most experiments blocked to protect the detector.
@@ -59,10 +61,12 @@
     The structure factor in \refeq{eq:theoreticalBackground:scattering:scatteringTheory:sasParticlesformStructureFactor} modulates the scattering due to the relative positions of the ensemble of individual nanoparticles.
     It is normalized to the number of particles $N$ for proper scaling behaviour and can generally be further discussed by inserting the definition of the function $s(\vec{r})$
     \begin{align}
-      S(\vec{q}) &\eq \frac{1}{N} \bigg| \sum_j  e^{-i\vec{q} \cdot \vec{r}_j} \bigg|^2\\
-      &\eq \frac{1}{N}  \bigg( \sum_j  e^{-i\vec{q} \cdot \vec{r}_j} \bigg) \bigg( \sum_k  e^{i k\vec{q} \cdot \vec{r}_k} \bigg)\\
-      &\eq \frac{1}{N}  \sum_{j, k}  e^{-i\vec{q} \cdot (\vec{r}_j - \vec{r}_k) }\\
-      &\eq 1 + \frac{1}{N}  \sum_{j \neq k}  e^{-i\vec{q} \cdot (\vec{r}_j - \vec{r}_k)},\label{eq:theoreticalBackground:scattering:scatteringTheory:structureFactor}
+      \begin{split}
+        S(\vec{q}) &\eq \frac{1}{N} \bigg| \sum_j  e^{-i\vec{q} \cdot \vec{r}_j} \bigg|^2\\
+        &\eq \frac{1}{N}  \bigg( \sum_j  e^{-i\vec{q} \cdot \vec{r}_j} \bigg) \bigg( \sum_k  e^{i k\vec{q} \cdot \vec{r}_k} \bigg)\\
+        &\eq \frac{1}{N}  \sum_{j, k}  e^{-i\vec{q} \cdot (\vec{r}_j - \vec{r}_k) }\\
+        &\eq 1 + \frac{1}{N}  \sum_{j \neq k}  e^{-i\vec{q} \cdot (\vec{r}_j - \vec{r}_k)},\label{eq:theoreticalBackground:scattering:scatteringTheory:structureFactor}
+      \end{split}
     \end{align}
     where in the last step the sum over all indices, where $j=k$, was performed.
     At this point, specific models of the relative nanoparticle positions needs to be looked at for further discussion.
@@ -77,11 +81,13 @@
     For a form factor, the simplest to solve model of a nanoparticle is that of a sphere due to it's high symmetry.
     The scattering length density is then just a constant within the volume of the sphere and the form factor $P_\mathrm{sph}$ can be solved analytically to
     \begin{align}
-      P_\mathrm{sph} (\vec{q})
-      \eq & \bigg|\int_{V_{p}} \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} (\rho_p - \rho_s) \bigg|^2 \\
-      \eq & \bigg|(\rho_p - \rho_s) \int_0^R \dint r \int_0^{2 \pi} \dint \phi \int_0^\pi \dint \theta r^2 \sin(\theta) e^{-i q r \cos(\theta)}  \bigg|^2 \\
-      \eq &  \bigg| 4\pi R^3 (\rho_p - \rho_s) \frac{\sin(qR) - qR\cos(qR)}{(qR)^3}  \bigg|^2\\
-      \eq & V_\mathrm{sph}^2 (\rho_p - \rho_s)^2 \bigg|3 \frac{\sin(qR) - qR\cos(qR)}{(qR)^3}  \bigg|^2,
+      \begin{split}
+        P_\mathrm{sph} (\vec{q})
+        \eq & \bigg|\int_{V_{p}} \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} (\rho_p - \rho_s) \bigg|^2 \\
+        \eq & \bigg|(\rho_p - \rho_s) \int_0^R \dint r \int_0^{2 \pi} \dint \phi \int_0^\pi \dint \theta r^2 \sin(\theta) e^{-i q r \cos(\theta)}  \bigg|^2 \\
+        \eq &  \bigg| 4\pi R^3 (\rho_p - \rho_s) \frac{\sin(qR) - qR\cos(qR)}{(qR)^3}  \bigg|^2\\
+        \eq & V_\mathrm{sph}^2 (\rho_p - \rho_s)^2 \bigg|3 \frac{\sin(qR) - qR\cos(qR)}{(qR)^3}  \bigg|^2,
+      \end{split}
     \end{align}
     where $V_\mathrm{sph}$ is the volume of the sphere.
     Thus, the macroscopic differential cross section for diluted nanospheres in a solvent is
