@@ -2,62 +2,84 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 \renewcommand{\thisPath}{\main/chapters/theoreticalBackground/scattering/reflectometry}
 \begin{document}
-  \subsection{Reflectometry}\label{sec:theoreticalBackground:scattering:reflectometry}
-    Nanoparticles that are deposited on a substrate self-assemble to higher order structures under certain conditions that are elaborated in later chapters of this work.
-    It is of high interest to study the physical properties of the ensemble and whether they differ from the single particle properties and how this depends on the superstructure.
-    A technique to study the vertical structure of a thin sample on a substrate is reflectometry.
-    X-ray reflectometry allows to study the average electron density in a sample with depth resolution, whereas neutron reflectometry allows to study the nuclear structure.
-    Additionally, polarized neutron reflectometry allows to resolve the magnetic density with depth resolution.
-    The general technique is described in the following in the frame of the study of nanoparticles on a substrate, as it is applied in later parts of this thesis.
+  \subsection{Reflectometry}
+    \label{sec:theoreticalBackground:scattering:reflectometry}
     \label{ch:appendix:numericalMethods:parrat}
-    Parrats algorithm is a fast algorithm to calculate the specular reflectivity for a given model of a thin film.
-    We present a short, intuitive derivation, which should help to understand its logic. The problem in x-ray and neutron reflectometry is essentially to solving the 1-dim.
-    Schr\"odinger equation for a locally varying potential
-    \begin{equation}
-    H \eq \frac{\hbar^2 k^2}{2m_n} + \left<V(z)\right>,
-    \end{equation}
-    with
-    \begin{equation}
-    \left<V(z)\right> \, = \, 4\pi \frac{\hbar^2}{2 m_n} \mathrm{SLD}(z).
-    \end{equation}
-    $\left<V(z)\right> $ is given by the lateral averaged scattering length of the scattering nuclei in the studied thin film at height $z$. The film is considered to be semi-infinite, where for $z \rightarrow -\infty$, the SLD takes the value of the substrate. 
-
-    Parrats algorithm can be derived from the scattering matrix formalism, where the scattering matrix describes for a given system, how incoming amplitudes of basis states transform to the outgoing amplitudes
-    \begin{equation}
-    \begin{pmatrix}\psi_\mathrm{left}^\mathrm{out}\\\psi_\mathrm{right}^\mathrm{out}\end{pmatrix} \, = \, S \begin{pmatrix}\psi_\mathrm{left}^\mathrm{in}\\\psi_\mathrm{right}^\mathrm{in}\end{pmatrix}.
-    \end{equation}
-    The structure of the $S$-matrix is given by the reflectivity and transmission amplitudes
-    \begin{equation}
-    S \, = \, \begin{pmatrix}
-    r& t^\prime\\
-    t& r^\prime
-    \end{pmatrix},
-    \end{equation}
-    where the amplitudes quantify the proportions of the incoming states changing into the outgoing states
-    for basis states normalized to their flux, the $S$-matrix is unitary and calculations are numerically stable (in strong contrast to transfer matrix calculations, which diverge numerically for large systems)
-    in the $S$-matrix formalism, systems can be separated and the $S$-matrix of the separated system can be calculated individually. Separate $S$-matrices $S_1, \, S_2$ can be merged to a single $S$-matrix in the end via the composition formulas
+    % Nanoparticles that are deposited on a substrate self-assemble to higher order structures under certain conditions that are elaborated in later chapters of this work.
+    % It is of high interest to study the physical properties of the ensemble and whether they differ from the single particle properties and how this depends on the superstructure.
+    A technique to study the vertical structure of a thin sample on a substrate is reflectometry.
+    Here, the scattered intensity is measured under specular condition, whereby the scattering vector is parallel to the $\mathit{z}$-axis.
+    In the previously discussed Born approximation of \refeq{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionIntegralOverPotential}, this has the effect that the integral over the scattering potential reduces to a one dimensional problem
     \begin{align}
-    r &= r_1 + t_1^{\prime} r_2 \left( 1-r_1^{\prime} r_2 \right)^{-1} t_1, \\
-    t &= t_2\left( 1-r_1^{\prime} r_2 \right)^{-1} t_1, \\
-    t^{\prime} &= t_1^{\prime} \left( 1- r_2 r_1^{\prime} \right)^{-1} t_2^{\prime}, \\
-    r^{\prime} &= r_2^{\prime} + t_2 r_1^{\prime} \left( 1-r_2 r_1^{\prime} \right)^{-1} t_2^{\prime},
+      \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} V (\vec{r}) \eq \int \dint z e^{-i q_z z} \bar{V} (z),
     \end{align}
-    which basically represent Feynman paths summing over all possible reflections and transmissions.
-    Parrats algorithm basically takes the first formula for the reflection amplitude $r$ of the composition rules and simplifies the given system to subsequent step potentials, for which each individual scattering matrix is given by Fresnel's formula
-    \begin{equation}
-    S_\mathrm{Fresnel} \, = \, \frac{1}{k_1+k_2} \begin{pmatrix}
-    k_1-k_2& 2 \sqrt{k_1 k_2}\\
-    2 \sqrt{k_1 k_2} & k_2 - k_1
-    \end{pmatrix},
-    \end{equation}
-    with $k_i$ the wave vector on the individual side of the step potential, evaluated by $\hbar k\,=\,\sqrt{2m(E-V_i)}$.
-    The translation across a constant potential of width $a$ is given by the scattering matrix 
-    \begin{equation}
-    S_\mathrm{Translation} \, = \, \begin{pmatrix}
-    0 & e^{-\imag k a}\\
-    e^{-\imag k a} & 0
-    \end{pmatrix}.
-    \end{equation}
-    Parrats algorithm does not allow to reuse results obtained for periodic parts in a system as the calculated reflection amplitude is only one fourth of the scattering matrix. However if one includes in the algorithm the calculation of the complete $2\times2$ $S$-matrix, one can greatly decrease the calculation time needed for large and periodic systems (one pays the price of calculating four times the amount needed for the reflection amplitude, but on the other hand only needs to calculate the scattering matrix of a periodic part once)
-    however as increasing roughness across a layer system might destroy any periodicity it remains questionable if this algorithm enhancement is of use in any real life application
+    where $\bar{V}$ is the laterally integrated potential
+    \begin{align}
+      \bar{V}(z) \eq \int \dint x \int \dint y V(\vec{r}).
+    \end{align}
+    This motivates to discuss reflectometry as a one dimensional problem, where the sample is completely modeled by the laterally averaged scattering potential with respect to the vertical axis.
+    And indeed, the scattering problem can be even solved exactly beyond Born approximation numerically efficient by Parratt's algorithm, which is discussed in the following.
+
+    We present Parratt's algorithm starting from the Schr\"odinger equation for neutrons, where the analogue derivation can be performed for X-rays from Maxwell's equations.
+    The Hamiltonian of the one dimensional Schr\"odinger equation for a neutron in a locally varying potential is given by
+    \begin{align}
+      H \eq \frac{\hbar^2 k^2}{2m_n} + \bar{V}(z),
+    \end{align}
+    with
+    \begin{align}
+      \bar{V}(z) \, = \, \frac{2 \pi \hbar^2}{m_n} \mathrm{SLD}(z),
+    \end{align}
+    where $\mathrm{SLD}(z)$ is the laterally averaged SLD of the scattering nuclei in the studied thin film at height $z$.
+    The sample is considered to be semi-infinite, meaning for $z \rightarrow -\infty$ the SLD has the value of the substrate and it vanishes at a finite height $z > z_0$.
+    Using that the energy is given by the momentum of the incoming neutron $k_\mathrm{in}$ outside the material for elastic scattering, the Schr\"odinger equation writes as an equation that determined the momentum of the neutron at height $z$
+    \begin{align}
+      k^2 \eq   k_\mathrm{in}^2 - 4 \pi  \mathrm{SLD}(z).
+    \end{align}
+
+    For numerical treatment, the potential is  discretized to a slab model, where each slab has a thickness $d_i$, a scattering length density $\mathrm{SLD}_i$ and a surface roughness $\sigma_{i,i+1}$ as parameter.
+    Parrat's algorithm essentially steps iteratively from the substrate of the sample up to the surface and calculates the total reflectivity amplitude by summing the contribution of all paths the neutron can take to reflect.
+
+    Starting at a model that only consist of a substrate, the problem is equivalent to that of the introductory quantum mechanics problem of a step potential, where the amplitudes for reflection and transmission between two layers with wave vector $k_i$ and $k_j$ are derived as the Fresnel equations
+    \begin{align}
+      r_{ij} \eq \frac{k_i - k_j}{k_i+k_j},\\
+      t_{ij} \eq \frac{2 \sqrt{k_i k_j}}{k_i+k_j},
+    \end{align}
+    where the indices mean that the neutron is incoming from layer $i$ and reflects on/transmits to layer $j$.
+    When a layer is added on top of the substrate, the path of the neutron is now either to reflect directly at the layer surface with $r_{21}$ or it can transmit into the sample and take one of the many other possible paths as depicted in \reffig{fig:theoreticalBackground:scattering:reflectometry:parratt}, which can include multiple transmissions and reflections before it exits the sample and contributes to the total reflection amplitude.
+    \begin{figure}
+      \centering
+      \includegraphics{scatteringTheory_parrattsAlgorithm}
+      \caption{\label{fig:theoreticalBackground:scattering:reflectometry:parratt}Depiction of Parratt's algorithm: Starting from a the substrate, all possible paths that contribute to the reflectometry are summed iteratively, where the reflictivity of  to obtain the reflectivity of the slab model.}
+    \end{figure}
+    When adding all possible paths, for each distance the neutron travels within the material, a picked up phase $e^{i k_i d_i}$ has to be considered.
+    The sum of all paths can then be summed as geometric sum, as can be seen by
+    \begin{align}
+      \begin{split}
+        r &\eq r_{21} + t_{21} r_{10} t_{12} e^{2 i k_1 d_1} + t_{21} r_{10} r_{12} r_{10} t_{12} e^{4 i k_1 d_1} + \ldots\\
+        &\eq r_{21} + t_{21} t_{12} r_{10} e^{2 i k_1 d_1} \sum_{n\eq0}^\infty \biggl(r_{12} r_{10} e^{2 i k_1 d_1}\biggr)^n\\
+        &\eq r_{21} + \frac{t_{21} t_{12} r_{10} e^{2 i k_1 d_1}} {1 - r_{12} r_{10} e^{2 i k_1 d_1}}\\
+        &\eq \frac{r_{21} + r_{10} e^{2 i k_1 d_1}} {1 + r_{21} r_{10} e^{2 i k_1 d_1}},
+      \end{split}
+    \end{align}
+    where in the last step it is used that $r_{ij} \eq -r_{ji}$, $t_{ij} \eq t_{ji}$ and $r_{ij}^2 + t_{ij}^2 \eq 1$.
+    This reflection amplitude contains all possible path the neutron can take once transmit into layer $1$ to return to layer $2$.
+    When another layer is added on top, the problem therefore repeats itself, when this reflection amplitude is used instead of the substrate reflection amplitude.
+
+    Thus, Parratt's formula consist of iteratively applying the formula
+    \begin{align}
+      r_{i} \eq \frac{r_{i+1,i} + r_{i-1} e^{2 i k_i d_i}} {1 + r_{i+1,i} r_{i-1} e^{2 i k_i d_i}},
+    \end{align}
+    where $r_0$ is given for the substrate by the Fresnel equation as $r_{10}$.
+    To include the surface roughness of the layers, the reflectometry amplitude of the Fresnel equation is modified by the Névot-Croce factor \cite{Nevot_1980_Carac}
+    \begin{align}
+      r_{ij} \eq \frac{k_i - k_j}{k_i+k_j} e^{-2 k_i k_j \sigma_i^2},\\
+    \end{align}
+    which can be shown to be equivalent to replacing the sharp step between two layers by a smooth error function of width $\sigma$ \cite{Tolan_1999_XRaySc}.
+    Thereby, the roughness parameter in the Névot-Croce factor effectively models the interface by an ensemble of Gaussian distributed smooth surfaces around the mean value.
+
+    After the reflectivity amplitude is calculated, the reflictivity of the model is given by the square of the absolute value $R \eq |r|^2$.
+    By measuring the reflectivity over a $q$ range that is adequate for the length scales in the sample, the comparison of the data with models allows to deduce on the structure of the sample.
+    The experimental techniques and details to obtain reflectivity curves for X-rays and neutrons is described in the section for experimental methods in \refapp{app:methods:xrr} and \refapp{app:methods:nr}, respectively.
+    X-ray reflectometry allows to study the average electron density in a sample with depth resolution, whereas neutron reflectometry allows to probe the nuclear structure.
+    Additionally, polarized neutron reflectometry (PNR) allows in principle to resolve the magnetic density with depth resolution.
 \end{document}
