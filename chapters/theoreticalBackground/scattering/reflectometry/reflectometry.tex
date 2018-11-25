@@ -20,10 +20,10 @@
     This motivates to discuss reflectometry as a one dimensional problem, where the sample is completely modeled by the laterally averaged scattering potential with respect to the vertical axis.
     And indeed, the scattering problem can be even solved exactly beyond Born approximation numerically efficient by Parratt's algorithm, which is discussed in the following.
 
-    We present Parratt's algorithm starting from the Schr\"odinger equation for neutrons, where the analogue derivation can be performed for X-rays from Maxwell's equations.
+    We present Parratt's algorithm starting from the Schr\"odinger equation for neutrons, where the analogue derivation can be performed for X-rays from Maxwell's equations \cite{Daillant_1999_Xraya}.
     The Hamiltonian of the one dimensional Schr\"odinger equation for a neutron in a locally varying potential is given by
     \begin{align}
-      H \eq \frac{\hbar^2 k^2}{2m_n} + \bar{V}(z),
+      H \eq \frac{\hbar^2 k_z^2}{2m_n} + \bar{V}(z),
     \end{align}
     with
     \begin{align}
@@ -31,12 +31,23 @@
     \end{align}
     where $\mathrm{SLD}(z)$ is the laterally averaged SLD of the scattering nuclei in the studied thin film at height $z$.
     The sample is considered to be semi-infinite, meaning for $z \rightarrow -\infty$ the SLD has the value of the substrate and it vanishes at a finite height $z > z_0$.
-    Using that the energy is given by the momentum of the incoming neutron $k_\mathrm{in}$ outside the material for elastic scattering, the Schr\"odinger equation writes as an equation that determined the momentum of the neutron at height $z$
-    \begin{align}
-      k^2 \eq   k_\mathrm{in}^2 - 4 \pi  \mathrm{SLD}(z).
-    \end{align}
+    The surface of the substrate is set to $z \eq 0$ in this discussion.
 
-    For numerical treatment, the potential is  discretized to a slab model, where each slab has a thickness $d_i$, a scattering length density $\mathrm{SLD}_i$ and a surface roughness $\sigma_{i,i+1}$ as parameter.
+    Using that the energy is given by the wave vector of the incoming neutron $k_{z,\,\mathrm{in}}$ outside the material for elastic scattering, the Schr\"odinger equation writes as an equation that determines the wave vector of the neutron inside the sample at height $z$
+    \begin{align}
+      k_z^2 \eq   k_{z,\,\mathrm{in}}^2 - 4 \pi  \mathrm{SLD}(z).
+    \end{align}
+    $k_{z,\,\mathrm{in}}$ relates to the scattering vector magnitude in reflectometry geometry by the simple relation $q \eq 2 k_{z,\,\mathrm{in}}$.
+    Thus by variation of $q$, the length scales of the wave vectors are tuned for the given SLD.
+    For small $q$ the wave vector inside the medium becomes purely imaginary, which is the case for
+    \begin{align}
+      q_c \, < \, \sqrt{16 \pi \mathrm{SLD}},
+    \end{align}
+    and total external reflection occurs.
+    Below this scattering vector all neutrons are reflected and a plateau is observed.
+    Above this critical value, the reflectivity decreases rapidly, where the course of the curve allows to deduce on the internal structure of the sample.
+
+    For numerical determination of the reflectivity, any potential can be discretized to a slab model, where each slab has a thickness $d_i$, a scattering length density $\mathrm{SLD}_i$ and a surface roughness $\sigma_{i,i+1}$ as parameter.
     Parrat's algorithm essentially steps iteratively from the substrate of the sample up to the surface and calculates the total reflectivity amplitude by summing the contribution of all paths the neutron can take to reflect.
 
     Starting at a model that only consist of a substrate, the problem is equivalent to that of the introductory quantum mechanics problem of a step potential, where the amplitudes for reflection and transmission between two layers with wave vector $k_i$ and $k_j$ are derived as the Fresnel equations
