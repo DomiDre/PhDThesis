@@ -1,0 +1,321 @@
+### NICOS data file, created at 2017-12-06 10:51:06
+#                    number : 25665
+#                  filename : Zaktuna_LSDD_FEP_25665.dat
+#                  filepath : /home/jcns/data/2017/P284_Zakutna/data/Zaktuna_LSDD_FEP_25665.dat
+#                      info : timescan(1, t=600)
+### Experiment information
+#                 Exp_users : Zaktuna
+#          Exp_localcontact : m.smik@fz-juelich.de
+#                 Exp_title : SAXS on NP-dispersions
+#              Exp_proposal : P284_Zakutna
+#                Exp_remark : 
+### Sample and alignment
+#         Sample_samplename : LSDD_FEP
+### Instrument setup
+#         galaxi_instrument : GALAXI
+#           galaxi_facility : FZ-Juelich
+#                galaxi_doi : http://dx.doi.org/10.17815/jlsrf-2-109
+#        galaxi_responsible : Ulrich Ruecker <u.ruecker@fz-juelich.de>
+#          galaxi_operators : ()
+#            galaxi_website : http://www.mlz-garching.de
+### Offsets
+#               detz_offset : 0.000 mm
+#                b3y_offset : 0.000 mm
+#                b1h_offset : 0.000 mm
+#               bssy_offset : 0.000 mm
+#                roz_offset : 0.000 steps
+#                b2y_offset : 0.000 mm
+#               robz_offset : 0.000 mm
+#               bspz_offset : 0.000 mm
+#               roby_offset : 0.000 mm
+#               bspy_offset : 0.000 mm
+#                pom_offset : 0.000 deg
+#                b2b_offset : 0.000 mm
+#                b2z_offset : 0.000 mm
+#                b3z_offset : 0.000 mm
+#                 py_offset : 0.000 mm
+#                b1y_offset : 0.000 mm
+#              prefz_offset : 0.000 mm
+#               pchi_offset : 0.000 deg
+#             dofchi_offset : 0.000 rev
+#              dofom_offset : 0.000 rev
+#                b3b_offset : 0.000 mm
+#                roy_offset : 0.000 steps
+#                b3h_offset : 0.000 mm
+#                b1z_offset : 0.000 mm
+#                b1b_offset : 0.000 mm
+#                 pz_offset : 0.000 mm
+#                b2h_offset : 0.000 mm
+### Limits
+#            roz_userlimits : (-5000.000, 5000.000) steps
+#    gen_voltage_userlimits : (0.000, 9999.000) kV
+#            b1h_userlimits : (0.100, 6.700) mm
+#           pchi_userlimits : (-9.500, 9.500) deg
+#            b2y_userlimits : (5.900, 15.500) mm
+#  pindiode1_off_userlimits : (-27648.000, 27648.000) cps
+#            roy_userlimits : (-5000.000, 5000.000) steps
+#            b2b_userlimits : (0.160, 7.200) mm
+#            b3h_userlimits : (0.300, 6.200) mm
+#            b1b_userlimits : (0.100, 7.500) mm
+#            b2h_userlimits : (0.160, 7.500) mm
+#           bspz_userlimits : (-133.000, 118.000) mm
+#           bssy_userlimits : (-117.000, 109.000) mm
+#          dofom_userlimits : (-50.000, 50.000) rev
+#       absorber_userlimits : (1.000, inf)
+#             pz_userlimits : (-15.200, 41.200) mm
+#            b3b_userlimits : (0.250, 6.400) mm
+#             py_userlimits : (-9.100, 14.300) mm
+# ionichamber1_off_userlimits : (-27648.000, 27648.000) cps
+#           detz_userlimits : (1.000, 104.000) mm
+#         dofchi_userlimits : (-50.000, 50.000) rev
+#           bspy_userlimits : (-80.000, 122.000) mm
+#            b1y_userlimits : (16.200, 24.800) mm
+#    gen_current_userlimits : (0.000, 9999.000) mA
+#            b1z_userlimits : (7.800, 16.400) mm
+#       pintimer_userlimits : (0, 25000) s
+# pindiodesample_off_userlimits : (-27648.000, 27648.000) cps
+#            b3y_userlimits : (0.100, 9.000) mm
+#           roby_userlimits : (0.500, 27.200) mm
+#            pom_userlimits : (-190.000, 280.000) deg
+#           robz_userlimits : (0.500, 27.200) mm
+# ionichamber2_off_userlimits : (-27648.000, 27648.000) cps
+# pindiodecal_off_userlimits : (-27648.000, 27648.000) cps
+#            b2z_userlimits : (10.600, 19.400) mm
+#          prefz_userlimits : (-0.200, 186.000) mm
+#            b3z_userlimits : (7.700, 16.900) mm
+### Precisions/tolerances
+#            bspz_precision : 0.010 mm
+#             roz_precision : 0.010 steps
+#           dofom_precision : 0.010 rev
+#             b1y_precision : 0.010 mm
+#             b2z_precision : 0.010 mm
+#            detz_precision : 0.010 mm
+#             b3y_precision : 0.010 mm
+#             b1b_precision : 0.010 mm
+#              pz_precision : 0.010 mm
+#             b3h_precision : 0.010 mm
+#             b1h_precision : 0.010 mm
+#             pom_precision : 0.001 deg
+#           prefz_precision : 0.010 mm
+#             b3z_precision : 0.010 mm
+#            robz_precision : 0.010 mm
+#             b2y_precision : 0.010 mm
+#            pchi_precision : 0.001 deg
+#             roy_precision : 0.010 steps
+#             b2b_precision : 0.010 mm
+#            bssy_precision : 0.010 mm
+#             b1z_precision : 0.010 mm
+#             b2h_precision : 0.010 mm
+#            bspy_precision : 0.010 mm
+#              py_precision : 0.010 mm
+#          dofchi_precision : 0.010 rev
+#            roby_precision : 0.010 mm
+#             b3b_precision : 0.010 mm
+### Device status
+#               pchi_status : ok: ON [PosOk Sync]
+#                 b1_status : ok: horizontal=ON [PosOk Sync], vertical=ON [PosOk Sync]
+#            spotpos_status : ok: The device is in ON state.
+#          vavalve06_status : ok: The device is in ON state.
+#                 py_status : ok: ON [PosOk Sync]
+#             pump02_status : ok: The device is in ON state.
+#         absorber10_status : ok: The device is in ON state.
+#    singledetectors_status : ok: The device is in ON state.
+#        gen_voltage_status : ok: The device is in ON state.
+#           absorber_status : ok: absorber00=The device is in ON state., absorber01=The device is in ON state., absorber02=The device is in ON state., absorber03=The device is in ON state., absorber04=The device is in ON state., absorber05=The device is in ON state., absorber06=The device is in ON state., absorber07=The device is in ON state., absorber08=The device is in ON state., absorber09=The device is in ON state., absorber10=The device is in ON state., absorber11=The device is in ON state., absorber12=The device is in ON state., absorber13=The device is in ON state.
+#           interval_status : ok: The device is in ON state.
+#            shutter_status : ok: The device is in MOVING state.
+#               time_status : ok: The device is in ON state.
+#    pindiodecal_int_status : ok: The device is in ON state.
+#            pilatus_status : ok: The device is in ON state.
+#          pindiode1_status : ok: The device is in ON state.
+#                 b2_status : ok: horizontal=ON [PosOk Sync], vertical=ON [PosOk Sync]
+#             pump03_status : ok: The device is in ON state.
+#       mythen_image_status : ok: The device is in ON state.
+#                b2h_status : ok: ON [PosOk Sync]
+#   ionichamber2_off_status : ok: The device is in ON state.
+#        detdistance_status : ok: detectube01=The device is in ON state., detectube02=The device is in ON state., detectube03=The device is in ON state., detectube04=The device is in ON state.
+#        detectube01_status : ok: The device is in ON state.
+#           tubecond_status : ok: ON
+#         absorber03_status : ok: The device is in ON state.
+#         absorber08_status : ok: The device is in ON state.
+#                 b3_status : ok: horizontal=ON [PosOk Sync], vertical=ON [PosOk Sync]
+#                b2z_status : ok: ON [PosOk Sync]
+#    pindiodecal_off_status : ok: The device is in ON state.
+#          vavalve04_status : ok: The device is in ON state.
+# pindiodesample_move_status : ok: The device is in ON state.
+#   ionichamber1_int_status : ok: The device is in ON state.
+#                b1y_status : ok: ON [PosOk Sync]
+#          stigmator_status : ok: The device is in ON state.
+#      pindiode1_int_status : ok: The device is in ON state.
+#                b3y_status : ok: ON [PosOk Sync]
+#       ionichamber1_status : ok: The device is in ON state.
+#                b2b_status : ok: ON [PosOk Sync]
+#                roy_status : ok: ON [PosOk Sync]
+#         absorber04_status : ok: The device is in ON state.
+#         absorber09_status : ok: The device is in ON state.
+#                b2y_status : ok: ON [PosOk Sync]
+#         absorber00_status : ok: The device is in ON state.
+#        vacuumtube1_status : ok: The device is in ON state.
+#     pindiodesample_status : ok: The device is in ON state.
+#    vacuumoperation_status : error: The device is in OFF state.
+#          vbvalve03_status : ok: The device is in ON state.
+#             Sample_status : ok
+#           pintimer_status : ok: The device is in ON state.
+#       ionichamber2_status : ok: The device is in ON state.
+#                b3z_status : ok: ON [PosOk Sync]
+#   ionichamber2_int_status : ok: The device is in ON state.
+#          statussps_status : ok: The device is in ON state.
+#               detz_status : ok: ON [PosOk Sync]
+#     pindiode1_move_status : ok: The device is in ON state.
+#                roz_status : ok: ON [PosOk Sync]
+#         absorber05_status : ok: The device is in ON state.
+#             uptime_status : ok: The device is in ON state.
+#   ionichamber1_off_status : ok: The device is in ON state.
+#             mythen_status : ok: mythen_image=The device is in ON state., mythen_timer=The device is in ON state.
+#                b3b_status : ok: ON [PosOk Sync]
+#         absorber01_status : ok: The device is in ON state.
+#                 pz_status : ok: ON [PosOk Sync]
+#         absorber13_status : ok: The device is in ON state.
+#             vacuum_status : ok: The device is in ON state.
+#          vavalve02_status : ok: The device is in ON state.
+#              dofom_status : ok: ON [PosOk Sync]
+#               robz_status : ok: ON [PosOk Sync]
+#         absorber14_status : ok: The device is in ON state.
+#        detectube04_status : ok: The device is in ON state.
+#         absorber06_status : ok: The device is in ON state.
+#              prefz_status : ok: ON [PosOk Sync]
+#   coolerxraysource_status : ok: The device is in ON state.
+#               bssy_status : ok: ON [PosOk Sync]
+#         absorber02_status : ok: The device is in ON state.
+#         absorber12_status : ok: The device is in ON state.
+#          vavalve03_status : ok: The device is in ON state.
+#               roby_status : ok: ON [PosOk Sync]
+#               bspz_status : ok: ON [PosOk Sync]
+#          vbvalve01_status : ok: The device is in ON state.
+#          vbvalve02_status : ok: The device is in ON state.
+#        vacuumtube3_status : ok: The device is in ON state.
+#                b1b_status : ok: ON [PosOk Sync]
+#          vavalve05_status : ok: The device is in ON state.
+#        detectube02_status : ok: The device is in ON state.
+#        pindiodecal_status : ok: The device is in ON state.
+#                pom_status : ok: ON [PosOk Sync]
+# pindiodesample_off_status : ok: The device is in ON state.
+#             dofchi_status : ok: ON [PosOk Sync]
+#                b3h_status : ok: ON [PosOk Sync]
+#        vacuumtube2_status : ok: The device is in ON state.
+#         absorber07_status : ok: The device is in ON state.
+#                b1z_status : ok: ON [PosOk Sync]
+# pindiodesample_int_status : ok: The device is in ON state.
+#         absorber11_status : ok: The device is in ON state.
+#              Space_status : ok: 1578.26 GiB free
+#                b1h_status : ok: ON [PosOk Sync]
+#        gen_current_status : ok: The device is in ON state.
+#               bspy_status : ok: ON [PosOk Sync]
+#        detectube03_status : ok: The device is in ON state.
+#      pindiode1_off_status : ok: The device is in ON state.
+### Detector preset information
+#             mythen_preset : 5.0 s
+#               mythen_mode : time
+### Device positions and sample environment state
+#           vavalve03_value : open
+#            tubecond_value : GREEN
+#          absorber10_value : out
+#         vacuumtube2_value : 0.110 mbar
+#          absorber13_value : out
+#                 b3z_value : 11.969 mm
+#                pchi_value : 0.000 deg
+#         detectube03_value : up
+#        ionichamber1_value : 31.000 cps
+#                 b2z_value : 16.606 mm
+#             shutter_value : close
+#               Space_value : 1578.259 GiB
+#     vacuumoperation_value : idle
+#           statussps_value : ok
+#         gen_voltage_value : 69.790 kV
+#                 roz_value : 20.000 steps
+#          absorber14_value : out
+#                 b3y_value : 4.631 mm
+#         gen_current_value : 2.860 mA
+#         pindiodecal_value : -2.000 cps
+#                bspz_value : -20.399 mm
+#            pintimer_value : 0 s
+#            absorber_value : 1.000
+#                robz_value : 18.399 mm
+#                 b2h_value : 0.500 mm
+#                 b2y_value : 9.402 mm
+#                 b1b_value : 0.505 mm
+#          absorber11_value : out
+#         detdistance_value : 3531 mm
+#            interval_value : 48.000 h
+#                 b3h_value : 0.900 mm
+#          absorber02_value : out
+#    ionichamber2_off_value : 0.000 cps
+#          absorber12_value : out
+#           vavalve04_value : close
+#     pindiodecal_int_value : -2398 counts
+#              vacuum_value : 7.33e-08 mbar
+#             spotpos_value : 0.000 um
+#    ionichamber2_int_value : 1856008 counts
+#           vbvalve01_value : close
+#          absorber01_value : out
+#                roby_value : 22.000 mm
+#          absorber05_value : out
+#                detz_value : 40.000 mm
+#                bssy_value : -110.000 mm
+#                 pom_value : 0.000 deg
+#                time_value : 14.752 h
+#                  py_value : 0.750 mm
+#          absorber06_value : out
+#           vbvalve02_value : close
+#                  pz_value : -15.000 mm
+#        ionichamber2_value : -13.000 cps
+#                  b2_value : 0.50 0.50 mm
+#           stigmator_value : 324.010 mA
+#      pindiode1_move_value : out
+#                 b1y_value : 17.400 mm
+#           vavalve02_value : open
+#    ionichamber1_off_value : 0.000 cps
+#         vacuumtube3_value : 0.110 mbar
+#                  b1_value : 0.51 0.50 mm
+#       pindiode1_off_value : 0.000 cps
+#                 b3b_value : 0.902 mm
+#          absorber07_value : out
+#          absorber00_value : out
+#              pump02_value : on
+#           vavalve05_value : open
+#           vavalve06_value : open
+#    ionichamber1_int_value : 14180831 counts
+#               dofom_value : 20.000 rev
+#              dofchi_value : 2.200 rev
+#          absorber09_value : out
+#           vbvalve03_value : close
+#     pindiodecal_off_value : 0.000 cps
+#          absorber03_value : out
+#                bspy_value : -0.920 mm
+#                 b2b_value : 0.500 mm
+#              Sample_value : LSDD_FEP
+#              uptime_value : 5026.616 h
+#         detectube01_value : up
+#                 b1h_value : 0.499 mm
+#  pindiodesample_int_value : 12390 counts
+# pindiodesample_move_value : out
+#                  b3_value : 0.90 0.90 mm
+#       pindiode1_int_value : 14624 counts
+#              pump03_value : on
+#      pindiodesample_value : 8.000 cps
+#               prefz_value : 167.500 mm
+#    coolerxraysource_value : ok
+#          absorber04_value : out
+#          absorber08_value : out
+#                 b1z_value : 13.701 mm
+#         vacuumtube1_value : 0.360 mbar
+#           pindiode1_value : 12.000 cps
+#                 roy_value : 0.000 steps
+#         detectube02_value : up
+#         detectube04_value : up
+#  pindiodesample_off_value : 0.000 cps
+### Scan data
+# etime	;	ionichamber1_int	ionichamber2_int	   pindiode1_int	 pindiodecal_int	pindiodesample_int	file1
+# s	;	                 counts	                 counts	                 counts	                 counts	                 counts	-
+600.3	;	          71002324	           9306881	             73259	            -12008	             64689	Zaktuna_LSDD_FEP_25665.1.tif
+### End of NICOS data file Zaktuna_LSDD_FEP_25665.dat

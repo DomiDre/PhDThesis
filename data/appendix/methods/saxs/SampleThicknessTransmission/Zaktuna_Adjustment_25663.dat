@@ -1,0 +1,821 @@
+### NICOS data file, created at 2017-12-06 10:17:07
+#                    number : 25663
+#                  filename : Zaktuna_Adjustment_25663.dat
+#                  filepath : /home/jcns/data/2017/P284_Zakutna/data/Zaktuna_Adjustment_25663.dat
+#                      info : scan(pz, -10, 0.1000, 501, t=1)
+### Experiment information
+#                 Exp_users : Zaktuna
+#          Exp_localcontact : m.smik@fz-juelich.de
+#                 Exp_title : SAXS on NP-dispersions
+#              Exp_proposal : P284_Zakutna
+#                Exp_remark : 
+### Sample and alignment
+#         Sample_samplename : Adjustment
+### Instrument setup
+#         galaxi_instrument : GALAXI
+#           galaxi_facility : FZ-Juelich
+#                galaxi_doi : http://dx.doi.org/10.17815/jlsrf-2-109
+#        galaxi_responsible : Ulrich Ruecker <u.ruecker@fz-juelich.de>
+#          galaxi_operators : ()
+#            galaxi_website : http://www.mlz-garching.de
+### Offsets
+#               detz_offset : 0.000 mm
+#                b3y_offset : 0.000 mm
+#                b1h_offset : 0.000 mm
+#               bssy_offset : 0.000 mm
+#                roz_offset : 0.000 steps
+#                b2y_offset : 0.000 mm
+#               robz_offset : 0.000 mm
+#               bspz_offset : 0.000 mm
+#               roby_offset : 0.000 mm
+#               bspy_offset : 0.000 mm
+#                pom_offset : 0.000 deg
+#                b2b_offset : 0.000 mm
+#                b2z_offset : 0.000 mm
+#                b3z_offset : 0.000 mm
+#                 py_offset : 0.000 mm
+#                b1y_offset : 0.000 mm
+#              prefz_offset : 0.000 mm
+#               pchi_offset : 0.000 deg
+#             dofchi_offset : 0.000 rev
+#              dofom_offset : 0.000 rev
+#                b3b_offset : 0.000 mm
+#                roy_offset : 0.000 steps
+#                b3h_offset : 0.000 mm
+#                b1z_offset : 0.000 mm
+#                b1b_offset : 0.000 mm
+#                 pz_offset : 0.000 mm
+#                b2h_offset : 0.000 mm
+### Limits
+#            roz_userlimits : (-5000.000, 5000.000) steps
+#    gen_voltage_userlimits : (0.000, 9999.000) kV
+#            b1h_userlimits : (0.100, 6.700) mm
+#           pchi_userlimits : (-9.500, 9.500) deg
+#            b2y_userlimits : (5.900, 15.500) mm
+#  pindiode1_off_userlimits : (-27648.000, 27648.000) cps
+#            roy_userlimits : (-5000.000, 5000.000) steps
+#            b2b_userlimits : (0.160, 7.200) mm
+#            b3h_userlimits : (0.300, 6.200) mm
+#            b1b_userlimits : (0.100, 7.500) mm
+#            b2h_userlimits : (0.160, 7.500) mm
+#           bspz_userlimits : (-133.000, 118.000) mm
+#           bssy_userlimits : (-117.000, 109.000) mm
+#          dofom_userlimits : (-50.000, 50.000) rev
+#       absorber_userlimits : (1.000, inf)
+#             pz_userlimits : (-15.200, 41.200) mm
+#            b3b_userlimits : (0.250, 6.400) mm
+#             py_userlimits : (-9.100, 14.300) mm
+# ionichamber1_off_userlimits : (-27648.000, 27648.000) cps
+#           detz_userlimits : (1.000, 104.000) mm
+#         dofchi_userlimits : (-50.000, 50.000) rev
+#           bspy_userlimits : (-80.000, 122.000) mm
+#            b1y_userlimits : (16.200, 24.800) mm
+#    gen_current_userlimits : (0.000, 9999.000) mA
+#            b1z_userlimits : (7.800, 16.400) mm
+#       pintimer_userlimits : (0, 25000) s
+# pindiodesample_off_userlimits : (-27648.000, 27648.000) cps
+#            b3y_userlimits : (0.100, 9.000) mm
+#           roby_userlimits : (0.500, 27.200) mm
+#            pom_userlimits : (-190.000, 280.000) deg
+#           robz_userlimits : (0.500, 27.200) mm
+# ionichamber2_off_userlimits : (-27648.000, 27648.000) cps
+# pindiodecal_off_userlimits : (-27648.000, 27648.000) cps
+#            b2z_userlimits : (10.600, 19.400) mm
+#          prefz_userlimits : (-0.200, 186.000) mm
+#            b3z_userlimits : (7.700, 16.900) mm
+### Precisions/tolerances
+#            bspz_precision : 0.010 mm
+#             roz_precision : 0.010 steps
+#           dofom_precision : 0.010 rev
+#             b1y_precision : 0.010 mm
+#             b2z_precision : 0.010 mm
+#            detz_precision : 0.010 mm
+#             b3y_precision : 0.010 mm
+#             b1b_precision : 0.010 mm
+#              pz_precision : 0.010 mm
+#             b3h_precision : 0.010 mm
+#             b1h_precision : 0.010 mm
+#             pom_precision : 0.001 deg
+#           prefz_precision : 0.010 mm
+#             b3z_precision : 0.010 mm
+#            robz_precision : 0.010 mm
+#             b2y_precision : 0.010 mm
+#            pchi_precision : 0.001 deg
+#             roy_precision : 0.010 steps
+#             b2b_precision : 0.010 mm
+#            bssy_precision : 0.010 mm
+#             b1z_precision : 0.010 mm
+#             b2h_precision : 0.010 mm
+#            bspy_precision : 0.010 mm
+#              py_precision : 0.010 mm
+#          dofchi_precision : 0.010 rev
+#            roby_precision : 0.010 mm
+#             b3b_precision : 0.010 mm
+### Device status
+#               pchi_status : ok: ON [PosOk Sync]
+#                 b1_status : ok: horizontal=ON [PosOk Sync], vertical=ON [PosOk Sync]
+#            spotpos_status : ok: The device is in ON state.
+#          vavalve06_status : ok: The device is in ON state.
+#                 py_status : ok: ON [PosOk Sync]
+#             pump02_status : ok: The device is in ON state.
+#         absorber10_status : ok: The device is in ON state.
+#    singledetectors_status : ok: The device is in ON state.
+#        gen_voltage_status : ok: The device is in ON state.
+#           absorber_status : ok: absorber00=The device is in ON state., absorber01=The device is in ON state., absorber02=The device is in ON state., absorber03=The device is in ON state., absorber04=The device is in ON state., absorber05=The device is in ON state., absorber06=The device is in ON state., absorber07=The device is in ON state., absorber08=The device is in ON state., absorber09=The device is in ON state., absorber10=The device is in ON state., absorber11=The device is in ON state., absorber12=The device is in ON state., absorber13=The device is in ON state.
+#           interval_status : ok: The device is in ON state.
+#            shutter_status : ok: The device is in ON state.
+#               time_status : ok: The device is in ON state.
+#    pindiodecal_int_status : ok: The device is in ON state.
+#            pilatus_status : ok: The device is in ON state.
+#          pindiode1_status : ok: The device is in ON state.
+#                 b2_status : ok: horizontal=ON [PosOk Sync], vertical=ON [PosOk Sync]
+#             pump03_status : ok: The device is in ON state.
+#       mythen_image_status : ok: The device is in ON state.
+#                b2h_status : ok: ON [PosOk Sync]
+#   ionichamber2_off_status : ok: The device is in ON state.
+#        detdistance_status : ok: detectube01=The device is in ON state., detectube02=The device is in ON state., detectube03=The device is in ON state., detectube04=The device is in ON state.
+#        detectube01_status : ok: The device is in ON state.
+#           tubecond_status : ok: ON
+#         absorber03_status : ok: The device is in ON state.
+#         absorber08_status : ok: The device is in ON state.
+#                 b3_status : ok: horizontal=ON [PosOk Sync], vertical=ON [PosOk Sync]
+#                b2z_status : ok: ON [PosOk Sync]
+#    pindiodecal_off_status : ok: The device is in ON state.
+#          vavalve04_status : ok: The device is in ON state.
+# pindiodesample_move_status : ok: The device is in ON state.
+#   ionichamber1_int_status : ok: The device is in ON state.
+#                b1y_status : ok: ON [PosOk Sync]
+#          stigmator_status : ok: The device is in ON state.
+#      pindiode1_int_status : ok: The device is in ON state.
+#                b3y_status : ok: ON [PosOk Sync]
+#       ionichamber1_status : ok: The device is in ON state.
+#                b2b_status : ok: ON [PosOk Sync]
+#                roy_status : ok: ON [PosOk Sync]
+#         absorber04_status : ok: The device is in ON state.
+#         absorber09_status : ok: The device is in ON state.
+#                b2y_status : ok: ON [PosOk Sync]
+#         absorber00_status : ok: The device is in ON state.
+#        vacuumtube1_status : ok: The device is in ON state.
+#     pindiodesample_status : ok: The device is in ON state.
+#    vacuumoperation_status : error: The device is in OFF state.
+#          vbvalve03_status : ok: The device is in ON state.
+#             Sample_status : ok
+#           pintimer_status : ok: The device is in ON state.
+#       ionichamber2_status : ok: The device is in ON state.
+#                b3z_status : ok: ON [PosOk Sync]
+#   ionichamber2_int_status : ok: The device is in ON state.
+#          statussps_status : ok: The device is in ON state.
+#               detz_status : ok: ON [PosOk Sync]
+#     pindiode1_move_status : ok: The device is in ON state.
+#                roz_status : ok: ON [PosOk Sync]
+#         absorber05_status : ok: The device is in ON state.
+#             uptime_status : ok: The device is in ON state.
+#   ionichamber1_off_status : ok: The device is in ON state.
+#             mythen_status : ok: mythen_image=The device is in ON state., mythen_timer=The device is in ON state.
+#                b3b_status : ok: ON [PosOk Sync]
+#         absorber01_status : ok: The device is in ON state.
+#                 pz_status : ok: ON [PosOk Sync]
+#         absorber13_status : ok: The device is in ON state.
+#             vacuum_status : ok: The device is in ON state.
+#          vavalve02_status : ok: The device is in ON state.
+#              dofom_status : ok: ON [PosOk Sync]
+#               robz_status : ok: ON [PosOk Sync]
+#         absorber14_status : ok: The device is in ON state.
+#        detectube04_status : ok: The device is in ON state.
+#         absorber06_status : ok: The device is in ON state.
+#              prefz_status : ok: ON [PosOk Sync]
+#   coolerxraysource_status : ok: The device is in ON state.
+#               bssy_status : ok: ON [PosOk Sync]
+#         absorber02_status : ok: The device is in ON state.
+#         absorber12_status : ok: The device is in ON state.
+#          vavalve03_status : ok: The device is in ON state.
+#               roby_status : ok: ON [PosOk Sync]
+#               bspz_status : ok: ON [PosOk Sync]
+#          vbvalve01_status : ok: The device is in ON state.
+#          vbvalve02_status : ok: The device is in ON state.
+#        vacuumtube3_status : ok: The device is in ON state.
+#                b1b_status : ok: ON [PosOk Sync]
+#          vavalve05_status : ok: The device is in ON state.
+#        detectube02_status : ok: The device is in ON state.
+#        pindiodecal_status : ok: The device is in ON state.
+#                pom_status : ok: ON [PosOk Sync]
+# pindiodesample_off_status : ok: The device is in ON state.
+#             dofchi_status : ok: ON [PosOk Sync]
+#                b3h_status : ok: ON [PosOk Sync]
+#        vacuumtube2_status : ok: The device is in ON state.
+#         absorber07_status : ok: The device is in ON state.
+#                b1z_status : ok: ON [PosOk Sync]
+# pindiodesample_int_status : ok: The device is in ON state.
+#         absorber11_status : ok: The device is in ON state.
+#              Space_status : ok: 1578.26 GiB free
+#                b1h_status : ok: ON [PosOk Sync]
+#        gen_current_status : ok: The device is in ON state.
+#               bspy_status : ok: ON [PosOk Sync]
+#        detectube03_status : ok: The device is in ON state.
+#      pindiode1_off_status : ok: The device is in ON state.
+### Detector preset information
+#             mythen_preset : 5.0 s
+#               mythen_mode : time
+### Device positions and sample environment state
+#           vavalve03_value : open
+#            tubecond_value : GREEN
+#          absorber10_value : out
+#         vacuumtube2_value : 0.140 mbar
+#          absorber13_value : out
+#                 b3z_value : 11.969 mm
+#                pchi_value : 0.000 deg
+#         detectube03_value : up
+#        ionichamber1_value : 11845.000 cps
+#                 b2z_value : 16.606 mm
+#             shutter_value : open
+#               Space_value : 1578.260 GiB
+#     vacuumoperation_value : idle
+#           statussps_value : ok
+#         gen_voltage_value : 69.790 kV
+#                 roz_value : 20.000 steps
+#          absorber14_value : out
+#                 b3y_value : 4.631 mm
+#         gen_current_value : 2.853 mA
+#         pindiodecal_value : -2.000 cps
+#                bspz_value : -20.399 mm
+#            pintimer_value : 0 s
+#            absorber_value : 1.000
+#                robz_value : 18.399 mm
+#                 b2h_value : 0.500 mm
+#                 b2y_value : 9.402 mm
+#                 b1b_value : 0.505 mm
+#          absorber11_value : out
+#         detdistance_value : 3531 mm
+#            interval_value : 48.000 h
+#                 b3h_value : 0.900 mm
+#          absorber02_value : out
+#    ionichamber2_off_value : 0.000 cps
+#          absorber12_value : out
+#           vavalve04_value : close
+#     pindiodecal_int_value : -20 counts
+#              vacuum_value : 7.2e-08 mbar
+#             spotpos_value : 0.000 um
+#    ionichamber2_int_value : 15448 counts
+#           vbvalve01_value : close
+#          absorber01_value : out
+#                roby_value : 22.000 mm
+#          absorber05_value : out
+#                detz_value : 40.000 mm
+#                bssy_value : -110.000 mm
+#                 pom_value : 0.000 deg
+#                time_value : 14.348 h
+#                  py_value : 0.750 mm
+#          absorber06_value : out
+#           vbvalve02_value : close
+#                  pz_value : -10.000 mm
+#        ionichamber2_value : 1557.000 cps
+#                  b2_value : 0.50 0.50 mm
+#           stigmator_value : 325.405 mA
+#      pindiode1_move_value : out
+#                 b1y_value : 17.399 mm
+#           vavalve02_value : open
+#    ionichamber1_off_value : 0.000 cps
+#         vacuumtube3_value : 0.140 mbar
+#                  b1_value : 0.51 0.50 mm
+#       pindiode1_off_value : 0.000 cps
+#                 b3b_value : 0.902 mm
+#          absorber07_value : out
+#          absorber00_value : out
+#              pump02_value : on
+#           vavalve05_value : open
+#           vavalve06_value : open
+#    ionichamber1_int_value : 118252 counts
+#               dofom_value : 20.000 rev
+#              dofchi_value : 2.200 rev
+#          absorber09_value : out
+#           vbvalve03_value : close
+#     pindiodecal_off_value : 0.000 cps
+#          absorber03_value : out
+#                bspy_value : -0.920 mm
+#                 b2b_value : 0.500 mm
+#              Sample_value : Adjustment
+#              uptime_value : 5026.212 h
+#         detectube01_value : up
+#                 b1h_value : 0.499 mm
+#  pindiodesample_int_value : 19934 counts
+# pindiodesample_move_value : in
+#                  b3_value : 0.90 0.90 mm
+#       pindiode1_int_value : 125 counts
+#              pump03_value : on
+#      pindiodesample_value : 1754.000 cps
+#               prefz_value : 40.000 mm
+#    coolerxraysource_value : ok
+#          absorber04_value : out
+#          absorber08_value : out
+#                 b1z_value : 13.701 mm
+#         vacuumtube1_value : 0.370 mbar
+#           pindiode1_value : 13.000 cps
+#                 roy_value : 0.000 steps
+#         detectube02_value : up
+#         detectube04_value : up
+#  pindiodesample_off_value : 0.000 cps
+### Scan data
+# pz	;	ionichamber1_int	ionichamber2_int	   pindiode1_int	 pindiodecal_int	pindiodesample_int
+# mm	;	                 counts	                 counts	                 counts	                 counts	                 counts
+-10.000	;	            118324	             15488	               124	               -20	             20574
+-9.900	;	            118326	             15480	               125	               -20	             20579
+-9.800	;	            118484	             15500	               123	               -20	             20587
+-9.699	;	            118214	             15406	               120	               -20	             20554
+-9.599	;	            118410	             15443	               127	               -20	             20576
+-9.500	;	            118210	             15465	               125	               -20	             20568
+-9.400	;	            118325	             15451	               122	               -20	             20571
+-9.300	;	            118368	             15420	               125	               -20	             20552
+-9.199	;	            118371	             15467	               126	               -20	             20568
+-9.099	;	            118351	             15470	               123	               -20	             20553
+-9.000	;	            118322	             15456	               122	               -20	             20564
+-8.900	;	            118365	             15474	               122	               -20	             20588
+-8.800	;	            118267	             15463	               123	               -20	             20536
+-8.699	;	            118380	             15421	               122	               -20	             20504
+-8.599	;	            118262	             15476	               120	               -20	             19038
+-8.500	;	            118283	             15486	               126	               -20	             15920
+-8.400	;	            118366	             15480	               124	               -20	             12764
+-8.300	;	            118228	             15461	               127	               -20	              9615
+-8.199	;	            118216	             15464	               123	               -20	              6350
+-8.099	;	            118249	             15469	               120	               -20	              3017
+-8.000	;	            118461	             15459	               127	               -20	               489
+-7.900	;	            118106	             15507	               122	               -20	               108
+-7.799	;	            118313	             15491	               122	               -20	               104
+-7.699	;	            118395	             15499	               121	               -20	                95
+-7.599	;	            118136	             15486	               123	               -20	               104
+-7.500	;	            118180	             15473	               124	               -20	                99
+-7.400	;	            118218	             15417	               123	               -20	               103
+-7.299	;	            118278	             15458	               124	               -20	               101
+-7.199	;	            118348	             15454	               123	               -20	               102
+-7.099	;	            118275	             15509	               124	               -20	               108
+-7.000	;	            118405	             15494	               121	               -20	               108
+-6.900	;	            118317	             15496	               122	               -20	               107
+-6.799	;	            118291	             15498	               122	               -20	               102
+-6.699	;	            118319	             15447	               122	               -20	               107
+-6.599	;	            118253	             15428	               123	               -20	               105
+-6.500	;	            118426	             15513	               120	               -20	               105
+-6.400	;	            118157	             15513	               129	               -20	               107
+-6.299	;	            118391	             15455	               127	               -20	               106
+-6.199	;	            118282	             15396	               120	               -20	               114
+-6.099	;	            118276	             15469	               123	               -20	               122
+-6.000	;	            118196	             15420	               123	               -20	               112
+-5.899	;	            118368	             15430	               120	               -20	               146
+-5.799	;	            118255	             15431	               123	               -20	              1363
+-5.700	;	            118252	             15473	               120	               -20	              4349
+-5.599	;	            118304	             15456	               122	               -20	              7565
+-5.500	;	            118220	             15403	               124	               -20	             10712
+-5.399	;	            118364	             15381	               120	               -20	             13906
+-5.299	;	            118155	             15458	               125	               -20	             17276
+-5.199	;	            118365	             15367	               127	               -20	             19957
+-5.099	;	            118336	             15428	               120	               -20	             20502
+-5.000	;	            118154	             15385	               120	               -20	             20441
+-4.899	;	            118458	             15435	               122	               -20	             20498
+-4.799	;	            118437	             15431	               124	               -20	             19535
+-4.699	;	            118289	             15492	               120	               -20	             18099
+-4.599	;	            118310	             15471	               121	               -20	             17178
+-4.500	;	            118269	             15548	               125	               -20	             16352
+-4.399	;	            118145	             15469	               126	               -20	             15586
+-4.299	;	            118213	             15493	               123	               -20	             14754
+-4.199	;	            118311	             15551	               126	               -20	             14622
+-4.099	;	            118205	             15484	               128	               -20	             15435
+-4.000	;	            118175	             15474	               121	               -20	             15881
+-3.899	;	            118360	             15496	               124	               -20	             16164
+-3.799	;	            118208	             15514	               122	               -20	             16226
+-3.699	;	            118352	             15518	               125	               -20	             16226
+-3.599	;	            118144	             15449	               124	               -20	             15969
+-3.500	;	            118430	             15514	               122	               -20	             15490
+-3.399	;	            118233	             15515	               124	               -20	             15628
+-3.299	;	            118341	             15506	               120	               -20	             16373
+-3.199	;	            118200	             15512	               126	               -20	             17010
+-3.099	;	            118259	             15491	               122	               -20	             17749
+-3.000	;	            118354	             15512	               124	               -20	             18552
+-2.899	;	            118353	             15527	               122	               -20	             19791
+-2.799	;	            118270	             15501	               123	               -20	             20607
+-2.699	;	            118316	             15511	               122	               -20	             20656
+-2.599	;	            118436	             15567	               125	               -20	             20654
+-2.500	;	            118254	             15440	               121	               -20	             20620
+-2.399	;	            118354	             15543	               127	               -20	             20572
+-2.299	;	            118170	             15508	               122	               -20	             19072
+-2.199	;	            118365	             15540	               122	               -20	             15948
+-2.099	;	            118140	             15521	               127	               -20	             12730
+-2.000	;	            118224	             15518	               124	               -20	              9632
+-1.900	;	            118222	             15458	               120	               -20	              6559
+-1.799	;	            118383	             15567	               123	               -20	              4940
+-1.699	;	            118248	             15542	               123	               -20	              5671
+-1.599	;	            118324	             15545	               122	               -20	              8416
+-1.500	;	            118366	             15470	               121	               -20	             11571
+-1.400	;	            118173	             15460	               123	               -20	             14628
+-1.299	;	            118370	             15488	               122	               -20	             18197
+-1.199	;	            118285	             15473	               120	               -20	             20385
+-1.099	;	            118262	             15510	               123	               -20	             20622
+-1.000	;	            118370	             15485	               124	               -20	             20607
+-0.900	;	            118300	             15520	               122	               -20	             20615
+-0.799	;	            118289	             15476	               120	               -20	             20656
+-0.699	;	            118158	             15470	               125	               -20	             20609
+-0.599	;	            118297	             15458	               126	               -20	             20593
+-0.500	;	            118392	             15511	               126	               -20	             20649
+-0.399	;	            118202	             15432	               123	               -20	             20588
+-0.299	;	            118333	             15519	               122	               -20	             20617
+-0.199	;	            118280	             15434	               126	               -20	             20568
+-0.099	;	            118238	             15496	               123	               -20	             19880
+0.000	;	            118405	             15518	               128	               -20	             18512
+0.100	;	            118359	             15500	               124	               -20	             17301
+0.200	;	            118212	             15473	               124	               -20	             16080
+0.300	;	            118202	             15524	               124	               -20	             14880
+0.400	;	            118242	             15479	               122	               -20	             13649
+0.500	;	            118406	             15487	               121	               -20	             12636
+0.600	;	            118086	             15478	               123	               -20	             12743
+0.700	;	            118198	             15378	               123	               -20	             12810
+0.800	;	            118234	             15545	               123	               -20	             12821
+0.900	;	            118262	             15460	               125	               -20	             12827
+1.000	;	            118332	             15494	               124	               -20	             12852
+1.100	;	            118202	             15483	               122	               -20	             12715
+1.200	;	            118342	             15432	               122	               -20	             13059
+1.300	;	            118164	             15487	               125	               -20	             14269
+1.400	;	            118189	             15456	               124	               -20	             15444
+1.500	;	            118421	             15501	               123	               -20	             16672
+1.600	;	            118143	             15427	               120	               -20	             17656
+1.700	;	            118373	             15508	               123	               -20	             17051
+1.800	;	            118227	             15518	               120	               -20	             14977
+1.900	;	            118197	             15423	               123	               -20	             12109
+2.000	;	            118448	             15492	               127	               -20	              8870
+2.100	;	            118360	             15530	               123	               -20	              5713
+2.200	;	            118351	             15458	               124	               -20	              3551
+2.300	;	            118341	             15446	               124	               -20	              4533
+2.400	;	            118412	             15543	               124	               -20	              7465
+2.500	;	            118226	             15458	               120	               -20	             10720
+2.600	;	            118227	             15446	               125	               -20	             13797
+2.700	;	            118400	             15512	               120	               -20	             17222
+2.800	;	            118293	             15486	               122	               -20	             19985
+2.900	;	            118228	             15487	               120	               -20	             20592
+3.000	;	            118375	             15466	               125	               -20	             20625
+3.100	;	            118324	             15487	               121	               -20	             20621
+3.200	;	            118216	             15442	               129	               -20	             20594
+3.300	;	            118425	             15430	               128	               -20	             20550
+3.400	;	            118360	             15376	               124	               -20	             20536
+3.500	;	            118348	             15459	               122	               -20	             20586
+3.600	;	            118231	             15500	               127	               -20	             20542
+3.700	;	            118396	             15497	               124	               -20	             20387
+3.800	;	            118249	             15494	               122	               -20	             19035
+3.900	;	            118342	             15462	               124	               -20	             17494
+4.000	;	            118333	             15477	               120	               -20	             16096
+4.100	;	            118380	             15434	               122	               -20	             14792
+4.200	;	            118172	             15441	               125	               -20	             13406
+4.300	;	            118375	             15444	               123	               -20	             12036
+4.400	;	            118452	             15508	               123	               -20	             11646
+4.500	;	            118312	             15485	               123	               -20	             11949
+4.600	;	            118243	             15505	               126	               -20	             12041
+4.700	;	            118374	             15483	               124	               -20	             12090
+4.800	;	            118256	             15422	               126	               -20	             12157
+4.900	;	            118357	             15460	               125	               -20	             12259
+5.000	;	            118336	             15523	               122	               -20	             12327
+5.100	;	            118159	             15443	               123	               -20	             12270
+5.200	;	            118393	             15436	               123	               -20	             12637
+5.300	;	            118075	             15547	               124	               -20	             13922
+5.400	;	            118231	             15418	               124	               -20	             15177
+5.500	;	            118303	             15467	               120	               -20	             16459
+5.600	;	            118422	             15486	               121	               -20	             17476
+5.700	;	            118148	             15415	               126	               -20	             16730
+5.800	;	            118282	             15455	               123	               -20	             14714
+5.900	;	            118278	             15470	               123	               -20	             11882
+6.000	;	            118175	             15463	               122	               -20	              8612
+6.100	;	            118295	             15463	               125	               -20	              5524
+6.199	;	            118298	             15479	               123	               -20	              3605
+6.300	;	            118356	             15485	               122	               -20	              4820
+6.400	;	            118384	             15462	               120	               -20	              7787
+6.500	;	            118167	             15497	               121	               -20	             11078
+6.600	;	            118146	             15430	               128	               -20	             14138
+6.699	;	            118410	             15480	               124	               -20	             17464
+6.800	;	            118266	             15451	               123	               -20	             20145
+6.900	;	            118227	             15486	               125	               -20	             20582
+7.000	;	            118232	             15450	               122	               -20	             20586
+7.100	;	            118328	             15481	               124	               -20	             20273
+7.199	;	            118143	             15442	               122	               -20	             19003
+7.300	;	            118222	             15478	               124	               -20	             17818
+7.400	;	            118237	             15480	               123	               -20	             17009
+7.500	;	            118244	             15484	               121	               -20	             16327
+7.600	;	            118258	             15482	               123	               -20	             15698
+7.699	;	            118258	             15484	               123	               -20	             15129
+7.800	;	            118319	             15454	               127	               -20	             15645
+7.900	;	            118111	             15453	               123	               -20	             16308
+8.000	;	            118274	             15398	               122	               -20	             16622
+8.100	;	            118060	             15460	               125	               -20	             16723
+8.199	;	            118418	             15525	               125	               -20	             16699
+8.300	;	            118150	             15495	               124	               -20	             16405
+8.400	;	            118382	             15512	               125	               -20	             15936
+8.500	;	            118315	             15462	               123	               -20	             16226
+8.600	;	            118358	             15558	               126	               -20	             16855
+8.699	;	            118356	             15452	               126	               -20	             17428
+8.800	;	            118167	             15475	               127	               -20	             18055
+8.900	;	            118447	             15491	               122	               -20	             18828
+9.000	;	            118174	             15484	               121	               -20	             19972
+9.100	;	            118112	             15446	               122	               -20	             20563
+9.200	;	            118147	             15434	               127	               -20	             20545
+9.300	;	            118294	             15483	               121	               -20	             20602
+9.400	;	            118247	             15506	               126	               -20	             20536
+9.500	;	            118206	             15454	               126	               -20	             20513
+9.600	;	            118302	             15440	               120	               -20	             20352
+9.700	;	            118301	             15460	               126	               -20	             18523
+9.800	;	            118139	             15454	               126	               -20	             15238
+9.900	;	            118083	             15408	               128	               -20	             12184
+10.000	;	            118323	             15507	               124	               -20	              8929
+10.100	;	            118219	             15498	               122	               -20	              5786
+10.200	;	            118256	             15450	               123	               -20	              3673
+10.300	;	            118267	             15440	               122	               -20	              4669
+10.400	;	            118180	             15490	               126	               -20	              7515
+10.500	;	            118109	             15533	               123	               -20	             10841
+10.600	;	            118336	             15541	               127	               -20	             13923
+10.700	;	            118191	             15497	               122	               -20	             17299
+10.800	;	            118134	             15466	               121	               -20	             19989
+10.900	;	            118251	             15471	               122	               -20	             20579
+11.000	;	            118268	             15442	               125	               -20	             20582
+11.100	;	            118082	             15460	               121	               -20	             20563
+11.200	;	            118346	             15498	               127	               -20	             20602
+11.300	;	            118175	             15472	               126	               -20	             20596
+11.400	;	            118065	             15435	               127	               -20	             20593
+11.500	;	            118312	             15480	               126	               -20	             20620
+11.600	;	            118312	             15489	               123	               -20	             20570
+11.700	;	            118128	             15432	               124	               -20	             19914
+11.800	;	            118345	             15469	               124	               -20	             18514
+11.900	;	            118084	             15454	               126	               -20	             17236
+12.000	;	            118080	             15530	               124	               -20	             15951
+12.100	;	            118228	             15475	               129	               -20	             14661
+12.200	;	            118256	             15530	               123	               -20	             13260
+12.300	;	            118098	             15465	               124	               -20	             12146
+12.400	;	            118331	             15433	               125	               -20	             12093
+12.500	;	            118179	             15446	               123	               -20	             12016
+12.600	;	            118044	             15518	               126	               -20	             11908
+12.700	;	            118150	             15516	               125	               -20	             11914
+12.800	;	            118238	             15440	               122	               -20	             11841
+12.900	;	            118122	             15442	               122	               -20	             11841
+13.000	;	            118104	             15460	               121	               -20	             11885
+13.100	;	            118256	             15488	               124	               -20	             11931
+13.200	;	            118079	             15472	               125	               -20	             11927
+13.300	;	            118200	             15444	               123	               -20	             12916
+13.400	;	            118159	             15491	               128	               -20	             14300
+13.500	;	            118189	             15432	               121	               -20	             15644
+13.600	;	            118395	             15529	               124	               -20	             16919
+13.700	;	            118216	             15439	               123	               -20	             16743
+13.800	;	            118162	             15438	               126	               -20	             15094
+13.900	;	            118359	             15524	               122	               -20	             12753
+14.000	;	            118097	             15421	               122	               -20	              9476
+14.100	;	            118145	             15417	               124	               -20	              6504
+14.200	;	            118070	             15448	               123	               -20	              4974
+14.300	;	            118378	             15479	               124	               -20	              5716
+14.400	;	            118131	             15483	               123	               -20	              8397
+14.500	;	            118239	             15493	               129	               -20	             11711
+14.600	;	            118030	             15476	               120	               -20	             14763
+14.700	;	            118210	             15490	               121	               -20	             18243
+14.800	;	            118037	             15457	               124	               -20	             20361
+14.900	;	            118247	             15520	               125	               -20	             20634
+15.000	;	            118041	             15514	               126	               -20	             20608
+15.100	;	            118048	             15473	               122	               -20	             20621
+15.200	;	            118270	             15506	               124	               -20	             20650
+15.300	;	            118071	             15500	               122	               -20	             20592
+15.400	;	            118056	             15488	               126	               -20	             20607
+15.500	;	            118032	             15434	               122	               -20	             20597
+15.600	;	            118093	             15506	               122	               -20	             20609
+15.700	;	            118032	             15483	               122	               -20	             20576
+15.800	;	            118270	             15447	               120	               -20	             20614
+15.900	;	            118098	             15478	               122	               -20	             20552
+16.000	;	            118112	             15498	               126	               -20	             19696
+16.100	;	            118084	             15415	               125	               -20	             18139
+16.200	;	            118129	             15482	               122	               -20	             16791
+16.300	;	            118154	             15494	               123	               -20	             15481
+16.400	;	            118186	             15437	               127	               -20	             14191
+16.500	;	            118136	             15422	               124	               -20	             12735
+16.600	;	            118163	             15457	               125	               -20	             11876
+16.700	;	            118246	             15482	               126	               -20	             12058
+16.800	;	            118042	             15472	               125	               -20	             12103
+16.900	;	            118222	             15469	               124	               -20	             12160
+17.000	;	            118065	             15434	               123	               -20	             12156
+17.100	;	            118031	             15420	               122	               -20	             12151
+17.200	;	            118243	             15496	               120	               -20	             12105
+17.300	;	            118139	             15523	               125	               -20	             12978
+17.400	;	            118058	             15422	               125	               -20	             14308
+17.500	;	            118156	             15491	               127	               -20	             15606
+17.600	;	            118037	             15455	               124	               -20	             16208
+17.700	;	            118190	             15487	               126	               -20	             14883
+17.800	;	            118198	             15510	               122	               -20	             13156
+17.900	;	            118161	             15481	               122	               -20	             10891
+18.000	;	            118218	             15498	               123	               -20	              7639
+18.100	;	            118138	             15472	               126	               -20	              4478
+18.200	;	            118044	             15444	               124	               -20	              2802
+18.300	;	            118028	             15489	               125	               -20	              4816
+18.400	;	            118168	             15439	               120	               -20	              7885
+18.500	;	            118053	             15415	               120	               -20	             11151
+18.600	;	            118116	             15424	               121	               -20	             14205
+18.700	;	            118268	             15459	               121	               -20	             17644
+18.800	;	            118138	             15446	               125	               -20	             20121
+18.900	;	            118108	             15324	               120	               -20	             20494
+19.000	;	            118094	             15429	               124	               -20	             20526
+19.100	;	            118243	             15390	               122	               -20	             20530
+19.200	;	            118145	             15397	               122	               -20	             20512
+19.300	;	            118116	             15417	               122	               -20	             20515
+19.400	;	            118384	             15412	               120	               -20	             20532
+19.500	;	            118213	             15403	               122	               -20	             20542
+19.600	;	            118096	             15405	               124	               -20	             20538
+19.700	;	            118283	             15483	               121	               -20	             20575
+19.800	;	            118114	             15469	               123	               -20	             20153
+19.900	;	            118110	             15503	               122	               -20	             18808
+20.000	;	            118091	             15491	               125	               -20	             17512
+20.100	;	            118095	             15449	               124	               -20	             16322
+20.200	;	            118157	             15449	               122	               -20	             15089
+20.300	;	            118222	             15480	               122	               -20	             13823
+20.400	;	            118035	             15467	               125	               -20	             12711
+20.500	;	            118274	             15512	               121	               -20	             12686
+20.600	;	            118207	             15520	               125	               -20	             12786
+20.700	;	            118154	             15470	               124	               -20	             12830
+20.800	;	            118107	             15421	               121	               -20	             12819
+20.900	;	            118055	             15462	               122	               -20	             12875
+21.000	;	            118117	             15456	               120	               -20	             12875
+21.100	;	            118153	             15467	               124	               -20	             12834
+21.200	;	            118241	             15431	               125	               -20	             13579
+21.300	;	            118283	             15464	               122	               -20	             14818
+21.400	;	            118290	             15456	               123	               -20	             15996
+21.500	;	            118339	             15460	               122	               -20	             17196
+21.600	;	            118250	             15465	               124	               -20	             18005
+21.700	;	            118206	             15479	               120	               -20	             17077
+21.800	;	            118212	             15532	               122	               -20	             14578
+21.900	;	            118079	             15433	               123	               -20	             11547
+22.000	;	            118116	             15482	               125	               -20	              8260
+22.100	;	            118324	             15442	               122	               -20	              5289
+22.200	;	            118119	             15438	               123	               -20	              3905
+22.300	;	            118174	             15463	               120	               -20	              5513
+22.399	;	            118297	             15443	               121	               -20	              8505
+22.500	;	            118090	             15386	               124	               -20	             11800
+22.600	;	            118358	             15441	               123	               -20	             14922
+22.700	;	            118044	             15426	               128	               -20	             18331
+22.800	;	            118139	             15470	               123	               -20	             20402
+22.899	;	            118288	             15481	               120	               -20	             20612
+23.000	;	            117987	             15464	               120	               -20	             20549
+23.100	;	            118228	             15518	               121	               -20	             20591
+23.200	;	            118151	             15462	               122	               -20	             20577
+23.300	;	            118155	             15488	               123	               -20	             20599
+23.399	;	            118229	             15449	               122	               -20	             20597
+23.500	;	            118291	             15431	               120	               -20	             20609
+23.600	;	            118219	             15564	               124	               -20	             20603
+23.700	;	            118054	             15514	               122	               -20	             20571
+23.800	;	            118277	             15498	               125	               -20	             20619
+23.899	;	            118081	             15458	               122	               -20	             20025
+24.000	;	            118330	             15451	               123	               -20	             18421
+24.100	;	            118174	             15476	               121	               -20	             16970
+24.200	;	            118036	             15454	               124	               -20	             15484
+24.300	;	            118311	             15480	               124	               -20	             14014
+24.399	;	            118194	             15505	               122	               -20	             12477
+24.500	;	            118205	             15440	               125	               -20	             11091
+24.600	;	            118207	             15413	               122	               -20	             10938
+24.700	;	            118181	             15482	               124	               -20	             10909
+24.800	;	            118185	             15418	               120	               -20	             10898
+24.899	;	            118090	             15515	               124	               -20	             10972
+25.000	;	            118319	             15466	               121	               -20	             11075
+25.100	;	            118092	             15466	               121	               -20	             11118
+25.200	;	            118352	             15535	               120	               -20	             11947
+25.300	;	            118121	             15476	               124	               -20	             13480
+25.399	;	            118407	             15502	               122	               -20	             14938
+25.500	;	            118160	             15470	               123	               -20	             16460
+25.600	;	            118200	             15499	               120	               -20	             17757
+25.700	;	            118299	             15527	               124	               -20	             17630
+25.800	;	            118117	             15470	               124	               -20	             15464
+25.899	;	            118395	             15432	               124	               -20	             12552
+26.000	;	            118091	             15432	               121	               -20	              9201
+26.100	;	            118287	             15438	               121	               -20	              6400
+26.200	;	            118127	             15440	               124	               -20	              5295
+26.300	;	            118162	             15428	               121	               -20	              6231
+26.399	;	            118160	             15466	               124	               -20	              8978
+26.500	;	            118172	             15463	               122	               -20	             12321
+26.600	;	            118185	             15412	               125	               -20	             15399
+26.700	;	            118294	             15444	               127	               -20	             18804
+26.800	;	            118304	             15431	               120	               -20	             20504
+26.899	;	            118105	             15453	               123	               -20	             20557
+27.000	;	            118185	             15504	               120	               -20	             20603
+27.100	;	            118113	             15487	               125	               -20	             20584
+27.200	;	            118192	             15471	               123	               -20	             20641
+27.300	;	            118143	             15489	               124	               -20	             20620
+27.399	;	            118200	             15480	               124	               -20	             20599
+27.500	;	            118147	             15553	               123	               -20	             20605
+27.600	;	            118248	             15524	               122	               -20	             19956
+27.700	;	            118320	             15484	               124	               -20	             18306
+27.800	;	            118305	             15477	               122	               -20	             16778
+27.899	;	            118378	             15493	               122	               -20	             15327
+28.000	;	            118117	             15476	               122	               -20	             13674
+28.100	;	            118376	             15519	               120	               -20	             12023
+28.200	;	            118119	             15510	               122	               -20	             10596
+28.300	;	            118323	             15518	               120	               -20	             10441
+28.400	;	            118097	             15526	               122	               -20	             10328
+28.500	;	            118295	             15499	               122	               -20	             10197
+28.600	;	            118093	             15532	               122	               -20	             10092
+28.700	;	            118343	             15526	               122	               -20	             10026
+28.800	;	            118130	             15460	               126	               -20	             10047
+28.900	;	            118251	             15437	               123	               -20	             10118
+29.000	;	            118189	             15516	               124	               -20	             10267
+29.100	;	            118168	             15473	               128	               -20	             10410
+29.200	;	            118185	             15543	               129	               -20	             11365
+29.300	;	            118054	             15478	               124	               -20	             13032
+29.400	;	            118092	             15484	               124	               -20	             14632
+29.500	;	            118153	             15497	               126	               -20	             16199
+29.600	;	            118127	             15453	               123	               -20	             17225
+29.700	;	            118102	             15500	               125	               -20	             16490
+29.800	;	            118098	             15420	               123	               -20	             14311
+29.900	;	            118325	             15526	               121	               -20	             11329
+30.000	;	            118124	             15481	               129	               -20	              8013
+30.100	;	            118323	             15492	               128	               -20	              5002
+30.200	;	            118041	             15448	               128	               -20	              3569
+30.300	;	            118236	             15472	               122	               -20	              5295
+30.400	;	            118165	             15419	               124	               -20	              8293
+30.500	;	            117998	             15394	               124	               -20	             11584
+30.600	;	            118268	             15444	               123	               -20	             14666
+30.700	;	            118034	             15402	               121	               -20	             18054
+30.800	;	            118099	             15466	               125	               -20	             20308
+30.900	;	            118125	             15421	               124	               -20	             20536
+31.000	;	            118192	             15513	               120	               -20	             20548
+31.100	;	            118221	             15494	               127	               -20	             20546
+31.200	;	            118035	             15475	               122	               -20	             20553
+31.300	;	            118306	             15445	               127	               -20	             20585
+31.400	;	            118248	             15480	               127	               -20	             20586
+31.500	;	            117995	             15447	               128	               -20	             20518
+31.600	;	            118264	             15418	               124	               -20	             20552
+31.700	;	            118052	             15423	               124	               -20	             20426
+31.800	;	            118235	             15405	               123	               -20	             19484
+31.900	;	            118264	             15394	               122	               -20	             18321
+32.000	;	            118285	             15406	               122	               -20	             17488
+32.100	;	            118272	             15382	               120	               -20	             16802
+32.200	;	            118231	             15389	               125	               -20	             16129
+32.300	;	            118155	             15457	               125	               -20	             15412
+32.400	;	            118174	             15416	               121	               -20	             15446
+32.500	;	            118297	             15456	               123	               -20	             16147
+32.600	;	            118078	             15388	               120	               -20	             16432
+32.700	;	            118273	             15481	               124	               -20	             16599
+32.800	;	            118112	             15446	               122	               -20	             16609
+32.900	;	            118283	             15431	               121	               -20	             16479
+33.000	;	            118113	             15373	               122	               -20	             16142
+33.100	;	            118375	             15483	               123	               -20	             15500
+33.200	;	            118052	             15449	               127	               -20	             15506
+33.300	;	            118066	             15420	               126	               -20	             16163
+33.400	;	            118343	             15432	               122	               -20	             16836
+33.500	;	            118217	             15461	               125	               -20	             17499
+33.600	;	            118078	             15402	               125	               -20	             18244
+33.700	;	            118249	             15475	               120	               -20	             17945
+33.800	;	            118076	             15421	               122	               -20	             15618
+33.900	;	            118358	             15493	               122	               -20	             12527
+34.000	;	            118299	             15486	               124	               -20	              9288
+34.100	;	            118279	             15503	               120	               -20	              6685
+34.200	;	            118293	             15500	               126	               -20	              5916
+34.300	;	            118099	             15492	               125	               -20	              6779
+34.400	;	            118290	             15508	               121	               -20	              9520
+34.500	;	            118117	             15478	               121	               -20	             12817
+34.600	;	            118293	             15479	               124	               -20	             15944
+34.700	;	            118300	             15421	               121	               -20	             19238
+34.800	;	            118247	             15450	               122	               -20	             20573
+34.900	;	            118125	             15472	               122	               -20	             20565
+35.000	;	            118332	             15510	               124	               -20	             20587
+35.100	;	            118155	             15444	               124	               -20	             20570
+35.200	;	            118286	             15493	               124	               -20	             19557
+35.300	;	            118298	             15406	               122	               -20	             18224
+35.400	;	            118344	             15425	               126	               -20	             17393
+35.500	;	            118327	             15496	               127	               -20	             16630
+35.600	;	            118282	             15508	               122	               -20	             15933
+35.700	;	            118215	             15534	               123	               -20	             15184
+35.800	;	            118256	             15460	               123	               -20	             15193
+35.900	;	            118200	             15494	               122	               -20	             15937
+36.000	;	            118370	             15529	               121	               -20	             16396
+36.100	;	            118255	             15529	               125	               -20	             16621
+36.200	;	            118331	             15563	               122	               -20	             16801
+36.300	;	            118171	             15547	               122	               -20	             16874
+36.400	;	            118251	             15478	               125	               -20	             16900
+36.500	;	            118167	             15512	               125	               -20	             16863
+36.600	;	            118091	             15496	               126	               -20	             16759
+36.700	;	            118228	             15467	               126	               -20	             16545
+36.800	;	            118324	             15493	               123	               -20	             16086
+36.900	;	            118234	             15528	               125	               -20	             15680
+37.000	;	            118279	             15526	               122	               -20	             16154
+37.100	;	            118140	             15482	               122	               -20	             16739
+37.200	;	            118151	             15434	               123	               -20	             17377
+37.300	;	            118235	             15467	               125	               -20	             18092
+37.400	;	            118092	             15458	               122	               -20	             18973
+37.500	;	            118276	             15462	               120	               -20	             20255
+37.600	;	            118050	             15418	               125	               -20	             20223
+37.700	;	            118211	             15481	               122	               -20	             17973
+37.800	;	            118142	             15400	               123	               -20	             14693
+37.900	;	            118282	             15422	               120	               -20	             11608
+38.000	;	            118288	             15428	               125	               -20	              8348
+38.100	;	            118135	             15446	               120	               -20	              5174
+38.200	;	            118037	             15396	               123	               -20	              1829
+38.300	;	            118328	             15451	               120	               -20	               153
+38.400	;	            118272	             15436	               122	               -20	               109
+38.500	;	            118030	             15380	               122	               -20	                98
+38.600	;	            118147	             15418	               120	               -20	               100
+38.700	;	            118288	             15408	               124	               -20	                98
+38.800	;	            118223	             15449	               122	               -20	               102
+38.900	;	            118121	             15403	               123	               -20	                97
+39.000	;	            118288	             15412	               120	               -20	               101
+39.100	;	            118244	             15432	               124	               -20	               106
+39.200	;	            118099	             15464	               125	               -20	                97
+39.300	;	            118258	             15482	               123	               -20	               104
+39.400	;	            118098	             15498	               122	               -20	               113
+39.500	;	            118266	             15458	               121	               -20	               106
+39.600	;	            118142	             15402	               125	               -20	               110
+39.700	;	            118103	             15410	               121	               -20	               109
+39.800	;	            118372	             15448	               122	               -20	               103
+39.900	;	            118237	             15486	               125	               -20	               103
+40.000	;	            118148	             15479	               124	               -20	               109
+### End of NICOS data file Zaktuna_Adjustment_25663.dat
