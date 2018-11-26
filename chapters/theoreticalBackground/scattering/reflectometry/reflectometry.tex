@@ -5,8 +5,11 @@
   \subsection{Reflectometry}
     \label{sec:theoreticalBackground:scattering:reflectometry}
     \label{ch:appendix:numericalMethods:parrat}
-    % Nanoparticles that are deposited on a substrate self-assemble to higher order structures under certain conditions that are elaborated in later chapters of this work.
-    % It is of high interest to study the physical properties of the ensemble and whether they differ from the single particle properties and how this depends on the superstructure.
+    \begin{figure}
+      \centering
+      \includegraphics{scatteringTheory_reflectometryGeometry}
+      \caption{\label{fig:theoreticalBackground:scattering:reflectometry:geometry}Geometry of a reflectometry experiment. The specular reflection  is measured and the reflectivity is then studied with respect to $q$.}
+    \end{figure}
     A technique to study the vertical structure of a thin sample on a substrate is reflectometry.
     Here, the scattered intensity is measured under specular condition, whereby the scattering vector is parallel to the $\mathit{z}$-axis.
     In the previously discussed Born approximation of \refeq{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionIntegralOverPotential}, this has the effect that the integral over the scattering potential reduces to a one dimensional problem
@@ -33,11 +36,11 @@
     The sample is considered to be semi-infinite, meaning for $z \rightarrow -\infty$ the SLD has the value of the substrate and it vanishes at a finite height $z > z_0$.
     The surface of the substrate is set to $z \eq 0$ in this discussion.
 
-    Using that the energy is given by the wave vector of the incoming neutron $k_{z,\,\mathrm{in}}$ outside the material for elastic scattering, the Schr\"odinger equation writes as an equation that determines the wave vector of the neutron inside the sample at height $z$
+    Using that the energy is given by the wave vector of the incoming neutron $k_{i,\,z}$ outside the material for elastic scattering, the Schr\"odinger equation writes as an equation that determines the wave vector of the neutron inside the sample at height $z$
     \begin{align}
-      k_z^2 \eq   k_{z,\,\mathrm{in}}^2 - 4 \pi  \mathrm{SLD}(z).
+      k_z^2 \eq   k_{i,\,z}^2 - 4 \pi  \mathrm{SLD}(z).
     \end{align}
-    $k_{z,\,\mathrm{in}}$ relates to the scattering vector magnitude in reflectometry geometry by the simple relation $q \eq 2 k_{z,\,\mathrm{in}}$.
+    $k_{z,\,\mathrm{in}}$ relates to the scattering vector magnitude in reflectometry geometry by the simple relation $q \eq 2 k_{i,\,z}$.
     Thus by variation of $q$, the length scales of the wave vectors are tuned for the given SLD.
     For small $q$ the wave vector inside the medium becomes purely imaginary, which is the case for
     \begin{align}
@@ -48,7 +51,7 @@
     Above this critical value, the reflectivity decreases rapidly, where the course of the curve allows to deduce on the internal structure of the sample.
 
     For numerical determination of the reflectivity, any potential can be discretized to a slab model, where each slab has a thickness $d_i$, a scattering length density $\mathrm{SLD}_i$ and a surface roughness $\sigma_{i,i+1}$ as parameter.
-    Parrat's algorithm essentially steps iteratively from the substrate of the sample up to the surface and calculates the total reflectivity amplitude by summing the contribution of all paths the neutron can take to reflect.
+    Parratt's algorithm essentially steps iteratively from the substrate of the sample up to the surface and calculates the total reflectivity amplitude by summing the contribution of all paths the neutron can take to reflect.
 
     Starting at a model that only consist of a substrate, the problem is equivalent to that of the introductory quantum mechanics problem of a step potential, where the amplitudes for reflection and transmission between two layers with wave vector $k_i$ and $k_j$ are derived as the Fresnel equations
     \begin{align}
