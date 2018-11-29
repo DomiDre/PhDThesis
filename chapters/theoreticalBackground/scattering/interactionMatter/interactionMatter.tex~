@@ -5,9 +5,9 @@
 \begin{document}
   \subsection{Interaction of X-rays and Neutrons with Matter}\label{sec:theoreticalBackground:scattering:interactionWithMatter}
     To calculate the differential cross section, it is necessary to know how the scattering wave and the sample interact with each other, which is represented by the potential $V$.
-    Even though in the previous chapter, the differential cross section is derived for quantum mechanical particles, it is shown in \refapp{ch:appendix:calculations:scatteringTheoryElectromagneticWaves} that a similar formula results for X-rays from classical electrodynamics.
-    In the case of X-rays, the dominant coupling to consider is the electromagnetic interaction of the X-ray photons with the electron shells of the atoms making up the material.
-    When an electron cloud is considered to oscillate in phase with the incoming X-ray, the differential cross section is modelled as
+    Even though in the previous chapter, the differential cross section is derived for quantum mechanical particles, it is shown in \refapp{ch:appendix:calculations:scatteringTheoryElectromagneticWaves} that a similar formula results for x-rays from classical electrodynamics.
+    In the case of x-rays, the dominant coupling to consider is the electromagnetic interaction of the x-ray photons with the electron shells of the atoms making up the material.
+    When an electron cloud is considered to oscillate in phase with the incoming x-ray, the differential cross section is modelled as
     \begin{align}
       \frac{\dint \sigma}{\dint \Omega} \eq |\hat{e}_i \cdot \hat{e}_f|^2 \biggl| \int \dint V e^{-i \vec{q} \cdot \vec{r}}  r_e \rho_e (\vec{r}) \biggr|^2.
     \end{align}
@@ -16,7 +16,7 @@
     In general the electronic structure and response of materials is very complex and highly dependant on the energy of the incoming photon.
     In the derivation of the formula above it is assumed that the electron cloud follows the incoming wave via Newton's law $\vec{F} \eq m \vec{a} \eq -e\vec{E}$.
     This neglects resonance, absorption and dispersion effects.
-    Those become important whenever the energy of X-ray is close to electronic transitions in the material or is high enough that it  ejects electrons from their respective positions.
+    Those become important whenever the energy of x-ray is close to electronic transitions in the material or is high enough that it  ejects electrons from their respective positions.
     However in the frame of this work, such effects are negligible and further discussions about it can be found in literature \cite{AlsNielsen_2011_Eleme}.
 
     For neutrons on the other hand, two fundamental interactions with a material exist.
@@ -49,8 +49,8 @@
       \frac{\dint \sigma}{\dint \Omega} \eq \bigg| \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}} \rho (\vec{r}) \bigg|^2.
       \label{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionBornApproximation}
     \end{align}
-    It is interesting to note here that for X-rays, up to the polarization factor, the same formula applies when the X-ray scattering length density is identified from the electron density as $\rho \eq r_e \rho_e$.
-    Therefore, every following discussion starting from this equation includes both the scattering of X-rays from the electron clouds of matter and the scattering of neutrons from the nuclear structure.
+    It is interesting to note here that for x-rays, up to the polarization factor, the same formula applies when the x-ray scattering length density is identified from the electron density as $\rho \eq r_e \rho_e$.
+    Therefore, every following discussion starting from this equation includes both the scattering of x-rays from the electron clouds of matter and the scattering of neutrons from the nuclear structure.
 
     The magnetic scattering of neutrons from the magnetic structure of the material can be included by adding a Zeeman potential to the Hamiltonian
     \begin{align}

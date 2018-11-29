@@ -72,8 +72,8 @@
   A better estimate to quantify the average particle size and size distribution in a dispersion is given by small-angle scattering.
   As the particle beam, which has an extension of a few $100 \unitmu$, hits an volume of the dispersion that typically contains $\approx \mathcal{O} (10^{12})$ particles, the estimated parameters from modelling small-angle scattering data is much more representative for the average particle in dispersion than electron microscopy.
 
-  Small-angle x-ray scattering (SAXS) experiments were performed on both samples at the \textsc{GALAXI} instrument in the \textsc{Forschungszentrum J\"ulich}, which is described in \refapp{ch:appendix:lss:galaxi}.
-  Additionally, small-angle neutron scattering (SANS) experiments were performed on the same nanoparticles at the \textsc{D33} instrument at the \textsc{Institute Laue-Langevin} that is described in \refapp{ch:appendix:lss:d33}.
+  Small-angle x-ray scattering (SAXS) experiments were performed on both samples at the \textsc{GALAXI} instrument in the \textsc{Forschungszentrum J\"ulich}, which is described in \refch{ch:lss:galaxi}.
+  Additionally, small-angle neutron scattering (SANS) experiments were performed on the same nanoparticles at the \textsc{D33} instrument at the \textsc{Institute Laue-Langevin} that is described in \refch{ch:lss:d33}.
   To determine the size of the particles, the data from both experiments is fitted simultaneously to one model.
   The particles are modelled as spherical magnetite particles with a brush of oleic acid coated around them.
   The particles were dispersed in cyclohexane for the SAXS experiment, and in deuterated toluene for the SANS experiment.

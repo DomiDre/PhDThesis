@@ -3,7 +3,7 @@
   \renewcommand{\thisPath}{\main/chapters/monolayers/structureModel/intro}
 
 \begin{document}
-  The long-range order of nanoparticle arrays over large areas is quantitatively studied using X-ray and neutron scattering experiments.
+  The long-range order of nanoparticle arrays over large areas is quantitatively studied using x-ray and neutron scattering experiments.
   Whereas SEM is a method to obtain a local image of the structure, it leaves the possibility that the actual sample still has great variations across the substrate, which might have been overlooked.
   Also microscopy only gives an idea of the surface of the structure, while to study the vertical structure it becomes necessary to break the sample to image the cross-section locally.
   From grazing-incidence small-angle scattering and reflectometry experiments on the other hand the full average three dimensional information is obtained unbiased and non-destructive from a large area of the sample, which will be discussed extensively in the following.
@@ -11,7 +11,7 @@
   Magnetic monolayers from nanoparticles prepared by the acetylacetonate route are discussed and the used models to describe the square array structure are introduced.
   The results of the nuclear structure of the sample will then be a prerequisite to study the magnetic structure of the samples in the following section.
   The extensive study of the vertical structure is performed on monolayers prepared from the previously discussed nanocubes Ac-CoFe-C, which are also used in \refch{ch:doublelayers} to discuss double layer structures.
-  The lateral structure of monolayers, studied by grazing-incidence small-angle X-ray \& neutron scattering (GISAXS \& GISANS) is discussed for a second batch of nanocubes Ac-CoFe-C-2, which were prepared from acetylacetonates in a similar synthesis procedure.
+  The lateral structure of monolayers, studied by grazing-incidence small-angle x-ray \& neutron scattering (GISAXS \& GISANS) is discussed for a second batch of nanocubes Ac-CoFe-C-2, which were prepared from acetylacetonates in a similar synthesis procedure.
   The same characterization by TEM, SAXS, SANS(POL), XRD and VSM has been done for Ac-CoFe-C-2 analogue to \refsec{sec:monolayers:nanoparticle:structuralCharacterization} and can be found in \refapp{app:characterizationAcCoFeC2}.
 
   \begin{figure}[tb]

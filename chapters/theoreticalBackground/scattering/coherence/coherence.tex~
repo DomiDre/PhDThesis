@@ -4,7 +4,7 @@
 \begin{document}
   \subsection{Coherence}\label{sec:theoreticalBackground:scattering:CoherenceInstrumentalResolution}
 
-    In the derived theory, X-ray and neutrons are infinitely extending plane waves of a single wavelength $\lambda$ and the complete sample is radiating spherical waves in phase with the incoming wave with the scattering angle $\theta$.
+    In the derived theory, x-ray and neutrons are infinitely extending plane waves of a single wavelength $\lambda$ and the complete sample is radiating spherical waves in phase with the incoming wave with the scattering angle $\theta$.
     In reality, however, the beam has a finite width defined by collimation, which leads to a divergence of the beam of $\Delta \theta$ and the beam is not perfectly monochromatic, but has a finite distribution of wavelengths $\Delta \lambda$.
     This leads to a superposition of multiple patterns in a real experiment and possibly to a loss of information due to the finite instrumental resolution that destroys the interference pattern.
     To quantify what area of the sample is radiating in phase, such that the interference is not destroyed, the coherence of the beam needs to be evaluated.

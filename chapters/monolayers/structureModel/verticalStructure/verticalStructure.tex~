@@ -169,7 +169,7 @@
 
   \reffig{fig:monolayers:structure:XRR:ML-Ac-CoFe-C-WithSpacer} shows both XRR and NR data measured for ML-Ac-CoFe-C.
   The NR data is measured at the reflectometer D17 at the Institute Laue-Langevin in time-of-flight mode.
-  The detailed description of the neutron reflectometer can be found in detail in \refapp{ch:appendix:lss:d17}.
+  The detailed description of the neutron reflectometer can be found in detail in \refch{ch:lss:d17}.
   The shown reflectometry data is measured after zero field cooling at $\mathrm{T} \eq 5 \unit{K}$ with polarized neutrons at a guide field of $B \eq 10 \unit{mT}$.
   Further data taken for ML-Ac-CoFe-C at varied magnetic fields after field and zero-field cooling is discussed in \refsec{sec:monolayers:magneticStructure}.
 

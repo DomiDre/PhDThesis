@@ -31,7 +31,7 @@
   Additional to the described model property parameters, instrumental parameters are included in the model: the instrumental resolution needs to be considered either by including angular divergence and energy resolution or by using the resolution function that is known from the instrument.
   Also as the sample alignment has finite precision, a small linear shift in $q$ is allowed in the model.
 
-  The x-ray reflectometry data has been measured at ambient conditions on an Bruker D8 instrument at the \textsc{Forschungszentrum J\"ulich}, which is described in \refapp{app:additionalExperimentalTechniques:xrr}.
+  The X-ray reflectometry data has been measured at ambient conditions on an Bruker D8 instrument at the \textsc{Forschungszentrum J\"ulich}, which is described in \refapp{app:additionalExperimentalTechniques:xrr}.
   After definition of the model and its parameters, the parameter values are refined by applying the Levenberg-Marquardt algorithm \cite{Marquardt_1963_Analgo}, to minimize the figure of merit $\mathrm{FOM}$, which is defined here for reflectometry as
   \begin{align}
     \mathrm{FOM} \eq \sum_{q_i} \biggl( \frac{\log(I) - \log(I_\mathrm{model})}{\sigma_{I}} I\biggr)^2.
@@ -46,7 +46,7 @@
   \end{figure}
   \begin{table}[ht]
     \centering
-    \caption{\label{tab:monolayers:structure:emptySiliconWafer}Parameter values for the model used to describe the x-ray reflectometry of an empty wafer, shown in \reffig{fig:monolayers:structure:emptySiliconWafer}.}
+    \caption{\label{tab:monolayers:structure:emptySiliconWafer}Parameter values for the model used to describe the X-ray reflectometry of an empty wafer, shown in \reffig{fig:monolayers:structure:emptySiliconWafer}.}
     \begin{tabular}{l | l | l}
       \hline
       Model&
@@ -94,7 +94,7 @@
   Adding another slab, to allow for a silicon dioxide layer has shown no significant improvement of the figure of merit.
   However, closer inspection of the model and data on the right of \reffig{fig:monolayers:structure:emptySiliconWafer}, shows  with the additional layer, the low intensity data at high $q$ are described more naturally within the model and without the need of an instrumental background parameter.
   Within both models, the SLD of the silicon substrate was taken from the literature value of silicon that is determined for a density of $\rho_{\ch{Si}} \eq 2.329 \unit{g \, mL^{-1}}$ \cite{Lide_2004_Handb}.
-  The SLD obtained for the second layer is significantly below that of \ch{SiO2} ($\mathrm{SLD}_{\ch{SiO2}}^\mathrm{x-ray, \,Lit.} \eq 22.724 \unit{10^{-6} \angstrom^{-2}}$).
+  The SLD obtained for the second layer is significantly below that of \ch{SiO2} ($\mathrm{SLD}_{\ch{SiO2}}^\mathrm{X-ray, \,Lit.} \eq 22.724 \unit{10^{-6} \angstrom^{-2}}$).
   This might hint to a highly porous layer or that the additional layer is not actually \ch{SiO2}.
   As the confidence in the obtained properties of the surface layer are vague, the parameters are kept variable in the model fitting process of the monolayer.
 
@@ -109,7 +109,7 @@
 
   \begin{table}[ht]
     \centering
-    \caption{\label{tab:monolayers:structure:ML-Ac-CoFe-C-WithSpacer}Model parameters used to describe x-ray and neutron reflectometry of ML-Ac-CoFe-C used for the description in \reffig{fig:monolayers:structure:XRR:ML-Ac-CoFe-C-WithSpacer}.}
+    \caption{\label{tab:monolayers:structure:ML-Ac-CoFe-C-WithSpacer}Model parameters used to describe X-ray and neutron reflectometry of ML-Ac-CoFe-C used for the description in \reffig{fig:monolayers:structure:XRR:ML-Ac-CoFe-C-WithSpacer}.}
     \begin{tabular}{l | c | c}
       \hline
       &
@@ -187,14 +187,14 @@
 
   For the $\ch{SiO2}$ layer, the SLD obtained from XRR is scaled to the neutron SLD according to the literature values of the \ch{SiO2} by
   \begin{align}
-    \mathrm{SLD}_{\ch{SiO2}}^{\mathrm{neutron} }\eq \frac{\mathrm{SLD}_{\ch{SiO2}}^{\mathrm{neutron, \,Lit.}}}{\mathrm{SLD}_{\ch{SiO2}}^{\mathrm{x-ray, \,Lit.}}} \mathrm{SLD}_{\ch{SiO2}}^{\mathrm{x-ray}},
+    \mathrm{SLD}_{\ch{SiO2}}^{\mathrm{neutron} }\eq \frac{\mathrm{SLD}_{\ch{SiO2}}^{\mathrm{neutron, \,Lit.}}}{\mathrm{SLD}_{\ch{SiO2}}^{\mathrm{X-ray, \,Lit.}}} \mathrm{SLD}_{\ch{SiO2}}^{\mathrm{X-ray}},
   \end{align}
   where the literature value for the SLD of $\ch{SiO2}$ for neutrons is given by $\mathrm{SLD}_{\ch{SiO2}}^{\mathrm{neutron, \,Lit.}} \eq 4.186 \cdot \unit{10^{-6} \angstrom^{-2}}$.
 
-  The SLD and thickness of the lower OA layer are slightly off from the literature values $\mathrm{SLD}_{\mathrm{OA}}^{\mathrm{x-ray, \,Lit.}} \eq 8.52 \cdot \unit{10^{-6} \angstrom^{-2}}$ and $\mathrm{SLD}_{\mathrm{OA}}^{\mathrm{neutron, \,Lit.}} \eq 0.078 \cdot \unit{10^{-6} \angstrom^{-2}}$.
+  The SLD and thickness of the lower OA layer are slightly off from the literature values $\mathrm{SLD}_{\mathrm{OA}}^{\mathrm{X-ray, \,Lit.}} \eq 8.52 \cdot \unit{10^{-6} \angstrom^{-2}}$ and $\mathrm{SLD}_{\mathrm{OA}}^{\mathrm{neutron, \,Lit.}} \eq 0.078 \cdot \unit{10^{-6} \angstrom^{-2}}$.
   This hints to the possibility that the oleic acid layer is not pure phased but also might contain contaminations.
 
-  In summary, the reflectometry data of both x-ray and neutron reflectometry can be fit by the same model of an homogeneous thin layer structure, thus approving the monolayer property on a large scale.
+  In summary, the reflectometry data of both X-ray and neutron reflectometry can be fit by the same model of an homogeneous thin layer structure, thus approving the monolayer property on a large scale.
   The roughness parameters are reasonably small and in case of the nanocube/OA interface comparable to the size distribution of the edge length.
   The determined packing density speaks for a densely packed structure.
   To further quantify the long-ranged in-plane order, grazing-incidence small-angle scattering experiments are discussed and simulated in the following.

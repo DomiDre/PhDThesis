@@ -3,7 +3,7 @@
 \renewcommand{\thisPath}{\main/chapters/theoreticalBackground/scattering/introduction}
 \begin{document}
   \subsection{Scattering Theory}\label{sec:theoreticalBackground:scattering:scatteringTheory}
-    In general, scattering theory describes the scattering of particles, \textit{e.g.} neutrons or X-ray photons, from a scattering center as depicted in \reffig{fig:theoreticalBackground:scattering:scatteringTheory:scatteringProcess}. An incoming wave $\vec{k}_i$ with defined direction can interact with a scattering center and due to this deviate from its straight path, exiting as outgoing wave $\vec{k}_o$.
+    In general, scattering theory describes the scattering of particles, \textit{e.g.} neutrons or x-ray photons, from a scattering center as depicted in \reffig{fig:theoreticalBackground:scattering:scatteringTheory:scatteringProcess}. An incoming wave $\vec{k}_i$ with defined direction can interact with a scattering center and due to this deviate from its straight path, exiting as outgoing wave $\vec{k}_o$.
     If energy is conserved ($|\vec{k}_i| = |\vec{k}_o|$) the process is called elastic and otherwise inelastic.
     The vector describing the change from one momentum to the other is noted by
     \begin{align}
@@ -29,7 +29,7 @@
       \bigg(\frac{\hat{p}^2}{2m} + V \bigg) \ket{\psi} \eq E \ket{\psi},
     \end{align}
     with the boundary condition $V(\vec{r}) \eq 0$ for $\vec{r}$ outside the scattering region.
-    For electromagnetic waves such as X-rays, the propagation and interaction with matter is described best by quantum electrodynamics.
+    For electromagnetic waves such as x-rays, the propagation and interaction with matter is described best by quantum electrodynamics.
     For most cases, classical electrodynamics is however sufficient and in \refapp{ch:appendix:calculations:scatteringTheoryElectromagneticWaves} it is shown that the scattering theory from Maxwell's equations maps to the same type of problem as is discussed in the following for the Schr\"odinger equation.
 
     In scattering theory, it is assumed that the scattering particles are non-interacting among themselves, which is a well approximation for photons and neutrons.
