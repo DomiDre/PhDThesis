@@ -86,12 +86,12 @@
 
     Combining all effects into a single equation for the variance of the scattering vector, it can be estimated by
     \begin{align}
-      \begin{split}
+      \begin{split}\label{eq:methods:sans:instrumentalResolution}
         \sigma_q^2
         &\eq
           \biggl( \frac{2\pi}{\lambda} \biggr)^2 \biggl[ \biggl( \frac{w_\mathrm{c}}{2 L_\mathrm{CSD}} \biggr)^2 +
-          \biggl( \frac{L_\mathrm{SSD} + L_\mathrm{CSD}}{L_\mathrm{SSD}} \frac{w_\mathrm{s}}{2 L_\mathrm{CSD}} \biggr)^2 +
-          \biggl( \frac{d_\mathrm{pix}}{\sqrt{12} L_\mathrm{CSD}} \biggr)^2 \biggr] \\
+          \biggl( \frac{L_\mathrm{SSD} + L_\mathrm{CSD}}{L_\mathrm{CSD}} \frac{w_\mathrm{s}}{2 L_\mathrm{SSD}} \biggr)^2 +
+          \biggl( \frac{d_\mathrm{pix}}{\sqrt{12} L_\mathrm{SSD}} \biggr)^2 \biggr] \\
         &\hspace{1cm}+ \frac{1}{6} \biggl( \frac{\Delta \lambda}{\lambda} \biggr)^2 q^2 .
       \end{split}
     \end{align}
