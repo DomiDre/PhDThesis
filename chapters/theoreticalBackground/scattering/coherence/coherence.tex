@@ -2,7 +2,8 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 \renewcommand{\thisPath}{\main/chapters/theoreticalBackground/scattering/coherence}
 \begin{document}
-  \subsection{Coherence \& Instrumental Resolution}\label{sec:theoreticalBackground:scattering:CoherenceInstrumentalResolution}
+  \subsection{Coherence}\label{sec:theoreticalBackground:scattering:CoherenceInstrumentalResolution}
+
     In the derived theory, x-ray and neutrons are infinitely extending plane waves of a single wavelength $\lambda$ and the complete sample is radiating spherical waves in phase with the incoming wave with the scattering angle $\theta$.
     In reality, however, the beam has a finite width defined by collimation, which leads to a divergence of the beam of $\Delta \theta$ and the beam is not perfectly monochromatic, but has a finite distribution of wavelengths $\Delta \lambda$.
     This leads to a superposition of multiple patterns in a real experiment and possibly to a loss of information due to the finite instrumental resolution that destroys the interference pattern.
@@ -29,9 +30,10 @@
     The three coherence length scales define a coherence volume, for which a sample radiates in phase and produces interference pattern.
     This has to be kept in mind when designing models for the evaluation of scattering experiments, as over larger length scales the contributions add incoherently, and instead of the amplitudes, the intensities need to be added.
 
-    To include furthermore the smearing of the intensities due to the wavelength spread and beam divergence, an effective spread in the wave vector is obtained by error propagation
-    \begin{align}
-      \frac{\Delta q}{q} \eq \sqrt{\biggl( \frac{\Delta \lambda}{\lambda} \biggr)^2 + \biggl( \cot (\theta) \Delta \theta \biggr)^2}.
-    \end{align}
-    The effective smearing is modelled by a Gaussian function with width $\Delta q$ that is convoluted with the calculated model of the differential cross section for a given $q$ range.
+    % \& Instrumental Resolution
+    % To include furthermore the smearing of the intensities due to the wavelength spread and beam divergence, an effective spread in the wave vector is obtained by error propagation
+    % \begin{align}
+    %   \frac{\Delta q}{q} \eq \sqrt{\biggl( \frac{\Delta \lambda}{\lambda} \biggr)^2 + \biggl( \cot (\theta) \Delta \theta \biggr)^2}.
+    % \end{align}
+    % The effective smearing is modelled by a Gaussian function with width $\Delta q$ that is convoluted with the calculated model of the differential cross section for a given $q$ range.
 \end{document}
