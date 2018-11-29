@@ -26,8 +26,8 @@
     \vspace{2cm}
 
 
-    \begin{table}[ht]
-      \begin{tabularx}{\textwidth}{X}\hline\end{tabularx}
+    \begin{table}[h]
+    \begin{tabularx}{\textwidth}{X}\hline\end{tabularx}
     \end{table}
 
     \normalsize{Köln, 2019}\\

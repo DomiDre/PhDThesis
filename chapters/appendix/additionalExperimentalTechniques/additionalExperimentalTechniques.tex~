@@ -6,7 +6,7 @@
 \chapter{Laboratory Instruments}
   \section{PPMS Evercool II - Vibrating Sample Magnetometry}
   \label{app:additionalExperimentalTechniques:vsm}
-    \begin{figure}[ht]
+    \begin{figure}[h]
       \centering
       \includegraphics[width=0.7\textwidth]{instruments_ppms}
       \caption{\label{fig:appendix:instruments:ppms}The physical property measurement system (PPMS) Evercool II, which is used to measure the macroscopic magnetization properties by vibrating sample magnetometry.}
@@ -25,7 +25,7 @@
 
   \section{Bruker D8 Advanced - X-Ray Reflectometry}
   \label{app:additionalExperimentalTechniques:xrr}
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{instruments_brukerD8}
     \caption{\label{fig:appendix:instruments:brukerD8}Bruker D8 instrument, which can be used for x-ray reflectometry and x-ray diffraction.}
@@ -36,7 +36,7 @@
   At the source and detector, slits of $0.2 \unit{mm}$ width are installed.
   Additionally, absorber materials can be placed in the beam path electronically, in case the the photon count on the detector is larger than the electronics can handle, \eg when the direct beam is measured.
 
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics{appendix_instruments_brukerD8DirectBeam}
     \caption{\label{fig:appendix:instruments:brukerD8DirectBeam}Direct beam scan of the Bruker D8 instrument at a beam slit size of $0.2 \unit{mm}$, modelled by a gaussian function to estimate the divergence.}
@@ -53,7 +53,7 @@
 
   \section{Neon Zeiss 40 - Scanning Electron Microscopy}
   \label{app:additionalExperimentalTechniques:sem}
-  \begin{figure}[ht]
+  \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{instruments_brukerD8}
     \caption{\label{fig:appendix:instruments:SEM}Bruker D8 instrument which can be used for x-ray reflectometry and x-ray diffraction.}

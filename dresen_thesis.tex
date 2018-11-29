@@ -19,41 +19,42 @@
 
 \graphicspath{{\main/images/}}
 \begin{document}
-% Title page
-\frontmatter % start Roman numbering
-\include{\main/components/titlepage/titlepage}
+  % Title page
+  \frontmatter % start Roman numbering
+  \include{\main/components/titlepage/titlepage}
 
-\frontmatter % restart Roman numbering
-% Abstract
-\addchap*{Abstract}
-\subfile{\main/components/abstract/abstract}
-\addchap*{Kurzfassung}
-\subfile{\main/components/abstract/abstractGerman}
-% \end{abstract}
+  \frontmatter % restart Roman numbering
+  % Abstract
+  \addchap*{Abstract}
+    \subfile{\main/components/abstract/abstract}
+  \addchap*{Kurzfassung}
+    \subfile{\main/components/abstract/abstractGerman}
 
-\cleardoublepage
-\pdfbookmark{\contentsname}{toc} %add table of content to outlines
-\tableofcontents
+  \cleardoublepage
+  \pdfbookmark{\contentsname}{toc} %add table of content to outlines
+  \tableofcontents
 
-\mainmatter % starts Arabic numbering
+  \mainmatter % starts Arabic numbering
 
-\subfile{\main/chapters/introduction/introduction}
-\subfile{\main/chapters/theoreticalBackground/theoreticalBackground}
-\subfile{\main/chapters/looselyPackedNS/looselyPackedNS}
-\subfile{\main/chapters/monolayers/monolayers}
-\subfile{\main/chapters/doublelayers/doublelayers}
-\subfile{\main/chapters/colloidalCrystals/colloidalCrystals}
-\subfile{\main/chapters/summary/summary}
+  \subfile{\main/chapters/introduction/introduction}
+  \subfile{\main/chapters/theoreticalBackground/theoreticalBackground}
+  \subfile{\main/chapters/methods/methods}
+  \subfile{\main/chapters/largeScaleInstruments/largeScaleInstruments}
+  \subfile{\main/chapters/looselyPackedNS/looselyPackedNS}
+  \subfile{\main/chapters/monolayers/monolayers}
+  \subfile{\main/chapters/doublelayers/doublelayers}
+  \subfile{\main/chapters/colloidalCrystals/colloidalCrystals}
+  \subfile{\main/chapters/summary/summary}
 
-\bookmarksetupnext{level=part}
-\begin{appendices}
-  \subfile{\main/chapters/appendix/appendix}
-\end{appendices}
-\listoffigures
+  \bookmarksetupnext{level=part}
+    \begin{appendices}
+      \subfile{\main/chapters/appendix/appendix}
+    \end{appendices}
+  \bookmarksetup{startatroot}
 
-\listoftables
-
-\glsaddall
-\printglossary[nonumberlist]
-\printbibliography
+  \listoffigures
+  \listoftables
+  \glsaddall
+  \printglossary[nonumberlist]
+  \printbibliography
 \end{document}

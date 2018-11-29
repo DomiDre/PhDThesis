@@ -123,7 +123,7 @@
   \end{figure}
 
   To verify that the observed GISAXS pattern truly matches with the expectation of a square lattice paracrystal, the software package BornAgain \cite{Burle_2018_borna} is used and the parameters obtained from SAXS, XRR and the Lorentzian fit are entered to describe the sample.
-  The GISAXS experiment was performed at the GALAXI instrument and the instrumental parameters as described in \refch{ch:lss:galaxi} are set in the simulation accordingly.
+  The GISAXS experiment was performed at the GALAXI instrument and the instrumental parameters as described in \refapp{ch:appendix:lss:galaxi} are set in the simulation accordingly.
   The structure of the model is depicted in \reffig{fig:monolayers:structure:BornAgainParacrystal}, where the used parameters are listed in \reftab{tab:monolayers:structure:squareArrayParacrystal:BornAgainSimulation} and the simulated result is shown in \reffig{fig:monolayers:structure:ML-Ac-CoFe-C-2:GISAXS} (right).
 
   \begin{figure}[tb]

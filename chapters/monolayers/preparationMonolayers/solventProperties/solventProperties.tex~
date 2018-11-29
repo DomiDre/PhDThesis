@@ -31,7 +31,7 @@
     \reffig{fig:monolayers:preparation:solventVariation:sem} shows four exemplary combinations: One sample to show a combination of an alkene with a relatively low boiling point, 1-tetradecene, together with \textit{n}-hexane (ML-SV-HexTet), and three samples to show combinations of 1-octadecene with the varied alkanes \textit{n}-pentane (ML-SV-PenOct), \textit{n}-hexane (ML-SV-HexOct) and \textit{n}-heptane (ML-SV-HepOct).
     A result that is imminently visible from SEM is that an alkene with a relatively low boiling point leads to no order formation, whereas  combinations with 1-octadecene show for all alkanes local square order formation.
     For the variation of the alkane component, the local evaluation of SEM images shows only minor qualitative differences.
-    Thus to quantify the in-plane order, the selected samples are measured using grazing incidence small-angle X-ray scattering at GALAXI (\refch{ch:lss:galaxi}).
+    Thus to quantify the in-plane order, the selected samples are measured using grazing incidence small-angle X-ray scattering at GALAXI (\refapp{ch:appendix:lss:galaxi}).
     The resulting detector images are shown in \reffig{fig:monolayers:preparation:solventVariation:gisaxs}.
     As already visible in scanning electron microscopy, ML-SV-HexTet shows no significant structure factor along the Yoneda line, but mainly scattering coming from the form factor of the individual nanoparticles.
     For the other three shown samples, higher order alkanes show the emergence of structure peaks, where the relative intensity of the first order peak in the Yoneda line increases with the order of the alkane which is visible in the lower panels of \reffig{fig:monolayers:preparation:solventVariation:gisaxs}.

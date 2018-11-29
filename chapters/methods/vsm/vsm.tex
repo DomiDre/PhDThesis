@@ -1,0 +1,76 @@
+\providecommand{\main}{../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+
+\begin{document}
+  \section{Vibrating Sample Magnetometry (VSM)}
+    \label{ch:methods:vsm}
+    In vibrating sample magnetometry the macroscopic magnetization of a sample is determined by using Faraday's law of induction
+    \begin{align}
+      U \eq \frac{\dint }{\dint t} (BA),
+    \end{align}
+    which relates the voltage measured between the two ends of a wire loop with the change of the magnetic flux that passes through the wire with respect to time.
+    \begin{figure}[tb]
+      \centering
+      \includegraphics{appendix_methods_vsm_flux}
+      \includegraphics{appendix_methods_vsm_sample}
+      \caption{\label{fig:methods:vsm:flux}Depiction of Faraday's law of induction for a single current loop (left) with cross-section $A$ being passed by a magnetic field $B$. A change in passing magnetic field creates a voltage with a magnitude equal to the change in magnetic flux. VSM uses this principle by placing a sample within a coil and vibrating it to produce a electric signal from the sample magnetization (right).}
+    \end{figure}
+    The magnetic flux is given by the product of the magnetic field times the area that is enclosed by the wire loop as depicted for a single current loop in \reffig{fig:methods:vsm:flux} on the left.
+    Vibrating sample magnetometry uses this fundamental principle of electrodynamics to measure the magnetization by placing a small magnetic sample on a vibrating rod.
+    The sample is magnetized via a constant external field $B$ and vibrates periodically with a small amplitude and defined frequency $\omega$.
+    The periodic movement of the magnetized sample results in a slight periodic change of the magnetic field that passes through pickup coils placed around the sample and therefore by Faraday's induction law in a periodic voltage that can be measured and enhanced by a lock-in amplifier.
+    The lock-in amplifier filters the electric signal for the specific frequency by multiplying the electric signal with a known signal having the same frequency $\omega^\prime \eq \omega$.
+    By using a trigonometric identity, the mean signal measured over one period is thereby transformed to
+    \begin{align}
+      \begin{split}
+        \braket{A \sin(\omega t) \sin(\omega^\prime t)}
+          &\eq \braket{\frac{A}{2} \biggl[ \cos\Bigl((\omega - \omega^\prime) t \Bigr) - \cos\Bigl((\omega + \omega^\prime) t\Bigr) \biggr]}\\
+          &\eq \braket{\frac{A}{2} - \frac{A}{2} \cos(2\omega t)}\\
+          &\eq \frac{A}{2},
+      \end{split}
+    \end{align}
+    such that the amplitude of the electric signal at the vibration frequency is automatically obtained by measuring the mean electric signal after the lock-in amplifier.
+    By calibrating the instrument with a reference sample (typically a well characterized nickel sample), the electric signal is finally translated to a magnetic moment.
+    In this thesis, the macroscopic magnetization of the samples is measured with respect to an external magnetic field and with respect to the temperature using a PPMS Evercool II instrument described in \refapp{app:additionalExperimentalTechniques:vsm}.
+
+    The measured magnetization is the sum over all average magnetic moments components along the measurement coilset normal $\mu_{z,\,i}$  within the sample
+    \begin{align}
+      \tilde{M} \eq \sum_i \braket{\mu_{z,\,i}},
+    \end{align}
+    and is therefore in units $\unit{emu}$ (cgs) or $\unit{Am^2}$ (SI), where the conversion factor from one unit system to the other is $1 \unit{emu} \eq 10^{-3} \unit{Am^2}$.
+    To have the magnetization in comparable units across samples, it is normalized to the volume of the magnetic material $V_\mathrm{mag}$
+    \begin{align}
+      M \eq \frac{\tilde{M}}{V_\mathrm{mag}}.
+    \end{align}
+    The conversion from the unit $\unit{memu}$ typically measured on VSM instruments, to the volume magnetization unit $\unit{\frac{kA}{m}}$ is simple when the magnetic volume is given in $\unit{mm^3}$ or equivalently $\unit{\musf L}$
+    \begin{align}
+      1 \unit{\frac{memu}{\musf L}} \eq 1 \unit{\frac{kA}{m}}.
+    \end{align}
+
+    A difficulty arises, however, in determining the magnetic volume $V_\mathrm{mag}$ when measuring thin layers of magnetic nanoparticles or a nanoparticle dispersion.
+    It is possible to estimate the volume by trying to measuring the weight and estimating the density of the materials from bulk properties, but this is connected with large uncertainties.
+    As the single particle volume $V_\mathrm{p}$ can be accurately determined by a complementary experiment such as SAXS, one can express the magnetic volume by $V_\mathrm{mag} \eq N E[ V_\mathrm{p} ]$, where $N$ is the number of particles and $E[x]$ is the expectation value if a particle size distribution is involved.
+    Assuming the nanoparticle is in the superparamagnetic phase and non-interacting, the measured magnetization on VSM is given by a Langevin curve as described in \refapp{ch:appendix:calculations:magnetizationClassicalSpin}.
+    Including the particle size distribution for the magnetic moment, the volume magnetization for a sample of $N$ magnetic nanoparticles is
+    \begin{align}
+      M \eq \frac{N}{N E[ V_\mathrm{p} ]}
+      \int_{0}^{\infty} p(\mu; \bar{\mu}, \sigma_\mu) \mu \biggl( \coth\Bigl(\frac{\mu B}{k_B T} \Bigr) - \frac{k_B T}{\mu B} \biggr) \dint \mu,
+    \end{align}
+    where $\sigma_\mu \eq 3 \sigma_a$ is set to be three times the particle size distribution obtained from SAXS, assuming the magnetic moment scales proportionally with the volume and $p(\mu; \bar{\mu}, \sigma_u)$ is the normalized particle size distribution.
+    Thus by the Langevin model, the number of particles cancels in the equation and by defining the saturation magnetization as
+    \begin{align}
+      M_s \eq \frac{E[\mu]}{E[V_\mathrm{p}]},
+    \end{align}
+    only $\bar{\mu}$ remains as adjustable parameter.
+    In a realistic experiments, due to a weak signal from the small volume of the sample, the diamagnetic background from \ie sample substrate has to be included in the model, which can be done by adding a parameter for the susceptibility $\chi$.
+
+    Summarizing, this means by scaling the measured data to $E[V_\mathrm{p}]$, the saturation magnetization and magnetic moment are directly determined from fitting the model
+    \begin{align}
+      M \eq M_s
+      \frac{\int_{0}^{\infty} p(\mu; \bar{\mu}, \sigma_\mu) \mu \biggl( \coth\Bigl(\frac{\mu B}{k_B T} \Bigr) - \frac{k_B T}{\mu B} \biggr) \dint \mu}{E[\mu]} + \chi B.
+    \end{align}
+    % and $E[\mu]$ is the expectation value of the magnetic moment.
+
+% magnetic moment determined from a Langevin curve fit that includes size distribution effects
+
+\end{document}

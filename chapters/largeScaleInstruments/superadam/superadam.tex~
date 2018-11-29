@@ -1,0 +1,13 @@
+\providecommand{\main}{../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+
+\begin{document}
+  \section{SuperADAM}\label{ch:lss:superadam}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.7\textwidth]{appendix_instruments_superAdam}
+      \includegraphics[width=0.7\textwidth]{appendix_instruments_superAdamSetup}
+      \caption{\label{fig:lss:superadam}SuperADAM instrument at Institut Laue-Langevin, which is used for (polarized) neutron reflectometry \cite{Devishvili_2015_Super}.}
+    \end{figure}
+    The SuperADAM instrument bla bla
+\end{document}
