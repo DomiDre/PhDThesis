@@ -28,14 +28,17 @@
     Along the horizontal direction that is parallel to the magnetic field and the neutron spin, only pure nuclear scattering is measured, whereas on the horizontal direction the sum of both nuclear and magnetic scattering contributes.
     For an arbitrary angle between the scattering vector and the magnetic field $\alpha$, the intensity is thus described by the isotropic intensity from the nuclear form factor amplitude $F_\mathrm{nuc}$ and an anisotropic term that is a combination of both the nuclear and magnetic form factor amplitude $F_\mathrm{mag}$ \cite{Wiedenmann_2001_Small, Kohlbrecher_1997_Magne}
     \begin{align}
-      I^\pm(q) \eq F^2_\mathrm{nuc}(q) + \biggl[ F^2_\mathrm{mag} \mp P \epsilon F_\mathrm{nuc}(q) F_\mathrm{mag}(q) \biggr] \sin^2(\alpha),
+        I^+(q)
+          &\eq F^2_\mathrm{nuc}(q) + \biggl[ F^2_\mathrm{mag} - 2 P F_\mathrm{nuc}(q) F_\mathrm{mag}(q) \biggr] \sin^2(\alpha),\\
+        I^-(q)
+          &\eq F^2_\mathrm{nuc}(q) + \biggl[ F^2_\mathrm{mag} + 2 P \epsilon F_\mathrm{nuc}(q) F_\mathrm{mag}(q) \biggr] \sin^2(\alpha).
     \end{align}
-    The equation can additionally accounts for a non-perfect polarization $P$ and flipping ratio $\epsilon$ in the case of $I^-$.
+    The equation accounts for a non-perfect polarization $P$ and flipping ratio $\epsilon$ in the case of $I^-$.
     The polarization is defined by
     \begin{align}
       P \eq \frac{n^+ - n^-}{n^+ + n^-},
     \end{align}
-    with $n^+$ the number of neutrons parallel to the field and $n^-$ the number of neutrons in the opposite direction.
+    with $n^+$ the number of neutrons with spin antiparallel to the field and $n^-$ the number of neutrons parallel to the field.
 
     In this thesis, typically a small cake slice of $\pm 10^\circ$ around the vertical axis, as depicted in \reffig{fig:methods:sans:sanspolData}, is azimuthally integrated to obtain $I^\pm$.
     In this case, the $\sin^2(\alpha)$ factor evaluates to
