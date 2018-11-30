@@ -2,71 +2,75 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 
 \begin{document}
-\section{Magnetic Scattering Of Polarized Neutrons}\label{ch:appendix:calculations:magneticScatteringTheory}
-The interaction of a polarized neutron with magnetic moment $\vec{\mu}_n \eq \mu_n \hat{\sigma}$ with a magnetic field can be modelled by a Zeeman potential
-\begin{align}
-  V_m (\vec{r}) \eq - \vec{\mu}_n \cdot \vec{B},
-\end{align}
-where the components of the magnetic moment are given by the Pauli matrices,
-\begin{align}
-  \mu_n^i \eq \mu_n \hat{\sigma}_i,
-\end{align}
-\begin{align}
-  \hat{\sigma}_x \eq \begin{pmatrix} 0 & 1 \\1 & 0 \end{pmatrix},\,\,
-  \hat{\sigma}_y \eq \begin{pmatrix} 0 & -i \\i & 0 \end{pmatrix},\,\,
-  \hat{\sigma}_z \eq \begin{pmatrix} 1 & 0 \\0 & -1 \end{pmatrix},
-\end{align}
-A magnetic sample generates a field for once by the orbital motion of bound electrons $\vec{B}_L$, which can be modelled by the Biot-Savart law, and on the other hand by the electron spins $\vec{B}_S$ which can be modelled for a single electron at position $\vec{r}_i$ by a dipole field
-\begin{align}
-  \vec{B}_L \eq& -\frac{\mu_0 e}{4 \pi} \vec{v} \times \vec{\nabla} \frac{ 1}{|\vec{r} - \vec{r}_i|}\\
-  \vec{B}_S \eq& \frac{\mu_0}{4\pi} \vec{\nabla} \times \biggl(\vec{\mu}_e \times \vec{\nabla} \frac{ 1}{|\vec{r} - \vec{r}_i|} \biggr).
-\end{align}
-The contribution of the orbital movement is relatively complex to evaluate as it depends on the specific shell and atom the electrons state is in.
-In most cases it is considered as a small contribution relatively to the spin magnetization and is therefore neglected in this work \cite{Zhu_2005_Moder}.
-Focusing on the spin-dependant interaction one can use the Fourier identity
-\begin{align}
-   \frac{1}{|\vec{r} - \vec{r}_i|} \eq \frac{1}{2 \pi^2} \int \dint \vec{q} \frac{e^{i \vec{q} \cdot (\vec{r} - \vec{r}_i)}}{q^2},
-\end{align}
-and replace the magnetic moment of a single electron $\vec{\mu}_e$ at position $\vec{r}_i$ by the integral over a spin-density
-\begin{align}
-  \vec{\mu}_e \rightarrow \mu_B \int \dint \vec{r}^\prime \vec{s}_e(\vec{r}^\prime),
-\end{align}
-with the Bohr magneton $\mu_B \eq e\hbar / 2 m_e \approx 9.274 \cdot 10^{-24} \unit{JT^{-1}}$ and write the Fourier integral over the potential for the differential cross-section in \refeq{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionIntegralOverPotential} as
+  \section{Magnetic Scattering Of Polarized Neutrons}
+    \label{ch:appendix:calculations:magneticScatteringTheory}
+    The interaction of a polarized neutron with magnetic moment $\vec{\mu}_n \eq \mu_n \hat{\sigma}$ with a magnetic field can be modelled by a Zeeman potential
+    \begin{align}
+      V_m (\vec{r}) \eq - \vec{\mu}_n \cdot \vec{B},
+    \end{align}
+    where the components of the magnetic moment are given by the Pauli matrices,
+    \begin{align}
+      \mu_n^i \eq \mu_n \hat{\sigma}_i,
+    \end{align}
+    \begin{align}
+      \hat{\sigma}_x \eq \begin{pmatrix} 0 & 1 \\1 & 0 \end{pmatrix},\,\,
+      \hat{\sigma}_y \eq \begin{pmatrix} 0 & -i \\i & 0 \end{pmatrix},\,\,
+      \hat{\sigma}_z \eq \begin{pmatrix} 1 & 0 \\0 & -1 \end{pmatrix},
+    \end{align}
+    A magnetic sample generates a field for once by the orbital motion of bound electrons $\vec{B}_L$, which can be modelled by the Biot-Savart law, and on the other hand by the electron spins $\vec{B}_S$ which can be modelled for a single electron at position $\vec{r}_i$ by a dipole field
+    \begin{align}
+      \vec{B}_L \eq& -\frac{\mu_0 e}{4 \pi} \vec{v} \times \vec{\nabla} \frac{ 1}{|\vec{r} - \vec{r}_i|}\\
+      \vec{B}_S \eq& \frac{\mu_0}{4\pi} \vec{\nabla} \times \biggl(\vec{\mu}_e \times \vec{\nabla} \frac{ 1}{|\vec{r} - \vec{r}_i|} \biggr).
+    \end{align}
+    The contribution of the orbital movement is relatively complex to evaluate as it depends on the specific shell and atom the electrons state is in.
+    In most cases it is considered as a small contribution relatively to the spin magnetization and is therefore neglected in this work \cite{Zhu_2005_Moder}.
+    Focusing on the spin-dependant interaction one can use the Fourier identity
+    \begin{align}
+      \frac{1}{|\vec{r} - \vec{r}_i|} \eq \frac{1}{2 \pi^2} \int \dint \vec{q} \frac{e^{i \vec{q} \cdot (\vec{r} - \vec{r}_i)}}{q^2},
+    \end{align}
+    and replace the magnetic moment of a single electron $\vec{\mu}_e$ at position $\vec{r}_i$ by the integral over a spin-density
+    \begin{align}
+      \vec{\mu}_e \rightarrow \mu_B \int \dint \vec{r}^\prime \vec{s}_e(\vec{r}^\prime),
+    \end{align}
+    with the Bohr magneton $\mu_B \eq e\hbar / 2 m_e \approx 9.274 \cdot 10^{-24} \unit{JT^{-1}}$ and write the Fourier integral over the potential for the differential cross-section in \refeq{eq:theoreticalBackground:scattering:scatteringTheory:differentialCrossSectionIntegralOverPotential} as
 
-\begin{align}
-  f_M (\vec{q}) \eq &- \frac{m_n}{2\pi \hbar^2} \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}}\vec{\mu}_n \cdot \vec{B}_S (\vec{r})\\
-  \eq &- \frac{\mu_0 \mu_B m_n}{(2\pi)^4 \hbar^2}  \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}}\vec{\mu}_n \cdot \biggl[ \vec{\nabla} \times \biggl(\int \dint \vec{r}^\prime \vec{s}_e(\vec{r}^\prime) \times \vec{\nabla} \int \dint \vec{q}^\prime \frac{e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)}}{q^{\prime 2}} \biggr) \biggr].
-\end{align}
-Using
-\begin{align}
-  \vec{\nabla}e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)} \eq& i \vec{q} e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)},\\
-  \int \dint \vec{r} e^{i(\vec{q}^\prime - \vec{q}) \cdot \vec{r}} \eq& (2 \pi)^3 \delta(\vec{q}^\prime - \vec{q}),\\
-  \hat{q} \eq \frac{\vec{q}}{q}
-\end{align}
-the integral reads
-\begin{align}
-  f_M (\vec{q}) \eq & \frac{\mu_0 \mu_B m_n}{2 \pi \hbar^2} \vec{\mu}_n \cdot \biggl[ \hat{q} \times \biggl( \int \dint \vec{r}^\prime e^{- i \vec{q} \cdot \vec{r}^\prime} \vec{s}_e(\vec{r}^\prime) \times \hat{q}\biggr) \biggr].
-\end{align}
-Considering the case of a constant spin direction $\vec{s}_e (\vec{r}^\prime) \eq s_e (\vec{r}^\prime) \hat{s}$, the direction and magnitude separate into
-\begin{align}
-  f_M (\vec{q}) \eq & \hat{\mu}_n \cdot \biggl[ \underbrace{ \hat{q} \times \biggl( \hat{s} \times \hat{q}\biggr) }_{\eq \hat{s}_\perp}\biggr] \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n   \int \dint \vec{r}^\prime e^{- i \vec{q} \cdot \vec{r}^\prime} s_e(\vec{r}^\prime).
-\end{align}
-The two cross products reduce $\hat{s}$ only to the contribution that is perpendicular to $\vec{q}$ as is evident by applying the Grassman identity $\vec{a} \times (\vec{b} \times \vec{c}) \eq (\vec{a} \cdot \vec{c}) \vec{b} - (\vec{a} \cdot \vec{b}) \vec{c}$.
-This result means that only when the spins of a material are aligned perpendicularly to the scattering vector, one measures a magnetic scattering contribution.
-The prefactor consist of only natural constants and evaluates to
-\begin{align}
-  \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n \approx 2.699\,\cdot 10^{-5} \unit{\angstrom}.
-\end{align}
-By defining the magnetic scattering length density by
-\begin{align}
-  \rho_\mathrm{mag} (\vec{r}) \eq \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n s_e (\vec{r}),
-\end{align}
-one obtains a similar formula for the magnetic scattering amplitude contribution to the differential cross section as for the nuclear contribution
-\begin{align}
-  f_M (\vec{q}) \eq & \hat{\mu}_n \cdot \hat{s}_\perp \int \dint \vec{r} e^{- i \vec{q} \cdot \vec{r}} \rho_\mathrm{mag}(\vec{r}).
-\end{align}
-In an experiment with polarized neutrons, the polarization of the incoming beam is defined by a polarizer and stabilized by a weak magnetic guide field, which defines the $z$ direction in terms of the spin operator.
-When $\hat{s}_\perp$ is parallel (antiparallel) to $z$, $f_M$ contributes with a positive (negative) sign to the differential cross section and the direction of the spin is conserved during the scattering.
-On the other hand, when $\hat{s}_\perp$ is perpendicular to $z$, either $\hat{\sigma}_x$ or $\hat{\sigma}_y$ act and the neutron spin flips therefore during the scattering.
-In this experiment situation one would measure the magnetic scattering contributions therefore in the spin-flip channel.
+    \begin{align}
+      \begin{split}
+        f_M (\vec{q})
+          &\eq - \frac{m_n}{2\pi \hbar^2} \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}}\vec{\mu}_n \cdot \vec{B}_S (\vec{r})\\
+          &\eq - \frac{\mu_0 \mu_B m_n}{(2\pi)^4 \hbar^2}  \int \dint \vec{r} e^{-i\vec{q} \cdot \vec{r}}\vec{\mu}_n \cdot \biggl[ \vec{\nabla} \times \biggl(\int \dint \vec{r}^\prime \vec{s}_e(\vec{r}^\prime) \times \vec{\nabla} \int \dint \vec{q}^\prime \frac{e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)}}{q^{\prime 2}} \biggr) \biggr].
+      \end{split}
+    \end{align}
+    Using
+    \begin{align}
+      \vec{\nabla}e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)} \eq& i \vec{q} e^{i \vec{q}^\prime \cdot (\vec{r} - \vec{r}^\prime)},\\
+      \int \dint \vec{r} e^{i(\vec{q}^\prime - \vec{q}) \cdot \vec{r}} \eq& (2 \pi)^3 \delta(\vec{q}^\prime - \vec{q}),\\
+      \hat{q} \eq \frac{\vec{q}}{q}
+    \end{align}
+    the integral reads
+    \begin{align}
+      f_M (\vec{q}) \eq & \frac{\mu_0 \mu_B m_n}{2 \pi \hbar^2} \vec{\mu}_n \cdot \biggl[ \hat{q} \times \biggl( \int \dint \vec{r}^\prime e^{- i \vec{q} \cdot \vec{r}^\prime} \vec{s}_e(\vec{r}^\prime) \times \hat{q}\biggr) \biggr].
+    \end{align}
+    Considering the case of a constant spin direction $\vec{s}_e (\vec{r}^\prime) \eq s_e (\vec{r}^\prime) \hat{s}$, the direction and magnitude separate into
+    \begin{align}
+      f_M (\vec{q}) \eq & \hat{\mu}_n \cdot \biggl[ \underbrace{ \hat{q} \times \biggl( \hat{s} \times \hat{q}\biggr) }_{\eq \hat{s}_\perp}\biggr] \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n   \int \dint \vec{r}^\prime e^{- i \vec{q} \cdot \vec{r}^\prime} s_e(\vec{r}^\prime).
+    \end{align}
+    The two cross products reduce $\hat{s}$ only to the contribution that is perpendicular to $\vec{q}$ as is evident by applying the Grassman identity $\vec{a} \times (\vec{b} \times \vec{c}) \eq (\vec{a} \cdot \vec{c}) \vec{b} - (\vec{a} \cdot \vec{b}) \vec{c}$.
+    This result means that only when the spins of a material are aligned perpendicularly to the scattering vector, one measures a magnetic scattering contribution.
+    The prefactor consist of only natural constants and evaluates to
+    \begin{align}
+      \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n \approx 2.699\,\cdot 10^{-5} \unit{\angstrom}.
+    \end{align}
+    By defining the magnetic scattering length density by
+    \begin{align}
+      \rho_\mathrm{mag} (\vec{r}) \eq \frac{m_n}{\hbar^2}  \frac{\mu_0}{2\pi} \mu_B \mu_n s_e (\vec{r}),
+    \end{align}
+    one obtains a similar formula for the magnetic scattering amplitude contribution to the differential cross section as for the nuclear contribution
+    \begin{align}
+      f_M (\vec{q}) \eq & \hat{\mu}_n \cdot \hat{s}_\perp \int \dint \vec{r} e^{- i \vec{q} \cdot \vec{r}} \rho_\mathrm{mag}(\vec{r}).
+    \end{align}
+    In an experiment with polarized neutrons, the polarization of the incoming beam is defined by a polarizer and stabilized by a weak magnetic guide field, which defines the $z$ direction in terms of the spin operator.
+    When $\hat{s}_\perp$ is parallel (antiparallel) to $z$, $f_M$ contributes with a positive (negative) sign to the differential cross section and the direction of the spin is conserved during the scattering.
+    On the other hand, when $\hat{s}_\perp$ is perpendicular to $z$, either $\hat{\sigma}_x$ or $\hat{\sigma}_y$ act and the neutron spin flips therefore during the scattering.
+    In this experiment situation one would measure the magnetic scattering contributions therefore in the spin-flip channel.
 \end{document}
