@@ -50,7 +50,7 @@
     It is possible to estimate the volume by trying to measuring the weight and estimating the density of the materials from bulk properties, but this is connected with large uncertainties.
     As the single particle volume $V_\mathrm{p}$ can be accurately determined by a complementary experiment such as SAXS, one can express the magnetic volume by $V_\mathrm{mag} \eq N E[ V_\mathrm{p} ]$, where $N$ is the number of particles and $E[x]$ is the expectation value if a particle size distribution is involved.
     Assuming the nanoparticle is in the superparamagnetic phase and non-interacting, the measured magnetization on VSM is given by a Langevin curve as described in \refapp{ch:appendix:calculations:magnetizationClassicalSpin}.
-    Including the particle size distribution for the magnetic moment, the volume magnetization for a sample of $N$ magnetic nanoparticles is
+    Including the particle size distribution for the magnetic moment, the volume magnetization for a sample of $N$ magnetic nanoparticles is written as
     \begin{align}
       M \eq \frac{N}{N E[ V_\mathrm{p} ]}
       \int_{0}^{\infty} p(\mu; \bar{\mu}, \sigma_\mu) \mu \biggl( \coth\Bigl(\frac{\mu B}{k_B T} \Bigr) - \frac{k_B T}{\mu B} \biggr) \dint \mu,
@@ -58,18 +58,21 @@
     where $\sigma_\mu \eq 3 \sigma_a$ is set to be three times the particle size distribution obtained from SAXS, assuming the magnetic moment scales proportionally with the volume and $p(\mu; \bar{\mu}, \sigma_u)$ is the normalized particle size distribution.
     Thus by the Langevin model, the number of particles cancels in the equation and by defining the saturation magnetization as
     \begin{align}
+      \label{eq:methods:vsm:MsDefinition}
       M_s \eq \frac{E[\mu]}{E[V_\mathrm{p}]},
     \end{align}
-    only $\bar{\mu}$ remains as adjustable parameter.
-    In a realistic experiments, due to a weak signal from the small volume of the sample, the diamagnetic background from \ie sample substrate has to be included in the model, which can be done by adding a parameter for the susceptibility $\chi$.
-
-    Summarizing, this means by scaling the measured data to $E[V_\mathrm{p}]$, the saturation magnetization and magnetic moment are directly determined from fitting the model
+    the Langevin function can be written as 
     \begin{align}
+      \label{eq:methods:vsm:scaleMagnetization}
       M \eq M_s
       \frac{\int_{0}^{\infty} p(\mu; \bar{\mu}, \sigma_\mu) \mu \biggl( \coth\Bigl(\frac{\mu B}{k_B T} \Bigr) - \frac{k_B T}{\mu B} \biggr) \dint \mu}{E[\mu]} + \chi B.
     \end{align}
-    % and $E[\mu]$ is the expectation value of the magnetic moment.
+    In a realistic experiments, due to a weak signal from the small volume of the sample, the diamagnetic background from \ie sample substrate has to be included in the model, which can be done by adding a parameter for the susceptibility $\chi$.
 
-% magnetic moment determined from a Langevin curve fit that includes size distribution effects
-
+    This function can be fit to a given set of magnetometry data, where $M_s$, $\bar{\mu}$ and $\chi$ are parameters, while $E[V_p]$ and $\sigma_{\mu}$ are determined by SAXS.
+    The fitted value of $M_s^\mathrm{fit}$ can be compared with \refeq{eq:methods:vsm:MsDefinition}, to obtain the scale factor that needs to be applied to the data
+    \begin{align}
+      \mathrm{scale} \eq \frac{E[\mu]}{E[V_\mathrm{p}] M_s^\mathrm{fit}},
+    \end{align}
+    which gives the magnetization scaled to the total magnetic sample volume.
 \end{document}
