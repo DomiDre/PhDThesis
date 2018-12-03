@@ -21,20 +21,15 @@
       \bar{V}(z) \eq \int \dint x \int \dint y V(\vec{r}).
     \end{align}
     This motivates to discuss reflectometry as a one dimensional problem, where the sample is completely modeled by the laterally averaged scattering potential with respect to the vertical axis.
-    And indeed, the scattering problem can be even solved exactly beyond Born approximation numerically efficient by Parratt's algorithm, which is discussed in the following.
+    And indeed, the scattering problem can be even solved exactly beyond the first Born approximation numerically efficient by Parratt's algorithm to account for multiple reflections on internal interfaces, total external reflection and refraction.
 
     We present Parratt's algorithm starting from the Schr\"odinger equation for neutrons, where the analogue derivation can be performed for X-rays from Maxwell's equations \cite{Daillant_1999_Xraya}.
     The Hamiltonian of the one dimensional Schr\"odinger equation for a neutron in a locally varying potential is given by
     \begin{align}
-      H \eq \frac{\hbar^2 k_z^2}{2m_n} + \bar{V}(z),
-    \end{align}
-    with
-    \begin{align}
-      \bar{V}(z) \, = \, \frac{2 \pi \hbar^2}{m_n} \mathrm{SLD}(z),
+      H \eq \frac{\hbar^2 k_z^2}{2m_n} + \frac{2 \pi \hbar^2}{m_n} \mathrm{SLD}(z),
     \end{align}
     where $\mathrm{SLD}(z)$ is the laterally averaged SLD of the scattering nuclei in the studied thin film at height $z$.
-    The sample is considered to be semi-infinite, meaning for $z \rightarrow -\infty$ the SLD has the value of the substrate and it vanishes at a finite height $z > z_0$.
-    The surface of the substrate is set to $z \eq 0$ in this discussion.
+    The sample is considered to be semi-infinite, meaning for $z \rightarrow -\infty$ the SLD has the value of the substrate and at a finite height $z > z_0$ it vanishes to zero.
 
     Using that the energy is given by the wave vector of the incoming neutron $k_{i,\,z}$ outside the material for elastic scattering, the Schr\"odinger equation writes as an equation that determines the wave vector of the neutron inside the sample at height $z$
     \begin{align}
