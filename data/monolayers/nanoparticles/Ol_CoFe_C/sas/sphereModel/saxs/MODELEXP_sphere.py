@@ -16,18 +16,20 @@ saxs_sldCore = sld_xray_GALAXI['Cobalt Ferrite'].real
 saxs_sldSolvent = sld_xray_GALAXI['n-Hexane'].real
 
 app = App()
-app.setExperiment(Saxs)
+expRef = app.setExperiment(Saxs)
+expRef.setFitRange(0.05, 0.4)
+
 dataRef = app.setData(XyeData)
 
-dataRef.loadFromFile('./finalDD67.xy')
+dataRef.loadFromFile('../../experimental_data/DD67.xye')
 dataRef.sliceDomain(0.005, 0.4)
 dataRef.plotData()
 
 modelRef = app.setModel(Sphere)
-modelRef.setParam("r", 62.552194776360615,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("sigR", 0.09738588873844115,  minVal = 0, maxVal = 0.25, vary = True)
-modelRef.setParam("i0", 0.026048534855793583,  minVal = 0, maxVal = 0.1, vary = True)
-modelRef.setParam("bg", 0.0011400000000000002,  minVal = 0, maxVal = 0.02, vary = False)
+modelRef.setParam("r", 62.67970603723404,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("sigR", 0.09137870576237454,  minVal = 0, maxVal = 0.25, vary = True)
+modelRef.setParam("i0", 0.027112038935017194,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("bg", 0.0,  minVal = 0, maxVal = 0.02, vary = False)
 
 modelRef.setConstantParam("sldCore", saxs_sldCore)
 modelRef.setConstantParam("sldSolvent", saxs_sldSolvent)

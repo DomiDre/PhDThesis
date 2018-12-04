@@ -24,12 +24,12 @@ dataRef.sliceDomain(0., 0.25)
 dataRef.plotData()
 
 modelRef = app.setModel(Sphere)
-modelRef.setParam("r", 55.64451281012996,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("sigR", 0.12989754094878023,  minVal = 0, maxVal = 0.25, vary = True)
-modelRef.setParam("i0", 0.04000007285696197,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("r", 55.64451414134869,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("sigR", 0.12989745010048562,  minVal = 0, maxVal = 0.25, vary = True)
+modelRef.setParam("i0", 0.04,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("sldCore", 4.172e-05,  minVal = 1e-05, maxVal = 5e-05, vary = False)
 modelRef.setParam("bg", 0.0,  minVal = 0, maxVal = 0.02, vary = False)
 
-modelRef.setConstantParam("sldCore", saxs_sldCore)
 modelRef.setConstantParam("sldSolvent", saxs_sldSolvent)
 modelRef.updateModel()
 

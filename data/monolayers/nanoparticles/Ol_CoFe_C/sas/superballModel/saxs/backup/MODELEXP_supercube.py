@@ -17,7 +17,7 @@ saxs_sldSolvent = sld_xray_GALAXI['n-Hexane'].real
 
 app = Cli()
 expRef = app.setExperiment(Saxs)
-expRef.setFitRange(0.05, 0.4)
+expRef.setFitRange(0.04, 0.4)
 dataRef = app.setData(XyeData)
 
 dataRef.loadFromFile('../../experimental_data/DD67.xye')

@@ -29,19 +29,19 @@ dataRef.sliceDomain(0, 0.5)
 dataRef.plotData()
 
 modelRef = app.setModel(SphereCS, [Magnetic, InstrumentalResolution])
-modelRef.setParam("magSldCore", 5.0222994935596e-07,  minVal = 0, maxVal = 2e-06, vary = True)
+modelRef.setParam("magSldCore", 9.219999999999999e-07,  minVal = 0, maxVal = 2e-06, vary = True)
 modelRef.setConstantParam("sin2alpha", 0.9974654)
 
 
-modelRef.setConstantParam("i0", 0.13540000000000002)
-modelRef.setConstantParam("d", 14.61)
-modelRef.setConstantParam("bg", 0.004540000000000001)
-modelRef.setConstantParam("sldCore", 6.713768e-06)
-modelRef.setConstantParam("dTheta_sa", 0.0029696167102563464)
-modelRef.setConstantParam("dTheta_la", 0.0035181888925484572)
-modelRef.setConstantParam("sldShell", 1.040158e-06)
+modelRef.setConstantParam("i0", 0.042)
+modelRef.setConstantParam("d", 19.71)
+modelRef.setConstantParam("bg", 0.00738)
+modelRef.setConstantParam("sldCore", 7.286004e-06)
+modelRef.setConstantParam("dTheta_sa", 0.0032)
+modelRef.setConstantParam("dTheta_la", 0.00386)
 
 
+modelRef.setConstantParam("sldShell", 7.8e-8)
 modelRef.setConstantParam("r", 55.6445128)
 modelRef.setConstantParam("sigR", 0.12989754)
 modelRef.setConstantParam("sigD", 0)
