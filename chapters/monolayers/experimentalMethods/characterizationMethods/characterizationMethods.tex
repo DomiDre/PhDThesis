@@ -31,15 +31,15 @@
     \end{align}
     where $r_i$ are the measured ratios at the varied sample positions.
 
-    From the measured ratio $r \eq N_\mathrm{Fe} / N_\mathrm{Co}$, the number of cobalt and iron anions per formula unit are determined with the assumption that all cobalt anions are in the oxidation state $\ch{Co^{2+}}$ and all iron anions $\ch{Fe^{3+}}$, which has only been confirmed by M\"ossbauer studies on particles synthesized following the acetylacetonate synthesis route.
+    From the measured ratio $r \eq N_\mathrm{Fe} / N_\mathrm{Co}$, the number of cobalt and iron anions per formula unit are determined for the samples prepared from acetylacetonates, with the assumption that all cobalt anions are in the oxidation state $\ch{Co^{2+}}$ and all iron anions $\ch{Fe^{3+}}$.
     In this case the number of cobalt and iron anions obey the relation
     \begin{align}
       2 N_\mathrm{Co} + 3 N_\mathrm{Fe} \eq 8
     \end{align}
-    for \ch{Co_x Fe_y O_4} to be neutral.
+    for the formula unit to be neutral.
     With this relation and the ratio from EDX, the number of cobalt and iron anions in a unit cell are determined by
     \begin{align}
-      N_\mathrm{Co} \eq \frac{8}{2 + 3r}\\
+      N_\mathrm{Co} \eq \frac{8}{2 + 3r},\\
       N_\mathrm{Fe} \eq \frac{8r}{2 + 3r},
     \end{align}
 
@@ -65,7 +65,7 @@
 
     To fix parameters of the models, the nanoparticle scattering length is determined using the lattice parameter $a$ from XRD and the average atomic composition of the cobalt ferrite particle from EDX by
     \begin{align}
-      \rho^\mathrm{X-ray}_\mathrm{core} \eq 8 r_e \frac{N_\mathrm{Co} f_\mathrm{Co} + N_\mathrm{Fe} f_\mathrm{Fe} + 4 f_\mathrm{O}}{a^3}\\
+      \rho^\mathrm{X-ray}_\mathrm{core} \eq 8 r_e \frac{N_\mathrm{Co} f_\mathrm{Co} + N_\mathrm{Fe} f_\mathrm{Fe} + 4 f_\mathrm{O}}{a^3},\\
       \rho^\mathrm{neutron}_\mathrm{core} \eq 8 \frac{N_\mathrm{Co} b_\mathrm{Co} + N_\mathrm{Fe} b_\mathrm{Fe} + 4 b_\mathrm{O}}{a^3}.
     \end{align}
     Here, $f$ is the element specific atomic form factor for X-ray scattering and $b$ the element specific nuclear form factor, which are both tabulated for the periodic system.
@@ -78,6 +78,16 @@
       \rho^\mathrm{neutron}_\mathrm{shell} &\eq 0.078 \cdot 10^{-6} \angstrom^{-2},
     \end{align}
     which assumes a density of $0.895 \unit{g\,mL^{-1}}$ for the oleic acid.
+    As the scattering length density of $\mathit{n}$-hexane and toluene is close to that of oleic acid in the case of X-rays
+    \begin{align}
+      \rho^\mathrm{X-ray}_{n\mathrm{-hexane}} &\eq 6.46 \cdot 10^{-6} \angstrom^{-2},\\
+      \rho^\mathrm{X-ray}_\mathrm{toluene} &\eq 8.01 \cdot 10^{-6} \angstrom^{-2},
+    \end{align}
+    the shell thickness is only obtained by the fit from the SANS data, where toluene-d8 has an SLD
+    \begin{align}
+      \rho^\mathrm{neutron}_\mathrm{toluene-d8} &\eq 5.664 \cdot 10^{-6} \angstrom^{-2},
+    \end{align}
+    which provides a large contrast to the oleic acid shell.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
     The macroscopic magnetization of the nanoparticles was measured using the PPMS Evercool II described in \refch{ch:instruments:laboratoryInstruments:vsm}.
@@ -90,7 +100,7 @@
     For both approaches hysteresis curves are measured at $10 \unit{K}$ and $300 \unit{K}$, as well as on five additional temperatures in between ($20\unit{K},\,50\unit{K},\,100\unit{K},\,150\unit{K},\,200\unit{K}$).
     Before each measurement, a touchdown procedure is performed with the sample rod, to correct for thermal expansion due to the temperature changes.
     Each hysteresis is measured in sweep mode with a rate of $5 \unit{mT \, s^{-1}}$.
-    Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K min^{-1}}$.
+    Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K \, min^{-1}}$.
 
     The scaling of the data to the volume of the sample is performed as described in \refch{ch:methods:vsm}:
     By fitting the room-temperature data to a Langevin behaviour plus a term for an excess susceptibility, the magnetization data is scaled such that the saturation magnetization is given by the ratio of the single-particle moment and volume.
