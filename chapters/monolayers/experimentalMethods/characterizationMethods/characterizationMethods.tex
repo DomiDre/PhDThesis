@@ -3,6 +3,8 @@
 
 \begin{document}
   \label{sec:monolayers:nanoparticle:structuralCharacterization}
+  The following paragraphs list the experimental methods, conditions and data treatment that were applied to characterize each nanoparticle batch.
+  % \reftab{tab:monolayers:characterizationMethods:nanoparticles} summarizes the used methods and instruments for each particle.
 
   \paragraphNewLine{Transmission Electron Microscopy}
     Transmission electron microscopy is used to visually characterize a sample of the prepared dispersion and validate the structural quality of the batch.
@@ -19,30 +21,76 @@
 
   \paragraphNewLine{Energy-Dispersive X-Ray Spectroscopy}
     Using the scanning electron microscope Neon Zeiss 40 (\refch{ch:instruments:laboratoryInstruments:sem}) EDX measurements of the nanoparticles were performed.
-    For the measurement, $20 \unit{\musf L}$ of a highly concentrated fraction ($c > 5 \unit{mg/mL}$ of the dispersions is drop-casted on a small $12.5 \unit{mm^2}$ piece of silicon to obtain a thick layer of nanoparticle material.
-    The electron beam was accelerated with $20 \unit{kV}$ and in each case the X-ray spectra was measured five times at different positions of the sample for a time of $2 \unit{min}$ each.
+    For the measurement, $20 \unit{\musf L}$ of a highly concentrated fraction ($c > 5 \unit{mg/mL}$ of the dispersions is drop-casted on a silicon substrate with an surface area of $12.5 \unit{mm^2}$ to obtain a thick layer of nanoparticle material.
+    The electron beam was accelerated with $20 \unit{kV}$ and in each case the X-ray spectrum was measured five times at different positions of the sample for a time of $2 \unit{min}$ each.
     The spectra are evaluated using the software INCA, which compares the intensity of the K-lines for each element with the literature values to extract the relative number of atoms, thereby providing the relative ratio of cobalt and iron in the samples.
+    The five obtained ratios of cobalt and iron are averaged and the standard deviation is estimated by the standard deviation from the mean according to
+    \begin{align}
+      \bar{r} &\eq \frac{1}{N} \sum_{i \eq 1}^N r_i,\\
+      \sigma &\eq \sqrt{\frac{1}{N-1} \sum_{i \eq 1}^N (r_i - \bar{r})^2},
+    \end{align}
+    where $r_i$ are the measured ratios at the varied sample positions.
+
+    From the measured ratio $r \eq N_\mathrm{Fe} / N_\mathrm{Co}$, the number of cobalt and iron anions per formula unit are determined with the assumption that all cobalt anions are in the oxidation state $\ch{Co^{2+}}$ and all iron anions $\ch{Fe^{3+}}$, which has only been confirmed by M\"ossbauer studies on particles synthesized following the acetylacetonate synthesis route.
+    In this case the number of cobalt and iron anions obey the relation
+    \begin{align}
+      2 N_\mathrm{Co} + 3 N_\mathrm{Fe} \eq 8
+    \end{align}
+    for \ch{Co_x Fe_y O_4} to be neutral.
+    With this relation and the ratio from EDX, the number of cobalt and iron anions in a unit cell are determined by
+    \begin{align}
+      N_\mathrm{Co} \eq \frac{8}{2 + 3r}\\
+      N_\mathrm{Fe} \eq \frac{8r}{2 + 3r},
+    \end{align}
 
   \paragraphNewLine{Small-Angle Scattering}
-    For the measurement of SAXS the dispersions are filled in borosilicate capillaries obtained from the company Hilgenberg with $1.5 \unit{mm}$ diameter and a $0.01 \unit{mm}$ wall thickness, which are sealed using a plastic stopper and glue gun.
+    For the measurement of SAXS the nanoparticle dispersions are filled in borosilicate capillaries obtained from the company Hilgenberg with $1.5 \unit{mm}$ diameter and a $0.01 \unit{mm}$ wall thickness, which are sealed using a plastic stopper and glue gun.
     Ac-CoFe-C was dispersed in $\mathit{n}$-hexane for the measurement, whereas Ol-CoFe-C and Ac-CoFe-C-2 were dispersed in toluene.
     The samples are measured on two distances using the GALAXI instrument (\refch{ch:lss:galaxi}) at the \textsc{Forschungszentrum J\"ulich}.
     One at a large sample-to-detector distance of $3.53 \unit{m}$ and one at a short sample-to-detector distance of $0.83 \unit{m}$.
     Additionally, capillaries filled with the solvents and an empty capillary is measured under the same conditions for subtraction of the background.
+    The scaling to absolute units is performed according to the procedure described in \refch{ch:methods:saxs}.
 
     To measure SANS and SANSPOL, the dispersions are dried at ambient conditions and redispersed in toluene-$\mathrm{d_8}$ to reduce the incoherent scattering coming from hydrogen atoms.
-    The small-angle neutron scattering data of Ac-CoFe-C was measured at D22 (\refch{ch:lss:d22}) and Ol-CoFe-C on the D33 instrument (\refch{ch:lss:d33}) at the Institut Laue-Langevin.
+    The small-angle neutron scattering data of Ac-CoFe-C and Ac-CoFe-C-2 was measured at D22 (\refch{ch:lss:d22}) and Ol-CoFe-C on the D33 instrument (\refch{ch:lss:d33}) at the Institut Laue-Langevin.
+    For SANSPOL the applied field was in all cases $1.2 \unit{T}$ with the magnetic field along the $y$ direction: perpendicular to the beam and in the horizontal plane.
+    To evaluate the magnetic scattering, a $20^\circ$ sector around the vertical $z$ dimension is azimuthally integrated.
+    Using the GRASP software, the polarization efficiency and flipping efficiency is corrected.
+    For the data measured at D22, the polarization efficiency is $84 \%$ and the flipping efficiency $93 \%$, which was measured by the use of a super mirror during the beam time.
+    For D33 a polarization efficiency of $97 \%$ and a flipping efficiency of $99 \%$ is used according to the instrument specifications given by the local contact.
+
+    Each data set is evaluated using a spherical (\refapp{ch:appendix:formfactors:sphereCoreshell}), cubic (\refapp{ch:appendix:formfactors:sphereCoreshell}) and a superball form factor.
+    The derivation of the superball form factor is described in more detail in \refch{sec:monolayers:nanoparticle:structuralCharacterization}.
+    For the SANS models, an additional oleic acid shell with the same morphology as the core model and a shell thickness $D$ is added, as well as the instrumental resolution as described in \refch{ch:methods:sans}.
+
+    To fix parameters of the models, the nanoparticle scattering length is determined using the lattice parameter $a$ from XRD and the average atomic composition of the cobalt ferrite particle from EDX by
+    \begin{align}
+      \rho^\mathrm{X-ray}_\mathrm{core} \eq 8 r_e \frac{N_\mathrm{Co} f_\mathrm{Co} + N_\mathrm{Fe} f_\mathrm{Fe} + 4 f_\mathrm{O}}{a^3}\\
+      \rho^\mathrm{neutron}_\mathrm{core} \eq 8 \frac{N_\mathrm{Co} b_\mathrm{Co} + N_\mathrm{Fe} b_\mathrm{Fe} + 4 b_\mathrm{O}}{a^3}.
+    \end{align}
+    Here, $f$ is the element specific atomic form factor for X-ray scattering and $b$ the element specific nuclear form factor, which are both tabulated for the periodic system.
+    The constant $r_e \eq 2.8179403227(19) \unit{fm}$ is the classical electron radius, in which terms the atomic form factor is typically given in such tables.
+    The numerical value $8$ accounts that one unit cell contains eight formula units of $\ch{Co_xFe_yO4}$ in an inverse spinell phase.
+
+    Furthermore the scattering length density of the oleic acid shell is fixed in every model to the value value calculated for bulk oleic acid
+    \begin{align}
+      \rho^\mathrm{X-ray}_\mathrm{shell} &\eq 8.52 \cdot 10^{-6} \angstrom^{-2},\\
+      \rho^\mathrm{neutron}_\mathrm{shell} &\eq 0.078 \cdot 10^{-6} \angstrom^{-2},
+    \end{align}
+    which assumes a density of $0.895 \unit{g\,mL^{-1}}$ for the oleic acid.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
     The macroscopic magnetization of the nanoparticles was measured using the PPMS Evercool II described in \refch{ch:instruments:laboratoryInstruments:vsm}.
     To obtain the magnetization in a non-interacting state at room temperature, two approaches have been considered.
-    In the first, $40 \unit{\musf}L$ of the nanoparticle dispersion are sealed in a vial as described in \refch{ch:instruments:laboratoryInstruments:vsm}.
+    In the first, $40 \unit{\musf L}$ of the nanoparticle dispersion are sealed in a vial as described in \refch{ch:instruments:laboratoryInstruments:vsm}.
     The vial is subsequently fixed within a drinking straw, using additional folded straws to render the vial immobile.
     A moving liquid sample is a difficult system in the framework of vibrating sample magnetometry as due to air gaps the liquid is still able to move within its container during the vibration, which can lead to a systematic error in the measured signal \cite{Boekelheide_2016_Artif}.
     Therefore, in a second approach, the nanoparticle dispersion is quickly drop-casted in a diluted concentration ($c \eq 0.1 \unit{mg/mL}$) on a silicon substrate using $\textit{n}$-hexane as solvent to measure the nanoparticles in a dry state for comparison.
 
-    For both approaches hysteresis curves are measured at $10 \unit{K}$ and $300 \unit{K}$, as well as on five additional temperatures in between ($20,\,50,\,100,\,150,\,200\unit{K}$).
-    For the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K min^{-1}}$.
+    For both approaches hysteresis curves are measured at $10 \unit{K}$ and $300 \unit{K}$, as well as on five additional temperatures in between ($20\unit{K},\,50\unit{K},\,100\unit{K},\,150\unit{K},\,200\unit{K}$).
+    Before each measurement, a touchdown procedure is performed with the sample rod, to correct for thermal expansion due to the temperature changes.
+    Each hysteresis is measured in sweep mode with a rate of $5 \unit{mT \, s^{-1}}$.
+    Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K min^{-1}}$.
 
     The scaling of the data to the volume of the sample is performed as described in \refch{ch:methods:vsm}:
     By fitting the room-temperature data to a Langevin behaviour plus a term for an excess susceptibility, the magnetization data is scaled such that the saturation magnetization is given by the ratio of the single-particle moment and volume.
@@ -50,6 +98,19 @@
       M_s \eq \frac{\bar{\mu}}{V_p}.
     \end{align}
     The average particle volume and particle size distribution is hereby taken from the previously obtained SAXS data evaluation and the standard deviation of the magnetic moment is set to be three times the particle size distribution $\sigma_\mu \eq 3 \sigma_a$, assuming the magnetic moment scales proportionally with the volume.
+
+    % \begin{table}[ht]
+    %   \centering
+    %   \caption{\label{tab:monolayers:characterizationMethods:nanoparticles}List of experimental methods used to characterize each nanoparticle batch and which instrument was used.}
+    %   \begin{tabular}{ l | c}
+    %     \textbf{Sample} & \textbf{Experimental Methods}\\
+    %     \hline
+    %     Ol-CoFe-C & \\
+    %     Ac-CoFe-C & \\
+    %     Ac-CoFe-C-2 & \\
+    %     \hline
+    %   \end{tabular}
+    % \end{table}
 
   % \paragraphNewLine{Temperature-Dependant VSM}
   %   To study the samples further, the nanoparticles are measured in VSM at varied temperatures down to $10 \unit{K}$, where the N\'eel relaxation of the superspin moment is suppressed and the blocked single-domain particle is observed.
