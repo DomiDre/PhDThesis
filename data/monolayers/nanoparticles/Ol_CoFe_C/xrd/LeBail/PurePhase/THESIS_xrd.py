@@ -8,15 +8,15 @@ thesisimgs = os.environ['phdthesisimgs']
 cwd = sys.path[0]
 plt.style.use('phdthesis')
 
-datfile = 'AH11.dat'
-prfFile = cwd+'/FullProfLeBail/cofe2o4.prf'
+datfile = 'DD67.dat'
+prfFile = 'cofe2o4.prf'
 
 chapter = 'monolayer'
-sample_name = 'Ac_CoFe_C'
+sample_name = 'Ol_CoFe_C'
 
 savefile = chapter + '_XRD_' + sample_name
 
-wavelength = 1.54056
+wavelength = 1.5406
 
 # matplotlib.rcParams.update({'font.size': 18})
 fig = plt.figure()
@@ -35,10 +35,9 @@ qdata = 4*np.pi/wavelength *np.sin(tth/2 *np.pi/180)
 
 data = PrfData()
 data.loadFromFile(prfFile)
-
-tth, Iobs, Imodel = data.getData()
 bg = data.getBackground()
 
+tth, Iobs, Imodel = data.getData()
 toQ = lambda x: 4*np.pi/wavelength *np.sin(x/2 *np.pi/180)
 q = toQ(tth)
 
@@ -47,7 +46,6 @@ Imodel /= sf
 Iobs /= sf
 Idata /= sf
 bg /= sf
-
 ax.plot(qdata, Idata, ls='None', marker='.', markersize=1, label='Observed')
 ax.plot(q, Imodel, color='black', marker='None', zorder=10, alpha=0.5, label='Calculated')
 ax.plot(q, bg, marker='None', zorder=10, alpha=0.5, label='Background')
@@ -67,7 +65,7 @@ ax.set_xlim([min_q, max_q])
 ax.set_ylim([min_I, max_I])
 ax.set_xlabel("$\mathit{q} \, / \, \AA^{-1}$")
 ax.set_ylabel("$\mathit{I} \, / \, a.u.$")
-ax.text(0.02, 0.98, 'Ac-CoFe-C',
+ax.text(0.02, 0.98, 'Ol-CoFe-C',
   transform=ax.transAxes,
   verticalAlignment='top',
   horizontalAlignment='left')
