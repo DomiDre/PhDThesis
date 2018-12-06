@@ -9,7 +9,7 @@
   \paragraphNewLine{Transmission Electron Microscopy}
     Transmission electron microscopy is used to visually characterize a sample of the prepared dispersion and validate the structural quality of the batch.
     For the measurement in each case a drop of a dispersion with a concentration of $c \approx 0.1 \unit{mg/mL}$ is transferred to a copper grid and measured on a Zeiss Leo 902 (\refsec{ch:instruments:laboratoryInstruments:tem}).
-    To evaluate the particle size and size distribution, the edge length of over 150 nanocubes is measured using the software Fiji \cite{Schindelin_2012_Fijia} and evaluated by fitting a log-normal distribution as described in \refch{ch:methods:em}.
+    To evaluate the particle size and size distribution, the edge length of over 100 nanocubes is measured using the software Fiji \cite{Schindelin_2012_Fijia} and evaluated by fitting a log-normal distribution as described in \refch{ch:methods:em}.
 
   \paragraphNewLine{X-Ray Diffraction}
     XRD of Ac-CoFe-C and Ol-CoFe-C was measured in cooperation with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague on an PANanalytical X'Pert PRO, which is described in \refch{ch:instruments:laboratoryInstruments:xrd}.
@@ -31,16 +31,23 @@
     \end{align}
     where $r_i$ are the measured ratios at the varied sample positions.
 
-    From the measured ratio $r \eq N_\mathrm{Fe} / N_\mathrm{Co}$, the number of cobalt and iron anions per formula unit are determined for the samples prepared from acetylacetonates, with the assumption that all cobalt anions are in the oxidation state $\ch{Co^{2+}}$ and all iron anions $\ch{Fe^{3+}}$.
-    In this case the number of cobalt and iron anions obey the relation
+    From the measured ratio $r \eq N_\mathrm{Fe} / N_\mathrm{Co}$, the number of cobalt and iron anions per formula unit are determined for the samples prepared from acetylacetonates.
+    It is common in literature to assume that the formula unit has a structure of $\ch{Co_x Fe_{3-x} O4}$ \cite{Wu_2014_Monol, Sathya_2016_Cofeo}.
+    For this assumption $x$ is determined by the ratio $r \eq N_{\ch{Fe}} / N_{\ch{Co}}$ by
     \begin{align}
-      2 N_\mathrm{Co} + 3 N_\mathrm{Fe} \eq 8
+      x \eq \frac{3}{1 + r}.
+    \end{align}
+    This implies an occupation of the inverse spinell lattice with both \ch{Fe^{2+}} and \ch{Fe^{3+}} for the crystal to be neutral.
+    As M\"ossbauer studies in literature however suggest that no \ch{Fe^{2+}} is found in this synthesis route, an alternative formulation of the formula unit can be made, where vacancies are allowed in the crystal structure to obtain neutral charge.
+    In this case the number of cobalt and iron anions in \ch{Co_x Fe_y O4} obey the relation
+    \begin{align}
+      2 x + 3 y \eq 8
     \end{align}
     for the formula unit to be neutral.
     With this relation and the ratio from EDX, the number of cobalt and iron anions in a unit cell are determined by
     \begin{align}
-      N_\mathrm{Co} \eq \frac{8}{2 + 3r},\\
-      N_\mathrm{Fe} \eq \frac{8r}{2 + 3r},
+      x \eq \frac{8}{2 + 3r},\\
+      y \eq \frac{8r}{2 + 3r}.
     \end{align}
 
   \paragraphNewLine{Small-Angle Scattering}
@@ -63,7 +70,7 @@
     The derivation of the superball form factor is described in more detail in \refch{sec:monolayers:nanoparticle:structuralCharacterization}.
     For the SANS models, an additional oleic acid shell with the same morphology as the core model and a shell thickness $D$ is added, as well as the instrumental resolution as described in \refch{ch:methods:sans}.
 
-    To fix parameters of the models, the nanoparticle scattering length is determined using the lattice parameter $a$ from XRD and the average atomic composition of the cobalt ferrite particle from EDX by
+    To fix parameters of the models, the scattering length density of the nanoparticles prepared by acetylacetonates is determined using the lattice parameter $a$ from XRD and the average atomic composition of the cobalt ferrite particle from EDX by
     \begin{align}
       \rho^\mathrm{X-ray}_\mathrm{core} \eq 8 r_e \frac{N_\mathrm{Co} f_\mathrm{Co} + N_\mathrm{Fe} f_\mathrm{Fe} + 4 f_\mathrm{O}}{a^3},\\
       \rho^\mathrm{neutron}_\mathrm{core} \eq 8 \frac{N_\mathrm{Co} b_\mathrm{Co} + N_\mathrm{Fe} b_\mathrm{Fe} + 4 b_\mathrm{O}}{a^3}.
@@ -71,6 +78,9 @@
     Here, $f$ is the element specific atomic form factor for X-ray scattering and $b$ the element specific nuclear form factor, which are both tabulated for the periodic system.
     The constant $r_e \eq 2.8179403227(19) \unit{fm}$ is the classical electron radius, in which terms the atomic form factor is typically given in such tables.
     The numerical value $8$ accounts that one unit cell contains eight formula units of $\ch{Co_xFe_yO4}$ in an inverse spinell phase.
+
+    For the nanoparticles prepared from oleates, the composition is not so straight forward to estimate due to the core-shell structure and presence of \ch{Fe^{2+}}.
+    Thus for the discussion of the form factor, the SAS data is fit to a core-shell-surfactant model, where the nanoparticle core is assumed to be \ch{FeO} and the shell \ch{CoFe2O4}.
 
     Furthermore the scattering length density of the oleic acid shell is fixed in every model to the value value calculated for bulk oleic acid
     \begin{align}

@@ -79,7 +79,7 @@ ax.errorbar(mE, mI, msI, ls="None", zorder=0, label=legend_label)
 ax.plot(E, model, color='black', marker="None", zorder=1, alpha=0.5)
 ax.set_xlim(min_E, max_E)
 ax.set_ylim(0, 1.1)
-ax.text(0.96, 0.96, r'$\mathit{n}_{Fe}/\mathit{n}_{Co}$' + f' = {ratio_FeCo}({sig_ratio_FeCo})',
+ax.text(0.96, 0.96, r'Ac-CoFe-C'+'\n'+'$\mathit{n}_{Fe}/\mathit{n}_{Co}$' + f' = {ratio_FeCo}({sig_ratio_FeCo})',
   horizontalAlignment='right',
   verticalAlignment='top',
   transform=ax.transAxes)

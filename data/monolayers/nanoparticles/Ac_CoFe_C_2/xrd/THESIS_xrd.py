@@ -9,10 +9,10 @@ cwd = sys.path[0]
 plt.style.use('phdthesis')
 
 datfile = 'YF045_ang.dat'
-prfFile = 'CoFe2O4.prf'
+prfFile = cwd + '/FullProfLeBail/cofe2o4.prf'
 
 chapter = 'monolayer'
-sample_name = 'Ac_CoFe_C'
+sample_name = 'Ac_CoFe_C_2'
 
 savefile = chapter + '_XRD_' + sample_name
 
@@ -21,7 +21,7 @@ wavelength = 0.71070
 # matplotlib.rcParams.update({'font.size': 18})
 fig = plt.figure()
 left, bottom = 0.19, 0.17
-min_q, max_q = 1.9, 4.9
+min_q, max_q = 1.1, 4.9
 min_I, max_I = 0, 1.24
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 
@@ -37,15 +37,18 @@ data = PrfData()
 data.loadFromFile(prfFile)
 
 tth, Iobs, Imodel = data.getData()
+bg = data.getBackground()
 toQ = lambda x: 4*np.pi/wavelength *np.sin(x/2 *np.pi/180)
 q = toQ(tth)
 
-sf = max(Idata[np.logical_and(qdata>2, qdata<3)])
+sf = max(Idata[np.logical_and(qdata>2, qdata<3)]) * 1.2
 Imodel /= sf
 Iobs /= sf
 Idata /= sf
+bg /= sf
 ax.plot(qdata, Idata, ls='None', marker='.', markersize=1, label='Observed')
 ax.plot(q, Imodel, color='black', marker='None', zorder=10, alpha=0.5, label='Calculated')
+ax.plot(q, bg, marker='None', zorder=10, alpha=0.5, label='Background')
 ax.plot(q, 0.1 + Imodel - Iobs, ls='None', color='black', marker='.', markersize=1, label='Difference')
 
 for reflex in data.hkl:
@@ -62,9 +65,15 @@ ax.set_xlim([min_q, max_q])
 ax.set_ylim([min_I, max_I])
 ax.set_xlabel("$\mathit{q} \, / \, \AA^{-1}$")
 ax.set_ylabel("$\mathit{I} \, / \, a.u.$")
-legend = ax.legend()
+ax.text(0.02, 0.98, 'Ac-CoFe-C-2',
+  transform=ax.transAxes,
+  verticalAlignment='top',
+  horizontalAlignment='left')
+ax.text(2.75, 0.47, '*')
+legend = ax.legend(loc='upper right', fontsize=10)
+
 legend.legendHandles[0]._legmarker.set_markersize(10)
-legend.legendHandles[2]._legmarker.set_markersize(10)
+legend.legendHandles[3]._legmarker.set_markersize(10)
 
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)

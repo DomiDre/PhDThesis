@@ -15,11 +15,12 @@ import uzkChemTem
 
 temFilepath = cwd+"/EF2932_6.tif"
 chapter = 'monolayers'
-sample_name = 'Ac_CoFe_C'
+sample_name = 'Ac_CoFe_C_2'
 
 savefile = chapter+'_TEM_'+sample_name
 
 fig, ax = uzkChemTem.pretty_plot(
-  temFilepath, y0=200, pixel_per_nm=3.7710*0.9049)
+  temFilepath, y0=200, pixel_per_nm=3.7710*0.9049,
+  title='Ac-CoFe-C-2', label_x0=0.59, label_y0=0.9)
 fig.savefig(cwd+'/'+savefile, bbox_inches='tight')
 fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')

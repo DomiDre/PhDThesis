@@ -58,7 +58,7 @@ def getValueWithErrorString(parameter, modifier=1):
   return result
 
 chapter = 'monolayers'
-sample_name = 'Ac_CoFe_C'
+sample_name = 'Ac_CoFe_C_2'
 savefile = f'{chapter}_TEM_{sample_name}_sizeDist'
 
 left_xlim, right_xlim = 7, 15.9
@@ -91,7 +91,7 @@ ax.errorbar(
   temOlCoFeC.bins, temOlCoFeC.counts, temOlCoFeC.errors, ls='None',
   color=color_variant(cycle[0], -100),
   alpha=0.7,
-  label='Ac-CoFe-C'
+  label='Ac-CoFe-C-2'
 )
 
 x_for_fit_display = np.linspace(left_xlim, right_xlim, 500)

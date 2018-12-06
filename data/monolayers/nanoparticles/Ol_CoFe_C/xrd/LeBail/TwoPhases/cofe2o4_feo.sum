@@ -8,7 +8,7 @@
                  Refinement of X-ray and/or Neutron Data
 
 
-    Date: 05/12/2018  Time: 12:20:57.180                              
+    Date: 06/12/2018  Time: 00:57:21.523                              
 
  => PCR file code: cofe2o4_feo
  => DAT file code: DD67.dat             -> Relative contribution: 1.0000                                                            
@@ -32,12 +32,12 @@
  => Profile Matching (fixed scale) for phase: 1
  =>-------> Pattern#  1
  => Profile Matching (fixed scale) for phase: 2
- => Scor: 5.8459
+ => Scor: 4.6185
 
  ==> RESULTS OF REFINEMENT:
 
 
- => No. of fitted parameters:   16
+ => No. of fitted parameters:    4
 
 
 ------------------------------------------------------------------------------
@@ -50,9 +50,9 @@
  ==> PROFILE PARAMETERS FOR PATTERN#  1
 
  => Cell parameters      :
-                              8.41953   0.00057
-                              8.41953   0.00057
-                              8.41953   0.00057
+                              8.43849   0.00043
+                              8.43849   0.00043
+                              8.43849   0.00043
                              90.00000   0.00000
                              90.00000   0.00000
                              90.00000   0.00000
@@ -70,7 +70,7 @@
                               0.00000   0.00000
                               0.00000   0.00000
  => X and y parameters   :    0.00000   0.00000
-                              4.57961   0.01043
+                              1.79846   0.00766
  => Strain parameters    :    0.00000   0.00000
                               0.00000   0.00000
                               0.00000   0.00000
@@ -93,9 +93,9 @@
  ==> PROFILE PARAMETERS FOR PATTERN#  1
 
  => Cell parameters      :
-                              4.21323   0.00007
-                              4.21323   0.00007
-                              4.21323   0.00007
+                              4.21245   0.00006
+                              4.21245   0.00006
+                              4.21245   0.00006
                              90.00000   0.00000
                              90.00000   0.00000
                              90.00000   0.00000
@@ -113,7 +113,7 @@
                               0.00000   0.00000
                               0.00000   0.00000
  => X and y parameters   :    0.00000   0.00000
-                              0.62980   0.00328
+                              0.57535   0.00288
  => Strain parameters    :    0.00000   0.00000
                               0.00000   0.00000
                               0.00000   0.00000
@@ -130,74 +130,48 @@
 
 
  => Zero-point:     0.0000    0.0000
- => Chebychev Polynomials Background Parameters ==>
-                               1843.1      1.1634    
-                              -920.49      2.0714    
-                               293.35      1.9131    
-                               7.6090      1.8913    
-                              -179.20      1.8662    
-                               260.23      1.7784    
-                              -134.63      1.7299    
-                              -123.48      1.7909    
-                               202.21      1.6580    
-                              -58.222      1.6278    
-                              -104.89      1.5658    
-                               83.542      1.5214    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
-                               0.0000      0.0000    
- 
  => Cos( theta)-shift parameter :   0.0000  0.0000
  => Sin(2theta)-shift parameter :   0.0000  0.0000
 
  ==> RELIABILITY FACTORS WITH ALL NON-EXCLUDED POINTS FOR PATTERN:  1
 
-  => Cycle:  5 => MaxCycle: 10
- => N-P+C:  2479
+  => Cycle:  4 => MaxCycle: 10
+ => N-P+C:  2491
  =>  R-factors (not corrected for background) for Pattern:  1
- => Rp:  2.43     Rwp:  3.22     Rexp:    1.88 Chi2:  2.94      L.S. refinement
+ => Rp:  2.33     Rwp:  2.99     Rexp:    1.88 Chi2:  2.51      L.S. refinement
  => Conventional Rietveld R-factors for Pattern:  1
- => Rp:  6.49     Rwp:  7.58     Rexp:    4.42 Chi2:  2.94    
- => Deviance:  0.731E+04     Dev*  :   2.947    
- => DW-Stat.:    0.3531     DW-exp:     1.8884
- => N-sigma of the GoF:       68.190
+ => Rp:  25.7     Rwp:  19.4     Rexp:   12.22 Chi2:  2.51    
+ => Deviance:  0.628E+04     Dev*  :   2.520    
+ => DW-Stat.:    0.4120     DW-exp:     1.8787
+ => N-sigma of the GoF:       53.361
 
  ==> RELIABILITY FACTORS FOR POINTS WITH BRAGG CONTRIBUTIONS FOR PATTERN:  1
 
- => N-P+C:  2479
+ => N-P+C:  2491
  =>  R-factors (not corrected for background) for Pattern:  1
- => Rp:  2.43     Rwp:  3.22     Rexp:    1.88 Chi2:  2.94      L.S. refinement
+ => Rp:  2.33     Rwp:  2.99     Rexp:    1.88 Chi2:  2.51      L.S. refinement
  => Conventional Rietveld R-factors for Pattern:  1
- => Rp:  6.49     Rwp:  7.58     Rexp:    4.42 Chi2:  2.94    
- => Deviance:  0.731E+04     Dev*  :   2.947    
- => DW-Stat.:    0.3531     DW-exp:     1.8884
- => N-sigma of the GoF:       68.190
+ => Rp:  25.7     Rwp:  19.4     Rexp:   12.22 Chi2:  2.51    
+ => Deviance:  0.628E+04     Dev*  :   2.520    
+ => DW-Stat.:    0.4120     DW-exp:     1.8787
+ => N-sigma of the GoF:       53.361
 
- => Global user-weigthed Chi2 (Bragg contrib.):   2.94    
+ => Global user-weigthed Chi2 (Bragg contrib.):   2.51    
 
      -----------------------------------------------------
      BRAGG R-Factors and weight fractions for Pattern #  1
      -----------------------------------------------------
 
  => Phase:  1     CoFe2O4
- => Bragg R-factor:  0.109       Vol:  596.847( 0.069)  Fract(%):    0.00( 0.00)
- => Rf-factor= 0.687E-01         ATZ:           0.000   Brindley:  1.0000
+ => Bragg R-factor:  0.295       Vol:  600.889( 0.053)  Fract(%):    0.00( 0.00)
+ => Rf-factor= 0.458             ATZ:           0.000   Brindley:  1.0000
 
  => Phase:  2     FeO
- => Bragg R-factor:  0.157       Vol:   74.791( 0.002)  Fract(%):    0.00( 0.00)
- => Rf-factor= 0.967E-01         ATZ:           0.000   Brindley:  1.0000
+ => Bragg R-factor:  0.408       Vol:   74.749( 0.002)  Fract(%):    0.00( 0.00)
+ => Rf-factor= 0.291             ATZ:           0.000   Brindley:  1.0000
 
  
-              CPU Time:     0.484 seconds
-                            0.008 minutes
+              CPU Time:     0.269 seconds
+                            0.004 minutes
 
- => Run finished at:     Date: 05/12/2018  Time: 12:20:57.667                              
+ => Run finished at:     Date: 06/12/2018  Time: 00:57:21.792                              
