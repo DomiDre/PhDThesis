@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import Cli
 from modelexp.experiments.sas import Sans
-from modelexp.models.sas import SuperballCS, InstrumentalResolution
+from modelexp.models.sas import SuperballCSOA, DataResolution
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -17,29 +17,28 @@ app.setExperiment(Sans)
 dataRef = app.setData(XyeData)
 
 
-dataRef.loadFromFile('../YF45_nuclear_SA.dat', ['sa'])
-dataRef.loadFromFile('../YF45_nuclear_LA.dat', ['la'])
+dataRef.loadFromFile('../../experimentalData/YF45_nuclear_SA.dat', ['sa'])
+dataRef.loadFromFile('../../experimentalData/YF45_nuclear_LA_scaled.dat', ['la'])
 dataRef.sliceDomain(0., 0.25)
 
-modelRef = app.setModel(SuperballCS, InstrumentalResolution)
+modelRef = app.setModel(SuperballCSOA, DataResolution)
 
-modelRef.setParam("i0", 0.10093954,  minVal = 0, maxVal = 0.6, vary = True)
+modelRef.setParam("i0", 0.02929779,  minVal = 0, maxVal = 0.6, vary = True)
 modelRef.setParam("d", 11.2363778,  minVal = 0, maxVal = 30, vary = True)
-modelRef.setParam("sldCore", 6.9385e-06,  minVal = 4.293e-06, maxVal = 7.289e-06, vary = True)
-modelRef.setParam("dTheta_sa", 0.00195257,  minVal = 0, maxVal = 0.01, vary = True)
-modelRef.setParam("dTheta_la", 0.00337370,  minVal = 0, maxVal = 0.01, vary = True)
 modelRef.setParam("bg", 0.00394841, minVal = 0, maxVal = 0.01, vary = True)
 
-modelRef.setConstantParam("r", 42.8959582)
-modelRef.setConstantParam("pVal", 2.16474488)
-modelRef.setConstantParam("sigR", 0.15030187)
+modelRef.setParam("rOleic", 23.36,  minVal = 0, maxVal = 40, vary = True)
+modelRef.setParam("i0Oleic", 0.4289,  minVal = 0, maxVal = 10, vary = True)
 
-modelRef.setConstantParam("sldShell", sld_neutrons_5A['Oleic Acid'])
-modelRef.setConstantParam("sldSolvent", sld_neutrons_5A['Toluene-d8'])
+modelRef.setConstantParam("r", 42.8959813)
+modelRef.setConstantParam("pVal", 2.16472545)
+modelRef.setConstantParam("sigR", 0.15030238)
+
+modelRef.setConstantParam("sldCore", 6.132e-06)
+modelRef.setConstantParam("sldShell", 0.078e-6)
+modelRef.setConstantParam("sldSolvent", 5.664e-6)
 modelRef.setConstantParam('orderHermite', 10)
 modelRef.setConstantParam('orderLegendre', 10)
-modelRef.setConstantParam('wavelength', 5.9984)
-modelRef.setConstantParam('dWavelength', 0.04247)
 
 modelRef.updateModel()
 

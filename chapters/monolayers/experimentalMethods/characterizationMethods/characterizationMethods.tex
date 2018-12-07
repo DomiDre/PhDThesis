@@ -15,7 +15,9 @@
     XRD of Ac-CoFe-C and Ol-CoFe-C was measured in cooperation with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague on an PANanalytical X'Pert PRO, which is described in \refch{ch:instruments:laboratoryInstruments:xrd}.
     For the measurement, dried samples of the nanoparticles were sent to the laboratory of the collaboration, where they were redispersed and dried on glass substrates for the measurement.
     The diffractometer operated with a Cu-K$\alpha$ source ($\lambda \eq 1.54 \angstrom$) and a $2 \theta \eq 5^\circ \ldots 80^\circ$ has been measured.
-    The nanoparticles from Ac-CoFe-C-2 were measured on a STOE STADI MP with a Mo-K$\alpha$ source ($\lambda \eq 0.71 \angstrom$) in the working group of Prof. Dr Mathur in the University of Cologne by Dr. Andreas Mettenb\"orger on a precipitated powder of the nanoparticles.
+    The instrumental broadening is determined from a LaB6 reference measurement (SR 660b, NIST).
+    The nanoparticles from Ac-CoFe-C-2 were measured on a Huber G620 with a Mo-K$\alpha$ source ($\lambda \eq 0.71 \angstrom$) in the working group of Prof. Dr Mathur in the University of Cologne by Dr. Andreas Mettenb\"orger on a precipitated powder of the nanoparticles.
+    For this instrument it was not possible to obtain a reference measurement to estimate the instrumental broadening.
     The data is analyzed using the FullProf suite \cite{Rodriguez_1993_Recen} as described in \refch{ch:methods:xrd}.
     In both cases a LeBail refinement has been performed comparing the data to the phase of the inverse spinell structure of cobalt ferrite (space group $Fd\bar{3}m$, No. 227) to determine the lattice spacing a check for phase purity.
 
@@ -50,6 +52,12 @@
       y \eq \frac{8r}{2 + 3r}.
     \end{align}
 
+    Given the atomic composition from EDX and the lattice constant $a$ from XRD, the density of the nanoparticles is calculated from
+    \begin{align}
+      \rho \eq \frac{\sum_i N_i m_i}{a^3},
+    \end{align}
+    where $N_i$ is the number of atoms in a unit cell and $m_i$ the respective atomic mass read from the periodic table of elements.
+
   \paragraphNewLine{Small-Angle Scattering}
     For the measurement of SAXS the nanoparticle dispersions are filled in borosilicate capillaries obtained from the company Hilgenberg with $1.5 \unit{mm}$ diameter and a $0.01 \unit{mm}$ wall thickness, which are sealed using a plastic stopper and glue gun.
     Ac-CoFe-C was dispersed in $\mathit{n}$-hexane for the measurement, whereas Ol-CoFe-C and Ac-CoFe-C-2 were dispersed in toluene.
@@ -60,7 +68,7 @@
 
     To measure SANS and SANSPOL, the dispersions are dried at ambient conditions and redispersed in toluene-$\mathrm{d_8}$ to reduce the incoherent scattering coming from hydrogen atoms.
     The small-angle neutron scattering data of Ac-CoFe-C and Ac-CoFe-C-2 was measured at D22 (\refch{ch:lss:d22}) and Ol-CoFe-C on the D33 instrument (\refch{ch:lss:d33}) at the Institut Laue-Langevin.
-    The wavelength for all measurements on D22 was set to $7.208 \unit{\angstrom}$ and the wavelength resolution is given by $\sigma_\lambda / \lambda \eq 8.5 \%$.
+    The wavelength for all measurements on D22 was $7.208 \unit{\angstrom}$ and the instrumental resolution is used as provided by the GRASP software for the instrument.
     For D33 the wavelength was set $5.998 \unit{\angstrom}$ and the wavelength resolution $\sigma_\lambda / \lambda \eq 4.25 \%$.
     For SANSPOL the applied field was in all cases $1.2 \unit{T}$ with the magnetic field along the $y$ direction: perpendicular to the beam and in the horizontal plane.
     To evaluate the magnetic scattering, a $20^\circ$ sector around the vertical $z$ dimension is azimuthally integrated.
@@ -71,6 +79,11 @@
     Each data set is evaluated using a spherical (\refapp{ch:appendix:formfactors:sphereCoreshell}), cubic (\refapp{ch:appendix:formfactors:sphereCoreshell}) and a superball form factor.
     The derivation of the superball form factor is described in more detail in \refch{sec:monolayers:nanoparticle:structuralCharacterization}.
     For the SANS models, an additional oleic acid shell with the same morphology as the core model and a shell thickness $D$ is added, as well as the instrumental resolution as described in \refch{ch:methods:sans}.
+
+    As figure of merit for the minimization algorithm a modified $\chi^2$ on the logarithmic scale is used, which is defined by
+    \begin{align}
+      \chi^2 \eq \frac{1}{N-p} \sum_{i\eq 1}^{N} \frac{(\log(I_i) - \log(I_\mathrm{model}))^2}{\sigma_i^2} I^2_i
+    \end{align}
 
     To fix parameters of the models, the scattering length density of the nanoparticles prepared by acetylacetonates is determined using the lattice parameter $a$ from XRD and the average atomic composition of the cobalt ferrite particle from EDX by
     \begin{align}
@@ -118,6 +131,33 @@
       \rho^\mathrm{neutron}_\mathrm{toluene-d8} &\eq 5.664 \cdot 10^{-6} \angstrom^{-2},
     \end{align}
     which provides a large contrast to the oleic acid shell.
+
+
+    \begin{figure}[tb]
+      \centering
+      \includegraphics{monolayer_sans_superball_OA_model}
+      \caption{\label{fig:monolayers:charMethods:SANSModel}Depiction of the model used for SANS: A combination of nanoparticles and oleic acid micelles. Orange is the nanoparticle material, white with curly lines the oleic acid and blue the solvent.}
+    \end{figure}
+
+    Due to the stronger contrast of oleic acid and the solvent for neutrons, oleic acid micelles in the solution become visible.
+    Also it is possible that a incoherent background might be present due to the hydrogen of the oleic acid (\ch{C18H34O2}), as to why an additional constant background term is added to the model.
+    The SANS data is thus described by a sum of the intensity calculated for the superball, the intensity of a spherical form factor and a constant term
+    \begin{align}
+      I(q) \eq I_\mathrm{superball}(q) + I_\mathrm{sphere}(q) + I_bg,
+    \end{align}
+    which is depicted in \reffig{fig:monolayers:charMethods:SANSModel}.
+    The micelles introduce $r_\mathrm{OA}$ and $n_\mathrm{OA}$ as additional parameters to the model, which describe the size of the micelles and their number density in dispersion.
+
+    To interpret particle number densities $n$, they are transformed to a mass concentration by
+    \begin{align}
+      c_m \eq n V_p \rho,
+    \end{align}
+    using the single-particle volume $V_p$ and the density of the material $\rho$.
+    For the oleic acid micelles the volume fraction
+    \begin{align}
+      c_V \eq n V_p,
+    \end{align}
+    is given as it is the more natural for the handling of a liquid.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
     The macroscopic magnetization of the nanoparticles was measured using the PPMS Evercool II described in \refch{ch:instruments:laboratoryInstruments:vsm}.

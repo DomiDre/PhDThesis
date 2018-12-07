@@ -63,6 +63,14 @@ sanspol_m_la_r, sanspol_m_la_sld, sanspol_m_la_rMag, sanspol_m_la_sldMag = sldDa
 sanspol_p_sa_r, sanspol_p_sa_sld, sanspol_p_sa_rMag, sanspol_p_sa_sldMag = sldData.getDatasetBySuffix('p_sa').getData()
 sanspol_m_sa_r, sanspol_m_sa_sld, sanspol_m_sa_rMag, sanspol_m_sa_sldMag = sldData.getDatasetBySuffix('m_sa').getData()
 
+r_part = sanspol_p_la_r[:6]
+sld_part = sanspol_p_la_sld[:6]
+rMag_part = sanspol_p_la_r[:6]
+sldMag_part = sanspol_p_la_sldMag[:6]
+r_oa = sanspol_p_la_r[12:16]
+sld_oa = sanspol_p_la_sld[12:16]
+
+
 left, bottom = 0.2, 0.17
 x0in = 0.6
 y0in = 0.7
@@ -106,15 +114,18 @@ ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")
 ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
-ax.set_xlim([q_min, q_max])
-ax.set_ylim([I_min, I_max])
+ax.set_xlim([1e-2, 0.2])
+ax.set_ylim([3e-3, 3e0])
 
-ax_sld.plot(sanspol_p_la_r, sanspol_p_la_sld, marker='None',
-  color=colors['sanspol_sld'])
-ax_sld.plot(sanspol_p_la_rMag, sanspol_p_la_sldMag, marker='None',
-  color=colors['sanspol_sldMag'])
+ax_sld.plot(r_part, sld_part, marker='None',
+  color='#FAAB2D', zorder=2, alpha=0.2)
+ax_sld.plot(rMag_part, sldMag_part, marker='None',
+  color='#EE292F', zorder=3)
+ax_sld.plot(r_oa, sld_oa, marker='None',
+  color='#0EA8DF', zorder=1, alpha=0.2)
+
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
-ax_sld.set_ylabel("$SLD \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
+ax_sld.set_ylabel(r"$\rho_{mag} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 2, 4, 6, 8])
 ax_sld.set_yticks([0, 2, 4, 6, 8])
 ax_sld.set_xlim([0, 9])
