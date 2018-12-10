@@ -21,12 +21,6 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 sample_name = 'Ol_CoFe_C'
 Chapter = 'monolayers'
 
-saxs_fit_file_sphere = cwd + "/sphereModel/saxs/fit_result.dat"
-saxs_sld_file_sphere = cwd + "/sphereModel/saxs/fit_sld.dat"
-
-saxs_fit_file_cube = cwd + "/cubeModel/saxs/fit_result.dat"
-saxs_sld_file_cube = cwd + "/cubeModel/saxs/fit_sld.dat"
-
 saxs_fit_file_superball = cwd + "/superballModel/saxs/fit_result.dat"
 saxs_sld_file_superball = cwd + "/superballModel/saxs/fit_sld.dat"
 
@@ -40,11 +34,15 @@ def get_data(fit_result):
   params = data.params
   return params, q, I, sI, Imodel
 
-p_sphere, q_sphere, I_sphere, sI_sphere, Imodel_sphere = get_data(saxs_fit_file_sphere)
-p_superball, q_superball, I_superball, sI_superball, Imodel_superball = get_data(saxs_fit_file_superball)
-p_cube, q_cube, I_cube, sI_cube, Imodel_cube = get_data(saxs_fit_file_cube)
+def get_sld(sld_file):
+  data = MultiData(XyData)
+  data.loadFromFile(sld_file)
+  z, sld = data.getDataset(0).getData()
+  return z, sld
 
-bg = 0#params['bg']['value']
+p_superball, q_superball, I_superball, sI_superball, Imodel_superball = get_data(saxs_fit_file_superball)
+z, sld =  get_sld(saxs_sld_file_superball)
+
 left, bottom = 0.2, 0.17
 x0in = 0.6
 y0in = 0.7
@@ -53,46 +51,38 @@ heightin= 1-y0in-0.01
 
 fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
-ax_inset = fig.add_axes([left+0.03, bottom+0.03, 0.35, 0.4])
+ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 
-ax.errorbar(q_sphere, I_sphere, sI_sphere,
+ax.errorbar(q_superball, I_superball, sI_superball,
   linestyle='None',
-  label='Ol-CoFe-C', zorder=0, capsize=0, marker='.', alpha=1)
-
-ax.plot(q_sphere, Imodel_sphere, marker='None', linestyle='-',
-  label='Sphere', zorder=1, alpha=0.8)
+  label='SAXS @ GALAXI', zorder=0, capsize=0, marker='.', alpha=1)
 
 ax.plot(q_superball, Imodel_superball, marker='None', linestyle='-',
-  label='Superball', zorder=1, alpha=0.8)
+  label='Superball Core-Shell', color='#FAAB2D', zorder=1, alpha=0.8)
 
-ax.plot(q_cube, Imodel_cube, marker='None', linestyle='-',
-  label='Cube', zorder=1, alpha=0.8)
+ax_sld.plot(z, sld, marker='None', color='#FAAB2D', zorder=2)
 
+ax.text(0.12, 0.18, 'Ol-CoFe-C',
+  horizontalalignment='left',
+  verticalalignment='bottom',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
 
-ax_inset.errorbar(q_sphere, I_sphere, sI_sphere, marker='.', linestyle='None', zorder=0, alpha=1)
-ax_inset.plot(q_sphere, Imodel_sphere, marker='None', linestyle='-', zorder=1, alpha=0.8)
-ax_inset.plot(q_superball, Imodel_superball, marker='None', linestyle='-', zorder=1, alpha=0.8)
-ax_inset.plot(q_cube, Imodel_cube, marker='None', linestyle='-', zorder=1, alpha=0.8)
-
-# ax.text(0.12, 0.35, '',
-#   horizontalalignment='left',
-#   verticalalignment='bottom',
-#   transform=ax.transAxes,
-#   fontsize=inset_fontsize)
-
-ax.legend(loc='upper right', fontsize=inset_fontsize)
+ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")
 ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
 ax.set_xlim([1.5e-2, 0.25])
-ax.set_ylim([1.1e-3, 4e1])
+ax.set_ylim([1.1e-3, 4e2])
 
-ax_inset.set_xscale('log')
-ax_inset.set_yscale('log')
-ax_inset.set_xlim([0.06, 0.14])
-ax_inset.set_ylim([1.5e-2, 3e-1])
-ax_inset.get_xaxis().set_visible(False)
-ax_inset.get_yaxis().set_visible(False)
+
+ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
+ax_sld.set_ylabel(r"$\rho_{el} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
+ax_sld.set_xticks([0, 2, 4, 6, 8])
+ax_sld.set_yticks([0, 25, 50])
+ax_sld.set_xlim([0, 9.9])
+ax_sld.set_ylim([0, 59])
+ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 fig.savefig(thesisimgs + '/' + pngfile)
 fig.savefig(cwd + '/' + pngfile)

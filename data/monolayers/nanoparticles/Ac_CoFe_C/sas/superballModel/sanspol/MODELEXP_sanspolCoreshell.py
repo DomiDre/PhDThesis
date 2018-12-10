@@ -7,14 +7,14 @@
 from modelexp import Cli
 from modelexp.experiments.sas import Sanspol
 from modelexp.models.sas import SuperballCSOA, DataResolution, Magnetic
-from modelexp.data import XyeData
+from modelexp.data import XyerData
 from modelexp.fit import LevenbergMarquardt
 
 from thesis_utils.materials import sld_neutrons_5A
 
 app = Cli()
 app.setExperiment(Sanspol)
-dataRef = app.setData(XyeData)
+dataRef = app.setData(XyerData)
 
 dataRef.loadFromFile('../../experimental_data/AH11_plus_1.2T_LA_scaled.dat', ['p', 'la'])
 dataRef.loadFromFile('../../experimental_data/AH11_minus_1.2T_LA_scaled.dat', ['m', 'la'])
@@ -24,14 +24,15 @@ dataRef.loadFromFile('../../experimental_data/AH11_minus_1.2T_SA.dat', ['m', 'sa
 dataRef.sliceDomain(0, 0.5)
 
 modelRef = app.setModel(SuperballCSOA, [Magnetic, DataResolution])
-modelRef.setParam("magSldCore", 5.239999999999999e-07,  minVal = 0, maxVal = 2e-06, vary = True)
+modelRef.setResolution()
+modelRef.setParam("magSldCore", 9.7081e-07,  minVal = 0, maxVal = 2e-06, vary = True)
 modelRef.setConstantParam("sin2alpha", 0.9899)
 
-modelRef.setConstantParam("d", 14.1228789)
-modelRef.setConstantParam("i0", 0.04103704)
-modelRef.setConstantParam("rOleic", 23.3623414)
-modelRef.setConstantParam("i0Oleic", 0.42893074)
-modelRef.setConstantParam("bg", 0.00612996)
+modelRef.setConstantParam("d", 14.2761886)
+modelRef.setConstantParam("i0", 0.03994262)
+modelRef.setConstantParam("i0Oleic", 0.44221577)
+modelRef.setConstantParam("rOleic", 23.1990334)
+modelRef.setConstantParam("bg", 0.00612110)
 
 modelRef.setConstantParam("magSldShell", 0)
 

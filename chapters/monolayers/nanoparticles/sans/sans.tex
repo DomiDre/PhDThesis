@@ -4,83 +4,99 @@
   \label{sec:monolayers:nanoparticle:sans}
 
     By using small-angle neutron scattering, the oleic acid shell thickness can be determined, and by using polarized neutrons the magnetization density of the nanoparticles is probed.
-    \reffig{fig:monolayers:nanoparticle:sans:initialSim} shows the data the simulation of the superball formfactor with the parameters obtained from SAXS, the SLD calculated for the same composition determined by XRD and EDX, and the assumption of a $1.5 \unit{nm}$ oleic acid shell, which is a size observed in literature for oleic acid ligated nanoparticles \cite{Disch_2012_Quant}.
-    The form factor is scaled to agree with the data initially to compare the trend of experimental and simulated data.
 
-    The SANS data of Ac-CoFe-C shows two visible form factor maxima and three minima positions can be estimated in it.
-    The comparison to the initial form factor model of the superball shows the maxima at the same scattering vector values, which tells that the nanoparticle size of the superball obtained from SAXS agrees with the size of the particle in SANS as expected.
-    The superball form factor, however, decreases faster in intensity than the actual data and can not be corrected by assuming only a constant background from incoherent scattering for example.
-    This hints to an additional background contribution that is dependent on the scattering vector.
-    Earlier SANS studies on oleic acid ligated nanoparticles \cite{Disch_2010_Thesp} observe something similar and explain this by assuming the formation of oleic acid micelles in dispersion, which would be nearly invisible for X-rays due to the small contrast of organic solvents with oleic acid, but have an observable effect in neutron scattering.
+    \paragraphNewLine{SANS Model: Oleic Acid Shell and Micelles}
+      % \reffig{fig:monolayers:nanoparticle:sans:initialSim} shows the data the simulation of the superball formfactor with the parameters obtained from SAXS, the SLD calculated for the same composition determined by XRD and EDX, and the assumption of a $1.5 \unit{nm}$ oleic acid shell, which is a size observed in literature for oleic acid ligated nanoparticles \cite{Disch_2012_Quant}.
+      % The form factor is scaled to agree with the data initially to compare the trend of experimental and simulated data.
 
-    \begin{figure}[tb]
-      \centering
-      \includegraphics{monolayers_SAS_Ac_CoFe_C_InitialSANS}
-      \caption{\label{fig:monolayers:nanoparticle:sans:initialSim}SANS of Ac-CoFe-C and an initial superball form factor (black) before a fit is performed using the parameters of the SAXS fit. The form factor, which would be produced by oleic acid micelles with a radius analogue to the shell thickness is shown in blue.}
-    \end{figure}
+      % The comparison to the initial form factor model of the superball shows the maxima at the same scattering vector values, which tells that the nanoparticle size of the superball obtained from SAXS agrees with the size of the particle in SANS as expected.
+      % The superball form factor, however, decreases faster in intensity than the actual data and can not be corrected by assuming only a constant background from incoherent scattering for example.
+      % This hints to an additional background contribution that is dependent on the scattering vector.
+      % Earlier SANS studies on oleic acid ligated nanoparticles \cite{Disch_2010_Thesp} observe something similar and explain this by assuming the formation of oleic acid micelles in dispersion, which would be nearly invisible for X-rays due to the small contrast of organic solvents with oleic acid, but have an observable effect in neutron scattering.
 
-    Therefore the model for the SANS data is a sum of a superball with a core-shell structure to include an oleic acid shell, and a spherical formfactor to model micelles in the dispersion.
-    As the nanoparticle size and shape is determined to high precision by SAXS, it is fixed in the superball form factor to the previously determined values and only the thickness $d$ of the superball's oleic acid shell is varied.
-    The particle number density $n_\mathrm{NP}$ of the dispersion is varied as the particles were dried and redispersed for the measurement and therefore the concentration might have changed.
-    The best fit is shown in \reffig{fig:monolayers:nanoparticle:sans:superballOAFit} and the varied parameters are tabulated in \reftab{tab:monolayers:nanoparticle:sans:superballOAFit}.
-    The inset of \reffig{fig:monolayers:nanoparticle:sans:superballOAFit} shows the scattering length density profiles to visualize the length scales of the core and shell size.
-    For the superball the shown SLD profile represents a cut along one of the four fold axis.
+      % \begin{figure}[tb]
+      %   \centering
+      %   \includegraphics{monolayers_SAS_Ac_CoFe_C_InitialSANS}
+      %   \caption{\label{fig:monolayers:nanoparticle:sans:initialSim}Initial superball form factor (black) before a fit to the SANS data of Ac-CoFe-C is performed using the parameters of the SAXS fit and by estimating the surfactant shell thickness from literature. The form factor, which would be produced by oleic acid micelles with a radius analogue to the shell thickness is shown in blue.}
+      % \end{figure}
 
-    \begin{figure}[tb]
-      \centering
-      \includegraphics{monolayers_SAS_Ac_CoFe_C_SANS}
-      \includegraphics{monolayers_SAS_Ac_CoFe_C_SANSPOLFit}
-      \caption{\label{fig:monolayers:nanoparticle:sans:superballOAFit}Ac-CoFe-C SANS data described by the sum of a superball form factor and a spherical form factor. The inset shows the SLD profiles of the superball nanoparticles (orange line) and the spherical oleic acid micelles (black) before a fit is performed using the parameters of the SAXS fit. The form factor, which would be produced by oleic acid micelles with a radius analogue to the shell thickness is shown in blue.}
-    \end{figure}
+      The SANS data of Ac-CoFe-C in \reffig{fig:monolayers:nanoparticle:sans:superballOAFit} shows two visible form factor maxima and three minima positions can be estimated in it.
+      The SANS data can be described by a sum of form factors, one from a superball with an oleic acid shell, and the other a spherical formfactor to model oleic acid micelles in the dispersion.
+      As the nanoparticle size and shape is determined very well by SAXS, it is fixed in the superball form factor to the previously determined values and only the thickness $d$ of the superball's oleic acid shell is varied.
+      The particle number density $n_\mathrm{NP}$ of the dispersion is also varied, as the particles were dried and redispersed for the measurement and therefore the concentration might have changed.
+      The best fit is shown in \reffig{fig:monolayers:nanoparticle:sans:superballOAFit} and the varied parameters are tabulated in \reftab{tab:monolayers:nanoparticle:sans:superballOAFit}.
+      The inset of \reffig{fig:monolayers:nanoparticle:sans:superballOAFit} shows the scattering length density profiles to visualize the length scales of the core and shell size.
+      For the superball the shown SLD profile represents a cut along one of the four fold axis.
 
-    \begin{table}[ht]
-      \centering
-      \caption{\label{tab:monolayers:nanoparticle:sans:superballOAFit}Parameters for the form factors of the sphere, cube and superball shown in \reffig{fig:monolayers:nanoparticle:sas:AcAcCoFeC}.
-      The size of the sphere and superball are given in terms of the radius $R$, the size of the cube is given in terms of the edge length $a$.
-      The respective log-normal size distribution $\sigma_R$ and $\sigma_a$. $n$ is the particle density in dispersion, $p$ the superball exponent and $\rho_\mathrm{core}$, $\rho_\mathrm{solvent}$ the scattering length densities of the particle and the solvent respectively. The mass concentration $c_m$ of the nanoparticles and oleic acid are determined from the particle number densities and the particle sizes.}
-      \begin{tabular}{ c | l | l | l }
-        \textbf{SANS}  & \textbf{Ac-CoFe-C} & \textbf{Ac-CoFe-C-2} & \textbf{Ol-CoFe-C}\\
-        \hline
-        \rule{0pt}{2ex} $d / \unit{nm}$                             & $1.41(3)$      & $()$  & $()$ \\
-        \rule{0pt}{2ex} $d_\mathrm{OA} / \unit{nm}$                 & $2.34(3)$      & $()$  & $()$ \\
-        \rule{0pt}{2ex} $n_\mathrm{NP} \, / 10^{-8} \angstrom^{-3}$ & $0.041(2)$     & $()$  & $()$ \\
-        \rule{0pt}{2ex} $n_\mathrm{OA} \, / 10^{-8} \angstrom^{-3}$ & $0.43(3)$      & $()$  & $()$ \\
-        \hline
-        \rule{0pt}{2ex} $\rho_\mathrm{core}    \, / \unit{10^{-6} \angstrom^{-2}}$   & $6.198$    & $6.132$ & $7.082$\\
-        \rule{0pt}{2ex} $\rho_\mathrm{shell}   \, / \unit{10^{-6} \angstrom^{-2}}$   &            &         & $5.938$\\
-        \hline
-        \rule{0pt}{2ex} $\rho_\mathrm{OA}      \, / \unit{10^{-6} \angstrom^{-2}}$   & \multicolumn{3}{c}{0.078}\\
-        \rule{0pt}{2ex} $\rho_\mathrm{solvent} \, / \unit{10^{-6} \angstrom^{-2}}$   & \multicolumn{3}{c}{5.664}\\
-        \hline
-        \rule{0pt}{2ex} $I_\mathrm{bg} \, / \unit{cm^{-1}}$         & $0.0061(2$     & $0$        & $0$\\
-        \hline
-        \rule{0pt}{2ex} $c_{m, \, \mathrm{NP}} \, / \unit{mg\, mL^{-1}}$ & $1.5(1)$  & $()$       & $()$\\
-        \rule{0pt}{2ex} $c_{V, \, \mathrm{OA}} \, / \unit{10^{-3}}$      & $0.23(2)$ & $()$       & $()$\\
-        \hline
-        \rule{0pt}{2ex} $\chi^2$                                          & $2.0$          & $0$        & $0$\\
-        \hline
-        \textbf{SANSPOL}\\
-        \hline
-        \rule{0pt}{2ex} $\rho_\mathrm{mag} \, / \unit{10^{-6} \angstrom^{-2}}$   & $0.97(2)$    & $0$ & $0$\\
-        \rule{0pt}{2ex} $M \, / \unit{kA \,m^{-1}}$                       & $334(5)$     & $0$ & $0$\\
-        \hline
-        \rule{0pt}{2ex} $\chi^2$                                          & $4.4$          & $0$        & $0$\\
-      \end{tabular}
-    \end{table}
-    % 0.041e-2 * (superballVolume(4.69, 2.66) * 5.09 + (superballVolume(4.69+1.41,2.66) - superballVolume(4.69, 2.66))*0.895)
-    % 0.041e-2 * (superballVolume(4.69, 2.66) * 5.09 + (0)*0.895)
-    % 1.51410663929305
+      \begin{figure}[tb]
+        \centering
+        \includegraphics{monolayers_SAS_Ac_CoFe_C_SANS}
+        \includegraphics{monolayers_SAS_Ac_CoFe_C_SANSPOLFit}
+        \includegraphics{monolayers_SAS_Ac_CoFe_C_2_SANS}
+        \includegraphics{monolayers_SAS_Ac_CoFe_C_2_SANS}
+        \caption{\label{fig:monolayers:nanoparticle:sans:superballOAFit}Ac-CoFe-C (upper) and Ac-CoFe-C-2 (lower) SANS (left) and SANSPOL (right) data described by the sum of a superball form factor and a spherical form factor. The inset shows the SLD profiles of the superball nanoparticles (orange line) and the spherical oleic acid micelles (black).}
+      \end{figure}
 
-    The best fit shows a good agreement for Ac-CoFe-C with the shell thickness of $1.41 \unit{nm}$ and the average micelles radius of $2.34 \unit{nm}$.
+      \begin{table}[ht]
+        \centering
+        \caption{\label{tab:monolayers:nanoparticle:sans:superballOAFit}Parameters for the form factors of the sphere, cube and superball shown in \reffig{fig:monolayers:nanoparticle:sas:AcAcCoFeC}.
+        The size of the sphere and superball are given in terms of the radius $R$, the size of the cube is given in terms of the edge length $a$.
+        The respective log-normal size distribution $\sigma_R$ and $\sigma_a$. $n$ is the particle density in dispersion, $p$ the superball exponent and $\rho_\mathrm{core}$, $\rho_\mathrm{solvent}$ the scattering length densities of the particle and the solvent respectively. The mass concentration $c_m$ of the nanoparticles and oleic acid are determined from the particle number densities and the particle sizes.}
+        \begin{tabular}{ c | l | l | l }
+          \textbf{SANS}  & \textbf{Ac-CoFe-C} & \textbf{Ac-CoFe-C-2} & \textbf{Ol-CoFe-C}\\
+          \hline
+          \rule{0pt}{2ex} $d / \unit{nm}$                             & $1.41(3)$      & $1.68(4)$  & $()$ \\
+          \rule{0pt}{2ex} $d_\mathrm{OA} / \unit{nm}$                 & $2.34(3)$      & $2.04(8)$  & $()$ \\
+          \rule{0pt}{2ex} $n_\mathrm{NP} \, / 10^{-8} \angstrom^{-3}$ & $0.041(2)$     & $0.021(1)$ & $()$ \\
+          \rule{0pt}{2ex} $n_\mathrm{OA} \, / 10^{-8} \angstrom^{-3}$ & $0.43(3)$      & $0.41(8)$  & $()$ \\
+          \hline
+          \rule{0pt}{2ex} $\rho_\mathrm{core}    \, / \unit{10^{-6} \angstrom^{-2}}$   & $6.198$    & $6.132$ & $7.082$\\
+          \rule{0pt}{2ex} $\rho_\mathrm{shell}   \, / \unit{10^{-6} \angstrom^{-2}}$   &            &         & $5.938$\\
+          \hline
+          \rule{0pt}{2ex} $\rho_\mathrm{OA}      \, / \unit{10^{-6} \angstrom^{-2}}$   & \multicolumn{3}{c}{0.078}\\
+          \rule{0pt}{2ex} $\rho_\mathrm{solvent} \, / \unit{10^{-6} \angstrom^{-2}}$   & \multicolumn{3}{c}{5.664}\\
+          \hline
+          \rule{0pt}{2ex} $I_\mathrm{bg} \, / \unit{cm^{-1}}$         & $0.0061(2)$     & $0.0045(3)$        & $0()$\\
+          \hline
+          \rule{0pt}{2ex} $c_{m, \, \mathrm{NP}} \, / \unit{mg\, mL^{-1}}$ & $1.5(1)$  & $0.58(4)$       & $()$\\
+          \rule{0pt}{2ex} $c_{V, \, \mathrm{OA}} \, / \unit{10^{-3}}$      & $0.23(2)$ & $0.15(3)$  & $()$\\
+          \hline
+          \rule{0pt}{2ex} $\chi^2$                                          & $2.0$      & $2.0$    & $0$\\
+          \hline
+          \textbf{SANSPOL}\\
+          \hline
+          \rule{0pt}{2ex} $\rho_\mathrm{mag} \, / \unit{10^{-6} \angstrom^{-2}}$   & $0.97(2)$    & $0$ & $0$\\
+          \rule{0pt}{2ex} $M \, / \unit{kA \,m^{-1}}$                       & $334(5)$     & $0$ & $0$\\
+          \hline
+          \rule{0pt}{2ex} $\chi^2$                                          & $4.4$          & $0$        & $0$\\
+        \end{tabular}
+      \end{table}
+      % 0.041e-2 * (superballVolume(4.69, 2.66) * 5.09 + (superballVolume(4.69+1.41,2.66) - superballVolume(4.69, 2.66))*0.895)
+      % 0.041e-2 * (superballVolume(4.69, 2.66) * 5.09 + (0)*0.895)
+      % 1.51410663929305
 
-    In \cite{Disch_2010_Thesp} it is estimated that the head-to-tail distance of oleic acid is $2.1 \unit{nm}$.
-    The determined size for the micelles is in a similar order of magnitude, whereas the size for the shell thickness is slightly lower.
-    The deviation for the nanoparticle might be explained due to an intermixing with the solvent for the nanoparticle surfactant, which is modeled by an effectively reduced shell size, as the SLD is fixed.
-    The average micelle size is only slighty larger than the oleic acid chain size, which could for example be explained by a small gap in the core of the micelle that is effectively modeled.
+      The best fit shows a good agreement for Ac-CoFe-C with the shell thickness of $1.41 \unit{nm}$ and the average micelles radius of $2.34 \unit{nm}$.
 
-    The determined mass concentration for the nanoparticles is $1.5(1) \unit{mg mL^{-1}}$ and for the oleic acid micelles $0.21(2) \unit{mg mL^{-1}}$.
-    The nanoparticle concentration is in agreement with the SAXS value of $1.63(2) \unit{mg mL^{-1}}$.
+      In \cite{Disch_2010_Thesp}, it is estimated that the head-to-tail distance of oleic acid is $2.1 \unit{nm}$.
+      The determined size for the micelles is in a similar order of magnitude, whereas the size for the shell thickness is slightly lower.
+      The slightly larger micelle size than the oleic acid chain size, could either  be explained by a small gap in the core of the micelle that is effectively modeled or be due to an insufficient signal-to-noise ratio to properly determine the micelle size.
+      The deviation for the nanoparticle shell might be explained due to an intermixing of the oleic acid shell here with the solvent for the nanoparticle surfactant, which is modeled by an effectively reduced shell size, as the oleic acid SLD is fixed to the literature bulk value.
 
+      The determined mass concentration for the nanoparticles is $1.5(1) \unit{mg mL^{-1}}$ and for the oleic acid micelles $0.21(2) \unit{mg mL^{-1}}$.
+      The nanoparticle concentration is in agreement with the SAXS value of $1.63(2) \unit{mg mL^{-1}}$.
+
+      For Ac-CoFe-C-2 the same procedure is performed and ...
+
+
+    \paragraphNewLine{Determination of the core-shell composition for Ol-CoFe-C}
+      Due to the core-shell structure of Ol-CoFe-C, the composition of the formula unit is not known from EDX and XRD alone for Ol-CoFe-C.
+      As neutrons are highly sensitive to different iron and cobalt content, SANS is additionally used to determine the average formula unit of the nanoparticle core and shell.
+      
+
+    \paragraphNewLine{Nanoparticle Magnetization from SANSPOL}
+      Given the nuclear model of the scattering length density, the magnetization of the nanoparticles can be determined by fitting the magnetic scattering length density of a magnetic form factor with the same shape and size as used the nuclear form factor using \refeq{eq:methods:sans:sanspolFormula}.
+      The obtained fit for $I(+)$ and $I(-)$ is shown in \reffig{fig:monolayers:nanoparticle:sans:superballOAFit} and the values are tabulated in \reftab{tab:monolayers:nanoparticle:sans:superballOAFit}.
+      For Ac-CoFe-C a magnetization of $334(5) \unit{kA \, m^{-1}}$ is obtained at $1.2 \unit{T}$ and for Ac-CoFe-C-2 an even higher magnetization of $570 \unit{kA \, m^{-1}}$ is measured.
 
 
 
