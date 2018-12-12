@@ -54,7 +54,7 @@ class ModifiedSuperballCSSCoupledSigDOA(SuperballCSSCoupledSigDOA):
     vol_wustite = superballVolume(rCore, pVal)
     vol_spinell = superballVolume(particleSize, pVal) - vol_wustite
     nu = (a_spinell / a_wustite)**3 * vol_wustite / vol_spinell
-    y = (2 + ratio)*x/(nu*(1+ratio)) + (nu*ratio - 6)/(nu*(1+ratio))
+    y = 2*x/nu + (nu*ratio - 6)/(nu*(1+ratio))
     if 'saxs' in self.suffix:
       self.params['sldCore'].value = 4 * (y * electron_density['Fe'] + (1-y)*electron_density['Co'] + electron_density['O']) / a_wustite**3
       self.params['sldShell'].value = 8 * (x*electron_density['Co'] + (3-x)*electron_density['Fe'] + 4*electron_density['O']) / a_spinell**3
@@ -80,18 +80,18 @@ class ModifiedSuperballCSSCoupledSigDOA(SuperballCSSCoupledSigDOA):
 
 modelRef = app.setModel(ModifiedSuperballCSSCoupledSigDOA, DataResolution)
 modelRef.setResolution(['sans'])
-modelRef.setParam("particleSize",    53.6241544,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("dShell",          21.9828753,  minVal = 0, maxVal = 50, vary = True)
+modelRef.setParam("particleSize",     54.1851544,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("dShell",                21.1855186,  minVal = 0, maxVal = 100, vary = True)
 modelRef.setParam("dSurfactant",     15.1599864,  minVal = 0, maxVal = 50, vary = True)
-modelRef.setParam("pVal",            3.34291546,  minVal = 1, maxVal = 100, vary = True)
-modelRef.setParam("sigParticleSize", 0.05454183,  minVal = 0, maxVal = 0.25, vary = True)
-modelRef.setParam("sigD",            0.34583528,  minVal = 0, maxVal = 1, vary = True)
-modelRef.setParam("i0_saxs",         0.02410723,  minVal = 0, maxVal = 10, vary = True)
+modelRef.setParam("pVal",             2.47376320,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("sigParticleSize",  0.07143705,  minVal = 0, maxVal = 0.5, vary = True)
+modelRef.setParam("sigD",             0.40385040,  minVal = 0, maxVal = 1, vary = True)
+modelRef.setParam("i0_saxs",               0.02369477,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("x",                0.98606207,  minVal = 0, maxVal = 1, vary = True)
 modelRef.setParam("i0Oleic",         0.95182376, minVal = 0, maxVal = 100, vary=True)
 modelRef.setParam("i0_sans",         0.12252244,  minVal = 0, maxVal = 10, vary = True)
 modelRef.setParam("bg_sans",         0.01344027,  minVal = 0, maxVal = 0.1, vary = True)
 
-modelRef.setConstantParam("x", 1)
 modelRef.setConstantParam("rOleic", 21)
 modelRef.setConstantParam("sldSurfactant_saxs", 8.52e-6)
 modelRef.setConstantParam("sldSurfactant_sans", 0.078e-6)

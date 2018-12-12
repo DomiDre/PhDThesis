@@ -18,7 +18,7 @@ from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_vari
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
-sample_name = 'Ac_CoFe_C'
+sample_name = 'Ac_CoFe_C_3'
 Chapter = 'monolayers'
 
 saxs_fit_file_sphere = cwd + "/sphereModel/saxs/fit_result.dat"
@@ -57,7 +57,7 @@ ax_inset = fig.add_axes([left+0.03, bottom+0.03, 0.4, 0.4])
 
 ax.errorbar(q_sphere, I_sphere, sI_sphere,
   linestyle='None',
-  label='Ac-CoFe-C', zorder=0, capsize=0, marker='.', alpha=1)
+  label='Ac-CoFe-C-3', zorder=0, capsize=0, marker='.', alpha=1)
 
 ax.plot(q_sphere, Imodel_sphere, marker='None', linestyle='-',
   label='Sphere', zorder=1, alpha=0.8)
@@ -85,15 +85,13 @@ ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")
 ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
-ax.set_xlim([1.5e-2, 0.25])
-ax.set_ylim([1.1e-3, 4e1])
+ax.set_xlim([5e-3, 0.25])
+ax.set_ylim([1.1e-3, 7e1])
 
 ax_inset.set_xscale('log')
 ax_inset.set_yscale('log')
-ax_inset.set_xlim([0.05, 0.2])
-ax_inset.set_ylim([1e-2, 5e-1])
-ax_inset.set_xlim([0.07, 0.14])
-ax_inset.set_ylim([2e-2, 3e-1])
+ax_inset.set_xlim([0.055, 0.125])
+ax_inset.set_ylim([2.5e-2, 6e-1])
 ax_inset.get_xaxis().set_visible(False)
 ax_inset.get_yaxis().set_visible(False)
 fig.savefig(thesisimgs + '/' + pngfile)

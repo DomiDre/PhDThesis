@@ -21,9 +21,9 @@ dataRef.sliceDomain(0., 0.25)
 dataRef.plotData()
 
 modelRef = app.setModel(Cube)
-modelRef.setParam("a", 90.06694113821696,  minVal = 0, maxVal = 120, vary = True)
-modelRef.setParam("sigA", 0.10694701984353844,  minVal = 0, maxVal = 0.25, vary = True)
-modelRef.setParam("i0", 0.0456,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("a", 89.64,  minVal = 0, maxVal = 120, vary = True)
+modelRef.setParam("sigA", 0.11075,  minVal = 0, maxVal = 0.25, vary = True)
+modelRef.setParam("i0", 0.04564557044288571,  minVal = 0, maxVal = 0.1, vary = True)
 
 modelRef.setConstantParam("bg", 0.0)
 modelRef.setConstantParam("sldCore", 40.67e-6)

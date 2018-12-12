@@ -19,7 +19,7 @@ dataRef = app.setData(XyerData)
 
 dataRef.loadFromFile('../../experimental_data/DD67.xye')
 dataRef.sliceDomain(0.005, 0.3)
-dataRef.reducePointDensity(2)
+dataRef.reducePointDensity(4)
 
 a_wustite = 4.2125
 a_spinell = 8.4384
@@ -53,7 +53,7 @@ class ModifiedSuperballCSCoupled(SuperballCSCoupledSigD):
     vol_wustite = superballVolume(rCore, pVal)
     vol_spinell = superballVolume(particleSize, pVal) - vol_wustite
     nu = (a_spinell / a_wustite)**3 * vol_wustite / vol_spinell
-    y = (2 + ratio)*x/(nu*(1+ratio)) + (nu*ratio - 6)/(nu*(1+ratio))
+    y = 2*x/nu + (nu*ratio - 6) / (nu*(1+ratio))
     self.params['sldCore'].value = 4 * (y * electron_density['Fe'] + (1-y)*electron_density['Co'] + electron_density['O']) / a_wustite**3
     self.params['sldShell'].value = 8 * (x*electron_density['Co'] + (3-x)*electron_density['Fe'] + 4*electron_density['O']) / a_spinell**3
     self.ptrModelContainer.params['sldCore'].value = self.params['sldCore'].value
@@ -68,19 +68,31 @@ class ModifiedSuperballCSCoupled(SuperballCSCoupledSigD):
   def calcModel(self):
     self.calcSLD()
     super().calcModel()
-
-
+    # particleSize:     54.1762098 (init = 51.81424)
+    # d:                21.2107393 (init = 6.252337)
+    # pVal:             2.41359662 (init = 3.337198)
+    # sldCore:          5.111393e-05 (fixed)
+    # sldShell:         4.127803e-05 (fixed)
+    # sldSolvent:       7.55e-06 (fixed)
+    # sigParticleSize:  0.07546698 (init = 0.06081491)
+    # sigD:             0.39874919 (init = 0.2325013)
+    # i0:               0.02381543 (init = 0.02755086)
+    # bg:               0 (fixed)
+    # orderHermite:     5 (fixed)
+    # orderLegendre:    10 (fixed)
+    # x:                0.98894968 (init = 0.4283)
 modelRef = app.setModel(ModifiedSuperballCSCoupled)
-modelRef.setParam("particleSize",     52.2445585,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("d",                29.8310264,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("i0",               0.02813583,  minVal = 0, maxVal = 0.1, vary = True)
-modelRef.setParam("pVal",             4.34293150,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("sigParticleSize",  0.06274819,  minVal = 0, maxVal = 0.5, vary = True)
-modelRef.setParam("sigD",             0.23368053,  minVal = 0, maxVal = 0.5, vary = True)
+modelRef.setParam("particleSize",     54.1851544,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("d",                21.1855186,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("pVal",             2.47376320,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("sigParticleSize",  0.07143705,  minVal = 0, maxVal = 0.5, vary = True)
+modelRef.setParam("sigD",             0.40385040,  minVal = 0, maxVal = 1, vary = True)
+modelRef.setParam("i0",               0.02369477,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("x",                0.98606207,  minVal = 0, maxVal = 1, vary = True)
 
-modelRef.setConstantParam('x', 1)
+# modelRef.setConstantParam('x', 1)
 modelRef.setConstantParam("bg", 0.)
-modelRef.setConstantParam('orderHermite', 5)
+modelRef.setConstantParam('orderHermite', 10)
 modelRef.setConstantParam('orderLegendre', 10)
 modelRef.setConstantParam("sldSolvent", 7.55e-6)
 

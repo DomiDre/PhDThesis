@@ -24,9 +24,9 @@ dataRef.sliceDomain(0., 0.25)
 dataRef.plotData()
 
 modelRef = app.setModel(Sphere)
-modelRef.setParam("r", 55.64451342259975,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("sigR", 0.12989752719230221,  minVal = 0, maxVal = 0.25, vary = True)
-modelRef.setParam("i0", 0.0425,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("r", 55.43350187493759,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("sigR", 0.13544495348911012,  minVal = 0, maxVal = 0.25, vary = True)
+modelRef.setParam("i0", 0.0420265239953909,  minVal = 0, maxVal = 0.1, vary = True)
 
 modelRef.setConstantParam("bg", 0.0)
 modelRef.setConstantParam("sldCore", 40.67e-6)

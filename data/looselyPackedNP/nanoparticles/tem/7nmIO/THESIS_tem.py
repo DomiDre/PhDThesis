@@ -19,6 +19,7 @@ sample_name = 'KWi338'
 savefile = chapter+'_TEM_'+sample_name
 
 fig, ax = uzkChemTem.pretty_plot(
-  temFilepath, y0=200, pixel_per_nm=2.4697)
+  temFilepath, y0=200, pixel_per_nm=2.4697,\
+  title='IOS-7', label_x0=0.78, label_y0=0.9)
 fig.savefig(cwd+'/'+savefile, bbox_inches='tight')
 fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')

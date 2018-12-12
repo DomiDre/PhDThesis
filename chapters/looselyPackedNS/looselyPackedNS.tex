@@ -2,19 +2,36 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 \renewcommand{\thisPath}{\main/chapters/looselyPackedNS}
 \begin{document}
-  \chapter{Loosely-packed nanostructures}\label{ch:looselyPackedNS}
+  \chapter{Loosely-Packed Nanospheres}\label{ch:looselyPackedNS}
+    \subfile{\thisPath/intro/intro}
+      \FloatBarrier
+      \clearpage
 
-    \subfile{\thisPath/nanoparticles/nanoparticles}
+    \section{Experimental Methods}
+      \subfile{\thisPath/experimentalMethods/experimentalMethods}
+        \FloatBarrier
+        \clearpage
+
+    \section{Iron Oxide Spheres}\label{sec:looselyPackedNP:sphericalIronOxideNP}
+      \subfile{\thisPath/nanoparticles/nanoparticles}
+        \FloatBarrier
+        \clearpage
 
     \section{Preparation of Loosely-Packed Layers}
       \subfile{\thisPath/preparation/preparation}
+      \FloatBarrier
+        \clearpage
 
-    \section{Structure}
+    \section{Vertical and Lateral Structure}
       \subfile{\thisPath/structure/structure}
+      \FloatBarrier
+        \clearpage
 
     \section{Magnetic Structure}
+      \FloatBarrier
+        \clearpage
 
     \section{Summary}
       \subfile{\thisPath/summary/summary}
-
+      \FloatBarrier
 \end{document}

@@ -10,8 +10,7 @@
     The script allows to load data sets of the sample, solvent and empty cell and perform essentially the same correction and rescaling to absolute units as described in the SAXS method.
     A background measurement of the blocked beam is subtracted from the sample and the solvent before they are scaled to their respective transmission and subtracted from one another.
     The transmissions are obtained by comparing the neutron of a sample with that of the direct beam.
-    Furthermore, GRASP uses the direct beam measurement to determine the beam center.
-    The scaling to absolute units of $\unit{cm^{-1}}$ is performed by using a calibration measurement of water.
+    Furthermore, GRASP uses the direct beam measurement to determine the beam center and can directly scale the data to absolute units of $\unit{cm^{-1}}$.
     The calibration measurement additionally provides a detector efficiency map, which is applied to correct the data.
     Finally, GRASP allows also to perform an azimuthal integration, providing the measured scattered intensity from the sample with respect to the scattering vector.
 
@@ -79,6 +78,7 @@
     The terms assume an equal distribution over the circular apertures and the detector pixel.
     From this, the angular uncertainty is obtained by error propagation
     \begin{align}
+      \label{eq:methods:sans:formulaResolution}
       \sigma_{2 \theta} \eq \frac{\sigma_{y}}{L_{\mathrm{SSD}}}.
     \end{align}
     The wavelength spread is typically given for an instrument as the FWHM of the intensity with respect to the wavelength $\Delta \lambda / \lambda$, being typically in the order of $10 \, \%$.

@@ -20,8 +20,10 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'IOS-11'
 Chapter = 'looselyPackedNP'
-fit_file = cwd + "/fit_result.dat"
-sld_file = cwd + "/fit_sld.dat"
+saxs_fit_file = cwd + "/saxs/fit_result.dat"
+saxs_sld_file = cwd + "/saxs/fit_sld.dat"
+sans_fit_file = cwd + "/sans/fit_result.dat"
+sans_sld_file = cwd + "/sans/fit_sld.dat"
 
 
 I_min, I_max = 1.5e-3, 3e4
@@ -34,16 +36,20 @@ saxs_pngfile = Chapter+'_SAS_'+\
 
 #load data
 data = MultiData(XyemData)
-data.loadFromFile(fit_file)
-saxs_q, saxs_I, saxs_sI, saxs_Imodel = data.getDatasetBySuffix('saxs').getData()
-sans_sa_q, sans_sa_I, sans_sa_sI, sans_sa_Imodel = data.getDatasetBySuffix('sans_sa').getData()
-sans_la_q, sans_la_I, sans_la_sI, sans_la_Imodel = data.getDatasetBySuffix('sans_la').getData()
+data.loadFromFile(saxs_fit_file)
+saxs_q, saxs_I, saxs_sI, saxs_Imodel = data.getDataset(0).getData()
+
+data = MultiData(XyemData)
+data.loadFromFile(sans_fit_file)
+sans_sa_q, sans_sa_I, sans_sa_sI, sans_sa_Imodel = data.getDatasetBySuffix('sa').getData()
+sans_la_q, sans_la_I, sans_la_sI, sans_la_Imodel = data.getDatasetBySuffix('la').getData()
 
 #load sld
 sldData = MultiData(XyData)
-sldData.loadFromFile(sld_file)
-saxs_r, saxs_sld = sldData.getDatasetBySuffix('saxs').getData()
-sans_r, sans_sld = sldData.getDatasetBySuffix('sans_sa').getData()
+sldData.loadFromFile(saxs_sld_file)
+saxs_r, saxs_sld = sldData.getDataset(0).getData()
+sldData.loadFromFile(sans_sld_file)
+sans_r, sans_sld = sldData.getDatasetBySuffix('sa').getData()
 
 saxs_q_min, saxs_q_max = min(saxs_q), max(saxs_q)
 sans_q_min, sans_q_max = min(sans_sa_q), max(sans_la_q)

@@ -46,11 +46,6 @@
       \caption{\label{fig:monolayers:preparation:solventVariation:gisaxs}GISAXS detector images measured under an incident angle of $\alpha_i \eq 0.11 \unit{^\circ}$ to study the average lateral structure of the samples shown in \reffig{fig:monolayers:preparation:solventVariation:sem}. Below the detector images, the respective scattered intensity in the strip around the Yoneda line is shown. For the ordered samples, the first order peak is fitted to a Lorentzian function with the parameters tabulated in \reftab{tab:monolayers:solventProperties:GisaxsLatticeParams}.}
     \end{figure}
 
-    The peak positions are compared to the expected relative positions for a square lattice, given by
-    \begin{align}\label{eq:monolayers:preparation:solventVariation:squareLatticeIndices}
-      q_{hk} \eq \frac{2 \pi}{a} \sqrt{h^2 + k^2},
-    \end{align}
-    where $h$, $k$ are integers and $a$ the lattice constant of the square arrangement, which is estimated from the (10) peak position.
     For ML-SV-HexOct the position of all peaks fits to this pattern, whereas for ML-SV-PenOct and ML-SV-HepOct the (11) peak position is less visible.
     This effect can be attributed to the unlucky coincidence that the (11) peak position is within the formfactor minima in these cases.
     \FloatBarrier
@@ -80,18 +75,7 @@
       \end{tabular}
     \end{table}
 
-    Within the theory of paracrystals, GISAXS provides a direct measure of the lattice constant and the coherence length of the square lattice via the position and the inverse width of the structure factor peaks \cite{Renaud_2009_Probi}.
-    For Gaussian disorder of the nearest neighbor position, the peak broadening is described by a Lorentzian function as shown in \refapp{ch:appendix:calculations:paracrystal}
-    \begin{align}
-      I(q_y) \eq \frac{A} {1 + \biggl(2\frac{q_y - q_{10}}{\Delta q_{10}}\biggr)^2},
-    \end{align}
-    which has as parameters the intensity $A$ of the (10) peak with position $q_{10}$ and FWHM $\Delta q_{10}$.
-    And the lattice constant and coherence length is given by
-    \begin{align}
-      a &\eq \frac{2 \pi}{q_{10}}, \\
-      d_{coh.} &\eq \frac{4 \pi^2}{\sqrt{ \Delta q_{10}^2 - \Delta q_{D.B.}^2 }},
-    \end{align}
-    where the FWHM of the peak is corrected for $\Delta q_{D.B.} \eq 0.0195(7) \unit{nm^{-1}}$, the FWHM of the direct beam, which is given in \reffig{fig:appendix:lss:galaxi:directBeam}.
+    
     In \reftab{tab:monolayers:solventProperties:GisaxsLatticeParams}, the position and width of the first order peak for the three different samples prepared with 1-octadecene is listed.
 
     The table shows that for increasing order of alkane, the lattice constant reduces and the coherence length increases.

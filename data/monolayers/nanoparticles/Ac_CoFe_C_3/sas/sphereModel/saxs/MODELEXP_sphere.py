@@ -17,17 +17,16 @@ app.setExperiment(Saxs)
 dataRef = app.setData(XyeData)
 
 dataRef.loadFromFile('../../experimental_data/AH22.xye')
-dataRef.sliceDomain(0., 0.25)
 dataRef.plotData()
 
 modelRef = app.setModel(Sphere)
-modelRef.setParam("r", 68.88,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("sigR", 0.129,  minVal = 0, maxVal = 0.25, vary = True)
-modelRef.setParam("i0", 0.0015,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("r", 68.56,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("sigR", 0.134,  minVal = 0, maxVal = 0.25, vary = True)
+modelRef.setParam("i0", 0.015300000000000001,  minVal = 0, maxVal = 0.1, vary = True)
 
 modelRef.setConstantParam("bg", 0.0)
-modelRef.setConstantParam("sldCore", 40.67e-6)
-modelRef.setConstantParam("sldSolvent", 6.46e-6)
+modelRef.setConstantParam("sldCore", 41.97e-6)
+modelRef.setConstantParam("sldSolvent", 8.01e-6)
 modelRef.updateModel()
 
 app.setFit(LevenbergMarquardt)

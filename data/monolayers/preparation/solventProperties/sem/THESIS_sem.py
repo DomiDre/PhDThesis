@@ -29,6 +29,6 @@ def plot_tiffile(semFilepath, sample_name, x0=None, y0=None):
 # plot_tiffile(cwd+"/DD192_Hex1_2_10.tif", 'ML-SV-HexOct', 0.57, 0.9)
 # plot_tiffile(cwd+"/DD192_Hex2_2_03.tif", 'ML-SV-HexTet', 0.58, 0.9)
 # plot_tiffile(cwd+"/DD192_Pen2_2_109.tif", 'ML-SV-PenOct', 0.57, 0.9)
-# plot_tiffile(cwd+"/DD172_1_04.tif", 'Ol-CoFe-C-Hex', 0.56, 0.9)
-plot_tiffile(cwd+"/DD200_8_05.tif", 'Ol-Fe-C-HepOct', 0.54, 0.9)
+# plot_tiffile(cwd+"/DD200_8_05.tif", 'Ol-Fe-C-HepOct', 0.54, 0.9)
 # plot_tiffile(cwd+"/DD117_03_09.tif", 'Ol-CoFe-S-HexOct', 0.475, 0.9)
+plot_tiffile(cwd+"/DD172_1_04.tif", 'ML-SV-HexNone', 0.52, 0.9)

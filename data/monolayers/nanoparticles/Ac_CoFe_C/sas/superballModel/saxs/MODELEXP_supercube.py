@@ -17,20 +17,20 @@ app = Cli()
 app.setExperiment(Saxs)
 dataRef = app.setData(XyeData)
 
-dataRef.loadFromFile('../AH11.xye')
+dataRef.loadFromFile('../../experimental_data/AH11.xye')
 dataRef.sliceDomain(0., 0.25)
 
 modelRef = app.setModel(Superball)
-modelRef.setParam("r", 46.9459165,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("r",    46.9459165,  minVal = 0, maxVal = 80, vary = True)
 modelRef.setParam("pVal", 2.65439212,  minVal = 0, maxVal = 5, vary = True)
 modelRef.setParam("sigR", 0.11871914,  minVal = 0, maxVal = 0.25, vary = True)
-modelRef.setParam("i0", 0.04297132,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("i0",   0.043882,  minVal = 0, maxVal = 0.1, vary = True)
 
 modelRef.setConstantParam("bg", 0.0)
 modelRef.setConstantParam("sldCore", 40.67e-6)
 modelRef.setConstantParam("sldSolvent", 6.46e-6)
-modelRef.setConstantParam('orderHermite', 20)
-modelRef.setConstantParam('orderLegendre', 20)
+modelRef.setConstantParam('orderHermite', 10)
+modelRef.setConstantParam('orderLegendre', 10)
 
 fit = app.setFit(LevenbergMarquardt)
 fit.printIteration = 1
