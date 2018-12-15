@@ -2,7 +2,7 @@
 !  ==================================================================
 !  Pattern No:  1 Phase No.:   2 FeO                           
 !  Code of PCR-file: fe2o3_feo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-!  Date and Time   :     Date: 11/12/2018  Time: 20:25:23.307                              
+!  Date and Time   :     Date: 12/12/2018  Time: 18:30:41.356                              
 !  Micro-structural analysis based in the parameters used in the input control file PCR
 !  The values are given for each individual reflection in order to take into account eventual anisotropic broadening
 !  In some cases the comment "<- Resolution limited" appears, this means that the reflection is not broadened
@@ -49,12 +49,12 @@
 !      It is a measure of the degree of anisotropy, not of the estimated error!
 !      
 !    s=1/d     HGo       HGi       HLo       HLi       betaG     betaL      beta    betaVo  App-size Max-strain    h     k     l     twtet/TOF       HpVo     eta     Icalc     Iobs   Beta_TCH
-    0.4142    0.0680    0.0680    0.8269    0.0305    0.0000   13.4328   13.4328   14.0146     74.44    0.0000     1     1     1   37.2083  0.8331  0.9944      0.00      0.00   13.4328
-    0.4782    0.0665    0.0665    0.8407    0.0288    0.0000   13.4328   13.4328   13.9723     74.44    0.0000     2     0     0   43.2317  0.8466  0.9948   1298.61   1298.63   13.4328
-    0.6763    0.0699    0.0699    0.9165    0.0321    0.0000   13.4328   13.4328   13.9801     74.44    0.0000     2     2     0   62.7947  0.9225  0.9951   2831.35   2831.50   13.4328
-    0.7931    0.0645    0.0645    0.9934    0.0400    0.0000   13.4328   13.4328   14.0405     74.44    0.0000     3     1     1   75.3080  0.9983  0.9964      0.00      0.00   13.4328
+    0.4142    0.0680    0.0680    0.8272    0.0305    0.0000   13.4380   13.4380   14.0197     74.42    0.0000     1     1     1   37.2081  0.8334  0.9944      0.00      0.00   13.4380
+    0.4782    0.0665    0.0665    0.8411    0.0288    0.0000   13.4380   13.4380   13.9774     74.42    0.0000     2     0     0   43.2315  0.8469  0.9948   1298.70   1298.73   13.4380
+    0.6763    0.0699    0.0699    0.9168    0.0321    0.0000   13.4380   13.4380   13.9852     74.42    0.0000     2     2     0   62.7945  0.9228  0.9951   2832.87   2832.98   13.4380
+    0.7931    0.0645    0.0645    0.9938    0.0400    0.0000   13.4380   13.4380   14.0456     74.42    0.0000     3     1     1   75.3077  0.9986  0.9964      0.00      0.00   13.4380
 
-  Average apparent size   and standard deviation (anisotropy):     74.44 (     0.00)
+  Average apparent size   and standard deviation (anisotropy):     74.42 (     0.02)
 
   Average apparent strain cannot be calculated! 
   Possible reasons: (1) The broadening of reflections is resolution limited

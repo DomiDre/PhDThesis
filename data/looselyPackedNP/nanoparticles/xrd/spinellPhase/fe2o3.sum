@@ -8,7 +8,7 @@
                  Refinement of X-ray and/or Neutron Data
 
 
-    Date: 12/12/2018  Time: 00:35:20.142                              
+    Date: 12/12/2018  Time: 18:27:31.878                              
 
  => PCR file code: fe2o3
  => DAT file code: PMK18.dat            -> Relative contribution: 1.0000                                                            
@@ -30,7 +30,7 @@
      2Thmin:      15.021000  2Thmax:      78.981003  Step:       0.026012  No. of points:   2461
  =>-------> Pattern#  1
  => Profile Matching (fixed scale) for phase: 1
- => Scor: 6.0369
+ => Scor: 6.0368
 
  ==> RESULTS OF REFINEMENT:
 
@@ -48,9 +48,9 @@
  ==> PROFILE PARAMETERS FOR PATTERN#  1
 
  => Cell parameters      :
-                              8.37284   0.00037
-                              8.37284   0.00037
-                              8.37284   0.00037
+                              8.37292   0.00037
+                              8.37292   0.00037
+                              8.37292   0.00037
                              90.00000   0.00000
                              90.00000   0.00000
                              90.00000   0.00000
@@ -68,7 +68,7 @@
                               0.00000   0.00000
                               0.00000   0.00000
  => X and y parameters   :    0.00000   0.00000
-                              1.77796   0.00773
+                              1.77763   0.00773
  => Strain parameters    :    0.00000   0.00000
                               0.00000   0.00000
                               0.00000   0.00000
@@ -93,36 +93,36 @@
   => Cycle:  4 => MaxCycle: 10
  => N-P+C:  2459
  =>  R-factors (not corrected for background) for Pattern:  1
- => Rp:  2.52     Rwp:  3.93     Rexp:    1.49 Chi2:  7.01      L.S. refinement
+ => Rp:  2.52     Rwp:  3.93     Rexp:    1.49 Chi2:  7.00      L.S. refinement
  => Conventional Rietveld R-factors for Pattern:  1
- => Rp:  25.9     Rwp:  26.4     Rexp:    9.98 Chi2:  7.01    
- => Deviance:  0.179E+05     Dev*  :   7.275    
- => DW-Stat.:    0.1475     DW-exp:     1.8763
- => N-sigma of the GoF:      210.652
+ => Rp:  25.9     Rwp:  26.4     Rexp:    9.98 Chi2:  7.00    
+ => Deviance:  0.179E+05     Dev*  :   7.272    
+ => DW-Stat.:    0.1476     DW-exp:     1.8763
+ => N-sigma of the GoF:      210.552
 
  ==> RELIABILITY FACTORS FOR POINTS WITH BRAGG CONTRIBUTIONS FOR PATTERN:  1
 
  => N-P+C:  2459
  =>  R-factors (not corrected for background) for Pattern:  1
- => Rp:  2.52     Rwp:  3.93     Rexp:    1.49 Chi2:  7.01      L.S. refinement
+ => Rp:  2.52     Rwp:  3.93     Rexp:    1.49 Chi2:  7.00      L.S. refinement
  => Conventional Rietveld R-factors for Pattern:  1
- => Rp:  25.9     Rwp:  26.4     Rexp:    9.98 Chi2:  7.01    
- => Deviance:  0.179E+05     Dev*  :   7.275    
- => DW-Stat.:    0.1475     DW-exp:     1.8763
- => N-sigma of the GoF:      210.652
+ => Rp:  25.9     Rwp:  26.4     Rexp:    9.98 Chi2:  7.00    
+ => Deviance:  0.179E+05     Dev*  :   7.272    
+ => DW-Stat.:    0.1476     DW-exp:     1.8763
+ => N-sigma of the GoF:      210.552
 
- => Global user-weigthed Chi2 (Bragg contrib.):   7.01    
+ => Global user-weigthed Chi2 (Bragg contrib.):   7.00    
 
      -----------------------------------------------------
      BRAGG R-Factors and weight fractions for Pattern #  1
      -----------------------------------------------------
 
  => Phase:  1      !------------------------------------------------------------------------------
- => Bragg R-factor:  0.152       Vol:  586.973( 0.045)  Fract(%):    0.00( 0.00)
- => Rf-factor= 0.149             ATZ:           0.000   Brindley:  1.0000
+ => Bragg R-factor:  0.155       Vol:  586.991( 0.045)  Fract(%):    0.00( 0.00)
+ => Rf-factor= 0.152             ATZ:           0.000   Brindley:  1.0000
 
  
-              CPU Time:     0.219 seconds
+              CPU Time:     0.234 seconds
                             0.004 minutes
 
- => Run finished at:     Date: 12/12/2018  Time: 00:35:20.358                              
+ => Run finished at:     Date: 12/12/2018  Time: 18:27:32.110                              

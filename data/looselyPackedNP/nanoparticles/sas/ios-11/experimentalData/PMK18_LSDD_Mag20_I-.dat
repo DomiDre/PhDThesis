@@ -1,61 +1,61 @@
-GRASP V.7.15CD    Instrument:  ILL_d33 
+# GRASP V.7.15CD    Instrument:  ILL_d33 
   
-***** Sanpol Worksheets I+, I- ***** 
-Subtitle:  PKM18 Vpol Col7.8 Det 8 RF- 
-Start: 10-Sep-15   14:32:01   End: 10-Sep-15   14:52:01 
+# ***** Sanpol Worksheets I+, I- ***** 
+# Subtitle:  PKM18 Vpol Col7.8 Det 8 RF- 
+# Start: 10-Sep-15   14:32:01   End: 10-Sep-15   14:52:01 
   
-Sample - (Flip off): Sum 23570 , Loaded: 23570 
-***** Sanpol Worksheets I+, I- ***** 
-Subtitle:  PKM18 Vpol Col7.8 Det 8 RF+ 
-Start: 10-Sep-15   14:52:01   End: 10-Sep-15   15:12:01 
+# Sample - (Flip off): Sum 23570 , Loaded: 23570 
+# ***** Sanpol Worksheets I+, I- ***** 
+# Subtitle:  PKM18 Vpol Col7.8 Det 8 RF+ 
+# Start: 10-Sep-15   14:52:01   End: 10-Sep-15   15:12:01 
   
-Sample + (Flip on): Sum 23571 , Loaded: 23571 
-Det: 1 : Applying Deadtime Correction per (horizontal) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
-Det: 2 : Applying Deadtime Correction per (vertical) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
-Det: 3 : Applying Deadtime Correction per (vertical) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
-Det: 4 : Applying Deadtime Correction per (horizontal) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
-Det: 5 : Applying Deadtime Correction per (horizontal) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
-Data Normalisation: Exposure Time (1) seconds 
-Attenuator: 0 is In.  Attenuation factor 1 
-Attenuator: 0 is In. Up-scaling data by 1 
-Attenuator: 0 is In. Up-scaling data by 1 
-Attenuator: 0 is In. Up-scaling data by 1 
-Attenuator: 0 is In. Up-scaling data by 1 
-Attenuator: 0 is In. Up-scaling data by 1 
-Attenuator2: is Out 
-Attenuator2: Up-scaling data by 1 
-Attenuator2: Up-scaling data by 1 
-Attenuator2: Up-scaling data by 1 
-Attenuator2: Up-scaling data by 1 
-Attenuator2: Up-scaling data by 1 
-Background: Sum 23558+23559 , Loaded: 23558+23559 
-Cadmium: No Cadmium Subtraction 
+# Sample + (Flip on): Sum 23571 , Loaded: 23571 
+# Det: 1 : Applying Deadtime Correction per (horizontal) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
+# Det: 2 : Applying Deadtime Correction per (vertical) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
+# Det: 3 : Applying Deadtime Correction per (vertical) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
+# Det: 4 : Applying Deadtime Correction per (horizontal) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
+# Det: 5 : Applying Deadtime Correction per (horizontal) Tube: 1/[1-tau/detector_rate], tau = 1.5e-06 (seconds) 
+# Data Normalisation: Exposure Time (1) seconds 
+# Attenuator: 0 is In.  Attenuation factor 1 
+# Attenuator: 0 is In. Up-scaling data by 1 
+# Attenuator: 0 is In. Up-scaling data by 1 
+# Attenuator: 0 is In. Up-scaling data by 1 
+# Attenuator: 0 is In. Up-scaling data by 1 
+# Attenuator: 0 is In. Up-scaling data by 1 
+# Attenuator2: is Out 
+# Attenuator2: Up-scaling data by 1 
+# Attenuator2: Up-scaling data by 1 
+# Attenuator2: Up-scaling data by 1 
+# Attenuator2: Up-scaling data by 1 
+# Attenuator2: Up-scaling data by 1 
+# Background: Sum 23558+23559 , Loaded: 23558+23559 
+# Cadmium: No Cadmium Subtraction 
   
-Transmissions:  Ts = 1.0373 +/- 0.0026691  Te = 0.8403 +/- 0.002096 
-Foreground Image Only :  I_corr = I_s 
+# Transmissions:  Ts = 1.0373 +/- 0.0026691  Te = 0.8403 +/- 0.002096 
+# Foreground Image Only :  I_corr = I_s 
   
-Beam Centre1 :  Cx = 127.6859  Cy = 64.446       Cm Translation :  Tx = 0  Ty = 0 [mm] 
-Beam Centre2 :  Cx = 16.5  Cy = 128.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
-Beam Centre3 :  Cx = 16.5  Cy = 128.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
-Beam Centre4 :  Cx = 128.5  Cy = 16.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
-Beam Centre5 :  Cx = 128.5  Cy = 16.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
+# Beam Centre1 :  Cx = 127.6859  Cy = 64.446       Cm Translation :  Tx = 0  Ty = 0 [mm] 
+# Beam Centre2 :  Cx = 16.5  Cy = 128.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
+# Beam Centre3 :  Cx = 16.5  Cy = 128.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
+# Beam Centre4 :  Cx = 128.5  Cy = 16.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
+# Beam Centre5 :  Cx = 128.5  Cy = 16.5       Cm Translation :  Tx = 0  Ty = 0 [mm] 
   
-***** Calibrations: ***** 
-Data: Corrected for D33 Detector Paralax 
-Data: Corrected for Detector Efficiency (doesn't change magnitude but contains curvature correction) 
-Data: Divided by Volume 0.2 cm3 
-Solid Angle Correction: 
-Divide data by empty beam flux, I0, from worksheet: Trans Empty Beam 1 1 
-Applying Default Instrument Mask 
-Applying User Defined Mask 
-Applying NanInf Mask 
-Intensity units are:  cm-1 \\ \Delta\Omega  
+# ***** Calibrations: ***** 
+# Data: Corrected for D33 Detector Paralax 
+# Data: Corrected for Detector Efficiency (doesn't change magnitude but contains curvature correction) 
+# Data: Divided by Volume 0.2 cm3 
+# Solid Angle Correction: 
+# Divide data by empty beam flux, I0, from worksheet: Trans Empty Beam 1 1 
+# Applying Default Instrument Mask 
+# Applying User Defined Mask 
+# Applying NanInf Mask 
+# Intensity units are:  cm-1 \\ \Delta\Omega  
   
-***** Analysis ***** 
-Averaging I vs. Q.  Bin size:  1 [Pixel(s)] 
+# ***** Analysis ***** 
+# Averaging I vs. Q.  Bin size:  1 [Pixel(s)] 
  
  
-Mod_Q   	I       	Err_I   	Sigma_Q
+# Mod_Q   	I       	Err_I   	Sigma_Q
  
  
 0.00486835	0.396874	0.175173	0.0014893

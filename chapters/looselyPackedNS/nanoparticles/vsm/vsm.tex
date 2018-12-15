@@ -2,124 +2,56 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 \begin{document}
   \label{sec:looselyPackedNS:nanoparticle:vsm}
-
-  To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion as described in \refapp{app:additionalExperimentalTechniques:vsm} and polarized small-angle neutron scattering (SANSPOL) is applied to measure the magnetic scattering of the individual nanoparticles.
-  Both techniques allow to model the average individual nanoparticle magnetization and the results should be in agreement with one another.
-
-  For SANSPOL, a magnetic field of $B\eq 515 \unit{mT}$ was applied perpendicular \& horizontal to the beam direction and the scattered neutrons are counted on a position-sensitive detector for up and down polarized neutrons without polarization analysis after the scattering.
-  The same model and parameters as obtained from the nuclear small-angle scattering is used and extended by a spherical magnetic form factor.
-  The magnetic SLD of the core is fitted as parameter and possibly it is allowed that the magnetic radius of the particle is smaller by a size of $d_\mathrm{dead}$ due to a magnetically dead surface layer.
-  From the magnetic SLD, the volume magnetization is calculated using \refeq{eq:theoreticalBackground:scattering:magneticSLD}
-  \begin{align}
-    \label{eq:looselyPackedNP:nanoparticles:SLDtoMagnetization}
-    M \eq& \mu_B s_e \eq \frac{2 \pi \hbar^2}{m_n \mu_0 \mu_n} \rho_\mathrm{mag},\\
-    \frac{M}{\bigg[\unit{kA m^{-1}}\bigg]} \eq& 343.592 \cdot \frac{\rho_\mathrm{mag}}{\bigg[10^{-6} \angstrom^{-2} \bigg]}.
-  \end{align}
-  The obtained model is shown in \reffig{fig:looselyPackedNP:nanoparticle:sanspol} and the results in \reftab{tab:looselyPackedNP:nanoparticle:vsmSanspol}.
-
-  \begin{figure}[tb]
-    \centering
-    \includegraphics{looselyPackedNP_SAS_IOS-11_SANSPOLFit}
-    \includegraphics{looselyPackedNP_SAS_IOS-7_SANSPOLFit}
-    \caption{\label{fig:looselyPackedNP:nanoparticle:sanspol}Polarized small-angle neutron scattering for IOS-11 (left) and IOS-7 (right).}
-  \end{figure}
-
-
-  For the VSM data, it is assumed that the dispersion is compromised of homogeneously magnetized, non-interacting particles that can be represented by a single classical super spin.
-  In \refapp{ch:appendix:calculations:magnetizationClassicalSpin}, it is shown that in this case the magnetization is given by a Langevin curve
-  \begin{align}
-    M(H) \eq& M_s \biggl( \coth \biggl(\frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr) + \chi H.
-  \end{align}
-  Here, $M_s$ is the saturation magnetization, $\mu$ the magnetic moment of one nanoparticle and $\chi$ the excess susceptibility.
-  To properly obtain the saturation magnetization in units of $\unit{kAm{-1}}$, the exact volume of magnetic material in dispersion needs to be known and the measured magnetization data scaled accordingly.
-  The volume of the magnetic material can be estimated either by gravimetric methods or also by using the results obtained from small-angle scattering.
-  As one parameter in the small-angle scattering model is the number of particles per volume $n \eq N/V$ and another the volume of the particle $V_p$, the magnetic volume per dispersion volume is given by
-  \begin{align}
-    \alpha \eq \frac{N V_p}{V}.
-  \end{align}
-  This ratio is multiplied with the volume of dispersion measured in the VSM experiment to obtain the volume that the final data is scaled to.
-  The data and best-fit model are shown in \reffig{fig:looselyPackedNP:nanoparticle:vsm} and the numerical values are given in \reftab{tab:looselyPackedNP:nanoparticle:vsmSanspol}.
-
   \begin{figure}[tb]
     \centering
     \includegraphics{looselyPackedNP_VSM_IOS-11}
     \includegraphics{looselyPackedNP_VSM_IOS-7}
-    \caption{\label{fig:looselyPackedNP:nanoparticle:vsm}Room temperature vibrating sample magnetometry for IOS-11 (left) and IOS-7 (right).}
+    \caption{\label{fig:looselyPackedNP:nanoparticle:vsm}Room temperature vibrating sample magnetometry for IOS-11 (left) and IOS-7 (right). In black a Langevin behaviour with excess susceptibility is fit and the parameters are given in \reftab{tab:looselyPackedNP:nanoparticle:vsm}}
   \end{figure}
 
+  Vibrating sample magnetometry is used to probe the macroscopic magnetization of IOS-11 and IOS-7.
+  The measured magnetization of a dispersion at room temperature is shown in \reffig{fig:looselyPackedNP:nanoparticle:vsm}.
+  In both cases a superparamagnetic behaviour is observed, which is parametrized by fitting the data with a Langevin curve and excess susceptibility.
+  The parameters for the fitted magnetization curves are given in \reftab{tab:looselyPackedNP:nanoparticle:vsm}.
 
-  \begin{table}[tb]
+  \begin{table}[!htbp]
     \centering
-    \caption{\label{tab:looselyPackedNP:nanoparticle:vsmSanspol}Parameters for the magnetic structure of the nanospheres obtained from VSM and SANSPOL.}
+    \caption{\label{tab:looselyPackedNP:nanoparticle:vsm}Parameters for the Langevin function with excess susceptibility shown in \reffig{fig:looselyPackedNP:nanoparticle:vsm}.}
     \begin{tabular}{ c | l | l }
-        & IOS-11 & IOS-7 \\
+      \rule{0pt}{2ex} \textbf{VSM} & IOS-11 & IOS-7 \\
       \hline
-      \multicolumn{3}{c}{VSM}\\
+      \rule{0pt}{2ex} $M_s \, /  \unit{kAm^{-1}}$               & $164.1(1)$    & $183.2(1)$\\
+      \rule{0pt}{2ex} $\mu \, / \, \mu_B$                       & $11354(58)$   & $3609(8)$\\
+      \rule{0pt}{2ex} $\mu_0 \chi$                              & $0.00337(3)$  & $-0.00080(3)$\\
       \hline
-      $M_s$
-        & $153.0(2) \unit{kAm^{-1}}$
-        & $168.0(1) \unit{kAm^{-1}}$\\
-      $\mu$
-        & $12750(30) \, \mu_B$
-        & $3770(40) \, \mu_B$\\
-      $\chi$
-        & $11.8(2) \mu_0$
-        & $10.2(9) \mu_0$\\
-      \hline
-      $r_m$
-        & $5.69(2) \unit{nm}$
-        & $3.68(4) \unit{nm}$\\
-      \hline
-      \multicolumn{3}{c}{SANSPOL}\\
-      \hline
-      $\rho_\mathrm{mag}$
-        & $0.52(3) \unit{10^{-6} \angstrom^{-2}}$
-        & $0.33(2) \unit{10^{-6} \angstrom^{-2}}$\\
-      $d_\mathrm{dead}$
-        & $0.3(1) \unit{nm}$
-        & $0 \unit{nm}$\\
-      \hline
-      $M$
-        & $179(10) \unit{kAm^{-1}}$
-        & $112(9) \unit{kAm^{-1}}$\\
+      \rule{0pt}{2ex} $\chi^2$                                  & $4.8 $        & $3.3$\\
       \hline
     \end{tabular}
   \end{table}
+  % \rule{0pt}{2ex} $V_\mathrm{rescale} \, / \unit{\musf L}$  & $0.0610$      & $0.0181$\\
+  % \hline
 
-  While being in the same order of magnitude, the determined saturation magnetizations from SANSPOL and VSM are not consistent within the error bars for both samples.
-  This can mostly be attributed to the uncertainty introduced into the VSM data when scaling it to the magnetic volume content.
-  By estimating the magnetic volume from the magnetic moment and saturation magnetization by
-  \begin{align}
-    V_p^\mathrm{mag} \eq \frac{\mu}{M_s},
-  \end{align}
-  a magnetic radius is obtained by
-  \begin{align}
-    r_m \eq \sqrt[3]{\frac{3 V_p}{4 \pi}}.
-  \end{align}
-  This is in both cases slightly bigger than the physical particle size, which suggests a small under-estimation of the saturation magnetization in VSM.
-  The deviation between the magnetic radius estimated from VSM and physical radius from small-angle scattering is still within the size distribution.
-  For the determination of the magnetization from polarized neutron scattering, the splitting of the the two polarization channels is very small for IOS-7 due to the small particle size
-  Therefore estimating the parameter for the magnetic scattering length density is limited by the statistical noise, which explains the large deviation of the best fit parameter to the other obtained results.
+  The observed saturation magnetization can be compared to the values obtained from SANSPOL.
+  For IOS-11, VSM yields a magnetization of $164 \unit{kA m^{-1}}$ and from SANSPOL an average particle magnetization of $200(10)\unit{kA m^{-1}}$ has been observed.
+  For IOS-7, in VSM a room temperature magnetization of $183 \unit{kA m^{-1}}$ is measured, and from SANSPOL $199\unit{kA m^{-1}}$ was obtained.
+  The values from VSM are slightly smaller in comparison to SANSPOL but in a similar order of magnitude.
+  A systematic error in the VSM value can be introduced from the scaling procedure of the magnetization to the particle size.
+  To determine the particle magnetization in VSM, the measured data is rescaled according to the observed magnetic moment and by assuming for the magnetic particle volume the single particle volume that is obtained from SAXS.
+  Thus, if the magnetic volume is actually smaller in the particle than the physical volume \eg because of a magnetically dead surface layer, the VSM values is a lower limit for the observable particle magnetization.
 
+  The slightly larger paramagnetic excess susceptibility in IOS-11 that remains after the subtraction of the background diamagnetism hints to the w\"ustite phase within the nanoparticles.
+  The signal is however too weak and in similar order of magnitude to the subtracted diamagnetic background ($\mu_0 \chi_\mathrm{bg} \eq -0.0031$) and it is therefore difficult to make quantitative claims on the w\"ustite content from the susceptibility.
 
-  %   \begin{figure}[tb]
-  %     \centering
-  %     \includegraphics{monolayer_VSM_Ol_CoFe_C}
-  %     \includegraphics{monolayer_VSM_Ac_CoFe_C}
-  %     \caption{\label{fig:monolayers:nanoparticle:vsm}Room-temperature VSM data of Ol-CoFe-C (upper left) and Ac-CoFe-C (lower left) dried on a substrate and fitted to a Langevin curve.}
-  %   \end{figure}
+  \begin{figure}[tb]
+    \centering
+    \includegraphics{looselyPackedNP_VSM_10K_IOS-11}
+    \includegraphics{looselyPackedNP_VSM_10K_IOS-7}
+    \includegraphics{looselyPackedNP_VSM_ZFC_FC_IOS-11}
+    \includegraphics{looselyPackedNP_VSM_ZFC_FC_IOS-7}
+    \caption{\label{fig:looselyPackedNP:nanoparticle:vsm10}Low-temperature hysteresis at $10 \unit{K}$ (upper) and temperature dependent magnetization measured at $10 \unit{mT}$ after cooling in zero-field and at a field of $10 \unit{mT}$ (lower) for IOS-11 (left) and IOS-7 (right).}
+  \end{figure}
+  At low temperatures the magnetization of IOS-11 and IOS-7 in \reffig{fig:looselyPackedNP:nanoparticle:vsm10} show a hysteretic behaviour, where IOS-11 has a coercive field of $40 \unit{mT}$ and IOS-7 a field of $25 \unit{mT}$.
+  The temperature dependent curves furthermore show the blocking temperature of IOS-11 to be at $100 \unit{K}$ and for IOS-7 at $45 \unit{K}$.
+  The smaller values observed for IOS-7 is connected to the larger population of small-sized nanoparticles, which even at low temperatures are more susceptible to thermal fluctuations.
 
-  %   This can be compared to the magnetization obtained from measuring the nanoparticles on a vibrating sample magnetometer (VSM) as shown in \reffig{fig:monolayers:nanoparticle:vsm}, which results in magnetizations of $57 \unit{kAm^{-1}}$ for Ol-CoFe-C and $149 \unit{kAm^{-1}}$ for Ac-CoFe-C at the same magnetic field of $1.2 \unit{T}$.
-
-  %   Both experiments agree in the result that the nanoparticles from the oleate route are weakly magnetic, while the particles from the acetylacetonates are stronger magnetic.
-
-  % \paragraphNewLine{Temperature-Dependant VSM}
-  % \begin{figure}[tb]
-  %   \centering
-  %   \includegraphics{monolayer_PPMS_ZFC_FC_ML_Ol_CoFe_C}
-  %   \includegraphics{monolayer_PPMS_ZFC_FC_ML_Ac_CoFe_C}
-  %   \includegraphics{monolayer_VSM_10K_Ol_CoFe_C}
-  %   \includegraphics{monolayer_VSM_10K_Ac_CoFe_C}
-  %   \caption{\label{fig:monolaye rs:nanoparticle:vsm10K}Low temperature hysteresis measurement of frozen Ol-CoFe-C (left) and Ac-CoFe-C (right) using the same samples as in \reffig{fig:monolayers:nanoparticle:vsm}.}
-  % \end{figure}
 \end{document}

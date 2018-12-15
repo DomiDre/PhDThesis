@@ -10,9 +10,9 @@
     Due to the occurence of a large asymmetric size distribution in one batch, it is necessary to fit a bimodal log-normal distribution to properly describe the observed probability distribution.
     The bimodal distribution is defined by
     \begin{align}
-      p_\mathrm{bimodal}(d) \eq \alpha p_1(d; \mu_1, \sigma_1) + (1 - \alpha) p_2(d; \mu_2, \sigma_2),
+      p_\mathrm{bimodal}(d) \eq (1 - \alpha) p_1(d; \mu_1, \sigma_1) + \alpha p_2(d; \mu_2, \sigma_2),
     \end{align}
-    where $\alpha$ is the fraction of the first mode, $\mu_1$, $\sigma_1$ the log-normal parameters for the first mode and $\mu_2$, $\sigma_2$ the parameters for the second mode.
+    where $\alpha$ is the fraction of particles in the second mode and $p_i(d; \mu_i, \sigma_i)$ the log-normal size distribution of mode $i$ with parameters $\mu_i$ and $\sigma_i$ ($i \eq 1,\,2$).
 
   \paragraphNewLine{X-Ray Diffraction}
     X-ray diffraction of IOS-11 was measured in cooperation with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague on an PANanalytical X'Pert PRO, which is described in \refch{ch:instruments:laboratoryInstruments:xrd}.
@@ -33,56 +33,44 @@
 
     For the SAXS measurement, the dispersions are filled in borosilicate capillaries (Hilgenberg) with $1.5 \unit{mm}$ diameter and a $0.01 \unit{mm}$ wall thickness.
     The capillaries are sealed vacuum-tight on top with a plastic stopper and a liquid glue that cures under UV light (Norland Optical Adhesive).
-    Both samples are dispersed in cyclohexane for the measurement.
-    The used solvents and concentrations are given in \reftab{tab:monolayers:charMethod:sampleConcentrations}.
+    Both samples are dispersed in cyclohexane for the measurement, where concentrations in the order of $10 \unit{mg \, mL^{-1}}$ were prepared.
     The samples are measured on the largest ($3.53 \unit{m}$) and shortest ($0.83 \unit{m}$) sample-to-detector distances possible at GALAXI at the Ga-K$\alpha$ wavelength of $\lambda \eq 1.3414 \angstrom$.
     Additionally, a capillary filled with cyclohexane and an empty capillary is measured under the same conditions for subtraction of the background.
     The SAXS data is scaled to absolute units according to the procedure described in \refch{ch:methods:saxs}.
 
-    \begin{table}[!htbp]
-      \centering
-      \caption{\label{tab:monolayers:charMethod:sampleConcentrations}Solvents and gravimetric concentrations $c_m$ for samples measured in SAXS and SANS.}
-      \begin{tabular}{ l | l | c | l | c }
-        \textbf{Sample}  & Solvent (SAXS) & $c_m^\mathrm{SAXS} \,/ \unit{gL^{-1}}$ & Solvent (SANS) & $c_m^\mathrm{SANS}\,/ \unit{gL^{-1}}$\\
-        \hline
-        IOS-11 & cyclohexane   &                  & toluene-d8       & 2.8\\
-        IOS-7  & cyclohexane   &                  & toluene-d8       & 2.0\\
-        \hline
-      \end{tabular}
-    \end{table}
-
-
-    For the SANSPOL measurement on the D33 instrument, $500 \unit{\musf L}$ of the IOS-11 and $250 \unit{\musf L}$ of the IOS-7 stock solution is dried over night at ambient conditions, and then redispersed in $1 \unit{mL}$ of toluene-$\mathrm{d_8}$ by sonification.
+    For the SANSPOL measurement on the D33 instrument, part of the IOS-11 and IOS-7 solutions are dried over night at ambient conditions, and then redispersed in toluene-$\mathit{d_8}$ by sonification.
     The dispersions are measured in Hellma quartz cuvettes with a thickness of $2 \unit{mm}$.
     The wavelength at D33 was set to $6 \unit{\angstrom}$, where the selector provides a wavelength spread of $10 \%$ (FWHM).
     A sample aperture  of $7 \times 10 \unit{mm^2}$ was used and a collimation aperture of $30 \times 30 \unit{mm^2}$ is set for all experiments.
     The samples are measured both at a sample-to-detector distance of $2 \unit{m}$ and at $8 \unit{m}$ with a collimation distance of $5.3 \unit{m}$ and $7.8 \unit{m}$ respectively.
     The nanoparticles are measured at an magnetic field of $515 \unit{mT}$, which is applied perpendicular to the beam direction, in the horizontal direction.
     Each sample is measured over a time of $20 \unit{min}$ at the long sample-to-detector distance and $10 \unit{min}$ at the short sample-to-detector distance.
-    The empty beam and a sample of toluene-$\mathrm{d_8}$ is measured 
+    The empty beam and a sample of toluene-$\mathit{d_8}$ is additionally measured for background subtraction.
     For the evaluation of the magnetic scattering, a $20^\circ$ sector around the vertical dimension is azimuthally integrated by using the GRASP software.
     Furthermore, the polarization efficiency of $97 \%$ and a flipping efficiency of $99 \%$ of D33, according to the instrument specifications given by the local contact, is corrected with the GRASP software during data reduction.
 
     From the distances and aperture sizes, an angular divergence of $2.1 \unit{mrad}$ and $3.8 \unit{mrad}$ are calculated for the long and short detector distance respectively by \refeq{eq:methods:sans:formulaResolution}, which is fixed together with the wavelength spread for the data evaluation.
 
-    To evaluate the SAXS data, a spherical core-shell form factor is assumed with a w\"ustite core and a maghemite shell.
+    To evaluate the SAXS data, a spherical core-shell form factor is assumed with a w\"ustite core and a \ch{Fe_{3-$\delta$}O4} shell.
     The scattering length density of the core and shell material is calculated by
     \begin{align}
-      \rho^\mathrm{X-ray}_\mathrm{maghemite}   &\eq   \frac{32 r_e}{3}  \frac{2 f_\mathrm{Fe} + 3 f_\mathrm{O}}
-                                                                  {a_\mathrm{maghemite}^3}
-                                                \eq & 38.56 \cdot 10^{-6} \angstrom^{-2},\\
-      \rho^\mathrm{neutron}_\mathrm{maghemite} &\eq   \frac{32}{3} \frac{2 b_\mathrm{Fe} + 3 b_\mathrm{O}}
-                                                                  {a_\mathrm{maghemite}^3}
-                                                \eq & 6.57 \cdot 10^{-6} \angstrom^{-2},\\
+      \rho^\mathrm{X-ray}_\mathrm{inv.\,spinell}   &\eq   8 r_e \frac{(3-\delta) f_\mathrm{Fe} + 4 f_\mathrm{O}}
+                                                                     {a_\mathrm{inv.\,spinell}^3}\\
+      \rho^\mathrm{neutron}_\mathrm{inv.\,spinell} &\eq   8 \frac{(3-\delta) b_\mathrm{Fe} + 4 b_\mathrm{O}}
+                                                                            {a_\mathrm{inv.\,spinell}^3}\\
       \rho^\mathrm{X-ray}_\textsf{w\"ustite}   &\eq   4 r_e \frac{f_\mathrm{Fe} + f_\mathrm{O}}
-                                                                  {a_\textsf{w\"ustite}^3}
-                                                \eq & 52.07 \cdot 10^{-6} \angstrom^{-2},\\
+                                                                 {a_\textsf{w\"ustite}^3}\\
       \rho^\mathrm{neutron}_\textsf{w\"ustite} &\eq   4 \frac{b_\mathrm{Fe} + b_\mathrm{O}}
-                                                              {a_\textsf{w\"ustite}^3}
-                                                \eq & 8.34 \cdot 10^{-6} \angstrom^{-2}.
+                                                             {a_\textsf{w\"ustite}^3}
     \end{align}
+    %     \eq & 38.56 \cdot 10^{-6} \angstrom^{-2},\\
+    %     \eq & 6.57 \cdot 10^{-6} \angstrom^{-2},\\
+    %     \eq & 52.07 \cdot 10^{-6} \angstrom^{-2},\\
+    % \eq & 8.34 \cdot 10^{-6} \angstrom^{-2}.
     with $r_e$ the classical electron radius, the  atomic form factor $f$ and nuclear coherent scattering length $b$ of iron and oxygen, both are found in literature for the elements of the periodic table and are tabulated for iron and oxygen in \reftab{tab:looselyPackedNS:charMethod:scatteringLenghts}.
     The lattice constants are estimated from the values that are obtained in XRD for IOS-11.
+    The parameter $\delta$ determines whether the shell phase is closer to magnetite ($\delta \eq 0$) or maghemite ($\delta \eq \tfrac{1}{3}$).
+    The choice of $\delta$ is also discussed in the evaluation of the XRD data.
     \begin{table}[ht]
       \centering
       \caption{\label{tab:looselyPackedNS:charMethod:scatteringLenghts}Atomic form factor $f$ (at $\lambda \eq 1.3414 \unit{\angstrom}$) and the nuclear coherent scattering length $b$ of iron and oxygen \cite{Sears_1992_Neutr, BerkeleyLab_1993_asf}.}
@@ -104,9 +92,9 @@
     As well as the solvent scattering length densities, which are fixed to the values calculated from literature
     \begin{align}
       \rho^\mathrm{X-ray}_{\mathrm{cyclohexane}} &\eq 7.55 \cdot 10^{-6} \angstrom^{-2},\\
-      \rho^\mathrm{neutron}_\mathrm{toluene-d8}  &\eq 5.66 \cdot 10^{-6} \angstrom^{-2},
+      \rho^\mathrm{neutron}_{\mathrm{toluene-}d8}  &\eq 5.66 \cdot 10^{-6} \angstrom^{-2},
     \end{align}
-    where a density of $0.779 \unit{g\,mL^{-1}}$ for cyclohexane, and $0.943 \unit{g\,mL^{-1}}$ for toluene-d8.
+    where a density of $0.779 \unit{g\,mL^{-1}}$ for cyclohexane, and $0.943 \unit{g\,mL^{-1}}$ for toluene-$\mathit{d8}$.
 
     In the minimization procedure of both SAXS and SANS models, a Levenberg-Marquardt algorithm\cite{Marquardt_1963_Analgo, Oliphant_2006_Guide} is applied for which a modified $\chi^2$ on the logarithmic scale is used
     \begin{align}
@@ -119,102 +107,28 @@
 
     The obtained particle number density $n$ obtained as parameter from SAS, is transformed to a mass concentration of the particles by
     \begin{align}
-      c_m \eq n (\rho_\textsf{w\"ustite} V_p^\textsf{w\"ustite} + \rho_\textsf{maghemite} V_p^\textsf{maghemite}),
+      c_m \eq n (\rho_\textsf{w\"ustite} V_p^\textsf{w\"ustite} + \rho_\textsf{inv.\, spinell} V_p^\textsf{inv.\, spinell}),
     \end{align}
-    where $V^x_p$ is the average volume of the respective phase $x$ in a single nanosphere and $\rho$ the mass density of w\"ustite and maghemite that is determined from XRD.
+    where $V^x_p$ is the average volume of the respective phase $x$ in a single nanosphere and $\rho$ the mass density of w\"ustite and \ch{Fe_{3-$\delta$}O4}.
 
-%     8.3842688
-% 4.1819711
+  \paragraphNewLine{Vibrating Sample Magnetometry}
+    To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion as described in \refapp{app:additionalExperimentalTechniques:vsm} and polarized small-angle neutron scattering (SANSPOL) is applied to measure the magnetic scattering of the individual nanoparticles.
+    Both techniques allow to model the average individual nanoparticle magnetization and the results should be in agreement with one another.
 
-
-
-  %   The numerical value $8$ accounts that one unit cell contains eight formula units of $\ch{Co_xFe_yO4}$ in an inverse spinell phase.
-  %   The atomic form factor depends on the X-ray wavelength, the given values are for the wavelength of $\lambda \eq 1.3414 \unit{\angstrom}$ (wavelength used at the GALAXI instrument).
-  %   For Ac-CoFe-C-3 no XRD was performed and therefore the literature value of the lattice constant is assumed.
-  %   \begin{table}[ht]
-  %     \centering
-  %     \caption{\label{tab:monolayers:charMethod:scatteringLenghts}The real part of the atomic form factor $f$ (at $\lambda \eq 1.3414 \unit{\angstrom}$) and the nuclear coherent scattering length $b$ for the elements of the nanoparticles to determine their scattering length densities \cite{Sears_1992_Neutr, BerkeleyLab_1993_asf}.}
-  %     \begin{tabular}{ c | l | c }
-  %                 & $f$       & $b \, / \unit{fm}$ \\
-  %       \hline
-  %       $\ch{O}$  & 8.04077   & 5.803   \\
-  %       $\ch{Co}$ & 26.3717   & 2.49  \\
-  %       $\ch{Fe}$ & 25.7468   & 9.45  \\
-  %       \hline
-  %     \end{tabular}
-  %   \end{table}
-
-  %   For Ol-CoFe-C the superball form factor is used with an additional core-shell structure to account for the w\"ustite / inverse spinell structure of the particles and to determine the shell scattering length density $\rho_\mathrm{shell}$ and shell thickness $D_\mathrm{shell}$.
-  %   For the SANS models, an additional oleic acid surfactant shell with the same superball parameters as the core model and a thickness $D_\mathrm{OA}$ is added to the model, which is neglected for SAXS models due to the poor contrast of oleic acid and solvent.
-  %   However, the composition of the core and shell can not be determined by XRD and EDX alone as the complex structure leaves too many variables.
-  %   There is luckily a significant contrast between the w\"ustite SLD ($\rho_\mathrm{el}^\textsf{w\"ustite} \approx 50 \cdot 10^{-6} \angstrom^{-2}$) and inverse spinell SLD ($\rho_\mathrm{el}^\mathrm{inv.\, spinell} \approx 42 \cdot 10^{-6} \angstrom^{-2}$) for X-rays, that enables to determine the relative core and shell thickness.
-  %   And furthermore neutrons are highly sensitive to the relative iron and cobalt amount in a phase, as can be seen from \reftab{tab:monolayers:charMethod:scatteringLenghts}, which can be utilized to measure the relative composition.
-  %   Thus the combination of SAXS and SANS can be used as a tool to solve both the core-shell structure and the compositions.
-
-  %   The model for Ol-CoFe-C is therefore given a parameter for the cobalt content $x$ from the cobalt ferrite shell \ch{Co_x Fe_{3-x} O4}.
-  %   Using this parameter, the scattering length density of the core and shell in Ol-CoFe-C is determined as described in the following:
-  %   Fixing the ratio of iron and cobalt $r$ to the value obtained from EDX, the composition of the w\"ustite phase \ch{Fe_y Co_{1-y} O} is calculated using the volume of the spinell phase $V_\mathrm{inv.\,spinell}$ and the volume of the w\"ustite phase $V_\textsf{w\"ustite}$ in the core-shell particle, as well as the lattice constants determined from XRD $a_\mathrm{inv.\,spinell}$ and $a_\textsf{w\"ustite}$ by
-  %   \begin{align}
-  %     \begin{split}
-  %       r &\eq \frac{N_\mathrm{Fe}^\mathrm{inv.\, spinell} + N_\mathrm{Fe}^\textsf{w\"ustite}}
-  %                   {N_\mathrm{Co}^\mathrm{inv.\, spinell} + N_\mathrm{Co}^\textsf{w\"ustite}} \\
-  %         &\eq \frac
-  %               {8 (3-x) \frac{V_\mathrm{inv.\,spinell}}{a_\mathrm{inv.\,spinell}^3} +
-  %                 4 y \frac{V_\textsf{w\"ustite}}{a_\textsf{w\"ustite}^3}}
-  %               {8 x \frac{V_\mathrm{inv.\,spinell}}{a_\mathrm{inv.\,spinell}^3} +
-  %                 4 (1-y) \frac{V_\textsf{w\"ustite}}{a_\textsf{w\"ustite}^3}}.
-  %     \end{split}
-  %   \end{align}
-  %   This equation is straight forward to solve for $y$ by
-  %   \begin{align}
-  %     y &\eq \frac{2}{\nu} x + \frac{r \nu - 6}{\nu (1 + r)},\\
-  %       & \textsf{where\,} \hspace{0.5cm} \nu \eq \frac{V_\textsf{w\"ustite}}{V_\mathrm{inv.\,spinell}} \biggl( \frac{a_\mathrm{inv.\,spinell}}{a_\textsf{w\"ustite}} \biggr)^3.
-  %   \end{align}
-  %   The volumes of the two phases are determined from the particle size, shell thickness and superball exponent on the fly during the fitting process, such that y is readily determined with varied particle dimensions and cobalt content in \ch{Co_x Fe_{3-x}O4}.
-  %   % As SAXS is also sensitive to the difference of the nanoparticle core and shell size due to a stronger contrast between w\"ustite and spinell phase, the data sets for SAXS and SANS are fitted simultaneously.
-  %   By this method, the combination of SAXS and SANS on Ol-CoFe-C provides the means to determine the particle size and size distribution, the individual core and shell thickness and atomic composition of the two phases, while being self-consistent with EDX and XRD results.
-
-  %   The scattering length density of the oleic acid shell is fixed in every SANS model to the value value calculated for bulk oleic acid
-  %   \begin{align}
-  %     \rho^\mathrm{X-ray}_\mathrm{oleic\,acid} &\eq 8.52 \cdot 10^{-6} \angstrom^{-2},\\
-  %     \rho^\mathrm{neutron}_\mathrm{oleic\,acid} &\eq 0.078 \cdot 10^{-6} \angstrom^{-2},
-  %   \end{align}
-  %   which assumes a density of $0.895 \unit{g\,mL^{-1}}$ for the oleic acid.
-  %   The solvent scattering length densities are fixed to the values calculated from literature
-  %   \begin{align}
-  %     \rho^\mathrm{X-ray}_{n\mathrm{-hexane}}    &\eq 6.46 \cdot 10^{-6} \angstrom^{-2},\\
-  %     \rho^\mathrm{X-ray}_\mathrm{toluene}       &\eq 8.01 \cdot 10^{-6} \angstrom^{-2},\\
-  %     \rho^\mathrm{X-ray}_{\mathrm{cyclohexane}} &\eq 7.55 \cdot 10^{-6} \angstrom^{-2},\\
-  %     \rho^\mathrm{neutron}_\mathrm{toluene-d8}  &\eq 5.66 \cdot 10^{-6} \angstrom^{-2},
-  %   \end{align}
-  %   where a density of $0.655 \unit{g\,mL^{-1}}$ is used for $\mathit{n}$-hexane, $0.867 \unit{g\,mL^{-1}}$ for toluene, $0.779 \unit{g\,mL^{-1}}$ for cyclohexane, and $0.943 \unit{g\,mL^{-1}}$ for toluene-d8.
-
-  %   \begin{figure}[tb]
-  %     \centering
-  %     \includegraphics{monolayer_sans_superball_OA_model}
-  %     \caption{\label{fig:monolayers:charMethods:SANSModel}Depiction of the model used for SANS: A combination of nanoparticles and oleic acid micelles. Orange is the nanoparticle material, white with curly lines the oleic acid and blue the solvent.}
-  %   \end{figure}
-
-  %   Due to the stronger contrast of oleic acid and the solvent for neutrons, oleic acid micelles in the solution become visible.
-  %   Also it is possible that a incoherent background might be present due to the hydrogen of the oleic acid (\ch{C18H34O2}), as to why an additional constant background term is added to the model.
-  %   The SANS data is thus described by a sum of the intensity calculated for the superball, the intensity of a spherical form factor and a constant term
-  %   \begin{align}
-  %     I(q) \eq I_\mathrm{superball}(q) + I_\mathrm{sphere}(q) + I_\mathrm{bg},
-  %   \end{align}
-  %   which is depicted in \reffig{fig:monolayers:charMethods:SANSModel}.
-  %   The micelles introduce $r_\mathrm{OA}$ and $n_\mathrm{OA}$ as additional parameters to the model, which describe the size of the micelles and their number density in dispersion.
-
-  %   To interpret particle number densities $n$, they are transformed to a mass concentration by
-  %   \begin{align}
-  %     c_m \eq n \rho V_p,
-  %   \end{align}
-  %   using the single-particle volume $V_p$ and the density of the material $\rho$.
-  %   For the oleic acid micelles the volume fraction
-  %   \begin{align}
-  %     c_V \eq n V_p,
-  %   \end{align}
-  %   is given instead as it is the more natural to the liquid state of oleic acid.
-
+    For the VSM data, it is assumed that the dispersion is compromised of homogeneously magnetized, non-interacting particles that can be represented by a single classical super spin.
+    In \refapp{ch:appendix:calculations:magnetizationClassicalSpin}, it is shown that in this case the magnetization is given by a Langevin curve
+    \begin{align}
+      M(H) \eq& M_s \biggl( \coth \biggl(\frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr) + \chi H.
+    \end{align}
+    Here, $M_s$ is the saturation magnetization, $\mu$ the magnetic moment of one nanoparticle and $\chi$ the excess susceptibility.
+    To properly obtain the saturation magnetization in units of $\unit{kAm{-1}}$, the exact volume of magnetic material in dispersion needs to be known and the measured magnetization data scaled accordingly.
+    The volume of the magnetic material can be estimated either by gravimetric methods or also by using the results obtained from small-angle scattering.
+    As one parameter in the small-angle scattering model is the number of particles per volume $n \eq N/V$ and another the volume of the particle $V_p$, the magnetic volume per dispersion volume is given by
+    \begin{align}
+      \alpha \eq \frac{N V_p}{V}.
+    \end{align}
+    This ratio is multiplied with the volume of dispersion measured in the VSM experiment to obtain the volume that the final data is scaled to.
+  
   % \paragraphNewLine{Vibrating Sample Magnetometry}
   %   The macroscopic magnetization of the nanoparticles Ac-CoFe-C, Ac-CoFe-C-2 and Ol-CoFe-C was measured using the PPMS Evercool II described in \refch{ch:instruments:laboratoryInstruments:vsm}.
   %   To obtain the magnetization in a non-interacting state at room temperature, two approaches have been considered.

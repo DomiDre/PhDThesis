@@ -20,13 +20,12 @@
       In the case of this thesis, TEM is used to obtain a local image of the nanoparticle size and their morphological shape.
       The size distribution of a characteristic dimension of a nanoparticle is evaluated by binning multiple measurements of the dimension in a histogram to obtain the respective number of occurrences for various length scales.
       The number of particles $N$ that need to be measured is typically in the order $N > 100$, such that the histogram is a valid represention of the size distribution.
-      The respective measurement error for each bin is estimated as the square root of the counts in that respective bin.
-      To understand the estimate of the bin height error, the measured particle size can be considered as a random variable with an arbitrary probability density.
+      The respective measurement error for each bin is estimated as the square root of the counts in that respective bin. \footnote{To understand the estimate of the standard deviation for the height of a bin, the measured particle size can be considered as a random variable with an arbitrary probability density.
       Every bin $i$ for itself can be associated with a probability $p_i$ that the next measurement of X adds to the bin or does not.
       This is essentially a Bernoulli experiment for each bin, where the bin count $n_i$ is a binomial distributed variable.
       The expectation value for the counts in bin $i$ after $N$ total measurements is $\bar{n}_i \eq p_i N$.
       As the bin counts for a large number of measurements represent the probability function, the number of counts become equal to the expectation value for $N \gg 1$ as $p_i \eq n_i / N$ and thus $\bar{n}_i \eq n_i$.
-      Furthermore, for a sufficient number of bins, such that $p_i \ll 1$ for every bin, the standard deviation of a binomial distributed variable is given by $\sigma_i \eq \sqrt{N p_i (1-p_i)} \approx \sqrt{n_i}$.
+      Furthermore, for a sufficient number of bins, such that $p_i \ll 1$ for every bin, the standard deviation of a binomial distributed variable is given by $\sigma_i \eq \sqrt{N p_i (1-p_i)} \approx \sqrt{n_i}$.}
 
       To model the size distribution by a simple function, a log-normal distribution function is fit to the histogram
       \begin{align}\label{eq:looselyPackedNP:nanoparticle:lognormalDist}

@@ -14,7 +14,7 @@ import numpy as np
 
 from modelexp.data import XyemData
 
-datfile = 'fit_result.dat'
+datfile = cwd + '/fit/fit_result.dat'
 
 chapter = 'looselyPackedNP'
 sample_name = 'IOS-7'
@@ -26,8 +26,8 @@ data.loadFromFile(datfile)
 B, M, sM, Mmodel = data.getData()
 
 min_B, max_B = min(B), max(B)
-min_M, max_M = -210, 210
-T = 298
+min_M, max_M = -250, 250
+T = 300
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16
@@ -36,11 +36,20 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
 ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
-            label='VSM\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
+            label='IOS-7\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
 ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
+# ax.text(0.51, 0.05,
+#   'IOS-7\n'
+#   '$\mathit{M_s} \, = \,  212.5(1) kA m^{-1}$\n'+
+#   '$\mathit{\mu} \, = \,  3609(8) \mathit{\mu}_B$\n'+
+#   '$\mathit{\mu_0 \chi} \, = \, -0.0132(1)$',
+#   horizontalalignment='left',
+#   verticalalignment='bottom',
+#   transform=ax.transAxes,
+#   fontsize=9)
+
 ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, T$")
 ax.set_ylabel(r"$\mathit{M} \, / \, kAm^{-1}$")
-
 ax.set_xlim(min_B, max_B)
 ax.set_ylim(min_M, max_M)
 ax.legend(loc='upper left')

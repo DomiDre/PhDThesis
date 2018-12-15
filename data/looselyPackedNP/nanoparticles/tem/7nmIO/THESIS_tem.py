@@ -14,7 +14,7 @@ import uzkChemTem
 
 temFilepath = cwd+"/KWi338_001.tif"
 chapter = 'looselyPackedNP'
-sample_name = 'KWi338'
+sample_name = 'IOS-7'
 
 savefile = chapter+'_TEM_'+sample_name
 

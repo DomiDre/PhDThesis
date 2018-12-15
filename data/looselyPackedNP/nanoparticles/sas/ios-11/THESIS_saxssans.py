@@ -71,7 +71,7 @@ ax.errorbar(saxs_q, saxs_I, saxs_sI,\
 ax.plot(saxs_q, saxs_Imodel, marker='None', linestyle='-',\
   color=colors['saxs_sans_model'], zorder=1)
 
-ax.errorbar(sans_sa_q, sans_sa_I, sans_sa_sI,\
+ax.errorbar(sans_sa_q, sans_sa_I*sf_, sans_sa_sI,\
   linestyle='None', color=colors['sans_sa_data'],\
   label=sans_legend_label, zorder=0, capsize=0, marker='.')
 ax.plot(sans_sa_q, sans_sa_Imodel, marker='None', linestyle='-',\
@@ -98,9 +98,9 @@ ax_sld.plot(sans_r, sans_sld, marker='None',
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel("$SLD \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 2, 4, 6, 8])
-ax_sld.set_yticks([0, 10, 20, 30, 40])
+ax_sld.set_yticks([0, 10, 20, 30, 40, 50])
 ax_sld.set_xlim([0, 9])
-ax_sld.set_ylim([0, 45])
+ax_sld.set_ylim([0, 59])
 ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 

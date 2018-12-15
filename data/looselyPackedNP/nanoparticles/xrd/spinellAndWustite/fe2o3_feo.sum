@@ -8,7 +8,7 @@
                  Refinement of X-ray and/or Neutron Data
 
 
-    Date: 11/12/2018  Time: 20:25:23.307                              
+    Date: 12/12/2018  Time: 18:30:41.356                              
 
  => PCR file code: fe2o3_feo
  => DAT file code: PMK18.dat            -> Relative contribution: 1.0000                                                            
@@ -32,7 +32,7 @@
  => Profile Matching (fixed scale) for phase: 1
  =>-------> Pattern#  1
  => Profile Matching (fixed scale) for phase: 2
- => Scor: 3.0811
+ => Scor: 3.0812
 
  ==> RESULTS OF REFINEMENT:
 
@@ -50,9 +50,9 @@
  ==> PROFILE PARAMETERS FOR PATTERN#  1
 
  => Cell parameters      :
-                              8.38427   0.00029
-                              8.38427   0.00029
-                              8.38427   0.00029
+                              8.38426   0.00029
+                              8.38426   0.00029
+                              8.38426   0.00029
                              90.00000   0.00000
                              90.00000   0.00000
                              90.00000   0.00000
@@ -70,7 +70,7 @@
                               0.00000   0.00000
                               0.00000   0.00000
  => X and y parameters   :    0.00000   0.00000
-                              2.19772   0.00545
+                              2.19781   0.00545
  => Strain parameters    :    0.00000   0.00000
                               0.00000   0.00000
                               0.00000   0.00000
@@ -93,9 +93,9 @@
  ==> PROFILE PARAMETERS FOR PATTERN#  1
 
  => Cell parameters      :
-                              4.18197   0.00006
-                              4.18197   0.00006
-                              4.18197   0.00006
+                              4.18198   0.00006
+                              4.18198   0.00006
+                              4.18198   0.00006
                              90.00000   0.00000
                              90.00000   0.00000
                              90.00000   0.00000
@@ -113,7 +113,7 @@
                               0.00000   0.00000
                               0.00000   0.00000
  => X and y parameters   :    0.00000   0.00000
-                              0.75482   0.00323
+                              0.75511   0.00323
  => Strain parameters    :    0.00000   0.00000
                               0.00000   0.00000
                               0.00000   0.00000
@@ -142,8 +142,8 @@
  => Conventional Rietveld R-factors for Pattern:  1
  => Rp:  15.6     Rwp:  13.0     Rexp:    9.98 Chi2:  1.70    
  => Deviance:  0.419E+04     Dev*  :   1.706    
- => DW-Stat.:    0.5985     DW-exp:     1.8779
- => N-sigma of the GoF:       24.702
+ => DW-Stat.:    0.5986     DW-exp:     1.8779
+ => N-sigma of the GoF:       24.691
 
  ==> RELIABILITY FACTORS FOR POINTS WITH BRAGG CONTRIBUTIONS FOR PATTERN:  1
 
@@ -153,8 +153,8 @@
  => Conventional Rietveld R-factors for Pattern:  1
  => Rp:  15.6     Rwp:  13.0     Rexp:    9.98 Chi2:  1.70    
  => Deviance:  0.419E+04     Dev*  :   1.706    
- => DW-Stat.:    0.5985     DW-exp:     1.8779
- => N-sigma of the GoF:       24.702
+ => DW-Stat.:    0.5986     DW-exp:     1.8779
+ => N-sigma of the GoF:       24.691
 
  => Global user-weigthed Chi2 (Bragg contrib.):   1.70    
 
@@ -163,15 +163,15 @@
      -----------------------------------------------------
 
  => Phase:  1     Fe2O3
- => Bragg R-factor:  0.567E-01   Vol:  589.380( 0.035)  Fract(%):    0.00( 0.00)
- => Rf-factor= 0.101             ATZ:           0.000   Brindley:  1.0000
+ => Bragg R-factor:  0.559E-01   Vol:  589.379( 0.035)  Fract(%):    0.00( 0.00)
+ => Rf-factor= 0.941E-01         ATZ:           0.000   Brindley:  1.0000
 
  => Phase:  2     FeO
- => Bragg R-factor:  0.215       Vol:   73.138( 0.002)  Fract(%):    0.00( 0.00)
+ => Bragg R-factor:  0.215       Vol:   73.139( 0.002)  Fract(%):    0.00( 0.00)
  => Rf-factor= 0.145             ATZ:           0.000   Brindley:  1.0000
 
  
-              CPU Time:     0.375 seconds
-                            0.006 minutes
+              CPU Time:     0.266 seconds
+                            0.004 minutes
 
- => Run finished at:     Date: 11/12/2018  Time: 20:25:23.683                              
+ => Run finished at:     Date: 12/12/2018  Time: 18:30:41.623                              

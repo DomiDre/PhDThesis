@@ -35,9 +35,28 @@ def color_variant(hex_color, brightness_offset=1):
         new_rgb_hex.append('0')
       new_rgb_hex.append(new_hex)
     return "#" + "".join(new_rgb_hex)
+def getValueWithErrorString(parameter, modifier=1):
+  val = parameter.value*modifier
+  std = parameter.stderr*modifier
+  result = ''
+  if (std > 0):
+    power = np.floor(np.log10(std))
+    cutted_std = int(np.round(std/(10**power)))
+    cutted_val = np.round(val, int(-power))
+    if power < 0:
+      format_str = '{:.'+str(int(-power))+'f}'
+      cutted_val = format_str.format(cutted_val)
+      # cutted_val = str(cutted_val).ljust(int(-power)+2,'0')
+    elif power >= 0:
+      cutted_val = str(int(cutted_val))
+      cutted_std = str(int(cutted_std * 10**power))
 
+    result = f"{cutted_val}({cutted_std})"
+  else:
+    result = f"{val}"
+  return result
 chapter = 'looselyPackedNP'
-sample_name = 'PMK18_KWi338'
+sample_name = 'PMK18'
 savefile = chapter + '_TEM_' + sample_name+'_sizeDist'
 
 left_xlim, right_xlim = 2, 17
@@ -52,16 +71,7 @@ temIOS10.load(lengths)
 temIOS10.prepare_length_histogram(density=True)
 temIOS10.fit_lognormal(11, 0.1, density=True)
 temIOS10.export_fit_result(cwd + "/PMK18_size_dist.xy")
-
-
-temIOS7 = TEMSpheres()
-temIOS7.Nbins = bins
-lengths = temIOS7.load_csv(cwd + "/7nmIO/KWi338_001_counted.csv")
-temIOS7.load(lengths)
-temIOS7.prepare_length_histogram(density=True)
-temIOS7.fit_lognormal_bimodal_density(7, 0.13, 0.3, 2.5, 0.3)
-temIOS7.export_fit_result(cwd + "/KWi338_size_dist.xy")
-
+fit_params = temIOS10.fitresults.params
 #Plot Fit:
 fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
@@ -74,13 +84,6 @@ b10 = ax.hist(
   facecolor = cycle[0]
 )
 
-b7 = ax.hist(
-  temIOS7.raw_data,
-  bins=temIOS7.Nbins,
-  alpha=0.7,
-  density=True,
-  facecolor = cycle[1]
-)
 ax.errorbar(
   temIOS10.bins, temIOS10.counts, temIOS10.errors, ls='None',
   color=color_variant(cycle[0], -100),
@@ -88,35 +91,19 @@ ax.errorbar(
   label='IOS-11'
 )
 
-ax.errorbar(
-  temIOS7.bins, temIOS7.counts, temIOS7.errors, ls='None',
-  color=color_variant(cycle[1], -100),
-  alpha=0.7,
-  label='IOS-7'
-)
-
 x_for_fit_display = np.linspace(left_xlim, right_xlim, 500)
 
 ax.plot(x_for_fit_display,\
-  temIOS7.lognormal_bimodal_density(temIOS7.p_result, x_for_fit_display),\
-  color='black', marker='None')
-  # label=\
-  #   "$\mu_{log}\,=\,"+\
-  #     "{:.1f}".format(temIOS7.p_result["logmu"].value)+\
-  #     "\, nm$\n"+
-  #   "$\sigma_{log}\,=\,"+\
-  #     "{:.1f}".format(temIOS7.p_result["logstd"].value*100)+\
-  #     "\, \%$")
-ax.plot(x_for_fit_display,\
   temIOS10.lognormal(temIOS10.p_result, x_for_fit_display),\
   color='black', marker='None')
-  # label=\
-  #   "$\mu_{log}\,=\,"+\
-  #     "{:.1f}".format(temIOS10.p_result["logmu"].value)+\
-  #     "\, nm$\n"+
-  #   "$\sigma_{log}\,=\,"+\
-  #     "{:.1f}".format(temIOS10.p_result["logstd"].value*100)+\
-  #     "\, \%$")
+
+ax.text(0.07, 0.85,
+  f'$\mu \,=\,{getValueWithErrorString(fit_params["logmu"])}\, nm$\n'+
+  f'$\sigma \,=\,{getValueWithErrorString(fit_params["logstd"], 100)}\, \%$',
+  color='black',
+  horizontalalignment='left',
+  verticalalignment='top',
+  transform=ax.transAxes)
 
 ax.set_xlabel('$\mathit{d} \, / \, nm$')
 ax.set_ylabel("$p(d)$")
