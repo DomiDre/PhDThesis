@@ -112,41 +112,11 @@
     where $V^x_p$ is the average volume of the respective phase $x$ in a single nanosphere and $\rho$ the mass density of w\"ustite and \ch{Fe_{3-$\delta$}O4}.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
-    To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion as described in \refapp{app:additionalExperimentalTechniques:vsm} and polarized small-angle neutron scattering (SANSPOL) is applied to measure the magnetic scattering of the individual nanoparticles.
-    Both techniques allow to model the average individual nanoparticle magnetization and the results should be in agreement with one another.
-
-    For the VSM data, it is assumed that the dispersion is compromised of homogeneously magnetized, non-interacting particles that can be represented by a single classical super spin.
-    In \refapp{ch:appendix:calculations:magnetizationClassicalSpin}, it is shown that in this case the magnetization is given by a Langevin curve
-    \begin{align}
-      M(H) \eq& M_s \biggl( \coth \biggl(\frac{\mu \mu_0 H}{k_B T} \biggr) - \frac{k_B T}{\mu \mu_0 H} \biggr) + \chi H.
-    \end{align}
-    Here, $M_s$ is the saturation magnetization, $\mu$ the magnetic moment of one nanoparticle and $\chi$ the excess susceptibility.
-    To properly obtain the saturation magnetization in units of $\unit{kAm{-1}}$, the exact volume of magnetic material in dispersion needs to be known and the measured magnetization data scaled accordingly.
-    The volume of the magnetic material can be estimated either by gravimetric methods or also by using the results obtained from small-angle scattering.
-    As one parameter in the small-angle scattering model is the number of particles per volume $n \eq N/V$ and another the volume of the particle $V_p$, the magnetic volume per dispersion volume is given by
-    \begin{align}
-      \alpha \eq \frac{N V_p}{V}.
-    \end{align}
-    This ratio is multiplied with the volume of dispersion measured in the VSM experiment to obtain the volume that the final data is scaled to.
-  
-  % \paragraphNewLine{Vibrating Sample Magnetometry}
-  %   The macroscopic magnetization of the nanoparticles Ac-CoFe-C, Ac-CoFe-C-2 and Ol-CoFe-C was measured using the PPMS Evercool II described in \refch{ch:instruments:laboratoryInstruments:vsm}.
-  %   To obtain the magnetization in a non-interacting state at room temperature, two approaches have been considered.
-  %   In the first, $40 \unit{\musf L}$ of the nanoparticle dispersion are sealed in a vial as described in \refch{ch:instruments:laboratoryInstruments:vsm}.
-  %   The vial is subsequently fixed within a drinking straw, using additional folded straws to render the vial immobile.
-  %   A moving liquid sample is a difficult system in the framework of vibrating sample magnetometry as due to air gaps the liquid is still able to move within its container during the vibration, which can lead to a systematic error in the measured signal \cite{Boekelheide_2016_Artif}.
-  %   Therefore, in a second approach, the nanoparticle dispersion is quickly drop casted in a diluted concentration ($c \eq 0.1 \unit{mg/mL}$) on a silicon substrate using $\textit{n}$-hexane as solvent to measure the nanoparticles in a dry state for comparison.
-  %   The background of the silicon substrate and sample holder is subtracted in this case by the measurement of an empty silicon wafer with approximately the same mass.
-
-  %   For both approaches hysteresis curves are measured at $10 \unit{K}$ and $300 \unit{K}$, as well as on five additional temperatures in between ($20\unit{K},\,50\unit{K},\,100\unit{K},\,150\unit{K},\,200\unit{K}$).
-  %   Before each measurement, a touchdown procedure is performed with the sample rod, to correct for thermal expansion due to the temperature changes.
-  %   Each hysteresis is measured in sweep mode with a rate of $5 \unit{mT \, s^{-1}}$.
-  %   Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K \, min^{-1}}$.
-
-  %   The scaling of the data to the volume of the sample is performed as described in \refch{ch:methods:vsm}:
-  %   By fitting the room-temperature data to a Langevin behaviour plus a term for an excess susceptibility in the case of the nanoparticle dispersions, the magnetization data is scaled such that the saturation magnetization is given by the ratio of the single-particle moment and volume.
-  %   \begin{align}
-  %     M_s \eq \frac{\bar{\mu}}{V_p}.
-  %   \end{align}
-  %   The average particle volume and particle size distribution is hereby taken from the previously obtained SAXS data evaluation and the standard deviation of the magnetic moment is set to be three times the particle size distribution $\sigma_{\mu} \eq 3 \sigma_{a}$, assuming the magnetic moment scales proportionally with the volume.
+    To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion as described in \refapp{app:additionalExperimentalTechniques:vsm}.
+    For both samples, $40 \unit{\musf L}$ of the same dispersions as used in SANS are used, where the particles are dispersed in toluene-$\mathit{d8}$.
+    The vials are measured on a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}) at $300 \unit{K}$ and at a low temperature of $10 \unit{K}$.
+    From the magnetization data at room temperature, the magnetic moment of the single nanospheres is determined by fitting a Langevin curve with excess susceptibility, which is then used together with the size determined by SAXS to scale the data to the magnetic volume as described in \refsec{ch:methods:vsm}.
+    Furthermore, for both samples temperature dependent magnetization curve is measured by cooling the sample down to $10 \unit{K}$ once with a field of $10 \unit{mT}$ and once without a field.
+    From the low temperature the sample is heated with $1.5 \unit{K \, min^{-1}}$, while measuring the magnetization.
+    To adjust for an expansion of the vibration rod, the sample recenters every $10 \unit{min}$.
 \end{document}

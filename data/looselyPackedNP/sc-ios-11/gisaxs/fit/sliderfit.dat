@@ -1,0 +1,26 @@
+#Fit procedure performed from: gui_data_matching.py
+#Loaded data from: None
+#Extraction performed at: Sat 15 Dec 2018 06:47:37 PM CET
+#Used Slider Fitting App: 0.61
+#[[Fit Statistics]]
+#    # fitting method   = leastsq
+#    # function evals   = 16
+#    # data points      = 640
+#    # variables        = 4
+#    chi-square         = 7.36416397
+#    reduced chi-square = 0.01157887
+#    Akaike info crit   = -2849.49929
+#    Bayesian info crit = -2831.65342
+#[[Variables]]
+#    gisaxs_background:  456.141933 +/- 3.75819852 (0.82%) (init = 455)
+#    gisaxs_scale:       1.3177e-04 +/- 7.5766e-07 (0.57%) (init = 0.00013177)
+#    R:                  5.70167337 +/- 0.00938003 (0.16%) (init = 5.7)
+#    vol_frac:           0.44735838 +/- 0.00229140 (0.51%) (init = 0.4472)
+#    q_offset:           0 (fixed)
+#[[Correlations]] (unreported correlations are < 0.100)
+#    C(R, vol_frac)                     =  0.683
+#    C(gisaxs_background, gisaxs_scale) =  0.638
+#    C(gisaxs_scale, vol_frac)          =  0.316
+#    C(gisaxs_background, vol_frac)     =  0.196
+#    C(gisaxs_scale, R)                 =  0.186
+#x 	 y 	 sy 	 ymodel
