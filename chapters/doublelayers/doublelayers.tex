@@ -1,17 +1,27 @@
 \providecommand{\main}{../..}
 \documentclass[\main/dresen_thesis.tex]{subfiles}
-
+\renewcommand{\thisPath}{\main/chapters/doublelayers}
 \begin{document}
-\chapter{Doublelayers}\label{ch:doublelayers}
+\chapter{Double Layers}\label{ch:doublelayers}
+  \subfile{\thisPath/intro/intro}
+  \FloatBarrier
+  \clearpage
 
-\section{Preparation of Doublelayers}
+  \section{Experimental Methods}
+    \subfile{\thisPath/experimentalMethods/experimentalMethods}
+      \FloatBarrier
+      \clearpage
 
-\section{Nuclear Structure}
+  \section{Double Layers}
+    \subfile{\thisPath/doubleLayers/doubleLayers}
+    \FloatBarrier
+      \clearpage
 
-\section{Magnetic Structure}
+  \section{Results \& Discussion}
+    \FloatBarrier
+      \clearpage
 
-\section{Emergent Effects}
-
-\section{Model}
-
+  \section{Summary}
+    \subfile{\thisPath/summary/summary}
+    \FloatBarrier
 \end{document}

@@ -1,0 +1,120 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+\begin{document}
+\section{Fortran: Stacked Spheres}\label{ch:appendix:code:stackedSpheres}
+For reflectometry of loosely packed nanospheres, a scattering length density profile calculation was implemented in  Fortran 90.
+
+\lstset{language=[90]Fortran,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  numbers=left,
+  morecomment=[l]{!\ }% Comment only with space after !
+}
+\begin{lstlisting}
+  subroutine sphere_cs_overlapping_stacked(&
+  z, sphere_shifts, packing_densities,&
+  Rcore, sigRcore, dshell,&
+  SLDc, SLDs, SLDsub, SLDbg, result_sld,&
+  Nz, Nlay, Nsigs, Npts)
+  
+  double precision, intent(in), dimension(Nz) :: z
+  double precision, intent(in), dimension(Nlay) ::&
+    sphere_shifts, packing_densities
+  double precision, intent(in) ::&
+    Rcore, sigRcore, dshell, SLDc, SLDs, SLDsub, SLDbg
+  integer, intent(in) :: Nz, Nlay
+  integer, intent(in) :: Nsigs, Npts
+  double precision, intent(out), dimension(Nz) ::&
+    result_sld
+
+  double precision, dimension(Nz) :: core_area, shell_area
+
+  integer :: i, iz, iLayer
+  double precision :: dSLDc, dSLDs
+  double precision :: Rparticle, area_prefactor
+  double precision :: pitch_z, last_z0, zshift
+  double precision, dimension(Npts) :: hcore, hshell
+
+  double precision :: Rstd, Rcore_min, Rcore_max
+  double precision :: Rcore_steps, Rcore_i
+  double precision, dimension(Npts) :: p_log
+
+  ! Initialize core and shell areas:
+  do iz=1, Nz
+    core_area(iz) = 0d0
+    shell_area(iz) = 0d0
+  end do
+
+  dSLDc = SLDc - SLDbg
+  dSLDs = SLDs - SLDbg
+
+  ! Initialize integration parameters
+  Rstd = dsqrt(dexp(2*dlog(Rcore) +&
+    sigRcore**2)*(dexp(sigRcore**2)-1))
+  Rcore_min = Rcore - Nsigs*Rstd
+  Rcore_max = Rcore + Nsigs*Rstd
+  Rcore_steps = (Rcore_max-Rcore_min)/(Npts-1)
+  do i=1, Npts
+    Rcore_i = Rcore_min + (i-1)*Rcore_steps
+    call lognormal(Rcore_i, Rcore, sigRcore, p_log(i))
+  end do
+
+  Rparticle = Rcore + dshell ! total particle radius
+  ! distance in hcp from one layer to the next in z
+  pitch_z = dsqrt(6d0)*2d0*Rparticle/3d0
+
+  ! initialize the first layer z0 with center of sphere
+  last_z0 = Rparticle 
+  ! repeat procedure for every sphere layer that is modelled
+  do iLayer=1, Nlay 
+    ! individually shift every z0  
+    last_z0 = last_z0 + sphere_shifts(iLayer) 
+    ! consider the pitch for second
+    ! and higher layers on the stack
+    if (iLayer > 1) last_z0 = last_z0 + pitch_z 
+    do iz=1, Nz
+      zshift = z(iz) - last_z0
+      do i=1, Npts
+        Rcore_i = Rcore_min + (i-1)*Rcore_steps
+        Rparticle = Rcore_i + dshell
+        if (zshift < -Rparticle) then
+          hshell(i) = 0d0
+          hcore(i) = 0d0
+        else if (zshift < -Rcore_i) then
+          hshell(i) = packing_densities(iLayer)*&
+          (Rparticle**2 - zshift**2)/Rcore_i**2 * p_log(i)
+          hcore(i) = 0d0
+        else if (zshift  < Rcore_i) then
+          hshell(i) = packing_densities(iLayer)*&
+            (2*Rcore_i*dshell + dshell**2)/&
+            Rcore_i**2 * p_log(i)
+          hcore(i) = packing_densities(iLayer)*&
+            (Rcore_i**2 - zshift**2)/Rcore_i**2 * p_log(i)
+        else if (zshift < Rparticle) then
+          hshell(i) = packing_densities(iLayer)*&
+          (Rparticle**2 - zshift**2)/Rcore_i**2 * p_log(i)
+          hcore(i) = 0d0
+        else
+          hshell(i) = 0d0
+          hcore(i) = 0d0
+        end if
+      end do
+      core_area(iz) = core_area(iz) +&
+        trapz_uniform(hcore, Rcore_steps, Npts)
+      shell_area(iz) = shell_area(iz) +&
+        trapz_uniform(hshell, Rcore_steps, Npts)
+    end do
+  end do
+
+  do iz=1, Nz
+    if (z(iz) <= 0d0) then
+      result_sld(iz) = SLDsub
+    else
+      result_sld(iz) = SLDbg +&
+        core_area(iz)*dSLDc + shell_area(iz)*dSLDs
+    end if
+  end do
+end subroutine sphere_cs_overlapping_stacked
+  \end{lstlisting}
+\end{document}

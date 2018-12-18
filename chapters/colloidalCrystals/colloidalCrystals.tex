@@ -1,17 +1,34 @@
 \providecommand{\main}{../..}
 \documentclass[\main/dresen_thesis.tex]{subfiles}
-
+\renewcommand{\thisPath}{\main/chapters/colloidalCrystals}
 \begin{document}
 \chapter{Colloidal Crystals}\label{ch:colloidalCrystals}
 
-\section{Preparation of Colloidal Crystals}
+  \subfile{\thisPath/intro/intro}
+  \FloatBarrier
+  \clearpage
 
-\section{Nuclear Structure}
+  \section{Experimental Methods}
+    \subfile{\thisPath/experimentalMethods/experimentalMethods}
+      \FloatBarrier
+      \clearpage
 
-\section{Magnetic Structure}
+  \section{Iron Oxide Cubes}
+    \subfile{\thisPath/nanoparticles/nanoparticles}
+      \FloatBarrier
+      \clearpage
 
-\section{Emergent Effects}
+  \section{Colloidal Crystals}
+    \subfile{\thisPath/colloidalCrystals/colloidalCrystals}
+    \FloatBarrier
+      \clearpage
 
-\section{Model}
+  \section{Results \& Discussion}
+    \FloatBarrier
+      \clearpage
+
+  \section{Summary}
+    \subfile{\thisPath/summary/summary}
+    \FloatBarrier
 
 \end{document}

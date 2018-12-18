@@ -1,0 +1,74 @@
+!  MICRO-STRUCTURAL ANALYSIS FROM FULLPROF (still under development!)
+!  ==================================================================
+!  Pattern No:  1 Phase No.:   1  !----------------------------
+!  Code of PCR-file: fe2o3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+!  Date and Time   :     Date: 18/12/2018  Time: 19:35:02.118                              
+!  Micro-structural analysis based in the parameters used in the input control file PCR
+!  The values are given for each individual reflection in order to take into account eventual anisotropic broadening
+!  In some cases the comment "<- Resolution limited" appears, this means that the reflection is not broadened
+!  In such a case the items are: s, HGo, HGi, HLo, HLi, HG^2, HL, h, k, l, ivk
+!  If negative values for HG^2 or HL are calculated, the resolution may be wrong
+!   
+!  A summary of Micro-structural model is given at the end of the file.
+!  FWHM (HG, HL, ...) are given in the same unit as that of the scattering variable
+!  Integral breadths (Beta) are given in reciprocal lattice units (1/angstroms) x 1000
+!  Apparent sizes are given in the same units as lambda (angstroms) (Scherrer Formula)
+!  Strains are given in %% (x 10000) (Strain= e = 1/2 * beta * d)
+!  The strain here correspond to 1/4 of the apparent strain defined by Stokes and Wilson
+!  It is the so-called Maximum (upper limit) strain, related by a constant factor to the 
+!  root-mean-square-strain (RMSS). In case of Gaussian distribution; e(RMS)=SQRT(2/pi) e 
+!
+!  An apparent size equal to 99999 means no size broadening
+!  The following items are output:
+!     s=1/d : reciprocal distance,   HGo, HGi: observed and instrumental Gaussian FWHM    
+!                                    HLo, HLi: observed and instrumental Lorentzian FWHM    
+!     betaG, betaL, beta: Gaussian, Lorentzian and total Sample Integral Breadth   
+!      
+!     "beta" is calculated using the De Keijser formula (J.Appl.Cryst. 1982, 15, 308-31)  
+!     For internal calculations we use beta_TCH  (see below)  
+!      
+!     betaVo, HpVo,  eta: Integral Breadth, FWHM and eta values of the total observed pseudo-Voigt profile 
+!      
+!     The apparent sizes/strains are calculated for each reflection using the formula:  
+!      
+!      App-size (Angstroms) =  1/(Beta-size)
+!      Max-strain (%%) =  1/2 (Beta-strain) * d(hkl) = 1/4 eta(app-strain Stokes-Wilson)
+!      
+!      (Beta-size) is obtained from the size parameters contributing to the FWHM:
+!              FWHM^2 (G-size) = Hgz^2 = IG/cos^2(theta)
+!              FWHM   (L-size) = Hlz   = ( Y + F(Sz))/cos(theta) 
+!     (Beta-strain) is obtained from the strain parameters contributing to the FWHM: 
+!              FWHM^2 (G-strain) = Hgs^2 =   = (U+[(1-z)DST]^2) tan^2(theta) 
+!              FWHM   (L-strain) = Hls   = (X+ z DST) tan(theta) 
+!      
+!       In both cases (H,eta) are calculated from TCH formula and then Beta-pV is calculated
+!                beta-pV= 0.5*H/( eta/pi+(1.0-eta)/sqrt(pi/Ln2))
+!      
+!      The standard deviations appearing in the global average apparent size and strain is
+!      calculated using the different reciprocal lattice directions. 
+!      It is a measure of the degree of anisotropy, not of the estimated error!
+!      
+!    s=1/d     HGo       HGi       HLo       HLi       betaG     betaL      beta    betaVo  App-size Max-strain    h     k     l     twtet/TOF       HpVo     eta     Icalc     Iobs   Beta_TCH
+    0.2068    0.0828    0.0828    1.5253    0.0237    0.0000   26.3809   26.3809   26.8590     37.89    0.0000     1     1     1   18.3351  1.5307  0.9974    237.43    237.42   26.3809
+    0.3378    0.0733    0.0733    1.5630    0.0277    0.0000   26.3809   26.3809   26.9050     37.89    0.0000     2     2     0   30.1604  1.5673  0.9980   2009.87   2009.68   26.3809
+    0.3961    0.0692    0.0692    1.5865    0.0298    0.0000   26.3809   26.3809   26.9284     37.89    0.0000     3     1     1   35.5257  1.5903  0.9982   5912.82   5917.30   26.3809
+    0.4137    0.0680    0.0680    1.5944    0.0305    0.0000   26.3809   26.3809   26.9351     37.89    0.0000     2     2     2   37.1618  1.5981  0.9983    162.22    157.69   26.3809
+    0.4777    0.0665    0.0665    1.6231    0.0288    0.0000   26.3809   26.3809   26.8955     37.89    0.0000     4     0     0   43.1770  1.6266  0.9984   1921.98   1922.04   26.3809
+    0.5205    0.0669    0.0669    1.6474    0.0292    0.0000   26.3809   26.3809   26.8940     37.89    0.0000     3     3     1   47.2753  1.6509  0.9984      0.21      0.26   26.3809
+    0.5850    0.0650    0.0650    1.6933    0.0327    0.0000   26.3809   26.3809   26.9348     37.89    0.0000     4     2     2   53.5682  1.6966  0.9986   1291.13   1290.75   26.3809
+    0.6205    0.0666    0.0666    1.7204    0.0328    0.0000   26.3809   26.3809   26.9270     37.89    0.0000     5     1     1   57.1051  1.7238  0.9985   1006.74   1006.33   26.3809
+    0.6205    0.0666    0.0666    1.7204    0.0328    0.0000   26.3809   26.3809   26.9270     37.89    0.0000     3     3     3   57.1052  1.7238  0.9985   1006.75   1006.34   26.3809
+    0.6755    0.0699    0.0699    1.7681    0.0322    0.0000   26.3809   26.3809   26.9050     37.89    0.0000     4     4     0   62.7104  1.7717  0.9985   2856.83   2844.72   26.3809
+    0.7065    0.0662    0.0662    1.8025    0.0356    0.0000   26.3809   26.3809   26.9432     37.89    0.0000     5     3     1   65.9383  1.8058  0.9987      0.13      0.15   26.3809
+    0.7165    0.0646    0.0646    1.8146    0.0369    0.0000   26.3809   26.3809   26.9588     37.89    0.0000     4     4     2   66.9958  1.8177  0.9987     51.83     72.02   26.3809
+    0.7553    0.0641    0.0641    1.8620    0.0394    0.0000   26.3809   26.3809   26.9791     37.89    0.0000     6     2     0   71.1489  1.8650  0.9988      0.00      0.00   26.3809
+    0.7831    0.0644    0.0644    1.8985    0.0399    0.0000   26.3809   26.3809   26.9746     37.89    0.0000     5     3     3   74.1963  1.9015  0.9988      0.00      0.00   26.3809
+    0.7921    0.0645    0.0645    1.9111    0.0400    0.0000   26.3809   26.3809   26.9718     37.89    0.0000     6     2     2   75.2015  1.9140  0.9988    242.91    242.26   26.3809
+    0.8273    0.0605    0.0605    1.9680    0.0444    0.0000   26.3809   26.3809   27.0125     37.89    0.0000     4     4     4   79.1796  1.9706  0.9990    223.25    223.06   26.3809
+
+  Average apparent size   and standard deviation (anisotropy):     37.89 (     0.02)
+
+  Average apparent strain cannot be calculated! 
+  Possible reasons: (1) The broadening of reflections is resolution limited
+                    (2) No strain parameter has been refined
+                    (3) The resolution function is not properly given
