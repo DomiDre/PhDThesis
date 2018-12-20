@@ -11,6 +11,40 @@ import matplotlib.patches as mplpatch
 from PlottingTemplates.saxssanssanspol import color_variant
 
 
+#    packingDensity1:   0.69378053 +/- 0.01208770 (1.74%) (init = 0.692)
+#    packingDensity2:   0.64347201 +/- 0.01837646 (2.86%) (init = 0.642)
+#    packingDensity3:   0.61836446 +/- 0.02220210 (3.59%) (init = 0.618)
+#    packingDensity4:   0.66955983 +/- 0.04027818 (6.02%) (init = 0.668)
+#    packingDensity5:   0.71064937 +/- 0.05703680 (8.03%) (init = 0.71)
+#    packingDensity6:   0.73971669 +/- 0.05953412 (8.05%) (init = 0.738)
+#    packingDensity7:   0.80624262 +/- 0.03773170 (4.68%) (init = 0.806)
+#    packingDensity8:   0.94385917 +/- 0.02734093 (2.90%) (init = 0.942)
+#    packingDensity9:   0.98708863 +/- 0.10851637 (10.99%) (init = 0.986)
+#    packingDensity10:  0.64579908 +/- 0.08063425 (12.49%) (init = 0.644)
+#    packingDensity11:  0 (fixed)
+#    layerDistance1:   -13.7015186 +/- 0.56702426 (4.14%) (init = -13.8)
+#    layerDistance2:   -12.6491152 +/- 0.62830269 (4.97%) (init = -12.7)
+#    layerDistance3:   -11.3058075 +/- 0.76880774 (6.80%) (init = -11.4)
+#    layerDistance4:   -12.9280512 +/- 0.62250807 (4.82%) (init = -13)
+#    layerDistance5:   -14.1000000 +/- 0.71712440 (5.09%) (init = -14.2)
+#    layerDistance6:   -13.8144894 +/- 0.78741525 (5.70%) (init = -13.9)
+#    layerDistance7:   -13.5658363 +/- 0.87330233 (6.44%) (init = -13.6)
+#    layerDistance8:   -13.1000000 +/- 1.22131181 (9.32%) (init = -13.2)
+#    layerDistance9:   -5.46994995 +/- 3.73058987 (68.20%) (init = -5.5)
+#    layerDistance10:  -30.8158813 +/- 3.86755685 (12.55%) (init = -30.9)
+#    layerDistance11:  -50 (fixed)
+#    r:                 35.4 (fixed)
+#    d:                 16.9 (fixed)
+#    dSpacer:           52.6 (fixed)
+#    sldCore:           4.0501e-05 (fixed)
+#    sldShell:          8.52e-06 (fixed)
+#    sldSubstrate:      2.0062e-05 (fixed)
+#    sldSpacer:         2.16e-06 (fixed)
+#    sldBackground:     0 (fixed)
+#    dTheta:            0 (fixed)
+#    wavelength:        1.5418 (fixed)
+#    dWavelength:       0.0221 (fixed)
+#    qShift:           -0.0016 (fixed)
 
 sample_name = 'SC-IOS-7'
 Chapter = 'looselyPackedNP'
@@ -31,29 +65,29 @@ z = np.linspace(-100, 800, 900)
 
 d_spacer = 5.26
 packing_densities = np.array([
-  0.3418736,
-  0.3201973,
-  0.2999707,
-  0.3311662,
-  0.3763596,
-  0.4022639,
-  0.4112343,
-  0.4350219,
-  0.4255782,
-  0.335,
-  0.07800267])
+  0.37594406,
+  0.73350533,
+  0.77174115,
+  0.85528297,
+  0.76460859,
+  0.77348059,
+  0.89360165,
+  1.09000000,
+  0.85489530,
+  1.18079805,
+  0.0])
 delta_z = np.array([
-  -1.3317,
-  -1.327343,
-  -1.134414,
-  -1.222954,
-  -1.42,
-  -1.47,
-  -1.42,
-  -1.22854,
-  -0.429537,
-  -2.484562,
-  -1.532163])
+  -42.9048318,
+  -11.4816800,
+  -20.7218922,
+  -33.7846330,
+  -25.7000000,
+  -16.0523175,
+  -11.7092073,
+  -17.7457167,
+  -13.2661415,
+  -8.01873307,
+  0.0])/10
 
 h = np.sqrt(3.)*Rd
 x0 = d_spacer +  Rd + delta_z[0]
@@ -73,20 +107,22 @@ def plot_circle(ax, x0, y0):
   circ = mplpatch.Circle(
     (x0, y0), Rcore+dshell,
     facecolor=circ_shell_color,
-    edgecolor='black', lw=0.5)
+    edgecolor='black', lw=0.5, alpha=0.5)
   ax.add_artist(circ)
   circ = mplpatch.Circle((x0, y0), Rcore, facecolor=circ_core_color, edgecolor='None', lw=1)
   ax.add_artist(circ)
 
 def plot_A_line(ax, h, dens):
-  sqdens = np.sqrt(dens/dense_packing)
-  for i in range(-10, 10):
-     plot_circle(ax, i*2*Rd/sqdens, h)
+  if dens > 0:
+    sqdens = np.sqrt(dens/dense_packing)
+    for i in range(-10, 10):
+      plot_circle(ax, i*2*Rd/sqdens, h)
 
 def plot_B_line(ax, h, dens, shift=0):
-  sqdens = np.sqrt(dens/dense_packing)
-  for i in range(-10, 10):
-     plot_circle(ax, (2*i+1)*Rd/sqdens + shift, h)
+  if dens > 0:
+    sqdens = np.sqrt(dens/dense_packing)
+    for i in range(-10, 10):
+      plot_circle(ax, (2*i+1)*Rd/sqdens + shift, h)
 
 def plot_B_line_empty(ax, h, dens):
   plot_circle(ax, Rd/np.sqrt(dens), h)

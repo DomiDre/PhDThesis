@@ -44,43 +44,78 @@
     \begin{figure}[!htbp]
       \centering
       \includegraphics{looselyPackedNP_sphereProfile}
-      \caption{\label{fig:looselyPackedNP:layerCharacterization:sphereProfile}Evaluation of the cross-section area fraction in comparison to a surrounding cylinder with respect to the height for a sphere with a core radius of $R$ and a oleic acid shell of thickness $D_\mathrm{OA}$.}
+      \caption{\label{fig:looselyPackedNP:layerCharacterization:sphereProfile}Evaluation of the cross-section area fraction in comparison to a surrounding cylinder with respect to the height for a sphere with a core radius of $R$ and a oleic acid shell of thickness $D_\mathrm{surf.}$.}
     \end{figure}
     To model a nanosphere layer, the area fraction of the spheres is needed.
-    The cross-sectional area fraction for a single sphere is given by a parabola, which is trivially derived using the Pythagorean theorem.
-    For a sphere with a surfactant shell, \reffig{fig:looselyPackedNP:layerCharacterization:sphereProfile} can be used to determine the area fraction of the core $\eta_\mathrm{core}$ and the shell $\eta_\mathrm{shell}$, which when evaluated with respect to a surrounding cylinder of radius $R + D_\mathrm{OA}$ are given by
+    The cross-sectional area with respect to an axis for a single sphere is given by a parabola, which is trivially derived using the Pythagorean theorem.
+    For a sphere with a surfactant shell, \reffig{fig:looselyPackedNP:layerCharacterization:sphereProfile} can be used to determine the area fraction of the nanoparticle $\eta_\mathrm{part.}$ and the surfactant shell $\eta_\mathrm{surf.}$, which when evaluated with respect to a surrounding cylinder of radius $R_\mathrm{total} = R + D_\mathrm{surf.}$ are given by
     \begin{align}
-      \eta_\mathrm{core} (z)
-                &\eq \begin{cases}
-                \eta \frac{R^{2} - z^2}{(R+D_\mathrm{OA})^2}, &\mathrm{for\,}|z|<R \\
-                0,                                            &\mathrm{else}
-                \end{cases}\\
-      \eta_\mathrm{shell} (z)
+      \eta_\mathrm{part.} (z)
         &\eq \begin{cases}
-          \eta \frac{2 R D_\mathrm{OA} + D_\mathrm{OA}^2}{(R+D_\mathrm{OA})^2}, &\mathrm{for\,}|z|<R \\
-          \eta \frac{(R + D_\mathrm{OA})^2 - z^2}{(R+D_\mathrm{OA})^2}, &\mathrm{for\,}R<|z|<R+D_\mathrm{OA} \\
-          0,                                            &\mathrm{else}
+        \eta \frac{R^{2} - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0<|z|<R, \\
+        0,                                            &\mathrm{else},
+        \end{cases}\\
+      \eta_\mathrm{surf.} (z)
+        &\eq \begin{cases}
+          \eta \frac{R_\mathrm{total} - R^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0<|z|<R, \\
+          \eta \frac{R_\mathrm{total}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R<|z|<R_\mathrm{total},\\
+          0,                                            &\mathrm{else},
         \end{cases}
     \end{align}
     where $\eta$ is then the two-dimensional packing density of the surrounding cylinder in the layer.
-    The scattering length density profile $\rho(z)$ of a layer of nanospheres in a matrix of scattering length density $\rho_\mathrm{matrix}$ is then given by
+    The scattering length density profile $\rho(z)$ of a layer of nanospheres is then given by
     \begin{align}
       \label{eq:looselyPackedNP:layerCharacterization:sldFromAreaFraction}
-      \rho(z) \eq \rho_\mathrm{matrix} + (\rho_\mathrm{core} - \rho_\mathrm{matrix}) \eta_\mathrm{core}(z) + (\rho_\mathrm{shell} - \rho_\mathrm{matrix}) \eta_\mathrm{shell}(z),
+      \rho(z) \eq \rho_\mathrm{part.} \eta_\mathrm{part.}(z) + \rho_\mathrm{surf.} \eta_\mathrm{surf.}(z),
     \end{align}
-    where $\rho_\mathrm{core}$ and $\rho_\mathrm{shell}$ are the respective scattering length densities of the core and the shell.
+    where $\rho_\mathrm{part.}$ and $\rho_\mathrm{shell}$ are the respective scattering length densities of the core and the shell.
 
-    This formulation can easily be extended to overlapping nanosphere layers by calculating the sum of the respective area fractions for each layer before determining the SLD by \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFraction}.
-    This procedure is performed for both SC-IOS-11 and SC-IOS-7, where as initial model a stack of nanospheres is given, where each layer is pitched on the vertical axis by $\sqrt{8/3} (R + D_\mathrm{OA})$, which would be the distance of two sphere centers for an ideal close sphere packing.
-    The model is fitted by varying the layer density $\eta$ and a shift from the ideal pitch $\Delta z$ for each layer respectively.
-    The parameters for the nanosphere size, surfactant thickness and scattering length density are used as obtained from SAS, noting that the SLD are readjusted for the different X-ray wavelength at the reflectometer with respect to the small-angle scattering experiments.
+    For a particle with a core-shell structure additionally to the surfactant shell the formulation can be extended.
+    For simplicity, the particle size radius $R_\mathrm{part.} = R_\mathrm{core} + D_\mathrm{shell}$ and the total nanoparticle radius including the surfactant as $R_\mathrm{total} = R_\mathrm{core} + D_\mathrm{shell} + D_\mathrm{surf.}$ is defined and then the area fractions of the three components are given by
+    \begin{align}
+      \eta_\mathrm{core} (z)
+        &\eq \begin{cases}
+        \eta \frac{R_\mathrm{core}^{2} - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0 < |z|<R_\mathrm{core}, \\
+        0,                                               &\mathrm{else},
+        \end{cases}\\
+      \eta_\mathrm{shell} (z)
+        &\eq \begin{cases}
+          \eta \frac{R_\mathrm{part.}^2 - R_\mathrm{core}^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0 < |z|<R_\mathrm{core}, \\
+          \eta \frac{R_\mathrm{part.}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R_\mathrm{core}<|z|<R_\mathrm{part.} \\
+          0,                                            &\mathrm{else},
+        \end{cases}\\
+      \eta_\mathrm{surf.} (z)
+        &\eq \begin{cases}
+          \eta \frac{R_\mathrm{total}^2 - R_\mathrm{part.}^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0<|z|<R_\mathrm{part.}, \\
+          \eta \frac{R_\mathrm{total}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R_\mathrm{part.} < |z| < R_\mathrm{total}, \\
+          0,                                            &\mathrm{else}.
+        \end{cases}
+    \end{align}
+    And the scattering length density profile is then given by
+    \begin{align}
+      \label{eq:looselyPackedNP:layerCharacterization:sldFromAreaFractionCoreShell}
+        \rho(z) \eq& \rho_\mathrm{core} \eta_\mathrm{core}(z) + \rho_\mathrm{shell} \eta_\mathrm{shell}(z) + \rho_\mathrm{surf.} \eta_\mathrm{surf.}(z),
+    \end{align}
+    where $\rho_\mathrm{part.}$ and $\rho_\mathrm{shell}$ are the respective scattering length densities of the core and the shell.
+
+    In this formulation it is nowstraight-forward to extend it to overlapping nanosphere layers by summing the respective area fractions $\eta_x$ for each layer before determining the SLD by \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFraction} or \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFractionCoreShell}.
+    This procedure is performed for both SC-IOS-11 and SC-IOS-7, where as initial model a stack of nanospheres is given.
+    Each layer is pitched on the vertical axis by $\sqrt{8/3} R_\mathrm{total}$, which is the vertical distance of two sphere centers for an ideal close sphere packing if $R_\mathrm{total}$ is the radius of a hard-sphere.
+    The model is fitted by varying the two dimensional layer packing fraction $\eta$ and a shift from the initially assumed pitch $\Delta z$ for each layer respectively.
+
+    The parameters for the nanosphere size, surfactant thickness and scattering length density are used as obtained from SAS, noting that the SLD are readjusted for the different X-ray wavelength at the reflectometer with respect
+    to the small-angle scattering experiments.
+    For SC-IOS-11, the core-shell structure obtained by SAXS and SANS on IOS-11 (\refsec{sec:looselyPackedNS:nanoparticle:sas}) is used for the nanospheres, and for SC-IOS-7 the single phase structure of IOS-7 is used.
+    The particle size distribution is neglected in the formulation of the stack of nanoparticles as it is phenomenologically included in the fitted roughness of the layers.
     As roughness model a linearly increasing roughness $\sigma \eq \sigma_0 + \Delta \sigma z$ is used to describe a possibly increasing roughness with stack height.
-
 
   \paragraphNewLine{Polarized Neutron Reflectometry}
     Polarized neutron reflectometry has been performed on SuperADAM at the ILL for all discussed samples at a temperature of $300 \unit{K}$ and at a low temperature of $30 \unit{K}$.
-    The neutron wavelength was selected to $\lambda \eq 5.14 \unit{\angstrom}$
-  
+    The neutron wavelength was selected to $\lambda \eq 5.14 \unit{\angstrom}$ and the wavelength spread is stated as $0.5 \%$ (FWHM) by the instrumental scientists.
+    The distance between sample and detector for the experiments was $2.009 \unit{m}$ and a range of incident angles from $0 ^\circ \ldots 3 ^\circ$ is measured.
+    The monochromator aperture is set to $1 \unit{mm}$ and the sample aperture to $0.5 \unit{mm}$ along the scattering direction.
+
+
   \paragraphNewLine{Vibrating Sample Magnetometry}
     Yip
 

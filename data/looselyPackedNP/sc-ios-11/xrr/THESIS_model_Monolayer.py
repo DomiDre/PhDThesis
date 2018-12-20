@@ -20,12 +20,12 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'SC-IOS-11'
 Chapter = 'looselyPackedNP'
-fit_file = cwd + "/1VariedDistanceDensity/fit_result.dat"
-sld_file = cwd + "/1VariedDistanceDensity/fit_sld.dat"
+fit_file = cwd + "/SphereCSS/fit_result.dat"
+sld_file = cwd + "/SphereCSS/fit_sld.dat"
 
 labeltext = 'SC-IOS-11'
-q_min, q_max = 0.02, 0.149
-I_min, I_max = 1e-5, 1.9e0
+q_min, q_max = 0.02, 0.39
+I_min, I_max = 1e-6, 1.9e0
 
 refl_pngfile = f"{Chapter}_VerticalStructure_{sample_name}_XRR.png"
 
@@ -46,6 +46,11 @@ def get_clean_data(data):
 data = MultiData(XyemData)
 data.loadFromFile(fit_file)
 q, I, sI, Imodel = get_clean_data(data)
+params = data.params
+i0 = params['i0']['value']
+I /= i0
+sI /= i0
+Imodel /= i0
 # print(data.chi2)
 #load sld
 sldData = MultiData(XyData)
@@ -66,6 +71,7 @@ ax.errorbar(q, I, sI,\
   label='XRR', zorder=0, capsize=0, marker='.')
 ax.plot(q, Imodel, zorder=1, color='black', marker='None')
 ax.legend(loc='lower left', fontsize=inset_fontsize)
+ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q_z} \, / \, \AA^{-1}$")
 ax.set_ylabel("$\mathit{R}$")
