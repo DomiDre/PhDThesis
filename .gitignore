@@ -227,3 +227,6 @@ TSWLatexianTemp*
 # ignore image files in the data folder
 /data/**/*.png
 /data/**/*.tif
+
+# ignore bornagain calculted files
+*.int.gz
