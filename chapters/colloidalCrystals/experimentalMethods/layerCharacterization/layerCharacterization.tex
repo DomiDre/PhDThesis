@@ -84,6 +84,8 @@
     Each sample was measured at a temperature of $10 \unit{K}$ after cooling in near zero field ($0.9 \unit{mT}$ guide field), subsequent at a saturating field of $1.08 \unit{T}$ and again in remanence at guide field.
     After that, each sample was warmed to $250 \unit{K}$, sufficiently above the blocking temperature, and then cooled back to $10 \unit{K}$ while applying the saturating field.
     After field-cooling, the sample was then measured once more in saturation and remanence, which totals in five neutron reflectometry measurements for each sample at $10 \unit{K}$.
+    For each case, the reflectivity $R^{+}$, for neutrons polarized parallel to the magnetic field direction, and the reflectivity $R^{-}$, for neutrons that are polarized anti-parallel to it, is measured.
+    No polarization analysis is performed for the sake of having higher counting statistics in the two channels.
 
     For the measurements, the incident angle was increased up to $6 ^\circ$, where the angle step is increased for three ranges.
     The first range up to $1 ^\circ$ has a step of $0.02 ^\circ$ is set.
@@ -101,7 +103,12 @@
     For the transformation and rotation, the data needs to be rebinned in the new coordinate system.
     To avoid the loss of resolution, a pixel-splitting algorithm is used for the rebinning, which is described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}.
 
-    The specular intensity is then obtained, by integrating 
+    The specular intensity is obtained, by integrating on the transformed data a strip of $0.1 ^\circ$ width around the specular position on the intensity beam.
+    The data is further corrected for the diffuse scattering by additionally integrating strips of $0.1 ^\circ$ width in the off-specular region from $\pm (0.1 ^\circ \ldots 0.2)$, which are subtracted from the specular intensity after being rescaled to adjust for a different numbers of contributing bins.
+
+    Finally a footprint correction if performed for the data, where a equidistributed intensity of the beam is assumed.
+    Using the mean intensity of $R^{+}$ below the critical angle, the data is rescaled to have the plateau on unity.
+    The curve of $R^{-}$ is rescaled using the same factor, to avoid the introduction of systematic errors by using two different scaling factors.
 
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
