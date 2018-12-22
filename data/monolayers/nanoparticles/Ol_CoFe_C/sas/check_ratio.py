@@ -5,9 +5,9 @@ def superballVolume(r, p):
     return special.gamma(x)*special.gamma(y)/special.gamma(x+y)
   return 2/p**2 * B(1/(2*p), (2*p+1)/(2*p)) * B(1/(2*p), (p+1)/p) * r**3
 
-particleSize = 52.769999
-d = 18.9209031
-pVal = 2.18290421
+particleSize = 51.2811596
+d = 33.9719453
+pVal = 4.230716
 rCore = particleSize - d
 vol_wustite = superballVolume(rCore, pVal)
 vol_spinell = superballVolume(particleSize, pVal) - vol_wustite
@@ -15,8 +15,8 @@ vol_spinell = superballVolume(particleSize, pVal) - vol_wustite
 a_wustite = 4.2125
 a_spinell = 8.4384
 
-x = 0.27099
-y = 0.30502398
+x = 0.81987729
+y = 0.4663477
 N_Fe = 8*(3-x) * vol_spinell/a_spinell**3 + 4*y*vol_wustite/a_wustite**3
 N_Co = 8*x * vol_spinell/a_spinell**3 + 4*(1-y)*vol_wustite/a_wustite**3
 print(N_Fe/N_Co)

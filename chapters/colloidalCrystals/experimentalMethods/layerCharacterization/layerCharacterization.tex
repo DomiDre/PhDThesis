@@ -78,9 +78,32 @@
 
 
   \paragraphNewLine{Polarized Neutron Reflectometry}
-    % Polarized neutron reflectometry has been performed on SuperADAM at the ILL for all discussed samples at a temperature of $300 \unit{K}$ and at a low temperature of $30 \unit{K}$.
-    % The neutron wavelength was selected to $\lambda \eq 5.14 \unit{\angstrom}$
-  
+    The three colloidal crystals, CC-Fe-0.25, CC-Fe-0.37 and CC-Fe-0.50 were characterized on the polarized neutron reflectometer MARIA at MLZ.
+    The neutron wavelength was selected to $5 \unit{\angstrom}$ and a wavelength spread of $10 \unit{\%}$ (FWHM) is given by the instrumental scientists.
+    The collimation and sample slits along the scattering direction are set to $2 \unit{mm}$, the collimation-to-sample distance was $4.1 \unit{m}$ and the sample-to-detector distance was $2.093 \unit{m}$.
+    Each sample was measured at a temperature of $10 \unit{K}$ after cooling in near zero field ($0.9 \unit{mT}$ guide field), subsequent at a saturating field of $1.08 \unit{T}$ and again in remanence at guide field.
+    After that, each sample was warmed to $250 \unit{K}$, sufficiently above the blocking temperature, and then cooled back to $10 \unit{K}$ while applying the saturating field.
+    After field-cooling, the sample was then measured once more in saturation and remanence, which totals in five neutron reflectometry measurements for each sample at $10 \unit{K}$.
+
+    For the measurements, the incident angle was increased up to $6 ^\circ$, where the angle step is increased for three ranges.
+    The first range up to $1 ^\circ$ has a step of $0.02 ^\circ$ is set.
+    For a second range from $0.8 ^\circ$ up to $3.5 ^\circ$ a step of $0.05 ^\circ$ is chosen and for the last range from $2.8 ^\circ$ up to $6 ^\circ$ a step of $0.2 ^\circ$ is set.
+    The three ranges overlap intentionally such that they can be stitch together in case the scaling of the data to the monitor would show a disagreement, which was not the case in the executed experiments.
+    At the first range, each point is measured for $30 \unit{s}$, whereas for the second $120 \unit{s}$ and the third range $135 \unit{s}$ are set due to the lower scattering intensity and to to obtain better statistics.
+
+    For the data reduction, each detector image is corrected for the detector sensitivity and integrated along the dimension with relaxed collimation. 
+    By this integration the data is given as a map of the scattered intensity with respect to the detector pixel $x$ along the scattering direction and with respect to the incident angle $\alpha_i$.
+    This map is transformed and rotated to ($\alpha_i - \alpha_o$, $\alpha_i+\alpha_o$) coordinates by calculating $\alpha_o$ from
+    \begin{align}
+      \alpha_o = \alpha_i + \arctan \biggl( \frac{x - x_\mathrm{spec}}{L_\mathrm{SDD}} \biggr),
+    \end{align}
+    where $L_\mathrm{SDD}$ is the sample-to-detector distance and $x_\mathrm{spec}$ the center pixel where the specular beam is hitting.
+    For the transformation and rotation, the data needs to be rebinned in the new coordinate system.
+    To avoid the loss of resolution, a pixel-splitting algorithm is used for the rebinning, which is described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}.
+
+    The specular intensity is then obtained, by integrating 
+
+
   \paragraphNewLine{Vibrating Sample Magnetometry}
     % Yip
 
