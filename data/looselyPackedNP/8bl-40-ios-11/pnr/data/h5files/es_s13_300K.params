@@ -1,0 +1,22 @@
+#Parameter file for DPNR_transform_superadam_data.py
+SDD             2009
+roi_xmin        600
+roi_xmax        850
+roi_ymin        400
+roi_ymax        1100
+center_bin      703
+xmin            -0.7
+xmax            0.7
+xres            0.00611
+#ymin            0.
+#ymax            6.
+yres            0.01
+
+#File(s)                        spin_channel            saveto
+ES_S13_300K_4mT.h5              uu                      ../../binned_data/ES-S13/ES_S13_300K/ES_S13_300K_4mT_uu.bd
+ES_S13_300K_4mT.h5              du                      ../../binned_data/ES-S13/ES_S13_300K/ES_S13_300K_4mT_du.bd
+ES_S13_300K_500mT.h5            uu                      ../../binned_data/ES-S13/ES_S13_300K/ES_S13_300K_500mT_uu.bd
+ES_S13_300K_500mT.h5            du                      ../../binned_data/ES-S13/ES_S13_300K/ES_S13_300K_500mT_du.bd
+ES_S13_300K_4mT_Remanence.h5    uu                      ../../binned_data/ES-S13/ES_S13_300K/ES_S13_300K_4mT_Remanence_uu.bd
+ES_S13_300K_4mT_Remanence.h5    du                      ../../binned_data/ES-S13/ES_S13_300K/ES_S13_300K_4mT_Remanence_du.bd
+

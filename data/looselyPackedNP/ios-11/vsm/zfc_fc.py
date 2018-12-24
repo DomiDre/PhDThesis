@@ -9,8 +9,8 @@ from PPMS.ppms import PPMS
 
 from modelexp.data import XyeData
 
-zfc_datfile = cwd + '/rawdata/PMK18_ZFCW_100OE.DAT'
-fcw_datfile = cwd + '/rawdata/PMK18_FCC_100OE.DAT'
+zfc_datfile = cwd + '/rawdata/PMK18_ZFCW_100OESLOW.DAT'
+fcw_datfile = cwd + '/rawdata/PMK18_FCW_100OESLOW.DAT'
 
 chapter = 'looselyPackedNP'
 sample_name = 'IOS-11'
@@ -23,8 +23,8 @@ def load_file(datfile):
   sM = ppms.get('M. Std. Err. (emu)')
   valid_point = sM > 0
   T = T[valid_point]
-  M = M[valid_point]*6#*22.600696788262296
-  sM = sM[valid_point]*6#*22.600696788262294
+  M = M[valid_point]*11.319377879798544
+  sM = sM[valid_point]*11.319377879798544
   return T, M, sM
 
 fig = plt.figure()
@@ -45,11 +45,11 @@ ax.text(0.05, 0.95,
         transform=ax.transAxes)
 
 
-ax.annotate('', xy=(100, 21), xytext=(100,16),
+ax.annotate('', xy=(95, 29), xytext=(95,16),
   horizontalalignment='center', fontsize=10,
   arrowprops=dict(facecolor='black', width=1, headwidth=5))
-ax.text(120, 13,
-        '$\mathit{T_B} \,= \, 100\, K$',\
+ax.text(130, 13,
+        '$\mathit{T_B} \,= \, 95\, K$',\
         horizontalalignment='right',
         verticalalignment='top')
 ax.text(0.92, 0.7,
@@ -59,8 +59,8 @@ ax.text(0.92, 0.7,
         transform=ax.transAxes)
 
 
-ax.set_xlim(10, 180)
-ax.set_ylim(-0.9, 29)
+ax.set_xlim(10, 230)
+ax.set_ylim(-0.9, 70)
 ax.legend(loc='upper right')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)

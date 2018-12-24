@@ -33,6 +33,11 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 
 T_zfc, M_zfc, sM_zfc = load_file(zfc_datfile)
 T_fcw, M_fcw, sM_fcw = load_file(fcw_datfile)
+
+# apply correction factor of 8% due to ZFCw and FWc not matching above melting temperature
+M_fcw *= 1.08
+sM_fcw *= 1.08
+
 ax.plot(T_zfc, M_zfc, linestyle='None', marker='.', markersize=1, zorder=1, label='ZFCw')
 ax.plot(T_fcw, M_fcw, linestyle='None', marker='.', markersize=1, zorder=1, label='FCw')
 
@@ -57,7 +62,7 @@ ax.text(0.94, 0.7,
         verticalalignment='top',
         transform=ax.transAxes)
 
-ax.set_xlim(10, 180)
+ax.set_xlim(10, 230)
 ax.set_ylim(-0.9, 29)
 ax.legend(loc='upper right')
 plt.savefig(cwd + '/' + savefile)

@@ -1,0 +1,5 @@
+VSMDF "C:\QdDynacool\Data\Dresen\DD205_4\DD205_4_Hyst_100Oe_50K.dat" 0 0 ""
+VSMMH 1 7 0 0 0 2 40 1 0 2 0 1 6 -90000 0 90000 50 1 25 50 0 2 0 0 1 0 "A/C,0,10,10,0" "Q/M,0," 
+FLD FIELD 0.0 200.0 2 0
+TMP TEMP 300.000000 12.000000 0
+CALL C:\QdDynacool\Data\Dresen\DD205_4\hyst_100Oe_300K.seq

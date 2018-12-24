@@ -103,6 +103,33 @@ class ModifiedSuperballCSSCoupledSigDOA(SuperballCSSCoupledSigDOA):
 #     i0_sans:             0.13124760 (init = 0.1225224)
 #     bg_sans:             0.01351404 (init = 0.01344027)
 
+# Iteration: 2872 Chi2:7278.7254217132
+# [[Variables]]
+#     particleSize:        51.2998950 (init = 54.18515)
+#     dShell:              34.2481781 (init = 21.18552)
+#     dSurfactant:         15.7777996 (init = 15.15999)
+#     pVal:                4.12464984 (init = 2.473763)
+#     sldCore_saxs:        5.144171e-05 (fixed)
+#     sldShell_saxs:       4.123918e-05 (fixed)
+#     sldSurfactant_saxs:  8.52e-06 (fixed)
+#     sldSolvent_saxs:     7.55e-06 (fixed)
+#     sigParticleSize:     0.06210432 (init = 0.07143705)
+#     sigD:                0.17845660 (init = 0.4038504)
+#     i0_saxs:             0.02994230 (init = 0.02369477)
+#     bg_saxs:             0 (fixed)
+#     orderHermite:        5 (fixed)
+#     orderLegendre:       10 (fixed)
+#     i0Oleic:             0.69187065 (init = 0.9518238)
+#     rOleic:              21 (fixed)
+#     x:                   0.82325632 (init = 0.9860621)
+#     sldCore_sans:        6.21149e-06 (fixed)
+#     sldShell_sans:       6.102106e-06 (fixed)
+#     sldSurfactant_sans:  7.8e-08 (fixed)
+#     sldSolvent_sans:     5.664e-06 (fixed)
+#     i0_sans:             0.13050449 (init = 0.1225224)
+#     bg_sans:             0.01356503 (init = 0.01344027)
+
+
 modelRef = app.setModel(ModifiedSuperballCSSCoupledSigDOA, DataResolution)
 modelRef.setResolution(['sans'])
 modelRef.setParam("particleSize",     51.2811596,  minVal = 0, maxVal = 100, vary = True)

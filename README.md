@@ -40,3 +40,30 @@
 - ML-OA-1t10-4 : DD212.8
 - ML-Ac-CoFe-C : DD205.4
 - ML-Ac-CoFe-C-2 : DD175.28
+
+### Double Layers
+- DL-0.125% : DD213.7
+- DL-0.25% : DD205.10
+- DL-1.25% : DD205.3
+- DL-1.25%-2 : DD205.12
+- DL-2.5% : DD205.5
+- DL-5% : DD205.6
+<!-- - DL-0.50% : DD205.11 -->
+<!-- - DL-5%-2 : DD205.14 -->
+
+### Colloidal Crystals
+#### Nanoparticles
+- Ol-Fe-C : DD144
+
+#### Prepared Colloidal Crystals
+- CC-Fe-0.25 : DD151.2
+- CC-Fe-0.37 : DD151.28
+- CC-Fe-0.50 : DD151.30
+- CC-Fe-0.74 : DD151.36
+
+### Appendix
+### Nanoparticle Cube Study
+- Ac-Ratio-1.73 : AH10
+- Ac-Ratio-1.54 : AH14
+- Ac-Ratio-1.38 : AH15
+

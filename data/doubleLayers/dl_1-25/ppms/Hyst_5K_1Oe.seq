@@ -1,0 +1,9 @@
+REM ------>Begin hysteresis
+VSMDF "C:\Messdaten\Data\Dresen\DD205_3\DD205_3_hyst_5K_1Oe.dat" 0 0 ""
+VSMMH 1 34078727 0 0 0 2 40 1 0 2 0 1 6 -90000 0 90000 50 1 25 50 0 2 0 0 1 0 "A/C,0,10,10,0" 
+REM 
+FLD FIELD 0.0 100.0 0 0
+WAI WAITFOR 60 0 1 0 0 0
+TMP TEMP 10.000000 15.000000 0
+WAI WAITFOR 10 1 0 0 0 0
+CHN C:\Messdaten\Data\Dresen\DD205_3\Hyst_10K_1Oe.seq

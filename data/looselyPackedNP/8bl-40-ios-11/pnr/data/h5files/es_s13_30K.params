@@ -1,0 +1,33 @@
+#Parameter file for DPNR_transform_superadam_data.py
+SDD             2009
+roi_xmin        400
+roi_xmax        800
+roi_ymin        350
+roi_ymax        1100
+center_bin      608
+xmin            -0.7
+xmax            0.7
+xres            0.00611
+#ymin            0.
+#ymax            6.
+yres            0.02
+mirror          True
+scale_by_time   True
+ud_sf           0.5
+
+#File(s)                                spin_channel            saveto
+ES_S13_30K_2mT_FC_Remanence.h5          uu                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_FC_Remanence_uu.bd
+ES_S13_30K_2mT_FC_Remanence.h5          dd                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_FC_Remanence_dd.bd
+ES_S13_30K_2mT_FC_Remanence.h5          du                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_FC_Remanence_du.bd
+ES_S13_30K_2mT_ZFC.h5                   uu                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_ZFC_uu.bd
+ES_S13_30K_2mT_ZFC.h5                   dd                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_ZFC_dd.bd
+ES_S13_30K_2mT_ZFC.h5                   du                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_ZFC_du.bd
+ES_S13_30K_2mT_ZFC_Remanence.h5         uu                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_ZFC_Remanence_uu.bd
+ES_S13_30K_2mT_ZFC_Remanence.h5         dd                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_ZFC_Remanence_dd.bd
+ES_S13_30K_2mT_ZFC_Remanence.h5         du                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_2mT_ZFC_Remanence_du.bd
+ES_S13_30K_730mT_FC.h5                  uu                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_730mT_FC_uu.bd
+ES_S13_30K_730mT_FC.h5                  dd                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_730mT_FC_dd.bd
+ES_S13_30K_730mT_FC.h5                  du                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_730mT_FC_du.bd
+ES_S13_30K_730mT_ZFC.h5                 uu                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_730mT_ZFC_uu.bd
+ES_S13_30K_730mT_ZFC.h5                 dd                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_730mT_ZFC_dd.bd
+ES_S13_30K_730mT_ZFC.h5                 du                      ../../binned_data/ES-S13/ES_S13_30K/ES_S13_30K_730mT_ZFC_du.bd
