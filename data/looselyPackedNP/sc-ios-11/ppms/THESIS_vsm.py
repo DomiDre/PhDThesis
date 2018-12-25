@@ -17,7 +17,7 @@ from modelexp.data import XyemData
 datfile = cwd+ '/fit/fit_result.dat'
 
 chapter = 'looselyPackedNP'
-sample_name = 'IOS-11'
+sample_name = 'SC-IOS-11'
 
 savefile = chapter + '_VSM_' + sample_name
 
@@ -25,7 +25,7 @@ data = XyemData()
 data.loadFromFile(datfile)
 B, M, sM, Mmodel = data.getData()
 
-min_B, max_B = min(B), max(B)
+min_B, max_B = -5, 5
 min_M, max_M = -250, 250
 T = 300
 
@@ -36,7 +36,7 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
 ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
-            label='IOS-11\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
+            label='SC-IOS-11\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
 ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
 # ax.text(0.51, 0.05,
 #   'IOS-11\n'

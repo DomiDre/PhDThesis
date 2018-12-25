@@ -9,7 +9,6 @@ import warnings
 from modelexp.data import MultiData, XyemData, XyData
 import matplotlib.patches as mplpatch
 from PlottingTemplates.saxssanssanspol import color_variant
-
 #    packingDensity1:   0.99200000 +/- 0.01186954 (1.20%) (init = 1)
 #    packingDensity2:   0.77400000 +/- 0.00852093 (1.10%) (init = 0.772)
 #    packingDensity3:   0.59800000 +/- 0.01197739 (2.00%) (init = 0.59)

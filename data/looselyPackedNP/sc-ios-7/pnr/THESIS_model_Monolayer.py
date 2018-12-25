@@ -20,11 +20,11 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'SC-IOS-7'
 Chapter = 'looselyPackedNP'
-fit_file = cwd + "/2FreeFitFullRange/fit_result.dat"
-sld_file = cwd + "/2FreeFitFullRange/fit_sld.dat"
+fit_file = cwd + "/1FreeFitFullRange/fit_result.dat"
+sld_file = cwd + "/1FreeFitFullRange/fit_sld.dat"
 
 labeltext = 'SC-IOS-7'
-q_min, q_max = 0.005, 0.11
+q_min, q_max = 0.05, 1.1
 I_min, I_max = 1e-5, 1.9e0
 
 refl_pngfile = f"{Chapter}_VerticalStructure_{sample_name}_PNR.png"
@@ -40,7 +40,7 @@ def get_clean_data(data):
   I = I[valid_data]
   sI = sI[valid_data]
   Imodel = Imodel[valid_data]
-  return q, I, sI, Imodel
+  return q*10, I, sI, Imodel
 
 #load data
 data = MultiData(XyemData)
@@ -65,15 +65,15 @@ ax.errorbar(q, I, sI,\
   linestyle='None', color=colors['sanspol_p_sa_data'],
   label='NR', zorder=0, capsize=0, marker='.')
 ax.plot(q, Imodel, zorder=1, color='black', marker='None')
-ax.legend(loc='lower left', fontsize=inset_fontsize)
+ax.legend(loc='lower left', fontsize=10)
 ax.set_yscale('log')
-ax.set_xlabel("$\mathit{q_z} \, / \, \AA^{-1}$")
+ax.set_xlabel("$\mathit{q_z} \, / \, nm^{-1}$")
 ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax.text(0.05, 0.15, labeltext,
-  transform=ax.transAxes, fontsize=inset_fontsize)
+ax.text(0.07, 0.15, labeltext,
+  transform=ax.transAxes, fontsize=10)
 ax_sld.plot(r, sld, marker='None',
   color=colors['sanspol_sld'])
 ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
