@@ -45,11 +45,11 @@ ax.text(0.05, 0.95,
         transform=ax.transAxes)
 
 
-ax.annotate('', xy=(95, 29), xytext=(95,16),
+ax.annotate('', xy=(95, 30), xytext=(95,16),
   horizontalalignment='center', fontsize=10,
   arrowprops=dict(facecolor='black', width=1, headwidth=5))
-ax.text(130, 13,
-        '$\mathit{T_B} \,= \, 95\, K$',\
+ax.text(140, 13,
+        '$\mathit{T_B} \,= \, 95.5(5)\, K$',\
         horizontalalignment='right',
         verticalalignment='top')
 ax.text(0.92, 0.7,
