@@ -12,28 +12,25 @@ plt.style.use('phdthesis')
 
 import numpy as np
 
-from modelexp.data import XyemData
-from PPMS.ppms import PPMS
+from modelexp.data import XyeData
 
-datfile30K_fc = cwd+ '/rawdata/ES_S14_HYST_30K_FC.DAT'
-datfile30K_zfc = cwd+ '/rawdata/ES_S14_HYST_30K_ZFC.DAT'
+datfile30K_fc = cwd+ '/data_rescaling/SC-IOS-11_30K_FC_LangevinSAXSscaled.xye'
+datfile30K_zfc = cwd+ '/data_rescaling/SC-IOS-11_30K_ZFC_LangevinSAXSscaled.xye'
 
 chapter = 'looselyPackedNP'
 sample_name = 'SC-IOS-11'
 
 savefile = chapter + '_VSM30K_' + sample_name
 
-rescale_factor = 1216.680738955344
 def load_file(datfile):
-  ppms = PPMS()
-  ppms.load(datfile)
-  B, M = ppms.get_BM()
-  sM = ppms.get('M. Std. Err. (emu)')
+  data = XyeData()
+  data.loadFromFile(datfile, sort=False)
+  B, M, sM = data.getData()
   B *= 1000
   valid_point = sM > 0
   B = B[valid_point]
-  M = M[valid_point]*rescale_factor
-  sM = sM[valid_point]*rescale_factor
+  M = M[valid_point]
+  sM = sM[valid_point]
   return B, M, sM
 
 
