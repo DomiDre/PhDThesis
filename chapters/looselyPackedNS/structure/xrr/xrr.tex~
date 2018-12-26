@@ -1,7 +1,7 @@
 \providecommand{\main}{../../../..}
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 \begin{document}
-  \label{sec:looselyPackedNS:layers:xrr}
+  \label{sec:looselyPackedNS:layers:pnr}
   \begin{figure}[tb]
     \centering
     \includegraphics{looselyPackedNP_VerticalStructure_SC-IOS-11_XRR}

@@ -54,7 +54,7 @@
     \centering
     \includegraphics{looselyPackedNP_VSM30K_SC-IOS-11}
     \includegraphics{looselyPackedNP_VSM30K_SC-IOS-7}
-    \caption{\label{fig:looselyPackedNP:layer:vsm30K}Temperature dependent magnetization measured at $10 \unit{mT}$ after cooling in zero-field and at a field of $10 \unit{mT}$ for SC-IOS-11 (left) and SC-IOS-7 (right).}
+    \caption{\label{fig:looselyPackedNP:layer:vsmZFCFC}Temperature dependent magnetization measured at $10 \unit{mT}$ after cooling in zero-field and at a field of $10 \unit{mT}$ for SC-IOS-11 (left) and SC-IOS-7 (right).}
   \end{figure}
 
 

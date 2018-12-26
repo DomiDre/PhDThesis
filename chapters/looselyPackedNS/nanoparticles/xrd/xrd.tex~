@@ -7,10 +7,10 @@
     \centering
     \includegraphics{looselyPackedNP_XRD_Fe2O3IOS-11}
     \includegraphics{looselyPackedNP_XRD_Fe2O3WustiteFit_IOS-11}
-    \caption{\label{fig:looselyPackedNP:nanoparticle:xrd}XRD of IOS-11, once with a LeBail fit of a inverse spinell phase (left) and once with a LeBail fit where a sum of an inverse spinell and a w\"ustite phase is assumed. The manually estimated background is shown as red line.}
+    \caption{\label{fig:monolayers:nanoparticle:xrd}XRD of IOS-11, once with a LeBail fit of a inverse spinell phase (left) and once with a LeBail fit where a sum of an inverse spinell and a w\"ustite phase is assumed. The manually estimated background is shown as red line.}
   \end{figure}
 
-  In \reffig{fig:looselyPackedNP:nanoparticle:xrd} the diffraction data of IOS-11, and two performed LeBail fits are shown, to determine the phase, the lattice constant and the average crystallite size of the particles.
+  In \reffig{fig:monolayers:nanoparticle:xrd} the diffraction data of IOS-11, and two performed LeBail fits are shown, to determine the phase, the lattice constant and the average crystallite size of the particles.
   On the left a LeBail fit is refined, where only an inverse spinell phase as expected from maghemite or magnetite.
   And on the right LeBail fit, both an inverse spinell and w\"ustite phase is refined.
   For both approaches the parameters of the refinement, the lattice constants $a$ and the Lorentzian isotropic size parameter $Y$ are summarized in \reftab{tab:looselyPackedNS:nanoparticle:discussion:xrdLeBail}.

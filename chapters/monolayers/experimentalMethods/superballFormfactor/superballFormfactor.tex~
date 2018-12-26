@@ -2,7 +2,7 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 
 \begin{document}
-  \label{sec:monolayers:methods:superballFF}
+  \label{sec:monolayers:nanoparticle:structuralCharacterization}
     \begin{figure}[tb]
       \centering
       \includegraphics{appendix_superballShapes}

@@ -103,8 +103,17 @@
       \centering
       \includegraphics{monolayers_SAS_Ac_CoFe_C_SANSPOLFit}
       \includegraphics{monolayers_SAS_Ac_CoFe_C_2_SANSPOLFit}
-      \caption{\label{fig:monolayers:nanoparticle:sanspol:superballAcAcFit}SANSPOL data of Ac-CoFe-C (left) and Ac-CoFe-C-2 (right) fit with the same nuclear form factor as in \reffig{fig:monolayers:nanoparticle:sans:superballAcAcFit} to determine the magnetic scattering length density  shown in the inset (red line). The parameters are listed in \reftab{tab:monolayers:nanoparticle:sans:superballAcAcFit}.}
+      \caption{\label{fig:monolayers:nanoparticle:sans:superballAcAcFit}SANSPOL data of Ac-CoFe-C (left) and Ac-CoFe-C-2 (right) fit with the same nuclear form factor as in \reffig{fig:monolayers:nanoparticle:sans:superballAcAcFit} to determine the magnetic scattering length density  shown in the inset (red line). The parameters are listed in \reftab{tab:monolayers:nanoparticle:sans:superballAcAcFit}.}
     \end{figure}
+
+    % \begin{figure}[tb]
+    %   \centering
+    %   \includegraphics{monolayers_SAS_Ac_CoFe_C_SANS}
+    %   \includegraphics{monolayers_SAS_Ac_CoFe_C_SANSPOLFit}
+    %   \includegraphics{monolayers_SAS_Ac_CoFe_C_2_SANS}
+    %   \includegraphics{monolayers_SAS_Ac_CoFe_C_2_SANSPOLFit}
+    %   \caption{\label{fig:monolayers:nanoparticle:sans:superballAcAcFit}Ac-CoFe-C (upper) and Ac-CoFe-C-2 (lower) SANS (left) and SANSPOL (right) data described by the sum of a superball form factor and a spherical form factor. The inset shows the SLD profiles of the superball nanoparticles (orange line) and the spherical oleic acid micelles (blue line) for the SANS data. In the inset of the SANSPOL data, the magnetic scattering length density is shown (red line). The parameters of the form factors are listed in \reftab{tab:monolayers:nanoparticle:sans:superballAcAcFit}.}
+    % \end{figure}
 
     \begin{table}[!htbp]
       \centering

@@ -6,7 +6,7 @@
     \centering
     \includegraphics{looselyPackedNP_VerticalStructure_SC-IOS-11_PNR}
     \includegraphics{looselyPackedNP_VerticalStructure_SC-IOS-7_PNR}
-    \caption{\label{fig:looselyPackedNP:layer:pnr}Neutron reflectometry of SC-IOS-11 (left) and SC-IOS-7 (right). The inset shows the scattering length density model of the fitted reflectometry curve (black).}
+    \caption{\label{fig:looselyPackedNP:layer:xrr}X-ray reflectometry from SC-IOS-11 (left) and SC-IOS-7 (right). The inset shows the scattering length density model of the fitted reflectometry curve (black).}
   \end{figure}
 
   \begin{table}[!htbp]
@@ -61,7 +61,7 @@
     \centering
     \includegraphics{looselyPackedNP_VerticalStructure_SC-IOS-11_PNRDepiction}
     \includegraphics{looselyPackedNP_VerticalStructure_SC-IOS-7_PNRDepiction}
-    \caption{\label{fig:looselyPackedNP:layer:pnrDepiction}Depiction generated from the fitted parameters in \reftab{tab:looselyPackedNP:layers:pnr} showing the average particle distance and layer packing as determined from neutron reflectometry.}
+    \caption{\label{fig:looselyPackedNP:layer:pnrDepiction}Depiction generated from the fitted parameters in \reftab{tab:looselyPackedNP:nanoparticle:xrr} showing the average particle distance and layer packing.}
   \end{figure}
 
   \begin{figure}[tb]

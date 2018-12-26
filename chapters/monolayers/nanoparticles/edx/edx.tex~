@@ -47,11 +47,11 @@
   % Thereby the core of Ol-CoFe-C has the composition \ch{Fe_{0.71} Co_{0.29} O}.
   % The shell composition could only be given with a large error margin due to the low volume fraction, therefore it is assumed to be \ch{CoFe2O4} for simplicity.
 
-  The density of the particles is estimated using the determined composition and the lattice constant from XRD \refsec{sec:monolayers:nanoparticle:xrd} and given in \reftab{tab:monolayers:nanoparticles:density}.
+  The density of the particles is then estimated using the determined composition and the lattice constant from XRD \refsec{sec:monolayers:nanoparticle:xrd}.
 
   \begin{table}[ht]
     \centering
-    \caption{\label{tab:monolayers:nanoparticles:density}Density $\rho$ of the three nanoparticle batches determined by the results from EDX and XRD.}
+    \caption{\label{tab:monolayers:nanoparticles:edx}Density $\rho$ of the three nanoparticle batches determined by the results from EDX and XRD.}
     \begin{tabular}{ l | r | r }
        Density                & \textbf{Ac-CoFe-C} & \textbf{Ac-CoFe-C-2}\\
       \hline

@@ -21,11 +21,11 @@
   % The observed reflectivity is shown in \reffig{fig:looselyPackedNP:layer:xrr}, where a footprint correction has been applied with an equidistributed beam profile.
   % The reflectivity is fit by assuming that the sample is compromised of multiple stacked spheres, which rest on a silicon substrate.
   % The separate sphere layers are allowed each to have a variable two dimensional packing $\eta_i$ and their position can be shifted by $\Delta z_i$ from the ideal position that is calculated for the spheres if they had a hard oleic acid shell and do not penetrate each other.
-  % The determined parameters for each layer are tabulated in a for both IOS-11 and IOS-7.
+  % The determined parameters for each layer are tabulated in \reftab{tab:looselyPackedNP:nanoparticle:xrr} for both IOS-11 and IOS-7.
 
   % \begin{table}[!htbp]
   %   \centering
-  %   \caption{\labelsameters for the layer of multiple nanospheres shown in \reffig{fig:looselyPackedNP:layer:xrr}. The parameters $\eta$ are the two dimensional packing density for each layer and $\Delta z$ are the shifts of the layer center from the pitch $\sqrt{8/3} (R+D_\mathrm{OA}$). The other parameters are the thickness of the spacer layer on the substrate $d_\mathrm{spacer}$, its SLD $\rho_\mathrm{spacer}$, the substrate roughness $\sigma$, the rate of roughness increase with layer height $\Delta \sigma$, and the wavelength spread of the instrument $\sigma_\lambda / \lambda$. The nanosphere parameters are fixed from SAXS.}
+  %   \caption{\label{tab:looselyPackedNP:nanoparticle:xrr}Parameters for the layer of multiple nanospheres shown in \reffig{fig:looselyPackedNP:layer:xrr}. The parameters $\eta$ are the two dimensional packing density for each layer and $\Delta z$ are the shifts of the layer center from the pitch $\sqrt{8/3} (R+D_\mathrm{OA}$). The other parameters are the thickness of the spacer layer on the substrate $d_\mathrm{spacer}$, its SLD $\rho_\mathrm{spacer}$, the substrate roughness $\sigma$, the rate of roughness increase with layer height $\Delta \sigma$, and the wavelength spread of the instrument $\sigma_\lambda / \lambda$. The nanosphere parameters are fixed from SAXS.}
   %   \begin{tabular}{ c | l | l }
   %     \rule{0pt}{2ex} \textbf{XRR}  & \textbf{SC-IOS-11} & \textbf{SC-IOS-7} \\
   %     \hline
@@ -95,7 +95,7 @@
   %   \centering
   %   \includegraphics{looselyPackedNP_VerticalStructure_SC-IOS-11_XRRDepiction}
   %   \includegraphics{looselyPackedNP_VerticalStructure_SC-IOS-7_XRRDepiction}
-  %   \caption{\label{fig:looselyPackedNP:layer:xrrDepiction}Depiction generated from the fitted parameters in  showing the average particle distance and layer packing.}
+  %   \caption{\label{fig:looselyPackedNP:layer:xrrDepiction}Depiction generated from the fitted parameters in \reftab{tab:looselyPackedNP:nanoparticle:xrr} showing the average particle distance and layer packing.}
   % \end{figure}
 
 \end{document}

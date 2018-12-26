@@ -31,7 +31,7 @@
   Additional to the described model property parameters, instrumental parameters are included in the model: the instrumental resolution needs to be considered either by including angular divergence and energy resolution or by using the resolution function that is known from the instrument.
   Also as the sample alignment has finite precision, a small linear shift in $q$ is allowed in the model.
 
-  The X-ray reflectometry data has been measured at ambient conditions on an Bruker D8 instrument at the \textsc{Forschungszentrum J\"ulich}, which is described in \refsec{ch:instruments:laboratoryInstruments:xrr}.
+  The X-ray reflectometry data has been measured at ambient conditions on an Bruker D8 instrument at the \textsc{Forschungszentrum J\"ulich}, which is described in \refapp{app:additionalExperimentalTechniques:xrr}.
   After definition of the model and its parameters, the parameter values are refined by applying the Levenberg-Marquardt algorithm \cite{Marquardt_1963_Analgo}, to minimize the figure of merit $\mathrm{FOM}$, which is defined here for reflectometry as
   \begin{align}
     \mathrm{FOM} \eq \sum_{q_i} \biggl( \frac{\log(I) - \log(I_\mathrm{model})}{\sigma_{I}} I\biggr)^2.

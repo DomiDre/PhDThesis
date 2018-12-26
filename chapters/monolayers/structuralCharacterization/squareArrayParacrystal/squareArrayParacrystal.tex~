@@ -5,7 +5,7 @@
 \begin{document}
   By grazing-incidence small-angle scattering, the in-plane order of a nanostructure is probed over a macroscopic area.
   In this way the structural order of a sample can be quantified using X-rays (GISAXS) and additionally the magnetic order is probed by performing the experiment with neutrons (GISANS).
-  The monolayer sample ML-Ac-CoFe-C-2, prepared from the magnetic nanocubes Ac-CoFe-C-2, is discussed in the following.
+  The monolayer sample ML-Ac-CoFe-C-2, prepared from the magnetic nanocubes Ac-CoFe-C-2 described in \refapp{app:characterizationAcCoFeC2}, is discussed in the following.
   The GISAS data is described with a paracrystalline square lattice model, which is simulated using the BornAgain software package \cite{Burle_2018_borna}.
   As many parameters enter a GISAS simulation and the simulation is computational expensive, it is important to pre-characterize a sample with complementary experiments first to have a good chance in simulating a model that matches experimental data.
 

@@ -4,21 +4,21 @@
 \begin{document}
   \label{sec:monolayers:nanoparticle:dropcastingExperiments}
 
-  In the following, the steps in every drop-casting experiment are described, as well as the preparation conditions are given for the presented samples in this chapter.
-  The general procedure for a drop-casting experiment is the following:
+  In the following, the steps in every drop casting experiment are described, as well as the preparation conditions are given for the presented samples in this chapter.
+  The general procedure for a drop casting experiment is the following:
   first the substrate and the nanoparticle dispersion need to be prepared.
   The nanoparticle concentration has to be chosen for the dispersion, as well as the the solvent and possible co-solvents, which influence the evaporation driven self-assembly.
-  The environment conditions during the solvent evaporation provide further parameters, which can be tuned to control the drop-casting experiment.
+  The environment conditions during the solvent evaporation provide further parameters, which can be tuned to control the drop casting experiment.
   And finally, after the droplet has dried, the wafer can be further treated to purify the sample.
 
   Each step is described in the following, as well as the used methods to characterize their influence on the samples.
 
   \paragraphNewLine{Preparation of the silicon substrate}
     Single-crystalline silicon substrates with (100) orientation were purchased from Crystec GmbH with a thickness of $0.525 \unit{mm}$ and precutted to $10 \times 10 \unit{mm^2}$ squares.
-    The wafers are polished on one side, which is used as surface for the drop-casting experiments.
+    The wafers are polished on one side, which is used as surface for the drop casting experiments.
     To remove the protective film from the polished side, the substrates are cleaned using an Elmasonic P60 ultrasonic bath, where the wafer is first submerged in acetone for 10 minutes.
     After that the wafer is removed from the acetone, it is dried by spinning on a KLM Spin-Coater SCC briefly, after which it is submerged in 2-propanol of HPLC grade and sonificated for another 10 minutes.
-    The spin-coater is used once more to dry the wafers and the silicon substrates are used within the same hour for the drop-casting experiment.
+    The spin-coater is used once more to dry the wafers and the silicon substrates are used within the same hour for the drop casting experiment.
 
   \paragraphNewLine{Determination of Nanoparticle Concentration}
     The optimal concentration of the nanoparticles in dispersion for a monolayer on a given wafer surface area can be roughly estimated geometrically from the average particle to particle distance on the square lattice $a_{p-p}$.
@@ -48,7 +48,7 @@
     The variation of the concentration is not presented in the scope of this thesis to focus in more detail on the other parameters.
 
     \paragraphNewLine{Drying Process during Drop-Casting}
-      For the drop-casting experiment, the cleaned silicon substrates are always placed in a clean Petri dish.
+      For the drop casting experiment, the cleaned silicon substrates are always placed in a clean Petri dish.
       $50 \musf L$ of dispersion is then dropped on the wafer surface and the primary solvent is evaporated at ambient conditions of $22 \unit{^\circ C}$ in the open container.
       After the evaporation of the primary solvent, the Petri dish is covered tightly with tinfoil, which is perforated along the edges by 8 holes, which are symmetrically poked by a syringe needle with a $0.9 \unit{mm}$ outer diameter.
       The Petri dish is placed for at least $12 \unit{h}$ in an oven at $80 \unit{^\circ C}$.
@@ -79,7 +79,7 @@
 
       The discussed samples are listed in \reftab{tab:monolayers:charMethod:varyAlkaneAlkene} and are named with the structure ML-SV-$XY$, where $X$ is the abbreviated primary solvent and Y the abbreviated co-solvent.
       By using SEM and GISAXS, the lateral order of the samples is quantified.
-      As reference to a sample with no added co-solvent, the sample ML-SV-HexNone is discussed, which is drop-casted from $\mathit{n}$-hexane.
+      As reference to a sample with no added co-solvent, the sample ML-SV-HexNone is discussed, which is drop casted from $\mathit{n}$-hexane.
       As combination of alkan and alkene, hexane with tetradecene, and $\mathit{n}$-pentane, $\mathit{n}$-hexane and $\mathit{n}$-heptane with 1-octadecene are discussed.
 
       The GISAXS experiments were performed at GALAXI ($\lambda \eq 1.34 \angstrom$) by measuring the scattering under an grazing-incidence angle of $\alpha_i \eq 0.11^\circ$ over an integrated time of $4 \unit{h}$ each.
@@ -116,7 +116,7 @@
       To study the influence of oleic acid, $5 \unit{mL}$ dispersion with $c \eq 0.12 \unit{mg \, mL^{-1}}$ is prepared from Ac-CoFe-C-3 in $\mathit{n}$-heptane, to which $100 \unit{\musf L}$ 1-octadecene is added.
       After ultra sonification, the dispersion is seperated into 5 fractions of, $1 \unit{mL}$ each, to which varied amount of oleic acid is added.
 
-      Each sample is prepared by drop-casting $50 \unit{\musf L}$ of each dispersion on a separate silicon substrate, which is placed in a Petri dish.
+      Each sample is prepared by drop casting $50 \unit{\musf L}$ of each dispersion on a separate silicon substrate, which is placed in a Petri dish.
       After the evaporation of the $\mathit{n}$-heptane, the Petri dish is covered by tinfoil and the samples are kept in an oven at $80 \unit{^\circ C}$ for $\unit{12 \unit{h}}$ and subsequently kept at $140 \unit{^\circ C}$ for $\unit{6 \unit{h}}$.
       The quality of the five samples are then studied by scanning electron microscopy to evaluate the effect of the oleic acid on the order formation.
 
@@ -124,7 +124,7 @@
 
       \begin{table}[!htbp]
         \centering
-        \caption{\label{tab:monolayers:charMethod:OAVariation}Monolayer samples prepared from Ac-CoFe-C-3 with varied oleic acid volume fraction $c_V^\mathrm{OA}$ in the dispersion during drop-casting.}
+        \caption{\label{tab:monolayers:charMethod:OAVariation}Monolayer samples prepared from Ac-CoFe-C-3 with varied oleic acid volume fraction $c_V^\mathrm{OA}$ in the dispersion during drop casting.}
         \begin{tabular}{ l | c }
           \textbf{Sample} & $c_V^\mathrm{OA} \, / \%$\\
           \hline
@@ -138,10 +138,10 @@
       \end{table}
 
     \paragraphNewLine{Drop-Casting of Ac-CoFe-C and Ac-CoFe-C-2}
-      For the study of magnetic monolayers, samples from Ac-CoFe-C and Ac-CoFe-C-2 are drop-casted on a silicon substrate.
+      For the study of magnetic monolayers, samples from Ac-CoFe-C and Ac-CoFe-C-2 are drop casted on a silicon substrate.
       ML-Ac-CoFe-C was prepared by dispersing Ac-CoFe-C in $\mathit{n}$-heptane at a concentration of $0.12 \unit{mg \, mL^{-1}}$.
       And for ML-Ac-CoFe-C-2, Ac-CoFe-C-2 was dispersed in $\mathit{n}$-hexane at a concentration of $0.13 \unit{mg \, mL^{-1}}$.
-      In both cases $2 \unit{\%}$ of octadecene are added in volume fraction to the dispersion, before the drop-casting experiments is performed with $50 \musf L$ of dispersion as described before.
+      In both cases $2 \unit{\%}$ of octadecene are added in volume fraction to the dispersion, before the drop casting experiments is performed with $50 \musf L$ of dispersion as described before.
 
       The samples are qualitatively characterized by scanning electron microscopy.
       Then ML-Ac-CoFe-C is used for the study of the vertical electronic, nuclear and magnetic structure by XRR and PNR, and ML-Ac-CoFe-C-2 is used for the study of the lateral structure in a magnetic monolayer by GISAXS and GISANS.

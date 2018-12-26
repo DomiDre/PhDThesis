@@ -7,11 +7,11 @@
     \centering
     \includegraphics{colloidalCrystals_PNR_CC_Fe_0_37_rem_ud_ReflectivityMapFC}
     \includegraphics{colloidalCrystals_PNR_CC_Fe_0_37_rem_dd_ReflectivityMapFC}
-    \caption{\label{fig:colloidalCrystals:pnrRemanenceMaps} CC-Fe-0.37 FC Remanence Maps}
+    \caption{\label{fig:colloidalCrystals:pnr} CC-Fe-0.37 FC Remanence Maps}
   \end{figure}
   % \begin{table}[!htbp]
   %   \centering
-  %   \caption{\label{tab:looselyPackedNP:nanoparticle:gisaxs}Parameters for the hard-sphere structure factor in Percus-Yervick approximation shown in for both SC-IOS-11 and SC-IOS-7. $R_\mathrm{HS}$ is the hard-sphere radius and $\eta$ the packing fraction of the structure factor.}
+  %   \caption{\label{tab:looselyPackedNP:nanoparticle:gisaxs}Parameters for the hard-sphere structure factor in Percus-Yervick approximation shown in \reffig{fig:looselyPackedNP:layer:gisaxs} for both SC-IOS-11 and SC-IOS-7. $R_\mathrm{HS}$ is the hard-sphere radius and $\eta$ the packing fraction of the structure factor.}
   %   \begin{tabular}{ c | l | l }
   %     \rule{0pt}{2ex} \textbf{GISAXS}  & \textbf{SC-IOS-11} & \textbf{SC-IOS-7} \\
   %     \hline
@@ -26,21 +26,21 @@
     \centering
     \includegraphics{colloidalCrystals_VerticalStructure_CC-Fe-0_37_PNR_ZFC10K}
     \includegraphics{colloidalCrystals_VerticalStructure_CC-Fe-0_37_PNR_FC10K}
-    \caption{\label{fig:colloidalCrystals:pnrCCFe37} CC-Fe-0.37 ZFC and FC}
+    \caption{\label{fig:colloidalCrystals:pnr} CC-Fe-0.37 ZFC and FC}
   \end{figure}
 
   \begin{figure}[tb]
     \centering
     \includegraphics{colloidalCrystals_VerticalStructure_CC-Fe-0_25_PNR_ZFC10K}
     \includegraphics{colloidalCrystals_VerticalStructure_CC-Fe-0_25_PNR_FC10K}
-    \caption{\label{fig:colloidalCrystals:pnrCCFe25} CC-Fe-0.25 ZFC and FC}
+    \caption{\label{fig:colloidalCrystals:pnr} CC-Fe-0.25 ZFC and FC}
   \end{figure}
 
   \begin{figure}[tb]
     \centering
     \includegraphics{colloidalCrystals_VerticalStructure_CC-Fe-0_50_PNR_ZFC10K}
     \includegraphics{colloidalCrystals_VerticalStructure_CC-Fe-0_50_PNR_FC10K}
-    \caption{\label{fig:colloidalCrystals:pnrCCFe50} CC-Fe-0.50 ZFC and FC}
+    \caption{\label{fig:colloidalCrystals:pnr} CC-Fe-0.50 ZFC and FC}
   \end{figure}
 
 \end{document}

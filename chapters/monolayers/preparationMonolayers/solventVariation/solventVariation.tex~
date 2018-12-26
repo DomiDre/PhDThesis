@@ -17,7 +17,7 @@
     The influence of the choice of primary/co-solvent mixture is studied by performing drop casting experiments using the previously discussed nanocubes Ol-CoFe-C with varied alkane/alkene combinations.
     As primary solvent the alkane: \textit{n}-pentane, \textit{n}-hexane and \textit{n}-heptane are chosen for the rapidly evaporating component and for the high-boiling point addend the alkenes: 1-octadecene, 1-hexadecene, and 1-tetradecene were studied.
     For the experiment the nanoparticle concentration of the dispersions is set to $c_m \eq 0.13 \unit{mg/mL}$ and the co-solvent concentration to $c_V^\textsf{co} \eq 2\unit{Vol-\%}$.
-    Scanning electron microscopy is performed (\refsec{ch:instruments:laboratoryInstruments:sem}) for a first evaluation of the samples and to study the local order.
+    Scanning electron microscopy is performed (\refapp{app:additionalExperimentalTechniques:sem}) for a first evaluation of the samples and to study the local order.
 
     \begin{figure}[tb]
       \centering

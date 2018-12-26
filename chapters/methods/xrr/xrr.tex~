@@ -12,8 +12,9 @@
       \caption{\label{fig:methods:xrr:alignment}.}
     \end{figure}
 
-    In a typical X-ray reflectometry experiment, a sample is placed in the center between a X-ray source and a detector, which both can be independently moved from one another at a fixed distance with the angles $\alpha_i$ for the source and $\alpha_o$ for the detector.
-    The sample stage is typically a flat surface that can be moved vertically and possibly also tilted.
+    X-ray reflectometry can typically measured on a commercial laboratory instrument such as the Bruker D8 of the \textsc{Forschungszentrum J\"ulich} \refapp{app:additionalExperimentalTechniques:xrr}, which was used in this thesis.
+    In a typical experiment, the sample is placed in the center between a X-ray source and a detector, which both can be independently moved from one another at a fixed distance with the angles $\alpha_i$ for the source and $\alpha_o$ for the detector.
+    The sample stage is a flat surface that can be moved vertically.
     To center the sample and to have it oriented with respect to the source and detector three alignment procedures are performed.
     By performing a scan of the transmitted X-rays with respect to the vertically moving sample at both $0^\circ$ angle for source and detector, the sample is centered by choosing the position at the value where the X-ray beam is halved as depicted in the left plot of \reffig{fig:methods:xrr:alignment}.
     An absorption triangle is measured, by setting $\alpha_i$ and $\alpha_o$ to the presumably zero values first and performing a rocking curve then, where $\alpha_i + \alpha_o \eq 0^\circ$ is fixed (\reffig{fig:methods:xrr:alignment}, center).

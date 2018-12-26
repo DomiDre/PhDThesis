@@ -10,8 +10,9 @@
 
   Magnetic monolayers from nanoparticles prepared by the acetylacetonate route are discussed and the used models to describe the square array structure are introduced.
   The results of the nuclear structure of the sample will then be a prerequisite to study the magnetic structure of the samples in the following section.
-  The extensive study of the vertical structure is performed on monolayers prepared from the previously discussed nanocubes Ac-CoFe-C, which are additionally used in \refch{ch:doublelayers} to discuss double layer structures.
+  The extensive study of the vertical structure is performed on monolayers prepared from the previously discussed nanocubes Ac-CoFe-C, which are also used in \refch{ch:doublelayers} to discuss double layer structures.
   The lateral structure of monolayers, studied by grazing-incidence small-angle X-ray \& neutron scattering (GISAXS \& GISANS) is discussed for a second batch of nanocubes Ac-CoFe-C-2, which were prepared from acetylacetonates in a similar synthesis procedure.
+  The same characterization by TEM, SAXS, SANS(POL), XRD and VSM has been done for Ac-CoFe-C-2 analogue to \refsec{sec:monolayers:nanoparticle:structuralCharacterization} and can be found in \refapp{app:characterizationAcCoFeC2}.
 
   \begin{figure}[tb]
     \centering

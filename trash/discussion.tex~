@@ -2,7 +2,8 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
   \renewcommand{\thisPath}{\main/chapters/monolayers/nanoparticles/discussion}
 \begin{document}
-  
+  \label{sec:monolayers:nanoparticle:structuralCharacterization}
+
   \paragraphNewLine{Transmission Electron Microscopy}
     \subfile{\thisPath/tem/tem}
       \FloatBarrier
