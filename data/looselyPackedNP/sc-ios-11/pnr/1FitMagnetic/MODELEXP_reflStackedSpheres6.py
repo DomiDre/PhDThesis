@@ -26,8 +26,16 @@ dataRef.plotData()
 
 modelRef = app.setModel(SphereCSSStacked6Spacer, [Magnetic, InstrumentalResolution])
 
-modelRef.setParam("magSldCore", 5.998823268183986e-07,  minVal = 0, maxVal = 3e-06, vary = True)
-modelRef.setParam("magSldShell", 6e-07,  minVal = 0, maxVal = 3e-06, vary = False)
+modelRef.setParam("magSldCore", 1.0,  minVal = 0, maxVal = 1, vary = False)
+modelRef.setParam("magSldShell", 1.0,  minVal = 0, maxVal = 1, vary = False)
+modelRef.setParam("gamma", 0.0,  minVal = 0, maxVal = 90, vary = False)
+modelRef.setParam("magDensity1", 5.4e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity2", 4.95e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity3", 5.88e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity4", 8.52e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity5", 1.191e-06,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity6", 9.78e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("polarizationEfficiency", 1.0,  minVal = 0, maxVal = 1, vary = False)
 modelRef.combineParameters('magSldCore', 'magSldShell')
 
 modelRef.setConstantParam("bg", 2.7400000000000002e-05)

@@ -15,18 +15,18 @@ import numpy as np
 
 app = App()
 experimentRef = app.setExperiment(Saxs)
-experimentRef.setFitRange(0.03,5)
+experimentRef.setFitRange(0.05,5)
 dataRef = app.setData(XyeData)
 
-dataRef.loadFromFile('../8BL-15-IOS-11_Yoneda.xye')
+dataRef.loadFromFile('../8BL-40-IOS-11_Yoneda.xye')
 dataRef.sliceDomain(0.006, 5)
 dataRef.plotData()
 
 modelRef = app.setModel(SphereCSSCoupledHSStructure)
-modelRef.setParam("hardSphereRadius", 56.54690522456867,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("eta", 0.4388237100483382,  minVal = 0, maxVal = 1, vary = True)
-modelRef.setParam("i0", 2550.0,  minVal = 100.0, maxVal = 5000.0, vary = True)
-modelRef.setParam("bg", 410.65389218096965,  minVal = 0, maxVal = 1000, vary = True)
+modelRef.setParam("hardSphereRadius", 56.24523513916464,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("eta", 0.4318698738755854,  minVal = 0, maxVal = 1, vary = True)
+modelRef.setParam("i0", 3028.509683203415,  minVal = 100.0, maxVal = 5000.0, vary = True)
+modelRef.setParam("bg", 488.0,  minVal = 0, maxVal = 1000, vary = False)
 
 modelRef.setConstantParam("particleSize", 54.01861053150746)
 modelRef.setConstantParam("dShell", 4.5600000000000005)

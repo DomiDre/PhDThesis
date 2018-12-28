@@ -12,7 +12,7 @@ plt.style.use('phdthesis')
 
 import numpy as np
 import warnings
-from modelexp.data import MultiData, XyData, XyerData
+from modelexp.data import MultiData, XyData, XyerData, XyemData
 
 from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_variant
 # remove some annoying warnings
@@ -22,48 +22,33 @@ sample_name = 'Ol_CoFe_C'
 Chapter = 'monolayers'
 
 
-sans_initial_file_superball = cwd + "/superballModel/sim_saxs_sans/simulate/superballData_simulation.xy"
-sans_initial_file_sld = cwd + "/superballModel/sim_saxs_sans/simulate/superballData_simulation_sld.xy"
+file_superball = cwd + "/superballModel/sim_saxs_sans/fit_result.dat"
+file_sld =       cwd + "/superballModel/sim_saxs_sans/fit_sld.dat"
+
+# sans_initial_file_superball = cwd + "/superballModel/sim_saxs_sans/simulate/superballData_simulation.xy"
+# sans_initial_file_sld = cwd + "/superballModel/sim_saxs_sans/simulate/superballData_simulation_sld.xy"
 
 pngfile = Chapter + '_SAS_' + sample_name + "_SimultaneousSaxsSans.png"
 
 def chi2(q, I, sI, Imodel):
   return np.sum(((np.log(I) - np.log(Imodel))/sI*I)**2) / len(q)
 
-dataRef_saxs = XyerData()
-dataRef_saxs.loadFromFile(cwd + '/experimental_data/DD67.xye')
-dataRef_saxs.sliceDomain(0.004, 0.3)
-# dataRef_saxs.reducePointDensity(3)
-q_saxs, I_saxs, sI_saxs = dataRef_saxs.getData()
 
-
-dataRef_sa = XyerData()
-dataRef_sa.loadFromFile(cwd + '/experimental_data/DD67_nuclear20_sa.dat')
-dataRef_sa.sliceDomain(0.004, 0.3)
-# dataRef_sa.reducePointDensity(3)
-q_sa, I_sa, sI_sa = dataRef_sa.getData()
-dataRef_la = XyerData()
-dataRef_la.loadFromFile(cwd + '/experimental_data/DD67_nuclear20_la_scaled.dat')
-dataRef_la.sliceDomain(0.004, 0.3)
-# dataRef_la.reducePointDensity(3)
-q_la, I_la, sI_la = dataRef_la.getData()
+modelRef = MultiData(XyemData)
+modelRef.loadFromFile(file_superball)
+q_saxs, I_saxs, sI_saxs, I_model_saxs = modelRef.getDatasetBySuffix('saxs').getData()
+q_sa, I_sa, sI_sa, I_model_sa = modelRef.getDatasetBySuffix('sans_sa').getData()
+q_la, I_la, sI_la, I_model_la = modelRef.getDatasetBySuffix('sans_la').getData()
 
 modelRef = MultiData(XyData)
-modelRef.loadFromFile(sans_initial_file_superball)
-q_model_saxs, I_model_saxs = modelRef.getDataset(0).getData()
-q_model_sa, I_model_sa = modelRef.getDataset(1).getData()
-q_model_la, I_model_la = modelRef.getDataset(2).getData()
+modelRef.loadFromFile(file_sld)
+r_saxs, sld_saxs = modelRef.getDatasetBySuffix('saxs').getData()
+r_saxs_part = np.array(r_saxs[:8])
+sld_saxs_part = np.array(sld_saxs[:8])
+r_saxs_oa = np.array(r_saxs[16:20])
+sld_saxs_oa = np.array(sld_saxs[16:20])
 
-modelRef = MultiData(XyData)
-modelRef.loadFromFile(sans_initial_file_sld)
-r_saxs, sld_saxs = modelRef.getDataset(0).getData()
-r_saxs, sld_saxs = np.array(r_saxs), np.array(sld_saxs)
-r_saxs_part = r_saxs[:8]
-sld_saxs_part = sld_saxs[:8]
-r_saxs_oa = r_saxs[16:20]
-sld_saxs_oa = sld_saxs[16:20]
-
-r_sa, sld_sa = modelRef.getDataset(1).getData()
+r_sa, sld_sa = modelRef.getDatasetBySuffix('sans_sa').getData()
 r_sa, sld_sa = np.array(r_sa), np.array(sld_sa)
 r_sa_part = r_sa[:8]
 sld_sa_part = sld_sa[:8]
@@ -101,20 +86,25 @@ ax.errorbar(q_la, np.array(I_la)*sf, np.array(sI_la)*sf,
   zorder=0, capsize=0, marker='.', alpha=1)
 
 
-ax.plot(q_model_saxs, I_model_saxs, marker='None', linestyle='-',
+ax.plot(q_saxs, I_model_saxs, marker='None', linestyle='-',
   color='black',
   label='Superball', zorder=2, alpha=0.8)
 
-ax.plot(q_model_sa, np.array(I_model_sa)*sf, marker='None', linestyle='-',
+ax.plot(q_sa, np.array(I_model_sa)*sf, marker='None', linestyle='-',
   color='black',
   zorder=2, alpha=0.8)
 
-ax.plot(q_model_la, np.array(I_model_la)*sf, marker='None', linestyle='-',
+ax.plot(q_la, np.array(I_model_la)*sf, marker='None', linestyle='-',
   color='black',
   zorder=2, alpha=0.8)
 
 
 ax.legend(loc='lower left', fontsize=inset_fontsize)
+ax.text(0.04, 0.26, 'Ol-CoFe-C',
+  horizontalalignment='left',
+  verticalalignment='bottom',
+  transform=ax.transAxes,
+  fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")
@@ -122,8 +112,8 @@ ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
 ax.set_xlim([1e-2, 0.3])
 ax.set_ylim([4e-4, 2e3])
 
-ax_sld.plot(r_saxs_part/10, sld_saxs_part/1e-6, marker='None', color='#FAAB2D', zorder=4, label=r"$\rho_\mathrm{el}$")
-ax_sld.plot(r_sa_part/10, sld_sa_part/1e-6, marker='None', color=color_variant('#FAAB2D', -100), zorder=3, label=r"$\rho_\mathrm{nuc}$")
+ax_sld.plot(r_saxs_part, sld_saxs_part, marker='None', color='#FAAB2D', zorder=4, label=r"$\rho_\mathrm{el}$")
+ax_sld.plot(r_sa_part, sld_sa_part, marker='None', color=color_variant('#FAAB2D', -100), zorder=3, label=r"$\rho_\mathrm{nuc}$")
 # ax_sld.plot(r_saxs_oa/10, sld_saxs_oa/1e-6, marker='None', color='#0EA8DF', zorder=2, label="OA")
 # ax_sld.plot(r_sa_oa/10, 5*sld_sa_oa/1e-6, marker='None', color=color_variant('#0EA8DF', -100), zorder=2)
 

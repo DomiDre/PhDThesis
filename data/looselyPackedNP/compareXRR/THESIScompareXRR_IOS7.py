@@ -13,7 +13,7 @@ def load_xye(xyefile):
   x = rawdata[:,0]
   y = rawdata[:,1]
   sy = rawdata[:,2]
-  return x, y, sy
+  return x*10, y, sy
 
 
 q_1, I_1, sI_1 = load_xye('../8bl-15-ios-7/xrr/ES-S15.xye')
@@ -27,9 +27,9 @@ ax.plot(q_1, I_1*1e1, alpha=0.8, marker='None', label='8BL-15-IOS-7')
 ax.plot(q_2, I_2*1, alpha=0.8, marker='None', label='8BL-30-IOS-7')
 # ax.set_xscale('log')
 ax.set_yscale('log')
-ax.set_xlabel('$\mathit{q_z} \, / \, \AA^{-1}$')
+ax.set_xlabel('$\mathit{q_z} \, / \, nm^{-1}$')
 ax.set_ylabel('$\mathit{R}$')
-ax.set_xlim(0.020, 0.17)
+ax.set_xlim(0.20, 1.7)
 ax.set_ylim(5e-7, 2.5e1)
 ax.legend(loc='upper right', fontsize=10)
 

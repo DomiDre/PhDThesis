@@ -18,7 +18,7 @@ from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_vari
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
-sample_name = 'SC-IOS-11'
+sample_name = '8BL-40-IOS-11'
 Chapter = 'looselyPackedNP'
 
 fit_file = cwd + "/fit/fit_result.dat"
@@ -76,7 +76,7 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 
 ax.errorbar(q, I-bg, sI,
   linestyle='None',
-  label='SC-IOS-11', zorder=0, capsize=0, marker='.', alpha=1)
+  label='8BL-40-IOS-11', zorder=0, capsize=0, marker='.', alpha=1)
 
 ax.errorbar(q_saxs, I_saxs*sf, sI_saxs*sf,
   linestyle='None',
@@ -85,18 +85,18 @@ ax.errorbar(q_saxs, I_saxs*sf, sI_saxs*sf,
 ax.plot(q, Imodel-bg, marker='None',
   color='black', linestyle='-', zorder=2, alpha=0.8)
 
-ax.text(0.01, 0.01,
-  '$\mathit{R}_\mathrm{HS} \, = \, ' + f'{getValueWithErrorString(p["hardSphereRadius"], 0.1)} nm$\n'+
-  '$\mathit{\eta} \, = \, ' + f'{getValueWithErrorString(p["eta"], 100)} \% $',
-  verticalalignment='bottom',
-  horizontalalignment='left',
-  transform=ax.transAxes)
-ax.legend(loc='upper right')
+# ax.text(0.01, 0.01,
+#   '$\mathit{R}_\mathrm{HS} \, = \, ' + f'{getValueWithErrorString(p["hardSphereRadius"], 0.1)} nm$\n'+
+#   '$\mathit{\eta} \, = \, ' + f'{getValueWithErrorString(p["eta"], 100)} \% $',
+#   verticalalignment='bottom',
+#   horizontalalignment='left',
+#   transform=ax.transAxes)
+ax.legend(loc='lower left', fontsize=10)
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")
 ax.set_ylabel("$\mathit{I}\,/\, a.u.$")
 ax.set_xlim([1.5e-2, 0.25])
 ax.set_ylim([1e2, 5e6])
-fig.savefig(thesisimgs + '/' + pngfile)
 fig.savefig(cwd + '/' + pngfile)
+# fig.savefig(thesisimgs + '/' + pngfile)

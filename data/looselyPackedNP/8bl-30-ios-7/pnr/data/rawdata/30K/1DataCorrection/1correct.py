@@ -10,9 +10,9 @@ if __name__ == "__main__":
                  "ES_S16_30K_FC_7300Oe_tranformed_angs_uu_masked_qz_I.xy",\
                  "ES_S16_30K_FC_7300Oe_tranformed_angs_du_masked_qz_I.xy",\
                  "ES_S16_30K_ZFC_7Oe_Remanence_tranformed_angs_uu_masked_qz_I.xy",\
-                 "ES_S16_30K_ZFC_7Oe_Remanence_tranformed_angs_du_masked_qz_I.xy",\
                  "ES_S16_30K_ZFC_7Oe_Virgin_tranformed_angs_uu_masked_qz_I.xy",\
                  "ES_S16_30K_ZFC_7Oe_Virgin_tranformed_angs_du_masked_qz_I.xy",\
+                 "ES_S16_30K_ZFC_7Oe_Remanence_tranformed_angs_du_masked_qz_I.xy",\
                  "ES_S16_30K_ZFC_7300Oe_tranformed_angs_uu_masked_qz_I.xy",\
                  "ES_S16_30K_ZFC_7300Oe_tranformed_angs_du_masked_qz_I.xy"]
 

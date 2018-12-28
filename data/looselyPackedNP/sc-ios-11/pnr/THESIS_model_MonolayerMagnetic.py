@@ -98,38 +98,35 @@ heightin= 1-y0in-0.01
 fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
-ax.errorbar(q_p, I_p*10, sI_p*10,\
+ax.errorbar(q_p, I_p, sI_p,\
   linestyle='None', color=colors['sanspol_p_sa_data'],
   label='$R^{+}$ 500 mT', zorder=0, capsize=0, marker='.')
-ax.errorbar(q_m, I_m*10, sI_m*10,\
+ax.errorbar(q_m, I_m, sI_m,\
   linestyle='None', color=colors['sanspol_m_sa_data'],
   label='$R^{-}$ 500 mT', zorder=0, capsize=0, marker='.')
-ax.plot(q_p, Imodel_p*10, zorder=1, color=color_variant(colors['sanspol_p_sa_data'], -100), marker='None')
-ax.plot(q_m, Imodel_m*10, zorder=1, color=color_variant(colors['sanspol_m_sa_data'], -100), marker='None')
+ax.plot(q_p, Imodel_p, zorder=1, color=color_variant(colors['sanspol_p_sa_data'], -100), marker='None')
+ax.plot(q_m, Imodel_m, zorder=1, color=color_variant(colors['sanspol_m_sa_data'], -100), marker='None')
 
-ax.errorbar(q_rem_p, I_rem_p, sI_rem_p,\
-  linestyle='None', color='#FAAB2D',
-  label='$R^{+}$ Remanence', zorder=0, capsize=0, marker='.')
-ax.errorbar(q_rem_m, I_rem_m, sI_rem_m,\
-  linestyle='None', color="#76C152",
-  label='$R^{-}$ Remanence', zorder=0, capsize=0, marker='.')
-ax.plot(q_rem_p, Imodel_rem_p, zorder=1, color=color_variant("#FAAB2D", -100), marker='None')
-ax.plot(q_rem_m, Imodel_rem_m, zorder=1, color=color_variant("#76C152", -100), marker='None')
+# ax.errorbar(q_rem_p, I_rem_p, sI_rem_p,\
+#   linestyle='None', color='#FAAB2D',
+#   label='$R^{+}$ Remanence', zorder=0, capsize=0, marker='.')
+# ax.errorbar(q_rem_m, I_rem_m, sI_rem_m,\
+#   linestyle='None', color="#76C152",
+#   label='$R^{-}$ Remanence', zorder=0, capsize=0, marker='.')
+# ax.plot(q_rem_p, Imodel_rem_p, zorder=1, color=color_variant("#FAAB2D", -100), marker='None')
+# ax.plot(q_rem_m, Imodel_rem_m, zorder=1, color=color_variant("#76C152", -100), marker='None')
 
 
 handles, labels = ax.get_legend_handles_labels()
 
-ax.text(0.05, 0.3, labeltext,
-  transform=ax.transAxes, fontsize=10)
-ax.text(0.05, 0.22, '$R^{+}, R^{-}$',
+ax.text(0.03, 0.18, labeltext,
   transform=ax.transAxes, fontsize=10)
 ax.legend(
-  [(handles[0], handles[1]),
-   (handles[2], handles[3])],
-  ['500 mT', 'Remanence'],
+  [(handles[0], handles[1])],
+  ['$R^{+}, R^{-}$ 500 mT'],
   handler_map={tuple: HandlerTuple(ndivide=None)},
   fontsize=10,
-  bbox_to_anchor = [0.5, 0.25])
+  bbox_to_anchor = [0.55, 0.2])
 
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q_z} \, / \, nm^{-1}$")
@@ -137,16 +134,16 @@ ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax_sld.plot(r, sld, marker='None', alpha=0.3,
-  color=colors['sanspol_sld'])
+# ax_sld.plot(r, sld, marker='None', alpha=0.3,
+#   color=colors['sanspol_sld'])
 ax_sld.plot(r, sldMag, marker='None',
   color='#EE292F')
 ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\mathit{\rho}_{mag} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 25, 50, 75])
-ax_sld.set_yticks([0, 1])
+ax_sld.set_yticks([0, 0.5])
 ax_sld.set_xlim([-10, 90])
-ax_sld.set_ylim([0, 1.2])
+ax_sld.set_ylim([0, 0.9])
 ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 fig.savefig(thesisimgs + '/' + refl_pngfile)

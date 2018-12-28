@@ -3,9 +3,10 @@
 
 \begin{document}
   \paragraphNewLine{Scanning Electron Microscopy}
-    The spin-coated nanospheres on silicon substrate are qualitatively viewed by SEM micrographs measured with a Neon Zeiss 40 (\refsec{ch:instruments:laboratoryInstruments:sem}).
+    The spin-coated nanospheres on silicon substrate SC-IOS-7 and SC-IOS-11 are qualitatively viewed by SEM micrographs measured with a Neon Zeiss 40 (\refsec{ch:instruments:laboratoryInstruments:sem}).
     To obtain cross-sectional views, a piece of a sample is cut on two opposing sides with a diamond cutter and then subsequently broken downward to obtain a clean breaking line, from which SEM measurements can be performed.
     The micrographs are measured at $5 \unit{kV}$ and the images from the backscattering electrons are shown to obtain a strong contrast.
+    For the multi-layered samples 8BL-15-IOS-11, 8BL-40-IOS-11, 8BL-15-IOS-7 and 8BL-30-IOS-7, the collaboration provided micrographs of the multilayered structure in cross-sectional view, which were obtained by SEM on a LEO Gemini 1530 at the Max Planck Institute for Polymer Research operated at $0.4 \unit{kV}$.
 
   \paragraphNewLine{Grazing-Incidence Small-Angle X-ray Scattering}
     All spin-coated samples were measured at the beam line BM26B \refsec{ch:lss:BM26B} in the ESRF at a wavelength of $\lambda \eq 1.03 \unit{\angstrom}$.
@@ -30,6 +31,15 @@
         G(x)   &\eq \frac{(1 + 2\eta )^2}{(1 - \eta )^4} \cdot \frac{ \sin(x) - x \cos(x)}{x^2}\\
                & + \frac {-6 \eta (1 + \eta / 2)^2}{(1 - \eta )^4} \cdot \frac{2 x sin(x) + (2 - x^2) \cos(x) - 2}{x^3}\\
                & + \frac{\eta (1 + 2\eta )^2}{2(1 - \eta )^4} \cdot \frac{-x^4 \cos(x) + 4 [(3 x^2 - 6) \cos(x) +(x^3 - 6 x) \sin(x) + 6]}{x^5}\\
+      \end{split}
+    \end{align}
+
+    From the packing fraction and the hard-sphere radius, the Wigner-Seitz radius is determined, which estimates the space an individual nanosphere is given in the sample by
+    \begin{align}
+      \begin{split}
+        \label{eq:looselyPackedNP:layers:wignerSeitz}
+        \frac{4 \pi}{3} \bar{r}^3 &\eq \frac{V}{N}\\
+        \Rightarrow \bar{r}       &\eq \frac{R_\mathrm{HS}}{\sqrt[3]{\eta}},
       \end{split}
     \end{align}
 
@@ -137,8 +147,15 @@
     The coordinates are transformed to ($\alpha_i - \alpha_o$, $\alpha_i + \alpha_o$) using the pixel-splitting rebinning algorithm described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}.
     To obtain the reflectivity curves, a box in the range $\alpha_i - \alpha_o \eq -0.1 ^\circ \ldots 0.1 ^\circ$ is integrated, and the diffuse scattering is subtracted with the box integrals of the ranges $\alpha_i - \alpha_o \eq \pm (0.1 \ldots 0.2)$ in the intensity map.
 
-    The same model as in XRR is used to describe the reflectivity of SC-IOS-11 and SC-IOS-7.
+    The same model as in XRR is used to describe the nuclear structure of SC-IOS-11 and SC-IOS-7.
     The particle geometry and scattering length densities are used as obtained from SAS, and only the layer positions and packing densities are varied.
+    For the evaluation of the reflectivity curves measured for polarized neutrons $R^{+}$ and $R^{-}$, the formalism presented by Zabel \etal in \cite{Kronmueller_2007_Handb} is implemented, where the reflectivities are evaluated by
+    \begin{align}
+      \label{eq:looselyPackedNP:pnrReflectivityFormula}
+      R^\pm \eq \frac{1}{2} \biggl[ R_{+} \bigl(1 \pm P \cos(\gamma) \bigr) + R_{-} \bigl(1 \mp P \cos(\gamma) \bigr) \biggr].
+    \end{align}
+    Here $R_\pm$ are the reflectivities calculated for the scattering length densities $\rho_\mathrm{nuc} \pm \rho_\mathrm{mag}$, $P$ is the polarization efficiency of the instrument and $\gamma$ the angle between the sample magnetization and the neutron polarization.
+    The samples that show magnetic contrast are discussed with regard to being homogeneously magnetized such as measured in VSM, and it is studied how the agreement between the calculated and measured reflectivity changes when the magnetic density in the respective layers is allowed to be varied independently.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
     Pieces from the samples SC-IOS-11 and SC-IOS-7 are studied by vibrating sample magnetometry using a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}).

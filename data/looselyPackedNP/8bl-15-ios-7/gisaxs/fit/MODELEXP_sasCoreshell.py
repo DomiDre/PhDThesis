@@ -5,7 +5,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.sas import Saxs
-from modelexp.models.sas import SphereCSCoupledHSStructure
+from modelexp.models.sas import SphereCSSCoupledBimodalHSStructure
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -14,27 +14,37 @@ import numpy as np
 
 app = App()
 experimentRef = app.setExperiment(Saxs)
-experimentRef.setFitRange(0.03,5)
+experimentRef.setFitRange(0.06,5)
 dataRef = app.setData(XyeData)
 
 dataRef.loadFromFile('../8BL-15-IOS-7_Yoneda.xye')
 dataRef.sliceDomain(0.006, 5)
 dataRef.plotData()
+modelRef = app.setModel(SphereCSSCoupledBimodalHSStructure)
+modelRef.setParam("hardSphereRadius", 39.76,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("eta", 0.358,  minVal = 0, maxVal = 1, vary = True)
+modelRef.setParam("i0", 62290.0,  minVal = 10000.0, maxVal = 100000.0, vary = True)
+modelRef.setParam("bg", 378.0,  minVal = 0, maxVal = 2000, vary = True)
 
-modelRef = app.setModel(SphereCSCoupledHSStructure)
-modelRef.setParam("hardSphereRadius", 56.54690522456867,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("eta", 0.4388237100483382,  minVal = 0, maxVal = 1, vary = True)
-modelRef.setParam("i0", 2550.0,  minVal = 100.0, maxVal = 5000.0, vary = True)
-modelRef.setParam("bg", 410.65389218096965,  minVal = 0, maxVal = 1000, vary = True)
+modelRef.setConstantParam("particleSize1", 35.403336065098124)
+modelRef.setConstantParam("particleSize2", 6.877)
+modelRef.setConstantParam("sigParticleSize1", 0.0752)
+modelRef.setConstantParam("sigParticleSize2", 0.5976)
+modelRef.setConstantParam("dShell1", 36.2)
+modelRef.setConstantParam("dShell2", 40.0)
+modelRef.setConstantParam("fraction", 0.7795)
+modelRef.setConstantParam("dSurfactant1", 15.600000000000001)
+# modelRef.setConstantParam("i0", 1.6300000000000001)
+# modelRef.setConstantParam("bg", 0.0)
 
-modelRef.setConstantParam("particleSize", 35.4033361)
-modelRef.setConstantParam("dShell", 15.6)
-modelRef.setConstantParam("sigParticleSize", 0.0752)
-
-modelRef.setConstantParam("sigD", 0)
-modelRef.setConstantParam("sldCore", 4.185e-05)
-modelRef.setConstantParam("sldShell", 8.52e-6)
+modelRef.setConstantParam("sigD1", 0)
+modelRef.setConstantParam("sigD2", 0)
+modelRef.setConstantParam("sldCore", 52.07e-6)
+modelRef.setConstantParam("sldShell", 41.85e-6)
+modelRef.setConstantParam("sldSurfactant", 8.52e-6)
 modelRef.setConstantParam("sldSolvent", 7.55e-6)
+modelRef.combineParameters('dSurfactant1', 'dSurfactant2')
+
 modelRef.updateModel()
 
 app.setFit(LevenbergMarquardt)

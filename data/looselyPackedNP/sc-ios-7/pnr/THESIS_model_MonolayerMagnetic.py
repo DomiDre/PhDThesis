@@ -71,13 +71,13 @@ heightin= 1-y0in-0.01
 
 fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
-ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
+# ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.errorbar(q_p, I_p, sI_p,\
   linestyle='None', color=colors['sanspol_p_sa_data'],
-  label='$R^{+}$', zorder=0, capsize=0, marker='.')
+  label='$R^{+}$, 500 mT', zorder=0, capsize=0, marker='.')
 ax.errorbar(q_m, I_m, sI_m,\
   linestyle='None', color=colors['sanspol_m_sa_data'],
-  label='$R^{-}$', zorder=0, capsize=0, marker='.')
+  label='$R^{-}$, 500 mT', zorder=0, capsize=0, marker='.')
 ax.plot(q_p, Imodel_p, zorder=1, color=color_variant(colors['sanspol_p_sa_data'], -100), marker='None')
 ax.plot(q_m, Imodel_m, zorder=1, color=color_variant(colors['sanspol_m_sa_data'], -100), marker='None')
 ax.legend(loc='lower left', fontsize=inset_fontsize)
@@ -89,17 +89,17 @@ ax.set_ylim([I_min, I_max])
 
 ax.text(0.05, 0.25, labeltext,
   transform=ax.transAxes, fontsize=inset_fontsize)
-ax_sld.plot(r, sld, marker='None', alpha=0.3,
-  color=colors['sanspol_sld'])
-ax_sld.plot(r, sldMag, marker='None',
-  color='#EE292F')
-ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
-ax_sld.set_ylabel(r"$\mathit{\rho}_{mag} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
-ax_sld.set_xticks([0, 25, 50, 75])
-ax_sld.set_yticks([0, 1])
-ax_sld.set_xlim([-10, 90])
-ax_sld.set_ylim([0, 1.2])
-ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
+# ax_sld.plot(r, sld, marker='None', alpha=0.3,
+#   color=colors['sanspol_sld'])
+# ax_sld.plot(r, sldMag, marker='None',
+#   color='#EE292F')
+# ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
+# ax_sld.set_ylabel(r"$\mathit{\rho}_{mag} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
+# ax_sld.set_xticks([0, 25, 50, 75])
+# ax_sld.set_yticks([0, 1])
+# ax_sld.set_xlim([-10, 90])
+# ax_sld.set_ylim([0, 1.2])
+# ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 fig.savefig(thesisimgs + '/' + refl_pngfile)
 fig.savefig(cwd + '/' + refl_pngfile)
