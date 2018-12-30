@@ -13,7 +13,7 @@
 
   Each step is described in the following, as well as the used methods to characterize their influence on the samples.
 
-  \paragraphNewLine{Preparation of the silicon substrate}
+  \paragraphNewLine{Preparation of the Silicon Substrate}
     Single-crystalline silicon substrates with (100) orientation were purchased from Crystec GmbH with a thickness of $0.525 \unit{mm}$ and precutted to $10 \times 10 \unit{mm^2}$ squares.
     The wafers are polished on one side, which is used as surface for the drop casting experiments.
     To remove the protective film from the polished side, the substrates are cleaned using an Elmasonic P60 ultrasonic bath, where the wafer is first submerged in acetone for 10 minutes.
@@ -54,14 +54,23 @@
       The Petri dish is placed for at least $12 \unit{h}$ in an oven at $80 \unit{^\circ C}$.
       Without moving the samples, the oven is set for another $6 \unit{h}$ at $140\unit{^\circ C}$.
 
+    \paragraphNewLine{Cleaning of the Monolayers}
+      After the heat treatment of the prepared monolayers, some organic remnants remain on the surface, which are not removable by further baking at $140 \unit{^\circ C}$. 
+      To remove it, the sample can be further annealed around $300 ^\circ C$, near the boiling temperature of oleic acid.
+      However, when higher temperatures are used to remove this remaining organic layer, the nanostructure suffers due to the violent conditions.
+      To avoid high temperatures, the samples are washed with a polar solvent, such as ethyl acetate.
+      The polar solvents do not dissolve the oleic acid-ligated nanoparticles and therefore do not affect the long-range order of the structures.
+      The organic remnants are also not disperseable in a polar solvents, but are reduced by using a spin coater.
+      The idea is that the loose organic solvents are detached by the polar solvent and carried off due to centrifugal force.
+      As ethyl acetate might, however, also leave some organic remains, the sample is further washed with 2-propanol (HPLC).
+
     \paragraphNewLine{Variation of Alkanes / Alkenes as Solvent / Co-Solvent}
       To study the influence of the solvent and co-solvent, the nanoparticles Ol-CoFe-C are drop casted at the same nanoparticle concentration from varied combinations.
-      As primary solvents, the alkanes pentane, hexane and heptane are studied, for which nanoparticle dispersions are prepared at $0.1 \unit{mg mL}$.
+      As primary solvents, the alkanes pentane, hexane and heptane are studied, for which nanoparticle dispersions are prepared at $0.13 \unit{mg \, mL^{-1}}$.
       As co-solvent, the alkenes tetradecene (\ch{C14H28}) and octadecene (\ch{C18H36}) are compared.
       In all cases the volume fraction of the co-solvent is set to $2 \%$.
+      Variation of the co-solvent content in the range from $1 \% - 2.5 \%$ have been performed but are not discussed in the scope of this thesis. % DD166
       Additional experiments performed in combination with hexadecene (\ch{C16H32}), dodecene (\ch{C12H24}) and decene (\ch{C10H20}), as well as varied co-solvent volume fractions are left out from this thesis for brevity.
-
-
       \begin{table}[!htbp]
         \centering
         \caption{\label{tab:monolayers:charMethod:varyAlkaneAlkene}Monolayers prepared from Ol-CoFe-C for the discussion of the solvent variation.}
@@ -116,26 +125,61 @@
       To study the influence of oleic acid, $5 \unit{mL}$ dispersion with $c \eq 0.12 \unit{mg \, mL^{-1}}$ is prepared from Ac-CoFe-C-3 in $\mathit{n}$-heptane, to which $100 \unit{\musf L}$ 1-octadecene is added.
       After ultra sonification, the dispersion is seperated into 5 fractions of, $1 \unit{mL}$ each, to which varied amount of oleic acid is added.
 
-      Each sample is prepared by drop casting $50 \unit{\musf L}$ of each dispersion on a separate silicon substrate, which is placed in a Petri dish.
+      Each sample is prepared by drop casting $50 \unit{\musf L}$ of each dispersion on a separate silicon substrate of $10 \times 10 \unit{mm^2}$ surface, which is placed in a Petri dish.
       After the evaporation of the $\mathit{n}$-heptane, the Petri dish is covered by tinfoil and the samples are kept in an oven at $80 \unit{^\circ C}$ for $\unit{12 \unit{h}}$ and subsequently kept at $140 \unit{^\circ C}$ for $\unit{6 \unit{h}}$.
       The quality of the five samples are then studied by scanning electron microscopy to evaluate the effect of the oleic acid on the order formation.
 
       The prepared samples are listed in \reftab{tab:monolayers:charMethod:OAVariation} as ML-OA-x, where x is the volume fraction of oleic acid, which are $0$, $5 \cdot 10^{-6}$, $1 \cdot 10^{-5}$, $5 \cdot 10^{-5}$, $5 \cdot 10^{-5}$ and , $1 \cdot 10^{-4}$.
+      To put this amount into context, the estimated height of the oleic acid film, if it is evenly distributed on the silicon wafer surface, is calculated by
+      \begin{align}
+        \label{eq:monolayers:preparation:solventVariation:OAAddend}
+        h \eq \frac{c_V^\textsf{OA} V_\textsf{disp}}{A_\textsf{wafer}}.
+      \end{align}
 
       \begin{table}[!htbp]
         \centering
         \caption{\label{tab:monolayers:charMethod:OAVariation}Monolayer samples prepared from Ac-CoFe-C-3 with varied oleic acid volume fraction $c_V^\mathrm{OA}$ in the dispersion during drop casting.}
-        \begin{tabular}{ l | c }
-          \textbf{Sample} & $c_V^\mathrm{OA} \, / \%$\\
+        \begin{tabular}{ l | c | c}
+          \textbf{Sample} & $c_V^\mathrm{OA} \, / \unit{\%}$ & $h \, / \unit{nm}$\\
           \hline
-          ML-OA-$0$ & $0$\\
-          ML-OA-$5 \cdot 10^{-6}$ & $5 \cdot 10^{-4}$\\
-          ML-OA-$1 \cdot 10^{-5}$ & $1 \cdot 10^{-3}$\\
-          ML-OA-$5 \cdot 10^{-5}$ & $5 \cdot 10^{-3}$\\
-          ML-OA-$1 \cdot 10^{-4}$ & $1 \cdot 10^{-2}$\\
+          ML-OA-$0$               & $0$                      & $0$\\
+          ML-OA-$5 \cdot 10^{-6}$ & $5 \cdot 10^{-4}$        & $2.5$\\
+          ML-OA-$1 \cdot 10^{-5}$ & $1 \cdot 10^{-3}$        & $5$\\
+          ML-OA-$5 \cdot 10^{-5}$ & $5 \cdot 10^{-3}$        & $25$\\
+          ML-OA-$1 \cdot 10^{-4}$ & $1 \cdot 10^{-2}$        & $50$\\
           \hline
         \end{tabular}
       \end{table}
+
+    \paragraphNewLine{Variation of Drying Conditions}
+      The drop casting procedure is varied to search for optimization points towards achieving even longer ranged order in the monolayer.
+      Following variations have been performed using the dispersion of Ol-CoFe-C:
+      \begin{itemize}
+        \item To study the influence of the speed of the evaporation process for the primary solvent, the Petri dish container is directly covered by a glass lid to slow down the evaporation process. %DD90.2
+
+        \item Additionally, pieces of cloth that are soaked in the primary solvent are placed into the closed container to generate at solvent enriched atmosphere. %DD90.
+
+        \item To study the influence of the substrate temperature on the self-assembly process, a Peltier element is placed beneath the open Petri dish to cool the substrate by few degrees during the evaporation process. % DD169
+
+        \item Furthermore, it was was tested if drying the nanocubes on a hot plate instead of an oven can improves the manufacturing protocol.
+
+        \item The influence of a magnetic field applied to the dispersion during the evaporation process is observed by placing a Halbach array inside the Petri dish, which generates an in-plane magnetic field of $40 \unit{mT}$.
+
+        \item For the removal of the slow evaporating component, the drying temperature of the oven has been varied, a heating plate has been used instead and it was studied whether an open or closed container makes a difference.
+      \end{itemize}
+      The quality of the varied samples has been studied by scanning electron microscopy.
+      Due to the large number of micrographs, the observed results are only reported qualitatively.
+
+    \paragraphNewLine{Variation of Nanoparticle Shape and Material}
+      To show that the method is transferable to other oleic acid-ligated nanoparticles, further batches of nanoparticles have been drop casted according to the same drop casting protocol.
+
+      To study the monolayer formation of nanospheres, a dispersion of \textit{n}-hexane with $0.15 \unit{mg \, mL^{-1}}$ cobalt ferrite nanospheres having a diameter of $6.8 \unit{nm}$ and a size distribution of $5 \unit{\%}$ is prepared with $2 \unit{\%}$ octadecene as addend and drop casted on a silicon substrate.
+      The sample is dried in a oven as previously discussed and named Ol-CoFe-S-HexOct.
+
+      For iron oxide nanocubes, a dispersion of \textit{n}-heptane with $0.13 \unit{mg \, mL^{-1}}$ nanocubes having an edge length of $11.3 \unit{nm}$ and a size distribution of $8\unit{\%}$ is prepared and similarly drop casted and named Ol-Fe-C-HepOct.
+
+      Both nanoparticle batches have been synthesized according to the oleate synthesis route.
+      As a full study of the thereby produced monolayers and their respective nanoparticle characterizations would inflate this thesis, the manufactured samples are only discussed superficially by SEM and the full sample and nanoparticle characterization is not presented.
 
     \paragraphNewLine{Drop-Casting of Ac-CoFe-C and Ac-CoFe-C-2}
       For the study of magnetic monolayers, samples from Ac-CoFe-C and Ac-CoFe-C-2 are drop casted on a silicon substrate.

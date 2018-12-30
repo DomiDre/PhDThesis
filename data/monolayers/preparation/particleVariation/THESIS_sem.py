@@ -13,9 +13,12 @@ plt.style.use('phdthesis')
 from EM.sem_fft import SEM_FFT
 import matplotlib.patches as patches
 
-def plot_tiffile(semFilepath, sample_name, x0=None, y0=None):
+def plot_tiffile(semFilepath, sample_name, x0=None, y0=None, savelabel=None):
   chapter = 'monolayers'
-  savefile = chapter + '_SEM_' + sample_name
+  if savelabel is None:
+    savefile = chapter + '_SEM_' + sample_name
+  else:
+    savefile = chapter + '_SEM_' + savelabel
 
   semFFT = SEM_FFT()
   semFFT.load_tif_file(semFilepath)
@@ -25,10 +28,5 @@ def plot_tiffile(semFilepath, sample_name, x0=None, y0=None):
   semFFT.fig.savefig(cwd + '/' + savefile, bbox_inches='tight')
   semFFT.fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')
 
-# plot_tiffile(cwd+"/DD192_Hep_1_2_control_08.tif", 'ML-SV-HepOct', 0.57, 0.9)
-# plot_tiffile(cwd+"/DD192_Hex1_2_10.tif", 'ML-SV-HexOct', 0.57, 0.9)
-# plot_tiffile(cwd+"/DD192_Hex2_2_03.tif", 'ML-SV-HexTet', 0.58, 0.9)
-# plot_tiffile(cwd+"/DD192_Pen2_2_109.tif", 'ML-SV-PenOct', 0.57, 0.9)
-# plot_tiffile(cwd+"/DD200_8_05.tif", 'Ol-Fe-C-HepOct', 0.54, 0.9)
-# plot_tiffile(cwd+"/DD117_03_09.tif", 'Ol-CoFe-S-HexOct', 0.475, 0.9)
-plot_tiffile(cwd+"/DD172_1_04.tif", 'ML-SV-HexNone', 0.52, 0.9)
+plot_tiffile(cwd+"/DD200_8_05.tif", 'Ol-Fe-C-HepOct', 0.54, 0.9)
+plot_tiffile(cwd+"/DD117_03_09.tif", 'Ol-CoFe-S-HexOct', 0.475, 0.9)

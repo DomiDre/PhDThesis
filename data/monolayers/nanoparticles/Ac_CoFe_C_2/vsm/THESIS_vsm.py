@@ -17,7 +17,7 @@ from modelexp.data import XyemData, MultiData
 datfile = 'fit_result.dat'
 
 chapter = 'monolayer'
-sample_name = 'Ac_CoFe_C'
+sample_name = 'Ac_CoFe_C_2'
 
 savefile = chapter + '_VSM_' + sample_name
 

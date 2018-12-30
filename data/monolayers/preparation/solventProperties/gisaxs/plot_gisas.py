@@ -118,7 +118,7 @@ def plot_gisas(filepath, sample_name, f, A10, q10, dq10):
 
   pcm = ax.pcolormesh(qy, qz, data.T,\
                       norm=mcolors.LogNorm(),\
-                      cmap=obj.cmap, vmin = 1e-8, vmax=15e-6)
+                      cmap=obj.cmap, vmin = 1e-9, vmax=15e-6)
   ax.axhline(qz_min, color='white', marker='None', alpha=0.5)
   ax.axhline(qz_max, color='white', marker='None', alpha=0.5)
   # divider3 = make_axes_locatable(ax)
@@ -141,11 +141,11 @@ def plot_gisas(filepath, sample_name, f, A10, q10, dq10):
   data_right = qyslice>0.06
   ax2.errorbar(
     qyslice[data_left], I_qyslice[data_left], sI_qyslice[data_left],
-    linestyle='None', capsize=0, elinewidth=1, color='#ca0020'
+    linestyle='-', capsize=0, elinewidth=1, color='#ca0020'
   )
   ax2.errorbar(
     qyslice[data_right], I_qyslice[data_right], sI_qyslice[data_right],
-    linestyle='None', capsize=0, elinewidth=1, color='#ca0020'
+    linestyle='-', capsize=0, elinewidth=1, color='#ca0020'
   )
   if dq10 is not None:
     plot_width = 0.1

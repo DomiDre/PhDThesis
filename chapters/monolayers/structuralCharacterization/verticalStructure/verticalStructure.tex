@@ -10,27 +10,6 @@
   Parrats recursive method is most efficient for samples that have in average a constant lateral scattering length density (SLD) for relative large parts of their height, as it models the density profile using slabs and interfacial roughness as parameters.
   This is beneficial for the case of nanocubes in a square lattice, as they can be described by very few parameters.
 
-  \begin{figure}[tb]
-    \centering
-    \includegraphics{monolayers_structure_verticalModel}
-    \caption{\label{fig:monolayers:structure:verticalModel}Model for a square array of nanocubes depicted as cartoon of the cross-section (left) and the expected resulted shape of the vertical density structure (right). The sample can be modeled by a multilayer system of silicon (light gray), silicon dioxide (dark gray), oleic acid (brown) and cobalt ferrite (orange). }
-  \end{figure}
-
-  The model that is used in this section to discuss reflectometry data is depicted schematically in \reffig{fig:monolayers:structure:verticalModel}.
-  The lower gray area represents the silicon substrate with the possibility of a silicion dioxide (\ch{SiO2}) or another organic residue layer in between substrate and nanocubes.
-  The average lateral density of a square array layer is modeled by a single slab, with lower density slabs for possible oleic acid spacers (OA) around it.
-  Due to the different surroundings for both OA layer (silicon/OA/particle, particle/OA/air), the density and thickness of each is allowed to vary independently.
-  And at last, which is not depicted in \reffig{fig:monolayers:structure:verticalModel}, the interfaces are not clear cuts in the vertical plane but have a certain interfacial roughness, which are treated by roughness parameters in the model for each type of interface.
-
-  In total the ideal model has $8$ structural parameters: $4$ parameters to describe the thickness of the nanocubes, the two OA and the \ch{SiO2} layers and $4$ roughness parameters for the interfaces \ch{Si}/\ch{SiO2}, \ch{SiO2}/OA, OA/nanocube and OA/air.
-  Additionally it has $5$ parameters to describe the SLD of the nanocubes, the two OA, the \ch{SiO2} and the substrate layer.
-  By complementary experiments the number of parameters can be reduced a little.
-  The edge length of the nanocubes is already determined by the small-angle scattering experiments and can be fixed in the model.
-  As also SLD is determined by SAS, the parameter can be translated to a packing density of the nanocubes in reflectometry.
-  Furthermore, the substrate properties and the check for a \ch{SiO2} layer is measured from an empty wafer, which in theory further determines the SLD of \ch{Si}, the \ch{SiO2} thickness and SLD and the \ch{Si}/\ch{SiO2} roughness.
-  Additional to the described model property parameters, instrumental parameters are included in the model: the instrumental resolution needs to be considered either by including angular divergence and energy resolution or by using the resolution function that is known from the instrument.
-  Also as the sample alignment has finite precision, a small linear shift in $q$ is allowed in the model.
-
   The X-ray reflectometry data has been measured at ambient conditions on an Bruker D8 instrument at the \textsc{Forschungszentrum J\"ulich}, which is described in \refsec{ch:instruments:laboratoryInstruments:xrr}.
   After definition of the model and its parameters, the parameter values are refined by applying the Levenberg-Marquardt algorithm \cite{Marquardt_1963_Analgo}, to minimize the figure of merit $\mathrm{FOM}$, which is defined here for reflectometry as
   \begin{align}

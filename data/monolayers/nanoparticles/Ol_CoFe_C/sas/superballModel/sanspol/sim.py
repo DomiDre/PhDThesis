@@ -12,6 +12,7 @@ from modelexp.fit import LevenbergMarquardt
 
 from thesis_utils.materials import sld_xray_GALAXI, sld_neutrons_5A
 import scipy as sp
+import datetime
 app = Cli()
 app.setExperiment(Sanspol)
 dataRef = app.setData(XyerData)
@@ -74,14 +75,38 @@ class ModifiedSuperballCSSCoupledSigDOA(SuperballCSSCoupledSigDOA):
     self.calcSLD()
     super().calcModel()
 
-  def calcMagneticModel(self):
-    self.calcSLD()
-    super().calcMagneticModel()
+  # def calcMagneticModel(self):
+  #   self.calcSLD()
+  #   super().calcMagneticModel()
+
+    # particleSize:        52.9730432 (init = 53.62415)
+    # dShell:              24.2804195 (init = 21.98288)
+    # dSurfactant:         14.9579410 (init = 15.15999)
+    # pVal:                3.65347231 (init = 3.342915)
+    # sldCore_saxs:        5.148667e-05 (fixed)
+    # sldShell_saxs:       4.128062e-05 (fixed)
+    # sldSurfactant_saxs:  8.52e-06 (fixed)
+    # sldSolvent_saxs:     8.01e-06 (fixed)
+    # sigParticleSize:     0.04814643 (init = 0.05454183)
+    # sigD:                0.32003848 (init = 0.3458353)
+    # i0_saxs:             0.02538755 (init = 0.02410723)
+    # bg_saxs:             0 (fixed)
+    # orderHermite:        5 (fixed)
+    # orderLegendre:       10 (fixed)
+    # i0Oleic:             0.84965279 (init = 0.9518238)
+    # rOleic:              21 (fixed)
+    # x:                   1 (fixed)
+    # sldCore_sans:        6.033778e-06 (fixed)
+    # sldShell_sans:       5.938325e-06 (fixed)
+    # sldSurfactant_sans:  7.8e-08 (fixed)
+    # sldSolvent_sans:     5.664e-06 (fixed)
+    # i0_sans:             0.13392160 (init = 0.1225224)
+    # bg_sans:             0.01326956 (init = 0.01344027)
 
 modelRef = app.setModel(ModifiedSuperballCSSCoupledSigDOA, [Magnetic, DataResolution])
 modelRef.setResolution(['sans'])
-modelRef.setParam("magSldCore", 2e-7,  minVal = 0, maxVal = 5e-06, vary = True)
-modelRef.setParam("magSldShell", 3.2842e-07,  minVal = 0, maxVal = 5e-06, vary = False) #3.2842e-07 +/- 2.6516e-08 (8.07%)
+modelRef.setParam("magSldCore", 5e-7,  minVal = 0, maxVal = 5e-06, vary = True)
+modelRef.setParam("magSldShell", 2.8799999999999993e-07,  minVal = 0, maxVal = 5e-06, vary = True)
 modelRef.setConstantParam("sin2alpha", 0.9974654)
 
 modelRef.setConstantParam("particleSize",    51.3053730)
@@ -100,8 +125,52 @@ modelRef.setConstantParam("sldSurfactant", 0.078e-6)
 modelRef.setConstantParam("sldSolvent", 5.664e-6)
 modelRef.setConstantParam('orderHermite', 5)
 modelRef.setConstantParam('orderLegendre', 10)
+modelRef.updateModel()
 
-fit = app.setFit(LevenbergMarquardt)
-fit.printIteration = 1
-fit.fit()
-fit.exportResult('fit_result.dat')
+# save model
+modelData_la_p = modelRef.getModelset(0)
+modelData_la_m = modelRef.getModelset(1)
+modelData_sa_p = modelRef.getModelset(2)
+modelData_sa_m = modelRef.getModelset(3)
+q_la_p = modelData_la_p.getDomain()
+I_la_p = modelData_la_p.getValues()
+r_la_p = modelData_la_p.r
+sld_la_p = modelData_la_p.sld
+q_la_m = modelData_la_m.getDomain()
+I_la_m = modelData_la_m.getValues()
+r_la_m = modelData_la_m.r
+sld_la_m = modelData_la_m.sld
+q_sa_p = modelData_sa_p.getDomain()
+I_sa_p = modelData_sa_p.getValues()
+r_sa_p = modelData_sa_p.r
+sld_sa_p = modelData_sa_p.sld
+q_sa_m = modelData_sa_m.getDomain()
+I_sa_m = modelData_sa_m.getValues()
+r_sa_m = modelData_sa_m.r
+sld_sa_m = modelData_sa_m.sld
+
+with open(f'superballData_simulation.xy', 'w') as f:
+  f.write(f'#Superball Data generated at {datetime.datetime.now()}\n')
+  f.write(f'#[[Parameters]]\n')
+  for param in modelRef.params:
+    f.write(f'#{param}\t{modelRef.params[param].value}\n')
+  f.write(f'#\n')
+  f.write(f'#[[Data]] la_p\n')
+  f.write(f'#q\tI\n')
+  for j in range(len(q_la_p)):
+    f.write(f'{q_la_p[j]}\t{I_la_p[j]}\n')
+  f.write(f'#\n')
+  f.write(f'#[[Data]] la_m\n')
+  f.write(f'#q\tI\n')
+  for j in range(len(q_la_m)):
+    f.write(f'{q_la_m[j]}\t{I_la_m[j]}\n')
+  f.write(f'#\n')
+  f.write(f'#[[Data]] sa_p\n')
+  f.write(f'#q\tI\n')
+  for j in range(len(q_sa_p)):
+    f.write(f'{q_sa_p[j]}\t{I_sa_p[j]}\n')
+  f.write(f'#\n')
+  f.write(f'#[[Data]] sa_m\n')
+  f.write(f'#q\tI\n')
+  for j in range(len(q_sa_m)):
+    f.write(f'{q_sa_m[j]}\t{I_sa_m[j]}\n')

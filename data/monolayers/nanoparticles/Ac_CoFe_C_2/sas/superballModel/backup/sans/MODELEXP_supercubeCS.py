@@ -37,12 +37,12 @@ modelRef.setResolution()
 #    orderLegendre:  10 (fixed)
 #    i0Oleic:        0.40822231 +/- 0.08602899 (21.07%) (init = 0.4289)
 #    rOleic:         20.3698272 +/- 0.76020661 (3.73%) (init = 23.36)
-modelRef.setParam("i0", 0.03115352,  minVal = 0, maxVal = 0.6, vary = True)
-modelRef.setParam("d", 14.1,  minVal = 0, maxVal = 30, vary = False)
-modelRef.setParam("bg", 0.00401967, minVal = 0, maxVal = 0.01, vary = True)
+modelRef.setParam("i0", 0.02121,  minVal = 0, maxVal = 0.6, vary = True)
+modelRef.setParam("d", 14.5,  minVal = 0, maxVal = 30, vary = False)
+modelRef.setParam("bg", 0.00448148, minVal = 0, maxVal = 0.01, vary = True)
 
-modelRef.setParam("rOleic", 19.6172,  minVal = 0, maxVal = 40, vary = True)
-modelRef.setParam("i0Oleic", 0.4550821,  minVal = 0, maxVal = 10, vary = True)
+modelRef.setParam("rOleic", 20.3698,  minVal = 0, maxVal = 40, vary = True)
+modelRef.setParam("i0Oleic", 0.40822,  minVal = 0, maxVal = 10, vary = True)
 
 modelRef.setConstantParam("r", 42.8959813)
 modelRef.setConstantParam("pVal", 2.16472545)
@@ -53,6 +53,8 @@ modelRef.setConstantParam("sldShell", 0.078e-6)
 modelRef.setConstantParam("sldSolvent", 5.664e-6)
 modelRef.setConstantParam('orderHermite', 10)
 modelRef.setConstantParam('orderLegendre', 10)
+
+modelRef.updateModel()
 
 fit = app.setFit(LevenbergMarquardt)
 fit.printIteration = 1
