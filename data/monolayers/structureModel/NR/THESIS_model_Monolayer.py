@@ -15,6 +15,8 @@ import warnings
 from modelexp.data import MultiData, XyemData, XyeData
 
 from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_variant
+
+from matplotlib.legend_handler import HandlerTuple
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
@@ -69,31 +71,40 @@ ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.errorbar(q_p, I_p, sI_p,\
   linestyle='None', color=colors['sanspol_p_sa_data'],
   label='NR, $I_u$', zorder=0, capsize=0, marker='.')
-ax.plot(q_p, Imodel_p, zorder=1, color=colors['sanspol_p_model'],    marker='None')
-
 ax.errorbar(q_m, I_m, sI_m,\
   linestyle='None', color=colors['sanspol_m_sa_data'],
   label='NR, $I_d$', zorder=0, capsize=0, marker='.')
+ax.plot(q_p, Imodel_p, zorder=1, color=colors['sanspol_p_model'],    marker='None')
 ax.plot(q_m, Imodel_m, zorder=1, color=colors['sanspol_m_model'],
   marker='None')
 
-ax.legend(loc='lower left', fontsize=inset_fontsize)
+
+handles, labels = ax.get_legend_handles_labels()
+
+ax.text(0.05, 0.13, labeltext,
+  transform=ax.transAxes, fontsize=inset_fontsize)
+ax.legend(
+  [(handles[0], handles[1])],
+  ['$R^{+},\,R^{-}$'],
+  handler_map={tuple: HandlerTuple(ndivide=None)},
+  fontsize=inset_fontsize,
+  loc='lower left')
+
+# ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q_z} \, / \, \AA^{-1}$")
 ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax.text(0.05, 0.2, labeltext,
-  transform=ax.transAxes, fontsize=inset_fontsize)
 ax_sld.plot(r, sld, marker='None',
   color=colors['sanspol_sld'])
 ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
-ax_sld.set_ylabel("$SLD \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
-ax_sld.set_xticks([0, 7.5, 15])
+ax_sld.set_ylabel(r"$\rho_\mathrm{nuc.} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
+ax_sld.set_xticks([0, 10, 20])
 ax_sld.set_yticks([0, 1, 2, 3])
-ax_sld.set_xlim([-2.5, 20])
-ax_sld.set_ylim([-0.25, 3.6])
+ax_sld.set_xlim([-4, 25])
+ax_sld.set_ylim([0, 3.6])
 ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 fig.savefig(thesisimgs + '/' + refl_pngfile)

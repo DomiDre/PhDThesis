@@ -127,9 +127,9 @@ ax_sld.plot(r_oa, sld_oa, marker='None',
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_{mag} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 2, 4, 6, 8])
-ax_sld.set_yticks([0, 2, 4, 6, 8])
+ax_sld.set_yticks([0, 0.5, 1])
 ax_sld.set_xlim([0, 9])
-ax_sld.set_ylim([0, 9])
+ax_sld.set_ylim([0, 1.2])
 ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 

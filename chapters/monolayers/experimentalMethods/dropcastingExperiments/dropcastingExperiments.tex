@@ -92,31 +92,48 @@
       As combination of alkan and alkene, hexane with tetradecene, and $\mathit{n}$-pentane, $\mathit{n}$-hexane and $\mathit{n}$-heptane with 1-octadecene are discussed.
 
       The GISAXS experiments were performed at GALAXI ($\lambda \eq 1.34 \angstrom$) by measuring the scattering under an grazing-incidence angle of $\alpha_i \eq 0.11^\circ$ over an integrated time of $4 \unit{h}$ each.
+      The sample-to-detector distance is set to $1.733 \unit{m}$ for all measurements, which is confirmed by a calibration measurement of silver behenate.
+      The silver behenate measurement measurement is furthermore used to determine the beam center position that is used to transform the detector image from pixel coordinates to $(q_y,\, q_z)$.
 
       Within the theory of paracrystals, GISAXS provides a direct measure of the lattice structure, lattice constant and the coherence length \cite{Renaud_2009_Probi}.
       For the studied nanocubes a square array is expected as long-range ordered structure.
       To approve the achieved order, the GISAXS data in the Yoneda band is regarded and the peak positions as well as the peak broadening is determined.
       For Gaussian disorder of the nearest neighbor positions on a square array, the peak broadening is described by a Lorentzian function as shown in \refapp{ch:appendix:calculations:paracrystal} and reads for the (10) peak
       \begin{align}
-        I(q_y) \eq \frac{A} {1 + \biggl(2\frac{q_y - q_{hk}}{\Delta q_{hk}}\biggr)^2},
+        I(q_y) \eq \frac{A} {1 + \biggl(2\frac{q_y - q_{10}}{\gamma_{10}}\biggr)^2},
       \end{align}
-      where $A$ is the intensity of the (10) peak, $q_{10}$ the peak center and $\Delta q_{10}$ the FWHM.
+      where $A$ is the intensity of the (10) peak, $q_{10}$ the peak center and $\gamma_{10}$ the FWHM of the Lorentzian.
       For a square lattice, the expected peak positions are given by
       \begin{align}\label{eq:monolayers:preparation:solventVariation:squareLatticeIndices}
         q_{hk} \eq \frac{2 \pi}{a} \sqrt{h^2 + k^2},
       \end{align}
       where $h$, $k$ are integers and $a$ the lattice constant of the square array.
 
-      By fitting the (10) peak in the Yoneda band to a Lorentzian, $q_{10}$ and $\Delta q_{10}$ are determined for each sample, where from $q_{10}$ the lattice constant is obtained by
+      To account for a Gaussian peak broadening due to instrumental resolution, a Voigt function $V$ \cite{Olver_2010_Handb}, which is a convolution of a Gaussian $G$ and Lorentzian $L$ function, is fit to the peak to determine the peak center $q_{hk}$ and the Lorentzian peak width $\gamma_{hk}$
+      \begin{align}
+        \begin{split}
+          V(x;\,q_{hk},\,\sigma,\,\gamma_{hk}) &\eq \int_{-\infty}^\infty G(x^\prime;\,\sigma) L(x - q_{hk} - x^\prime;\, \gamma_{hk}) \dint x^\prime,\\
+          &= \frac{\Re e (w(z))}{\sigma \sqrt{2 \pi}}\\
+          &\mathrm{with\,} z\eq \frac{x - q_{hk} + i\gamma_{hk}}{\sigma \sqrt{2}},
+        \end{split}
+      \end{align}
+      where $w(z)$ is the Faddeeva function that is implemented in the SciPy package \cite{Oliphant_2006_Guide}.
+      The Gaussian contribution to the Voigt function is fixed to the deviation determined from the direct beam measurement of GALAXI $\sigma \eq 0.0084(3) \unit{nm^{-1}}$ (\reffig{fig:lss:galaxi:directBeam}).
+      By fitting the (10) peak in the Yoneda band to the Voigt function, $q_{10}$ and $\gamma_{10}$ are determined for each sample.
+      From $q_{10}$ the lattice constant is obtained by
       \begin{align}
         a &\eq \frac{2 \pi}{q_{10}}.
       \end{align}
-      By comparing the expected peak positions for the given lattice constant, to the observed data in the Yoneda band, the square lattice structure is evaluated.
-      From $\Delta q_{10}$ the coherence length is given by
+      From the obtained lattice constant, the expected peak positions for a square lattice structure are calculated by \refeq{eq:monolayers:preparation:solventVariation:squareLatticeIndices}.
+      From $\gamma_{10}$ the coherence length is given by
       \begin{align}
-        d_{coh.} &\eq \frac{4 \pi^2}{\Delta q_{10} - \Delta q_{D.B.}},
+        d_{coh.} &\eq \frac{4 \pi^2}{\gamma_{10}},
       \end{align}
-      where the FWHM of the peak is corrected for $\Delta q_{D.B.} \eq 0.0195(7) \unit{nm^{-1}}$, the FWHM of the direct beam given for GALAXI in \reffig{fig:lss:galaxi:directBeam}.
+      as shown in \refapp{ch:appendix:calculations:paracrystal}.
+      The uncertainty in the nearest neighbour position is deduced in the paracrystal model from
+      \begin{align}
+        \sigma_{\mathrm{n.N.}} \eq \frac{a^3}{L_\mathrm{coh.}}.
+      \end{align}
 
     \paragraphNewLine{Oleic Acid Addend}
       Monolayers from Ac-CoFe-C-3 are prepared with varied oleic acid content to study its influence on the monolayer formation.

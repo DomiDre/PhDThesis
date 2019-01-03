@@ -13,6 +13,10 @@ def gaussian(x, p):
     A, mu, sig, c = p['A'], p['mu'], p['sig'], p['c']
     return A*np.exp(- ((x-mu)/sig)**2 / 2.)+c
 
+def lorentzian(x, p):
+    A, mu, sig, c = p['A'], p['mu'], p['sig'], p['c']
+    return A* 1/(1 + (2*(x-mu)/sig)**2 ) +c
+
 def residuum(p, q, I, sI, Imodel):
     return (I - Imodel(q, p))/sI
 

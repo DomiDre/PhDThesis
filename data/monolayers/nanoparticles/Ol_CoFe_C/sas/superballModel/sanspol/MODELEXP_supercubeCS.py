@@ -80,8 +80,8 @@ class ModifiedSuperballCSSCoupledSigDOA(SuperballCSSCoupledSigDOA):
 
 modelRef = app.setModel(ModifiedSuperballCSSCoupledSigDOA, [Magnetic, DataResolution])
 modelRef.setResolution(['sans'])
-modelRef.setParam("magSldCore", 2e-7,  minVal = 0, maxVal = 5e-06, vary = True)
-modelRef.setParam("magSldShell", 3.2842e-07,  minVal = 0, maxVal = 5e-06, vary = False) #3.2842e-07 +/- 2.6516e-08 (8.07%)
+modelRef.setParam("magSldCore", 1e-7,  minVal = 0, maxVal = 5e-06, vary = True)
+modelRef.setParam("magSldShell", 3.2842e-07,  minVal = 0, maxVal = 5e-06, vary = True) #3.2842e-07 +/- 2.6516e-08 (8.07%)
 modelRef.setConstantParam("sin2alpha", 0.9974654)
 
 modelRef.setConstantParam("particleSize",    51.3053730)

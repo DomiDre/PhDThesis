@@ -8,10 +8,16 @@
     For ML-Ac-CoFe-C-2, the sample has not been broken but instead an equivalent sample that has been prepared in parallel from the same dispersion, under the same conditions, is broken and viewed in SEM.
     The micrographs are measured at $5 \unit{kV}$ and the shown micrographs are measured by the back scattering electron detector.
 
-  \paragraphNewLine{X-Ray Reflectometry}
+  \paragraphNewLine{Reflectometry}
     Both samples ML-Ac-CoFe-C and ML-Ac-CoFe-C-2 have been measured with XRR using a Bruker D8 Advanced at the \textsc{Forschungszentrum J\"ulich} (\refsec{ch:instruments:laboratoryInstruments:xrr}).
-    A $q$-range of $0 \ldots 0.2 \unit{\angstrom^{-1}}$ has been measured by using the equipped Cu-K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and measuring an angle range of $2 \theta \eq 0 \ldots 1.5 \unit{^\circ}$ in $0.005 \unit{^\circ}$ steps over an integrated time of approximately $1 \unit{h}$.
-    For footprint correction (see \refsec{ch:methods:xrr}), the beam width is estimated by the size of the collimation slits, which is $0.2 \unit{mm}$, and the samples both have a width of $10 \unit{mm}$.
+    A $q$-range of $0 \ldots 0.4 \unit{\angstrom^{-1}}$ has been measured by using the equipped Cu-K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and measuring an angle range of $2 \theta \eq 0 \ldots 3 \unit{^\circ}$ in $0.005 \unit{^\circ}$ steps over an integrated time of approximately $1 \unit{h}$.
+    For footprint correction (\refsec{ch:methods:xrr}), the beam width is estimated by the size of the collimation slits, which is $0.2 \unit{mm}$, and the samples both have a width of $10 \unit{mm}$.
+
+    Furthermore, neutron reflectometry was measured for ML-Ac-CoFe-C at the D17 instrument in the Institute Laue-Langevin (\refsec{ch:lss:d17}).
+    D17 was operated in time-of-flight (TOF) mode and a $q$-range of $0 \ldots 0.2 \unit{\angstrom^{-1}}$ was obtained by measuring the reflectivity for the three incident angles $\alpha_i \eq 0.50^\circ ,\, 1.80^\circ ,\, 4.00^\circ$.
+    As the measurement was performed in TOF mode, no footprint correction needs to be applied.
+    For data reduction and estimation of the instrumental resolution the COSMOS software is used, which is maintained by the instrumental scientists \cite{Gutfreund_2018_Towar}.
+    The data used for the discussion of the nuclear structure of the monolayer, was obtained after zero-field cooling at $\mathrm{T} \eq 5 \unit{K}$ with polarized neutrons at a guide field of $B \eq 10 \unit{mT}$.
 
     \begin{figure}[tb]
       \centering
@@ -20,90 +26,63 @@
     \end{figure}
 
     The obtained reflectivities are discussed by using the model that is schematically depicted in \reffig{fig:monolayers:structure:verticalModel}.
-    The substrate is set to be silicon and on top a spacer layer of varied length and density is put to model either a layer of organic remnants or silicon dioxide between silicon and nanocubes.
-    The average lateral density of a square array layer is modeled by a single slab, with lower density slabs for possible oleic acid spacers (OA) around it.
-    The thickness and scattering length density of the nanocube layer is fixed to the edge length obtained from small-angle scattering.
-    Due to the different surroundings for both OA layers (silicon/OA/particle, particle/OA/air), the density and thickness of each oleic acid layer is allowed to vary independently.
-    And at last, which is not depicted in \reffig{fig:monolayers:structure:verticalModel}, the interfaces are not clear cuts in the vertical plane but have a certain interfacial roughness, which are treated by roughness parameters in the model for each type of interface.
-  
-    In total this model has $8$ structural parameters: $4$ parameters to describe the thickness of the nanocubes, the two OA and the \ch{SiO2} layers and $4$ roughness parameters for the interfaces \ch{Si}/\ch{SiO2}, \ch{SiO2}/OA, OA/nanocube and OA/air.
-    Additionally it has $5$ parameters to describe the SLD of the nanocubes, the two OA, the \ch{SiO2} and the substrate layer.
-    By complementary experiments the number of parameters can be reduced a little.
-    The edge length of the nanocubes is already determined by the small-angle scattering experiments and can be fixed in the model.
-    As also SLD is determined by SAS, the parameter can be translated to a packing density of the nanocubes in reflectometry.
-    Furthermore, the substrate properties and the check for a \ch{SiO2} layer is measured from an empty wafer, which in theory further determines the SLD of \ch{Si}, the \ch{SiO2} thickness and SLD and the \ch{Si}/\ch{SiO2} roughness.
-    Additional to the described model property parameters, instrumental parameters are included in the model: the instrumental resolution needs to be considered either by including angular divergence and energy resolution or by using the resolution function that is known from the instrument.
-    Also as the sample alignment has finite precision, a small linear shift in $q$ is allowed in the model.
-  
-    % As substrate, the scattering length density of silicon is fixed to the literature value at the given wavelength ($\rho_\mathrm{Si} \eq 20.062 \cdot \unit{10^{-5} \angstrom^{-2}}$) and a spacer layer is allowed for the case of a thin \ch{SiO2} or any organic residues in between silicon and the nanospheres.
+    The substrate is set to be silicon with a layer of silicon dioxide on top.
+    The average lateral density of a square array layer is modeled by a single slab of nanocubes (NC), with oleic acid (OA) slabs around it.
+    And at last, which is not depicted in \reffig{fig:monolayers:structure:verticalModel}, the interfaces are not clear cuts in the vertical plane, but have an interfacial roughness, which are included by Névot-Croce roughness factors in the model for each interface.
 
-    % \begin{figure}[!htbp]
-    %   \centering
-    %   \includegraphics{looselyPackedNP_sphereProfile}
-    %   \caption{\label{fig:looselyPackedNP:layerCharacterization:sphereProfile}Evaluation of the cross-section area fraction in comparison to a surrounding cylinder with respect to the height for a sphere with a core radius of $R$ and a oleic acid shell of thickness $D_\mathrm{surf.}$.}
-    % \end{figure}
-    % To model a nanosphere layer for the evaluation of the reflectivity of both SC-IOS-11 and SC-IOS-7, the area fraction of spheres in a layer needs to be formalized.
-    % The cross-sectional area with respect to an axis for a single sphere is given by a parabola, which is trivially derived using the Pythagorean theorem.
-    % For a sphere with a surfactant shell, \reffig{fig:looselyPackedNP:layerCharacterization:sphereProfile} can be used to determine the area fraction of the nanoparticle $\eta_\mathrm{part.}$ and the surfactant shell $\eta_\mathrm{surf.}$, which when evaluated with respect to a surrounding cylinder of radius $R_\mathrm{total} = R + D_\mathrm{surf.}$ are given by
-    % \begin{align}
-    %   \eta_\mathrm{part.} (z)
-    %     &\eq \begin{cases}
-    %     \eta \frac{R^{2} - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0<|z|<R, \\
-    %     0,                                            &\mathrm{else},
-    %     \end{cases}\\
-    %   \eta_\mathrm{surf.} (z)
-    %     &\eq \begin{cases}
-    %       \eta \frac{R_\mathrm{total} - R^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0<|z|<R, \\
-    %       \eta \frac{R_\mathrm{total}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R<|z|<R_\mathrm{total},\\
-    %       0,                                            &\mathrm{else},
-    %     \end{cases}
-    % \end{align}
-    % where $\eta$ is then the two-dimensional packing density of the surrounding cylinder in the layer.
-    % The scattering length density profile $\rho(z)$ of a layer of nanospheres is then given by
-    % \begin{align}
-    %   \label{eq:looselyPackedNP:layerCharacterization:sldFromAreaFraction}
-    %   \rho(z) \eq \rho_\mathrm{part.} \eta_\mathrm{part.}(z) + \rho_\mathrm{surf.} \eta_\mathrm{surf.}(z),
-    % \end{align}
-    % where $\rho_\mathrm{part.}$ and $\rho_\mathrm{shell}$ are the respective scattering length densities of the core and the shell.
+    In total this model has $4$ parameters to describe the thickness of the nanocubes, the two OA and the \ch{SiO2} layers and $5$ roughness parameters for the interfaces \ch{Si}/\ch{SiO2}, \ch{SiO2}/OA, OA/NC, NC/OA  and OA/air.
+    Additionally it has $4$ parameters to describe the SLD of silicon, the \ch{SiO2}, the nanocubes and the OA.
+    The edge length of the nanocubes has been determined by small-angle scattering experiments and is therefore fixed.
+    And the scattering length densities of the materials are fixed to the literature values, where for X-rays the imaginary part of the scattering length density is included to account for absorption by cobalt ferrite.
+    The used scattering length densities are tabulated in \reftab{tab:monolayers:charMethod:reflectometryScatteringLenghts}.
+    For the NC layer a packing density factor $\eta$ is multiplied to the scattering length density to account for the particle spacing.
+    The model totals therefore to $9$ refined parameters.
 
-    % For a particle with a core-shell structure additionally to the surfactant shell the formulation can be extended.
-    % For simplicity, the particle size radius $R_\mathrm{part.} = R_\mathrm{core} + D_\mathrm{shell}$ and the total nanoparticle radius including the surfactant as $R_\mathrm{total} = R_\mathrm{core} + D_\mathrm{shell} + D_\mathrm{surf.}$ is defined and then the area fractions of the three components are given by
-    % \begin{align}
-    %   \eta_\mathrm{core} (z)
-    %     &\eq \begin{cases}
-    %     \eta \frac{R_\mathrm{core}^{2} - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0 < |z|<R_\mathrm{core}, \\
-    %     0,                                               &\mathrm{else},
-    %     \end{cases}\\
-    %   \eta_\mathrm{shell} (z)
-    %     &\eq \begin{cases}
-    %       \eta \frac{R_\mathrm{part.}^2 - R_\mathrm{core}^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0 < |z|<R_\mathrm{core}, \\
-    %       \eta \frac{R_\mathrm{part.}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R_\mathrm{core}<|z|<R_\mathrm{part.} \\
-    %       0,                                            &\mathrm{else},
-    %     \end{cases}\\
-    %   \eta_\mathrm{surf.} (z)
-    %     &\eq \begin{cases}
-    %       \eta \frac{R_\mathrm{total}^2 - R_\mathrm{part.}^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0<|z|<R_\mathrm{part.}, \\
-    %       \eta \frac{R_\mathrm{total}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R_\mathrm{part.} < |z| < R_\mathrm{total}, \\
-    %       0,                                            &\mathrm{else}.
-    %     \end{cases}
-    % \end{align}
-    % And the scattering length density profile is then given by
-    % \begin{align}
-    %   \label{eq:looselyPackedNP:layerCharacterization:sldFromAreaFractionCoreShell}
-    %     \rho(z) \eq& \rho_\mathrm{core} \eta_\mathrm{core}(z) + \rho_\mathrm{shell} \eta_\mathrm{shell}(z) + \rho_\mathrm{surf.} \eta_\mathrm{surf.}(z),
-    % \end{align}
-    % where $\rho_\mathrm{part.}$ and $\rho_\mathrm{shell}$ are the respective scattering length densities of the core and the shell.
+    \begin{table}[ht]
+      \centering
+      \caption{\label{tab:monolayers:charMethod:reflectometryScatteringLenghts}Scattering length values fixed in the calculation of the reflectivity. For XRR the electronic SLD $\rho_\mathrm{el.}$ is calculated for Cu-K$\alpha$ ($\lambda \eq 1.54 \unit{\angstrom}$) and for NR the nuclear SLD $\rho_\mathrm{nuc.}$ is used \cite{Sears_1992_Neutr, BerkeleyLab_1993_asf}.}
+      \begin{tabular}{ l | c | c }
+        \textbf{SLD}  & $\rho_\mathrm{el.} \, / \unit{10^{-6} \angstrom^{-2}}$ & $\rho_\mathrm{nuc.} \, / \unit{10^{-6} \angstrom^{-2}}$ \\
+        \hline
+        $\ch{Si}$                                 & $20.122 - 0.459 i$   & $2.079$  \\
+        $\ch{SiO2}$                               & $22.724 - 0.294 i$   & $4.186$  \\
+        Oleic Acid ($\ch{C18H34O2}$)              & $8.520  - 0.013 i$   & $0.078$  \\
+        Ac-CoFe-C ($\ch{Co_{0.66}Fe_{2.22}O4}$)   & $39.445 - 3.663 i$   & $6.194$  \\
+        Ac-CoFe-C-2 ($\ch{Co_{0.8} Fe_{2.13}O4}$) & $39.963 - 3.749 i$   & $6.135$  \\
+        \hline
+      \end{tabular}
+    \end{table}
 
-    % In this formulation it is nowstraight-forward to extend it to overlapping nanosphere layers by summing the respective area fractions $\eta_x$ for each layer before determining the SLD by \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFraction} or \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFractionCoreShell}.
-    % This procedure is performed for both SC-IOS-11 and SC-IOS-7, where as initial model a stack of nanospheres is given.
-    % Each layer is pitched on the vertical axis by $\sqrt{8/3} R_\mathrm{total}$, which is the vertical distance of two sphere centers for an ideal close sphere packing if $R_\mathrm{total}$ is the radius of a hard-sphere.
-    % The model is fitted by varying the two dimensional layer packing fraction $\eta$ and a shift from the initially assumed pitch $\Delta z$ for each layer respectively.
+    % Additional to the described model property parameters, instrumental parameters are included in the model: the instrumental resolution needs to be considered either by including angular divergence and energy resolution or by using the resolution function that is known from the instrument.
+    % Also as the sample alignment has finite precision, a small linear shift in $q$ is allowed in the model.
 
-    % The parameters for the nanosphere size, surfactant thickness and scattering length density are used as obtained from SAS, noting that the SLD are readjusted for the different X-ray wavelength at the reflectometer with respect
-    % to the small-angle scattering experiments.
-    % For SC-IOS-11, the core-shell structure obtained by SAXS and SANS on IOS-11 (\refsec{sec:looselyPackedNS:nanoparticle:sas}) is used for the nanospheres, and for SC-IOS-7 the single phase structure of IOS-7 is used.
-    % The particle size distribution is neglected in the formulation of the stack of nanoparticles as it is phenomenologically included in the fitted roughness of the layers.
-    % As roughness model a linearly increasing roughness $\sigma \eq \sigma_0 + \Delta \sigma z$ is used to describe a possibly increasing roughness with stack height.
+    The parameter values are refined by applying the Levenberg-Marquardt algorithm \cite{Marquardt_1963_Analgo}, to minimize the figure of merit $\mathrm{FOM}$, which is defined here for reflectometry as a $\chi^2$ function on the logarithmic scale
+    \begin{align}
+      \mathrm{FOM} \eq \sum_{q_i} \biggl( \log(I) - \log(I_\mathrm{model})\biggr)^2.
+    \end{align}
+    Due to the strong weight of the reflectivity in the small-$q$ range, the errorbars are ignored for the refinement to focus the algorithm on finding a model that describes the whole dynamic range properly.
+
+    From the refined packing density, the relative particle spacing $a_{p-p}$ is estimated by assuming that the measured surface is fully covered by square lattice of nanocubes with SLD $\rho_\mathrm{NC}$ and the particle spacing is filled with oleic acid of SLD $\rho_\mathrm{OA}$ and thus
+    \begin{align}
+      \label{eq:monolayers:characterization:particleSpacing}
+      \begin{split}
+        &\eta \rho_\mathrm{NC}  \eq \frac{a^2}{a_{p-p}^2} \rho_\mathrm{NC} + \frac{a_{p-p}^2 - a^2}{a_{p-p}^2} \rho_\mathrm{OA},\\
+        \Rightarrow& a_{p-p} \eq a \sqrt {\frac{\rho_\mathrm{NC} - \rho_\mathrm{OA} }{\eta \rho_\mathrm{NC} - \rho_\mathrm{OA}}}
+      \end{split}
+    \end{align}
+
+    \paragraphNewLine{Grazing-Incidence Small-Angle Scattering}
+      The sample ML-Ac-CoFe-C-2 has been measured by GISAXS by using the GALAXI instrument (\refsec{ch:lss:galaxi}) ($\lambda \eq 1.34 \unit{\angstrom}$).
+      The incident angle was chosen to $0.15 ^\circ$ at a sample-to-detector distance of $1.733 \unit{m}$.
+      An initial evaluation of the GISAXS is performed analogue to the discussion of the GISAXS detector images obtained for the samples from solvent variation in \refsec{sec:monolayers:nanoparticle:dropcastingExperiments} by fitting a Voigt function to the first order peak in the Yoneda band.
+      From the fitted parameters, the lattice constant $a$, coherence length $L_\mathrm{coh.}$ and uncertainty of the nearest neighbour position $\sigma_\mathrm{n.N.}$ is estimated.
+
+      For a more precise investigation of the grazing-incidence scattering, the BornAgain software package \cite{Burle_2018_borna} is used to simulate the two dimensional detector data by the model of nanocubes with a paracrystalline square lattice interference function.
+      The edge length, it's size distribution and the scattering length density of the nanocubes are set to the values obtained from the nanoparticle characterization by small-angle scattering in \refsec{sec:monolayers:nanoparticles}.
+      Similar to the vertical structure model, it is assumed the sample is a multi layer structure with a \ch{Si} substrate, a \ch{SiO2} intermediate layer and the nanocubes sit within an oleic acid layer.
+      As layer thickness, the same values as in XRR and the SLD of the layers are calculated from literature using the GALAXI wavelength of $1.34 \unit{\angstrom}$ for each material respectively.
+      The Gaussian broadening is included to simulate the instrumental resolution of GALAXI.
+      In the simulation, it is assumed that the orientation of the lattice is on average random with respect to the beam and the probability functions of the position uncertainty in the square lattice paracrystal are assumed to be Gaussian functions.
 
   \paragraphNewLine{Polarized Neutron Reflectometry}
     % Polarized neutron reflectometry has been performed on SuperADAM at the ILL for all discussed samples at a temperature of $300 \unit{K}$ and at a low temperature of $30 \unit{K}$.
@@ -143,41 +122,7 @@
     % Here $R_\pm$ are the reflectivities calculated for the scattering length densities $\rho_\mathrm{nuc} \pm \rho_\mathrm{mag}$, $P$ is the polarization efficiency of the instrument and $\gamma$ the angle between the sample magnetization and the neutron polarization.
     % The samples that show magnetic contrast are discussed with regard to being homogeneously magnetized such as measured in VSM, and it is studied how the agreement between the calculated and measured reflectivity changes when the magnetic density in the respective layers is allowed to be varied independently.
 
-    
-  \paragraphNewLine{Grazing-Incidence Small-Angle X-ray Scattering}
-    % All spin-coated samples were measured at the beam line BM26B \refsec{ch:lss:BM26B} in the ESRF at a wavelength of $\lambda \eq 1.03 \unit{\angstrom}$.
-    % For each sample a measurement was performed at a large sample-to-detector distance of $6.54 \unit{m}$ and at a shorter sample-to-detector distance of $2.90 \unit{m}$.
-    % The collimation slit is set to $0.3 \times 0.5 \unit{mm^2}$ for each measurement, and every sample is evaluated at an incident angle of $0.2 \unit{^\circ}$.
 
-    % For both samples, a strip of $0.02 \nm^{-1}$ width along the Yoneda band is integrated and compared to the form factor obtained by small-angle X-ray scattering.
-    % The scattered intensity for the nanostructure along the Yoneda band is calculated as product of a structure factor and the form factor
-    % \begin{align}
-    %   I(q) \eq I_0 S(q) |P(q)|^2 + I_\mathrm{bg},
-    % \end{align}
-    % where $I_0$ is a scaling factor and $I_\mathrm{bg}$ is a incoherent noise background that is not directly associated with the scattering from the nanoparticles.
-    % The used form factor $|P(q)|^2$ is hereby given by using the best fit of the nanoparticles from SAXS as determined in \refsec{sec:looselyPackedNS:nanoparticle:sas}.
-    % As no calibration measurement has been performed at BM26B, the data is given in the arbitrary count units of the detector.
-    % The structure factor for hard spheres of radius $R_\mathrm{HS}$ and with a packing fraction $\eta$ can be calculated analytically in the Percus-Yervick approximation \cite{Percus_1958_Analy, Wertheim_1963_Exact, Pedersen_1997_Analy} and is given by
-    % \begin{align}
-    %   S(q) &\eq \frac{1}{1 + 24 \eta \frac{G(2 q R_\mathrm{HS})}{2 q R_\mathrm{HS}} }
-    % \end{align}
-    % with
-    % \begin{align}
-    %   \begin{split}
-    %     G(x)   &\eq \frac{(1 + 2\eta )^2}{(1 - \eta )^4} \cdot \frac{ \sin(x) - x \cos(x)}{x^2}\\
-    %            & + \frac {-6 \eta (1 + \eta / 2)^2}{(1 - \eta )^4} \cdot \frac{2 x sin(x) + (2 - x^2) \cos(x) - 2}{x^3}\\
-    %            & + \frac{\eta (1 + 2\eta )^2}{2(1 - \eta )^4} \cdot \frac{-x^4 \cos(x) + 4 [(3 x^2 - 6) \cos(x) +(x^3 - 6 x) \sin(x) + 6]}{x^5}\\
-    %   \end{split}
-    % \end{align}
-
-    % From the packing fraction and the hard-sphere radius, the Wigner-Seitz radius is determined, which estimates the space an individual nanosphere is given in the sample by
-    % \begin{align}
-    %   \begin{split}
-    %     \label{eq:looselyPackedNP:layers:wignerSeitz}
-    %     \frac{4 \pi}{3} \bar{r}^3 &\eq \frac{V}{N}\\
-    %     \Rightarrow \bar{r}       &\eq \frac{R_\mathrm{HS}}{\sqrt[3]{\eta}},
-    %   \end{split}
-    % \end{align}
 
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
