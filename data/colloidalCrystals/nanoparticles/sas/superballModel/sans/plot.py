@@ -18,7 +18,7 @@ from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_vari
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
-sample_name = 'DD67'
+sample_name = 'DD144'
 Chapter = ''
 fit_file = cwd + "/fit_result.dat"
 sld_file = cwd + "/fit_sld.dat"

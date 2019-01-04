@@ -37,7 +37,8 @@ modelRef.setConstantParam("particleSize", 54.3975573)
 modelRef.setConstantParam("pVal", 2.26861847)
 modelRef.setConstantParam("sigParticleSize", 0.07116433)
 
-modelRef.setConstantParam("sldCore", 7.082e-6)
+modelRef.setConstantParam("sldCore", 8.34845e-6) # FeO 4.1809 A
+modelRef.setConstantParam("sldShell", 6.9992e-6) # Fe3O4 8.3841 A
 modelRef.setConstantParam("sldSurfactant", 0.078e-6)
 modelRef.setConstantParam("sldSolvent", 5.664e-6)
 modelRef.setConstantParam('orderHermite', 5)

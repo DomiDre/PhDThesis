@@ -14,8 +14,8 @@ import numpy as np
 
 from modelexp.data import XyeData, XyemData, MultiData
 
-datfile = './rescale/AH11_10K_LangevinSAXSscaled.xye'
-paramfile = './fit_result.dat'
+datfile_disp = './rescale/Ac_CoFe_C_Dispersion_10K_LangevinSAXSscaled.xye'
+datfile_dry = './rescale/Ac_CoFe_C_DisorderedWafer_10K_LangevinSAXSscaled.xye'
 
 chapter = 'monolayer'
 sample_name = 'Ac_CoFe_C'
@@ -23,19 +23,15 @@ sample_name = 'Ac_CoFe_C'
 savefile = chapter + '_VSM_10K_' + sample_name
 
 data = XyeData()
-data.loadFromFile(datfile)
-B, M, sM = data.getData()
+data.loadFromFile(datfile_disp)
+B_disp, M_disp, sM_disp = data.getData()
 
+data = XyeData()
+data.loadFromFile(datfile_dry)
+B_dry, M_dry, sM_dry = data.getData()
 
-fitData = MultiData(XyemData)
-fitData.loadFromFile(paramfile)
-fit_params = fitData.params
-chi = fit_params['chi']['value']
-chi = -0.0366315 * 4.631539113631906 * 1000
-M -= chi*B
-
-min_B, max_B = min(B), max(B)
-min_M, max_M = -390, 390
+min_B, max_B = -8.9, 8.9
+min_M, max_M = -450, 450
 T = 10
 
 fig = plt.figure()
@@ -44,14 +40,22 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
-ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
-            label='Ac-CoFe-C\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
+ax.errorbar(B_disp, M_disp, sM_disp, linestyle='None', marker='.', markersize=1, zorder=1,\
+            label='Dispersion', capsize=0)
+ax.errorbar(B_dry, M_dry, sM_dry, linestyle='None', marker='.', markersize=1, zorder=2,\
+            label='Dry', capsize=0, alpha=0.2)
 
 ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, T$")
 ax.set_ylabel(r"$\mathit{M} \, / \, kAm^{-1}$")
 
+ax.text(0.95,0.02,'Ac-CoFe-C\n$\mathit{T}$ = 10 K',
+  transform=ax.transAxes,
+  horizontalalignment='right',
+  verticalalignment='bottom')
+
 ax.set_xlim(min_B, max_B)
 ax.set_ylim(min_M, max_M)
-ax.legend(loc='lower right')
+ax.legend(loc='upper left', bbox_to_anchor=[-0.05, 1.03])
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
+plt.show()

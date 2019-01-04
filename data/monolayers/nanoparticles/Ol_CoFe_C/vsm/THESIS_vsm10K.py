@@ -12,10 +12,10 @@ plt.style.use('phdthesis')
 
 import numpy as np
 
-from modelexp.data import XyeData
+from modelexp.data import XyeData, XyemData, MultiData
 
-datfile = './rescale/DD67_10K_LangevinSAXSscaled.xye'
-datfileFC1T = './rescale/DD67_10K_FC1T_LangevinSAXSscaled.xye'
+datfile_disp = './rescale/Ol_CoFe_C_Dispersion_10K_LangevinSAXSscaled.xye'
+datfile_dry = './rescale/Ol_CoFe_C_DisorderedWafer_10K_LangevinSAXSscaled.xye'
 
 chapter = 'monolayer'
 sample_name = 'Ol_CoFe_C'
@@ -23,15 +23,15 @@ sample_name = 'Ol_CoFe_C'
 savefile = chapter + '_VSM_10K_' + sample_name
 
 data = XyeData()
-data.loadFromFile(datfile)
-B, M, sM = data.getData()
+data.loadFromFile(datfile_disp)
+B_disp, M_disp, sM_disp = data.getData()
 
 data = XyeData()
-data.loadFromFile(datfileFC1T)
-B_FC1T, M_FC1T, sM_FC1T = data.getData()
+data.loadFromFile(datfile_dry)
+B_dry, M_dry, sM_dry = data.getData()
 
-min_B, max_B = min(B), max(B)
-min_M, max_M = -190, 190
+min_B, max_B = -8.9, 8.9
+min_M, max_M = -350, 350
 T = 10
 
 fig = plt.figure()
@@ -40,16 +40,22 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
-ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=2,\
-            label='Ol-CoFe-C\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
-ax.errorbar(B_FC1T, M_FC1T, sM_FC1T, linestyle='None', marker='.', zorder=1,\
-            label='FC in 1 T', capsize=0, alpha=0.5)
+ax.errorbar(B_disp, M_disp, sM_disp, linestyle='None', marker='.', markersize=1, zorder=1,\
+            label='Dispersion', capsize=0)
+ax.errorbar(B_dry, M_dry, sM_dry, linestyle='None', marker='.', markersize=1, zorder=2,\
+            label='Dry', capsize=0, alpha=0.2)
 
 ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, T$")
 ax.set_ylabel(r"$\mathit{M} \, / \, kAm^{-1}$")
 
+ax.text(0.95,0.02,'Ol-CoFe-C\n$\mathit{T}$ = 10 K',
+  transform=ax.transAxes,
+  horizontalalignment='right',
+  verticalalignment='bottom')
+
 ax.set_xlim(min_B, max_B)
 ax.set_ylim(min_M, max_M)
-ax.legend(loc='lower right')
+ax.legend(loc='upper left', bbox_to_anchor=[-0.05, 1.03])
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
+# plt.show()

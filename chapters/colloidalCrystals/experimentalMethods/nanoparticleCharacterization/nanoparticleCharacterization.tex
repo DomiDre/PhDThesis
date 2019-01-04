@@ -16,13 +16,11 @@
     The nanocubes are evaluated by a LeBail fit using the FullProf suite \cite{Rodriguez_1993_Recen} as described in \refch{ch:methods:xrd}.
     The background is estimated manually by selecting 20 background points, from which the background in the measured range is interpolated linearly.
     The data between $5 ^\circ \ldots 15 ^\circ$ is excluded from the refinement due to a strong background coming from the glass substrate in this range.
-    As in the previous chapters that discuss nanoparticles synthesis from oleates, two phases are necessary to describe the XRD.
+    As in the previous chapters that discuss nanoparticles synthesized from oleates, two phases are necessary to describe the XRD.
     The experimental data is therefore refined to a combination of an inverse spinell phase (space group $Fd\bar{3}m$, No. 227) and a w\"ustite phase (space group $Fm\bar{3}m$, No. 225) is refined.
 
   \paragraphNewLine{Small-Angle Scattering}
     The nanoparticle structure of Ol-Fe-C is studied in dispersion using both small-angle X-ray and neutron scattering.
-    SAXS was  and SANS(POL) at D33 to determine the electronic, nuclear and magnetic structure of the nanocubes.
-
     The SAXS measurement were performed at GALAXI (\refch{ch:lss:galaxi}), where the nanoparticles were dispersed in toluene and filled in borosilicate capillaries (Hilgenberg) with $1.5 \unit{mm}$ diameter and a $0.01 \unit{mm}$ wall thickness.
     A plastic stopper and a glue gun was used to seal the capillaries for the measurement in a vacuum.
     The samples have been measured on the largest ($3.53 \unit{m}$) and shortest ($0.83 \unit{m}$) sample-to-detector distances possible at GALAXI at the Ga-K$\alpha$ wavelength of $\lambda \eq 1.3414 \angstrom$.
@@ -32,9 +30,17 @@
     The nanocubes were dried over night at ambient conditions, and then redispersed in toluene-$\mathit{d_8}$ by sonification to minimize the hydrogen content in the sample.
     For the measurement, the dispersions are filled in Hellma quartz cuvettes with a thickness of $2 \unit{mm}$.
     The velocity selector at D33 was set to a wavelength of $6 \unit{\angstrom}$, with a wavelength spread of $10 \%$ (FWHM).
-    % A sample aperture  of $7 \times 10 \unit{mm^2}$ was used and a collimation aperture of $30 \times 30 \unit{mm^2}$ is set for all experiments.
-    % The samples are measured both at a sample-to-detector distance of $2 \unit{m}$ and at $8 \unit{m}$ with a collimation distance of $5.3 \unit{m}$ and $7.8 \unit{m}$ respectively.
+    The sample was measured both at a sample-to-detector distance of $11 \unit{m}$ and $2 \unit{m}$ to cover a large $q$-range.
+    The collimation-to-sample distance were $10.3 \unit{m}$ and $5.3 \unit{m}$ respectively
+    The Ol-CoFe-C dispersion was measured at ambient conditions without the application of a magnetic field , as well as at magnetic fields of $153 \unit{mT}$, $308 \unit{mT}$, $600 \unit{mT}$, $882 \unit{mT}$, and $1.234 \unit{T}$.
+    The magnetic fields are applied by an electromagnet perpendicular to the beam in the horizontal plane.
+    The data is reduced using the GRASP software, where the solvent is subtracted and the data is corrected for the polarization efficiency of $99 \%$ and the flipping efficiency of $97 \%$.
+    The azimuthal average of the magnetic scattering is obtained from a $20 ^\circ$ sector around the vertical $z$ direction, whereas the nuclear scattering is obtained from averaging the complete detector area from the measurement at zero field.
 
+    For the evaluation of the form factors from the azimuthally averaged small-angle scattering data, the same procedure as described in \refsec{sec:looselyPackedNS:characterization:nanoparticles} for iron oxide nanospheres is performed using a superball core-shell form factor instead of a spherical core-shell form factor.
+    The superball form factor is described in detail in \refsec{sec:monolayers:methods:superballFF}.
+    For the nanoparticle core a composition of \ch{FeO} is assumed and for the shell an inverse spinell structure of \ch{Fe_{3-$\delta$} O4}, where the composition and lattice constants as estimated from X-ray diffraction are used to determine and fix the scattering length density.
+    The solvent scattering length density of toluene and toluene-\textit{d8}, as well as oleic acid for X-rays and neutrons are used as given in \refsec{sec:monolayers:nanoparticle:structuralCharacterization}.
     % The nanoparticles are measured at an magnetic field of $515 \unit{mT}$, which is applied perpendicular to the beam direction, in the horizontal direction.
     % Each sample is measured over a time of $20 \unit{min}$ at the long sample-to-detector distance and $10 \unit{min}$ at the short sample-to-detector distance.
     % The empty beam and a sample of toluene-$\mathit{d_8}$ is additionally measured for background subtraction.
@@ -108,7 +114,7 @@
     % Only subsequently the core is fitted, while the shell is fixated at the fitted value.
     % This bias has to be done, as otherwise the fit favors a core with high magnetic SLD and a shell with low magnetic SLD, which is nonphysical in the context and due to an ambiguity in the sign of the contrast.
 
-  \paragraphNewLine{Vibrating Sample Magnetometry}
+  % \paragraphNewLine{Vibrating Sample Magnetometry}
     % To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion as described in \refapp{app:additionalExperimentalTechniques:vsm}.
     % For both samples, $40 \unit{\musf L}$ of the same dispersions as used in SANS are used, where the particles are dispersed in toluene-$\mathit{d8}$.
     % The vials are measured on a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}) at $300 \unit{K}$ and at a low temperature of $10 \unit{K}$.
