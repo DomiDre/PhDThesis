@@ -145,7 +145,7 @@
         \hline
       \end{tabular}
     \end{table}
-    
+
     For Ol-CoFe-C the superball form factor is used with an additional core-shell structure to account for the w\"ustite / inverse spinell structure of the particles and to determine the shell scattering length density $\rho_\mathrm{shell}$ and shell thickness $D_\mathrm{shell}$.
     For the SANS models, an additional oleic acid surfactant shell with the same superball parameters as the core model and a thickness $D_\mathrm{OA}$ is added to the model, which is neglected for SAXS models due to the poor contrast of oleic acid and solvent.
     However, the composition of the core and shell can not be determined by XRD and EDX alone as the complex structure leaves too many variables.
@@ -219,31 +219,30 @@
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
     The macroscopic magnetization of the nanoparticles Ac-CoFe-C, Ac-CoFe-C-2 and Ol-CoFe-C was measured using the PPMS Evercool II described in \refch{ch:instruments:laboratoryInstruments:vsm}.
-    To obtain the magnetization in a non-interacting state at room temperature, two approaches have been considered.
+    To obtain the magnetization in a non-interacting state at room temperature, two approaches are considered.
     In the first, $40 \unit{\musf L}$ of the nanoparticle dispersion are sealed in a vial as described in \refch{ch:instruments:laboratoryInstruments:vsm}.
     The vial is subsequently fixed within a drinking straw, using additional folded straws to render the vial immobile.
     A moving liquid sample is a difficult system in the framework of vibrating sample magnetometry as due to air gaps the liquid is still able to move within its container during the vibration, which can lead to a systematic error in the measured signal \cite{Boekelheide_2016_Artif}.
     Therefore, in a second approach, the nanoparticle dispersion is quickly drop casted in a diluted concentration ($c \eq 0.1 \unit{mg/mL}$) on a silicon substrate using $\textit{n}$-hexane as solvent to measure the nanoparticles in a dry state for comparison.
     The background of the silicon substrate and sample holder is subtracted in this case by the measurement of an empty silicon wafer with approximately the same mass.
 
-    For both approaches hysteresis curves are measured at $10 \unit{K}$ and $300 \unit{K}$, as well as on five additional temperatures in between ($20\unit{K},\,50\unit{K},\,100\unit{K},\,150\unit{K},\,200\unit{K}$).
+    For both approaches hysteresis curves are measured at $10 \unit{K}$ and $300 \unit{K}$.
     Before each measurement, a touchdown procedure is performed with the sample rod, to correct for thermal expansion due to the temperature changes.
     Each hysteresis is measured in sweep mode with a rate of $5 \unit{mT \, s^{-1}}$.
     Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K \, min^{-1}}$.
+    For Ac-CoFe-C-2 no measurement of the dry particles has been performed.
 
-    The scaling of the data to the volume of the sample is performed as described in \refch{ch:methods:vsm}:
-    By fitting the room-temperature data to a Langevin behaviour plus a term for an excess susceptibility in the case of the nanoparticle dispersions, the magnetization data is scaled such that the saturation magnetization is given by the ratio of the single-particle moment and volume.
+    Using the liquid dispersion in the vial measurement, a Langevin behaviour with excess susceptibility is fit in the range from $\pm 2 \unit{T}$ to determine the magnetic moment of the single nanocubes as described in \refch{ch:methods:vsm}.
+    The magnetization data is scaled such that the saturation magnetization is given by the ratio of the single-particle moment and nanocube volume
     \begin{align}
       M_s \eq \frac{\bar{\mu}}{V_p}.
     \end{align}
-    The average particle volume and particle size distribution is hereby taken from the previously obtained SAXS data evaluation and the standard deviation of the magnetic moment is set to be three times the particle size distribution $\sigma_{\mu} \eq 3 \sigma_{a}$, assuming the magnetic moment scales proportionally with the volume.
+    The average particle volume is hereby taken from the previously obtained SAXS data evaluation.
 
-  % \paragraphNewLine{Temperature-Dependant VSM}
-  %   To study the samples further, the nanoparticles are measured in VSM at varied temperatures down to $10 \unit{K}$, where the N\'eel relaxation of the superspin moment is suppressed and the blocked single-domain particle is observed.
-  %   The magnetometry data is rescaled using the same factors that were determined at room temperature with the SAXS superball volume and Langevin fit.
-  %   Both hysteresis are given in \reffig{fig:monolaye rs:nanoparticle:vsm10K} and show a large coercivity, where the coercive field for Ol-CoFe-C is at $1.2 \unit{T}$ and for Ac-CoFe-C at $1.9 \unit{T}$, which is the typical range that is also in literature for cobalt ferrite nanoparticles.
-  %   From the temperature dependent magnetization measurements, the blocking temperature of the two particle batches can be estimated, which is $218 \unit{K}$ for Ol-CoFe-C and $314 \unit{K}$ for Ac-CoFe-C.
-  %   % Zitate Nanoparticle Koerzitivfelder
-  %   Additionally, Ol-CoFe-C shows an exchange bias effect, when the hysteresis is measured after cooling in a strong magnetic field such as shown by the red curve, which was obtained after cooling the sample in a $1 \unit{T}$ field.
-  %   %Discuss Exchange Bias Effect
+    The measurements in the dry state on a substrate are scaled to the same saturation value and compared to the dispersion measurements.
+    As the magnetization of the liquid dispersions showed in all cases a jump in a order of magnitude upon freezing the rescaling of the dispersion $10 \unit{K}$ is not straight forward.
+    As an increase in the spontaneous magnetization value is still expected for lower temperatures, the observed increase for the dry nanocubes on the substrate is used to rescale the dispersion at $10 \unit{K}$.
+
+    Furthermore, the magnetization of the dried nanocubes on the substrate are measurement with respect to temperature after zero-field cooling and field cooling at a magnetic field of $10 \unit{mT}$.
+    From the peak of the zero-field cooled curve, the blocking temperature of the nanocubes is estimated.
 \end{document}

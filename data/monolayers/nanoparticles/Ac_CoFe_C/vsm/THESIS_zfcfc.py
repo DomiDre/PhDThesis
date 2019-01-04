@@ -14,7 +14,7 @@ zfc_datfile = './rescale/Ac_CoFe_C_DisorderedWafer_ZFCw_LangevinSAXSscaled.xye'
 fcw_datfile = './rescale/Ac_CoFe_C_DisorderedWafer_FCw_LangevinSAXSscaled.xye'
 
 chapter = 'monolayer'
-sample_name = 'ML_Ac_CoFe_C'
+sample_name = 'Ac_CoFe_C'
 savefile = f'{chapter}_PPMS_ZFC_FC_{sample_name}'
 
 def load_file(datfile):

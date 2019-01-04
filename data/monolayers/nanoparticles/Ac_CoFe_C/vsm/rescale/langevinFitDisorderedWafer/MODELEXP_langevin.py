@@ -23,10 +23,10 @@ ppms.load(datafile)
 ppms.remove_virgin_data()
 B, M = ppms.get_BM()
 sM = ppms.get('M. Std. Err. (emu)')
-# valid_range = np.logical_and(B>Bmin, B<Bmax)
-# B = B[valid_range]
-# M = M[valid_range]
-# sM = sM[valid_range]
+valid_range = np.logical_and(B>-2.3, B<2.3)
+B = B[valid_range]
+M = M[valid_range]
+sM = sM[valid_range]
 
 dataRef = app.setData(XyeData)
 dataset = XyeData()

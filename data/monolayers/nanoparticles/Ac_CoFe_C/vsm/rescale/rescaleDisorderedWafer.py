@@ -56,7 +56,7 @@ def rescale(datafile, samplename, isTemp=False):
     langevinScale.save(f'{samplename}_LangevinSAXSscaled.xye')
 
 samplename = 'Ac_CoFe_C_DisorderedWafer'
-rescale('../data_disorderedWafer/DD226_2_HYST_300K_REPEAT.DAT', f'{samplename}_300K')
-rescale('../data_disorderedWafer/DD226_2_HYST_10K_REPEAT_3.DAT',  f'{samplename}_10K')
-rescale('../data_disorderedWafer/DD226_2_FCW_100OE.DAT',       f'{samplename}_FCw', True)
-rescale('../data_disorderedWafer/DD226_2_ZFCW_100OE.DAT',f'{samplename}_ZFCw', True)
+rescale('../data_disorderedWafer/DD226_2_HYST_300K_REPEAT.DAT',  f'{samplename}_300K')
+rescale('../data_disorderedWafer/DD226_2_HYST_10K_REPEAT_3.DAT', f'{samplename}_10K')
+rescale('../data_disorderedWafer/DD226_2_FCW_100OE.DAT',         f'{samplename}_FCw', True)
+rescale('../data_disorderedWafer/DD226_2_ZFCW_100OE.DAT',        f'{samplename}_ZFCw', True)

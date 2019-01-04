@@ -23,10 +23,10 @@ ppms.load(datafile)
 ppms.remove_virgin_data()
 B, M = ppms.get_BM()
 sM = ppms.get('M. Std. Err. (emu)')
-# valid_range = np.logical_and(B>Bmin, B<Bmax)
-# B = B[valid_range]
-# M = M[valid_range]
-# sM = sM[valid_range]
+valid_range = np.logical_and(B>-2.3, B<2.3)
+B = B[valid_range]
+M = M[valid_range]
+sM = sM[valid_range]
 
 dataRef = app.setData(XyeData)
 dataset = XyeData()
@@ -35,9 +35,9 @@ dataRef.addDataset(dataset)
 
 dataRef.plotData()
 modelRef = app.setModel(LangevinMuWeighted)
-modelRef.setParam("Ms", 3.88,  minVal = 0, maxVal = 10, vary = True)
-modelRef.setParam("mu", 23520.216,  minVal = 1, maxVal = 30000, vary = True)
-modelRef.setParam("chi", -0.14639999999999997,  minVal = -1, maxVal = 0.1, vary = True)
+modelRef.setParam("Ms", 3.880427639862962,  minVal = 0, maxVal = 10, vary = True)
+modelRef.setParam("mu", 23537.10447759738,  minVal = 1, maxVal = 30000, vary = True)
+modelRef.setParam("chi", -0.14621106983650578,  minVal = -1, maxVal = 0.1, vary = True)
 modelRef.setParam("sigMu", 0.0,  minVal = 0, maxVal = 1.5, vary = False)
 modelRef.setConstantParam('orderHermite', 50)
 modelRef.setConstantParam('T', 300)

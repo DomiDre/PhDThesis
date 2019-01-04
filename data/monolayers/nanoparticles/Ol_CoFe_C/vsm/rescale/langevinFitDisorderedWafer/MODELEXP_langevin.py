@@ -16,17 +16,17 @@ datafile = '../../data_disorderedWafer/DD227_HYST_300K.DAT'
 
 app = App()
 expRef = app.setExperiment(Vsm)
-expRef.setFitRange(-0.5,0.5)
+expRef.setFitRange(-2,2)
 
 ppms = PPMS()
 ppms.load(datafile)
 ppms.remove_virgin_data()
 B, M = ppms.get_BM()
 sM = ppms.get('M. Std. Err. (emu)')
-# valid_range = np.logical_and(B>Bmin, B<Bmax)
-# B = B[valid_range]
-# M = M[valid_range]
-# sM = sM[valid_range]
+valid_range = np.logical_and(B>-2.3, B<2.3)
+B = B[valid_range]
+M = M[valid_range]
+sM = sM[valid_range]
 
 dataRef = app.setData(XyeData)
 dataset = XyeData()
@@ -35,9 +35,9 @@ dataRef.addDataset(dataset)
 
 dataRef.plotData()
 modelRef = app.setModel(LangevinMuWeighted)
-modelRef.setParam("Ms", 0.0074,  minVal = 0, maxVal = 0.2, vary = True)
+modelRef.setParam("Ms", 0.007,  minVal = 0, maxVal = 0.2, vary = True)
 modelRef.setParam("mu", 6280.372,  minVal = 1, maxVal = 10000, vary = False)
-modelRef.setParam("chi", -0.029800000000000007,  minVal = -0.1, maxVal = 0.1, vary = True)
+modelRef.setParam("chi", -0.028200000000000003,  minVal = -0.1, maxVal = 0.1, vary = True)
 modelRef.setParam("sigMu", 0.0,  minVal = 0, maxVal = 1.5, vary = False)
 modelRef.setConstantParam('orderHermite', 50)
 modelRef.setConstantParam('T', 300)

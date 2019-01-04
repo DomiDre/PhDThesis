@@ -12,12 +12,11 @@ from scipy import interpolate
 import scipy.signal as spsig
 from PlottingTemplates.saxssanssanspol import color_variant
 
-samplename = 'Ac_CoFe_C'
 zfc_datfile = './rescale/Ol_CoFe_C_DisorderedWafer_ZFCw_LangevinSAXSscaled.xye'
 fcw_datfile = './rescale/Ol_CoFe_C_DisorderedWafer_FCw_LangevinSAXSscaled.xye'
 
 chapter = 'monolayer'
-sample_name = 'ML_Ol_CoFe_C'
+sample_name = 'Ol_CoFe_C'
 savefile = f'{chapter}_PPMS_ZFC_FC_{sample_name}'
 
 def load_file(datfile):
