@@ -12,11 +12,11 @@ plt.style.use('phdthesis')
 
 from EM.sem_fft import SEM_FFT
 
-semFilepath = cwd+"/DD205_10xs_12.tif"
+semFilepath = cwd+"/DD213_7_05.tif"
 chapter = 'doubleLayers'
-sample_name = 'DL-0_25'
-label = 'DL-0.25%'
-x0_label = 0.7
+sample_name = 'DL-0_125'
+label = 'DL-0.125%'
+x0_label = 0.67
 savefile = chapter+'_SEMxs_'+sample_name
 
 semFFT = SEM_FFT()
