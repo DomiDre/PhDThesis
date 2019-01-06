@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'ML_Ac-CoFe-C_WithSpacer'
 Chapter = 'monolayers'
-fit_file = cwd + "/models/cmplxMonolayerWithSpacerModel/fit_result.dat"
-sld_file = cwd + "/models/cmplxMonolayerWithSpacerModel/fit_sld.dat"
+fit_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespread/fit_result.dat"
+sld_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespread/fit_sld.dat"
 
 labeltext = 'ML-Ac-CoFe-C'
 q_min, q_max = 1e-2, 0.399

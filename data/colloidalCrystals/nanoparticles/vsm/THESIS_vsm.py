@@ -14,45 +14,26 @@ import numpy as np
 
 from modelexp.data import XyemData, MultiData
 
-def getValueWithErrorString(parameter, modifier=1):
-  val = parameter['value']*modifier
-  std = parameter['std']*modifier
-  result = ''
-  if (std > 0):
-    power = np.floor(np.log10(std))
-    cutted_std = int(np.round(std/(10**power)))
-    cutted_val = np.round(val, int(-power))
-    if power < 0:
-      format_str = '{:.'+str(int(-power))+'f}'
-      cutted_val = format_str.format(cutted_val)
-      # cutted_val = str(cutted_val).ljust(int(-power)+2,'0')
-    elif power >= 0:
-      cutted_val = str(int(cutted_val))
-      cutted_std = str(int(cutted_std * 10**power))
+datfile_initial = './postSynthesis/fit_result.dat'
+datfile_postOxidation = './postOxidationStep/fit_result.dat'
 
-    result = f"{cutted_val}({cutted_std})"
-  else:
-    result = f"{val}"
-  return result
-
-datfile = 'fit_result.dat'
-
-chapter = 'monolayer'
-sample_name = 'Ol_CoFe_C'
+chapter = 'colloidalCrystals'
+sample_name = 'Ol_Fe_C_compare'
 
 savefile = chapter + '_VSM_' + sample_name
 
 data = XyemData()
-data.loadFromFile(datfile)
-B, M, sM, Mmodel = data.getData()
+data.loadFromFile(datfile_initial)
+B_init, M_init, sM_init, Mmodel_init = data.getData()
 
-fitData = MultiData(XyemData)
-fitData.loadFromFile(datfile)
-fit_params = fitData.params
+data = XyemData()
+data.loadFromFile(datfile_postOxidation)
+B_pOxi, M_pOxi, sM_pOxi, Mmodel_pOxi = data.getData()
 
-min_B, max_B = min(B), max(B)
-min_M, max_M = -130, 130
-T = 300
+
+min_B, max_B = -1.99, 1.99
+min_M, max_M = -550, 550
+T = 296
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16
@@ -60,22 +41,24 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
-ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
-            label='Ol-CoFe-C\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
-ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
+ax.errorbar(B_init, M_init, sM_init, linestyle='None', marker='.',
+  markersize=1, zorder=1, capsize=0)
+ax.errorbar(B_pOxi, M_pOxi, sM_pOxi, linestyle='None', marker='.',
+  markersize=1, zorder=1, capsize=0)
 
-ax.text(0.03, 0.97,
-  f'$M_s \,=\,{getValueWithErrorString(fit_params["Ms"])}\, '+'kAm^{-1}$\n'+
-  f'$\mu \,=\,{getValueWithErrorString(fit_params["mu"])}\, \mu_B$',
-  color='black',
-  horizontalalignment='left',
-  verticalalignment='top',
-  transform=ax.transAxes)
+ax.plot(B_init, Mmodel_init, marker='None', zorder=2, color='black', alpha=0.5)
+ax.plot(B_pOxi, Mmodel_pOxi, marker='None', zorder=2, color='black', alpha=0.5)
+
+
+ax.text(0.95,0.02,'Ol-Fe-C\n$\mathit{T}$ = 296 K',
+  transform=ax.transAxes,
+  horizontalalignment='right',
+  verticalalignment='bottom')
+
 ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, T$")
 ax.set_ylabel(r"$\mathit{M} \, / \, kAm^{-1}$")
 
 ax.set_xlim(min_B, max_B)
 ax.set_ylim(min_M, max_M)
-ax.legend(loc='lower right')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)

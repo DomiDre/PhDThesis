@@ -5,7 +5,7 @@
   \paragraphNewLine{Scanning Electron Microscopy}
     The drop casted monolayers ML-Ac-CoFe-C and ML-Ac-CoFe-C-2 have both been characterized in top view with SEM micrographs at varied magnifications measured with a Neon Zeiss 40 (\refsec{ch:instruments:laboratoryInstruments:sem}).
     Furthermore, cross-sectional views in SEM of the monolayer ML-Ac-CoFe-C have been obtained by cutting the sample with a diamond cutter and subsequently breaking it.
-    For ML-Ac-CoFe-C-2, the sample has not been broken but instead an equivalent sample that has been prepared in parallel from the same dispersion, under the same conditions, is broken and viewed in SEM.
+    For ML-Ac-CoFe-C-2, the sample has not been broken but instead an equivalent sample ML-Ac-CoFe-C-2* that has been prepared in parallel from the same dispersion, under the same conditions, is broken and viewed in SEM.
     The micrographs are measured at $5 \unit{kV}$ and the shown micrographs are measured by the back scattering electron detector.
 
   \paragraphNewLine{Reflectometry}
@@ -14,7 +14,7 @@
     For footprint correction (\refsec{ch:methods:xrr}), the beam width is estimated by the size of the collimation slits, which is $0.2 \unit{mm}$, and the samples both have a width of $10 \unit{mm}$.
 
     Furthermore, neutron reflectometry was measured for ML-Ac-CoFe-C at the D17 instrument in the Institute Laue-Langevin (\refsec{ch:lss:d17}).
-    D17 was operated in time-of-flight (TOF) mode and a $q$-range of $0 \ldots 0.2 \unit{\angstrom^{-1}}$ was obtained by measuring the reflectivity for the three incident angles $\alpha_i \eq 0.50^\circ ,\, 1.80^\circ ,\, 4.00^\circ$.
+    D17 was operated in time-of-flight (TOF) mode and a $q$-range of $0 \ldots 2 \unit{nm^{-1}}$ was obtained by measuring the reflectivity for the three incident angles $\alpha_i \eq 0.50^\circ ,\, 1.80^\circ ,\, 4.00^\circ$.
     As the measurement was performed in TOF mode, no footprint correction needs to be applied.
     For data reduction and estimation of the instrumental resolution the COSMOS software is used, which is maintained by the instrumental scientists \cite{Gutfreund_2018_Towar}.
     The data used for the discussion of the nuclear structure of the monolayer, was obtained after zero-field cooling at $\mathrm{T} \eq 5 \unit{K}$ with polarized neutrons at a guide field of $B \eq 10 \unit{mT}$.
@@ -53,9 +53,6 @@
       \end{tabular}
     \end{table}
 
-    % Additional to the described model property parameters, instrumental parameters are included in the model: the instrumental resolution needs to be considered either by including angular divergence and energy resolution or by using the resolution function that is known from the instrument.
-    % Also as the sample alignment has finite precision, a small linear shift in $q$ is allowed in the model.
-
     The parameter values are refined by applying the Levenberg-Marquardt algorithm \cite{Marquardt_1963_Analgo}, to minimize the figure of merit $\mathrm{FOM}$, which is defined here for reflectometry as a $\chi^2$ function on the logarithmic scale
     \begin{align}
       \mathrm{FOM} \eq \sum_{q_i} \biggl( \log(I) - \log(I_\mathrm{model})\biggr)^2.
@@ -85,49 +82,19 @@
       In the simulation, it is assumed that the orientation of the lattice is on average random with respect to the beam and the probability functions of the position uncertainty in the square lattice paracrystal are assumed to be Gaussian functions.
 
   \paragraphNewLine{Polarized Neutron Reflectometry}
-    % Polarized neutron reflectometry has been performed on SuperADAM at the ILL for all discussed samples at a temperature of $300 \unit{K}$ and at a low temperature of $30 \unit{K}$.
-    % The distance between sample and detector for the experiments was $2.009 \unit{m}$ and a range of incident angles from $0 ^\circ \ldots 3 ^\circ$ is measured.
-    % The neutron wavelength was selected to $\lambda \eq 5.14 \unit{\angstrom}$ and $\lambda \eq 5.18 \unit{\angstrom}$ for the measurements at $300 \unit{K}$ and $30 \unit{K}$ respectively.
-    % The wavelength spread is in both cases $0.5 \%$ (FWHM) as provided by the instrumental scientists.
-    % The monochromator aperture is set to $1 \unit{mm}$ and the sample aperture to $0.5 \unit{mm}$ along the scattering direction for the measurements at $300 \unit{K}$, and to $3 \unit{mm}$ and $1 \unit{mm}$ for the measurements at $30 \unit{K}$.
-
-    % At room temperature, the samples are fixed by a vacuum suction and measured at a guide field of $4 \unit{mT}$, at a high magnetic field of $500 \unit{mT}$ and subsequently again at $4 \unit{mT}$ in remanence.
-    % For the measurements at $30 \unit{K}$, the samples are fixed in a cryostat using Apiezon vacuum grease and the guide field is measured to be $2.4 \unit{mT}$.
-    % The procedure is in each case to cool the samples from room temperature to $30 \unit{K}$ at guide field and measure the initial reflectivity.
-    % Then the reflectivity is measured at an applied field of $730 \unit{mT}$, and subsequently in remanence at guide field again.
-    % To study the reflectivity after field-cooling, the samples are heated above $200 \unit{K}$ and cooled back to $30 \unit{K}$ at an applied field of $730 \unit{mT}$.
-    % The reflectivity is then measured at the applied field and finally in remanence of the field-cooled state.
-
-    % For the room temperature measurements, a range of incident angles from $0^\circ \ldots 3 ^\circ$ is measured in $0.01 ^\circ$ steps with $20 \unit{s} - 60 \unit{s}$ counting time, with an linear increase with respect to the incident angle.
-    % In the $30 \unit{K}$ measurements, the range is increased to $4 ^\circ$ and the counting time is increased non-linearly in the range from $4 \unit{s} - 200 \unit{s}$ in accordance to the asymptotic behaviour of Fresnel's reflectivity, which drops in intensity with $q^4$.
-
-    % All measurements are performed with polarized neutrons, providing two reflectivity channels for each measurement, one for neutrons parallel to the magnetic field direction, and one for neutrons that are anti-parallel.
-    % For the layers prepared from IOS-11, an additional polarization analysis is performed for the low-temperature measurements to measure the spin-flip channel of neutrons coming from an anti-parallel incident state and are outgoing in a parallel state.
-    % For the remaining samples, no polarization analysis is performed.
-    % The polarization efficiency is measured from the direct beam to be $\approx 99 \%$ at guide field and high field.
-
-    % The detector images are scaled to it's respective monitor to correct for varying counting-times and fluctuating incident beam intensities.
-    % Due to a malfunction of the monitor for the field-cooled remanence measurement of 8BL-15-IOS-11, this specific measurement is scaled to the counting time instead.
-    % The detector images are reduced by integrating the detector dimension perpendicular to the scattering plane, providing a intensity map with respect to the incident angle and remaining detector dimension for each measurement and each channel.
-    % The coordinates are transformed to ($\alpha_i - \alpha_o$, $\alpha_i + \alpha_o$) using the pixel-splitting rebinning algorithm described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}.
-    % To obtain the reflectivity curves, a box in the range $\alpha_i - \alpha_o \eq -0.1 ^\circ \ldots 0.1 ^\circ$ is integrated, and the diffuse scattering is subtracted with the box integrals of the ranges $\alpha_i - \alpha_o \eq \pm (0.1 \ldots 0.2)$ in the intensity map.
-
-    % The same model as in XRR is used to describe the nuclear structure of SC-IOS-11 and SC-IOS-7.
-    % The particle geometry and scattering length densities are used as obtained from SAS, and only the layer positions and packing densities are varied.
-    % For the evaluation of the reflectivity curves measured for polarized neutrons $R^{+}$ and $R^{-}$, the formalism presented by Zabel \etal in \cite{Kronmueller_2007_Handb} is implemented, where the reflectivities are evaluated by
-    % \begin{align}
-    %   \label{eq:looselyPackedNP:pnrReflectivityFormula}
-    %   R^\pm \eq \frac{1}{2} \biggl[ R_{+} \bigl(1 \pm P \cos(\gamma) \bigr) + R_{-} \bigl(1 \mp P \cos(\gamma) \bigr) \biggr].
-    % \end{align}
-    % Here $R_\pm$ are the reflectivities calculated for the scattering length densities $\rho_\mathrm{nuc} \pm \rho_\mathrm{mag}$, $P$ is the polarization efficiency of the instrument and $\gamma$ the angle between the sample magnetization and the neutron polarization.
-    % The samples that show magnetic contrast are discussed with regard to being homogeneously magnetized such as measured in VSM, and it is studied how the agreement between the calculated and measured reflectivity changes when the magnetic density in the respective layers is allowed to be varied independently.
-
-
+    Additional to the nuclear structure, the magnetic structure of ML-Ac-CoFe-C is discussed by measuring its reflectivity with polarized neutron at the D17 instrument.
+    Additional to the measurement at guide field after zero-field cooling, described in the previous paragraph, the sample was measured afterwards at a saturating field of $6 \unit{T}$ and a negative field of $-100 \unit{mT}$.
+    The reflectivity is measured using two incident angles of $0.50^\circ ,\, 1.8^\circ$ to cover a $q$-range of $0 - 1 \unit{nm^{-1}}$.
+    And the data reduction is performed in analogue to the initial guide field measurement using the COSMOS software.
 
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
-    
-    To avoid destroying the sample ML-Ac-CoFe-C-2, the equivalent sample that is also shown in the cross-sectional SEM micrographs is used to discuss the magnetism of the Ac-CoFe-C-2 on a square lattice by VSM.
-    The sample was measured on a PPMS system at the \textsc{Forschungszentrum J\"ulich}, which operates analogue to the EverCool II system shown in \refsec{ch:instruments:laboratoryInstruments:vsm} only that it does not have a closed Helium cycle and produces a maximum field of $7 \unit{T}$.
+    The monolayers are measured field- and temperature-dependent using a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}).
+    An approximately $5 \times 5 \unit{mm^2}$ piece of ML-Ac-CoFe-C is cut out of the sample for the measurement using a diamond cutter.
+    To avoid destroying the sample ML-Ac-CoFe-C-2, the equivalent sample ML-Ac-CoFe-C-2* that is also shown in the cross-sectional SEM micrographs is used in the magnetization measurements and cut to a similar size.
+
+    Both samples are measured field-dependent in a range of $\pm 9 \unit{T}$ at $300 \unit{K}$ and $5 \unit{K}$ with a sweeping rate of $5 \unit{mT \, s^{-1}}$.
+    The sample magnetization is furthermore measured temperature-dependent after zero-field cooling and field cooling at $10 \unit{mT}$ from $10 \unit{K}$ to $350 \unit{K}$ while warming the sample with a rate of $1.5 \unit{K \, s^{-1}}$.
+
 
 \end{document}

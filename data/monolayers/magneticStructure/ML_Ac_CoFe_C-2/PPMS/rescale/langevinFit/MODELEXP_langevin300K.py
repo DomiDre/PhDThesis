@@ -12,7 +12,7 @@ from modelexp.models.magnetometry import LangevinMuWeighted
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
-datafile = '../../data/DD175_23_HYST_300K.DAT'
+datafile = '../../data/DD175_23_HYST_INIT_300K.DAT'
 
 app = App()
 expRef = app.setExperiment(Vsm)
@@ -39,7 +39,7 @@ dataRef.plotData()
 modelRef = app.setModel(LangevinMuWeighted)
 modelRef.setParam("Ms", 0.052000000000000005,  minVal = 0, maxVal = 1, vary = False)
 modelRef.setParam("mu", 23490.217,  minVal = 1, maxVal = 30000, vary = False)
-modelRef.setParam("chi", -0.04199999999999998,  minVal = -0.5, maxVal = 0.5, vary = False)
+modelRef.setParam("chi", -0.034999999999999976,  minVal = -0.5, maxVal = 0.5, vary = False)
 modelRef.setParam("sigMu", 0.0,  minVal = 0, maxVal = 1.5, vary = False)
 modelRef.setConstantParam('orderHermite', 50)
 modelRef.setConstantParam('T', 300)

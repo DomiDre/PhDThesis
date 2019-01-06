@@ -1,0 +1,27 @@
+# Use this file to give parameters to vsm_dataextract.py
+#
+# Author: Dominique Dresen
+# Contact: Dominique.Dresen@uni-koeln.de
+# Version: 1.1
+# 
+# Abbreviations used:
+# B -- applied magnetic field
+# M -- magnetization of sample
+# V -- volume of magnetic sample
+
+# Parameters for VSM sample evaluation
+B_column	Applied Field		#  which column shall be loaded for B
+M_column	Raw Signal Mx   	#  which column shall be loaded for M
+B_unit		T			#  convert to which magnetic field unit, can choose between: T, mT, Oe
+M_unit		memu			#  convert to which magnetization unit, can choose between: Am2, memu, emu, Am-1, kAm-1
+noise_level	5e-3			#  noise level of VSM in memu
+V		Not set			#  in mm3 (µL), needed if M_unit is A/m, kA/m, volume of measured magnetic material
+
+# tell where to load data from and where to save the xy columns to
+# if multiple pairs are given, multiple files are created
+
+# data_path 				 saveto
+@start data list
+empty_sample_holder-Hys-00.VHD		empty_sample_holder.xye
+@end data list
+

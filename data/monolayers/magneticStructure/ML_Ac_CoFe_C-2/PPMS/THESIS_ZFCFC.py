@@ -41,7 +41,7 @@ ax.errorbar(T_zfc, M_zfc, sM_zfc, linestyle='None', marker='.', markersize=1, zo
 ax.errorbar(T_fcw, M_fcw, sM_fcw, linestyle='None', marker='.', markersize=1, zorder=1, label='FCw')
 
 ax.set_xlabel("$\mathit{T} \, / \, K$")
-ax.set_ylabel("$\mathit{M} \, / \, kAm^{-1}$")
+ax.set_ylabel("$\mathit{M} \, / \, kAm^{-1}$", labelpad=-5)
 ax.text(0.05, 0.95,
         'ML-Ac-CoFe-C-2*\n'+
         '$\mathit{B} \, = \, 10 \, mT$',\
@@ -49,18 +49,16 @@ ax.text(0.05, 0.95,
         verticalalignment='top',\
         transform=ax.transAxes)
 
-ax.annotate('', xy=(297, 70), xytext=(297,35),
+ax.annotate('', xy=(303, 70), xytext=(303,35),
   horizontalalignment='center', fontsize=10,
   arrowprops=dict(facecolor='black', width=1, headwidth=5))
 ax.text(345, 30,
-        '$\mathit{T_B} \,= \, 297\, K$',\
+        '$\mathit{T_B} \,= \, 303\, K$',\
         horizontalalignment='right',
         verticalalignment='top')
-ax.set_yticks([0, 25, 50, 75])
+ax.set_yticks([0, 30, 60, 90, 120])
 ax.set_xlim(0, 350)
-ax.set_ylim(-0.9, 140)
+ax.set_ylim(-9, 145)
 ax.legend(loc='upper right')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
-
-# plt.show()

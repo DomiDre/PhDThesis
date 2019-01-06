@@ -18,19 +18,20 @@ from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_vari
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
-sample_name = 'DD67'
+sample_name = 'DD144'
 Chapter = ''
-fit_file = cwd + "/fit_result.dat"
+fit_file = cwd + "/intermediateResult.dat"
 sld_file = cwd + "/fit_sld.dat"
 
+q_min, q_max = 2e-2, 0.3
 
-I_min, I_max = 1e-3, 1.5e3
+I_min, I_max = 5e-4, 1.5e3
 
 saxs_legend_label = "SAXS @ GALAXI"
 sans_legend_label = "SANS @ D33"
 
 saxs_pngfile = Chapter+'_SAS_'+\
-                sample_name+"_SANSFit.png"
+                sample_name+"_SASFit.png"
 
 #load data
 data = MultiData(XyemData)
@@ -45,11 +46,6 @@ sldData.loadFromFile(sld_file)
 # saxs_r, saxs_sld = sldData.getDataset(0).getData()
 saxs_r, saxs_sld = sldData.getDatasetBySuffix('saxs').getData()
 sans_r, sans_sld = sldData.getDatasetBySuffix('sans_sa').getData()
-
-# saxs_q_min, saxs_q_max = min(saxs_q), max(saxs_q)
-sans_q_min, sans_q_max = min(sans_sa_q), max(sans_la_q)
-q_min = 1.5e-2
-q_max = sans_q_max
 
 left, bottom = 0.2, 0.17
 x0in = 0.6
