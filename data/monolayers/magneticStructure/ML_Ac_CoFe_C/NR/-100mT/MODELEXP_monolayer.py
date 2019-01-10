@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.reflectometry import PolarizedReflectometry
-from modelexp.models.reflectometry import CubeCSMonolayerOnSpacer, Magnetic, DataResolution
+from modelexp.models.reflectometry import CubeCSMonolayerOnSpacerReducedMagnetism, Magnetic, DataResolution
 from modelexp.data import MftData
 from modelexp.fit import LevenbergMarquardt
 
@@ -23,10 +23,11 @@ dataRef.loadFromFile('../mftFiles/DD205_4_5K_-100mT_u.mft', ['m'])
 # dataRef.sliceDomain(0.012, 0.2)
 dataRef.plotData()
 
-modelRef = app.setModel(CubeCSMonolayerOnSpacer, [Magnetic, DataResolution])
+modelRef = app.setModel(CubeCSMonolayerOnSpacerReducedMagnetism, [Magnetic, DataResolution])
 modelRef.setResolution()
 modelRef.setParam("i0", 1.0335,  minVal = 0, maxVal = 1.5, vary = False)
-modelRef.setParam("magSldCore", 5.959999999999999e-07,  minVal = -2e-06, maxVal = 2e-06, vary = True)
+modelRef.setParam("magSldCore", 5.97206517870842e-07,  minVal = -2e-06, maxVal = 3e-06, vary = True)
+modelRef.setParam("dReduced", 0.0,  minVal = 0, maxVal = 70, vary = True)
 
 modelRef.setConstantParam("polarizationEfficiency", 1.0)
 modelRef.setConstantParam("bg", 1.3999999999999998e-07)
@@ -51,8 +52,6 @@ modelRef.setConstantParam("sldShellTop", 0.078e-6)
 
 modelRef.setConstantParam("coverage", 1.0)
 modelRef.setConstantParam("a", 93.80000000000001)
-modelRef.setConstantParam("sigA", 0)
-modelRef.setConstantParam('orderHermite', 10)
 modelRef.updateModel()
 
 fit = app.setFit(LevenbergMarquardt)

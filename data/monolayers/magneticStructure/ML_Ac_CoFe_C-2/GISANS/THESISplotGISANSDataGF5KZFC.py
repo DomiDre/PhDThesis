@@ -17,7 +17,9 @@ import matplotlib
 from matplotlib.legend_handler import HandlerTuple
 
 sdd = 5000 # m
-qzmin, qzmax = 0.009, 0.015
+qzmin, qzmax = 0.009, 0.013
+vmin=2/2
+vmax=5e2/2
 
 chapter = 'monolayers'
 savefile = chapter + '_GISANS_ML-Ac-CoFe-C-2_ZFC5K_GF'
@@ -44,8 +46,8 @@ def load_files(path_prefix, filenum_list):
 
   return qy, qz, data, data_projection, sig_data_projection
 
-qy_sat_p, qz_sat_p, data_sat_p, I_sat_p, sI_sat_p = load_files('./GISANS/0rawdata/020', np.arange(414, 437, 2))
-qy_sat_m, qz_sat_m, data_sat_m, I_sat_m, sI_sat_m = load_files('./GISANS/0rawdata/020', np.arange(415, 437, 2))
+qy_sat_p, qz_sat_p, data_sat_p, I_sat_p, sI_sat_p = load_files('./0rawdata/020', np.arange(414, 438, 2))
+qy_sat_m, qz_sat_m, data_sat_m, I_sat_m, sI_sat_m = load_files('./0rawdata/020', np.arange(415, 438, 2))
 
 def make_colormap(seq):
     """Return a LinearSegmentedColormap
@@ -76,7 +78,7 @@ custom_cmap.set_bad(color='black')
 
 
 
-x0, y0 = 0.17, 0.17
+x0, y0 = 0.18, 0.17
 width, height = 1 - x0 - 0.01, 1 - y0 - 0.01
 fig = plt.figure()
 
@@ -86,16 +88,22 @@ ax2 = fig.add_axes([x0, y0, width, 0.25])
 pcm = ax.pcolormesh(
   qy_sat_p*10, qz_sat_p*10, data_sat_p.T,\
   norm=mcolors.LogNorm(),\
-  cmap=custom_cmap, vmin=2, vmax=3e2)
+  cmap=custom_cmap, vmin=vmin, vmax=vmax)
 ax.axhline(qzmin*10, color='white', marker='None', alpha=0.5)
 ax.axhline(qzmax*10, color='white', marker='None', alpha=0.5)
+
+ax2.plot([0.49, 0.49], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+ax2.plot([-0.49, -0.49], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+ax2.plot([0.49/2, 0.49/2], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+ax2.plot([-0.49/2, -0.49/2], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+
 ax.set_xticks([])
 ax2.set_xlabel('$\mathit{q_y} \, / \, nm^{-1}$')
 ax.set_ylabel('$\mathit{q_z} \, / \, nm^{-1}$')
 
 txt = ax.text(0.99, 0.95,\
         "ML-Ac-CoFe-C-2",\
-        color='white',\
+        color='black',\
         horizontalalignment='right',
         verticalalignment='top',\
         transform=ax.transAxes, fontsize= 8)
@@ -107,8 +115,8 @@ txt = ax.text(0.99, 0.95,\
 #         transform=ax.transAxes, fontsize=18)
 # txt.set_path_effects([PathEffects.withStroke(linewidth=5, foreground='black')])
 
-ax2.errorbar(qy_sat_m*10, I_sat_m, sI_sat_m, label='$I^{+}$', elinewidth=1, capsize=1, linewidth=1)
-ax2.errorbar(qy_sat_p*10, I_sat_p, sI_sat_p, label='$I^{-}$', elinewidth=1, capsize=1, linewidth=1)
+ax2.errorbar(qy_sat_m*10, I_sat_m, sI_sat_m, label='$I^{+}$', elinewidth=1, capsize=0, linewidth=1)
+ax2.errorbar(qy_sat_p*10, I_sat_p, sI_sat_p, label='$I^{-}$', elinewidth=1, capsize=0, linewidth=1)
 ax2.set_yscale('log')
 
 plt.setp(ax.get_xticklabels(), visible=False)
@@ -118,7 +126,7 @@ ax.set_xlim(-0.66,0.66)
 ax2.set_xlim(-0.66,0.66)
 ax.set_ylim(-0.11, 0.66)
 ax.set_aspect('equal')
-ax2.set_ylim(99, 1.1e3)
+ax2.set_ylim(100, 6e2)
 ax2.legend(loc='lower center', fontsize=10)
 fig.savefig(cwd + '/' + savefile)
 fig.savefig(thesisimgs+'/'+savefile)

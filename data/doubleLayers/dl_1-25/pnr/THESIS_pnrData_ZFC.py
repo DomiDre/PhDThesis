@@ -32,7 +32,7 @@ neg_rPlus_file = cwd +  '/mftFiles/DD205_3_5K_-100mT_d.mft'
 neg_rMinus_file = cwd + '/mftFiles/DD205_3_5K_-100mT_u.mft'
 
 
-q_min, q_max = 0.009, 0.19
+q_min, q_max = 0.06, 2.5
 I_min, I_max = 1e-7, 2.9e2
 
 refl_pngfile = f"{Chapter}_VerticalStructure_{sample_name}_PNR_ZFC5K.png"
@@ -48,7 +48,7 @@ def get_data(file):
   q = q[valid_data]
   I = I[valid_data]
   sI = sI[valid_data]
-  return q, I, sI
+  return q*10, I, sI
 
 #load data
 q_gf_p, I_gf_p, sI_gf_p = get_data(gf_rPlus_file)
@@ -111,7 +111,7 @@ ax.text(0.01, 0.35, '$R^{+}, \, R^{-}$',
   transform=ax.transAxes, fontsize=10)
 ax.set_xscale('log')
 ax.set_yscale('log')
-ax.set_xlabel("$\mathit{q_z} \, / \, \AA^{-1}$")
+ax.set_xlabel("$\mathit{q_z} \, / \, nm^{-1}$")
 ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])

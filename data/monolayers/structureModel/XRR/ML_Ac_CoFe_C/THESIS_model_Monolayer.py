@@ -20,11 +20,11 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'ML_Ac-CoFe-C_WithSpacer'
 Chapter = 'monolayers'
-fit_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespread/fit_result.dat"
-sld_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespread/fit_sld.dat"
+fit_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespreadSymmetric/fit_result.dat"
+sld_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespreadSymmetric/fit_sld.dat"
 
 labeltext = 'ML-Ac-CoFe-C'
-q_min, q_max = 1e-2, 0.399
+q_min, q_max = 1e-1, 3.99
 I_min, I_max = 5e-7, 1.9e0
 
 refl_pngfile = f"{Chapter}_VerticalStructure_{sample_name}_XRR.png"
@@ -40,7 +40,7 @@ def get_clean_data(data):
   I = I[valid_data]
   sI = sI[valid_data]
   Imodel = Imodel[valid_data]
-  return q, I, sI, Imodel
+  return q*10, I, sI, Imodel
 
 #load data
 data = MultiData(XyemData)
@@ -67,7 +67,7 @@ ax.errorbar(q, I, sI,\
 ax.plot(q, Imodel, zorder=1, color='black', marker='None')
 ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_yscale('log')
-ax.set_xlabel("$\mathit{q_z} \, / \, \AA^{-1}$")
+ax.set_xlabel("$\mathit{q_z} \, / \, nm^{-1}$")
 ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
@@ -80,7 +80,7 @@ ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_\mathrm{el.} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 10, 20])
 ax_sld.set_yticks([0, 10, 20])
-ax_sld.set_xlim([-4, 25])
+ax_sld.set_xlim([-7, 25])
 ax_sld.set_ylim([0, 24])
 ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 

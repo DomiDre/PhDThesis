@@ -15,16 +15,16 @@ datafile = '../../rawdata/dd144_dry_BGLinSub.xy'
 
 app = App()
 expRef = app.setExperiment(Vsm)
-# expRef.setFitRange(-2,2)
+expRef.setFitRange(-0.1,0.1)
 
 dataRef = app.setData(XyeData)
 dataRef.loadFromFile(datafile)
 
 dataRef.plotData()
 modelRef = app.setModel(LangevinMuWeighted)
-modelRef.setParam("Ms", 22.05,  minVal = 0, maxVal = 50, vary = False)
-modelRef.setParam("mu", 17730.409,  minVal = 1, maxVal = 30000, vary = False)
-modelRef.setParam("chi", 3.92,  minVal = -10, maxVal = 10, vary = False)
+modelRef.setParam("Ms", 22.05,  minVal = 0, maxVal = 50, vary = True)
+modelRef.setParam("mu", 17730.409,  minVal = 1, maxVal = 30000, vary = True)
+modelRef.setParam("chi", 3.92,  minVal = -10, maxVal = 10, vary = True)
 modelRef.setParam("sigMu", 0.0,  minVal = 0, maxVal = 1.5, vary = False)
 modelRef.setConstantParam('orderHermite', 50)
 modelRef.setConstantParam('T', 296) # 22 C

@@ -91,7 +91,7 @@ ax.set_ylim([I_min, I_max])
 # ax_sld.plot(saxs_r, saxs_sld, marker='None',
 #   color=colors['saxs_data'])
 ax_sld.plot(sans_r, sans_sld, marker='None',
-  color=colors['sans_sa_data'])
+  color='blue')
 ax_sld.plot(saxs_r, saxs_sld, marker='None',
   color=colors['sans_sa_data'])
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)

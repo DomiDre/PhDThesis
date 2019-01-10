@@ -23,7 +23,7 @@ ax.axvline(0, color='lightgray', marker='None', zorder=0)
 data = XyeData()
 data.loadFromFile(datfile)
 B, M, sM = data.getData()
-ax.plot(B, M - 160*B, linestyle='None', marker='.', markersize=1, zorder=2, alpha=0.5)
+ax.errorbar(B, M, sM, linestyle='None', marker='.', markersize=1, zorder=2, alpha=0.5, capsize=0)
 
 ax.text(0.02,0.98,'ML-Ac-CoFe-C-2*\n$\mathit{T}$ = 10 K',
   transform=ax.transAxes,
@@ -32,8 +32,8 @@ ax.text(0.02,0.98,'ML-Ac-CoFe-C-2*\n$\mathit{T}$ = 10 K',
 
 ax.set_xlabel("$\mathit{\mu_0 H} \, / \, T$")
 ax.set_ylabel("$\mathit{M} \, / \, kAm^{-1}$")
-ax.set_xlim(-6, 6)
-ax.set_ylim(-690, 690)
+ax.set_xlim(-9.2, 9.2)
+ax.set_ylim(-550, 550)
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
 

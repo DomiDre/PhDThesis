@@ -24,7 +24,7 @@ fit_file = cwd + "/models/MonolayerWithSpacerModelSmallerWavespread/fit_result.d
 sld_file = cwd + "/models/MonolayerWithSpacerModelSmallerWavespread/fit_sld.dat"
 
 labeltext = 'ML-Ac-CoFe-C-2'
-q_min, q_max = 1e-2, 0.399
+q_min, q_max = 1e-1, 3.99
 I_min, I_max = 5e-7, 1.9e0
 
 refl_pngfile = f"{Chapter}_SquareArrayParacrystal_{sample_name}_XRR.png"
@@ -40,7 +40,7 @@ def get_clean_data(data):
   I = I[valid_data]
   sI = sI[valid_data]
   Imodel = Imodel[valid_data]
-  return q, I, sI, Imodel
+  return q*10, I, sI, Imodel
 
 #load data
 data = MultiData(XyemData)

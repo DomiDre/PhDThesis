@@ -16,7 +16,9 @@ from numpy import sqrt
 import matplotlib
 
 sdd = 5000 # m
-qzmin, qzmax = 0.009, 0.015
+qzmin, qzmax = 0.009, 0.013
+vmin=2/2
+vmax=5e2/2
 
 chapter = 'monolayers'
 savefile = chapter + '_GISANS_ML-Ac-CoFe-C-2_ZFC5K_Remanence'
@@ -44,8 +46,8 @@ def load_files(path_prefix, filenum_list):
   
   return qy, qz, data, data_projection, sig_data_projection
 
-qy_sat_p, qz_sat_p, data_sat_p, I_sat_p, sI_sat_p = load_files('./GISANS/0rawdata/020', np.arange(455, 502, 2))
-qy_sat_m, qz_sat_m, data_sat_m, I_sat_m, sI_sat_m = load_files('./GISANS/0rawdata/020', np.arange(456, 502, 2))
+qy_sat_p, qz_sat_p, data_sat_p, I_sat_p, sI_sat_p = load_files('./0rawdata/020', np.arange(455, 503, 2))
+qy_sat_m, qz_sat_m, data_sat_m, I_sat_m, sI_sat_m = load_files('./0rawdata/020', np.arange(456, 503, 2))
 
 def make_colormap(seq):
     """Return a LinearSegmentedColormap
@@ -86,7 +88,7 @@ ax2 = fig.add_axes([x0, y0, width, 0.25])
 pcm = ax.pcolormesh(
   qy_sat_p*10, qz_sat_p*10, data_sat_p.T,\
   norm=mcolors.LogNorm(),\
-  cmap=custom_cmap, vmin=2, vmax=3e2)
+  cmap=custom_cmap, vmin=vmin, vmax=vmax)
 ax.axhline(qzmin*10, color='white', marker='None', alpha=0.5)
 ax.axhline(qzmax*10, color='white', marker='None', alpha=0.5)
 ax.set_xticks([])
@@ -95,10 +97,16 @@ ax.set_ylabel('$\mathit{q_z} \, / \, nm^{-1}$')
 
 txt = ax.text(0.99, 0.95,\
         "ML-Ac-CoFe-C-2",\
-        color='white',\
+        color='black',\
         horizontalalignment='right',
         verticalalignment='top',\
         transform=ax.transAxes, fontsize= 8)
+
+ax2.plot([0.49, 0.49], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+ax2.plot([-0.49, -0.49], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+ax2.plot([0.49/2, 0.49/2], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+ax2.plot([-0.49/2, -0.49/2], [1.5e2, 2.2e2], marker='None', ls='-', color='black')
+
 # txt = ax.text(0.01, 0.01,\
 #         "$T\, =\, 250 \,K$\n$\mu_0 H \,=\, 4\, T$",\
 #         color='white',\
@@ -116,7 +124,7 @@ ax.set_xlim(-0.66,0.66)
 ax2.set_xlim(-0.66,0.66)
 ax.set_ylim(-0.11, 0.66)
 ax.set_aspect('equal')
-ax2.set_ylim(99, 1.1e3)
+ax2.set_ylim(100, 6e2)
 ax2.legend(loc='lower center', fontsize=10)
 fig.savefig(cwd + '/' + savefile)
 fig.savefig(thesisimgs+'/'+savefile)

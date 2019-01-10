@@ -24,7 +24,7 @@ xrrfile_25 = '../CC_Fe_0.25/XRR/DD151_2_1_cleaned_corrected.xye'
 xrrfile_37 = '../CC_Fe_0.37/XRR/DD151_28_cleaned_corrected.xye'
 xrrfile_50 = '../CC_Fe_0.50/XRR/DD151_30_cleaned_fcorrected.xye'
 
-q_min, q_max = 0.013, 0.3
+q_min, q_max = 0.13, 3.02
 I_min, I_max = 1e-7, 1.9e1
 
 refl_pngfile = f"{Chapter}_VerticalStructure_Combined_XRR.png"
@@ -40,7 +40,7 @@ def get_data(file):
   q = q[valid_data]
   I = I[valid_data]
   sI = sI[valid_data]
-  return q, I, sI
+  return q*10, I, sI
 
 #load data
 q_25, I_25, sI_25 = get_data(xrrfile_25)
@@ -73,10 +73,11 @@ ax.errorbar(q_50, I_50/sf1, sI_50/sf1,
 
 ax.legend(loc='upper right')
 ax.set_yscale('log')
-ax.set_xlabel("$\mathit{q_z} \, / \, \AA^{-1}$")
+ax.set_xlabel("$\mathit{q_z} \, / \, nm^{-1}$")
 ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
 fig.savefig(thesisimgs + '/' + refl_pngfile)
 fig.savefig(cwd + '/' + refl_pngfile)
+plt.show()

@@ -2,7 +2,7 @@ import sys, os
 thesisimgs = os.environ['phdthesisimgs']
 cwd = sys.path[0]
 import matplotlib.pyplot as plt
-plt.style.use('phdthesis')
+plt.style.use('phdthesis2cols')
 
 from GISANS.gisansd33 import GisansD33
 import numpy as np
@@ -16,7 +16,9 @@ from numpy import sqrt
 import matplotlib
 
 sdd = 5000 # m
-qzmin, qzmax = 0.009, 0.015
+qzmin, qzmax = 0.009, 0.013
+vmin=2/2
+vmax=5e2/2
 
 chapter = 'monolayers'
 savefile = chapter + '_GISANS_ML-Ac-CoFe-C-2_ZFC5K_negField'
@@ -38,14 +40,13 @@ def load_files(path_prefix, filenum_list):
   data_projection = np.sum(data[:,qzrange], axis=1)
   sig_data_projection = np.sqrt(data_projection)
   data = data / monitor* 14000
-  print(data)
   data_projection = data_projection / monitor* 14000
   sig_data_projection = sig_data_projection / monitor* 14000
   
   return qy, qz, data, data_projection, sig_data_projection
 
-qy_sat_p, qz_sat_p, data_sat_p, I_sat_p, sI_sat_p = load_files('./GISANS/0rawdata/020', np.arange(503, 526, 2))
-qy_sat_m, qz_sat_m, data_sat_m, I_sat_m, sI_sat_m = load_files('./GISANS/0rawdata/020', np.arange(504, 526, 2))
+qy_sat_p, qz_sat_p, data_sat_p, I_sat_p, sI_sat_p = load_files('./0rawdata/020', np.arange(503, 527, 2))
+qy_sat_m, qz_sat_m, data_sat_m, I_sat_m, sI_sat_m = load_files('./0rawdata/020', np.arange(504, 527, 2))
 
 def make_colormap(seq):
     """Return a LinearSegmentedColormap
@@ -76,29 +77,42 @@ custom_cmap.set_bad(color='black')
 
 
 
-x0, y0 = 0.17, 0.17
+x0, y0 = 0.10, 0.17
 width, height = 1 - x0 - 0.01, 1 - y0 - 0.01
 fig = plt.figure()
 
-ax = fig.add_axes([x0, 0.42, width, 0.57])
-ax2 = fig.add_axes([x0, y0, width, 0.25])
+ax = fig.add_axes([x0, 0.45, width/2, 0.57])
+axR = fig.add_axes([x0+width/2, 0.45, width/2, 0.57])
+ax2 = fig.add_axes([x0, y0, width, 0.22])
 
 pcm = ax.pcolormesh(
   qy_sat_p*10, qz_sat_p*10, data_sat_p.T,\
   norm=mcolors.LogNorm(),\
-  cmap=custom_cmap, vmin=2, vmax=3e2)
+  cmap=custom_cmap, vmin=vmin, vmax=vmax)
+pcm2 = axR.pcolormesh(
+  qy_sat_m*10, qz_sat_m*10, data_sat_m.T,\
+  norm=mcolors.LogNorm(),\
+  cmap=custom_cmap, vmin=vmin, vmax=vmax)
 ax.axhline(qzmin*10, color='white', marker='None', alpha=0.5)
 ax.axhline(qzmax*10, color='white', marker='None', alpha=0.5)
-ax.set_xticks([])
+axR.axhline(qzmin*10, color='white', marker='None', alpha=0.5)
+axR.axhline(qzmax*10, color='white', marker='None', alpha=0.5)
+# ax.set_xticks([])
 ax2.set_xlabel('$\mathit{q_y} \, / \, nm^{-1}$')
 ax.set_ylabel('$\mathit{q_z} \, / \, nm^{-1}$')
 
 txt = ax.text(0.99, 0.95,\
         "ML-Ac-CoFe-C-2",\
-        color='white',\
+        color='black',\
         horizontalalignment='right',
         verticalalignment='top',\
         transform=ax.transAxes, fontsize= 8)
+txt = axR.text(0.99, 0.95,\
+        "ML-Ac-CoFe-C-2",\
+        color='black',\
+        horizontalalignment='right',
+        verticalalignment='top',\
+        transform=axR.transAxes, fontsize= 8)
 # txt = ax.text(0.01, 0.01,\
 #         "$T\, =\, 250 \,K$\n$\mu_0 H \,=\, 4\, T$",\
 #         color='white',\
@@ -111,12 +125,16 @@ ax2.errorbar(qy_sat_p*10, I_sat_p, sI_sat_p, label='$I^{+}$', elinewidth=1, caps
 ax2.errorbar(qy_sat_m*10, I_sat_m, sI_sat_m, label='$I^{-}$', elinewidth=1, capsize=1, linewidth=1)
 ax2.set_yscale('log')
 
-plt.setp(ax.get_xticklabels(), visible=False)
+# plt.setp(ax.get_xticklabels(), visible=False)
+plt.setp(axR.get_yticklabels(), visible=False)
 ax.set_xlim(-0.66,0.66)
+axR.set_xlim(-0.66,0.66)
 ax2.set_xlim(-0.66,0.66)
-ax.set_ylim(-0.11, 0.66)
+ax.set_ylim(-0.11, 0.49)
+axR.set_ylim(-0.11, 0.49)
 ax.set_aspect('equal')
-ax2.set_ylim(99, 1.1e3)
+axR.set_aspect('equal')
+ax2.set_ylim(130, 6e2)
 ax2.legend(loc='lower center', fontsize=10)
 fig.savefig(cwd + '/' + savefile)
 fig.savefig(thesisimgs+'/'+savefile)

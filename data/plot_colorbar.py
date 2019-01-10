@@ -13,6 +13,8 @@ import matplotlib as mpl
 chapter = 'monolayers'
 savefile = chapter + '_GISAXS_SVcbar'
 
+vmin = 1e-9
+vmax = 15e-6
 x0, y0 = 0.13, 0.17
 width, height = 1 - x0 - 0.01, 1 - y0 - 0.01
 obj = DDGISAXS()
@@ -20,7 +22,7 @@ fig = plt.figure(figsize=(4, 0.5))
 ax1 = fig.add_axes([0.05, 0.80, 0.9, 0.15])
 
 cmap = obj.cmap
-norm = mpl.colors.LogNorm(vmin = 1e-9, vmax=15e-6)
+norm = mpl.colors.LogNorm(vmin = vmin, vmax=vmax)
 cb1 = mpl.colorbar.ColorbarBase(
   ax1,
   cmap=cmap,

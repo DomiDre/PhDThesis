@@ -46,6 +46,8 @@ modelRef.setParam("thicknessPMMA", 5.0,  minVal = 0, maxVal = 1000, vary = True)
 modelRef.setParam("bg", 1.555e-06,  minVal = 0, maxVal = 5e-06, vary = False)
 modelRef.setParam("i0", 1.2,  minVal = 0, maxVal = 1.2, vary = False)
 
+modelRef.combineParameters('roughnessShellCube1', 'roughnessCubeShell1')
+modelRef.combineParameters('roughnessShellCube2', 'roughnessCubeShell2')
 modelRef.setConstantParam("reSldShellLower", 8.52e-06)
 modelRef.setConstantParam("imSldShellLower", 0.013e-06)
 modelRef.setConstantParam('reSldCore', 39.445e-6)

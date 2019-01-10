@@ -67,17 +67,19 @@ np.savetxt(f"{sample_name}_Yoneda.xye",\
     header=headerstring)
 
 x0, y0 = 0.13, 0.17
-width, height = 1 - x0 - 0.01, 1 - y0 - 0.01
+width, height = 1 - x0 - 0.15, 1 - y0 - 0.01
 fig = plt.figure()
 ax = fig.add_axes([x0, y0, width, height])
+cax = fig.add_axes([0.86, y0+0.025, 0.025, height-0.046])
+pcm = ax.pcolormesh(qy, qz, data.T,
+    norm=mcolors.LogNorm(),
+    cmap=obj.cmap, vmin=vmin, vmax=vmax)
 
-pcm = ax.pcolormesh(qy, qz, data.T,\
-                    norm=mcolors.LogNorm(),\
-                    cmap=obj.cmap, vmin=vmin, vmax=vmax)
+cbar = fig.colorbar(pcm, cax=cax, orientation='vertical')
 ax.axhline(qz_min, color='white', marker='None', alpha=0.5)
 ax.axhline(qz_max, color='white', marker='None', alpha=0.5)
 
-ax.set_yticks([0, 1])
+ax.set_yticks([0, 1, 2])
 ax.set_xlabel('$\mathit{q_y} \, / \, nm^{-1}$')
 ax.set_ylabel('$\mathit{q_z} \, / \, nm^{-1}$')
 

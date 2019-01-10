@@ -114,15 +114,15 @@ ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")
 ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
-ax.set_xlim([1e-2, 0.2])
+ax.set_xlim([1e-2, 0.14])
 ax.set_ylim([1e-2, 2e1])
 
-ax_sld.plot(r_part, sld_part, marker='None',
-  color='#FAAB2D', zorder=2, alpha=0.2)
+# ax_sld.plot(r_part, sld_part, marker='None',
+#   color='#FAAB2D', zorder=2, alpha=0.2)
 ax_sld.plot(rMag_part, sldMag_part, marker='None',
   color='#EE292F', zorder=3)
-ax_sld.plot(r_oa, sld_oa, marker='None',
-  color='#0EA8DF', zorder=1, alpha=0.2)
+# ax_sld.plot(r_oa, sld_oa, marker='None',
+#   color='#0EA8DF', zorder=1, alpha=0.2)
 
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_{mag} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)

@@ -6,7 +6,7 @@ import scipy as sp
 
 Ms_is = 0.052
 moment = 23490
-chi, sigChi = -0.035, 1e-5
+chi, sigChi = -0.035, 1e-10
 
 r = 4.29e-9
 p = 2.2
@@ -55,13 +55,14 @@ def rescale(datafile, samplename, isTemp=False):
 
 samplename = 'ML_Ac_CoFe_C_2star'
 rescale('../data/DD175_23_HYST_100OE_5K.DAT', f'{samplename}_5K_rescaled')
-# rescale('../data/DD175_23_HYST_10K_100OE.DAT', f'{samplename}_10K_rescaled')
-# rescale('../data/DD175_23_HYST_20K_100OE.DAT', f'{samplename}_20K_rescaled')
-# rescale('../data/DD175_23_HYST_50K_100OE.DAT', f'{samplename}_50K_rescaled')
-# rescale('../data/DD175_23_HYST_100K_100OE.DAT', f'{samplename}_100K_rescaled')
-# rescale('../data/DD175_23_HYST_150K_100OE.DAT', f'{samplename}_150K_rescaled')
-# rescale('../data/DD175_23_HYST_200K_100OE.DAT', f'{samplename}_200K_rescaled')
-# rescale('../data/DD175_23_HYST_250K_100OE.DAT', f'{samplename}_250K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_10K.DAT', f'{samplename}_10K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
 rescale('../data/DD175_23_HYST_INIT_300K.DAT', f'{samplename}_300K_rescaled')
+rescale('../data/DD175_23_HYST_100OE_350K.DAT', f'{samplename}_350K_rescaled')
 rescale('../data/DD175_23_FCW_100OE.DAT', f'{samplename}_fcw_rescaled', True)
 rescale('../data/DD175_23_ZFCW_100OE.DAT', f'{samplename}_zfcw_rescaled', True)

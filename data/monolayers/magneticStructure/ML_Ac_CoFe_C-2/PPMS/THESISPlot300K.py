@@ -25,7 +25,7 @@ ax.axvline(0, color='lightgray', marker='None', zorder=0)
 data = XyeData()
 data.loadFromFile(datfile)
 B, M, sM = data.getData()
-ax.errorbar(B, M, sM, linestyle='None', marker='.', markersize=1, zorder=1)
+ax.errorbar(B, M, sM, linestyle='None', marker='.', markersize=1, zorder=1, capsize=0)
 
 Ms = 413.042598
 mu = 23500

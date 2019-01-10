@@ -25,8 +25,8 @@ dataRef.plotData()
 
 modelRef = app.setModel(CubeCSMonolayerOnSpacer, [Magnetic, DataResolution])
 modelRef.setResolution()
-modelRef.setParam("i0", 0.93,  minVal = 0, maxVal = 1.5, vary = False)
-modelRef.setParam("magSldCore", 9.079999999999998e-07,  minVal = 0, maxVal = 2e-06, vary = True)
+modelRef.setParam("i0", 0.975,  minVal = 0, maxVal = 1.5, vary = False)
+modelRef.setParam("magSldCore", 9.212547774767526e-07,  minVal = 0, maxVal = 2e-06, vary = True)
 
 modelRef.setConstantParam("polarizationEfficiency", 1.0)
 modelRef.setConstantParam("gamma", 0.0)

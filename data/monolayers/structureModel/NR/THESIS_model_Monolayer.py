@@ -103,7 +103,7 @@ ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_\mathrm{nuc.} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 10, 20])
 ax_sld.set_yticks([0, 1, 2, 3])
-ax_sld.set_xlim([-4, 25])
+ax_sld.set_xlim([-7, 25])
 ax_sld.set_ylim([0, 3.6])
 ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 

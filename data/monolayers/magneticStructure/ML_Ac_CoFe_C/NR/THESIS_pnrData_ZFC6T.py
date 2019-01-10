@@ -22,8 +22,8 @@ from matplotlib.legend_handler import HandlerTuple
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 Chapter = 'monolayers'
-sample_name = 'Ac-CoFe-C-2'
-labeltext = 'Ac-CoFe-C-2 '
+sample_name = 'Ac-CoFe-C'
+labeltext = 'ML-Ac-CoFe-C'
 
 fit_fileZFC_sat = cwd + "/6T/fit_result.dat"
 sld_fileZFC_sat = cwd + "/6T/fit_sld.dat"
@@ -69,13 +69,13 @@ fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.errorbar(q_sat_p_fit, I_sat_p_fit*sf_sat, sI_sat_p_fit*sf_sat,
-  linestyle='-',
+  linestyle='None',
   label='6 T, $R^{+}$',
-  zorder=0, capsize=0, marker='.', markersize=1)
+  zorder=0, capsize=0, marker='.')
 ax.errorbar(q_sat_m_fit, I_sat_m_fit*sf_sat, sI_sat_m_fit*sf_sat,
-  linestyle='-',
+  linestyle='None',
   label='6 T, $R^{-}$',
-  zorder=0, capsize=0, marker='.', markersize=1)
+  zorder=0, capsize=0, marker='.')
 
 
 handles, labels = ax.get_legend_handles_labels()

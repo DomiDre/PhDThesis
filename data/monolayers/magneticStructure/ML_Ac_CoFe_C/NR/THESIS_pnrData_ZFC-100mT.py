@@ -22,8 +22,8 @@ from matplotlib.legend_handler import HandlerTuple
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 Chapter = 'monolayers'
-sample_name = 'Ac-CoFe-C-2'
-labeltext = 'Ac-CoFe-C-2 '
+sample_name = 'Ac-CoFe-C'
+labeltext = 'ML-Ac-CoFe-C '
 
 fit_fileZFC_rem = cwd + "/-100mT/fit_result.dat"
 sld_fileZFC_rem = cwd + "/-100mT/fit_sld.dat"
@@ -37,12 +37,12 @@ refl_pngfile = f"{Chapter}_MagneticStructure_{sample_name}_PNR_ZFC5K_neg100mT.pn
 def get_fit_data(file):
   data = MultiData(XyemData)
   data.loadFromFile(file)
-  q_p, I_p, sI_p, Imodel_p = data.getDatasetBySuffix('p').getData()
+  q_p, I_p, sI_p, Imodel_p = data.getDatasetBySuffix('m').getData()
   q_p = np.array(q_p)
   I_p = np.array(I_p)
   sI_p = np.array(sI_p)
   Imodel_p = np.array(Imodel_p)
-  q_m, I_m, sI_m, Imodel_m = data.getDatasetBySuffix('m').getData()
+  q_m, I_m, sI_m, Imodel_m = data.getDatasetBySuffix('p').getData()
   q_m = np.array(q_m)
   I_m = np.array(I_m)
   sI_m = np.array(sI_m)
@@ -71,13 +71,13 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 
 ax.errorbar(q_rem_p_fit, I_rem_p_fit*sf_rem, sI_rem_p_fit*sf_rem,
-  linestyle='-',
+  linestyle='None',
   label='-100mT, $R^{+}$',
-  zorder=0, capsize=0, marker='.', markersize=1)
+  zorder=0, capsize=0, marker='.')
 ax.errorbar(q_rem_m_fit, I_rem_m_fit*sf_rem, sI_rem_m_fit*sf_rem,
-  linestyle='-',
+  linestyle='None',
   label='-100mT, $R^{-}$',
-  zorder=0, capsize=0, marker='.', markersize=1)
+  zorder=0, capsize=0, marker='.')
 
 handles, labels = ax.get_legend_handles_labels()
 
