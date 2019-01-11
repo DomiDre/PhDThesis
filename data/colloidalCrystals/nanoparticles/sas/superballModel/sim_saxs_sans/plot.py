@@ -23,9 +23,9 @@ Chapter = ''
 fit_file = cwd + "/intermediateResult.dat"
 sld_file = cwd + "/fit_sld.dat"
 
-q_min, q_max = 2e-2, 0.3
+q_min, q_max = 9e-3, 0.3
 
-I_min, I_max = 5e-4, 1.5e3
+I_min, I_max = 7e-4, 2e3
 
 saxs_legend_label = "SAXS @ GALAXI"
 sans_legend_label = "SANS @ D33"

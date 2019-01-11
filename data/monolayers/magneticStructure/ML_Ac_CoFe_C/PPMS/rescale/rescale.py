@@ -6,7 +6,7 @@ import scipy as sp
 
 Ms_is = 0.0484
 moment = 23130
-chi, sigChi = -0.0334, 1e-5
+chi, sigChi = -0.037, 1e-5
 
 r = 4.65e-9
 p = 2.9
@@ -54,14 +54,14 @@ def rescale(datafile, samplename, isTemp=False):
 
 
 samplename = 'ML_Ac_CoFe_C'
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_5K.DAT', f'{samplename}_5K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_10K.DAT', f'{samplename}_10K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_300K.DAT', f'{samplename}_300K_rescaled')
-rescale('../data/DD205_4_KOELNPPMS_FCW_100OE_TOUCHDOWN.DAT', f'{samplename}_fcw_rescaled', True)
-rescale('../data/DD205_4_KOELNPPMS_ZFCW_100OE_TOUCHDOWN.DAT', f'{samplename}_zfcw_rescaled', True)
+rescale('../data/DD205_4_HYST_100OE_5K.DAT', f'{samplename}_5K_rescaled')
+# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_10K.DAT', f'{samplename}_10K_rescaled')
+# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
+# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
+# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
+# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
+# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
+# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
+rescale('../data/DD205_4_HYST_INIT_300K.DAT', f'{samplename}_300K_rescaled')
+rescale('../data/DD205_4_FCW_100OE.DAT', f'{samplename}_fcw_rescaled', True)
+rescale('../data/DD205_4_ZFCW_100OE.DAT', f'{samplename}_zfcw_rescaled', True)

@@ -9,8 +9,8 @@ from PPMS.ppms import PPMS
 
 from modelexp.data import XyeData
 
-zfc_datfile = './rescale/dd205_4_zfcw_rescaled.dat'
-fcw_datfile = './rescale/dd205_4_fcw_rescaled.dat'
+zfc_datfile = './rescale/ML_Ac_CoFe_C_zfcw_rescaled.xye'
+fcw_datfile = './rescale/ML_Ac_CoFe_C_fcw_rescaled.xye'
 
 chapter = 'monolayer'
 sample_name = 'ML_Ac_CoFe_C'
@@ -49,7 +49,7 @@ ax.text(0.05, 0.95,
         verticalalignment='top',\
         transform=ax.transAxes)
 
-ax.annotate('', xy=(315, 45), xytext=(315,12),
+ax.annotate('', xy=(315, 42), xytext=(315,12),
   horizontalalignment='center', fontsize=10,
   arrowprops=dict(facecolor='black', width=1, headwidth=5))
 ax.text(345, 10,
@@ -58,7 +58,7 @@ ax.text(345, 10,
         verticalalignment='top')
 
 ax.set_xlim(0, 350)
-ax.set_ylim(-0.9, 99)
+ax.set_ylim(-5.9, 99)
 ax.legend(loc='upper right')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
