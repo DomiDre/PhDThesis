@@ -7,38 +7,24 @@
 from modelexp import Cli
 from modelexp.experiments.sas import Saxs
 from modelexp.models.sas import SuperballCSCoupledSigD
-from modelexp.data import XyeData
+from modelexp.data import XyerData
 from modelexp.fit import LevenbergMarquardt
 
 app = Cli()
 expRef = app.setExperiment(Saxs)
-expRef.setFitRange(0.03, 0.4)
-dataRef = app.setData(XyeData)
+expRef.setFitRange(0.02, 0.3)
+dataRef = app.setData(XyerData)
 
 dataRef.loadFromFile('../../experimental_data/DD144.xye')
-# Iteration: 406  Chi2:74128.17848003955
-# [[Variables]]
-#     particleSize:     58.9943565 (init = 65.18515)
-#     d:                6.76320262 (init = 21.18552)
-#     pVal:             4.40910687 (init = 2.473763)
-#     sldCore:          5.21122e-05 (fixed)
-#     sldShell:         4.18489e-05 (fixed)
-#     sldSolvent:       8.01e-06 (fixed)
-#     sigParticleSize:  0.05646412 (init = 0.07143705)
-#     sigD:             0.99669205 (init = 0.4038504)
-#     i0:               0.01818002 (init = 0.02369477)
-#     bg:               0 (fixed)
-#     orderHermite:     5 (fixed)
-#     orderLegendre:    10 (fixed)
-
+dataRef.reducePointDensity(4)
 
 modelRef = app.setModel(SuperballCSCoupledSigD)
-modelRef.setParam("particleSize",     58.9943565,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("d",                6.76320262,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("pVal",             4.40910687,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("sigParticleSize",  0.05646412,  minVal = 0, maxVal = 0.5, vary = True)
-modelRef.setParam("sigD",             0.99669205,  minVal = 0, maxVal = 3, vary = True)
-modelRef.setParam("i0",               0.01818002,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("particleSize",     59.6324049,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("d",                44.6297852,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("pVal",             3.05439927,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("sigParticleSize",  0.06563234,  minVal = 0, maxVal = 0.5, vary = True)
+modelRef.setParam("sigD",             0.0,  minVal = 0, maxVal = 3, vary = False)
+modelRef.setParam("i0",               0.02981003,  minVal = 0, maxVal = 0.1, vary = True)
 
 # modelRef.setConstantParam('x', 1)
 modelRef.setConstantParam("bg", 0.)
@@ -51,5 +37,6 @@ modelRef.setConstantParam("sldSolvent", 8.01e-6) # Toluene
 
 fit = app.setFit(LevenbergMarquardt)
 fit.printIteration = 1
+fit.save_intermediate_results_every = 1
 fit.fit()
 fit.exportResult('fit_result.dat')
