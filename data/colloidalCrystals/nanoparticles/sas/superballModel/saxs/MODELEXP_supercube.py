@@ -16,7 +16,7 @@ expRef.setFitRange(0.02, 0.3)
 dataRef = app.setData(XyerData)
 
 dataRef.loadFromFile('../../experimental_data/DD144.xye')
-dataRef.reducePointDensity(4)
+# dataRef.reducePointDensity(4)
 
 modelRef = app.setModel(SuperballCSCoupledSigD)
 modelRef.setParam("particleSize",     59.6324049,  minVal = 0, maxVal = 100, vary = True)

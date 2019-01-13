@@ -37,11 +37,11 @@ data = MultiData(XyemData)
 data.loadFromFile(fit_file)
 saxs_q, saxs_I, saxs_sI, saxs_Imodel = data.getDataset(0).getData()
 
-#load sld
-sldData = MultiData(XyData)
-sldData.loadFromFile(sld_file)
+# #load sld
+# sldData = MultiData(XyData)
+# sldData.loadFromFile(sld_file)
+# # saxs_r, saxs_sld = sldData.getDataset(0).getData()
 # saxs_r, saxs_sld = sldData.getDataset(0).getData()
-saxs_r, saxs_sld = sldData.getDataset(0).getData()
 
 left, bottom = 0.2, 0.17
 x0in = 0.6
@@ -51,7 +51,7 @@ heightin= 1-y0in-0.01
 
 fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
-ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
+# ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 
 ax.errorbar(saxs_q, saxs_I, saxs_sI,\
   linestyle='None', color=colors['saxs_data'],\
@@ -68,15 +68,15 @@ ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax_sld.plot(saxs_r, saxs_sld, marker='None',
-  color=colors['sans_sa_data'])
-ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
-ax_sld.set_ylabel("$SLD \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
-ax_sld.set_xticks([0, 2, 4, 6, 8])
-ax_sld.set_yticks([0, 5, 10])
-ax_sld.set_xlim([0, 9])
-ax_sld.set_ylim([0, 59])
-ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
+# ax_sld.plot(saxs_r, saxs_sld, marker='None',
+#   color=colors['sans_sa_data'])
+# ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
+# ax_sld.set_ylabel("$SLD \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
+# ax_sld.set_xticks([0, 2, 4, 6, 8])
+# ax_sld.set_yticks([0, 5, 10])
+# ax_sld.set_xlim([0, 9])
+# ax_sld.set_ylim([0, 59])
+# ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 
 # fig.savefig(thesisimgs + '/' + saxs_pngfile)
