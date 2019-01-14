@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import Cli
 from modelexp.experiments.sas import Saxs
-from modelexp.models.sas import SuperballCSCoupledSigD
+from modelexp.models.sas import SuperballCSCoupled
 from modelexp.data import XyerData
 from modelexp.fit import LevenbergMarquardt
 
@@ -18,13 +18,12 @@ dataRef = app.setData(XyerData)
 dataRef.loadFromFile('../../experimental_data/DD144.xye')
 # dataRef.reducePointDensity(4)
 
-modelRef = app.setModel(SuperballCSCoupledSigD)
-modelRef.setParam("particleSize",     59.6324049,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("d",                44.6297852,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("pVal",             3.05439927,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("sigParticleSize",  0.06563234,  minVal = 0, maxVal = 0.5, vary = True)
-modelRef.setParam("sigD",             0.0,  minVal = 0, maxVal = 3, vary = False)
-modelRef.setParam("i0",               0.02981003,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef = app.setModel(SuperballCSCoupled)
+modelRef.setParam("particleSize",     61.1466380,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("d",                54.7550790,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("pVal",             2.17635593,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("sigParticleSize",  0.07531189,  minVal = 0, maxVal = 0.5, vary = True)
+modelRef.setParam("i0",               0.02970345,  minVal = 0, maxVal = 0.1, vary = True)
 
 # modelRef.setConstantParam('x', 1)
 modelRef.setConstantParam("bg", 0.)

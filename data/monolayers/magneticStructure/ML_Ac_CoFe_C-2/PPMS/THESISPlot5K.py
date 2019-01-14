@@ -37,3 +37,4 @@ ax.set_ylim(-550, 550)
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
 
+plt.show()

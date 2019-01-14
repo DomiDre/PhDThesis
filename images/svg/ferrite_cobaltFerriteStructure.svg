@@ -28,17 +28,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568543"
-     inkscape:cx="94.438647"
-     inkscape:cy="184.73552"
+     inkscape:zoom="2.8284272"
+     inkscape:cx="82.785475"
+     inkscape:cy="174.52586"
      inkscape:document-units="in"
-     inkscape:current-layer="layer12"
+     inkscape:current-layer="layer8"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1043"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
+     inkscape:window-width="1853"
+     inkscape:window-height="1016"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="false"
@@ -63,7 +63,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1088,7 +1088,7 @@
          r="4.5" />
       <g
          id="g989-7-8-7"
-         transform="translate(63.038028,-899.96257)"
+         transform="translate(65.442689,-894.65927)"
          style="display:inline;fill:#76c152;fill-opacity:1">
         <circle
            style="opacity:1;fill:#76c152;fill-opacity:1;stroke:#000000;stroke-width:0.99000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1100,52 +1100,56 @@
       <circle
          style="display:inline;opacity:1;fill:#0ea8df;fill-opacity:1;stroke:#000000;stroke-width:0.99000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path839-0-6-7-3"
-         cx="164.17737"
-         cy="59.718075"
+         cx="166.58203"
+         cy="68.771378"
          r="4.5" />
       <circle
          style="display:inline;opacity:1;fill:#faab2d;fill-opacity:1;stroke:#000000;stroke-width:0.99000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path839-5-3-9-7"
-         cx="164.22081"
-         cy="31.396172"
+         cx="166.62547"
+         cy="32.949471"
          r="4.5" />
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="172.31528"
-         y="36.787773"
+         x="174.71994"
+         y="38.341072"
          id="text1232-9"><tspan
            sodipodi:role="line"
            id="tspan1230-0"
-           x="172.31528"
-           y="36.787773"
-           style="stroke-width:0.9375px">T<tspan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan5371">d</tspan> position</tspan></text>
+           x="174.71994"
+           y="38.341072"
+           style="stroke-width:0.9375px">Fe<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan2181">3+</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="172.3587"
-         y="51.010677"
+         x="174.76337"
+         y="56.313976"
          id="text1232-3-0"><tspan
            sodipodi:role="line"
            id="tspan1230-7-2"
-           x="172.3587"
-           y="51.010677"
-           style="stroke-width:0.9375px">O<tspan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan5373">h</tspan> position</tspan></text>
+           x="174.76337"
+           y="56.313976"
+           style="stroke-width:0.9375px">Fe<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan2205">3+</tspan>/Co<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan2227">2+</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="172.31647"
-         y="64.841606"
+         x="174.72113"
+         y="73.894905"
          id="text1232-8-2"><tspan
            sodipodi:role="line"
            id="tspan1230-74-6"
-           x="172.31647"
-           y="64.841606"
-           style="stroke-width:0.9375px">Oxygen ion</tspan></text>
+           x="174.72113"
+           y="73.894905"
+           style="stroke-width:0.9375px">O<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan2229">2-</tspan></tspan></text>
       <circle
          style="display:inline;opacity:1;fill:#faab2d;fill-opacity:1;stroke:#000000;stroke-width:0.99000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path839-0-7-03-7-3"

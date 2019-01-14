@@ -61,8 +61,8 @@ def add_legend(handle, title, height):
   return legend
 
 legend1 = add_legend(handles[4], 'DL-5%', 1)
-legend2 = add_legend(handles[3], 'DL-2.5%', 0.87)
-legend3 = add_legend(handles[2], 'DL-1.25%', 0.77)
+legend2 = add_legend(handles[3], 'DL-2.5%', 0.86)
+legend3 = add_legend(handles[2], 'DL-1.25%', 0.72)
 legend4 = add_legend(handles[1], 'DL-0.25%', 0.55)
 legend5 = add_legend(handles[0], 'DL-0.125%', 0.4)
 

@@ -20,7 +20,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'DD144'
 Chapter = ''
-fit_file = cwd + "/intermediateResult.dat"
+fit_file = cwd + "/fit_result.dat"
 sld_file = cwd + "/fit_sld.dat"
 
 q_min, q_max = 9e-3, 0.3

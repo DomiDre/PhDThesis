@@ -22,7 +22,6 @@ volume_particle = superballVolume(r, p)
 def rescale(datafile, samplename, isTemp=False):
   ppms = PPMS()
   ppms.load(datafile)
-  # ppms.remove_virgin_data(6.9)
   if isTemp:
     T, M = ppms.get_TM()
     sM = ppms.get('M. Std. Err. (emu)')
@@ -38,6 +37,7 @@ def rescale(datafile, samplename, isTemp=False):
     langevinScale.save(f'{samplename}.xye')
 
   else:
+    ppms.remove_virgin_data(6.9)
     B, M = ppms.get_BM()
     sM = ppms.get('M. Std. Err. (emu)')
     valid_point = sM > 0
@@ -55,13 +55,13 @@ def rescale(datafile, samplename, isTemp=False):
 
 samplename = 'ML_Ac_CoFe_C'
 rescale('../data/DD205_4_HYST_100OE_5K.DAT', f'{samplename}_5K_rescaled')
-# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_10K.DAT', f'{samplename}_10K_rescaled')
-# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
-# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
-# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
-# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
-# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
-# rescale('../data/DD205_4_KOELNPPMS_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
+rescale('../data/DD205_4_HYST_100OE_10K.DAT', f'{samplename}_10K_rescaled')
+rescale('../data/DD205_4_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
+rescale('../data/DD205_4_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
+rescale('../data/DD205_4_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
+rescale('../data/DD205_4_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
+rescale('../data/DD205_4_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
+rescale('../data/DD205_4_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
 rescale('../data/DD205_4_HYST_INIT_300K.DAT', f'{samplename}_300K_rescaled')
 rescale('../data/DD205_4_FCW_100OE.DAT', f'{samplename}_fcw_rescaled', True)
 rescale('../data/DD205_4_ZFCW_100OE.DAT', f'{samplename}_zfcw_rescaled', True)

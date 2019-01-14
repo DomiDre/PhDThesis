@@ -49,8 +49,8 @@ T_zfc_5, M_zfc_5, sM_zfc_5, T_fcw_5, M_fcw_5, sM_fcw_5 =\
   load_file('../dl_5/ppms/rescale/DL_5_zfcw_rescaled.xye',
             '../dl_5/ppms/rescale/DL_5_fcw_rescaled.xye')
 
-shift = 0.2
-shift_fc_base = 1
+shift = 0# 0.2
+shift_fc_base = 0#1
 
 fig = plt.figure()
 left, bottom = 0.13, 0.15

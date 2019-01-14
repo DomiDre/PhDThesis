@@ -23,7 +23,6 @@ volume_particle = superballVolume(r, p)
 def rescale(datafile, samplename, isTemp=False, Ms_is = None, chi=None, sigChi=None):
   ppms = PPMS()
   ppms.load(datafile)
-  # ppms.remove_virgin_data(6.9)
   if isTemp:
     T, M = ppms.get_TM()
     sM = ppms.get('M. Std. Err. (emu)')
@@ -39,6 +38,7 @@ def rescale(datafile, samplename, isTemp=False, Ms_is = None, chi=None, sigChi=N
     langevinScale.save(f'{samplename}_LangevinSAXSscaled.xye')
 
   else:
+    ppms.remove_virgin_data(6.9)
     B, M = ppms.get_BM()
     sM = ppms.get('M. Std. Err. (emu)')
     valid_point = sM > 0
