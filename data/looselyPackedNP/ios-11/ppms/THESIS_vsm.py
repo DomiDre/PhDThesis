@@ -25,19 +25,31 @@ data = XyemData()
 data.loadFromFile(datfile)
 B, M, sM, Mmodel = data.getData()
 
-min_B, max_B = min(B), max(B)
+min_B, max_B = -9.01, 9.01
 min_M, max_M = -250, 250
 T = 300
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
+ax_inset = fig.add_axes([0.7,bottom+0.1, 0.25, 0.3])
 
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
 ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
             label='IOS-11\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
 ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
+
+
+ax_inset.axhline(0, color='lightgray', marker='None', zorder=0)
+ax_inset.axvline(0, color='lightgray', marker='None', zorder=0)
+ax_inset.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1,\
+            label='IOS-11\n$\mathit{T} \,=\, ' + str(T) + ' \,K$', capsize=0)
+ax_inset.plot(B, Mmodel, marker='None', zorder=2, color='black')
+ax_inset.set_xlim(-0.1, 0.1)
+ax_inset.set_ylim(-90, 90)
+ax_inset.tick_params(axis='both', which='major', labelsize=8)
+ax_inset.tick_params(axis='both', which='minor', labelsize=8)
 # ax.text(0.51, 0.05,
 #   'IOS-11\n'
 #   '$\mathit{M_s} \, = \,  191.5(2) kA m^{-1}$\n'+

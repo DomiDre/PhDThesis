@@ -8,7 +8,7 @@ from PPMS.ppms import PPMS
 import numpy as np
 from modelexp import App
 from modelexp.experiments.magnetometry import Vsm
-from modelexp.models.magnetometry import LangevinMuWeighted
+from modelexp.models.magnetometry import TwoLangevin
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -16,7 +16,7 @@ datafile = '../../rawdata/KWI338_HYST_300K.DAT'
 
 app = App()
 expRef = app.setExperiment(Vsm)
-expRef.setFitRange(-2, 2)
+# expRef.setFitRange(-1,1)
 Bmin, Bmax = -9, 9
 
 ppms = PPMS()
@@ -35,12 +35,12 @@ dataset.setData(B, M, sM)
 dataRef.addDataset(dataset)
 
 dataRef.plotData()
-modelRef = app.setModel(LangevinMuWeighted)
-modelRef.setParam("Ms", 3.2473584419997357,  minVal = 0, maxVal = 20, vary = True)
-modelRef.setParam("mu", 3786.452248066819,  minVal = 1, maxVal = 30000, vary = True)
-modelRef.setParam("chi", 0.028000000000000025,  minVal = -1, maxVal = 1, vary = False)
-modelRef.setConstantParam("sigMu", 0.0)
-modelRef.setConstantParam('orderHermite', 50)
+modelRef = app.setModel(TwoLangevin)
+modelRef.setParam("Ms1", 2.9860939925123944,  minVal = 0, maxVal = 20, vary = True)
+modelRef.setParam("mu1", 4142.207152867972,  minVal = 1, maxVal = 30000, vary = True)
+modelRef.setParam("Ms2", 0.5496441306635202,  minVal = 0, maxVal = 20, vary = True)
+modelRef.setParam("mu2", 532.7195117061389,  minVal = 1, maxVal = 30000, vary = True)
+modelRef.setParam("chi", 0.005137780088877886,  minVal = -1, maxVal = 1, vary = True)
 modelRef.setConstantParam('T', 300)
 
 modelRef.updateModel()

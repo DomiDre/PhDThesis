@@ -9,22 +9,25 @@ from PPMS.ppms import PPMS
 
 from modelexp.data import XyeData
 
-zfc_datfile = cwd + '/rawdata/KWI338_ZFCW_100OE.DAT'
-fcw_datfile = cwd + '/rawdata/KWI338_FCW_100OE.DAT'
+zfc_datfile = cwd + '/data_rescaling/IOS-7_Dispersion_ZFCw_LangevinSAXSscaled.xye'
+fcw_datfile = cwd + '/data_rescaling/IOS-7_Dispersion_FCw_LangevinSAXSscaled.xye'
 
 chapter = 'looselyPackedNP'
 sample_name = 'IOS-7'
 savefile = f'{chapter}_VSM_ZFC_FC_{sample_name}'
 
 def load_file(datfile):
-  ppms = PPMS()
-  ppms.load(datfile)
-  T, M = ppms.get_TM()
-  sM = ppms.get('M. Std. Err. (emu)')
+  data = XyeData()
+  data.loadFromFile(datfile, sort=False)
+  T, M, sM = data.getData()
+#   ppms = PPMS()
+#   ppms.load(datfile)
+#   T, M = ppms.get_TM()
+#   sM = ppms.get('M. Std. Err. (emu)')
   valid_point = sM > 0
   T = T[valid_point]
-  M = M[valid_point]*22.600696788262294
-  sM = sM[valid_point]*22.600696788262294
+  M = M[valid_point]#*22.600696788262294
+  sM = sM[valid_point]#*22.600696788262294
   return T, M, sM
 
 fig = plt.figure()
@@ -49,10 +52,10 @@ ax.text(0.05, 0.95,
         verticalalignment='top',\
         transform=ax.transAxes)
 
-ax.annotate('', xy=(46.5, 13.5), xytext=(46.5,7),
+ax.annotate('', xy=(46.5, 39), xytext=(46.5,15),
   horizontalalignment='center', fontsize=10,
   arrowprops=dict(facecolor='black', width=1, headwidth=5))
-ax.text(105, 5,
+ax.text(105, 12,
         '$\mathit{T_B} \,= \, 46.5(5)\, K$',\
         horizontalalignment='right',
         verticalalignment='top')
@@ -63,7 +66,8 @@ ax.text(0.94, 0.7,
         transform=ax.transAxes)
 
 ax.set_xlim(10, 230)
-ax.set_ylim(-0.9, 29)
+ax.set_ylim(-0.9, 83)
 ax.legend(loc='upper right')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
+plt.show()

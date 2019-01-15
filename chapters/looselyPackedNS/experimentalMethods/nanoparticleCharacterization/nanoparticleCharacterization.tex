@@ -115,10 +115,16 @@
     This bias has to be done, as otherwise the fit favors a core with high magnetic SLD and a shell with low magnetic SLD, which is nonphysical in the context and due to an ambiguity in the sign of the contrast.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
-    To study the magnetic structure of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion.
-    For both samples, $40 \unit{\musf L}$ of the same dispersions as used in SANS are used, where the particles are dispersed in toluene-$\mathit{d8}$.
-    The vials are measured on a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}) at $300 \unit{K}$ and at a low temperature of $10 \unit{K}$.
+    To confirm the  the results obtained by polarized small-angle neutron scattering and furthermore to study the temperature-dependent magnetization of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion.
+    Using the same dispersions as in SANS samples, $21 \unit{\musf L}$ of IOS-11 and $24 \unit{\musf L}$ of IOS-7 in toluene-$\mathit{d8}$ are sealed in vials using a hydrogen burner.
+    The vials are measured on a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}) at $300 \unit{K}$ in a range of $\pm 9 \unit{T}$ and at a low temperature of $30 \unit{K}$ in a range of $\pm 2 \unit{T}$.
+    
     From the magnetization data at room temperature, the magnetic moment of the single nanospheres is determined by fitting a Langevin curve with excess susceptibility, which is then used together with the size determined by SAXS to scale the data to the magnetic volume as described in \refsec{ch:methods:vsm}.
+    A second Langevin function is linearly added for a better description of the magnetization data at intermediate magnetic field strenghts between $2 - 4 \unit{T}$, and to account for a possible second phase in the nanoparticles, meaning that the fitted magnetization behaviour is described by
+    \begin{align}
+      M(H) \eq M_{s, \, 1} \mathcal{L} (\mu_{1} \mu_0 H) + M_{s, \, 2} \mathcal{L} (\mu_{2} \mu_0 H) + \chi \mu_0 H,
+    \end{align}
+    with $\mathcal{L}(x)$ the Langevin function.
     Furthermore, for both samples temperature dependent magnetization curve is measured by cooling the sample down to $10 \unit{K}$ once with a field of $10 \unit{mT}$ and once without a field.
     From the low temperature the sample is heated with $1.5 \unit{K \, min^{-1}}$, while measuring the magnetization.
     To adjust for an expansion of the vibration rod, the sample centers every $10 \unit{min}$ by performing a touchdown with the sample rod.

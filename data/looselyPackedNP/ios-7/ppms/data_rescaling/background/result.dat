@@ -1,0 +1,16 @@
+[[Fit Statistics]]
+#    # fitting method   = leastsq
+#    # function evals   = 7
+#    # data points      = 183
+#    # variables        = 2
+#    chi-square         = 0.00467392
+#    reduced chi-square = 2.5823e-05
+#    Akaike info crit   = -1931.26944
+#    Bayesian info crit = -1924.85047
+#[[Variables]]
+#    m: -0.30603578 +/- 0.00130149 (0.43%) (init = -0.3049851)
+#    b: -0.00185631 +/- 0.00327609 (176.48%) (init = 0.004087811)
+#[[Correlations]] (unreported correlations are < 0.100)
+#    C(m, b) =  0.993
+Mean diamagnetic slope: -0.3053379081551386 +/- 0.0014970875570081892
+./DTOLUENE_HYS300K	-0.3053379081551386

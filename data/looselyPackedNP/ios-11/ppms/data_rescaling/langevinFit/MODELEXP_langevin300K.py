@@ -15,8 +15,8 @@ from modelexp.fit import LevenbergMarquardt
 datafile = '../../rawdata/PMK18_HYST_300K.DAT'
 
 app = App()
-app.setExperiment(Vsm)
-
+expRef = app.setExperiment(Vsm)
+expRef.setFitRange(-1,1)
 Bmin, Bmax = -9, 9
 
 ppms = PPMS()
@@ -26,7 +26,7 @@ B, M = ppms.get_BM()
 sM = ppms.get('M. Std. Err. (emu)')
 valid_range = np.logical_and(B>Bmin, B<Bmax)
 B = B[valid_range]
-M = M[valid_range]
+M = M[valid_range] + 0.1728*B
 sM = sM[valid_range]
 
 dataRef = app.setData(XyeData)
@@ -36,13 +36,14 @@ dataRef.addDataset(dataset)
 
 dataRef.plotData()
 modelRef = app.setModel(LangevinMuWeighted)
-modelRef.setParam("Ms", 9.967285492368324,  minVal = 0, maxVal = 20, vary = True)
-modelRef.setParam("mu", 11670.610999999999,  minVal = 1, maxVal = 30000, vary = True)
-modelRef.setParam("chi", 0.014537399365811887,  minVal = -0.5, maxVal = 0.5, vary = True)
-modelRef.setParam("sigMu", 0.0,  minVal = 0, maxVal = 1.5, vary = False)
+modelRef.setParam("Ms", 9.566083351083016,  minVal = 0, maxVal = 20, vary = True)
+modelRef.setParam("mu", 13095.456584183343,  minVal = 1, maxVal = 30000, vary = True)
+modelRef.setParam("chi", 0.18599999999999994,  minVal = -1, maxVal = 1, vary = False)
+modelRef.setConstantParam("sigMu", 0.0)
 modelRef.setConstantParam('orderHermite', 50)
 modelRef.setConstantParam('T', 300)
 
+modelRef.updateModel()
 app.setFit(LevenbergMarquardt)
 
 app.show()
