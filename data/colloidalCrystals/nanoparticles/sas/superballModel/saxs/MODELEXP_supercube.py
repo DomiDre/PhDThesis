@@ -13,6 +13,7 @@ import datetime
 import numpy as np
 app = Cli()
 expRef = app.setExperiment(Saxs)
+expRef.setResiduumFormula('log chi2 noError')
 expRef.setFitRange(0.02, 0.3)
 dataRef = app.setData(XyerData)
 
