@@ -12,7 +12,7 @@ chapter = 'monolayer'
 sample_name = 'ML_Ac_CoFe_C'
 savefile = f'{chapter}_PPMS_VSM_10K_{sample_name}'
 
-datfile = './rescale/ML_Ac_CoFe_C_10K_rescaled.dat_LangevinSAXSscaled.xye'
+datfile = './rescale/ML_Ac_CoFe_C_10K_rescaled.xye'
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16
@@ -37,3 +37,4 @@ ax.set_ylim(-450, 450)
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
 
+plt.show()

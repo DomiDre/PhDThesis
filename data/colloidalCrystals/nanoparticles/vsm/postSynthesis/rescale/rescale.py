@@ -4,12 +4,19 @@ import numpy as np
 import scipy.constants as sc
 import scipy as sp
 
-Ms_is = 22.05
-moment = 17730
+#    Ms1:  11.3264645 +/- 0.10902757 (0.96%) (init = 11.32661)
+#    mu1:  25600.9638 +/- 264.306611 (1.03%) (init = 25600.65)
+#    Ms2:  12.9819615 +/- 0.08829429 (0.68%) (init = 12.98191)
+#    mu2:  3604.77401 +/- 64.8894282 (1.80%) (init = 3604.686)
+#    chi:  3.12331096 +/- 0.04801167 (1.54%) (init = 3.123265)
+#    T:    295 (fixed)
+
+Ms_is = 11.3264645
+moment = 25600.9638
 chi, sigChi = 0, 1e-5 # 3.92
 
-r = 6.0775e-9
-p = 1.8324
+r = 6.13e-9
+p = 2.18
 
 def superballVolume(r, p):
   def B(x,y):
@@ -38,4 +45,4 @@ def rescale(datafile, samplename):
 
 
 samplename = 'Ol-Fe-C_powder'
-rescale('../rawdata/dd144_dry_BGLinSub.xy', f'{samplename}_296K_rescaled')
+rescale('../rawdata/dd144_dry_BGLinSub.xy', f'{samplename}_295K_rescaled')

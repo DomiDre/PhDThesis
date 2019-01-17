@@ -12,11 +12,11 @@ from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 from PPMS.ppms import PPMS
 
-datafile = '../../../data_disorderedWafer/DD226_2_HYST_300K_REPEAT.DAT'
+datafile = '../../../data_disorderedWafer/DD226_2_HYST_300K.DAT'
 
 app = App()
 expRef = app.setExperiment(Vsm)
-expRef.setFitRange(-2, 2)
+expRef.setFitRange(-9, 9)
 
 ppms = PPMS()
 ppms.load(datafile)
@@ -35,12 +35,12 @@ dataRef.addDataset(dataset)
 
 dataRef.plotData()
 modelRef = app.setModel(TwoLangevin)
-modelRef.setParam("Ms1", 0.019693725514828155,  minVal = 0, maxVal = 0.04, vary = True)
-modelRef.setParam("Ms2", 0.026704393670209936,  minVal = 0, maxVal = 0.04, vary = True)
-modelRef.setParam("mu1", 33867.666930094405,  minVal = 1, maxVal = 40000, vary = True)
-modelRef.setParam("mu2", 2328.8615014220354,  minVal = 1, maxVal = 4000, vary = True)
-modelRef.setParam("chi", -0.03617652398405616,  minVal = -0.1, maxVal = 0.1, vary = True)
-modelRef.setConstantParam('T', 296) # 22 C
+modelRef.setParam("Ms1", 0.021253964914367277,  minVal = 0, maxVal = 0.04, vary = True)
+modelRef.setParam("Ms2", 0.02284631097520846,  minVal = 0, maxVal = 0.04, vary = True)
+modelRef.setParam("mu1", 33780.437,  minVal = 1, maxVal = 60000, vary = True)
+modelRef.setParam("mu2", 1928.9564004039364,  minVal = 1, maxVal = 4000, vary = True)
+modelRef.setParam("chi", -0.036351635132555155,  minVal = -0.1, maxVal = 0.1, vary = True)
+modelRef.setConstantParam('T', 300) # 22 C
 
 modelRef.updateModel()
 app.setFit(LevenbergMarquardt)

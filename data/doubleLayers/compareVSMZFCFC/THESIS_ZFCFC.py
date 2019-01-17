@@ -49,8 +49,8 @@ T_zfc_5, M_zfc_5, sM_zfc_5, T_fcw_5, M_fcw_5, sM_fcw_5 =\
   load_file('../dl_5/ppms/rescale/DL_5_zfcw_rescaled.xye',
             '../dl_5/ppms/rescale/DL_5_fcw_rescaled.xye')
 
-shift = 0# 0.2
-shift_fc_base = 0#1
+shift = 0.2
+shift_fc_base = 1
 
 fig = plt.figure()
 left, bottom = 0.13, 0.15
@@ -95,6 +95,15 @@ ax.legend(
   loc='upper left',
   bbox_to_anchor = [0.15, 0.75],
   bbox_transform=fig.transFigure)
+
+ax.annotate('', xy=(315, 0.6), xytext=(315,0.24),
+  horizontalalignment='center', fontsize=10,
+  arrowprops=dict(facecolor='black', width=1, headwidth=5))
+ax.text(345, 0.2,
+        '$\mathit{T_B} \,= \, 315\, K$',\
+        horizontalalignment='right',
+        verticalalignment='top')
+
 ax.set_xlabel("$\mathit{T} \, / \, K$")
 ax.set_ylabel("$\mathit{M} \, / \, a.u.$")
 ax.set_xlim(10, 350)

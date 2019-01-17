@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def get_sample():
     # Defining Materials
-    magnetization = ba.kvector_t(0.0, 444e3, 0.0) #parallel to beam
+    magnetization = ba.kvector_t(0.0, 444e3, 0.0) #perpendicular to beam
     material_air       = ba.MaterialBySLD("Air", 0.0, 0.0)
     material_oleicAcid = ba.MaterialBySLD("OleicAcid", 0.078e-06, 0e-08)
     material_nc        = ba.MaterialBySLD("Particle", 6.132e-6, 0e-06, magnetization)

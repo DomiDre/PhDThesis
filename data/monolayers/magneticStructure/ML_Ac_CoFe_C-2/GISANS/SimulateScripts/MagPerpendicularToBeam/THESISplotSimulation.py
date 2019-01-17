@@ -9,6 +9,7 @@ import matplotlib.colors as mcolors
 from uzkBornAgain import Pilatus1M, utils
 from matplotlib.legend_handler import HandlerTuple
 
+import matplotlib.patches as patches
 
 chapter = 'monolayers'
 sample_name = 'ParacrystalSimulationMagPerpendicularBeam'
@@ -93,6 +94,40 @@ width, height = 1 - x0 - 0.01, 1 - y0 - 0.01
 fig = plt.figure()
 ax = fig.add_axes([x0, 0.42, width, 0.57])
 ax2 = fig.add_axes([x0, y0, width, 0.25])
+ax_config = fig.add_axes([0.81, 0.81, 0.25, 0.25])
+ax_config.axis('off')
+
+cube_size = 10
+pp_distance = 13
+Nx = 4
+Ny = 4
+M_direction = (0,1)
+ax_config.annotate("", xy=(0, 25), xytext=(-30, 25),
+  arrowprops=dict(arrowstyle="->"))
+for ix in range(Nx):
+  for iy in range(Ny):
+    #1
+    ax_config.add_patch(
+        patches.Rectangle(
+            (ix*pp_distance, iy*pp_distance),   # (x,y)
+            cube_size,          # width
+            cube_size,          # height
+            fill=True,
+            color='white'
+        )
+    )
+    ax_config.arrow(ix*pp_distance + cube_size/2,
+              iy*pp_distance + cube_size/4,
+              M_direction[0]*cube_size/2,
+              M_direction[1]*cube_size/2,
+              head_width=1, head_length=1, fc='k', ec='k')
+
+ax_config.set_xlim(-5, 80)
+ax_config.set_ylim(-5, 80)
+ax_config.set_xticklabels([])
+ax_config.set_yticklabels([])
+ax_config.set_xticks([])
+ax_config.set_yticks([])
 pcm = ax.pcolormesh(qy, qz, I_uu.T,\
                     norm=mcolors.LogNorm(),\
                     cmap=utils.get_cmap(), vmin=vmin, vmax=vmax)

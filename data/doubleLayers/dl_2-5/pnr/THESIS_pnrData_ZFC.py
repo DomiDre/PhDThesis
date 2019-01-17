@@ -28,8 +28,8 @@ gf_rPlus_file = cwd +   '/mftFiles/DD205_5_5K_10mT_u.mft'
 gf_rMinus_file = cwd +  '/mftFiles/DD205_5_5K_10mT_d.mft'
 sat_rPlus_file = cwd +  '/mftFiles/DD205_5_5K_6000mT_u.mft'
 sat_rMinus_file = cwd + '/mftFiles/DD205_5_5K_6000mT_d.mft'
-neg_rPlus_file = cwd +  '/mftFiles/DD205_5_5K_-100mT_d.mft'
-neg_rMinus_file = cwd + '/mftFiles/DD205_5_5K_-100mT_u.mft'
+neg_rPlus_file = cwd +  '/mftFiles/DD205_5_5K_-100mT_u.mft'
+neg_rMinus_file = cwd + '/mftFiles/DD205_5_5K_-100mT_d.mft'
 
 
 q_min, q_max = 0.06, 2.5

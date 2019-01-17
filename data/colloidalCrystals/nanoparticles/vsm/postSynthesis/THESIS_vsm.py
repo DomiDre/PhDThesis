@@ -30,8 +30,7 @@ fitData.loadFromFile(datfile)
 fit_params = fitData.params
 
 min_B, max_B = min(B), max(B)
-min_M, max_M = -180, 180
-T = 300
+min_M, max_M = -420, 420
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16
@@ -43,7 +42,7 @@ ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1, capsize=0)
 ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
 
 
-ax.text(0.95,0.02,'Ol-Fe-C\n$\mathit{T}$ = 296 K',
+ax.text(0.95,0.02,'Ol-Fe-C\n$\mathit{T}$ = 295 K',
   transform=ax.transAxes,
   horizontalalignment='right',
   verticalalignment='bottom')

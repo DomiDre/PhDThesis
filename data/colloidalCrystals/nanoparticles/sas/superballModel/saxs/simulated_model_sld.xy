@@ -1,0 +1,22 @@
+#Superball Data generated at 2019-01-16 19:56:07.531543
+#[[Parameters]]
+#particleSize	61.146638
+#d	54.755079
+#pVal	2.17635593
+#sldCore	5.21122e-05
+#sldShell	4.18489e-05
+#sldSolvent	8.01e-06
+#sigParticleSize	0.07531189
+#i0	0.02970345
+#bg	0.0
+#orderHermite	10
+#orderLegendre	10
+#
+#[[Data]] sa
+#r	sld
+0.0	5.21122e-05
+6.391559000000001	5.21122e-05
+6.391559000000001	4.18489e-05
+61.146638	4.18489e-05
+61.146638	8.01e-06
+106.391559	8.01e-06

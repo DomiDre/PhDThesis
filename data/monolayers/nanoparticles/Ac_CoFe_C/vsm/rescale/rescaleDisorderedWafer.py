@@ -7,9 +7,9 @@ import scipy as sp
 #    mu:            23130.23 (fixed)
 #    chi:          -0.0356 (fixed)
 
-moment = 23130
-Ms_is = 0.043
-chi, sigChi = -0.0369, 1e-5
+moment = 23130.23
+Ms_is = 0.04732993
+chi, sigChi = -0.037, 1e-5
 
 r = 4.65e-9
 p = 2.9

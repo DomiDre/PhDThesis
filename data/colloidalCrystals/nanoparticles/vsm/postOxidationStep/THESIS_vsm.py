@@ -30,8 +30,8 @@ fitData.loadFromFile(datfile)
 fit_params = fitData.params
 
 min_B, max_B = min(B), max(B)
-min_M, max_M = -550, 550
-T = 296
+min_M, max_M = -990, 990
+T = 295
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16

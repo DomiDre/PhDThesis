@@ -26,8 +26,8 @@ Chapter = 'doubleLayers'
 
 sat_rPlus_file = cwd +  '/mftFiles/DD213_7_5K_6000mT_u.mft'
 sat_rMinus_file = cwd + '/mftFiles/DD213_7_5K_6000mT_d.mft'
-neg_rPlus_file = cwd +  '/mftFiles/DD213_7_5K_-100mT_d.mft'
-neg_rMinus_file = cwd + '/mftFiles/DD213_7_5K_-100mT_u.mft'
+neg_rPlus_file = cwd +  '/mftFiles/DD213_7_5K_-100mT_u.mft'
+neg_rMinus_file = cwd + '/mftFiles/DD213_7_5K_-100mT_d.mft'
 
 
 q_min, q_max = 0.06, 2.5

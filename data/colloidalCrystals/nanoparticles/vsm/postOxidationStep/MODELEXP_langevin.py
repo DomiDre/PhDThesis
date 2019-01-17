@@ -6,11 +6,11 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.magnetometry import Vsm
-from modelexp.models.magnetometry import LangevinMuWeighted
+from modelexp.models.magnetometry import TwoLangevin
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
-datafile = './rescale/Ol-Fe-C_powderOxidized_296K_rescaled.xye'
+datafile = './rescale/Ol-Fe-C_powderOxidized_295K_rescaled.xye'
 
 app = App()
 app.setExperiment(Vsm)
@@ -19,12 +19,13 @@ dataRef = app.setData(XyeData)
 dataRef.loadFromFile(datafile)
 dataRef.sliceDomain(-2,2)
 dataRef.plotData()
-modelRef = app.setModel(LangevinMuWeighted)
-modelRef.setParam("Ms", 412.40000000000003,  minVal = 100, maxVal = 500, vary = False)
-modelRef.setParam("mu", 61600.0,  minVal = 50000, maxVal = 70000, vary = False)
-modelRef.setParam("chi", 20.60000000000001,  minVal = -100, maxVal = 100, vary = False)
-modelRef.setParam("sigMu", 0.0,  minVal = 0, maxVal = 1, vary = False)
-modelRef.setConstantParam('T', 296)
+modelRef = app.setModel(TwoLangevin)
+modelRef.setParam("Ms1", 610.3,  minVal = 100, maxVal = 800, vary = True)
+modelRef.setParam("mu1", 101030.0,  minVal = 50000, maxVal = 120000, vary = True)
+modelRef.setParam("Ms2", 694.3,  minVal = 100, maxVal = 800, vary = True)
+modelRef.setParam("mu2", 15320.0,  minVal = 0, maxVal = 20000, vary = True)
+modelRef.setParam("chi", 65.4,  minVal = -100, maxVal = 100, vary = True)
+modelRef.setConstantParam('T', 295)
 
 app.setFit(LevenbergMarquardt)
 

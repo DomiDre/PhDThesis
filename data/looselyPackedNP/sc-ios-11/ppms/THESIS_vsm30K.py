@@ -37,40 +37,40 @@ def load_file(datfile):
 B_30Kfc, M_30Kfc, sM_30Kfc = load_file(datfile30K_fc)
 B_30Kzfc, M_30Kzfc, sM_30Kzfc = load_file(datfile30K_zfc)
 
-min_B, max_B = -730, 730
+min_B, max_B = -300, 300
 min_M, max_M = -250, 250
 T = 30
 
 fig = plt.figure()
 left, bottom = 0.21, 0.16
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
-ax_inset = fig.add_axes([0.67, 0.25, 0.3, 0.3])
+# ax_inset = fig.add_axes([0.67, 0.25, 0.3, 0.3])
 ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
-ax.errorbar(B_30Kfc, M_30Kfc, sM_30Kfc, linestyle='-', marker='None', zorder=1,\
-  label='FC',
-  capsize=0)
 ax.errorbar(B_30Kzfc, M_30Kzfc, sM_30Kzfc, linestyle='-', marker='None', zorder=1,\
   label='ZFC',
   capsize=0)
-ax_inset.errorbar(B_30Kfc, M_30Kfc, sM_30Kfc, linestyle='-', marker='None', zorder=1,\
+ax.errorbar(B_30Kfc, M_30Kfc, sM_30Kfc, linestyle='-', marker='None', zorder=1,\
+  label='FC',
   capsize=0)
-ax_inset.errorbar(B_30Kzfc, M_30Kzfc, sM_30Kzfc, linestyle='-', marker='None', zorder=1,\
-  capsize=0)
+# ax_inset.errorbar(B_30Kfc, M_30Kfc, sM_30Kfc, linestyle='-', marker='None', zorder=1,\
+#   capsize=0)
+# ax_inset.errorbar(B_30Kzfc, M_30Kzfc, sM_30Kzfc, linestyle='-', marker='None', zorder=1,\
+#   capsize=0)
 
-ax_inset.axhline(0, color='lightgray', marker='None', zorder=0)
-ax_inset.axvline(0, color='lightgray', marker='None', zorder=0)
-ax_inset.set_xlim(-40, 40)
-ax_inset.set_ylim(-50, 50)
+# ax_inset.axhline(0, color='lightgray', marker='None', zorder=0)
+# ax_inset.axvline(0, color='lightgray', marker='None', zorder=0)
+# ax_inset.set_xlim(-40, 40)
+# ax_inset.set_ylim(-50, 50)
 
-ax_inset.tick_params(axis='both', which='major', labelsize=8)
-ax_inset.tick_params(axis='both', which='minor', labelsize=8)
+# ax_inset.tick_params(axis='both', which='major', labelsize=8)
+# ax_inset.tick_params(axis='both', which='minor', labelsize=8)
 
-ax.text(0.03, 0.7,
+ax.text(0.6, 0.03,
   'SC-IOS-11\n'+\
   '$\mathit{T} \,=\, ' + str(T) + ' \,K$',
   horizontalalignment='left',
-  verticalalignment='top',
+  verticalalignment='bottom',
   transform=ax.transAxes)
 ax.legend(loc='upper left')
 ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, mT$")
@@ -79,4 +79,3 @@ ax.set_xlim(min_B, max_B)
 ax.set_ylim(min_M, max_M)
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
-plt.show()

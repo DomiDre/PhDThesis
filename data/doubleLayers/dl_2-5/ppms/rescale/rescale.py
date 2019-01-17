@@ -54,7 +54,7 @@ def rescale(datafile, samplename, isTemp=False):
 
 
 samplename = 'DL_2-5'
-rescale('../data/DD205_5_HYST_100OE_10K.DAT', f'{samplename}_10K_rescaled')
+rescale('../data/DD205_5_HYST_100OE_10KREPEAT.DAT', f'{samplename}_10K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')

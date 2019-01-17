@@ -25,12 +25,12 @@ savefile = chapter + '_VSM_30K_' + sample_name
 data = XyeData()
 data.loadFromFile(datfile30_zfc, sort=False)
 B_zfc, M_zfc, sM_zfc = data.getData()
-
+B_zfc *= 1000
 data = XyeData()
 data.loadFromFile(datfile30_fc, sort=False)
 B_fc, M_fc, sM_fc = data.getData()
-
-min_B, max_B = -0.3, 0.3
+B_fc *= 1000
+min_B, max_B = -300, 300
 min_M, max_M = -250, 250
 T = 30
 
@@ -50,11 +50,10 @@ ax.text(0.7, 0.03,
   horizontalalignment='left',
   verticalalignment='bottom',
   transform=ax.transAxes)
-ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, T$")
+ax.set_xlabel(r"$\mathit{\mu_0 H} \, / \, mT$")
 ax.set_ylabel(r"$\mathit{M} \, / \, kAm^{-1}$")
 ax.set_xlim(min_B, max_B)
 ax.set_ylim(min_M, max_M)
 ax.legend(loc='upper left')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
-plt.show()
