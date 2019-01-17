@@ -4,9 +4,9 @@ import numpy as np
 import scipy.constants as sc
 import scipy as sp
 
-Ms_is = 0.087
+Ms_is = 0.0872
+chi, sigChi = -0.03696, 0
 moment = 23130
-chi, sigChi = -0.037, 1e-5
 
 r = 4.65e-9
 p = 2.9
@@ -61,6 +61,6 @@ rescale('../data/DD213_7_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
 rescale('../data/DD213_7_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
 rescale('../data/DD213_7_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
 rescale('../data/DD213_7_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
-rescale('../data/DD213_7_HYST_100OE_300K.DAT', f'{samplename}_300K_rescaled')
+rescale('../data/DD213_7_HYST_INIT_300K.DAT', f'{samplename}_300K_rescaled')
 rescale('../data/DD213_7_FCW_100OE.DAT', f'{samplename}_fcw_rescaled', True)
 rescale('../data/DD213_7_ZFCW_100OE.DAT', f'{samplename}_zfcw_rescaled', True)

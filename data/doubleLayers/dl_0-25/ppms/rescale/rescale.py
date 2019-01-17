@@ -4,9 +4,9 @@ import numpy as np
 import scipy.constants as sc
 import scipy as sp
 
-Ms_is = 0.087
+Ms_is = 0.0836
+chi, sigChi = -0.03558, 0
 moment = 23130
-chi, sigChi = -0.0362, 1e-5
 
 r = 4.65e-9
 p = 2.9

@@ -4,9 +4,9 @@ import numpy as np
 import scipy.constants as sc
 import scipy as sp
 
-Ms_is = 0.087
+Ms_is = 0.0865
+chi, sigChi = -0.03602, 0
 moment = 23130
-chi, sigChi = -0.0362, 1e-5
 
 r = 4.65e-9
 p = 2.9
@@ -54,7 +54,9 @@ def rescale(datafile, samplename, isTemp=False):
 
 
 samplename = 'DL_2-5'
-rescale('../data/DD205_5_HYST_100OE_10KREPEAT.DAT', f'{samplename}_10K_rescaled')
+rescale('../data/DD205_5_HYST_FC100OE_10KREPEAT.DAT', f'{samplename}_10K_rescaled')
+rescale('../data/DD205_5_HYST_100OE_10KREPEAT.DAT', f'{samplename}_10K_ZFC_rescaled')
+rescale('../data/DD205_5_HYST_FC40000OE_10KREPEAT.DAT', f'{samplename}_10K_FC4T_rescaled')
 rescale('../data/DD205_5_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')

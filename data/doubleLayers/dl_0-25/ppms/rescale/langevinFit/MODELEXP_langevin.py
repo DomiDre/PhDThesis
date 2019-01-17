@@ -16,7 +16,7 @@ datafile = '../../data/DD205_10_HYST_100OE_300K.DAT'
 
 app = App()
 expRef = app.setExperiment(Vsm)
-expRef.setFitRange(-2,2)
+expRef.setFitRange(5,9)
 
 ppms = PPMS()
 ppms.load(datafile)
@@ -35,9 +35,9 @@ dataRef.addDataset(dataset)
 
 dataRef.plotData()
 modelRef = app.setModel(LangevinMuWeighted)
-modelRef.setParam("Ms", 0.08700000000000001,  minVal = 0, maxVal = 0.2, vary = False)
+modelRef.setParam("Ms", 0.0834,  minVal = 0, maxVal = 0.2, vary = True)
 modelRef.setParam("mu", 23130.229,  minVal = 1, maxVal = 30000, vary = False)
-modelRef.setParam("chi", -0.036199999999999996,  minVal = -0.1, maxVal = 0.1, vary = False)
+modelRef.setParam("chi", -0.03560000000000001,  minVal = -0.1, maxVal = 0.1, vary = True)
 modelRef.setParam("sigMu", 0.0,  minVal = 0, maxVal = 1.5, vary = False)
 modelRef.setConstantParam('orderHermite', 50)
 modelRef.setConstantParam('T', 300)
