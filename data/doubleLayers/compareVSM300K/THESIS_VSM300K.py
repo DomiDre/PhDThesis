@@ -29,10 +29,10 @@ B_3, M_3, sM_3 = load_file('../dl_1-25/ppms/rescale/DL_1-25_300K_rescaled.xye')#
 B_4, M_4, sM_4 = load_file('../dl_2-5/ppms/rescale/DL_2-5_300K_rescaled.xye')#, 1.1)
 B_5, M_5, sM_5 = load_file('../dl_5/ppms/rescale/DL_5_300K_rescaled.xye')
 
-shift = 100
+shift = 0
 
 fig = plt.figure()
-left, bottom = 0.09, 0.16
+left, bottom = 0.16, 0.16
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 # ax.axhline(0, color='lightgray', marker='None', zorder=0)
 # ax.axvline(0, color='lightgray', marker='None', zorder=0)
@@ -73,10 +73,10 @@ plt.gca().add_artist(legend4)
 
 
 ax.set_xlabel("$\mathit{\mu_0 H} \, / \, T$")
-ax.set_ylabel("$\mathit{M} \, / \, a.u.$")
+ax.set_ylabel("$\mathit{M} \, / \, kA \, m^{-1}$", labelpad=-10)
 ax.set_xlim(-8.9, 8.9)
-ax.set_ylim(-430, 820)
-ax.set_yticklabels([])
+ax.set_ylim(-430, 430)
+# ax.set_yticklabels([])
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
 

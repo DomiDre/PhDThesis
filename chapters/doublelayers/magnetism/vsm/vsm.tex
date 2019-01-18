@@ -6,7 +6,8 @@
   \begin{figure}[tb]
     \centering
     \includegraphics{doublelayers_PPMS_300K_allSamples}
-    \caption{\label{fig:doubleLayers:RTVSM}Room temperature field-dependent magnetization of the double layer samples. The magnetizations are shifted with respect to each other for direct comparison. The data is corrected for the susceptibility and scaled to the observed spontaneous magnetization given in \reftab{tab:doubleLayers:RTVSM:parameters}.}
+    \includegraphics{doublelayers_PPMS_300K_allSamplesShifted}
+    \caption{\label{fig:doubleLayers:RTVSM}Room temperature field-dependent magnetization of the double layer samples (left). The magnetizations are also shifted with respect to each other for direct comparison (right). The data is corrected for the diamagnetic susceptibility of the background and scaled to the observed spontaneous magnetization given in \reftab{tab:doubleLayers:RTVSM:parameters}.}
   \end{figure}
 
   \paragraphNewLine{Scaling of the Data and Silicon Background}
@@ -20,19 +21,22 @@
     \begin{table}[!htbp]
       \centering
       \caption{\label{tab:doubleLayers:RTVSM:parameters} Spontaneous magnetization and susceptibility of the raw double layer magnetization determined by fitting the slope of the data in the range of $5 - 9 \unit{T}$.}
-      \begin{tabular}{ l | l | l | l | l}
-        \rule{0pt}{2ex} \textbf{VSM @ 300 K}  & $\tilde{M}_s \, / \unit{\musf emu}$ & $\bar{M}_s \, / \unit{\musf emu / mg}$ & $\tilde{\chi} \, / \unit{\musf emu \, T ^{-1}}$ & $\bar{\chi} \, / \unit{\musf emu \, T ^{-1} mg^{-1}}$ \\
+      \begin{tabular}{ l | l | l || l | l}
+        \rule{0pt}{2ex} \textbf{VSM @ 300 K}  & $M_s \, / \unit{\musf emu}$ & $\chi \, / \unit{\musf emu \, T ^{-1}}$ & $\bar{M}_s \, / \unit{\musf emu / mg}$ & $\bar{\chi} \, / \unit{\musf emu \, T ^{-1} mg^{-1}}$ \\
         \hline
-        \rule{0pt}{2ex} DL-0.125\%   & $87.2(2)$   & $2.95(1)$   & $-36.96(3)$ & $-1.251(1)$\\
-        \rule{0pt}{2ex} DL-0.25\%    & $83.6(3)$   & $3.05(1)$   & $-35.58(4)$ & $-1.297(1)$\\
-        \rule{0pt}{2ex} DL-1.25\%    & $87.4(2)$   & $3.27(1)$   & $-33.78(3)$ & $-1.264(1)$\\
-        \rule{0pt}{2ex} DL-2.5\%     & $86.5(5)$   & $2.93(2)$   & $-36.02(7)$ & $-1.221(2)$\\
-        \rule{0pt}{2ex} DL-5\%       & $90.2(5)$   & $2.98(2)$   & $-39.78(8)$ & $-1.314(3)$\\
+        \rule{0pt}{2ex} DL-0.125\%   & $87.2(2)$   & $-36.96(3)$ & $2.95(1)$ & $-1.251(1)$\\
+        \rule{0pt}{2ex} DL-0.25\%    & $83.6(3)$   & $-35.58(4)$ & $3.05(1)$ & $-1.297(1)$\\
+        \rule{0pt}{2ex} DL-1.25\%    & $87.4(2)$   & $-33.78(3)$ & $3.27(1)$ & $-1.264(1)$\\
+        \rule{0pt}{2ex} DL-2.5\%     & $86.5(5)$   & $-36.02(7)$ & $2.93(2)$ & $-1.221(2)$\\
+        \rule{0pt}{2ex} DL-5\%       & $90.2(5)$   & $-39.78(8)$ & $2.98(2)$ & $-1.314(3)$\\
         \hline
+        % \hline
+        % \rule{0pt}{2ex}              &             &             & $3.0(1)$  & $-1.27(5)$\\
+        % \hline
       \end{tabular}
     \end{table}
 
-    For the rescaled values, the mean susceptibility is $-1.269\, / \unit{\musf emu \, T ^{-1} mg^{-1}}$ with a relative standard deviation of $3.7 \%$  and the mean spontaneous magnetization is $3.036 \, / \unit{\musf emu / mg}$ with a relative standard deviation of $4.5 \%$.
+    For the rescaled values, the mean susceptibility is $-1.2\, / \unit{\musf emu \, T ^{-1} mg^{-1}}$ with a relative standard deviation of $3.7 \%$  and the mean spontaneous magnetization is $3.0 \, / \unit{\musf emu / mg}$ with a relative standard deviation of $4.5 \%$.
     The susceptibility can be compared to the theoretical value of pure silicon, which is $-1.11\, / \unit{\musf emu \, T ^{-1} mg^{-1}}$ \cite{Lide_2004_Handb}.
     The higher value and fluctuations of the susceptibility after scaling to the silicon mass accounts for the varnish used to fix the sample, which is of varying amount.
     For the spontaneous magnetization the fluctuations after scaling to the silicon mass tells that slight variations are given in the nanocube content in each double layer.
@@ -40,44 +44,55 @@
 
     As no strong interaction effects are expected at room temperature, the samples are scaled using the measured spontaneous magnetization, such that relative changes after cooling to low temperatures can become more visible.
     The diamagnetic contributions are also subtracted from the data, as they are arguably a pure signal from the silicon substrate.
+    The spontaneous magnetization is then set analogue to the treatment of the monolayer sample in \refsec{sec:monolayers:magneticStructure:vsm} to the value expected from the single particle magnetic moment from the nanocubes in dispersion measurement and the particle size determined by SAS.
     The resulting room temperature magnetizations that closely resemble each other after correction are shown in \reffig{fig:doubleLayers:RTVSM}.
+    The data is shown once plot on top of each other to show the close match and once with a constant shift for better differentiation of the respective datasets.
     The determined scaling factors by the spontaneous magnetization and the same diamagnetic correction are applied to the low temperature field-dependent and temperature-dependent measurements without further modification.
 
-  \begin{figure}[tb]
-    \centering
-    \includegraphics{doublelayers_PPMS_10K_allSamples}
-    \includegraphics{doublelayers_PPMS_ZFC_FC_allSamples}
-    \caption{\label{fig:doubleLayers:zfcFCData}Field- (left) and temperature-dependent (right) magnetization of the double layers. The hysteresis are each measured at a temperature of $10 \unit{K}$ after cooling in zero field, and the temperature-dependent ZFC/FC magnetizations are taken with a field of $10 \unit{mT}$ while warming the sample.  To discuss the qualitative differences, the zero-field cooled and field cooled data, as well as the respective data of the samples with varied spacer thicknesses are shifted by a constant factor.}
-  \end{figure}
 
   \paragraphNewLine{Temperature-dependent magnetization}
+
+    \begin{figure}[tb]
+      \centering
+      \includegraphics{doublelayers_PPMS_ZFC_FC_allSamples}
+      \includegraphics{doublelayers_PPMS_ZFC_FC_allSamplesShifted}
+      \caption{\label{fig:doubleLayers:zfcFCData}Temperature-dependent magnetization of the double layers (left). The ZFC/FC magnetizations are taken with a field of $10 \unit{mT}$ while warming the sample. To discuss the qualitative differences, the zero-field cooled and field cooled data, as well as the respective data of the samples with varied spacer thicknesses are shifted by a constant factor (right).}
+    \end{figure}
     In \reffig{fig:doubleLayers:zfcFCData} the temperature-dependent magnetization is shown for the double layer samples, sorted with respect to the varied PMMA thickness.
     A close inspection of temperature dependent magnetization shows that they all closely resemble each other and no significant difference can be observed across the samples.
+    A small difference can be seen in the initial magnetization measured after zero-field and field cooling, which is however close within the error margins and has no strong correlation to the sample thickness.
     Similar to the monolayer sample in \refsec{sec:monolayers:magneticStructure:vsm}, a blocking temperature around $315 \unit{K}$ is observed as peak temperature in the zero-field cooled magnetization.
     No major shift in that peak position can be observed within the resolution of the measurement, which could otherwise have been a sign for interlayer interaction.
+    It can therefore be concluded that if interlayer interaction has an effect on the double layer magnetization, it is below the resolution of the temperature-dependent measurement.
 
   \paragraphNewLine{Field-dependent low temperature magnetization}
-    Subtle differences can however be seen in the hysteresis at $10 \unit{K}$.
-    Similar to the monolayer sample, a small jump in the magnetization is visible around $\pm 100 \unit{mT}$.
-    The strength is visibly changing from sample to sample, without showing a systematic with respect to the PMMA layer thickness.
-    Whereas it appear to be nearly invisible for the lowest PMMA concentration sample DL-0.125\%, it appears clearly visible for DL-0.25\%, reduces in size for DL-1.25\% and becomes stronger again for DL-2.5\%.
-    As one would expect from dipolar coupling a reduction of interaction effects with increasing layer thickness and as the jump also appears in monolayer samples, it is probable that this effect is not directly correlated to dipolar interlayer interaction but an uncontrolled property of the nanocube arrays themselves.
-    Otherwise the hysteresis resemble each other closely, where each has a coercive field in the magnitude of $2.16(3) \unit{T}$, in agreement with the monolayer sample.
-  % In literature, the jump can be found in multiple works discussing cobalt ferrite nanoparticles \cite{Xu_2015_Simul, Fu_2012_Uniqu, Lima_2017_Waspw}.
+
+    \begin{figure}[tb]
+      \centering
+      \includegraphics{doublelayers_PPMS_10K_allSamples}
+      \includegraphics{doublelayers_PPMS_10K_allSamplesShifted}
+      \caption{\label{fig:doubleLayers:10KVSM}Field-dependent magnetization of the double layers measured at $10 \unit{K}$ after cooling in a $10 \unit{mT}$ field (left). Similar to \reffig{fig:doubleLayers:RTVSM} the hysteresis curves are shifted by the same factor for differentiation (right).}
+    \end{figure}
+    Stronger variations can be seen in the hysteresis at $10 \unit{K}$.
+    Similar to the monolayer sample, a small jump in the magnetization is visible around $\pm 100 \unit{mT}$ in all samples.
+    The magnitude of the jump is visibly changing from sample to sample, without showing a systematic with respect to the PMMA layer thickness.
+    Whereas it appear to be nearly invisible for the lowest PMMA concentration sample DL-0.125\%, it appears clearly visible for DL-0.25\%, and then reduces in size for DL-1.25\%, DL-2.5\%, DL-5\%.
+    Not observing a strong jump in DL-0.125 is thus out of the expectation when the origin of this jump is considered to be due to an antiferromagnetic coupling between the two layers.
+    Furthermore, as the jump also appears in monolayer samples in \refsec{sec:monolayers:magneticStructure:vsm}, it is probable that this effect is not directly correlated to dipolar interlayer interaction but an uncontrolled property of the nanocubes or nanocube arrays themselves.
+    As discussed in the monolayer section, some recent literature sources suggest that the nature of the jump is due to surface spin effects of the nanocubes \cite{Xu_2015_Simul, Fu_2012_Uniqu}, which could possibly be worked out more clearly by the performance of low temperature SANS measurements of the nanocubes.
+
+    In the the coercive field, the hysteresis curves resemble each other closely with a  magnitude of $2.16(3) \unit{T}$, which is in agreement with the monolayer sample.
+    The saturation magnetization varies across the double layer samples, where for DL-1.25\% a significantly larger value is observed and for DL-2.5\% a slightly smaller value.
+    However, similar to the temperature-dependent magnetization measurement, this observation is not directly correlated to the interlayer distance of the samples.
+    It is therefore of high probability that the shift are more due to a systematic error during the measurement.
+  \\
+
+  Concludingly, the macroscopic magnetization characterization of the samples shows similar magnetic properties across the double layer samples, with variations that are not directly correlated to the interlayer distance.
+  To get a better picture of the magnetic structure and to see if the interlayer interaction effects are possibly hidden in the magnetization data, polarized neutron reflectometry experiments have been proposed.
+
+    % , where the sample shifted on the glass holder.
+
+  % In literature, the jump can be found in multiple works discussing cobalt ferrite nanoparticles .
   % The authors give multiple explainations ranging from dipolar interaction between the particles, to surface spin reorientation, o
   % At the state of this thesis it is yet unclear what the true nature of the jump at low fields is.
-
-  
-
-  % \begin{table}[!htbp]
-  %   \centering
-  %   \caption{\label{tab:looselyPackedNP:nanoparticle:gisaxs}Parameters for the hard-sphere structure factor in Percus-Yervick approximation shown in for both SC-IOS-11 and SC-IOS-7. $R_\mathrm{HS}$ is the hard-sphere radius and $\eta$ the packing fraction of the structure factor.}
-  %   \begin{tabular}{ c | l | l }
-  %     \rule{0pt}{2ex} \textbf{GISAXS}  & \textbf{SC-IOS-11} & \textbf{SC-IOS-7} \\
-  %     \hline
-  %     \rule{0pt}{2ex} $R_\mathrm{HS} \, / \unit{nm}$          & $5.655(2)$           & $3.872(4)$\\
-  %     \rule{0pt}{2ex} $\eta          \, / \unit{\%}$          & $43.88(3)$           & $34.20(9)$\\
-  %     \hline
-  %   \end{tabular}
-  % \end{table}
 \end{document}

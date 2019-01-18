@@ -21,9 +21,10 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 sample_name = 'Ol-Fe-C'
 Chapter = 'colloidalCrystals'
 saxs_fit_file = cwd + "/superballModel/saxs/fit_result.dat"
-saxs_sld_file = cwd + "/superballModel/saxs/simulated_model_sld.xy"
-model_file = cwd + "/superballModel/saxs/simulated_model.xy"
-expdata_file = cwd + "/experimental_data/DD144.xye"
+saxs_sld_file = cwd + "/superballModel/saxs/fit_sld.dat"
+# saxs_sld_file = cwd + "/superballModel/saxs/simulated_model_sld.xy"
+# model_file = cwd + "/superballModel/saxs/simulated_model.xy"
+# expdata_file = cwd + "/experimental_data/DD144.xye"
 
 q_min, q_max = 1e-2, 0.35
 I_min, I_max = 3.5e-4, 3e3
@@ -36,21 +37,21 @@ saxs_pngfile = Chapter+'_SAS_'+\
 #load data
 data = MultiData(XyemData)
 data.loadFromFile(saxs_fit_file)
-saxs_q, saxs_I, saxs_sI, saxs_Imodel = data.getDataset(0).getData()
+qdata, Idata, sIdata, Imodel = data.getDataset(0).getData()
 
 #load sld
 sldData = XyData()
 sldData.loadFromFile(saxs_sld_file)
 saxs_r, saxs_sld = sldData.getData()
-saxs_r /= 10
-saxs_sld *= 1e6
-data = XyeData()
-data.loadFromFile(expdata_file)
-qdata, Idata, sIdata = data.getData()
+# saxs_r /= 10
+# saxs_sld *= 1e6
+# data = XyeData()
+# data.loadFromFile(expdata_file)
+# qdata, Idata, sIdata = data.getData()
 
-data = XyData()
-data.loadFromFile(model_file)
-qmodel, Imodel = data.getData()
+# data = XyData()
+# data.loadFromFile(model_file)
+# qmodel, Imodel = data.getData()
 
 
 left, bottom = 0.2, 0.17
@@ -65,7 +66,7 @@ ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.errorbar(qdata, Idata, sIdata,\
   linestyle='None', color='#0EA8DF',\
   label=saxs_legend_label, zorder=0, capsize=0, marker='.')
-ax.plot(qmodel, Imodel, marker='None', linestyle='-',\
+ax.plot(qdata, Imodel, marker='None', linestyle='-',\
   color=color_variant('#0EA8DF', -150), zorder=1)
 
 ax.text(0.11, 0.12,

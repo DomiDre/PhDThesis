@@ -21,12 +21,15 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 sample_name = 'Ol-Fe-C'
 Chapter = 'colloidalCrystals'
 
-expData_sa = cwd + "/experimental_data/DD144_0A_nuc_SA.dat"
-expData_la = cwd + "/experimental_data/DD144_0A_nuc_LA.dat"
-modelData = cwd + "/superballModel/sans/simulated_model.xy"
-sldFile  = cwd + "/superballModel/sans/simulated_model_sld.xy"
-q_min, q_max = 1e-2, 0.22
-I_min, I_max = 1.5e-3, 7e0
+# expData_sa = cwd + "/experimental_data/DD144_0A_nuc_SA.dat"
+# expData_la = cwd + "/experimental_data/DD144_0A_nuc_LA.dat"
+# modelData = cwd + "/superballModel/sans/simulated_model.xy"
+# sldFile  = cwd + "/superballModel/sans/simulated_model_sld.xy"
+modelData = cwd + "/superballModel/sans/fit_result.dat"
+sldFile  = cwd + "/superballModel/sans/fit_sld.dat"
+
+q_min, q_max = 0.5e-2, 0.17
+I_min, I_max = 2.5e-3, 7e0
 
 sans_legend_label = "SANS @ D33"
 
@@ -34,24 +37,27 @@ sans_pngfile = Chapter+'_SAS_'+\
                 sample_name+"_SANS.png"
 
 #load data
-data = MultiData(XyData)
+data = MultiData(XyemData)
 data.loadFromFile(modelData)
-sans_sa_q_model, sans_sa_Imodel = data.getDatasetBySuffix('sa').getData()
-sans_la_q_model, sans_la_Imodel = data.getDatasetBySuffix('la').getData()
+sans_sa_q, sans_sa_I, sans_sa_sI, sans_sa_Imodel = data.getDatasetBySuffix('sa').getData()
+sans_la_q, sans_la_I, sans_la_sI, sans_la_Imodel = data.getDatasetBySuffix('la').getData()
 
-data = XyeData()
-data.loadFromFile(expData_sa)
-sans_sa_q, sans_sa_I, sans_sa_sI = data.getData()
-data = XyeData()
-data.loadFromFile(expData_la)
-sans_la_q, sans_la_I, sans_la_sI = data.getData()
+# sans_sa_q_model, sans_sa_Imodel = data.getDatasetBySuffix('sa').getData()
+# sans_la_q_model, sans_la_Imodel = data.getDatasetBySuffix('la').getData()
+
+# data = XyeData()
+# data.loadFromFile(expData_sa)
+# sans_sa_q, sans_sa_I, sans_sa_sI = data.getData()
+# data = XyeData()
+# data.loadFromFile(expData_la)
+# sans_la_q, sans_la_I, sans_la_sI = data.getData()
 
 #load sld
 sldData = XyData()
 sldData.loadFromFile(sldFile)
 sans_r, sans_sld = sldData.getData()
-sans_r /= 10
-sans_sld *= 1e6
+# sans_r /= 10
+# sans_sld *= 1e6
 sans_q_min, sans_q_max = None, None
 
 left, bottom = 0.2, 0.17
@@ -67,24 +73,23 @@ ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.errorbar(sans_sa_q, sans_sa_I, sans_sa_sI,\
   linestyle='None', color='#0EA8DF',\
   label=sans_legend_label, zorder=0, capsize=0, marker='.')
-ax.plot(sans_sa_q_model, sans_sa_Imodel, marker='None', linestyle='-',\
+ax.plot(sans_sa_q, sans_sa_Imodel, marker='None', linestyle='-',\
   color=color_variant('#0EA8DF', -150), zorder=1)
 
 ax.errorbar(sans_la_q, sans_la_I, sans_la_sI,\
   linestyle='None', color=color_variant('#0EA8DF', -50),\
   zorder=0, capsize=0, marker='.')
-ax.plot(sans_la_q_model, sans_la_Imodel, marker='None', linestyle='-',\
+ax.plot(sans_la_q, sans_la_Imodel, marker='None', linestyle='-',\
   color=color_variant('#0EA8DF', -150), zorder=1)
 
-ax.text(0.11, 0.12,
+ax.text(0.08, 0.18,
   'Ol-Fe-C',
   color='black',
-  fontsize=inset_fontsize,
   horizontalalignment='left',
   verticalalignment='bottom',
   transform=ax.transAxes)
 
-ax.legend(loc='lower left', fontsize=inset_fontsize)
+ax.legend(loc='lower left')#, fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")

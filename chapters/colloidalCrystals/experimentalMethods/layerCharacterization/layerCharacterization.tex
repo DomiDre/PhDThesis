@@ -35,6 +35,33 @@
     Additionally, the data is corrected for diffuse scattering around the specular peak, by integrating boxes in the range $\alpha_i - \alpha_o \eq \pm (0.1 \ldots 0.2)$, and subtracting the diffuse scattering intensity from the specular intensity.
 
 
+  \paragraphNewLine{Vibrating Sample Magnetometry}
+    The samples CC-Fe-0.25, CC-Fe-0.37 and CC-0.50 are characterized by VSM using a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}).
+    Each sample is tried to be broken to a size of approximately $5 \times 5 \unit{mm^2}$ using a diamond cutter and stuck to a Quartz sample holder using a low temperature varnish (GE 7031).
+    The silicon substrate mass is measured by a precision scale and tabulated in \reftab{tab:colloidalCrystals:layerCharacterization:ppmsMasses}.
+    The mass variation is directly proportional to the variation in sample area, as each wafer has the same thickness of $0.52 \unit{mm}$ and the iron oxide nanocube mass contribution is negligible.
+
+    Field-dependent measurements are performed for each sample at $300 \unit{K}$ and $10 \unit{K}$ in a range of $\pm 9 \unit{T}$ with a sweeping rate of $5 \unit{mT \, s^{-1}}$.
+    Furthermore, temperature-dependent measurements are performed by zero-field cooling the sample to $10 \unit{K}$ and subsequently measuring the magnetization at $10 \unit{mT}$ while warming the sample with a rate of $1.5 \unit{K \, s^{-1}}$.
+    Another field-cooled measurement is performed afterwards by first cooling the sample in a field of $10 \unit{mT}$ and subsequently measuring the magnetization while warming.
+
+    From the room temperature measurements, the spontaneous magnetization and susceptibility of the samples is determined by a linear fit at high fields of $5 - 9 \unit{T}$, which are discussed after being scaled to the respective sample area using the mass of the silicon substrates.
+    To study interaction effects that arise at low temperatures and to correct for the varying sample amounts on the substrates, the data is scaled to the spontaneous magnetization and the excess susceptibility is corrected as determined from the room temperature measurement.
+    The magnetization data is discussed qualitatively and the characteristics are compared across the three samples.
+
+    \begin{table}[htbp]
+      \centering
+      \caption{\label{tab:colloidalCrystals:layerCharacterization:ppmsMasses}Mass of the colloidal crystal samples used for the VSM measurements.}
+      \begin{tabular}{ l | l}
+        \rule{0pt}{2ex} \textbf{Sample}  & $m \, / \unit{mg}$ \\
+        \hline
+        \rule{0pt}{2ex} CC-Fe-0.25   & $30.67(2)$ \\
+        \rule{0pt}{2ex} CC-Fe-0.37   & $17.51(2)$ \\
+        \rule{0pt}{2ex} CC-Fe-0.50   & $35.10(2)$ \\
+        \hline
+      \end{tabular}
+    \end{table}
+
   \paragraphNewLine{Polarized Neutron Reflectometry}
     The three colloidal crystals, CC-Fe-0.25, CC-Fe-0.37 and CC-Fe-0.50 were characterized on the polarized neutron reflectometer MARIA at the MLZ \refsec{ch:lss:maria}.
     The neutron wavelength was selected to $5 \unit{\angstrom}$ and a wavelength spread of $10 \unit{\%}$ (FWHM) is given by the instrumental scientists.
@@ -67,15 +94,4 @@
     Finally a footprint correction if performed for the data, where a equidistributed intensity of the beam is assumed.
     Using the mean intensity of $R^{+}$ below the critical angle, the data is rescaled to have the plateau on unity.
     The curve of $R^{-}$ is rescaled using the same factor, to avoid the introduction of systematic errors by using two different scaling factors.
-
-
-  \paragraphNewLine{Vibrating Sample Magnetometry}
-    The samples CC-Fe-0.25, CC-Fe-0.37 and CC-0.50 are characterized by VSM using a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}).
-    Each sample is broken to a size of approximately $5 \times 5 \unit{mm^2}$ using a diamond cutter and stuck to a Quartz sample holder using a low temperature varnish (GE 7031).
-    Field-dependent measurements are performed for each sample at $300 \unit{K}$ and $10 \unit{K}$ in a range of $\pm 9 \unit{T}$ with a sweeping rate of $5 \unit{mT \, s^{-1}}$.
-    Furthermore, temperature-dependent measurements are performed by zero-field cooling the sample to $10 \unit{K}$ and subsequently measuring the magnetization at $10 \unit{mT}$ while warming the sample with a rate of $1.5 \unit{K \, s^{-1}}$.
-    Another field-cooled measurement is performed afterwards by first cooling the sample in a field of $10 \unit{mT}$ and subsequently measuring the magnetization while warming.
-
-    The magnetization data is discussed qualitatively and the characteristics are compared across the three samples.
-
 \end{document}

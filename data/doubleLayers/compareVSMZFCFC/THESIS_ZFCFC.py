@@ -26,11 +26,11 @@ def load_file(datfile_zfcw, datfile_fcw):
   data.loadFromFile(datfile_fcw)
   T2, M2, sM2 = data.getData()
   
-  maxM = max(M2)
-  M1 /= maxM
-  M2 /= maxM
-  sM1 /= maxM
-  sM2 /= maxM
+  # maxM = max(M2)
+  # M1 /= maxM
+  # M2 /= maxM
+  # sM1 /= maxM
+  # sM2 /= maxM
   return T1, M1, sM1, T2, M2, sM2
 
 T_zfc_1, M_zfc_1, sM_zfc_1, T_fcw_1, M_fcw_1, sM_fcw_1 =\
@@ -49,11 +49,11 @@ T_zfc_5, M_zfc_5, sM_zfc_5, T_fcw_5, M_fcw_5, sM_fcw_5 =\
   load_file('../dl_5/ppms/rescale/DL_5_zfcw_rescaled.xye',
             '../dl_5/ppms/rescale/DL_5_fcw_rescaled.xye')
 
-shift = 0.2
-shift_fc_base = 1
+shift = 0
+shift_fc_base = 0
 
 fig = plt.figure()
-left, bottom = 0.13, 0.15
+left, bottom = 0.16, 0.15
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 # ax.axhline(0, color='lightgray', marker='None', zorder=0)
 # ax.axvline(0, color='lightgray', marker='None', zorder=0)
@@ -91,24 +91,24 @@ ax.legend(
    'DL-0.125%'
   ],
   handler_map={tuple: HandlerTuple(ndivide=None)},
-  fontsize=8,
+  fontsize=10,
   loc='upper left',
   bbox_to_anchor = [0.15, 0.75],
   bbox_transform=fig.transFigure)
 
-ax.annotate('', xy=(315, 0.6), xytext=(315,0.24),
+ax.annotate('', xy=(315, 40), xytext=(315,15),
   horizontalalignment='center', fontsize=10,
   arrowprops=dict(facecolor='black', width=1, headwidth=5))
-ax.text(345, 0.2,
+ax.text(345, 10,
         '$\mathit{T_B} \,= \, 315\, K$',\
         horizontalalignment='right',
         verticalalignment='top')
 
 ax.set_xlabel("$\mathit{T} \, / \, K$")
-ax.set_ylabel("$\mathit{M} \, / \, a.u.$")
+ax.set_ylabel("$\mathit{M} \, / \, kA \, m^{-1}$", labelpad=0)
 ax.set_xlim(10, 350)
-ax.set_ylim(-0.1, 2.9)
-ax.set_yticklabels([])
+ax.set_ylim(-5, 79)
+# ax.set_yticklabels([])
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
 

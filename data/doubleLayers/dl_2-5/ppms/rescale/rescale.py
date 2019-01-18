@@ -4,8 +4,8 @@ import numpy as np
 import scipy.constants as sc
 import scipy as sp
 
-Ms_is = 0.0865
-chi, sigChi = -0.03602, 0
+Ms_is = 0.0847981#0.0865
+chi, sigChi = -0.03828, 0#82799, 0#-0.03602, 0
 moment = 23130
 
 r = 4.65e-9
