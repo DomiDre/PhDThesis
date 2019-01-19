@@ -4,8 +4,8 @@ import numpy as np
 import scipy.constants as sc
 import scipy as sp
 
-Ms_is = 0.0874
-chi, sigChi = -0.03378, 0#-0.034, 1e-5
+Ms_is = 0.0922
+chi, sigChi = -0.03176, 0#-0.034, 1e-5
 moment = 23130
 
 r = 4.65e-9
@@ -55,13 +55,13 @@ def rescale(datafile, samplename, isTemp=False):
 
 samplename = 'DL_1-25'
 rescale('../data/DD205_3_HYST_100OE_5K.DAT', f'{samplename}_5K_rescaled')
-rescale('../data/DD205_3_HYST_100OE_10KREPEAT.DAT', f'{samplename}_10K_rescaled')
+rescale('../data/DD205_3_HYST_FC100OE_10KREPEAT.DAT', f'{samplename}_10K_rescaled')
 rescale('../data/DD205_3_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
 rescale('../data/DD205_3_HYST_100OE_50K.DAT', f'{samplename}_50K_rescaled')
 rescale('../data/DD205_3_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
 rescale('../data/DD205_3_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
 rescale('../data/DD205_3_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
 rescale('../data/DD205_3_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
-rescale('../data/DD205_3_HYST_100OE_300K.DAT', f'{samplename}_300K_rescaled')
+rescale('../data/DD205_3_HYST_300KREPEAT.DAT', f'{samplename}_300K_rescaled')
 rescale('../data/DD205_3_FCW_100OE.DAT', f'{samplename}_fcw_rescaled', True)
 rescale('../data/DD205_3_ZFCW_100OE.DAT', f'{samplename}_zfcw_rescaled', True)

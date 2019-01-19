@@ -19,7 +19,7 @@ def superballVolume(r, p):
 volume_particle = superballVolume(r, p)
 
 
-def rescale(datafile, samplename, isTemp=False):
+def rescale(datafile, samplename, isTemp=False, Ms_is=Ms_is, chi=chi):
   ppms = PPMS()
   ppms.load(datafile)
   # ppms.remove_virgin_data(6.9)
@@ -54,7 +54,7 @@ def rescale(datafile, samplename, isTemp=False):
 
 
 samplename = 'DL_2-5'
-rescale('../data/DD205_5_HYST_FC100OE_10KREPEAT.DAT', f'{samplename}_10K_rescaled')
+rescale('../data/DD205_5_HYST_FC100OE_10KREPEAT.DAT', f'{samplename}_10K_rescaled', Ms_is=0.078, chi=-0.0365)
 rescale('../data/DD205_5_HYST_100OE_10KREPEAT.DAT', f'{samplename}_10K_ZFC_rescaled')
 rescale('../data/DD205_5_HYST_FC40000OE_10KREPEAT.DAT', f'{samplename}_10K_FC4T_rescaled')
 rescale('../data/DD205_5_HYST_100OE_20K.DAT', f'{samplename}_20K_rescaled')
@@ -63,6 +63,6 @@ rescale('../data/DD205_5_HYST_100OE_100K.DAT', f'{samplename}_100K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_150K.DAT', f'{samplename}_150K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_200K.DAT', f'{samplename}_200K_rescaled')
 rescale('../data/DD205_5_HYST_100OE_250K.DAT', f'{samplename}_250K_rescaled')
-rescale('../data/DD205_5_HYST_100OE_300K.DAT', f'{samplename}_300K_rescaled')
+rescale('../data/DD205_5_HYST_300KREPEAT.DAT', f'{samplename}_300K_rescaled')
 rescale('../data/DD205_5_FCC_100OE.DAT', f'{samplename}_fcw_rescaled', True)
 rescale('../data/DD205_5_ZFCW_100OE.DAT', f'{samplename}_zfcw_rescaled', True)
