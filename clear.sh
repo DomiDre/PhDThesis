@@ -15,3 +15,4 @@ find . -type f -name '*.glo' -delete
 find . -type f -name '*.gls' -delete
 find . -type f -name '*.glsdefs' -delete
 find . -type f -name '*.ist' -delete
+find . -type f -name '*~' -delete
