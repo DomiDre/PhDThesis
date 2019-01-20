@@ -14,8 +14,12 @@
     Therefore, initially a laser pointer is used to prealign the sample and the final alignment is performed by observing the intensity of the reflected beam on the position-sensitive detector, while moving the sample.
     The reflectivity is then measured for varied scattering vectors, by rotating the sample for an angle $\theta$ and the detector for an angle $2 \theta$ simultaneously, where then the neutrons are integrated until the counting statistic is sufficiently above the noise level.
     From the reflectivity experiment, two-dimensional detector data sets are obtained for each measured angle, which are stored together in a HDF5 data format \cite{HDF5_1997_Hiera}.
-    The usual reflectometry leave the beam width perpendicular to the scattering angle relatively and therefore have no resolution in this direction, such that the data can be integrated along this dimension.
-    The integrated data can then be plotted in a two dimensional image, where one dimension are the pixel coordinates $z$ along the scattering angle and the other the incident angle for the respective line.
+    
+    To increase the counting statistics, the beam width perpendicular to the scattering angle are left relaxed by using large collimation sizes along this dimension.
+    This means a large area of data on the detector can be integrated, but also that typically along this dimension the coherent scattering is in the order of $10 \unit{nm}$ \cite{Mishra_2012_Selfa, Kronmueller_2007_Handb}.
+    The coherence volume in neutron reflectometry experiments is therefore an ellipsoid and the observed reflectivity an incoherent sum of such, which needs to be kept in mind in the design of models that describe the data.
+
+    The integrated data is plotted in a two dimensional image, where one dimension are the pixel coordinates $z$ along the scattering angle and the other the incident angle for the respective line.
     By determining the center bin $z_c$ and using the sample-to-detector distance $L_\mathrm{SDD}$, the coordinate axis can be transformed to the coordinate system spanned by $\alpha_i - \alpha_o,\,\alpha_i+\alpha_o$ by calculating $\alpha_f$ for each point
     \begin{align}
       \alpha_f \eq \alpha_i + \arctan\biggl( \frac{z-z_c}{L_\mathrm{SDD}}\biggr).
@@ -24,14 +28,10 @@
     Thus, the reflectivity curve is obtained by integrating a slice around the center of the data in the new coordinate system where $\alpha_i \eq \alpha_o$.
     To correct the data for contributions from diffuse scattering, regions for background can be sliced in the off specular area of the data for subtraction.
     If the data allows for more precision, it is also possible to walk through the data for each line and perform fits of multiple Gaussian functions, to separate specular and diffuse scattering.
-
     It is noted that as the coordinate system is distorted and rotated by this transformation, a rebinning protocol needs to be chosen before the reflectivity can be obtained in respect to $q_z$.
-    In this thesis, a pixel splitting procedure was chosen, where for each pixel of the experimental in the coordinate system $(z,\,\alpha_i)$ the transformation to $(\alpha_i - \alpha_o,\, \alpha_i+\alpha_o)$ is done for all four corners.
-    Then the new rectangular coordinate grid is placed on top of this distorted and rotated mesh, and the polygon overlap is with each other is determined for each new bin.
-    The intensity and monitor value of each bin is then the sum of all overlapping pixels, which contribute with the fraction of their overlap area to their respective total area.
-    While the pixel splitting protocol is more difficult to implement than the nearest neighbour approximation, where each pixel is just associated by it's central value to the nearest bin, it allows to keep the resolution of the original data without artificially worsening it or introducing artifacts by the coordinate transformation.
+    In this thesis, a pixel splitting procedure was chosen, which is described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}.
 
-    An alternative way to measure the neutron reflectivity with respect to the scattering vector is by fixing the incident angle for varied wavelengths.
+    An alternative way to measure the neutron reflectivity with respect to the scattering vector is by fixing the incident angle and varying the neutron wavelength.
     This has the advantage that a large $q$-range is measured simultaneously without having to move the sample.
     For this purpose, the instrument D17 was used time-of-flight (TOF) mode, where a broad wavelength spectrum is directed on the sample in time-delayed packages.
     The reflectivity is measured on a time-resolved detector, from which the neutrons arriving at different times can be sorted to their respective wavelength and thereby $q$ value.
@@ -39,7 +39,5 @@
     Due to the different measurement principle, no footprint correction is applied in data measured in TOF mode.
     However, it is still necessary to apply scaling factors to the data sets obtained for the different incident angles.
     Therefore, care is taken during measurement that all data sets have regions of overlap for their $q$-ranges, such that they can be mutually overlapped and the initial plateau is the reference point that can be scaled to one.
-    For the data treatment and reduction of D17 data, the software COSMOS \cite{Gutfreund_2018_Towar} is used and focus can be set on the model discussions.
-
-
+    For the data treatment and reduction of D17 data, the software COSMOS \cite{Gutfreund_2018_Towar} is used.
 \end{document}

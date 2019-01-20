@@ -5,7 +5,7 @@
   \section{Electron Microscopy (EM)}
     \label{ch:methods:em}
     Electron microscopy is a general method to obtain a visual image (micrographs) of a structure down to the atomic scale.
-    In general, an electron beam is accelerated by a high voltage and then the beam is focused using electrical and magnetic field to be directed on the structure of interest.
+    In general, an electron beam is accelerated by a high voltage and then the beam is focused using electrical and magnetic fields to direct it on the structure of interest.
     Multiple types of instruments and techniques exist that specialize on the detection and image reconstruction from the various phenomena that happen when the electron beam interacts with a sample.
     The ones relevant in this thesis are depicted in \reffig{fig:methods:em:activationVolume} and how they are used is explained in the following.
 
@@ -16,8 +16,11 @@
     \end{figure}
 
     \paragraph{Transmission Electron Microscopy (TEM)}
-      measures the transmitted electrons through a thin sample and can achieve a very high resolution below $1 \unit{angstrom}$ (HR-TEM).
+      measures the transmitted electrons through a thin sample and can achieve a very high resolution below $1 \unit{\angstrom}$ (HR-TEM).
       In the case of this thesis, TEM is used to obtain a local image of the nanoparticle size and their morphological shape.
+      It is therefore a direct method that provides an intuition of nanoparticle quality and is helpful for the evaluation of scattering data.
+
+      A quantitative value that can be obtained from counting the size of multiple nanoparticles in a TEM micrograph is an estimate for the mean size and size distribution.
       The size distribution of a characteristic dimension of a nanoparticle is evaluated by binning multiple measurements of the dimension in a histogram to obtain the respective number of occurrences for various length scales.
       The number of particles $N$ that need to be measured is typically in the order $N > 100$, such that the histogram is a valid representation of the size distribution.
       The respective measurement error for each bin is estimated as the square root of the counts in that respective bin. \footnote{To understand the estimate of the standard deviation for the height of a bin, the measured particle size can be considered as a random variable with an arbitrary probability density.
@@ -39,16 +42,16 @@
       with the approximations being only valid for small size distributions $\sigma^2 \ll 1$.
 
     \paragraph{Scanning Electron Microscopy (SEM)}
-      is another EM technique that is used to a large extend in this thesis to study surface and cross-sectional structure of nanostructures deposited on a substrate.
+      is another EM technique that is used to a large extend in this thesis to study the surface and cross-sectional structure of nanostructures deposited on a substrate.
       Here, not the transmitted electrons are detected, but the high-energy back-scattered electrons (BSE) and low-energy secondary electrons (SE) that are produced by the interaction of the electron beam with the sample are of interest.
       Detectors for the different energy scales are set up in the SEM to measure the intensity of these electrons, while the primary electron beam scans pixel by pixel over an area of interest.
       The measured SE are mostly produced at the surface of the sample and therefore give an image of the local topography of the surface, whereas the BSE can be generally generated deeper within the sample and their intensity is more dependent on the relative electron density in the sample.
-      In this thesis, the shown micrographs obtained by SEM are always from the BSE detector, as these provided the better contrast in comparison to SE and thereby gave the resolution needed to resolve $10 \unit{nm}$ sized nanoparticles.
+      In this thesis, the shown micrographs obtained by SEM are always from the BSE detector, as these provided the better contrast for nanoparticles on silicon in comparison to the SE and thereby gave the resolution needed to resolve $10 \unit{nm}$ sized nanoparticles.
 
     \paragraph{Energy-Dispersive X-ray Spectroscopy (EDX)}
       is a technique to analyze the elemental composition of a sample.
-      For this purpose the electron beam is set to a high voltage of typically $\geq 20 \unit{kV}$ and is directed on a sample with a thickness larger than $1 \unit{\musf m}$.
+      For this purpose the electron beam is accelerated with a high voltage of typically $\geq 20 \unit{kV}$ and is directed on a sample with a thickness larger than $1 \unit{\musf m}$.
       The energy of the X-rays emitted from the sample are characteristic for the sample composition and can be measured by a energy-sensitive detector.
       By comparison with literature values for the K$\alpha$, K$\beta$, \ldots energies of the elements, the spectra provide information about which elements are present in the sample and about the relative amount of the elements by the relative intensity of the spectra.
-      A caveat is that EDX is typically not reliable in the detection of elements with small atomic numbers below that of \ch{Na}.
+      A caveat is that EDX is typically not reliable in the detection of elements with small atomic numbers below that of \ch{Na}, meaning it can not be used to quantify the amount of oxygen or carbon in a sample.
 \end{document}
