@@ -7,10 +7,9 @@
     X-ray diffraction is a standard laboratory technique to study the crystal structure of a sample on the atomic length scale.
     In the presented XRD experiments of this thesis, a Bragg-Brentano geometry was used, where the sample lies static on a flat surface while the X-ray source are moved mutually analogue to the description in X-ray reflectometry but for larger angles in the range of $\theta \eq 5^\circ \ldots 80^\circ$.
 
-    To evaluate the obtained XRD profile, a Rietveld analysis is performed using the FullProf Suite \cite{Rodriguez_1993_Recen}, where an expected crystal phase can be modeled and its respective parameters refined.
-    While performing the analysis, the order of adding parameters to the refinement is in all cases the same, where first the global parameters as the scale factor and background are estimated, and then the lattice parameter, peak shape and temperature displacement parameters are varied.
-    The peak shape parameters are essentially determined by a calibration measurement of a LaB6 reference measurement, using a pseudo-Voigt profile function.
-    As the finite crystallite size can lead to an additional broadening of the peaks, an additional Lorentzian broadening is allowed during the refinement.
+    To evaluate the obtained XRD profile, a LeBail analysis is performed using the FullProf Suite \cite{Rodriguez_1993_Recen}, where an expected crystal phase can be modeled and its respective parameters refined.
+    The instrumental peak shape parameters are determined by a calibration measurement of a LaB6 reference measurement, using a pseudo-Voigt profile function.
+    As the finite crystallite size leads to an additional broadening of the peaks, an additional Lorentzian broadening is allowed during the refinement.
 
     FullProf models the diffraction data by calculating for each given angle $\theta_i$
     \begin{align}
@@ -23,12 +22,13 @@
     \end{align}
     Here, the sums run over the phases of the model $\varphi$, which have a scale factor $S_{\varphi}$ each, and the respective Bragg reflections $\vec{h}$.
     $\Omega$ is the peak profile function and the background model is accounted for by $b_i$.
-    The peak intensities $I_{\varphi, \, \vec{h}}$ include the structure factor $F^2$, the absorption correction $A$, the Lorentz, polarization and multiplicity factors $L$, possibly a preferred orientation function $P$ and other special corrections that may be added to the model $C$
+    In a Rietveld analysis, the peak intensities $I_{\varphi, \, \vec{h}}$ include the structure factor $F^2$, the absorption correction $A$, the Lorentz, polarization and multiplicity factors $L$, possibly a preferred orientation function $P$ and other special corrections that may be added to the model $C$
     \begin{align}
       I_{\varphi, \, \vec{h}} \eq (F^2 A L P C)_{\varphi, \, \vec{h}}.
     \end{align}
+    In the case of a LeBail fit, the intensities are not calculated from the separate factors but are themselves refined parameters.
 
-    By including the Lorentzian broadening, the Rietveld analysis provides information about the average size of the crystallites $L$ in the sample.
+    By including the Lorentzian broadening, the analysis provides information about the average size of the crystallites $L$ in the sample.
     This can be extracted by the Scherrer equation
     \begin{equation}
       L \eq \frac{K \lambda}{\beta \cos(\theta)},
@@ -36,7 +36,7 @@
     where $\lambda$ is the X-ray wavelength, $\beta$ the breadth of a peak, $\theta$ the scattering angle of the peak and $K$ the shape factor, which depends on the crystal shape, the definition of what is taken as peak breadth and the reflex indices \cite{Langford_1978_Scher}.
     In FullProf, $K$ is set to 1 and $\beta$ is determined from the pseudo-Voigt line profile according to the formula given by De Keijser \cite{DeKeijser_1982_Useof}.
 
-    To quantify the quality of the Rietveld refinement, multiple figure of merits are presented.
+    To quantify the quality of the refinement, multiple figure of merits are presented.
     During the refinement, FullProf minimizes the reduced $\chi^2$ value defined by
     \begin{align}
       \chi^2 \eq \frac{1}{n-p} \sum_{i \eq 1}^n \biggl(\frac{y_i - y_{\mathrm{m},\,i}}{\sigma_i}\biggr)^2,
