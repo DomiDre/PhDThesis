@@ -76,7 +76,7 @@
 
       For a more precise investigation of the grazing-incidence scattering, the BornAgain software package \cite{Burle_2018_borna} is used to simulate the two dimensional detector data by the model of nanocubes with a paracrystalline square lattice interference function.
       The edge length, it's size distribution and the scattering length density of the nanocubes are set to the values obtained from the nanoparticle characterization by small-angle scattering in \refsec{sec:monolayers:nanoparticles}.
-      Similar to the vertical structure model, it is assumed the sample is a multilayer structure with a \ch{Si} substrate, a \ch{SiO2} intermediate layer and the nanocubes sit within an oleic acid layer.
+      Similar to the vertical structure model, it is assumed the sample is a multi layer structure with a \ch{Si} substrate, a \ch{SiO2} intermediate layer and the nanocubes sit within an oleic acid layer.
       As layer thickness, the same values as in XRR and the SLD of the layers are calculated from literature using the GALAXI wavelength of $1.34 \unit{\angstrom}$ for each material respectively.
       The Gaussian broadening is included to simulate the instrumental resolution of GALAXI.
       In the simulation, it is assumed that the orientation of the lattice is on average random with respect to the beam and the probability functions of the position uncertainty in the square lattice paracrystal are assumed to be Gaussian functions.

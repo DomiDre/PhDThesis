@@ -46,11 +46,11 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax.errorbar(T_zfc_1, M_zfc_1, sM_zfc_1, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', 0), label='CC-Fe-0.25 ZFCW')
 ax.errorbar(T_fcw_1, M_fcw_1+shift_fc_base, sM_fcw_1, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', 0), label='CC-Fe-0.25 FCw')
 
-ax.errorbar(T_zfc_2, M_zfc_2+shift, sM_zfc_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', -50), label='CC-Fe-0.37 ZFCw')
-ax.errorbar(T_fcw_2, M_fcw_2+shift_fc_base+shift, sM_fcw_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', -50), label='CC-Fe-0.37 FCw')
+ax.errorbar(T_zfc_2, M_zfc_2+shift, sM_zfc_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', -100), label='CC-Fe-0.37 ZFCw')
+ax.errorbar(T_fcw_2, M_fcw_2+shift_fc_base+shift, sM_fcw_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', -100), label='CC-Fe-0.37 FCw')
 
-ax.errorbar(T_zfc_3, M_zfc_3+2*shift, sM_zfc_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', -100), label='CC-Fe-0.50 ZFCw')
-ax.errorbar(T_fcw_3, M_fcw_3+shift_fc_base+2*shift, sM_fcw_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', -100), label='CC-Fe-0.50 FCw')
+ax.errorbar(T_zfc_3, M_zfc_3+2*shift, sM_zfc_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', -200), label='CC-Fe-0.50 ZFCw')
+ax.errorbar(T_fcw_3, M_fcw_3+shift_fc_base+2*shift, sM_fcw_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', -200), label='CC-Fe-0.50 FCw')
 
 
 handles, labels = ax.get_legend_handles_labels()

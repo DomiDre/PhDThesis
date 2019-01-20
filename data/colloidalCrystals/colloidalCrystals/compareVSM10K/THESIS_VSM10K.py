@@ -40,11 +40,11 @@ ax.errorbar(B_1, M_1, sM_1, linestyle='-', marker='None',
 
 ax.errorbar(B_2, M_2+shift, sM_2, linestyle='-', marker='None',
   capsize=0, markersize=1, zorder=1,
-  color=color_variant('#0EA8DF', -50), label='CC-Fe-0.37')
+  color=color_variant('#0EA8DF', -100), label='CC-Fe-0.37')
 
 ax.errorbar(B_3, M_3+2*shift, sM_3, linestyle='-', marker='None',
   capsize=0, markersize=1, zorder=1,
-  color=color_variant('#0EA8DF', -100), label='CC-Fe-0.50')
+  color=color_variant('#0EA8DF', -200), label='CC-Fe-0.50')
 
 
 ax_inset.axhline(0, color='lightgray', marker='None', zorder=0)
@@ -56,11 +56,11 @@ ax_inset.errorbar(B_1, M_1, sM_1, linestyle='-', marker='None',
 
 ax_inset.errorbar(B_2, M_2+shift, sM_2, linestyle='-', marker='None',
   capsize=0, markersize=1, zorder=1,
-  color=color_variant('#0EA8DF', -50), label='CC-Fe-0.37')
+  color=color_variant('#0EA8DF', -100), label='CC-Fe-0.37')
 
 ax_inset.errorbar(B_3, M_3+2*shift, sM_3, linestyle='-', marker='None',
   capsize=0, markersize=1, zorder=1,
-  color=color_variant('#0EA8DF', -100), label='CC-Fe-0.50')
+  color=color_variant('#0EA8DF', -200), label='CC-Fe-0.50')
 
 ax_inset.set_xlim(-0.10, 0.10)
 ax_inset.set_ylim(-150, 150)
