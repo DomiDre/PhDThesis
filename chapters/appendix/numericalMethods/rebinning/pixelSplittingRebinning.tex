@@ -38,7 +38,7 @@
   Together these points define a polygon, whose area represents the overlap area.
   To determine whether a corner point of the quadrilateral is within a rectangular bin is trivial.
   The more difficult question, if the corner point of an rectangular bin is inside an arbitrary polygon, is a known and efficiently solved problem in computer science known as the ray-casting algorithm \cite{Shimrat_1962_Algor}.
-  The crossing of the edges are obtained geometrically by calculating for each edge of the quadrilateral the crossing with each of the the rectangular edges considering each as infinite straight lines, and checking afterwards whether the crossing points are within the bounds of the rectangular bin.
+  The crossing of the edges are obtained geometrically by calculating for each edge of the quadrilateral the crossing with each of the rectangular edges considering each as infinite straight lines, and checking afterwards whether the crossing points are within the bounds of the rectangular bin.
   Once the polygon points of the overlap boundary are obtained, the area is simply calculated by sorting the polygon points in a counter clockwise order and summing the cross-product of all neighboring points.
 
   Knowing the respective overlapping areas  of the distorted pixel of area  with the new grid, the count data contained in one pixel is divided proportionately onto the respective rectangular pixels.

@@ -1,0 +1,30 @@
+\providecommand{\main}{../../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+\renewcommand{\thisPath}{\main/chapters/appendix/formfactors/sphereCoreshell}
+\begin{document}
+\section{Spherical Core-Shell Model}\label{ch:appendix:formfactors:sphereCoreshell}
+Typically a nanoparticle is stabilized by a surfactant like oleic acid in a solvent. For this reason, it's necessary to extend the sphere model with a shell. For a core of radius $R$ and a shell thickness of $D$ the scattering length density of the particle can be modelled in spherical coordinates as
+\begin{align}
+  \rho(\vec{r}) \eq \begin{cases}
+    \rho_\mathrm{core}, & \, 0 < r < R,\\
+    \rho_\mathrm{shell}, & \, R < r < R+D,\\
+    \rho_s, & \, R+D < r.\\
+  \end{cases}
+\end{align}
+Then integral that needs to be solved for the the form factor amplitude $p_\mathrm{cs}$ is given by
+\begin{align}
+  p_\mathrm{cs}  (\vec{q})
+  \eq& \int_{V_p} \dint \vec{r} e^{-i \vec{q} \cdot \vec{r}} (\rho(\vec{r}) - \rho_s) \\
+  \eq& \int_0^R \dint r r^2 \int \dint \Omega e^{-i \vec{q} \cdot \vec{r}} (\rho_\mathrm{core} - \rho_s) + \int_R^{R+D} \dint r r^2 \int \dint \Omega e^{-i \vec{q} \cdot \vec{r}} (\rho_\mathrm{shell} - \rho_s) \\
+  & + \int_0^{R} \dint r r^2 \int \dint \Omega e^{-i \vec{q} \cdot \vec{r}} (\rho_\mathrm{shell} - \rho_s) - \int_0^{R} \dint r r^2 \int \dint \Omega e^{-i \vec{q} \cdot \vec{r}} (\rho_\mathrm{shell} - \rho_s).
+\end{align}
+By adding the 0 in the last step, we can essentially map the problem of the core-shell form factor to the sum of two sphere form factors as we can see when the integrals are recombined
+\begin{align}
+  p_\mathrm{cs} (\vec{q})
+  \eq& \int_0^R \dint r r^2 \int \dint \Omega e^{-i \vec{q} \cdot \vec{r}} (\rho_\mathrm{core} - \rho_\mathrm{shell}) + \int_0^{R+D} \dint r r^2 \int \dint \Omega e^{-i \vec{q} \cdot \vec{r}} (\rho_\mathrm{shell} - \rho_s)\\
+  \eq& p_\mathrm{sph} (\vec{q}; R, \rho_\mathrm{core}, \rho_\mathrm{shell}) + p_\mathrm{sph} (\vec{q}; R+D, \rho_\mathrm{shell}, \rho_\mathrm{s})
+\end{align}
+This trick can be understood visually by imagining that a core-shell particle is obtained by cutting out a sphere of radius $R+D$ from the solvent texture, filling it with the shell material, and subsequently cut out from that part a sphere with radius $R$ and filling it the core material.
+By this method one can also quickly generate multi shell models by subsequently removing and adding a smaller sphere into a bigger sphere with the difference of the scattering length densities as contrast.
+The form factor is then obtained by taking the square of the amplitude.
+\end{document}

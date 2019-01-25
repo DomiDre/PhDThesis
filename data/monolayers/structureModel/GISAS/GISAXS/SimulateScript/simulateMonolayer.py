@@ -64,12 +64,12 @@ def get_simulation():
     simulation.setDetector(detector)
 
     simulation.setDetectorResolutionFunction(ba.ResolutionFunction2DGaussian(0.254, 0.254))
-    simulation.setBeamParameters(0.134*nm, 0.13*deg, 0.0*deg)
+    simulation.setBeamParameters(0.13414*nm, 0.13*deg, 0.0*deg)
     simulation.setBeamIntensity(6.246e+09)
     simulation.getOptions().setUseAvgMaterials(True)
     simulation.getOptions().setIncludeSpecular(True)
-    # background = ba.ConstantBackground(1.0e+00)
-    # simulation.setBackground(background)
+    background = ba.ConstantBackground(1.0e+00)
+    simulation.setBackground(background)
     simulation.addMask(ba.Rectangle(100.239, -5.575, 110.293, 98.987), True)  # mask beam stopper
     simulation.addMask(ba.Rectangle(83.510, -18.363, 85.344, 198.365), True)  # mask detector gap
 
