@@ -8,7 +8,7 @@
     Instead of probing the vertical electron density, the average nuclear structure of the layers is studied.
     Using furthermore polarized neutrons, the magnetic spin density of the layers can be determined in polarized neutron reflectometry (PNR).
 
-    The PNR experiments presented in this thesis were performed at the ILL beamlines SuperADAM (\refsec{ch:lss:superadam}) and D17 (\refsec{ch:lss:d17}), as well as the MLZ beamline MARIA (\refsec{ch:lss:maria}), which all measure the reflected neutron beam on a position-sensitive detector.
+    The PNR experiments presented in this thesis were performed at the ILL beamlines SuperADAM (\refch{ch:lss:superadam}) and D17 (\refch{ch:lss:d17}), as well as the MLZ beamline MARIA (\refch{ch:lss:maria}), which all measure the reflected neutron beam on a position-sensitive detector.
     To measure the scattered reflectivity of the polarized neutrons in the experiments at MARIA and SuperADAM, the angle from sample to source and detector is varied and monochromatic neutrons are measured on a detector at specular condition, analogue to XRR.
     The alignment procedure differs in so far that the used silicon substrates are relatively transparent for neutrons and therefore no absorption curve can be reliably measured.
     Therefore, initially a laser pointer is used to prealign the sample and the final alignment is performed by observing the intensity of the reflected beam on the position-sensitive detector, while moving the sample.

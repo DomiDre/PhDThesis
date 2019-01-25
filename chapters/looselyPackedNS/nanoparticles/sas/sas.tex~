@@ -2,7 +2,7 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 \begin{document}
   \label{sec:looselyPackedNS:nanoparticle:sas}
-  Small-angle X-ray scattering measured at GALAXI (\refsec{ch:lss:galaxi}) and small-angle neutron scattering measured at D33 (\refsec{ch:lss:d33}) was performed to quantitatively characterize the nanoparticle dispersions.
+  Small-angle X-ray scattering measured at GALAXI (\refch{ch:lss:galaxi}) and small-angle neutron scattering measured at D33 (\refch{ch:lss:d33}) was performed to quantitatively characterize the nanoparticle dispersions.
   The azimuthally averaged data is shown in \reffig{fig:looselyPackedNP:nanoparticle:sas}.
   From the qualitative comparison of the data, it is visible that the first form factor minima appears for IOS-11 at smaller $q$ values than for IOS-7 and that the minima of IOS-11 are sharper.
   The smaller $q$ value of the scattering vector translates to a larger particle size and the sharper minima to a smaller size distribution.

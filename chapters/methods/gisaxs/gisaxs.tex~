@@ -4,7 +4,7 @@
 \begin{document}
   \section{Grazing-Incidence Small-Angle X-Ray Scattering (GISAXS)}
     \label{ch:methods:gisaxs}
-    In this work, grazing-incidence small-angle X-ray scattering has been performed for multiple samples at the GALAXI instrument (\refsec{ch:lss:galaxi}).
+    In this work, grazing-incidence small-angle X-ray scattering has been performed for multiple samples at the GALAXI instrument (\refch{ch:lss:galaxi}).
     For the experiment, the sample is placed on a flat holder as shown in \reffig{fig:methods:gisaxs:samples}, that can be moved in vertical direction to center the sample and in the plane to set the beam to the center of the sample.
     Furthermore, the sample stage is tilted to set the incident angle.
     To set the desired angle, multiple scans of the beam transmission are performed, while moving the stage, to center the sample first and to be sure that the zero angle corresponds to the flat sample orientation.

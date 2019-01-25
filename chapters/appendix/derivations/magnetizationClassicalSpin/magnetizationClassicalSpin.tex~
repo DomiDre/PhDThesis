@@ -9,7 +9,7 @@
     Therefore, in the following the magnetization behaviour of a super spin is discussed in the context of classical physics.
     This approach to describe the magnetization is also valid if a single electron spin is treated semi classically and thus to align freely in all directions.
 
-    As discussed in \refsec{ch:theoreticalBackground:magnetism:paramagnetism}, a single spin exposed to an external magnetic field $B$ feels a torque to minimize the Zeeman energy
+    As discussed in \refch{ch:theoreticalBackground:magnetism:paramagnetism}, a single spin exposed to an external magnetic field $B$ feels a torque to minimize the Zeeman energy
     \begin{align}
       E_Z = - \vec{\mu}_e \cdot \vec{B}.
     \end{align}

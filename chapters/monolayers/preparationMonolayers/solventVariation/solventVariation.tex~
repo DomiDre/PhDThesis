@@ -57,7 +57,7 @@
       \caption{\label{fig:monolayers:preparation:solventVariation:gisaxs}GISAXS detector images measured under an incident angle of $\alpha_i \eq 0.11 \unit{^\circ}$ to study the average lateral structure of the samples shown in \reffig{fig:monolayers:preparation:solventVariation:sem}. Below the detector images, the respective scattered intensity in the strip around the Yoneda line is shown. For the ordered samples, the first order peak is fitted to a Lorentzian function with the parameters tabulated in \reftab{tab:monolayers:solventProperties:GisaxsLatticeParams}.}
     \end{figure}
 
-    To quantify the in-plane order, the presented samples are studied using grazing incidence small-angle X-ray scattering at GALAXI (\refsec{ch:lss:galaxi}), shown in \reffig{fig:monolayers:preparation:solventVariation:gisaxs}.
+    To quantify the in-plane order, the presented samples are studied using grazing incidence small-angle X-ray scattering at GALAXI (\refch{ch:lss:galaxi}), shown in \reffig{fig:monolayers:preparation:solventVariation:gisaxs}.
     ML-SV-HexTet shows no significant structure factor in the Yoneda band, but mainly scattering coming from the form factor of the individual nanoparticles.
     For the other three shown samples distinct peaks emerge on top, which increase in intensity for higher order alkanes.
     The first order peak of the structured monolayers is fit by a Lorentzian function to determine it's center position  $q_{10}$ and it's peak width $\gamma_{10}$, which both are tabulated in \reftab{tab:monolayers:solventProperties:GisaxsLatticeParams}.

@@ -30,7 +30,7 @@
     \end{figure}
 
     To put the arbitrary count rate of the position-sensitive detector into absolute units of $\unit{cm^{-1}}$, either the instrument needs to be properly calibrated such that a monitor can be used to translate the unit directly, which is usually done for synchrotron instruments, or a pre-characterized calibration sample needs to be measured to determine the conversion factor.
-    For the samples measured at the GALAXI instrument (\refsec{ch:lss:galaxi}), a piece of fluorinated ethylene propylene (FEP) is measured at the largest possible distance before every experiment, which produces a broad ring on the detector where the peak value $I_\mathrm{FEP}^\mathrm{peak}$ is compared to a measurement of FEP that was performed at an ESRF beam line \cite{Meyer_2009_Struk}.
+    For the samples measured at the GALAXI instrument (\refch{ch:lss:galaxi}), a piece of fluorinated ethylene propylene (FEP) is measured at the largest possible distance before every experiment, which produces a broad ring on the detector where the peak value $I_\mathrm{FEP}^\mathrm{peak}$ is compared to a measurement of FEP that was performed at an ESRF beam line \cite{Meyer_2009_Struk}.
     Furthermore for the scaling of the intensity, parameters specific to the measurement of the sample need to be considered.
     A different sample-to-detector distance $L_\mathrm{SDD}$ for sample and FEP measurement needs to be accounted, as the counting rate drops with the square of the distance.
     Also the transmission $T$ and thickness $d$ change from FEP to the sample needs to be included in the rescaling.

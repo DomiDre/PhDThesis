@@ -8,7 +8,7 @@
 
     In GISAS, the incident angle is chosen to be close to the critical angle of the sample, where the Born approximation is not accurate enough to reliably calculate the scattering.
     It has to be modified to account for reflection and refraction effects at the interfaces of a sample.
-    This is provided by the the distorted-wave Born approximation (DWBA), where the scattering wave function is no longer assumed to be a plane wave within the sample such as in the Born approximation.
+    This is provided by the distorted-wave Born approximation (DWBA), where the scattering wave function is no longer assumed to be a plane wave within the sample such as in the Born approximation.
     For the DWBA, the scattering potential is assumed to be decomposable in
     \begin{align}
       V(\vec{r}) \eq \bar{V}(\vec{r}) + \delta V(\vec{r}).

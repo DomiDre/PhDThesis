@@ -23,20 +23,20 @@
   \paragraphNewLine{Transmission Electron Microscopy}
     Transmission electron microscopy is used to visually characterize a sample of the prepared dispersion and validate the structural quality of the batch.
     For the measurement in each case a drop of a dispersion with a concentration of $c \approx 0.1 \unit{mg/mL}$ is transferred to a copper grid and measured on a Zeiss Leo 902 (\refsec{ch:instruments:laboratoryInstruments:tem}).
-    To evaluate the particle size and size distribution, the edge length of over 100 nanocubes is measured using the software Fiji \cite{Schindelin_2012_Fijia} and evaluated by fitting a log-normal distribution as described in \refsec{ch:methods:em}.
+    To evaluate the particle size and size distribution, the edge length of over 100 nanocubes is measured using the software Fiji \cite{Schindelin_2012_Fijia} and evaluated by fitting a log-normal distribution as described in \refch{ch:methods:em}.
 
   \paragraphNewLine{X-Ray Diffraction}
-    XRD of Ac-CoFe-C and Ol-CoFe-C was measured in cooperation with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague on an PANanalytical X'Pert PRO, which is described in \refsec{ch:instruments:laboratoryInstruments:xrd}.
+    XRD of Ac-CoFe-C and Ol-CoFe-C was measured in cooperation with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague on an PANanalytical X'Pert PRO, which is described in \refch{ch:instruments:laboratoryInstruments:xrd}.
     For the measurement, dried samples of the nanoparticles were sent to the laboratory of the collaboration, where they were redispersed and dried on glass substrates for the measurement.
     The diffractometer operated with a Cu-K$\alpha$ source ($\lambda \eq 1.54 \angstrom$) and a $2 \theta \eq 5^\circ \ldots 80^\circ$ has been measured.
     The instrumental broadening is determined from a LaB6 reference measurement (SR 660b, NIST).
     The nanoparticles from Ac-CoFe-C-2 were measured on a Huber G620 with a Mo-K$\alpha$ source ($\lambda \eq 0.71 \angstrom$) in the working group of Prof. Dr Mathur in the University of Cologne by Dr. Andreas Mettenb\"orger on a precipitated powder of the nanoparticles.
     For this instrument it was not possible to obtain a reference measurement to estimate the instrumental broadening.
-    The data is analyzed using the FullProf suite \cite{Rodriguez_1993_Recen} as described in \refsec{ch:methods:xrd}.
+    The data is analyzed using the FullProf suite \cite{Rodriguez_1993_Recen} as described in \refch{ch:methods:xrd}.
     In both cases a LeBail refinement has been performed comparing the data to the phase of the inverse spinell structure of cobalt ferrite (space group $Fd\bar{3}m$, No. 227) to determine the lattice spacing a check for phase purity.
 
   \paragraphNewLine{Energy-Dispersive X-Ray Spectroscopy}
-    Using the scanning electron microscope Neon Zeiss 40 (\refsec{ch:instruments:laboratoryInstruments:sem}) EDX measurements of the nanoparticles Ac-CoFe-C, Ac-CoFe-C-2 and Ol-CoFe-C were performed.
+    Using the scanning electron microscope Neon Zeiss 40 (\refch{ch:instruments:laboratoryInstruments:sem}) EDX measurements of the nanoparticles Ac-CoFe-C, Ac-CoFe-C-2 and Ol-CoFe-C were performed.
     For the measurement, $20 \unit{\musf L}$ of a highly concentrated fraction ($c > 5 \unit{mg/mL}$ of the dispersions is drop casted on a silicon substrate with an surface area of $12.5 \unit{mm^2}$ to obtain a thick layer of nanoparticle material.
     The electron beam was accelerated with $20 \unit{kV}$ and in each case the X-ray spectrum was measured five times at different positions of the sample for a time of $2 \unit{min}$ each.
     The spectra are evaluated using the software INCA, which compares the intensity of the K-lines for each element with the literature values to extract the relative number of atoms, thereby providing the relative ratio of cobalt and iron in the samples.
@@ -91,15 +91,15 @@
       \end{tabular}
     \end{table}
 
-    The samples are measured on two distances using the GALAXI instrument (\refsec{ch:lss:galaxi}) at the \textsc{Forschungszentrum J\"ulich}.
+    The samples are measured on two distances using the GALAXI instrument (\refch{ch:lss:galaxi}) at the \textsc{Forschungszentrum J\"ulich}.
     One at a large sample-to-detector distance of $3.53 \unit{m}$ and one at a short sample-to-detector distance of $0.83 \unit{m}$.
     Additionally, capillaries filled with the solvents and an empty capillary is measured under the same conditions for subtraction of the background.
-    The scaling to absolute units is performed according to the procedure described in \refsec{ch:methods:saxs}.
+    The scaling to absolute units is performed according to the procedure described in \refch{ch:methods:saxs}.
 
     To measure SANS and SANSPOL, part of the stock solution is dried at ambient conditions and redispersed in toluene-$\mathrm{d_8}$ to reduce the incoherent scattering coming from hydrogen atoms.
     The mass concentrations of the dispersions from gravimetry are given in \reftab{tab:monolayers:charMethod:sampleConcentrations}.
     For Ac-CoFe-C and Ac-CoFe-C-2 the same stock solution as used in SAXS was redispersed to toluene-\textit{d8}, whereas for Ol-CoFe-C a higher concentration was used.
-    The small-angle neutron scattering experiments of Ac-CoFe-C and Ac-CoFe-C-2 was measured at D22 (\refsec{ch:lss:d22}) with a wavelength of $7.208 \unit{\angstrom}$ and Ol-CoFe-C on the D33 instrument (\refsec{ch:lss:d33}) with a wavelength of $5.998 \unit{\angstrom}$.
+    The small-angle neutron scattering experiments of Ac-CoFe-C and Ac-CoFe-C-2 was measured at D22 (\refch{ch:lss:d22}) with a wavelength of $7.208 \unit{\angstrom}$ and Ol-CoFe-C on the D33 instrument (\refch{ch:lss:d33}) with a wavelength of $5.998 \unit{\angstrom}$.
     In both cases a sample aperture of $6 \times 10 \unit{mm^2}$ is used and the samples are measured at short detector distance of $2 \unit{m}$ and a long detector distance of $8 \unit{m}$.
     For both instruments the instrumental resolution is used as provided by the GRASP software for the respective instrument.
     For SANSPOL the applied field was in all cases $1.2 \unit{T}$ with the magnetic field along the $y$ direction: perpendicular to the beam and in the horizontal plane.
@@ -109,7 +109,7 @@
     For D33 a polarization efficiency of $97 \%$ and a flipping efficiency of $99 \%$ is used according to the instrument specifications given by the local contact.
 
     The SAXS data of the nanoparticles from acetylacetonates are evaluated using a spherical (\refapp{ch:appendix:formfactors:sphereCoreshell}), cubic (\refapp{ch:appendix:formfactors:sphereCoreshell}) and a superball form factor.
-    The derivation of the superball form factor is described in more detail in \refsec{sec:monolayers:nanoparticle:structuralCharacterization}.
+    The derivation of the superball form factor is described in more detail in \refch{sec:monolayers:nanoparticle:structuralCharacterization}.
 
     As figure of merit for the Levenberg-Marquardt algorithm\cite{Marquardt_1963_Analgo, Oliphant_2006_Guide}, a modified $\chi^2$ on the logarithmic scale is used, which is defined by
     \begin{align}
@@ -218,9 +218,9 @@
     is given instead as it is the more natural to the liquid state of oleic acid.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
-    The macroscopic magnetization of the nanoparticles Ac-CoFe-C, Ac-CoFe-C-2 and Ol-CoFe-C was measured using the PPMS Evercool II described in \refsec{ch:instruments:laboratoryInstruments:vsm}.
+    The macroscopic magnetization of the nanoparticles Ac-CoFe-C, Ac-CoFe-C-2 and Ol-CoFe-C was measured using the PPMS Evercool II described in \refch{ch:instruments:laboratoryInstruments:vsm}.
     To obtain the magnetization in a non-interacting state at room temperature, two approaches are considered.
-    In the first, $40 \unit{\musf L}$ of the nanoparticle dispersion are sealed in a vial as described in \refsec{ch:instruments:laboratoryInstruments:vsm}.
+    In the first, $40 \unit{\musf L}$ of the nanoparticle dispersion are sealed in a vial as described in \refch{ch:instruments:laboratoryInstruments:vsm}.
     The vial is subsequently fixed within a drinking straw, using additional folded straws to render the vial immobile.
     A moving liquid sample is a difficult system in the framework of vibrating sample magnetometry as due to air gaps the liquid is still able to move within its container during the vibration, which can lead to a systematic error in the measured signal \cite{Boekelheide_2016_Artif}.
     Therefore, in a second approach, the nanoparticle dispersion is quickly drop casted in a diluted concentration ($c \eq 0.1 \unit{mg/mL}$) on a silicon substrate using $\textit{n}$-hexane as solvent to measure the nanoparticles in a dry state for comparison.
@@ -232,7 +232,7 @@
     Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K \, min^{-1}}$.
     For Ac-CoFe-C-2 no measurement of the dry particles has been performed.
 
-    Using the liquid dispersion in the vial measurement, a Langevin behaviour with excess susceptibility is fit in the range from $\pm 2 \unit{T}$ to determine the magnetic moment of the single nanocubes as described in \refsec{ch:methods:vsm}.
+    Using the liquid dispersion in the vial measurement, a Langevin behaviour with excess susceptibility is fit in the range from $\pm 2 \unit{T}$ to determine the magnetic moment of the single nanocubes as described in \refch{ch:methods:vsm}.
     The magnetization data is scaled such that the saturation magnetization is given by the ratio of the single-particle moment and nanocube volume
     \begin{align}
       M_s \eq \frac{\bar{\mu}}{V_p}.

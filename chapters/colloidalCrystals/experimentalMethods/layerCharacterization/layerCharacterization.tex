@@ -8,15 +8,12 @@
     All micrographs are obtained at $5 \unit{kV}$ using the detector for the back-scattering electrons.
 
   \paragraphNewLine{Grazing-Incidence Small-Angle X-ray Scattering}
-    For CC-Fe-0.25 a GISAXS experiment was performed at the GALAXI instrument in the \textsc{Forschungszentrum J\"ulich} (\refsec{ch:lss:galaxi}).
+    For CC-Fe-0.37 a GISAXS experiment was performed at the GALAXI instrument in the \textsc{Forschungszentrum J\"ulich} (\refsec{ch:lss:galaxi}).
     The sample was measured at the incident angles of $0.155 ^\circ$ and $0.205 ^\circ$ with a wavelength of $\lambda \eq 1.341 \unit{\angstrom}$.
     The sample-to-detector distance was set to $1.73 \unit{m}$ and a total integrated time of $5 \unit{h}$ was measured for each incident angle.
     The measurement time is sub-divided into five parts, where each is measured with a vertically shifted detector position to fill the horizontal gaps between the Pilatus 1M detector sub modules.
 
     To determine the structure of the colloidal crystal, the detector image obtained at the incident angle of $0.205 ^\circ$ is first evaluated by performing horizontal and vertical cuts through the observed peaks to determine the $q_y$ and $q_z$ positions of the peaks manually.
-    By suggestions of the cross-sectional SEM micrographs and following the structure evaluation of iron oxide mesocrystals in \cite{Wetterskog_2016_Tunin}, a body-centered tetragonal (bct) unit cell is used to index the observed peak positions.
-    Analogue to \cite{Wetterskog_2016_Tunin}, the tetragonal axes of the bct unit cell are set to a ratio of $c/a \eq \sqrt{3}$, and the indexing is performed with a [101]-orientation of the unit cell, which in a orthogonal lattice system has a rectangular unit cell with $b \eq 2a$ and $c \eq \sqrt{12} a$.
-
 
   \paragraphNewLine{X-Ray Reflectometry}
     X-ray reflectometry has been measured on the GALAXI instrument at the \textsc{Forschungszentrum J\"ulich} (\refsec{ch:lss:galaxi}) for CC-Fe-0.25, CC-Fe-0.37 and CC-Fe-0.50.
@@ -30,7 +27,7 @@
     To account for a fluctuating intensity of the incident beam and varied counting times, each detector image is scaled to it's respective monitor value.
 
     The obtained detector data are evaluated by defining a region of interest around the specular peak, which moves along the detector with increasing incident angle.
-    The region of interest is integrated along the dimension perpendicular to the scattering direction, such that an intensity map with respect to the remaining detector dimension and the incident angle is obtained.
+    The region of interest is integrated along the dimension on the detector perpendicular to the scattering direction, such that an intensity map with respect to the remaining detector dimension and the incident angle is obtained.
     Using the pixel-splitting rebinning algorithm described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}, the intensity map is transformed and rebinned to a ($\alpha_i - \alpha_o$, $\alpha_i+\alpha_o$) coordinate system, from which the specular intensity is obtained by integrating a box of $0.2 ^\circ$ width around $\alpha_i - \alpha_o \eq 0$.
     Additionally, the data is corrected for diffuse scattering around the specular peak, by integrating boxes in the range $\alpha_i - \alpha_o \eq \pm (0.1 \ldots 0.2)$, and subtracting the diffuse scattering intensity from the specular intensity.
 
@@ -72,9 +69,9 @@
     For each case, the reflectivity $R^{+}$, for neutrons polarized parallel to the magnetic field direction, and the reflectivity $R^{-}$, for neutrons that are polarized antiparallel to it, is measured.
     No polarization analysis is performed for the sake of having higher counting statistics in the two channels.
 
-    For the measurements, the incident angle was increased up to $6 ^\circ$, where the angle step is increased for three ranges.
+    For the measurements, the incident angle was increased up to $\alpha_i \eq 6 ^\circ$, where the angle step is increased for three ranges.
     For the first range up to $\alpha_i \eq 1 ^\circ$ a step of $0.02 ^\circ$ is set.
-    For a second range from $0.8 ^\circ$ up to $3.5 ^\circ$ a step of $0.05 ^\circ$ is chosen and for the last range from $2.8 ^\circ$ up to $6 ^\circ$ a step of $0.2 ^\circ$ is set.
+    For a second range from $\alpha_i \eq 0.8 ^\circ$ up to $\alpha_i \eq 3.5 ^\circ$ a step of $0.05 ^\circ$ is chosen and for the last range from $\alpha_i \eq 2.8 ^\circ$ up to $\alpha_i \eq 6 ^\circ$ a step of $0.2 ^\circ$ is set.
     The three ranges overlap intentionally in case the scaling of the data to the monitor would show a disagreement, which was not the case in the executed experiments.
     At the first range, each point is measured for $30 \unit{s}$, whereas for the second $120 \unit{s}$ and the third range $135 \unit{s}$ are set due to the lower scattering intensity and for improved statistics.
 

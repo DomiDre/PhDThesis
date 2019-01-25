@@ -4,8 +4,8 @@
 \begin{document}
   \section{Small-Angle Neutron Scattering (SANS)}
     \label{ch:methods:sans}
-    The data acquisition in small-angle neutron scattering experiment is in many ways parallel to the SAXS experiment described in \refsec{ch:methods:saxs}.
-    The SANS experiments of this thesis have all been performed on ILL beamlines, either at D22 \refsec{ch:lss:d22} or D33 \refsec{ch:lss:d33}.
+    The data acquisition in small-angle neutron scattering experiment is in many ways parallel to the SAXS experiment described in \refch{ch:methods:saxs}.
+    The SANS experiments of this thesis have all been performed on ILL beamlines, either at D22 \refch{ch:lss:d22} or D33 \refch{ch:lss:d33}.
     Both instruments provide the data in the NeXus data format \cite{Koennecke_2015_Thene}, which is read for data reduction by the MATLAB script GRASP \cite{Dewhurst_2003_Grasp}.
     The script allows to load data sets of the sample, solvent and empty cell and perform essentially the same correction and rescaling to absolute units as described in the SAXS method.
     A background measurement of the blocked beam is subtracted from the sample and the solvent before they are scaled to their respective transmission and subtracted from one another.
