@@ -26,20 +26,20 @@ dataRef.loadFromFile('../../experimental_data/50A/DD144_50A_20deg_SA_rfp.dat', [
 # dataRef.sliceDomain(0.02, 0.5)
 
 modelRef = app.setModel(SuperballCSSCoupled, [Magnetic, InstrumentalResolution])
-modelRef.setParam("magSldCore", 0.5e-7,  minVal = 0, maxVal = 5e-06, vary = True)
-modelRef.setParam("magSldShell", 1.1627e-06,  minVal = 0, maxVal = 5e-06, vary = False) #3.2842e-07 +/- 2.6516e-08 (8.07%)
+modelRef.setParam("magSldCore", 0.0e-7,  minVal = 0, maxVal = 5e-06, vary = False)
+modelRef.setParam("magSldShell", 1.1627e-06,  minVal = 0, maxVal = 5e-06, vary = True) #3.2842e-07 +/- 2.6516e-08 (8.07%)
 modelRef.setConstantParam("sin2alpha", 0.9974654)
 
-modelRef.setConstantParam("dShell", 33.0626072)
-modelRef.setConstantParam("dSurfactant", 14.1)
-modelRef.setConstantParam("i0", 0.05388964)
+modelRef.setConstantParam("dShell", 34.3012848)
+modelRef.setConstantParam("dSurfactant", 13.8033491)
+modelRef.setConstantParam("i0", 0.05642093)
 modelRef.setConstantParam("bg", 0.)
-modelRef.setConstantParam("dTheta_sa", 0.00173506)
-modelRef.setConstantParam("dTheta_la", 0.00281768)
+modelRef.setConstantParam("dTheta_sa", 0.00177654)
+modelRef.setConstantParam("dTheta_la", 0.00285709)
 
-modelRef.setConstantParam("pVal", 2.21883)
-modelRef.setConstantParam("particleSize", 61.11297)
-modelRef.setConstantParam("sigParticleSize", 0.07216709)
+modelRef.setConstantParam("pVal", 2.153364)
+modelRef.setConstantParam("particleSize", 61.2588)
+modelRef.setConstantParam("sigParticleSize", 0.07247489)
 
 modelRef.setConstantParam("sldCore", 8.34845e-6) # FeO 4.1809 A
 modelRef.setConstantParam("sldShell", 6.9992e-6) # Fe3O4 8.3841 A

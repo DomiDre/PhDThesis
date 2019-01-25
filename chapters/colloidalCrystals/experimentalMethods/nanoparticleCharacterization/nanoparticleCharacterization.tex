@@ -32,11 +32,12 @@
     The velocity selector at D33 was set to a wavelength of $6 \unit{\angstrom}$, with a wavelength spread of $10 \%$ (FWHM).
     The sample was measured both at a sample-to-detector distance of $11 \unit{m}$ and $2 \unit{m}$ to cover a large $q$-range.
     The collimation-to-sample distance were $10.3 \unit{m}$ and $5.3 \unit{m}$ respectively.
-    With the collimation aperture of $30 \times 30 \unit{mm^2}$ and the sample aperture of $7 \times 10 \unit{mm^2}$, the angular instrumental resolution parameters are estimated to $\Delta \theta_\mathrm{11 m} \eq 1.60 \unit{mrad}$ and     $\Delta \theta_\mathrm{2 m} \eq 3.79 \unit{mrad}$ respectively according to \refeq{eq:methods:sans:instrumentalResolution}.
-    The Ol-CoFe-C dispersion was measured at ambient conditions without the application of a magnetic field, as well as at a magnetic field of $1.234 \unit{T}$. % $153 \unit{mT}$, $308 \unit{mT}$, $600 \unit{mT}$, $882 \unit{mT}$, and
+    With the collimation aperture of $30 \times 30 \unit{mm^2}$ and the sample aperture of $7 \times 10 \unit{mm^2}$, the angular instrumental resolution parameters are estimated to $\Delta \theta_\mathrm{11 m} \eq 1.60 \unit{mrad}$ and $\Delta \theta_\mathrm{2 m} \eq 3.79 \unit{mrad}$ respectively according to \refeq{eq:methods:sans:instrumentalResolution}.
+    The Ol-CoFe-C dispersion was measured at ambient conditions without the application of a magnetic field at $6 \unit{mT}$ guide field, as well as at a magnetic field of $1.234 \unit{T}$. % $153 \unit{mT}$, $308 \unit{mT}$, $600 \unit{mT}$, $882 \unit{mT}$, and
     The magnetic field is applied by an electromagnet perpendicular to the beam in the horizontal plane.
-    The data is reduced using the GRASP software, where the solvent is subtracted and the data is corrected for the polarization efficiency of $99 \%$ and the flipping efficiency of $97 \%$.
+    The data is reduced using the GRASP software \cite{Dewhurst_2003_Grasp}, where the solvent is subtracted and the data is corrected for the polarization efficiency of $99 \%$ and the flipping efficiency of $97 \%$.
     The azimuthal average of the magnetic scattering is obtained from a $20 ^\circ$ sector around the vertical $z$ direction, whereas the nuclear scattering is obtained from averaging the complete detector area from the measurement at zero field.
+    \\
 
     For the evaluation of the form factors from the azimuthally averaged small-angle scattering data, the same procedure as described in \refsec{sec:looselyPackedNS:characterization:nanoparticles} for iron oxide nanospheres is performed using a superball core-shell form factor instead of a spherical core-shell form factor.
     The superball form factor is described in detail in \refsec{sec:monolayers:methods:superballFF}.
@@ -53,6 +54,25 @@
     To measure the room temperature magnetic properties of the nanocubes, a ADE EV 7 Vibrating Sample Magnetometer is used.
     For the measurement an empty Teflon pot is first measured to determine the background susceptibility and subsequently, $20 \unit{\musf L}$ of the stock solution Ol-Fe-C, which contain approximately $0.75 \unit{mg}$ of nanocubes is dried in the pot.
     The dry sample is then measured in a range of $\pm 2 \unit{T}$ at ambient conditions ($295 \unit{K}$).
+    From the obtained data, the empty pot measurement is subtracted and a sum of two Langevin behaviour with excess susceptibility is fit to the data
+    \begin{align}
+      \begin{split}
+        &M(H) \eq \tilde{M}_{s,\,1} \mathcal{L}( \mu_1 \mu_0 H / k_B T) + \tilde{M}_{s,\,2}  \mathcal{L}(  \mu_2 \mu_0 H / k_B T) + \tilde{\chi} \mu_0H,\\
+        \mathrm{with\,} & \hspace{0.2cm} \mathcal{L}(x) \eq \coth(x) - 1/x,
+      \end{split}
+    \end{align}
+    to determine the spontaneous magnetizations $\tilde{M}_{s,\,i}$ in units of $\unit{memu}$ and the magnetic moments $\mu_i$, as well as the excess susceptibility $\tilde{\chi}$.
+    
+    The spontaneous magnetizations in units of $\unit{memu}$ correspond, as described in \refsec{ch:methods:vsm}, to a sum over the number of individual magnetic moments $\tilde{M}_{s,\,i} \eq N_i \mu_i$.
+    Thus the number of moments in the two modes is determined by the ratio $N_i \eq \tilde{M}_{s,\,i} / \mu_i$.
+
+    To scale the measured magnetization to the magnetic volume and thus to units $\unit{kA \, m^{-1}}$, the volume of the magnetic material in the sample needs to be estimated.
+    In \refsec{ch:methods:vsm} the case of a single mode is described, where the magnetic volume is determined by $N V_p$, where $N$ is the number of magnetic moments obtained from the Langevin fit and $V_p$ is the size of a nanoparticles determined from SAS.
+    In the present case, this is not so straight forward due to a core-shell structure of the nanoparticles.
+    Estimating $N \eq N_1 + N_2$ and considering for each moment a volume of $V_p$ overestimates the volume of the magnetic material as instead of a core-shell structure the full particle volume is considered for each moment $\mu_1$ and $\mu_2$ respectively.
+    A more reasonable estimate is given by setting $N \eq N_1$ for the consideration of the magnetic volume.
+    This corresponds to stating that each moment in the primary mode $\mu_1$ corresponds to a nanoparticle and the secondary mode is phenomenologically included in these nanoparticles.
+    Then the total magnetic volume is given by $V_\mathrm{mag} \eq N_1 V_p$, where $V_p$ is determined from SAS.
     % Additionally, the nanocubes that were forcibly oxidized are measured in VSM by the same procedure.
     % Here, the nanocube sample has a mass of approximately $0.17 \unit{mg}$.
 \end{document}

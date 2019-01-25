@@ -91,6 +91,10 @@ def plot(filepath, numbers, sample_name):
     norm=mcolors.LogNorm(),
     cmap=get_cmap(), vmin=vmin, vmax=vmax
   )
+
+  ax.text(1.5, -1.7, r"$\vec{\mathit{B}}$")
+  ax.annotate("", xy=(2, -1.8), xytext=(1.3, -1.8),
+    arrowprops=dict(arrowstyle="->"))
   deg = 90
   delta = 10
   ax.plot(

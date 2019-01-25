@@ -142,7 +142,10 @@ ax.errorbar(sanspol_m_la_q, sanspol_m_la_I, sanspol_m_la_sI,\
 ax.plot(sanspol_m_la_q, sanspol_m_la_Imodel, marker='None', linestyle='-',\
   color=color_variant('#EE292F', -150), zorder=1)
 
-ax.text(0.12, 0.2, 'Ol-Fe-C',
+
+ax.text(0.11, 0.2,
+  'Ol-Fe-C\n3 months old',
+  color='black',
   horizontalalignment='left',
   verticalalignment='bottom',
   transform=ax.transAxes,

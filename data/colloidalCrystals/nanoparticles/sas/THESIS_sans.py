@@ -82,14 +82,15 @@ ax.errorbar(sans_la_q, sans_la_I, sans_la_sI,\
 ax.plot(sans_la_q, sans_la_Imodel, marker='None', linestyle='-',\
   color=color_variant('#0EA8DF', -150), zorder=1)
 
-ax.text(0.08, 0.18,
-  'Ol-Fe-C',
+ax.text(0.11, 0.12,
+  'Ol-Fe-C\n3 months after synthesis',
   color='black',
+  fontsize=inset_fontsize,
   horizontalalignment='left',
   verticalalignment='bottom',
   transform=ax.transAxes)
 
-ax.legend(loc='lower left')#, fontsize=inset_fontsize)
+ax.legend(loc='lower left', fontsize=inset_fontsize)
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel("$\mathit{q}\,/\,\AA^{-1}$")

@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'Ol-Fe-C'
 Chapter = 'colloidalCrystals'
-saxs_fit_file = cwd + "/superballModel/saxs/fit_result.dat"
-saxs_sld_file = cwd + "/superballModel/saxs/fit_sld.dat"
+saxs_fit_file = cwd + "/homSuperballModel/saxs/fit_result.dat"
+saxs_sld_file = cwd + "/homSuperballModel/saxs/fit_sld.dat"
 # saxs_sld_file = cwd + "/superballModel/saxs/simulated_model_sld.xy"
 # model_file = cwd + "/superballModel/saxs/simulated_model.xy"
 # expdata_file = cwd + "/experimental_data/DD144.xye"
@@ -56,9 +56,12 @@ saxs_r, saxs_sld = sldData.getData()
 
 left, bottom = 0.2, 0.17
 x0in = 0.6
-y0in = 0.7
+y0in = 0.6
 widthin = 1-x0in-0.01
 heightin= 1-y0in-0.01
+
+def linear(x, a, n):
+  return a*x**n
 
 fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
@@ -66,11 +69,17 @@ ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.errorbar(qdata, Idata, sIdata,\
   linestyle='None', color='#0EA8DF',\
   label=saxs_legend_label, zorder=0, capsize=0, marker='.')
+
 ax.plot(qdata, Imodel, marker='None', linestyle='-',\
   color=color_variant('#0EA8DF', -150), zorder=1)
 
+q_linear = np.linspace(1e-2, 0.03, 100)
+ax.plot(q_linear, linear(q_linear, 0.152, -1.474), marker='None',
+  linestyle='--', color='#EE292F', zorder=1)
+ax.text(0.012, 2e2, '$q^{-1.47(1)}$', color='#EE292F')
+
 ax.text(0.11, 0.12,
-  'Ol-Fe-C',
+  'Ol-Fe-C\n8 months after synthesis',
   color='black',
   fontsize=inset_fontsize,
   horizontalalignment='left',
@@ -85,15 +94,25 @@ ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax_sld.plot(saxs_r, saxs_sld, marker='None',
-  color=colors['saxs_data'])
-ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
-ax_sld.set_ylabel(r"$\rho_{el} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
-ax_sld.set_xticks([0, 2, 4, 6, 8])
-ax_sld.set_yticks([0, 10, 20, 30, 40, 50])
-ax_sld.set_xlim([0, 9])
-ax_sld.set_ylim([0, 59])
-ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
+r = 6.12588026
+p = 2.15336360
+phi = np.linspace(0, 2.1*np.pi, 300)
+x = r * np.sign(np.cos(phi)) * np.abs(np.cos(phi))**(1/p)
+y = r * np.sign(np.sin(phi)) * np.abs(np.sin(phi))**(1/p)
+ax_sld.plot(x, y, marker='None', ls='-',
+  color='black')
+
+# ax_sld.annotate("", xy=(-r, 0), xytext=(r, 0),
+#   arrowprops=dict(arrowstyle="<->"))
+# ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
+# ax_sld.set_ylabel(r"$\rho_{el} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
+# ax_sld.set_xticks([0, 2, 4, 6, 8])
+# ax_sld.set_yticks([0, 10, 20, 30, 40, 50])
+ax_sld.set_xlim([-7, 7])
+ax_sld.set_ylim([-7, 7])
+ax_sld.set_aspect('equal')
+ax_sld.axis('off')
+# ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 
 fig.savefig(thesisimgs + '/' + saxs_pngfile)

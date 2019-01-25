@@ -14,7 +14,7 @@
     During the course of this thesis a PPMS Evercool II from the company LOT Quantum Design was set up in the working group.
     The preparation of the laboratory for the instrument and support of the installation was performed in parallel to this thesis.
 
-    The installed Evercool II has the option to choose between VSM (\refch{ch:methods:vsm}) and AC-Susceptometry, where the latter was not utilized in the scope of this thesis.
+    The installed Evercool II has the option to choose between VSM (\refsec{ch:methods:vsm}) and AC-Susceptometry, where the latter was not utilized in the scope of this thesis.
     An external field of up to $\pm 9 \unit{T}$ can be applied to magnetize samples, which are up to $5 \unit{mm}$ in diameter.
     Additionally the temperature can be freely varied in a temperature range of $2 \ldots 400 \unit{K}$.
     The instrument control is performed using the MultiVu software of LOT QuantumDesign.
@@ -37,7 +37,7 @@
       \includegraphics[width=0.7\textwidth]{instruments_brukerD8}
       \caption{\label{fig:appendix:instruments:brukerD8}Bruker D8 instrument, which can be used for X-ray reflectometry and X-ray diffraction.}
     \end{figure}
-    To perform XRR experiments, described in \refch{ch:methods:xrr}, a D8 Advanced instrument from the company Bruker was used at the \textsc{Forschungszentrum J\"ulich}.
+    To perform XRR experiments, described in \refsec{ch:methods:xrr}, a D8 Advanced instrument from the company Bruker was used at the \textsc{Forschungszentrum J\"ulich}.
     The D8 operates with a Cu-K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and has two G\"obel mirrors installed to direct the beam in front and after the sample.
     The source and the detector are both installed at a fixed distance of approximately $30 \unit{cm}$ from the sample position in a Bragg-Brentano geometry, where the sample is fixed while source and detector are both moved.
     At the source and detector, slits of $0.2 \unit{mm}$ width are installed.
@@ -55,7 +55,7 @@
 
   \subsection{X'Pert PRO - XRD}
     \label{ch:instruments:laboratoryInstruments:xrd}
-    XRD measurements (\refch{ch:methods:xrd}) were performed by a collaboration with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague.
+    XRD measurements (\refsec{ch:methods:xrd}) were performed by a collaboration with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague.
     An X'Pert PRO instrument from the company PANalytical was used for this purpose and the data was acquired using a Cu K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and a PIXcel detector.
     The instrument has a Bragg-Brentano geometry analogue to the D8 Advanced instrument, which was used for XRR.
 

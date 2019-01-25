@@ -22,11 +22,11 @@ dataRef.loadFromFile(datafile)
 
 dataRef.plotData()
 modelRef = app.setModel(TwoLangevin)
-modelRef.setParam("Ms1", 11.32646452540523,  minVal = 0, maxVal = 50, vary = True)
-modelRef.setParam("mu1", 25600.963823584912,  minVal = 1, maxVal = 30000, vary = True)
-modelRef.setParam("Ms2", 12.981961523057253,  minVal = 0, maxVal = 50, vary = True)
-modelRef.setParam("mu2", 3604.774008399192,  minVal = 1, maxVal = 30000, vary = True)
-modelRef.setParam("chi", 3.1233109629283877,  minVal = -10, maxVal = 10, vary = True)
+modelRef.setParam("Ms1", 11.326610565817466,  minVal = 0, maxVal = 50, vary = True)
+modelRef.setParam("mu1", 25600.65224828554,  minVal = 1, maxVal = 30000, vary = True)
+modelRef.setParam("Ms2", 12.98190804105851,  minVal = 0, maxVal = 50, vary = True)
+modelRef.setParam("mu2", 3604.6862336156214,  minVal = 1, maxVal = 30000, vary = True)
+modelRef.setParam("chi", 3.123264763559403,  minVal = -10, maxVal = 10, vary = True)
 modelRef.setConstantParam('T', 295) # 22 C
 app.setFit(LevenbergMarquardt)
 

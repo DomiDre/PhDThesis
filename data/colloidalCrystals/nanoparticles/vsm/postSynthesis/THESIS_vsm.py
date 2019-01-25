@@ -14,6 +14,8 @@ import numpy as np
 
 from modelexp.data import XyemData, MultiData
 
+from VSMLangevinNP.math import langevin
+
 datfile = 'fit_result.dat'
 
 chapter = 'colloidalCrystals'
@@ -32,6 +34,23 @@ fit_params = fitData.params
 min_B, max_B = min(B), max(B)
 min_M, max_M = -420, 420
 
+p1 = {
+  'Ms': 154.5,
+  'mu': 25590,
+  'T': 295,
+  'sigMu': 0,
+  'chi': 0
+}
+p2 = {
+  'Ms': 177.1,
+  'mu': 3602,
+  'T': 295,
+  'sigMu': 0,
+  'chi': 0
+}
+langevin1 = langevin(p1, B)
+langevin2 = langevin(p2, B)
+slope = 42.4*B
 fig = plt.figure()
 left, bottom = 0.21, 0.16
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
@@ -40,9 +59,12 @@ ax.axhline(0, color='lightgray', marker='None', zorder=0)
 ax.axvline(0, color='lightgray', marker='None', zorder=0)
 ax.errorbar(B, M, sM, linestyle='None', marker='.', zorder=1, capsize=0)
 ax.plot(B, Mmodel, marker='None', zorder=2, color='black')
+ax.plot(B, langevin1, marker='None', zorder=2, color='#EE292F')
+ax.plot(B, langevin2, marker='None', zorder=2, color='#FAAB2D')
+ax.plot(B, slope, marker='None', zorder=2, color='#76C152')
 
 
-ax.text(0.95,0.02,'Ol-Fe-C\n$\mathit{T}$ = 295 K',
+ax.text(0.95,0.02,'Ol-Fe-C\n1 week old\n$\mathit{T}$ = 295 K',
   transform=ax.transAxes,
   horizontalalignment='right',
   verticalalignment='bottom')
@@ -54,4 +76,4 @@ ax.set_xlim(min_B, max_B)
 ax.set_ylim(min_M, max_M)
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
-plt.show()
+# plt.show()
