@@ -13,7 +13,23 @@
     The sample-to-detector distance was set to $1.73 \unit{m}$ and a total integrated time of $5 \unit{h}$ was measured for each incident angle.
     The measurement time is sub-divided into five parts, where each is measured with a vertically shifted detector position to fill the horizontal gaps between the Pilatus 1M detector sub modules.
 
-    To determine the structure of the colloidal crystal, the detector image obtained at the incident angle of $0.205 ^\circ$ is first evaluated by performing horizontal and vertical cuts through the observed peaks to determine the $q_y$ and $q_z$ positions of the peaks manually.
+    To determine the structure of the colloidal crystal, the detector image obtained at the incident angle of $0.205 ^\circ$, the reflection positions are manually determined from the detector data and a orthorhombic unit cell with $a \neq b \neq c$ and $\alpha \eq \beta \eq \gamma \eq 90 ^\circ$ is determined to index the reflections.
+    The $q^{hkl}_y, \, q^{hkl}_z$ positions of the orthorhombic unit cell are calculated by
+    \begin{align}
+      \begin{split}
+        \label{eq:colloidalCrystals:layerChar:gisaxs:reflexPosition}
+        q^{hkl}_y \eq& 2 \pi \sqrt{\biggl( \frac{h^2}{a^2} + \frac{k^2}{b^2} \biggr)},\\
+        q^{hkl}_z \eq& k_{i,\, z} + \sqrt{k_{c,\, z}^2 + \biggl( 2\pi \frac{l}{c} \pm \sqrt{k_{i,\, z}^2 - k_{c,\, z}^2} \biggr)^2},
+      \end{split}
+    \end{align}
+    where for $q^{hkl}_z$ refraction is additionally accounted by the combination of Snell's and Bragg's laws \cite{Disch_2011_Shape}.
+    The $z$-component of the incident wave vector $k_{i,\, z}$ is calculated from the incident angle and the critical wave vector $k_{c,\, z}$ can be directly read from the $q_z$ position of the sample's X-ray reflectometry measured at the same wavelength by
+    \begin{align}
+      \begin{split}
+        k_{i,\, z} \eq& \frac{2 \pi}{\lambda} \sin(\alpha_i),\\
+        k_{c,\, z} \eq& \frac{1}{2} q_{c,\,z}.
+      \end{split}
+    \end{align}
 
   \paragraphNewLine{X-Ray Reflectometry}
     X-ray reflectometry has been measured on the GALAXI instrument at the \textsc{Forschungszentrum J\"ulich} (\refsec{ch:lss:galaxi}) for CC-Fe-0.25, CC-Fe-0.37 and CC-Fe-0.50.

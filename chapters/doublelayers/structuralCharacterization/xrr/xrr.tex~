@@ -16,7 +16,7 @@
 
   The broader peaks with the longer period visible in all reflectivity data sets on the other hand correspond to the nanocube layer thickness of the double layers.
   Evaluating the period qualitatively, an estimated thickness of $16(1) \unit{nm}$ is determined, which is tendentiously in the order of the nanocube size, including two oleic acid layer around it.
-  It is slightly larger by $1 - 2 \unit{nm}$, which is connected to the roughness of the layers induced by interfacial roughness and the particle size distribution.
+  It is slightly larger by $1 - 2 \unit{nm}$, which alludes to the roughness of the layers induced by interfacial roughness and the particle size distribution.
 
   \begin{figure}[tb]
     \centering
@@ -27,7 +27,7 @@
   X-ray reflectometry is further use to show that the thickness of the sample is well reproducible when the same sample is produced multiple times.
   In \reffig{fig:doublelayers:xrr:reproducibility} the reflectivity of DL-1.25\% and DL-1.25\%-2 is shown, which were both prepared by the same conditions.
   Qualitatively the two data sets are very similar, with Kiessig fringes of the same periodicity, which shows that the same sample thickness is achieved in both cases.
-  However, DL-1.25\%-2 drops off faster in reflectivity with respect to the scattering vector, which indicates a slightly higher roughness in the sample.
+  However, DL-1.25\%-2 drops off faster in reflectivity with respect to the scattering vector, which alludes to a slightly higher roughness in the sample.
   Therefore a certain variability in the nanoparticle layer quality remains from the drop casting preparation, which is probably the reason as to why the XRR reflectivity data can not be simply described by the same nanoparticle profile, but has to be fit individually in each case.
 
 
