@@ -26,8 +26,8 @@ dataRef.loadFromFile('../../experimental_data/50A/DD144_50A_20deg_SA_rfp.dat', [
 # dataRef.sliceDomain(0.02, 0.5)
 
 modelRef = app.setModel(SuperballCSSCoupled, [Magnetic, InstrumentalResolution])
-modelRef.setParam("magSldCore", 0.0e-7,  minVal = 0, maxVal = 5e-06, vary = False)
-modelRef.setParam("magSldShell", 1.1627e-06,  minVal = 0, maxVal = 5e-06, vary = True) #3.2842e-07 +/- 2.6516e-08 (8.07%)
+modelRef.setParam("magSldCore", 0.5e-7,  minVal = 0, maxVal = 5e-06, vary = True)
+modelRef.setParam("magSldShell", 1.1143e-06,  minVal = 0, maxVal = 5e-06, vary = False) #3.2842e-07 +/- 2.6516e-08 (8.07%)
 modelRef.setConstantParam("sin2alpha", 0.9974654)
 
 modelRef.setConstantParam("dShell", 34.3012848)
