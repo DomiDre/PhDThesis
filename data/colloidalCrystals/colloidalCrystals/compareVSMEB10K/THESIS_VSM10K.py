@@ -39,7 +39,7 @@ ax.errorbar(B_1, M_1, sM_1, linestyle='-', marker='None',
 
 ax.errorbar(B_2, M_2+shift, sM_2, linestyle='-', marker='None',
   capsize=0, markersize=1, zorder=1,
-  color=color_variant('#0EA8DF', -100), label='CC-Fe-0.37 FC')
+  color=color_variant('#EE292F', -100), label='CC-Fe-0.37 FC')
 
 ax_inset.axhline(0, color='lightgray', marker='None', zorder=0)
 ax_inset.axvline(0, color='lightgray', marker='None', zorder=0)
@@ -50,10 +50,10 @@ ax_inset.errorbar(B_1, M_1, sM_1, linestyle='-', marker='None',
 
 ax_inset.errorbar(B_2, M_2+shift, sM_2, linestyle='-', marker='None',
   capsize=0, markersize=1, zorder=1,
-  color=color_variant('#0EA8DF', -100), label='CC-Fe-0.37 FC')
+  color=color_variant('#EE292F', -100), label='CC-Fe-0.37 FC')
 
 ax_inset.set_xlim(-0.10, 0.10)
-ax_inset.set_ylim(-150, 150)
+ax_inset.set_ylim(-0.9, 0.9)
 ax_inset.tick_params(axis='both', which='major', labelsize=8)
 ax_inset.tick_params(axis='both', which='minor', labelsize=8)
 
@@ -82,11 +82,9 @@ ax.add_artist(legend2)
 
 
 ax.set_xlabel("$\mathit{\mu_0 H} \, / \, T$")
-ax.set_ylabel("$\mathit{M} \, / \, kA \, m^{-1}$", labelpad=-10)
+ax.set_ylabel("$(\mathit{M} - \chi^{300 K} \mu_0 H) \, / \, \mathit{M}_{s}^{300 K}$")
 ax.set_xlim(-8.9, 8.9)
-ax.set_ylim(-190, 190)
-# ax.set_yticklabels([])
+ax.set_ylim(-1.2, 1.2)
+ax.set_yticks([-1, 0, 1])
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
-
-plt.show()

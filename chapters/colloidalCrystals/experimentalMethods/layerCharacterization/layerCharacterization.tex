@@ -52,21 +52,18 @@
     The samples CC-Fe-0.25, CC-Fe-0.37 and CC-0.50 are characterized by VSM using a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}).
     Each sample is cut to a size of approximately $5 \times 5 \unit{mm^2}$ using a diamond cutter and stuck to a Quartz sample holder using a low temperature varnish (GE 7031).
     The silicon substrate mass is measured by a precision scale and tabulated in \reftab{tab:colloidalCrystals:layerCharacterization:ppmsMasses}.
-    The mass variation is directly proportional to the variation in sample area, as each wafer has the same thickness of $0.52 \unit{mm}$ and the iron oxide nanocube mass contribution is negligible.
-
-    Field-dependent measurements are performed for each sample at $300 \unit{K}$ and $10 \unit{K}$ in a range of $\pm 9 \unit{T}$ with a sweeping rate of $5 \unit{mT \, s^{-1}}$.
-    Furthermore, temperature-dependent measurements are performed by zero-field cooling the sample to $10 \unit{K}$ and subsequently measuring the magnetization at $10 \unit{mT}$ while warming the sample with a rate of $1.5 \unit{K \, s^{-1}}$.
-    Another field-cooled measurement is performed afterwards by first cooling the sample in a field of $10 \unit{mT}$ and subsequently measuring the magnetization while warming.
-
-    From the room temperature measurements, the spontaneous magnetization and susceptibility of the samples is determined by a linear fit at high fields of $5 - 9 \unit{T}$, which are discussed after being scaled to the respective sample area using the mass of the silicon substrates.
-    To study interaction effects that arise at low temperatures and to correct for the varying sample amounts on the substrates, the data is scaled to the spontaneous magnetization and the excess susceptibility is corrected as determined from the room temperature measurement.
-    The magnetization data is discussed qualitatively and the characteristics are compared across the three samples.
+    The mass variation is directly proportional to the variation in sample area, as each wafer has the same thickness of $d_\mathrm{Si} \eq 0.52 \unit{mm}$ and the iron oxide nanocube mass contribution is negligible.
+    Considering a silicon density of $\rho_\mathrm{Si} \eq 2.32 \unit{g \, cm^{-3}}$, the magnetization is scaled to the wafer area by
+    \begin{align}
+      \bar{M} \eq \frac{\rho_\mathrm{Si}}{m_\mathrm{sample} d_\mathrm{Si}} M,
+    \end{align}
+    from units in $\mathrm{memu}$ to $\mathrm{memu / cm^2}$.
 
     \begin{table}[htbp]
       \centering
       \caption{\label{tab:colloidalCrystals:layerCharacterization:ppmsMasses}Mass of the colloidal crystal samples used for the VSM measurements.}
       \begin{tabular}{ l | l}
-        \rule{0pt}{2ex} \textbf{Sample}  & $m \, / \unit{mg}$ \\
+        \rule{0pt}{2ex} \textbf{Sample}  & $m_\mathrm{sample} \, / \unit{mg}$ \\
         \hline
         \rule{0pt}{2ex} CC-Fe-0.25   & $30.67(2)$ \\
         \rule{0pt}{2ex} CC-Fe-0.37   & $17.51(2)$ \\
@@ -74,6 +71,16 @@
         \hline
       \end{tabular}
     \end{table}
+
+    Field-dependent measurements are performed for each sample at $300 \unit{K}$ and $10 \unit{K}$ in a range of $\pm 9 \unit{T}$ with a sweeping rate of $5 \unit{mT \, s^{-1}}$.
+    Furthermore, temperature-dependent measurements are performed by zero-field cooling the sample to $10 \unit{K}$ and subsequently measuring the magnetization at $10 \unit{mT}$ while warming the sample with a rate of $1.5 \unit{K \, s^{-1}}$.
+    Another field-cooled measurement is performed afterwards by first cooling the sample in a field of $10 \unit{mT}$ and subsequently measuring the magnetization while warming.
+
+    From the room temperature measurements, the spontaneous magnetization and susceptibility of the samples is determined by a linear fit at high fields of $5 - 9 \unit{T}$, which are discussed after being scaled to the respective sample area using the mass of the silicon substrates.
+    To study interaction effects that arise at low temperatures and to correct for the varying sample amounts on the substrates, the data is scaled to the spontaneous magnetization and the excess susceptibility is corrected as determined from the room temperature measurement.
+    The peak positions from the zero-field and field cooled magnetization measurements are determined by a local parabola fit in a range of $\pm 20 \unit{K}$ around the estimated peak positions.
+    The magnetization data is discussed qualitatively and the characteristics are compared across the three samples.
+
 
   \paragraphNewLine{Polarized Neutron Reflectometry}
     The three colloidal crystals, CC-Fe-0.25, CC-Fe-0.37 and CC-Fe-0.50 were characterized on the polarized neutron reflectometer MARIA at the MLZ \refsec{ch:lss:maria}.

@@ -2,7 +2,7 @@ import sys, os
 thesisimgs = os.environ['phdthesisimgs']
 cwd = sys.path[0]
 import matplotlib.pyplot as plt
-plt.style.use('phdthesis')
+# plt.style.use('phdthesis')
 
 import numpy as np
 from PPMS.ppms import PPMS
@@ -40,17 +40,17 @@ shift = 0
 shift_fc_base = 0
 
 fig = plt.figure()
-left, bottom = 0.16, 0.15
+left, bottom = 0.18, 0.15
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 
 ax.errorbar(T_zfc_1, M_zfc_1, sM_zfc_1, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', 0), label='CC-Fe-0.25 ZFCW')
 ax.errorbar(T_fcw_1, M_fcw_1+shift_fc_base, sM_fcw_1, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', 0), label='CC-Fe-0.25 FCw')
 
-ax.errorbar(T_zfc_2, M_zfc_2+shift, sM_zfc_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', -100), label='CC-Fe-0.37 ZFCw')
-ax.errorbar(T_fcw_2, M_fcw_2+shift_fc_base+shift, sM_fcw_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', -100), label='CC-Fe-0.37 FCw')
+ax.errorbar(T_zfc_2, M_zfc_2+shift, sM_zfc_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#76C152', -50), label='CC-Fe-0.37 ZFCw')
+ax.errorbar(T_fcw_2, M_fcw_2+shift_fc_base+shift, sM_fcw_2, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#FAAB2D', -50), label='CC-Fe-0.37 FCw')
 
-ax.errorbar(T_zfc_3, M_zfc_3+2*shift, sM_zfc_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', -200), label='CC-Fe-0.50 ZFCw')
-ax.errorbar(T_fcw_3, M_fcw_3+shift_fc_base+2*shift, sM_fcw_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', -200), label='CC-Fe-0.50 FCw')
+ax.errorbar(T_zfc_3, M_zfc_3+2*shift, sM_zfc_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#0EA8DF', -150), label='CC-Fe-0.50 ZFCw')
+ax.errorbar(T_fcw_3, M_fcw_3+shift_fc_base+2*shift, sM_fcw_3, linestyle='-', capsize=0, marker='None', markersize=1, zorder=1, color=color_variant('#EE292F', -150), label='CC-Fe-0.50 FCw')
 
 
 handles, labels = ax.get_legend_handles_labels()
@@ -80,11 +80,11 @@ ax.legend(
 #         verticalalignment='top')
 
 ax.set_xlabel("$\mathit{T} \, / \, K$")
-ax.set_ylabel("$\mathit{M} \, / \, kA \, m^{-1}$", labelpad=0)
+ax.set_ylabel("$\mathit{M} \, / \, \mathit{M}_{s}^{300 K}$")
 ax.set_xlim(10, 350)
-ax.set_ylim(0, 75)
+ax.set_ylim(0, 0.49)
 # ax.set_yticklabels([])
 plt.savefig(cwd + '/' + savefile)
-plt.savefig(thesisimgs + '/' + savefile)
+# plt.savefig(thesisimgs + '/' + savefile)
 
-# plt.show()
+plt.show()
