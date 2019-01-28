@@ -15,7 +15,7 @@
 
     The nanocubes XRD data are evaluated by a LeBail fit using the FullProf suite \cite{Rodriguez_1993_Recen} as described in \refsec{ch:methods:xrd}.
     The background is estimated manually by selecting 20 background points, from which the background in the measured range is interpolated linearly.
-    The data between $5 ^\circ - 15 ^\circ$ is excluded from the refinement due to a strong background coming from the glass substrate in this range.
+    The data between $5 ^\circ \ldots 15 ^\circ$ is excluded from the refinement due to a strong background coming from the glass substrate in this range.
     As in the previous chapters that discuss nanoparticles synthesized from oleates, two phases are necessary to describe the XRD.
     The experimental data is therefore refined to a combination of an inverse spinell phase (space group $Fd\bar{3}m$, No. 227) and a w\"ustite phase (space group $Fm\bar{3}m$, No. 225).
 

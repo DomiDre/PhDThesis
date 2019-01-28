@@ -26,7 +26,7 @@
   This corresponds to the nearest-neighbour ordering of the spheres, which coincides close with the nanosphere diameter.
   To discuss the short-range order for all cases an area around the Yoneda band is integrated, marked as white stripe in the detector images, and compared to the small-angle scattering data obtained in dispersion for the nanospheres shown in \reffig{fig:looselyPackedNP:bilayerStacks:gisaxsHardSphereSF}.
 
-  The off-specular scattering data shows in all cases a deviation from the pure particle form factor, which alludes to the presence of a structure factor.
+  The off-specular scattering data shows in all cases a deviation from the pure particle form factor, which indicates the presence of a structure factor.
   The solid lines in the figure show the best fit of a hard-sphere structure factor, which has as parameter the hard-sphere radius and the packing fraction of the nanospheres.
   Contrary to the case of SC-IOS-11 in \refsec{sec:looselyPackedNS:layers:gisaxs}, the samples 8BL-x-IOS-11 are not perfectly described by the hard-sphere structure factor, as deviations of the scattered intensity maxima are visible in comparison to the calculated intensity.
   For the bilayer stack samples from IOS-7, the hard-sphere structure factor is however sufficient to describe the data.
