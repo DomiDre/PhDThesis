@@ -10,7 +10,7 @@
     \caption{\label{fig:monolayers:nanoparticle:vsmAcCoFeC}Vibrating sample magnetometry Ac-CoFe-C at room temperature (left) and at $10 \unit{K}$ (right). The nanocubes are measured in dispersion and dried on a silicon substrate. The measurements in the dry state are corrected for the diamagnetic contribution from silicon.}
   \end{figure}
 
-  The macroscopic field-dependent magnetization of the Ac-CoFe-C nanocubes was measured in an \textit{n}-hexane dispersion, as well as in a dry state after evaporation from \textit{n}-hexane without additives and is shown in \reffig{fig:monolayers:nanoparticle:vsmAcCoFeC}.
+  The macroscopic field-dependent magnetization of the Ac-CoFe-C nanocubes was measured in an \textit{n}-hexane dispersion, as well as in a dry state after evaporation from \textit{n}-hexane without addends and is shown in \reffig{fig:monolayers:nanoparticle:vsmAcCoFeC}.
   At room temperature the magnetization in dispersion is well described by a Langevin behaviour.
   In a dry state, the nanocubes deviate from this behaviour at room temperature already and present a lower approach to the saturated state in direct comparison.
   The dispersion measurement is used to determine the single-particle magnetic moment by Langevin analysis to $\mu \eq 23130(80) \mu_B$.

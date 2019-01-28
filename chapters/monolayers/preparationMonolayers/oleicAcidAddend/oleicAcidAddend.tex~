@@ -8,7 +8,7 @@
     \caption{\label{fig:monolayers:preparation:solventVariation:NoOAAddend}SEM micrograph of Ac-CoFe-C-3 drop casted from a \textit{n}-heptane/octadecene dispersion.}
   \end{figure}
 
-  Additionally to the alkene additive that is added, the fraction of oleic acid in the dispersion plays a role in the self-assembly process.
+  Additionally to the alkene addend that is added, the fraction of oleic acid in the dispersion plays a role in the self-assembly process.
   Oleic acid is naturally in the dispersion from the synthesis procedure as became visible in the SANS characterization of the dispersions in \refsec{sec:monolayers:nanoparticle:sas}.
   From \reffig{fig:monolayers:preparation:solventVariation:NoOAAddend}, it is visible that drop casting Ac-CoFe-C-3 in a similar combination of \textit{n}-heptane/octadecene as discussed in the previous section shows no long range order formation.
   Instead disconnected sheets of short-range ordered nanocubes are visible across the substrate and single nanocubes are sprinkled around them.
@@ -20,7 +20,7 @@
     \includegraphics{monolayers_SEM_ML-OA-1e-5}
     \includegraphics{monolayers_SEM_ML-OA-5e-5}
     \includegraphics{monolayers_SEM_ML-OA-1e-4}
-    \caption{\label{fig:monolayers:preparation:solventVariation:OAAddend}Variation of the oleic acid content analyzed in scanning electron microscopy. Monolayers drop casted from a dispersion of Ac-CoFe-C-3 with $5\cdot10^{-4} \unit{\%}$ (upper left), $1\cdot10^{-3} \unit{\%}$ (upper right), $5\cdot10^{-3} \unit{\%}$ (lower left) and $1\cdot10^{-2} \unit{\%}$ (lower right) oleic acid additive are shown.}
+    \caption{\label{fig:monolayers:preparation:solventVariation:OAAddend}Variation of the oleic acid content analyzed in scanning electron microscopy. Monolayers drop casted from a dispersion of Ac-CoFe-C-3 with $5\cdot10^{-4} \unit{\%}$ (upper left), $1\cdot10^{-3} \unit{\%}$ (upper right), $5\cdot10^{-3} \unit{\%}$ (lower left) and $1\cdot10^{-2} \unit{\%}$ (lower right) oleic acid addend are shown.}
   \end{figure}
 
   The micrographs clearly show the trend for increasing long-ranged order with increase of the oleic acid content above $c_V^\textsf{OA} \eq 5\cdot10^{-3} \unit{\%}$.

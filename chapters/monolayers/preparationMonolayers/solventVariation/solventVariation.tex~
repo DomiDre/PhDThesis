@@ -7,10 +7,10 @@
     \centering
     \includegraphics{monolayers_SEM_ML-SV-HexNone}
     \includegraphics{monolayers_SEM_ML-SV-HexNone2}
-    \caption{\label{fig:monolayers:preparation:solventVariation:semNoCoSolvent}SEM micrograph of Ol-CoFe-C nanoparticles after drop casting from $\mathit{n}$-hexane and without a co-solvent additive from two different positions on the same substrate.}
+    \caption{\label{fig:monolayers:preparation:solventVariation:semNoCoSolvent}SEM micrograph of Ol-CoFe-C nanoparticles after drop casting from $\mathit{n}$-hexane and without a co-solvent addend from two different positions on the same substrate.}
   \end{figure}
   The solvent and co-solvent of the dispersion for the drop casting experiment determine the mobility of the nanoparticles and the time scales for a drop casting experiment.
-  When oleic acid ligated nanocubes are drop casted as-prepared at low concentration from an organic dispersion such as \textit{n}-hexane without any additional additives or setups, no long-range order is observed and the overall sample quality is inhomogeneous as seen in \reffig{fig:monolayers:preparation:solventVariation:semNoCoSolvent}.
+  When oleic acid ligated nanocubes are drop casted as-prepared at low concentration from an organic dispersion such as \textit{n}-hexane without any additional addends or setups, no long-range order is observed and the overall sample quality is inhomogeneous as seen in \reffig{fig:monolayers:preparation:solventVariation:semNoCoSolvent}.
   On different positions of the substrate, the nanoparticles have either connected with many holes in between or they are heaped in a bulk, showing in both cases only short-range order.
   The micrographs suggest sub-optimal wetting conditions for the solvent and a missing mechanism in the self-assembly process for an even distribution of the particles across the substrate.
 
@@ -25,10 +25,10 @@
       \includegraphics[width=0.31\textwidth]{monolayer_contactAngle_OlCoFeCOctadecene2Percent}
       \caption{\label{fig:monolayers:preparation:contactAngle}Side-view camera image of a droplet of water (left), a droplet of $\mathit{n}$-hexane (center) and a droplet of $\mathit{n}$-hexane with $2 \unit{\%}$ 1-octadecene (right) on a silicon substrate.}
     \end{figure}
-    An effect of the co-solvent additive that is immediately visible during the drop casting procedure is the improved spreading of the dispersion on the substrate.
+    An effect of the co-solvent addend that is immediately visible during the drop casting procedure is the improved spreading of the dispersion on the substrate.
     Attempts to measure the contact angle between dispersion and silicon substrate are shown in \reffig{fig:monolayers:preparation:contactAngle} in comparison to a droplet of water on silicon.
-    While the contact angle of $\mathit{n}$-hexane is $<10^\circ$ on silicon, the addition of a small amount of octadecene as additive makes the droplet no longer visible in a side view meaning that it evenly spreads on the surface.
-    From which it can be seen that the alkene additive greatly increases the wetting properties of the dispersion.
+    While the contact angle of $\mathit{n}$-hexane is $<10^\circ$ on silicon, the addition of a small amount of octadecene as addend makes the droplet no longer visible in a side view meaning that it evenly spreads on the surface.
+    From which it can be seen that the alkene addend greatly increases the wetting properties of the dispersion.
 
     \begin{figure}[tb]
       \centering
