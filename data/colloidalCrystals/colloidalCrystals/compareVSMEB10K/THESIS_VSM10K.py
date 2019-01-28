@@ -88,3 +88,5 @@ ax.set_ylim(-1.2, 1.2)
 ax.set_yticks([-1, 0, 1])
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
+
+plt.show()
