@@ -19,43 +19,47 @@
 
   \paragraphNewLine{Preparation of \ch{CoFe2O4} Nanocubes from Oleate \cite{Bao_2009_Forma, Wetterskog_2014_Preci}}
     To prepare nanoparticles, $10 \unit{mmol}$ ($8.079 \unit{g}$) of the cobalt ferrite oleate is dissolved in $50 \unit{mL}$ 1-octadecene within a $250 \unit{mL}$ three-neck round-bottom flask.
-    To obtain cubically shaped nanoparticles, sodium oleate is prepared separately by dissolving $2.5 \unit{mmol}$ ($0.100 \unit{g}$) \ch{NaOH} in $10$ drops of \ch{H2O} and \ch{EtOH} and adding $2.5 \unit{mmol}$ of oleic acid dropwise while ultra sonificating the mixture.
+    To obtain cubically shaped nanoparticles, sodium oleate is prepared separately by dissolving $2.5 \unit{mmol}$ ($0.100 \unit{g}$) \ch{NaOH} in $10$ drops of \ch{H2O} and \ch{EtOH} and adding $2.5 \unit{mmol}$ of oleic acid dropwise while ultra-sonificating the mixture.
     The sodium oleate is added to the dissolved oleate together with additional $2.5 \unit{mmol}$ ($0.877 \unit{mL}$) oleic acid.
     The mixture is heated and held at $150 \unit{^\circ C}$ for one hour under constant magnetic stirring until all water and ethanol is evaporated.
     A fractionating column is put on the round-bottom flask and nitrogen is gently bubbled into the mixture.
     Using a temperature controller, the mixture is heated to reflux at approximately $315 \unit{^\circ C}$ with a gradient of $2.5 \unit{^\circ C min^{-1}}$, where it is held for $30 \unit{min}$.
-    After cooling the reaction naturally to room temperature, the particles are precipitated with \ch{EtOAc} and \ch{EtOH}, centrifuged at $8000 \unit{rpm}$ and redispersed in n-hexane until the supernatant is clear.
+    After cooling the reaction to room temperature, the particles are precipitated with \ch{EtOAc} and \ch{EtOH}, centrifuged at $8000 \unit{rpm}$ and redispersed in n-hexane until the supernatant is clear.
     In the last step the mixture is centrifuged without adding \ch{EtOAc}/\ch{EtOH} and the supernatant fluid is taken as dispersion, where as the precipitate is thrown away as being unstable.
     This synthesis yields approximately $500 \unit{mg}$ nanocubes (yield $\approx 20 \%$) and is referred to in the following as Ol-CoFe-C.
 
 
   \paragraphNewLine{Preparation of \ch{CoFe2O4} Nanocubes from Acetylacetonates \cite{Wu_2014_Monol}}
-    To synthesize the nanocubes from acetylacetonates, $0.8 \unit{mmol}$ ($282.54 \unit{mg}$) of \ch{Fe(acac)3}, varied amount of \ch{Co(acac)2}, $3 \unit{mmol}$ ($913.32 \unit{mg}$) of freshly prepared sodium oleate and $3 \unit{mmol}$ ($1.057 \unit{mL}$) of oleic acid are diluted in $10 \unit{mL}$ of dibenzyl ether in a $50 \unit{mL}$ three-neck round-bottom flask.
+    To synthesize the nanocubes from acetylacetonates, $0.8 \unit{mmol}$ ($282.5 \unit{mg}$) of \ch{Fe(acac)3}, a varied amount of \ch{Co(acac)2} (\reftab{tab:monolayers:synthesis:nanoparticles}), $3 \unit{mmol}$ ($913.3 \unit{mg}$) of freshly prepared sodium oleate and $3 \unit{mmol}$ ($1.057 \unit{mL}$) of oleic acid are diluted in $10 \unit{mL}$ of dibenzyl ether in a $50 \unit{mL}$ three-neck round-bottom flask.
     The mixture is heated to $120 \unit{^\circ C}$ and held here for $1 \unit{h}$.
-    After putting a fractionating column on the round-bottom flask, a temperature controller is used to heat the mixture to reflux at about $290 \unit{^\circ C}$ with a fixed heating rate.
+    After putting a fractionating column on the round-bottom flask, a temperature controller is used to heat the mixture to reflux at about $290 \unit{^\circ C}$ with a fixed heating rate (\reftab{tab:monolayers:synthesis:nanoparticles}).
     During the synthesis, nitrogen is blown gently over the solution all the time to form an inert blanket and the solution is magnetically stirred.
     After cool down, the product is transferred with n-hexane to centrifugal tubes and precipitated with \ch{EtOH}.
     After centrifugation at $8500 \unit{rpm}$ the supernatant is discarded and the precipitate is redispersed with n-hexane.
     This procedure is repeated three times, and in the last step the precipitate is dispersed in n-hexane without precipitating it again.
     After a final centrifugation at $8500 \unit{rpm}$ the supernatant is kept as dispersion.
-    The synthesis yields approximately $50 \unit{mg}$ nanocubes (yield $\approx 40 
-    \ldots 45 \%$).
+    The synthesis yields approximately $50 \unit{mg}$ nanocubes (yield $\approx 40 \%$).
 
-    The synthesis, where the heating rate was kept at $5 \unit{^\circ C\,min^{-1}}$ and $0.52 \unit{mmol}$ ($133.72 \unit{mg}$) of  \ch{Co(acac)2} is used, is referred to in the following as Ac-CoFe-C, the synthesis where the heating rate was kept $2.5 \unit{^\circ C\,min^{-1}}$ and $0.46 \unit{mmol}$ ($121.95 \unit{mg}$) of \ch{Co(acac)2} is added, is referred to in the following as Ac-CoFe-C-2 and the synthesis at $5 \unit{^\circ C\,min^{-1}}$ and $0.58 \unit{mmol}$ ($149.15 \unit{mg}$) of added \ch{Co(acac)2} is Ac-CoFe-C-3.
+    Three batches following this synthesis are discussed in the following, where the samples are named Ac-CoFe-C-$x$ ($x \eq 1,\, 2,\, 3$). The varied parameters are tabulated in \reftab{tab:monolayers:synthesis:nanoparticles}.
 
 
-    \begin{table}[!htbp]
+
+    \begin{table}[htbp]
       \centering
-      \caption{\label{tab:monolayers:synthesis:nanoparticles}Parameters for the synthesis of the three nanoparticle batches used in this chapter and list which ratio of iron and cobalt was initially given to the reaction, as well as which heating rate was chosen.}
-      \begin{tabular}{ l | c | l | r }
-        \textbf{Sample} & \textbf{Synthesis Route} & \textbf{Co : Fe} & \textbf{Heating Rate}\\
+      \caption{\label{tab:monolayers:synthesis:nanoparticles}Parameters for the synthesis of the four nanoparticle batches used in this chapter and list which ratio of iron and cobalt was initially given to the reaction, as well as which heating rate was chosen. For the acetylacetonate route synthesis the varied amount of \ch{Co(acac)2} is tabulated.}
+      \begin{tabular}{ c || c || c | c | c }
+        \textbf{Sample} & Ol-CoFe-C & \multicolumn{3}{c}{Ac-CoFe-C-}\\
+                        &           & 1 & 2 & 3 \\
         \hline
-        Ol-CoFe-C & Oleates & 1 : 2 & 2.5 $\unit{K min^{-1}}$\\
-        Ac-CoFe-C & Acetylacetonates & 1 : 1.54 &5 $\unit{K min^{-1}}$\\
-        Ac-CoFe-C-2 & Acetylacetonates & 1 : 1.74 &15 $\unit{K min^{-1}}$\\
-        Ac-CoFe-C-3 & Acetylacetonates & 1 : 1.38 &5 $\unit{K min^{-1}}$\\
+        \rule{0pt}{2ex} Synthesis Route                       & Oleates & \multicolumn{3}{c}{Acetylacetonates}\\
+        \hline
+        \rule{0pt}{2ex} Co : Fe (molar)                       & 1 : 2   & 1 : 1.54 & 1 : 1.74 & 1 : 1.38 \\
+        \hline
+        \rule{0pt}{2ex} Heating Rate / $\unit{K min^{-1}}$    & 2.5     & 5        & 15       & 5 \\
+        \hline
+        \rule{0pt}{2ex} $n(\ch{Co(acac)2})$ / $\unit{mmol}$   &         & 0.52     & 0.46      & 0.58  \\
+        \rule{0pt}{2ex} $m(\ch{Co(acac)2})$ / $\unit{mg}$     &         & 133.7    & 122.0     & 149.2 \\
         \hline
       \end{tabular}
     \end{table}
-
 \end{document}
