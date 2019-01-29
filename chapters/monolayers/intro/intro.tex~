@@ -44,7 +44,7 @@
   The ratio of cobalt to iron in the nanoparticle is observed to be lower than the feed ratio of the synthesis meaning that not all of the cobalt acetylacetonate is converted to the nanoparticles and part remains in solution, leading to a composition of \ch{Co_x Fe_y O_4}, however the ratio can tuned towards \ch{CoFe2O4} by starting from a higher feed ratio  \cite{Sathya_2016_Cofeo, Yu_2013_Cobal, Wu_2014_Monol}.
   Using M\"ossbauer spectroscopy, the observation of two sub-spectra with an isomer shift below $\mathrm{IS} < 0.4 \unit{mm/s}$ \cite{Pianciola_2014_Sizea}, for cobalt ferrite particles which are synthesized from acetylacetonates, shows that no \ch{Fe^{2+}} is present but that all iron is in a \ch{Fe^{3+}} state, distributed on the A and B sites of the inverse spinell \cite{Angotzi_2017_Spine, Figuera_2015_Moess}.
 
-  Particles in the size range of $10 - 20 \unit{nm}$ obtained by the acetylacetonate route, show strong magnetic properties such as a coercivity in the order of $2 \unit{T}$ at $10 \unit{K}$ \cite{Sun_2002_SizeC, Sathya_2016_Cofeo} and a saturation magnetization in the order of $230 - 300 \unit{kA m^{-1}}$ \cite{Wu_2014_Monol, Sathya_2016_Cofeo}.
+  Particles in the size range of $10 \ldots 20 \unit{nm}$ obtained by the acetylacetonate route, show strong magnetic properties such as a coercivity in the order of $2 \unit{T}$ at $10 \unit{K}$ \cite{Sun_2002_SizeC, Sathya_2016_Cofeo} and a saturation magnetization in the order of $230 \ldots 300 \unit{kA m^{-1}}$ \cite{Wu_2014_Monol, Sathya_2016_Cofeo}.
   The homogeneous composition and strong magnetic properties therefore make these particles good candidates for the case study of magnetic interparticle interactions.
   \\
 

@@ -11,7 +11,7 @@
 
   \paragraphNewLine{Reflectometry}
     Both samples ML-Ac-CoFe-C and ML-Ac-CoFe-C-2 have been measured with XRR using a Bruker D8 Advanced at the \textsc{Forschungszentrum J\"ulich} (\refsec{ch:instruments:laboratoryInstruments:xrr}).
-    A $q$-range of $0 - 0.4 \unit{\angstrom^{-1}}$ has been measured by using the equipped Cu-K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and measuring a range of the scattering angle $2 \theta \eq 0 - 3 \unit{^\circ}$ in $0.005 \unit{^\circ}$ steps over an integrated time of approximately $1 \unit{h}$.
+    A $q$-range of $0 - 0.4 \unit{\angstrom^{-1}}$ has been measured by using the equipped Cu-K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and measuring a range of the scattering angle $2 \theta \eq 0 - 3 ^\circ$ in $0.005 ^\circ$ steps over an integrated time of approximately $1 \unit{h}$.
     For footprint correction (\refsec{ch:methods:xrr}), the beam width is estimated by the size of the collimation slits, which is $0.2 \unit{mm}$, and the samples both have a width of $10 \unit{mm}$.
 
     Furthermore, neutron reflectometry was measured for ML-Ac-CoFe-C at the D17 instrument in the Institute Laue-Langevin (\refsec{ch:lss:d17}).

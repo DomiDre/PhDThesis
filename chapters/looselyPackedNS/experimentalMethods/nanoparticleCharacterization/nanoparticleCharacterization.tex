@@ -17,13 +17,13 @@
 
   \paragraphNewLine{X-Ray Diffraction}
     X-ray diffraction of IOS-11 was measured in cooperation with the group of Daniel Nižňanský from the Department of Inorganic Chemistry at the Charles University in Prague on an PANanalytical X'Pert PRO, which is described in \refsec{ch:instruments:laboratoryInstruments:xrd}.
-    The sample was dried for the transport and redispersed at the laboratory in Prague where it was then evaporated on a glass substrate for the measurement.
-    The experiment was performed with a Cu-K$\alpha$ source ($\lambda \eq 1.54 \angstrom$) and a $2 \theta \eq 5^\circ \ldots 80^\circ$ has been measured.
-    The instrumental broadening is determined from a LaB6 reference measurement (SR 660b, NIST).
+    The sample was evaporated on a glass substrate for the measurement.
+    The experiment was performed with a Cu-K$\alpha$ source ($\lambda \eq 1.54 \angstrom$) and a $2 \theta \eq 5^\circ - 80^\circ$ has been measured.
+    The instrumental broadening is determined from a \ch{LaB6} reference measurement (SR 660b, NIST).
 
     To evaluate the data, a LeBail fit is performed using the FullProf suite \cite{Rodriguez_1993_Recen} as described in \refsec{ch:methods:xrd}.
-    The background was estimated manually by selecting around 20 background points, from which the measured range is interpolated linearly.
-    Due to a large background coming from the glass substrate at low angles, the data between $5 ^\circ \ldots 15 ^\circ$ is excluded from the refinement.
+    The background was estimated manually by selecting around 20 background points, from which the measured range is linearly interpolated.
+    Due to a large background coming from the glass substrate at low angles, the data between $5 ^\circ - 15 ^\circ$ is excluded from the refinement.
     As it is shown that the inverse spinell phase (space group $Fd\bar{3}m$, No. 227) of magnetite/maghemite is not sufficient to describe the XRD, a combination of an inverse spinell phase and a w\"ustite phase (space group $Fm\bar{3}m$, No. 225) is refined.
 
   \paragraphNewLine{Small-Angle Scattering}
@@ -33,7 +33,7 @@
     The capillaries are sealed vacuum-tight on top with a plastic stopper and a liquid glue that cures under UV light (Norland Optical Adhesive).
     Both samples are dispersed in cyclohexane for the measurement, where concentrations in the order of $10 \unit{mg \, mL^{-1}}$ were prepared.
     The samples are measured on the largest ($3.53 \unit{m}$) and shortest ($0.83 \unit{m}$) sample-to-detector distances possible at GALAXI at the Ga-K$\alpha$ wavelength of $\lambda \eq 1.3414 \angstrom$.
-    Additionally, a capillary filled with cyclohexane and an empty capillary is measured under the same conditions for subtraction of the background.
+    Additionally, a capillary filled with cyclohexane and an empty capillary are measured under the same conditions for subtraction of the background.
     The SAXS data is scaled to absolute units according to the procedure described in \refsec{ch:methods:saxs}.
 
     For the SANSPOL measurement on the D33 instrument, part of the IOS-11 and IOS-7 solutions are dried over night at ambient conditions, and then redispersed in toluene-$\mathit{d_8}$ by sonification.
@@ -41,10 +41,10 @@
     The wavelength at D33 was set to $6 \unit{\angstrom}$, where the selector provides a wavelength spread of $10 \%$ (FWHM).
     A sample aperture  of $7 \times 10 \unit{mm^2}$ was used and a collimation aperture of $30 \times 30 \unit{mm^2}$ is set for all experiments.
     The samples are measured both at a sample-to-detector distance of $2 \unit{m}$ and at $8 \unit{m}$ with a collimation distance of $5.3 \unit{m}$ and $7.8 \unit{m}$ respectively.
-    The nanoparticles are measured at an magnetic field of $515 \unit{mT}$, which is applied perpendicular to the beam direction, in the horizontal direction.
+    The nanoparticles are measured in a magnetic field of $515 \unit{mT}$, which is applied perpendicular to the beam direction, in the horizontal direction.
     Each sample is measured over a time of $20 \unit{min}$ at the long sample-to-detector distance and $10 \unit{min}$ at the short sample-to-detector distance.
     The empty beam and a sample of toluene-$\mathit{d_8}$ is additionally measured for background subtraction.
-    For the evaluation of the magnetic scattering, a $20^\circ$ sector around the vertical dimension is azimuthally integrated by using the GRASP software.
+    For evaluation of the magnetic scattering, a $20^\circ$ sector around the vertical dimension is azimuthally integrated by using the GRASP software.
     Furthermore, the polarization efficiency of $97 \%$ and a flipping efficiency of $99 \%$ of D33, according to the instrument specifications given by the local contact, is corrected with the GRASP software during data reduction.
 
     From the distances and aperture sizes, an angular divergence of $2.1 \unit{mrad}$ and $3.8 \unit{mrad}$ are calculated for the long and short detector distance respectively by \refeq{eq:methods:sans:formulaResolution}, which is fixed together with the wavelength spread for the data evaluation.
@@ -103,31 +103,31 @@
     This is done until both calculated form factors are self-consistent with each other.
     However, the shell thickness of the maghemite phase is allowed to vary independently for both SAXS and SANS, as both experiments are sensitive to the shell thickness and as the SANS particles might have oxidized differently to the SAXS particles due to the solvent changing, where the particles were dry for a night at ambient conditions.
 
-    The obtained particle number density $n$ obtained as parameter from SAS, is transformed to a mass concentration of the particles by
+    The particle number density $n$ obtained as parameter from SAS, is transformed to a mass concentration of the particles by
     \begin{align}
       c_m \eq n (\rho_\textsf{w\"ustite} V_p^\textsf{w\"ustite} + \rho_\textsf{inv.\, spinell} V_p^\textsf{inv.\, spinell}),
     \end{align}
     where $V^x_p$ is the average volume of the respective phase $x$ in a single nanosphere and $\rho$ the mass density of w\"ustite and \ch{Fe_{3-$\delta$}O4}.
 
-    For the magnetic form factor in SANSPOL, the geometrical parameters are fixed from the nuclear form factor of SANS and only the scattering length density of the nanoparticles are varied.
+    For the magnetic form factor in SANSPOL, the geometrical parameters are fixed from the nuclear form factor of SANS and only the scattering length density profile of the nanoparticles is varied.
     For the core-shell nanospheres, where the shell is supposed to be magnetite and the core w\"ustite, the shell is initiated with a high magnetic scattering length density for the fit, while the core is fixed at zero.
     Only subsequently the core is fitted, while the shell is fixated at the fitted value.
     This bias has to be done, as otherwise the fit favors a core with high magnetic SLD and a shell with low magnetic SLD, which is nonphysical in the context and due to an ambiguity in the sign of the contrast.
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
-    To confirm the  the results obtained by polarized small-angle neutron scattering and furthermore to study the temperature-dependent magnetization of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion.
+    To confirm the results obtained by polarized small-angle neutron scattering and furthermore to study the temperature-dependent magnetization of the nanoparticles, vibrating sample magnetometry (VSM) is applied to measure the macroscopic magnetization of a dispersion.
     Using the same dispersions as in SANS samples, $21 \unit{\musf L}$ of IOS-11 and $24 \unit{\musf L}$ of IOS-7 in toluene-$\mathit{d8}$ are sealed in vials using a hydrogen burner.
     The vials are measured on a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}) at $300 \unit{K}$ in a range of $\pm 9 \unit{T}$ and at a low temperature of $30 \unit{K}$ in a range of $\pm 2 \unit{T}$ after zero-field and field cooling within a strong field of $1 \unit{T}$.
     The toluene-\textit{d8} background is estimated by measuring a vial with $37 \unit{\musf L}$ of the pure solvent, from which a diamagnetic susceptibility of $-0.300 \unit{memu/T}$ is observed.
     That susceptibility, rescaled to the relative volume difference with the sample is subtracted from the measurements to discuss only the nanoparticle magnetization.
 
     From the magnetization data at room temperature, the magnetic moment of the single nanospheres is determined by fitting a Langevin curve with excess susceptibility, which is then used together with the size determined by SAXS to scale the data to the magnetic volume as described in \refsec{ch:methods:vsm}.
-    A second Langevin function is linearly added for a better description of the magnetization data at intermediate magnetic field strenghts between $2 - 4 \unit{T}$, and to account for a possible second phase in the nanoparticles, meaning that the fitted magnetization behaviour is described by
+    A second Langevin function is linearly added for a better description of the magnetization data at intermediate magnetic field strengths between $2 - 4 \unit{T}$, and to account for a potential second phase in the nanoparticles, meaning that the fitted magnetization behaviour is described by
     \begin{align}
       M(H) \eq M_{s, \, 1} \mathcal{L} (\mu_{1} \mu_0 H) + M_{s, \, 2} \mathcal{L} (\mu_{2} \mu_0 H) + \chi \mu_0 H,
     \end{align}
     with $\mathcal{L}(x)$ the Langevin function.
-    Furthermore, for both samples temperature dependent magnetization curve is measured by cooling the sample down to $10 \unit{K}$ once with a field of $10 \unit{mT}$ and once at zero field.
+    Furthermore, for both samples the temperature dependent magnetization is measured by cooling the sample down to $10 \unit{K}$ once with a field of $10 \unit{mT}$ and once at zero field.
     From the low temperature the sample is heated with $1.5 \unit{K \, min^{-1}}$, while measuring the magnetization.
     To adjust for an expansion of the vibration rod, the sample centers every $10 \unit{min}$ by performing a touchdown with the sample rod.
 \end{document}

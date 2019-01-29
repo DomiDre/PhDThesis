@@ -14,7 +14,7 @@
       \caption{\label{fig:methods:gisaxs:samples}For the experiment, the sample is placed on a flat surface that can be tilted and moved in all three dimensions.}
     \end{figure}
 
-    The incident angle is set close around the critical angle of the studied material, which is typically in the order of $\alpha_\mathrm{i} \eq 0.1 - 0.2 ^\circ$ at the wavelength of GALAXI for the studied materials in this thesis.
+    The incident angle is set close around the critical angle of the studied material, which is typically in the order of $\alpha_\mathrm{i} \eq 0.1 \ldots 0.2 ^\circ$ at the wavelength of GALAXI for the studied materials in this thesis.
     The diffuse scattering is then integrated over a long exposure time until sufficient counting statistics are obtained.
     Typically, the samples were measured in the order of magnitude of three hours in total at one fixed incident angle.
     To remove horizontal stripes in the scattering data from the gaps between the sensitive areas of the detector, the detector is shifted multiple times vertically during the measurement in multiples of the detector pixel width.

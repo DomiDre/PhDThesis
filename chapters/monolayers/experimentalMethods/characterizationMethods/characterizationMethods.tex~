@@ -227,7 +227,7 @@
     For both approaches hysteresis curves are measured at $10 \unit{K}$ and $300 \unit{K}$.
     Before each measurement, a touchdown procedure is performed with the sample rod, to correct for thermal expansion due to the temperature changes.
     Each hysteresis is measured in sweep mode with a rate of $5 \unit{mT \, s^{-1}}$.
-    Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 - 350 \unit{K}$ with a heating rate of $1.5 \unit{K \, min^{-1}}$.
+    Additionally, for the dry particles on a substrate, zero-field-, field-cooled warming curves are measured at a field of $10 \unit{mT}$ for a temperature range from $10 \ldots 350 \unit{K}$ with a heating rate of $1.5 \unit{K \, min^{-1}}$.
     For Ac-CoFe-C-2 no measurement of the dry particles has been performed.
 
     Using the liquid dispersion in the vial measurement, a Langevin behaviour with excess susceptibility is fit in the range from $\pm 2 \unit{T}$ to determine the magnetic moment of the non-interacting nanocubes (\refsec{ch:methods:vsm}).

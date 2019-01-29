@@ -59,7 +59,7 @@
     An X'Pert PRO instrument from the company PANalytical was used for this purpose and the data was acquired using a Cu K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and a PIXcel detector.
     The instrument has a Bragg-Brentano geometry analogue to the D8 Advanced instrument, which was used for XRR.
 
-    For the measurement, a concentrated dispersion of the nanoparticle of interest is dried on a glass substrate and the measured scattering angle range is in all cases set to $2 \theta \eq 5 - 80^\circ$, which corresponds to a $q$-range of $1 - 5 \unit{\angstrom^{-1}}$.
+    For the measurement, a concentrated dispersion of the nanoparticle of interest is dried on a glass substrate and the measured scattering angle range is in all cases set to $2 \theta \eq 5 \ldots 80^\circ$, which corresponds to a $q$-range of $1 \ldots 5 \unit{\angstrom^{-1}}$.
 
 
   \subsection{Neon Zeiss 40 - SEM}

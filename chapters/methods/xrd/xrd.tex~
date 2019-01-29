@@ -5,7 +5,7 @@
   \section{X-Ray Diffraction (XRD)}
     \label{ch:methods:xrd}
     X-ray diffraction is a standard laboratory technique to study the crystal structure of a sample on the atomic length scale.
-    In the presented XRD experiments of this thesis, a Bragg-Brentano geometry was used, where the sample lies static on a flat surface while the X-ray source are moved mutually analogue to the description in X-ray reflectometry but for larger angles in the range of $\theta \eq 5^\circ - 80^\circ$.
+    In the presented XRD experiments of this thesis, a Bragg-Brentano geometry was used, where the sample lies static on a flat surface while the X-ray source are moved mutually analogue to the description in X-ray reflectometry but for larger angles in the range of $\theta \eq 5^\circ \ldots 80^\circ$.
 
     To evaluate the obtained XRD profile, a LeBail analysis is performed using the FullProf Suite \cite{Rodriguez_1993_Recen}, where an expected crystal phase can be modeled and its respective parameters refined.
     The instrumental peak shape parameters are determined by a calibration measurement of a LaB6 reference measurement, using a pseudo-Voigt profile function.

@@ -14,7 +14,7 @@
     By using a circulating and continuously cooled metal jet of a GaInSn metal alloy, a high flux of X-ray photons is produced, comparable to a second generation synchrotron.
     The K$\alpha$ wavelength is $\lambda \eq 1.34 \unit{\angstrom}$ and the sample-to-detector distance can be varied incrementally in five steps from $0.8 - 3.5 \unit{m}$.
     The Pilatus 1M detector has a active detector area of $169 \unit{mm} \times 179 \unit{mm}$ and a pixel size of $172 \unit{\musf m}$.
-    This results in an accessible $q$-range of $4 \cdot 10^{-2} - 10 \unit{nm}^{-1}$ with the beam directed to the center of the detector and the ten innermost pixels masked by the beam stop.
+    This results in an accessible $q$-range of $4 \cdot 10^{-2} \ldots 10 \unit{nm}^{-1}$ with the beam directed to the center of the detector and the ten innermost pixels masked by the beam stop.
 
     For the control of the instrument and it's motors, the Network Integrated COntrol System (NICOS) software from MLZ is used, where the experimental sequences are programmed in the Python programming language.
     The detector images are obtained as a combination of a TIF file containing the counts of the individual pixels and a text file containing motor parameters.

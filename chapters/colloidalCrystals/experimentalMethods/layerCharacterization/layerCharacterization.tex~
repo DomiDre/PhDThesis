@@ -38,14 +38,14 @@
     The wavelength of GALAXI is given by the Ga-K$\alpha$ line with $\lambda \eq 1.3414 \unit{\angstrom}$ and the beam slits for collimation are set to $1 \unit{mm}$.
     For the measurement, the sample is rotated up to an incident angle of $\alpha_i \eq 2^\circ$ in $0.01 ^\circ$ steps and at each angle the detector is moved by a few millimeters to three positions, to remove gaps on the detector images.
     The angle range is split into two parts, where a higher counting time is set for larger incident angles to improve the counting statistics at the lower scattering intensities for higher $q$.
-    From $0 ^\circ - 0.4 ^\circ$ each detector image is measured for $5 \unit{s}$, whereas for the range up to $2 ^\circ$ a measurement time of $30 \unit{s}$ is set.
+    From $0 ^\circ \ldots 0.4 ^\circ$ each detector image is measured for $5 \unit{s}$, whereas for the range up to $2 ^\circ$ a measurement time of $30 \unit{s}$ is set.
     An overlap range of $0.1 ^\circ$ is set to obtain an overlap of the two angular ranges.
     To account for a fluctuating intensity of the incident beam and varied counting times, each detector image is scaled to it's respective monitor value.
 
     The obtained detector data are evaluated by defining a region of interest around the specular peak, which moves along the detector with increasing incident angle.
     The region of interest is integrated along the dimension on the detector perpendicular to the scattering direction, such that an intensity map with respect to the remaining detector dimension and the incident angle is obtained.
     Using the pixel-splitting rebinning algorithm described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}, the intensity map is transformed and rebinned to a ($\alpha_i - \alpha_o$, $\alpha_i+\alpha_o$) coordinate system, from which the specular intensity is obtained by integrating a box of $0.2 ^\circ$ width around $\alpha_i - \alpha_o \eq 0$.
-    Additionally, the data is corrected for diffuse scattering around the specular peak, by integrating boxes in the range $\alpha_i - \alpha_o \eq \pm (0.1 - 0.2)$, and subtracting the diffuse scattering intensity from the specular intensity.
+    Additionally, the data is corrected for diffuse scattering around the specular peak, by integrating boxes in the range $\alpha_i - \alpha_o \eq \pm (0.1 \ldots 0.2)$, and subtracting the diffuse scattering intensity from the specular intensity.
 
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
@@ -109,7 +109,7 @@
     To avoid the loss of resolution, a pixel-splitting algorithm is used for the rebinning, which is described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}.
 
     The specular intensity is obtained, by integrating on the transformed data a strip of $0.1 ^\circ$ width around $\alpha_i - \alpha_o \eq 0$.
-    The data is further corrected for the diffuse scattering by additionally integrating strips of $0.1 ^\circ$ width in the off-specular region from $\pm (0.1 ^\circ - 0.2)$, which are subtracted from the specular intensity after being rescaled to adjust for a different numbers of contributing bins.
+    The data is further corrected for the diffuse scattering by additionally integrating strips of $0.1 ^\circ$ width in the off-specular region from $\pm (0.1 ^\circ \ldots 0.2)$, which are subtracted from the specular intensity after being rescaled to adjust for a different numbers of contributing bins.
 
     Finally a footprint correction is performed for the data, where an equidistributed intensity of the beam is assumed.
     Using the mean intensity of $R^{+}$ below the critical angle, the data is rescaled to have the plateau on unity.

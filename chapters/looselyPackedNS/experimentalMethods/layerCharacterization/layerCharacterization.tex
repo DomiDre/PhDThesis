@@ -13,7 +13,7 @@
     For each sample a measurement was performed at a large sample-to-detector distance of $6.54 \unit{m}$ and at a shorter sample-to-detector distance of $2.90 \unit{m}$.
     The collimation slit is set to $0.3 \times 0.5 \unit{mm^2}$ for each measurement, and every sample is evaluated at an incident angle of $0.2 ^\circ$.
 
-    For both samples, a strip of $0.02 \nm^{-1}$ width along the Yoneda band is integrated and compared to the form factor obtained by small-angle X-ray scattering.
+    For both samples, a strip of $0.2 \nm^{-1}$ width along the Yoneda band is integrated and compared to the form factor obtained by small-angle X-ray scattering.
     The scattered intensity for the nanostructure along the Yoneda band is calculated as product of a structure factor and the form factor
     \begin{align}
       I(q) \eq I_0 S(q) |P(q)|^2 + I_\mathrm{bg},
@@ -21,7 +21,7 @@
     where $I_0$ is a scaling factor and $I_\mathrm{bg}$ is a incoherent noise background that is not directly associated with the scattering from the nanoparticles.
     The used form factor $|P(q)|^2$ is hereby given by using the best fit of the nanoparticles from SAXS as determined in \refsec{sec:looselyPackedNS:nanoparticle:sas}.
     As no calibration measurement has been performed at BM26B, the data is given in the arbitrary count units of the detector.
-    The structure factor for hard spheres of radius $R_\mathrm{HS}$ and with a packing fraction $\eta$ can be calculated analytically in the Percus-Yervick approximation \cite{Percus_1958_Analy, Wertheim_1963_Exact, Pedersen_1997_Analy} and is given by
+    The structure factor for hard spheres of radius $R_\mathrm{HS}$ and with a packing fraction $\eta$ can be calculated analytically in the Percus-Yevick approximation \cite{Percus_1958_Analy, Wertheim_1963_Exact, Pedersen_1997_Analy} and is given by
     \begin{align}
       S(q) &\eq \frac{1}{1 + 24 \eta \frac{G(2 q R_\mathrm{HS})}{2 q R_\mathrm{HS}} }
     \end{align}
@@ -55,10 +55,10 @@
 
   \paragraphNewLine{X-Ray Reflectometry}
     XRR was performed using a Bruker D8 Advanced at the \textsc{Forschungszentrum J\"ulich} \refsec{ch:instruments:laboratoryInstruments:xrr}.
-    The X-ray reflectometer was equipped with a Cu-K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and a $q$-range of $0 \ldots 0.15 \unit{\angstrom^{-1}}$ is evaluated by measuring $2 \theta \eq 0 - 1 ^\circ$ in $0.005 ^\circ$ steps over an integrated time of approximately $1 \unit{h}$.
+    The X-ray reflectometer was equipped with a Cu-K$\alpha$ source ($\lambda \eq 1.54 \unit{\angstrom}$) and a $q$-range of $0 - 0.15 \unit{\angstrom^{-1}}$ is evaluated by measuring $2 \theta \eq 0 - 1 ^\circ$ in $0.005 ^\circ$ steps over an integrated time of approximately $1 \unit{h}$.
     The collimation slit on the instrument is $0.2 \unit{mm}$ and both samples have a width of approximately $20 \unit{mm}$.
 
-    To evaluate the reflectivity, a footprint correction is performed as described in \refsec{ch:methods:xrr}, assuming a equidistributed beam profile.
+    To evaluate the reflectivity, a footprint correction is performed as described in \refsec{ch:methods:xrr}, assuming an equidistributed beam profile.
     As substrate, the scattering length density of silicon is fixed to the literature value at the given wavelength ($\rho_\mathrm{Si} \eq 20.062 \cdot \unit{10^{-5} \angstrom^{-2}}$) and a spacer layer is allowed for the case of a thin \ch{SiO2} or any organic residues in between silicon and the nanospheres.
 
     \begin{figure}[!htbp]
@@ -131,7 +131,7 @@
 
   \paragraphNewLine{Polarized Neutron Reflectometry}
     Polarized neutron reflectometry has been performed on SuperADAM at the ILL for all discussed samples at a temperature of $300 \unit{K}$ and at a low temperature of $30 \unit{K}$.
-    The distance between sample and detector for the experiments was $2.009 \unit{m}$ and a range of incident angles from $0 ^\circ \ldots 3 ^\circ$ is measured.
+    The distance between sample and detector for the experiments was $2.009 \unit{m}$ and a range of incident angles from $0 ^\circ - 3 ^\circ$ is measured.
     The neutron wavelength was selected to $\lambda \eq 5.14 \unit{\angstrom}$ and $\lambda \eq 5.18 \unit{\angstrom}$ for the measurements at $300 \unit{K}$ and $30 \unit{K}$ respectively.
     The wavelength spread is in both cases $0.5 \%$ (FWHM) as provided by the instrumental scientists.
     The monochromator aperture is set to $1 \unit{mm}$ and the sample aperture to $0.5 \unit{mm}$ along the scattering direction for the measurements at $300 \unit{K}$, and to $3 \unit{mm}$ and $1 \unit{mm}$ for the measurements at $30 \unit{K}$.
@@ -143,7 +143,7 @@
     To study the reflectivity after field-cooling, the samples are heated above $200 \unit{K}$ and cooled back to $30 \unit{K}$ at an applied field of $730 \unit{mT}$.
     The reflectivity is then measured at the applied field and finally in remanence of the field-cooled state.
 
-    For the room temperature measurements, a range of incident angles from $0^\circ \ldots 3 ^\circ$ is measured in $0.01 ^\circ$ steps with $20 \unit{s} - 60 \unit{s}$ counting time, with an linear increase with respect to the incident angle.
+    For the room temperature measurements, a range of incident angles from $0^\circ - 3 ^\circ$ is measured in $0.01 ^\circ$ steps with $20 \unit{s} - 60 \unit{s}$ counting time, with an linear increase with respect to the incident angle.
     In the $30 \unit{K}$ measurements, the range is increased to $4 ^\circ$ and the counting time is increased non-linearly in the range from $4 \unit{s} - 200 \unit{s}$ in accordance to the asymptotic behaviour of Fresnel's reflectivity, which drops in intensity with $q^4$.
 
     All measurements are performed with polarized neutrons, providing two reflectivity channels for each measurement, one for neutrons parallel to the magnetic field direction, and one for neutrons that are antiparallel.
@@ -155,7 +155,7 @@
     Due to a malfunction of the monitor for the field-cooled remanence measurement of 8BL-15-IOS-11, this specific measurement is scaled to the counting time instead.
     The detector images are reduced by integrating the detector dimension perpendicular to the scattering plane, providing a intensity map with respect to the incident angle and remaining detector dimension for each measurement and each channel.
     The coordinates are transformed to ($\alpha_i - \alpha_o$, $\alpha_i + \alpha_o$) using the pixel-splitting rebinning algorithm described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}.
-    To obtain the reflectivity curves, a box in the range $\alpha_i - \alpha_o \eq -0.1 ^\circ \ldots 0.1 ^\circ$ is integrated, and the diffuse scattering is subtracted with the box integrals of the ranges $\alpha_i - \alpha_o \eq \pm (0.1 \ldots 0.2)$ in the intensity map.
+    To obtain the reflectivity curves, a box in the range $\alpha_i - \alpha_o \eq -0.1 ^\circ - 0.1 ^\circ$ is integrated, and the diffuse scattering is subtracted with the box integrals of the ranges $\alpha_i - \alpha_o \eq \pm (0.1 - 0.2)$ in the intensity map.
 
     The same model as in XRR is used to describe the nuclear structure of SC-IOS-11 and SC-IOS-7.
     The particle geometry and scattering length densities are used as obtained from SAS, and only the layer positions and packing densities are varied.

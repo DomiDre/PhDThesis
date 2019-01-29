@@ -7,7 +7,7 @@
     \includegraphics{looselyPackedNP_8BL-IOS-11_GISAXS_SVcbar}
     \includegraphics{looselyPackedNP_GISAXS_8BL-15-IOS-11}
     \includegraphics{looselyPackedNP_GISAXS_8BL-40-IOS-11}
-    \caption{\label{fig:looselyPackedNP:bilayerStacks:gisaxs8BL_IOS_11}GISAXS detector images of 8BL-15-IOS-11 (left)  and 8BL-40-IOS-11 (right) measured at BM26B under an incident angle of $\alpha_i \eq 0.2 \unit{^\circ}$.}
+    \caption{\label{fig:looselyPackedNP:bilayerStacks:gisaxs8BL_IOS_11}GISAXS detector images of 8BL-15-IOS-11 (left)  and 8BL-40-IOS-11 (right) measured at BM26B under an incident angle of $\alpha_i \eq 0.2 ^\circ$.}
   \end{figure}
 
   \begin{figure}[tb]
@@ -15,7 +15,7 @@
     \includegraphics{looselyPackedNP_8BL-IOS-7_GISAXS_SVcbar}
     \includegraphics{looselyPackedNP_GISAXS_8BL-15-IOS-7}
     \includegraphics{looselyPackedNP_GISAXS_8BL-30-IOS-7}
-    \caption{\label{fig:looselyPackedNP:bilayerStacks:gisaxs8BL_IOS_7}GISAXS detector images of 8BL-15-IOS-7 (left)  and 8BL-30-IOS-7 (right) measured at BM26B under an incident angle of $\alpha_i \eq 0.2 \unit{^\circ}$.}
+    \caption{\label{fig:looselyPackedNP:bilayerStacks:gisaxs8BL_IOS_7}GISAXS detector images of 8BL-15-IOS-7 (left)  and 8BL-30-IOS-7 (right) measured at BM26B under an incident angle of $\alpha_i \eq 0.2 ^\circ$.}
   \end{figure}
 
   The four bilayer stacks are studied by grazing-incidence X-ray scattering, with the measurement having been performed at the BM26B beamline (\refsec{ch:lss:BM26B}) at the ESRF.
