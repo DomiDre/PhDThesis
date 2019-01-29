@@ -2,7 +2,14 @@
 \documentclass[\main/dresen_thesis.tex]{subfiles}
 \begin{document}
   \label{sec:doublelayers:magnetism:intro}
-  The magnetic field that is produced by a homogeneously magnetized layer of nanocubes in a square array at a position in vertical distance $z \eq \tilde{z} a$, given in units of the square array lattice constant $a$, can be estimated by evaluating the sum of dipole fields produced by each of the respective nanocubes in a infinitely extending lattice via
+
+  \begin{figure}[tb]
+    \centering
+    \includegraphics{doublelayer_theo_sum}
+    \caption{\label{fig:doublelayers:magnetism:theoImage}Depiction of the configuartion considered for the calculation of the magnetic field produced by a square array of magnetic moments.}
+  \end{figure}
+
+  The magnetic field that is produced by a homogeneously magnetized layer of nanocubes in a square array, as depicted in \reffig{fig:doublelayers:magnetism:theoImage}, at a position in vertical distance $z \eq \tilde{z} a$ from the layer, given in units of the square array lattice constant $a$, can be estimated by evaluating the sum of dipole fields produced by each of the respective nanocubes in an infinitely extending lattice via
   \begin{align}
     \begin{split}
       \vec{B} \eq& \sum_{i,\, j \eq -\infty}^\infty \frac{\mu_0}{4 \pi} \frac{3 \vec{r}_{ij} (\vec{\mu}_{ij} \cdot \vec{r}_{ij}) - r_{ij}^2 \vec{\mu}_{ij}}{r_{ij}^5},\\
