@@ -65,7 +65,7 @@ sanspol_m_sa_r, sanspol_m_sa_sld, sanspol_m_sa_rMag, sanspol_m_sa_sldMag = sldDa
 
 r_part = sanspol_p_la_r[:6]
 sld_part = sanspol_p_la_sld[:6]
-rMag_part = sanspol_p_la_r[:6]
+rMag_part = sanspol_p_la_rMag[:6]
 sldMag_part = sanspol_p_la_sldMag[:6]
 r_oa = sanspol_p_la_r[12:16]
 sld_oa = sanspol_p_la_sld[12:16]
@@ -118,8 +118,8 @@ ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
 ax.set_xlim([1e-2, 0.2])
 ax.set_ylim([3e-3, 3e0])
 
-# ax_sld.plot(r_part, sld_part, marker='None',
-#   color='#EE292F', zorder=2, alpha=0.2)
+ax_sld.plot(r_part, np.array(sld_part)*0.2, marker='None',
+  color='#0EA8DF', zorder=2, alpha=0.2)
 ax_sld.plot(rMag_part, sldMag_part, marker='None',
   color='#FAAB2D', zorder=3)
 

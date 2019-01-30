@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'IOS-7'
 Chapter = 'looselyPackedNP'
-saxs_fit_file = cwd + "/saxs/Bimodal/Magnetite/fit_result.dat"
-saxs_sld_file = cwd + "/saxs/Bimodal/Magnetite/fit_sld.dat"
+saxs_fit_file = cwd + "/saxs/SingleMode/fit_result.dat"
+saxs_sld_file = cwd + "/saxs/SingleMode/fit_sld.dat"
 
 I_min, I_max = 1.5e-4*2, 3e3*2
 

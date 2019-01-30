@@ -9,7 +9,7 @@ import scipy as sp
 #    chi:           0.56093618 +/- 0.01828230 (3.26%) (init = 0.56)
 
 moment = 13931.5081
-radius = 54.1e-10
+radius = 52.9e-10
 volume_particle = 4/3 * np.pi * radius**3
 Ms_is = 9.20437856
 chi = -0.173 # d8 toluene

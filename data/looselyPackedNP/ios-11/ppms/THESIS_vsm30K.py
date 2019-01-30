@@ -33,7 +33,7 @@ B_fc, M_fc, sM_fc = data.getData()
 B_fc *= 1000
 
 min_B, max_B = -300, 300
-min_M, max_M = -250, 250
+min_M, max_M = -270, 270
 T = 30
 
 fig = plt.figure()

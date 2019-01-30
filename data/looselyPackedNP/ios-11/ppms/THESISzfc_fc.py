@@ -66,8 +66,9 @@ ax.text(0.92, 0.7,
 
 
 ax.set_xlim(10, 230)
-ax.set_ylim(-0.9, 99)
+ax.set_ylim(-0.9, 109)
+ax.set_yticks([0, 30, 60, 90])
 ax.legend(loc='upper right')
 plt.savefig(cwd + '/' + savefile)
 plt.savefig(thesisimgs + '/' + savefile)
-plt.show()
+# plt.show()

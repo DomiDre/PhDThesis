@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.sas import Saxs
-from modelexp.models.sas import SphereCSOA
+from modelexp.models.sas import SphereCSSCoupled
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -21,21 +21,20 @@ dataRef.loadFromFile('../../experimentalData/KWi338.xye')
 dataRef.sliceDomain(0.01, 0.5)
 dataRef.plotData()
 
-modelRef = app.setModel(SphereCSOA)
+modelRef = app.setModel(SphereCSSCoupled)
 
-modelRef.setParam("r", 34.88004817571305,  minVal = 0, maxVal = 80, vary = True)
-modelRef.setParam("sigR", 0.09611441352810439,  minVal = 0, maxVal = 0.2, vary = True)
-modelRef.setParam("i0", 0.4114724385020394,  minVal = 0, maxVal = 1, vary = True)
-modelRef.setParam("i0Oleic", 0.0,  minVal = 0, maxVal = 40, vary = False)
-modelRef.setParam("rOleic", 21.0,  minVal = 0, maxVal = 200, vary = False)
+modelRef.setParam("particleSize", 34.84678452358795,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("dShell", 79.92,  minVal = 0, maxVal = 80, vary = True)
+modelRef.setParam("dSurfactant", 19.6,  minVal = 0, maxVal = 80, vary = False)
+modelRef.setParam("sigParticleSize", 0.09430000000000001,  minVal = 0, maxVal = 0.1, vary = True)
+modelRef.setParam("i0", 0.517,  minVal = 0, maxVal = 1, vary = True)
+modelRef.setParam("bg", 0.0,  minVal = 0, maxVal = 0.02, vary = False)
 
 modelRef.setConstantParam("sigD", 0)
-modelRef.setConstantParam("d", 14.0)
-modelRef.setConstantParam("bg", 0)
-modelRef.setConstantParam("sldCore", 41.85e-6)
-modelRef.setConstantParam("sldShell", 8.52e-6)
+modelRef.setConstantParam("sldCore", 52.07e-6)
+modelRef.setConstantParam("sldShell", 38.56e-6)
+modelRef.setConstantParam("sldSurfactant", 8.52e-6)
 modelRef.setConstantParam("sldSolvent", 7.55e-6)
-modelRef.setConstantParam("sldOleic", 8.52e-6)
 modelRef.updateModel()
 
 app.setFit(LevenbergMarquardt)

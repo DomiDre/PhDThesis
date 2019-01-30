@@ -13,8 +13,7 @@ import scipy as sp
 
 Ms_is = 2.98609399
 moment = 4142.20715
-r1 = 35.4e-10
-r2 = 6.8e-10
+r1 = 34.9e-10
 volSphere = lambda R:4/3 * np.pi * R**3
 # vol_particle = (1-0.78)*volSphere(r1) + 0.78*volSphere(r2)
 volume_particle = volSphere(r1)

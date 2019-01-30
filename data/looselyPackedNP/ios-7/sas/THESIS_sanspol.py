@@ -63,15 +63,12 @@ sanspol_m_la_r, sanspol_m_la_sld, sanspol_m_la_rMag, sanspol_m_la_sldMag = sldDa
 sanspol_p_sa_r, sanspol_p_sa_sld, sanspol_p_sa_rMag, sanspol_p_sa_sldMag = sldData.getDatasetBySuffix('p_sa').getData()
 sanspol_m_sa_r, sanspol_m_sa_sld, sanspol_m_sa_rMag, sanspol_m_sa_sldMag = sldData.getDatasetBySuffix('m_sa').getData()
 
-r1 = sanspol_p_la_r[2:8]
-sld1 = sanspol_p_la_sld[2:8]
-r2 = sanspol_p_la_r[18:]
-sld2 = sanspol_p_la_sld[18:]
-
-r1Mag = sanspol_p_la_rMag[2:8]
-sld1Mag = sanspol_p_la_sldMag[2:8]
-r2Mag = sanspol_p_la_rMag[18:]
-sld2Mag = sanspol_p_la_sldMag[18:]
+r_part = sanspol_p_la_r[:6]
+sld_part = sanspol_p_la_sld[:6]
+rMag_part = sanspol_p_la_rMag[:6]
+sldMag_part = sanspol_p_la_sldMag[:6]
+r_oa = sanspol_p_la_r[12:16]
+sld_oa = sanspol_p_la_sld[12:16]
 
 left, bottom = 0.2, 0.17
 x0in = 0.6
@@ -121,14 +118,12 @@ ax.set_ylim([3e-3, 3e0])
 
 
 
-# ax_sld.plot(r1, sld1, marker='None',
-#   color=colors['saxs_data'], zorder=2, alpha=0.2)
-ax_sld.plot(r1Mag, sld1Mag, marker='None',
+ax_sld.plot(r_part, np.array(sld_part)*0.2, marker='None',
+  color='#0EA8DF', zorder=2, alpha=0.2)
+ax_sld.plot(rMag_part, sldMag_part, marker='None',
   color='#FAAB2D', zorder=3)
 # ax_sld.plot(r2, sld2, marker='None',
 #   color=colors['sans_sa_data'], zorder=2, alpha=0.2)
-ax_sld.plot(r2Mag, sld2Mag, marker='None',
-  color=color_variant('#FAAB2D', -50), zorder=3)
 # ax_sld.plot(r_oa, sld_oa, marker='None',
 #   color='#0EA8DF', zorder=1, alpha=0.2)
 

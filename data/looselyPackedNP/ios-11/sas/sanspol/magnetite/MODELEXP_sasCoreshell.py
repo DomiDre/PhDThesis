@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.sas import Sanspol
-from modelexp.models.sas import SphereCSSCoupled, InstrumentalResolution, Magnetic
+from modelexp.models.sas import SphereCSOA, InstrumentalResolution, Magnetic
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -25,27 +25,28 @@ dataRef.loadFromFile('../../experimentalData/PMK18_LSDD_Mag20_I-.dat', ['m', 'sa
 # dataRef.sliceDomain(0.01, 0.5)
 dataRef.plotData()
 
-modelRef = app.setModel(SphereCSSCoupled, [Magnetic, InstrumentalResolution])
+modelRef = app.setModel(SphereCSOA, [Magnetic, InstrumentalResolution])
 
-modelRef.setParam("magSldCore", 3.6175654175816726e-07,  minVal = 0, maxVal = 5e-06, vary = False)
-modelRef.setParam("magSldShell", 1.3150000000000001e-06,  minVal = 0, maxVal = 5e-06, vary = False)
+modelRef.setParam("magSldCore", 1.002512804821604e-06,  minVal = 0, maxVal = 5e-06, vary = True)
+modelRef.setParam("dDead", 7.293698016972579,  minVal = 0, maxVal = 30, vary = True)
+# modelRef.setParam("magSldShell", 1.3150000000000001e-06,  minVal = 0, maxVal = 5e-06, vary = False)
 
-modelRef.setConstantParam("particleSize", 54.0)
-modelRef.setConstantParam("dShell", 16.16)
-modelRef.setConstantParam("dSurfactant", 18.16)
-modelRef.setConstantParam("sigParticleSize", 0.054400000000000004)
-modelRef.setConstantParam("i0", 0.035)
-modelRef.setConstantParam("bg", 0.00206)
-
+modelRef.setConstantParam("d", 14.64)
+modelRef.setConstantParam("i0", 0.05629890956403377)
+modelRef.setConstantParam("i0Oleic", 0.2795362272625905)
+modelRef.setConstantParam("r", 52.89761472142036)
+modelRef.setConstantParam("sigR", 0.05594273920569346)
 modelRef.setConstantParam("sigD", 0.)
-modelRef.setConstantParam("sldCore", 8.34e-6)
-modelRef.setConstantParam("sldShell", 7.00e-6)
-modelRef.setConstantParam("sldSurfactant", 0.078e-6)
+modelRef.setConstantParam("sldCore", 7.00e-6)
+modelRef.setConstantParam("sldShell", 0.078e-6)
 modelRef.setConstantParam("sldSolvent", 5.66e-6)
+modelRef.setConstantParam("sldOleic", 0.078e-6)
 modelRef.setConstantParam('wavelength', 5.9984)
 modelRef.setConstantParam('dWavelength', 0.04247)
-modelRef.setConstantParam("dTheta_sa", 0.0021)
-modelRef.setConstantParam("dTheta_la", 0.0038)
+modelRef.setConstantParam("dTheta_sa", 0.0017)
+modelRef.setConstantParam("dTheta_la", 0.0028)
+modelRef.setConstantParam("bg", 0.0)
+modelRef.setConstantParam("rOleic", 21.0)
 modelRef.updateModel()
 
 app.setFit(LevenbergMarquardt)

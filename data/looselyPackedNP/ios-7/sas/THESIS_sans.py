@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'IOS-7'
 Chapter = 'looselyPackedNP'
-sans_fit_file = cwd + "/sans/Magnetite/fit_result.dat"
-sans_sld_file = cwd + "/sans/Magnetite/fit_sld.dat"
+sans_fit_file = cwd + "/sans/SingleMode/fit_result.dat"
+sans_sld_file = cwd + "/sans/SingleMode/fit_sld.dat"
 
 q_min, q_max = 1e-2, 0.15
 I_min, I_max = 1.5e-3, 3e0
@@ -41,11 +41,11 @@ sans_la_q, sans_la_I, sans_la_sI, sans_la_Imodel = data.getDatasetBySuffix('la')
 sldData = MultiData(XyData)
 sldData.loadFromFile(sans_sld_file)
 sans_r, sans_sld = sldData.getDatasetBySuffix('sa').getData()
-r1 = sans_r[:8]
-sld1 = sans_sld[:8]
+sans_NP_r = sans_r[:7]
+sans_NP_sld =  sans_sld[:7]
+sans_OA_r = sans_r[11:]
+sans_OA_sld =  sans_sld[11:]
 
-r2 = sans_r[16:]
-sld2 = sans_sld[16:]
 sans_q_min, sans_q_max = None, None
 
 left, bottom = 0.2, 0.17
@@ -85,8 +85,10 @@ ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax_sld.plot(r1, sld1, marker='None', color=colors['saxs_data'], zorder=1)
-ax_sld.plot(r2, sld2, marker='None', color=colors['sans_sa_data'], zorder=0)
+ax_sld.plot(sans_NP_r, sans_NP_sld, marker='None',
+  color='#0EA8DF', zorder=2)
+ax_sld.plot(sans_OA_r, sans_OA_sld, marker='None',
+  color='#FAAB2D', alpha=0.8, zorder=1)
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_{nuc} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 2, 4, 6])

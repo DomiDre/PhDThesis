@@ -41,7 +41,10 @@ sans_la_q, sans_la_I, sans_la_sI, sans_la_Imodel = data.getDatasetBySuffix('la')
 sldData = MultiData(XyData)
 sldData.loadFromFile(sans_sld_file)
 sans_r, sans_sld = sldData.getDatasetBySuffix('sa').getData()
-
+sans_NP_r = sans_r[:7]
+sans_NP_sld =  sans_sld[:7]
+sans_OA_r = sans_r[11:]
+sans_OA_sld =  sans_sld[11:]
 sans_q_min, sans_q_max = None, None
 
 left, bottom = 0.2, 0.17
@@ -81,8 +84,10 @@ ax.set_ylabel("$\mathit{I}\,/\,cm^{-1}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax_sld.plot(sans_r, sans_sld, marker='None',
-  color='#0EA8DF')
+ax_sld.plot(sans_NP_r, sans_NP_sld, marker='None',
+  color='#0EA8DF', zorder=2)
+ax_sld.plot(sans_OA_r, sans_OA_sld, marker='None',
+  color='#FAAB2D', alpha=0.8, zorder=1)
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_{nuc} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 2, 4, 6, 8])
