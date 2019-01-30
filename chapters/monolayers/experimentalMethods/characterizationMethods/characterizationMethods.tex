@@ -116,39 +116,21 @@
     To constrain parameters of the models, the scattering length density of the nanoparticle cores is determined using the lattice parameter $a$ from XRD and the average atomic composition determined from EDX by
     \begin{align}
       \label{eq:monolayer:charMethod:calcSLD}
-      \rho^\mathrm{X-ray}_\mathrm{inv. spinell}   &\eq 8 r_e \frac{N_\mathrm{Co} f_\mathrm{Co} + N_\mathrm{Fe} f_\mathrm{Fe} + 4 f_\mathrm{O}}
-                                                                  {a_\mathrm{inv.\,spinell}^3},\\
-      \rho^\mathrm{neutron}_\mathrm{inv. spinell} &\eq 8 \frac{N_\mathrm{Co} b_\mathrm{Co} + N_\mathrm{Fe} b_\mathrm{Fe} + 4 b_\mathrm{O}}
-                                                                  {a_\mathrm{inv.\,spinell}^3},\\
-      \rho^\mathrm{X-ray}_\textsf{w\"ustite}      &\eq 4 r_e \frac{N_\mathrm{Co} f_\mathrm{Co} + N_\mathrm{Fe} f_\mathrm{Fe} + f_\mathrm{O}}
-                                                                  {a_\textsf{w\"ustite}^3},\\
-      \rho^\mathrm{neutron}_\textsf{w\"ustite}    &\eq 4 \frac{N_\mathrm{Co} b_\mathrm{Co} + N_\mathrm{Fe} b_\mathrm{Fe} + b_\mathrm{O}}
-                                                              {a_\textsf{w\"ustite}^3}.
+      \rho_\mathrm{inv. spinell} &\eq 8 \frac{N_\mathrm{Co} b_\mathrm{Co} + N_\mathrm{Fe} b_\mathrm{Fe} + 4 b_\mathrm{O}}{a_\mathrm{inv.\,spinell}^3},\\
+      \rho_\textsf{w\"ustite}    &\eq 4 \frac{N_\mathrm{Co} b_\mathrm{Co} + N_\mathrm{Fe} b_\mathrm{Fe} + b_\mathrm{O}}{a_\textsf{w\"ustite}^3},
     \end{align}
-    Here, $f$ is the element specific atomic form factor for X-ray scattering and $b$ the element specific nuclear scattering length, which are  tabulated in \reftab{tab:monolayers:charMethod:scatteringLenghts} \cite{Sears_1992_Neutr, BerkeleyLab_1993_asf}.
-    The constant $r_e \eq 2.8179 \unit{fm}$ is the classical electron radius.
-    The numerical value $Z \eq 8$ accounts that one unit cell contains eight formula units of $\ch{Co_xFe_yO4}$ in an inverse spinell phase.
-    The atomic form factor depends on the X-ray wavelength, the given values are for the wavelength of $\lambda \eq 1.3414 \unit{\angstrom}$ (wavelength used at the GALAXI instrument).
-    For Ac-CoFe-C-3 no XRD was performed and therefore the literature value of the lattice constant is assumed.
-    \begin{table}[ht]
-      \centering
-      \caption{\label{tab:monolayers:charMethod:scatteringLenghts}The real part of the atomic form factor $f$ (at $\lambda \eq 1.3414 \unit{\angstrom}$) and the nuclear coherent scattering length $b$ for the elements of the nanoparticles to determine their scattering length densities \cite{Sears_1992_Neutr, BerkeleyLab_1993_asf}.}
-      \begin{tabular}{ c | l | c }
-                  & $f$       & $b \, / \unit{fm}$ \\
-        \hline
-        $\ch{O}$  & 8.04077   & 5.803   \\
-        $\ch{Co}$ & 26.3717   & 2.49  \\
-        $\ch{Fe}$ & 25.7468   & 9.45  \\
-        \hline
-      \end{tabular}
-    \end{table}
+    with $b$ the nuclear coherent scattering length for neutron scattering and $b \eq r_e f$ for X-ray scattering, where $r_e$ is the classical electron radius and $f$ the  atomic form factor.
+    Both the nuclear coherent scattering lengths and the atomic form factor are tabulated in \refapp{appendix:slds}.
+    For Ac-CoFe-C-3 no XRD was performed and therefore the literature value of the lattice constant is assumed based on the results for Ac-CoFe-C and Ac-CoFe-C-2.
+    \\
 
     For Ol-CoFe-C the superball form factor is used with an core-shell structure to account for the w\"ustite / inverse spinell structure of the particles and to determine the shell scattering length density $\rho_\mathrm{shell}$ and shell thickness $D_\mathrm{shell}$.
     For the SANS models, an additional oleic acid surfactant shell with the same superball parameters as the core model and a thickness $D_\mathrm{OA}$ is added to the model, which is neglected for SAXS models due to the poor contrast of oleic acid and solvent.
-    The composition of the core and shell can not be determined by XRD and EDX alone as the complex structure leaves too many variables.
-    There is luckily a significant contrast between the w\"ustite SLD ($\rho_\mathrm{el}^\textsf{w\"ustite} \approx 50 \cdot 10^{-6} \angstrom^{-2}$) and inverse spinell SLD ($\rho_\mathrm{el}^\mathrm{inv.\, spinell} \approx 42 \cdot 10^{-6} \angstrom^{-2}$) for X-rays, that enables to determine the relative core and shell thickness.
-    And furthermore neutrons are highly sensitive to the relative iron and cobalt amount in a phase, as can be seen from \reftab{tab:monolayers:charMethod:scatteringLenghts}, which can be utilized to measure the relative composition.
-    Thus the combination of SAXS and SANS can be used as a tool to solve both the core-shell structure and the compositions.
+    The composition of the core and shell can not be determined by XRD and EDX alone as the core-shell structure and unknown composition of the phases leaves too many variables to fix the SLD of the materials from the pre-characterization experiments alone.
+    X-rays are mostly insensitive as to whether iron or cobalt is in the material, but there is a significant contrast between the w\"ustite SLD ($\rho_\mathrm{el}^\textsf{w\"ustite} \approx 50 \cdot 10^{-6} \angstrom^{-2}$) and inverse spinell SLD ($\rho_\mathrm{el}^\mathrm{inv.\, spinell} \approx 42 \cdot 10^{-6} \angstrom^{-2}$) for X-rays, that enables to determine the relative core and shell thickness.
+    Neutrons on the other hand are highly sensitive to the relative iron and cobalt amount in a phase, which can be utilized to measure the relative composition.
+    Thus the combination of SAXS and SANS can be used as a tool to solve both the core-shell structure and the compositions by a simultaneous fit of both datasets with the same structural model.
+    It is assumed that the oxidation state for oleate based cobalt ferrite nanoparticles does not change strongly over time as a once formed cobalt ferrite shell is known to be a strong barrier for oxygen diffusion \cite{Chen_2015_Synth}.
 
     Therefore, a parameter is introduced in the model for Ol-CoFe-C for the cobalt content $x$ from the cobalt ferrite shell \ch{Co_x Fe_{3-x} O4}.
     Using this parameter, the scattering length density of the core and shell in Ol-CoFe-C is determined by fixing the ratio of iron and cobalt $r$ to the value obtained from EDX.
@@ -173,21 +155,7 @@
     The volumes of the two phases are determined from the particle size, shell thickness and superball exponent on the fly during the fitting process, such that y is readily determined with varied particle dimensions and cobalt content in \ch{Co_x Fe_{3-x}O4}.
     % As SAXS is also sensitive to the difference of the nanoparticle core and shell size due to a stronger contrast between w\"ustite and spinell phase, the data sets for SAXS and SANS are fitted simultaneously.
     By this method, the combination of SAXS and SANS on Ol-CoFe-C provides the means to determine the particle size and size distribution, the individual core and shell thickness and atomic composition of the two phases, while being self-consistent with EDX and XRD results.
-
-    The scattering length density of the oleic acid shell is fixed in every SANS model to the value value calculated for bulk oleic acid
-    \begin{align}
-      \rho^\mathrm{X-ray}_\mathrm{oleic\,acid} &\eq 8.52 \cdot 10^{-6} \angstrom^{-2},\\
-      \rho^\mathrm{neutron}_\mathrm{oleic\,acid} &\eq 0.078 \cdot 10^{-6} \angstrom^{-2},
-    \end{align}
-    which assumes a density of $0.895 \unit{g\,mL^{-1}}$ for the oleic acid.
-    The solvent scattering length densities are fixed to the values calculated from literature
-    \begin{align}
-      \rho^\mathrm{X-ray}_{n\mathrm{-hexane}}    &\eq 6.46 \cdot 10^{-6} \angstrom^{-2},\\
-      \rho^\mathrm{X-ray}_\mathrm{toluene}       &\eq 8.01 \cdot 10^{-6} \angstrom^{-2},\\
-      \rho^\mathrm{X-ray}_{\mathrm{cyclohexane}} &\eq 7.55 \cdot 10^{-6} \angstrom^{-2},\\
-      \rho^\mathrm{neutron}_\mathrm{toluene-d8}  &\eq 5.66 \cdot 10^{-6} \angstrom^{-2},
-    \end{align}
-    where a density of $0.655 \unit{g\,mL^{-1}}$ is used for $\mathit{n}$-hexane, $0.867 \unit{g\,mL^{-1}}$ for toluene, $0.779 \unit{g\,mL^{-1}}$ for cyclohexane, and $0.943 \unit{g\,mL^{-1}}$ for toluene-d8.
+    The scattering length density of the oleic acid surfactant shell and the solvents SLD is fixed to the values tabulated in \refapp{appendix:slds}.
 
     \begin{figure}[tb]
       \centering

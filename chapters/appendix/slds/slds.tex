@@ -1,0 +1,39 @@
+\providecommand{\main}{../../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+\begin{document}
+  \chapter{Scattering Lenght Densities}
+  \label{appendix:slds}
+  A list of atomic form factors and nuclear coherent scattering lengths of elements studied in this thesis by X-ray and neutrons is given in \reftab{tab:appendix:affNuc}.
+  Scattering length densities used for materials studied by SAS, GISAS and reflectometry are given in in \reftab{tab:appendix:slds}.
+
+  \begin{table}[ht]
+    \centering
+    \caption{\label{tab:appendix:affNuc}Atomic form factor $f$ (at $\lambda \eq 1.3414 \unit{\angstrom}$) and the nuclear coherent scattering length $b$ of elements used in this thesis \cite{Sears_1992_Neutr, BerkeleyLab_1993_asf}.}
+    \begin{tabular}{ c | l | c }
+                & $f$       & $b \, / \unit{fm}$ \\
+      \hline
+      $\ch{O}$  & 8.04077   & 5.803   \\
+      $\ch{Co}$ & 26.3717   & 2.49  \\
+      $\ch{Fe}$ & 25.7468   & 9.45  \\
+      \hline
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[!htbp]
+    \centering
+    \caption{\label{tab:appendix:slds}Scattering length densities used in this thesis for materials studied by SAS, GISAS and reflectometry. Here, $\rho$ is the mass density of the material, $\rho_\mathrm{el.}$ the electron scattering length density at $1.3414 \unit{\angstrom}$ for X-ray experiments and $\rho_\mathrm{nuc.}$ the nuclear scattering length density for neutron experiments.}
+    \begin{tabular}{ l | l | l | l }
+      \textbf{Material}  & $\rho / \unit{g \, mL^{-1}}$ & $\rho_\mathrm{el.} \, / \unit{10^{-6} \angstrom^{-2}}$ & $\rho_\mathrm{nuc.} \, / \unit{10^{-6} \angstrom^{-2}}$\\
+      \hline
+      Ethanol                  &                & $0$          & \\
+      \textit{c}-hexane        & $0.779$        & $7.55$       & \\
+      \textit{n}-hexane        & $0.655$        & $6.46$          & \\
+      \textit{n}-heptane       &                & $0$          & \\
+      Oleic acid               & $0.895$        & $8.52$       & $0.078$\\
+      Toluene                  & $0.867$        & $8.01$       & \\
+      Toluene-\textit{d8}      & $0.943$        &              & $5.66$\\
+      \hline
+    \end{tabular}
+  \end{table}
+
+\end{document}
