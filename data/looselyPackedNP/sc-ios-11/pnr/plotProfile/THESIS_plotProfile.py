@@ -9,22 +9,24 @@ import warnings
 from modelexp.data import MultiData, XyemData, XyData
 import matplotlib.patches as mplpatch
 from PlottingTemplates.saxssanssanspol import color_variant
-#    packingDensity1:  0.96254190 +/- 0.00928796 (0.96%) (init = 0.962)
-#    packingDensity2:  1.03310641 +/- 0.00309948 (0.30%) (init = 1.033033)
-#    packingDensity3:  0.89382287 +/- 0.00415709 (0.47%) (init = 0.8938432)
-#    packingDensity4:  0.79377190 +/- 0.00581214 (0.73%) (init = 0.792)
-#    packingDensity5:  0.78293796 +/- 0.01289499 (1.65%) (init = 0.782)
-#    packingDensity6:  0.18200000 +/- 0.01226776 (6.74%) (init = 0.1840058)
-#    layerDistance1:  -22.1733049 +/- 4508.99696 (20335.25%) (init = -22.2)
-#    layerDistance2:  -28.1157902 +/- 0.18298453 (0.65%) (init = -28.2)
-#    layerDistance3:  -25.7816749 +/- 0.23444571 (0.91%) (init = -25.78749)
-#    layerDistance4:  -26.2668009 +/- 0.32314767 (1.23%) (init = -26.3)
-#    layerDistance5:  -14.5267741 +/- 0.45267322 (3.12%) (init = -14.6)
-#    layerDistance6:  -1.80000000 +/- 1.32316210 (73.51%) (init = -1.7)
-#    r:                38 (fixed)
-#    dShell:           16 (fixed)
-#    dSurfactant:      18.2 (fixed)
-#    dSpacer:          49.8257842 +/- 4508.44335 (9048.41%) (init = 49.8)
+#    roughness:               5.60659278 +/- 0.25471418 (4.54%) (init = 5.606671)
+#    roughnessSlope:          0.05236433 +/- 0.00100331 (1.92%) (init = 0.052364)
+#    packingDensity1:         0.95815 (fixed)
+#    packingDensity2:         1.028049 (fixed)
+#    packingDensity3:         0.8898551 (fixed)
+#    packingDensity4:         0.7914817 (fixed)
+#    packingDensity5:         0.7802482 (fixed)
+#    packingDensity6:         0.1814358 (fixed)
+#    layerDistance1:         -17.73307 (fixed)
+#    layerDistance2:         -20.80183 (fixed)
+#    layerDistance3:         -18.42797 (fixed)
+#    layerDistance4:         -18.77368 (fixed)
+#    layerDistance5:         -6.880126 (fixed)
+#    layerDistance6:          6.04442 (fixed)
+#    r:                       52.9 (fixed)
+#    dShell:                  0 (fixed)
+#    dSurfactant:             14.7 (fixed)
+#    dSpacer:                 49.5998880 +/- 0.27341205 (0.55%) (init = 49.5)
 sample_name = 'SC-IOS-11'
 Chapter = 'looselyPackedNP'
 save_file = f"{Chapter}_VerticalStructure_{sample_name}_PNRDepiction.png"
@@ -36,28 +38,28 @@ substrate_color = '#0EA8DF'
 spacer_color = color_variant('#0EA8DF', -50)
 
 dense_packing = np.pi / (2 * np.sqrt(3))
-Rcore = 3.8
-dshell = 1.6
-dsurf = 1.82
+Rcore = 5.290
+dshell = 0.0
+dsurf = 1.47
 Rd = Rcore + dshell + dsurf
 sigR = 0#0.05445854
 x = np.linspace(-10, 10)
 z = np.linspace(-100, 800, 900)
-d_spacer = 49.8257842/10
+d_spacer = 49.5998880/10
 packing_densities = np.array([
-  0.96254190,
-  1.03310641,
-  0.89382287,
-  0.79377190,
-  0.78293796,
-  0.18200000])
+  0.95815,
+  1.028049,
+  0.8898551,
+  0.7914817,
+  0.7802482,
+  0.1814358])
 delta_z = np.array([
-  -22.1733049,
-  -28.1157902,
-  -25.7816749,
-  -26.2668009,
-  -14.5267741,
-  -1.80000000])/10
+  -17.73307,
+  -20.80183,
+  -18.42797,
+  -18.77368,
+  -6.880126,
+   6.04442])/10
 
 h = np.sqrt(3.)*Rd
 x0 = d_spacer +  Rd + delta_z[0]

@@ -9,31 +9,30 @@ import warnings
 from modelexp.data import MultiData, XyemData, XyData
 import matplotlib.patches as mplpatch
 from PlottingTemplates.saxssanssanspol import color_variant
-#    packingDensity1:   0.99200000 +/- 0.01186954 (1.20%) (init = 1)
-#    packingDensity2:   0.77400000 +/- 0.00852093 (1.10%) (init = 0.772)
-#    packingDensity3:   0.59800000 +/- 0.01197739 (2.00%) (init = 0.59)
-#    packingDensity4:   0.49000000 +/- 0.01203245 (2.46%) (init = 0.48)
-#    packingDensity5:   0.45400000 +/- 0.01163689 (2.56%) (init = 0.456)
-#    packingDensity6:   0.50000000 +/- 0.00978449 (1.96%) (init = 0.508)
-#    packingDensity7:   0.54054250 +/- 0.00741074 (1.37%) (init = 0.54)
-#    packingDensity8:   0.55200000 +/- 0.00824744 (1.49%) (init = 0.55)
-#    packingDensity9:   0.51200000 +/- 0.01045665 (2.04%) (init = 0.514)
-#    packingDensity10:  0.35400000 +/- 0.01888324 (5.33%) (init = 0.36)
+
+#    roughness:         9.56 (fixed)
+#    roughnessSlope:    0.0266 (fixed)
+#    packingDensity1:   0.8686337 (fixed)
+#    packingDensity2:   0.7193376 (fixed)
+#    packingDensity3:   0.57 (fixed)
+#    packingDensity4:   0.442 (fixed)
+#    packingDensity5:   0.3 (fixed)
+#    packingDensity6:   0.4469171 (fixed)
+#    packingDensity7:   0.5330438 (fixed)
+#    packingDensity8:   0.5388016 (fixed)
+#    packingDensity9:   0.5320628 (fixed)
+#    packingDensity10:  0.538 (fixed)
 #    packingDensity11:  0 (fixed)
-#    layerDistance1:   -8.80000000 +/- 157689.100 (1791921.59%) (init = -0.3)
-#    layerDistance2:   -0.10000000 +/- 0.65304392 (653.04%) (init = 0.3)
-#    layerDistance3:   -6.30000000 +/- 0.41865491 (6.65%) (init = -6.8)
-#    layerDistance4:   -14.5000000 +/- 0.64036218 (4.42%) (init = -16)
-#    layerDistance5:   -22.6000000 +/- 0.92142774 (4.08%) (init = -23.4)
-#    layerDistance6:   -25.9000000 +/- 0.99828618 (3.85%) (init = -25)
-#    layerDistance7:   -24.6000000 +/- 0.57915997 (2.35%) (init = -24.2)
-#    layerDistance8:   -24.4000000 +/- 0.65892818 (2.70%) (init = -24.5)
-#    layerDistance9:   -26.8000000 +/- 0.66543584 (2.48%) (init = -27)
-#    layerDistance10:  -32.0000000 +/- 0.96211142 (3.01%) (init = -31.7)
-#    layerDistance11:  -50 (fixed)
-#    r:                 35.4 (fixed)
-#    d:                 16.9 (fixed)
-#    dSpacer:           60.8000000 +/- 157689.208 (259357.25%) (init = 58.9)
+#    layerDistance1:    16.4000000 +/- 0.33613209 (2.05%) (init = 16.5)
+#    layerDistance2:   -0.58359825 +/- 0.30373346 (52.04%) (init = -0.5413965)
+#    layerDistance3:   -4.23059930 +/- 0.28043369 (6.63%) (init = -4.3)
+#    layerDistance4:   -11.5000000 +/- 0.40698961 (3.54%) (init = -11.4)
+#    layerDistance5:   -29.9000000 +/- 0.76463619 (2.56%) (init = -29.7)
+#    layerDistance6:   -30.5208384 +/- 0.54508696 (1.79%) (init = -30.6)
+#    layerDistance7:   -17.3000000 +/- 0.40090168 (2.32%) (init = -17.32231)
+#    layerDistance8:   -16.1000000 +/- 0.40344606 (2.51%) (init = -16.2)
+#    layerDistance9:   -19.6000000 +/- 0.43726117 (2.23%) (init = -19.5)
+#    layerDistance10:  -18.2000000 +/- 0.46035547 (2.53%) (init = -18.20955)
 
 sample_name = 'SC-IOS-7'
 Chapter = 'looselyPackedNP'
@@ -45,36 +44,36 @@ substrate_color = '#0EA8DF'
 spacer_color = color_variant('#0EA8DF', -50)
 
 dense_packing = np.pi / (2 * np.sqrt(3))
-Rcore = 3.54
-dshell = 1.69
+Rcore = 3.488
+dshell = 1.47
 Rd = Rcore + dshell
 x = np.linspace(-10, 10)
 z = np.linspace(-100, 800, 900)
 
-d_spacer = 60.8000000/10
+d_spacer = 51.39/10
 packing_densities = np.array([
-  0.99200000,
-  0.77400000,
-  0.59800000,
-  0.49000000,
-  0.45400000,
-  0.50000000,
-  0.54054250,
-  0.55200000,
-  0.51200000,
-  0.35400000,
+  0.8686337,
+  0.7193376,
+  0.57,
+  0.442,
+  0.3,
+  0.4469171,
+  0.5330438,
+  0.5388016,
+  0.5320628,
+  0.538,
   0.0])
 delta_z = np.array([
-  -8.80000000,
-  -0.10000000,
-  -6.30000000,
-  -14.5000000,
-  -22.6000000,
-  -25.9000000,
-  -24.6000000,
-  -24.4000000,
-  -26.8000000,
-  -32.0000000,
+  -0.7,
+  -0.58359825,
+  -4.23059930,
+  -11.5000000,
+  -29.9000000,
+  -30.5208384,
+  -17.3000000,
+  -16.1000000,
+  -19.6000000,
+  -18.2000000,
   0.0])/10
 
 h = np.sqrt(3.)*Rd

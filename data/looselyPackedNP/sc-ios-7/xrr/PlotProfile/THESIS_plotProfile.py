@@ -10,31 +10,44 @@ from modelexp.data import MultiData, XyemData, XyData
 import matplotlib.patches as mplpatch
 from PlottingTemplates.saxssanssanspol import color_variant
 
-#    packingDensity1:   0.62800000 +/- 0.06245542 (9.95%) (init = 0.564)
-#    packingDensity2:   0.67600000 +/- 0.09260149 (13.70%) (init = 0.628)
-#    packingDensity3:   0.71800000 +/- 0.10741977 (14.96%) (init = 0.708)
-#    packingDensity4:   0.64800000 +/- 0.18783836 (28.99%) (init = 0.624)
-#    packingDensity5:   0.57400000 +/- 0.31183063 (54.33%) (init = 0.6)
-#    packingDensity6:   0.70800000 +/- 0.29300111 (41.38%) (init = 0.83)
-#    packingDensity7:   0.87000000 +/- 0.17965116 (20.65%) (init = 1.03)
-#    packingDensity8:   0.97000000 +/- 0.14947596 (15.41%) (init = 0.902)
-#    packingDensity9:   1.22400000 +/- 0.21135578 (17.27%) (init = 1.286)
-#    packingDensity10:  0.75600000 +/- 0.42130305 (55.73%) (init = 0.75)
+#[[Variables]]
+#    i0:                1 (fixed)
+#    bg:                7e-06 (fixed)
+#    roughness:         6.3 (fixed)
+#    roughnessSlope:    0.0391 (fixed)
+#    packingDensity1:   0.584 (fixed)
+#    packingDensity2:   0.614 (fixed)
+#    packingDensity3:   0.634 (fixed)
+#    packingDensity4:   0.57 (fixed)
+#    packingDensity5:   0.562 (fixed)
+#    packingDensity6:   0.738 (fixed)
+#    packingDensity7:   0.882 (fixed)
+#    packingDensity8:   0.994 (fixed)
+#    packingDensity9:   1.196 (fixed)
+#    packingDensity10:  0.74 (fixed)
 #    packingDensity11:  0 (fixed)
-#    layerDistance1:   -8.00000000 +/- 1.70712830 (21.34%) (init = -4.5)
-#    layerDistance2:   -8.80000000 +/- 2.44256821 (27.76%) (init = -4.3)
-#    layerDistance3:   -9.30000000 +/- 2.34921020 (25.26%) (init = -7.2)
-#    layerDistance4:   -10.6000000 +/- 3.81155966 (35.96%) (init = -7.5)
-#    layerDistance5:   -7.50000000 +/- 6.14585333 (81.94%) (init = -2.4)
-#    layerDistance6:   -6.60000000 +/- 7.79612472 (118.12%) (init = -4.6)
-#    layerDistance7:   -11.5000000 +/- 4.77891405 (41.56%) (init = -6.6)
-#    layerDistance8:   -14.5000000 +/- 5.28215463 (36.43%) (init = -12)
-#    layerDistance9:    1.70000000 +/- 12.3984534 (729.32%) (init = -9.7)
-#    layerDistance10:  -10.2000000 +/- 15.8218310 (155.12%) (init = -4.4)
+#    layerDistance1:   -1.10000000 +/- 1.59075059 (144.61%) (init = -1.2)
+#    layerDistance2:   -5.86174505 +/- 1.75251623 (29.90%) (init = -5.9)
+#    layerDistance3:   -5.17045479 +/- 1.99706730 (38.62%) (init = -5.2)
+#    layerDistance4:   -6.07859540 +/- 2.55658826 (42.06%) (init = -6.1)
+#    layerDistance5:   -2.88843899 +/- 3.79680256 (131.45%) (init = -2.9)
+#    layerDistance6:   -4.44036642 +/- 4.07142557 (91.69%) (init = -4.5)
+#    layerDistance7:   -8.26007229 +/- 3.56721950 (43.19%) (init = -8.3)
+#    layerDistance8:   -9.39566023 +/- 4.07273173 (43.35%) (init = -9.4)
+#    layerDistance9:    7.40000000 +/- 4.26823878 (57.68%) (init = 7.5)
+#    layerDistance10:  -6.90000000 +/- 7.76624196 (112.55%) (init = -6.8)
 #    layerDistance11:  -50 (fixed)
-#    r:                 35.4 (fixed)
-#    d:                 16.9 (fixed)
-#    dSpacer:           52.6 (fixed)
+#    r:                 34.88 (fixed)
+#    d:                 14.7 (fixed)
+#    dSpacer:           47.9 (fixed)
+#    sldCore:           4.0501e-05 (fixed)
+#    sldShell:          8.52e-06 (fixed)
+#    sldSubstrate:      2.0062e-05 (fixed)
+#    sldSpacer:         1.98e-06 (fixed)
+#    sldBackground:     0 (fixed)
+#    dTheta:            0 (fixed)
+#    wavelength:        1.5418 (fixed)
+#    dWavelength:       0.0221 (fixed)
 
 sample_name = 'SC-IOS-7'
 Chapter = 'looselyPackedNP'
@@ -46,8 +59,8 @@ substrate_color = '#0EA8DF'
 spacer_color = color_variant('#0EA8DF', -50)
 
 dense_packing = np.pi / (2 * np.sqrt(3))
-Rcore = 3.54
-dshell = 1.69
+Rcore = 3.488
+dshell = 1.47
 Rd = Rcore + dshell
 sigR = 0#0.05445854
 x = np.linspace(-10, 10)
@@ -55,28 +68,28 @@ z = np.linspace(-100, 800, 900)
 
 d_spacer = 5.26
 packing_densities = np.array([
-  0.62800000,
-  0.67600000,
-  0.71800000,
-  0.64800000,
-  0.57400000,
-  0.70800000,
-  0.87000000,
-  0.97000000,
-  1.22400000,
-  0.75600000,
+  0.584,
+  0.614,
+  0.634,
+  0.57,
+  0.562,
+  0.738,
+  0.882,
+  0.994,
+  1.196,
+  0.74,
   0.0])
 delta_z = np.array([
--8.00000000,
--8.80000000,
--9.30000000,
--10.6000000,
--7.50000000,
--6.60000000,
--11.5000000,
--14.5000000,
- 1.70000000,
--10.2000000,
+-1.10000000,
+-5.86174505,
+-5.17045479,
+-6.07859540,
+-2.88843899,
+-4.44036642,
+-8.26007229,
+-9.39566023,
+ 7.40000000,
+-6.90000000,
   0.0])/10
 
 h = np.sqrt(3.)*Rd

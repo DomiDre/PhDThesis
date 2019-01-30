@@ -86,4 +86,4 @@ ax_sld.tick_params(axis='both', which='major', labelsize=inset_fontsize)
 
 fig.savefig(thesisimgs + '/' + refl_pngfile)
 fig.savefig(cwd + '/' + refl_pngfile)
-plt.show()
+# plt.show()

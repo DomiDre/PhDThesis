@@ -23,8 +23,8 @@ Chapter = 'looselyPackedNP'
 fit_file300K = cwd + "/1FreeFitFullRange/fit_result.dat"
 sld_file300K = cwd + "/1FreeFitFullRange/fit_sld.dat"
 
-fit_file30K = cwd + "/2FitZFC/Initial/Nuclear/fit_result.dat"
-sld_file30K = cwd + "/2FitZFC/Initial/Nuclear/fit_sld.dat"
+fit_file30K = cwd + "/2FitZFC/Initial/fit_result.dat"
+sld_file30K = cwd + "/2FitZFC/Initial/fit_sld.dat"
 
 labeltext = 'SC-IOS-7'
 q_min, q_max = 0.05, 1.1
