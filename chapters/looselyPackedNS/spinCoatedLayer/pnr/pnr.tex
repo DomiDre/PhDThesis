@@ -18,8 +18,8 @@
   For SC-IOS-7 no magnetic splitting of the two polarization channels is observed and thus the sample is still well described by only the nuclear scattering length density profile.
   On the other hand for SC-IOS-11 a significant contrast is visible between $R^{+}$ and $R^{-}$.
   In the inset of \reffig{fig:looselyPackedNP:layer:pnrRoomTemperatureMagneticHomModel}, it is assumed that the nanospheres in SC-IOS-11 are homogeneously magnetized and that no angle between the magnetization and neutron polarization $\gamma \eq 0 ^\circ$ is given.
-  With these assumptions, the magnetic contrast can already be well described by only a single parameter for the magnetic scattering length density of the single spheres, $\rho_\mathrm{mag}^\mathrm{sphere} \eq 0.61(2) \cdot \unit{10^{-6} \angstrom^{-2}}$, which corresponds to a magnetization of $209(7) \unit{kA \, m^{-1}}$.
-  This result is close to the value obtained for the sample by the complimentary VSM experiment at room temperature in \refsec{sec:looselyPackedNS:layer:vsm} of $192 \unit{kA \,m^{-1}}$, which raises confidence in the consistency of the scattering length density model of the sample.
+  With these assumptions, the magnetic contrast can already be well described by only a single parameter for the magnetic scattering length density of the single spheres, $\rho_\mathrm{mag}^\mathrm{sphere} \eq 0.560(6) \cdot \unit{10^{-6} \angstrom^{-2}}$, which corresponds to a magnetization of $192(2) \unit{kA \, m^{-1}}$.
+  This result is close to the value obtained for the sample by the complimentary VSM experiment at room temperature in \refsec{sec:looselyPackedNS:layer:vsm} of $206 \unit{kA \,m^{-1}}$, which raises confidence in the consistency of the scattering length density model of the sample.
 
   \begin{figure}[tb]
     \centering
@@ -29,6 +29,9 @@
   As polarized neutron reflectometry allows to study the magnetization profile with depth-resolution, the respective layers have been further allowed to vary independently in magnetization density, shown in \reffig{fig:looselyPackedNP:layer:pnrRoomTemperatureMagnetic}.
   The obtained parameters are listed in comparison to the parameter of the homogeneously magnetized sample in \reftab{tab:looselyPackedNP:layers:pnrSCIOS300K500mT}.
   By the free variation, the fit of the calculated and experimental reflectivity can be further improved, which becomes visible in the reduced $\chi^2$.
+  As a reduction of $\chi^2$ can also be achieved by simply adding more parameters to a model, another metric to evaluate the goodness-of-fit is the Bayesian information criterion (BIC), which penalizes the addition of parameters and where a decrease in $\Delta \mathrm{BIC} > 10$ is considered significant \cite{Schwarz_1978_Estim, Kass_1995_Bayes}.
+  As a reduction of $\Delta \mathrm{BIC} \eq 347$ is observed, the model with the varied magnetization in the layers should be preferred.
+
   In the thereby obtained magnetic scattering length density profile, the lower layers have a reduced magnetization density, whereas the magnetization of the two higher layers is increased.
   A similar observation was made in literature by the study of Mishra \etal in \cite{Mishra_2012_Selfa} but not further discussed as in this study there is also no clear separation in the discussion between packing density and particle scattering length density.
   Comparing the magnetic scattering length profile, with the nuclear scattering length profile of SC-IOS-11, shown in \reffig{fig:looselyPackedNP:layer:reflectivity} (lower left), it can be seen that the packing density and the magnetic scattering length density of the nanospheres are inversely correlated.
@@ -37,21 +40,23 @@
   \begin{table}[!htbp]
     \centering
     \caption{\label{tab:looselyPackedNP:layers:pnrSCIOS300K500mT}Magnetization density of SC-IOS-11, assuming a homogeneously magnetized sample and for independently varied layer magnetizations. The index of $\rho_\mathrm{mag, i}$ counts from the lowest to the highest layer.}
-    \begin{tabular}{ c | c | c}
-      \rule{0pt}{2ex} \textbf{PNR \@ 300 K}  & Hom. Magnetized & Varied Densities \\
+    \begin{tabular}{ c | c | c | c | c}
+      \rule{0pt}{2ex} \textbf{PNR \@ 300 K}  & \multicolumn{2}{c}{Hom. Magnetized} & \multicolumn{2}{c}{Varied Densities} \\
       \hline
-      $\rho_\mathrm{mag, 1} \, / \unit{10^{-6} \angstrom^{-2}} $    & \multirow{6}{*}{$0.61(2)$} & $0.54(2)$\\
-      $\rho_\mathrm{mag, 2} \, / \unit{10^{-6} \angstrom^{-2}} $    &                            & $0.50(1)$\\
-      $\rho_\mathrm{mag, 3} \, / \unit{10^{-6} \angstrom^{-2}} $    &                            & $0.59(2)$\\
-      $\rho_\mathrm{mag, 4} \, / \unit{10^{-6} \angstrom^{-2}} $    &                            & $0.85(2)$\\
-      $\rho_\mathrm{mag, 5} \, / \unit{10^{-6} \angstrom^{-2}} $    &                            & $1.19(4)$\\
-      $\rho_\mathrm{mag, 6} \, / \unit{10^{-6} \angstrom^{-2}} $    &                            & $1.0(2)$\\
+      Layer     & $\rho_\mathrm{mag, i} \, / \unit{10^{-6} \angstrom^{-2}}$ & $M \, / \unit{kA \, m^{-1}}$ & $\rho_\mathrm{mag, i} \, / \unit{10^{-6} \angstrom^{-2}}$ & $M \, / \unit{kA \, m^{-1}}$\\
       \hline
-      $\chi^2$                                                      & $4.1$     & $2.0$\\
+      1         & \multirow{6}{*}{$0.560(6)$} & \multirow{6}{*}{$192(2)$}   & $0.49(2)$ & $168(7)$\\
+      2         &                             &                             & $0.47(1)$ & $161(3)$\\
+      3         &                             &                             & $0.56(2)$ & $192(7)$\\
+      4         &                             &                             & $0.80(2)$ & $275(7)$\\
+      5         &                             &                             & $1.13(4)$ & $388(14)$\\
+      6         &                             &                             & $0.95(21)$& $326(72)$\\
+      \hline
+      $\chi^2$  & \multicolumn{2}{c}{$4.1$}   & \multicolumn{2}{c}{$2.0$}\\
+      BIC       & \multicolumn{2}{c}{$768$}   & \multicolumn{2}{c}{$421$}\\
       \hline
     \end{tabular}
   \end{table}
-
 
   \paragraphNewLine{Polarized Reflectivity at 30 K}
   \begin{figure}[tb]

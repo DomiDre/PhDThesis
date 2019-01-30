@@ -7,7 +7,7 @@ samplename = 'SC-IOS-11'
 muB = sc.physical_constants['Bohr magneton'][0]
 
 mu = 13767.9255
-radius = 54.1e-10
+radius = 52.90e-10
 vol_particle = 4/3 * np.pi * radius**3
 
 Ms_is = 0.15822643
