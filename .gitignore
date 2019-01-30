@@ -230,3 +230,5 @@ TSWLatexianTemp*
 
 # ignore bornagain calculted files
 *.int.gz
+
+*~
