@@ -12,9 +12,9 @@ plt.style.use('phdthesis')
 
 import numpy as np
 import warnings
-from modelexp.data import XyeData
+from modelexp.data import XyeData, MultiData, XyemData
 import matplotlib.patches as mpatches
-from PlottingTemplates.saxssanssanspol import color_variant
+from PlottingTemplates.saxssanssanspol import color_variant, colors
 
 from matplotlib.legend_handler import HandlerTuple
 
@@ -29,6 +29,26 @@ sat_rPlus_file = cwd  + '/data/footprint_corrected/ES_S17_30K_FC_73000Oe_reduced
 sat_rMinus_file = cwd + '/data/footprint_corrected/ES_S17_30K_FC_73000Oe_reduced_in_x_ai_du_masked_qz_I_fcorrected.xye'
 rem_rPlus_file = cwd +  '/data/footprint_corrected/ES_S17_30K_FC_7Oe_Remanence_reduced_in_x_ai_uu_masked_qz_I_fcorrected.xye'
 rem_rMinus_file = cwd + '/data/footprint_corrected/ES_S17_30K_FC_7Oe_Remanence_reduced_in_x_ai_du_masked_qz_I_fcorrected.xye'
+
+fit_fileFC_sat = cwd + "/4SimFC/Magnetized/fit_result.dat"
+sld_fileFC_sat = cwd + "/4SimFC/Magnetized/fit_sld.dat"
+
+
+def get_fit_data(file):
+  data = MultiData(XyemData)
+  data.loadFromFile(file)
+  q_p, I_p, sI_p, Imodel_p = data.getDatasetBySuffix('p').getData()
+  q_p = np.array(q_p)
+  I_p = np.array(I_p)
+  sI_p = np.array(sI_p)
+  Imodel_p = np.array(Imodel_p)
+  q_m, I_m, sI_m, Imodel_m = data.getDatasetBySuffix('m').getData()
+  q_m = np.array(q_m)
+  I_m = np.array(I_m)
+  sI_m = np.array(sI_m)
+  Imodel_m = np.array(Imodel_m)
+  return q_p*10, I_p, sI_p, Imodel_p, q_m*10, I_m, sI_m, Imodel_m
+q_sat_p_fit, I_sat_p_fit, sI_sat_p_fit, Imodel_sat_p_fit, q_sat_m_fit, I_sat_m_fit, sI_sat_m_fit, Imodel_sat_m_fit = get_fit_data(fit_fileFC_sat)
 
 
 q_min, q_max = 0.05, 1.2
@@ -87,6 +107,9 @@ ax.errorbar(q_rem_m, I_rem_m, sI_rem_m,
   linestyle='-',
   label='Remanence, $R^{-}$',
   zorder=0, capsize=0, marker='.', markersize=1)
+
+ax.plot(q_sat_p_fit, Imodel_sat_p_fit*sf_sat, zorder=1, color=color_variant(colors['sanspol_p_sa_data'], -100), marker='None', alpha=0.5)
+ax.plot(q_sat_m_fit, Imodel_sat_m_fit*sf_sat, zorder=1, color=color_variant(colors['sanspol_m_sa_data'], -100), marker='None', alpha=0.5)
 
 handles, labels = ax.get_legend_handles_labels()
 

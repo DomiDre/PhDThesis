@@ -14,7 +14,7 @@ import numpy as np
 
 from modelexp.data import XyemData
 
-datfile = cwd+ '/fit/fit_result.dat'
+datfile = cwd+ '/sim_result/fit_result.dat'
 
 chapter = 'looselyPackedNP'
 sample_name = 'SC-IOS-11'

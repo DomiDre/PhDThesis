@@ -12,9 +12,9 @@ plt.style.use('phdthesis')
 
 import numpy as np
 import warnings
-from modelexp.data import XyeData
+from modelexp.data import XyeData, XyemData, MultiData
 import matplotlib.patches as mpatches
-from PlottingTemplates.saxssanssanspol import color_variant
+from PlottingTemplates.saxssanssanspol import color_variant, colors
 
 from matplotlib.legend_handler import HandlerTuple
 
@@ -37,6 +37,8 @@ rem_rMinus_file = cwd + '/data/footprint_corrected/ES_S17_30K_ZFC_7Oe_Remanence_
 q_min, q_max = 0.05, 1.2
 I_min, I_max = 7e-5, 1.9e2
 
+fit_fileZFC_ini = cwd + "/2FitZFC/Initial/fit_result.dat"
+sld_fileZFC_ini = cwd + "/2FitZFC/Initial/fit_sld.dat"
 
 refl_pngfile = f"{Chapter}_VerticalStructure_{sample_name}_PNR_ZFC30K.png"
 
@@ -57,6 +59,24 @@ def get_data(file):
   I = I[valid_data]
   sI = sI[valid_data]
   return q*10, I, sI
+
+
+
+def get_fit_data(file):
+  data = MultiData(XyemData)
+  data.loadFromFile(file)
+  q_p, I_p, sI_p, Imodel_p = data.getDatasetBySuffix('p').getData()
+  q_p = np.array(q_p)
+  I_p = np.array(I_p)
+  sI_p = np.array(sI_p)
+  Imodel_p = np.array(Imodel_p)
+  q_m, I_m, sI_m, Imodel_m = data.getDatasetBySuffix('m').getData()
+  q_m = np.array(q_m)
+  I_m = np.array(I_m)
+  sI_m = np.array(sI_m)
+  Imodel_m = np.array(Imodel_m)
+  return q_p*10, I_p, sI_p, Imodel_p, q_m*10, I_m, sI_m, Imodel_m
+q_ini_p_fit, I_ini_p_fit, sI_ini_p_fit, Imodel_ini_p_fit, q_ini_m_fit, I_ini_m_fit, sI_ini_m_fit, Imodel_ini_m_fit = get_fit_data(fit_fileZFC_ini)
 
 #load data
 q_gf_p, I_gf_p, sI_gf_p = get_data(gf_rPlus_file)
@@ -104,6 +124,10 @@ p_rem_m = ax.errorbar(q_rem_m, I_rem_m, sI_rem_m,
   linestyle='-',
   label='Remanence, $R^{-}$',
   zorder=0, capsize=0, marker='.', markersize=1)
+
+ax.plot(q_ini_p_fit, Imodel_ini_p_fit*sf_gf, zorder=1, color=color_variant('#793394', -50), marker='None', alpha=0.5)
+ax.plot(q_ini_m_fit, Imodel_ini_m_fit*sf_gf, zorder=1, color=color_variant('#7F0128', -50), marker='None', alpha=0.5)
+
 
 handles, labels = ax.get_legend_handles_labels()
 

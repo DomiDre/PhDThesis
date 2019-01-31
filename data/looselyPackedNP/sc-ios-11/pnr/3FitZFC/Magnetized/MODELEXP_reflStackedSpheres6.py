@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.reflectometry import PolarizedReflectometry
-from modelexp.models.reflectometry import SphereCSSStacked6Spacer, InstrumentalResolution, Magnetic
+from modelexp.models.reflectometry import SphereCSSStacked6Spacer, InstrumentalResolution, Magnetic, ShiftQ
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -23,53 +23,46 @@ dataRef.loadFromFile('../../data/30Kfiles/footprint_correct/ES_S14_30K_730mT_ZFC
 dataRef.loadFromFile('../../data/30Kfiles/footprint_correct/ES_S14_30K_730mT_ZFC_reduced_in_x_ai_dd_qz_I_fcorrected.xye', ['m'])
 dataRef.plotData()
 
-modelRef = app.setModel(SphereCSSStacked6Spacer, [Magnetic, InstrumentalResolution])
+modelRef = app.setModel(SphereCSSStacked6Spacer, [Magnetic, InstrumentalResolution, ShiftQ])
 
 modelRef.setParam("magSldCore", 1.0,  minVal = 0, maxVal = 1, vary = False)
 modelRef.setParam("magSldShell", 1.0,  minVal = 0, maxVal = 1, vary = False)
-modelRef.setParam("magDensity1", 5.91e-07,  minVal = 0, maxVal = 3e-06, vary = True)
-modelRef.setParam("magDensity2", 5.44822224749799e-07,  minVal = 0, maxVal = 3e-06, vary = True)
-modelRef.setParam("magDensity3", 7.11e-07,  minVal = 0, maxVal = 3e-06, vary = True)
-modelRef.setParam("magDensity4", 9.3e-07,  minVal = 0, maxVal = 3e-06, vary = True)
-modelRef.setParam("magDensity5", 1.194e-06,  minVal = 0, maxVal = 3e-06, vary = True)
-modelRef.setParam("magDensity6", 1.086e-06,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity1", 5.666447713501891e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity2", 4.977755667868597e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity3", 6.623955773667838e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity4", 9.215158723191638e-07,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity5", 1.1917813705681846e-06,  minVal = 0, maxVal = 3e-06, vary = True)
+modelRef.setParam("magDensity6", 1.428e-06,  minVal = 0, maxVal = 3e-06, vary = True)
 modelRef.setParam("polarizationEfficiency", 1.0,  minVal = 0.95, maxVal = 1, vary = False)
 modelRef.combineParameters('magSldCore', 'magSldShell')
 
-modelRef.setConstantParam("bg", 1.76e-05)
 
-modelRef.setConstantParam("roughness", 16.56)
-modelRef.setConstantParam("roughnessSlope", 0.0237)
-modelRef.setConstantParam("dSpacer", 30.4)
+modelRef.setConstantParam("bg", 1.76e-05)
+modelRef.setConstantParam("qShift", -1.2e-04)
+modelRef.setConstantParam("roughness", 18.22)
+modelRef.setConstantParam("roughnessSlope", 0.0185)
+modelRef.setConstantParam("dSpacer", 37.3)
 modelRef.setConstantParam("gamma", 0.0)
-modelRef.setConstantParam("packingDensity1", 1.224)
-modelRef.setConstantParam("packingDensity2", 1.122)
-modelRef.setConstantParam("packingDensity3", 0.93)
+
+modelRef.setConstantParam("packingDensity1", 1.306)
+modelRef.setConstantParam("packingDensity2", 1.136)
+modelRef.setConstantParam("packingDensity3", 0.936)
 modelRef.setConstantParam("packingDensity4", 0.792)
 modelRef.setConstantParam("packingDensity5", 0.716)
-modelRef.setConstantParam("packingDensity6", 0.132)
-modelRef.setConstantParam("layerDistance1", -47.5)
-modelRef.setConstantParam("layerDistance2", -26.0)
-modelRef.setConstantParam("layerDistance3", -28.2)
-modelRef.setConstantParam("layerDistance4", -31.94184086089053)
-modelRef.setConstantParam("layerDistance5", -26.299999999999997)
-modelRef.setConstantParam("layerDistance6", -21.599999999999998)
-
-# modelRef.combineParameters('packingDensity1', 'packingDensity2')
-# modelRef.combineParameters('packingDensity1', 'packingDensity3')
-# modelRef.combineParameters('packingDensity1', 'packingDensity4')
-# modelRef.combineParameters('packingDensity1', 'packingDensity5')
-# modelRef.combineParameters('layerDistance1', 'layerDistance2')
-# modelRef.combineParameters('layerDistance1', 'layerDistance3')
-# modelRef.combineParameters('layerDistance1', 'layerDistance4')
-# modelRef.combineParameters('layerDistance1', 'layerDistance5')
+modelRef.setConstantParam("packingDensity6", 0.14)
+modelRef.setConstantParam("layerDistance1", -50.0)
+modelRef.setConstantParam("layerDistance2", -15.8)
+modelRef.setConstantParam("layerDistance3", -19.9)
+modelRef.setConstantParam("layerDistance4", -24.1)
+modelRef.setConstantParam("layerDistance5", -18.9)
+modelRef.setConstantParam("layerDistance6", -15.9)
 
 modelRef.setConstantParam("sldSpacer", 1.264e-06)
 
-modelRef.setConstantParam("r", 54-16)
-modelRef.setConstantParam("dShell", 16)
-modelRef.setConstantParam("dSurfactant", 18.2)
-modelRef.setConstantParam('sldCore', 8.34e-06)
+modelRef.setConstantParam("r", 52.90)
+modelRef.setConstantParam("dShell", 0)
+modelRef.setConstantParam("dSurfactant", 14.7)
+modelRef.setConstantParam('sldCore', 7.00e-06)
 modelRef.setConstantParam('sldShell', 7.00e-6)
 modelRef.setConstantParam('sldSurfactant', 0.078e-6)
 modelRef.setConstantParam('sldSubstrate', 2.072e-6)

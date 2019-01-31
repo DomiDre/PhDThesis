@@ -6,7 +6,7 @@
 #Preparing Script for Experiment: MODELEXP
 from modelexp import App
 from modelexp.experiments.magnetometry import Vsm
-from modelexp.models.magnetometry import Langevin
+from modelexp.models.magnetometry import TwoLangevin
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
@@ -19,11 +19,12 @@ dataRef = app.setData(XyeData)
 dataRef.loadFromFile(datafile)
 dataRef.plotData()
 
-modelRef = app.setModel(Langevin)
-modelRef.setParam("Ms", 192.4,  minVal = 0, maxVal = 400, vary = True)
-modelRef.setParam("mu", 13650.0,  minVal = 0, maxVal = 30000, vary = True)
-modelRef.setParam("chi", 0.0,  minVal = -20, maxVal = 20, vary = True)
-modelRef.setConstantParam("sigMu", 0)
+modelRef = app.setModel(TwoLangevin)
+modelRef.setParam("Ms1", 0.15822642761862843*1301.371861446249,  minVal = 150, maxVal = 260, vary = False)
+modelRef.setParam("mu1", 13767.92552707809,  minVal = 13e3, maxVal = 18000, vary = False)
+modelRef.setParam("Ms2", 0,  minVal = 0, maxVal = 50, vary = False)
+modelRef.setParam("mu2", 858.1,  minVal = 700, maxVal = 1000, vary = False)
+modelRef.setParam("chi", 0.0,  minVal = -20, maxVal = 20, vary = False)
 modelRef.setConstantParam("T", 300)
 
 app.setFit(LevenbergMarquardt)

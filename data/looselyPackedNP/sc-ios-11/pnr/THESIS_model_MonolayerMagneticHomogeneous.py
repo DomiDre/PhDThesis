@@ -137,8 +137,8 @@ ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-# ax_sld.plot(r, sld, marker='None', alpha=0.3,
-#   color=colors['sanspol_sld'])
+ax_sld.plot(r, np.array(sld)*0.2, marker='None', alpha=0.5,
+  color=colors['sanspol_sld'])
 ax_sld.plot(r, sldMag, marker='None',
   color='#EE292F')
 ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)

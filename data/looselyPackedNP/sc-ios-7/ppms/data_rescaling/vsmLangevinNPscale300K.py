@@ -12,7 +12,7 @@ muB = sc.physical_constants['Bohr magneton'][0]
 #    chi:          -0.05763115 +/- 3.9590e-05 (0.07%) (init = -0.058)
 #    sigMu:         0 (fixed)
 mu = 4350.855
-radius = 35.2547170e-10
+radius = 34.88e-10
 vol_particle = 4/3 * np.pi * radius**3
 
 Ms_is = 0.12024767

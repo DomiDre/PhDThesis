@@ -90,36 +90,19 @@
     \end{align}
     where $\rho_\mathrm{part.}$ and $\rho_\mathrm{shell}$ are the respective scattering length densities of the core and the shell.
 
-    For a particle with a core-shell structure additionally to the surfactant shell the formulation can be extended.
-    For simplicity, the particle size radius $R_\mathrm{part.} = R_\mathrm{core} + D_\mathrm{shell}$ and the total nanoparticle radius including the surfactant as $R_\mathrm{total} = R_\mathrm{core} + D_\mathrm{shell} + D_\mathrm{surf.}$ is defined and then the area fractions of the three components are given by
-    \begin{align}
-      \eta_\mathrm{core} (z)
-        &\eq \begin{cases}
-        \eta \frac{R_\mathrm{core}^{2} - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0 < |z|<R_\mathrm{core}, \\
-        0,                                               &\mathrm{else},
-        \end{cases}\\
-      \eta_\mathrm{shell} (z)
-        &\eq \begin{cases}
-          \eta \frac{R_\mathrm{part.}^2 - R_\mathrm{core}^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0 < |z|<R_\mathrm{core}, \\
-          \eta \frac{R_\mathrm{part.}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R_\mathrm{core}<|z|<R_\mathrm{part.} \\
-          0,                                            &\mathrm{else},
-        \end{cases}\\
-      \eta_\mathrm{surf.} (z)
-        &\eq \begin{cases}
-          \eta \frac{R_\mathrm{total}^2 - R_\mathrm{part.}^2}{R_\mathrm{total}^2}, &\mathrm{for\,}0<|z|<R_\mathrm{part.}, \\
-          \eta \frac{R_\mathrm{total}^2 - z^2}{R_\mathrm{total}^2}, &\mathrm{for\,}R_\mathrm{part.} < |z| < R_\mathrm{total}, \\
-          0,                                            &\mathrm{else}.
-        \end{cases}
-    \end{align}
-    And the scattering length density profile is then given by
-    \begin{align}
-      \label{eq:looselyPackedNP:layerCharacterization:sldFromAreaFractionCoreShell}
-        \rho(z) \eq& \rho_\mathrm{core} \eta_\mathrm{core}(z) + \rho_\mathrm{shell} \eta_\mathrm{shell}(z) + \rho_\mathrm{surf.} \eta_\mathrm{surf.}(z),
-    \end{align}
-    where $\rho_\mathrm{part.}$ and $\rho_\mathrm{shell}$ are the respective scattering length densities of the core and the shell.
+    \begin{figure}[htbp]
+      \centering
+      \includegraphics{looselyPackedNP_stackOfSpheres}
+      \includegraphics{looselyPackedNP_stackOfSpheresCrossSection}
+      \caption{\label{fig:looselyPackedNP:layerCharacterization:sphereStackProfile}Side-view (left) of a stack of nanospheres and a cross-sectional depiction (right) in a cut of two overlapping layers (marked by the dashed line in the side-view).}
+    \end{figure}
 
-    In this formulation it is now straight-forward to extend it to overlapping nanosphere layers by summing the respective area fractions $\eta_x$ for each layer before determining the SLD by \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFraction} or \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFractionCoreShell}.
-    This procedure is performed for both SC-IOS-11 and SC-IOS-7, where as initial model a stack of nanospheres is given.
+    In this formulation it is now straight-forward to extend it to overlapping nanosphere layers by summing the respective area fractions $\eta_x$ for each layer before determining the SLD by \refeq{eq:looselyPackedNP:layerCharacterization:sldFromAreaFraction}.
+    The path via the area fractions correctly adds the overlapping areas as depicted in \reffig{fig:looselyPackedNP:layerCharacterization:sphereStackProfile} and clearly separate, which part in the lateral averaging comes from the nanoparticle material and the oleic acid surfactant.
+    Furthermore, if desired the empty space can be easily replaced by a background SLD that has a filling fraction of ($1 - \eta_\mathrm{part.} - \eta_\mathrm{surf.}$).
+    //
+
+    This model is applied to both SC-IOS-11 and SC-IOS-7, where for both a stack of nanospheres is given.
     Each layer is pitched on the vertical axis by $\sqrt{8/3} R_\mathrm{total}$, which is the vertical distance of two sphere centers for an ideal close sphere packing if $R_\mathrm{total}$ is the radius of a hard-sphere.
     The model is fitted by varying the two dimensional layer packing fraction $\eta$ and a shift from the initially assumed pitch $\Delta z$ for each layer.
 
