@@ -1,59 +1,84 @@
 #Fitting first order peak of GISAXS data
-#Date of execution: 2019-01-31 18:46:11.883444
-#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Pen2_2_ai_0-11.h5
-[[Fit Statistics]]
-    # fitting method   = leastsq
-    # function evals   = 17
-    # data points      = 13
-    # variables        = 3
-    chi-square         = 42.1990191
-    reduced chi-square = 4.21990191
-    Akaike info crit   = 21.3068190
-    Bayesian info crit = 23.0016671
-[[Variables]]
-    A:    4.9472e-05 +/- 8.2222e-07 (1.66%) (init = 5e-05)
-    mu:   0.43669784 +/- 2.8859e-04 (0.07%) (init = 0.436)
-    sig:  0.04200165 +/- 0.00105211 (2.50%) (init = 0.046)
-[[Correlations]] (unreported correlations are < 0.100)
-    C(A, sig) = -0.774
-a = 14.387946961784396 +/- 0.009508096693182694
-BeamWidthCorrectedSig = 0.03720065385049476 +/- 0.0012432735636572143
-d_coh = 1061.2291322355986 +/- 35.46706814331593
-#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hex1_2_ai_0-11.h5
-[[Fit Statistics]]
-    # fitting method   = leastsq
-    # function evals   = 17
-    # data points      = 13
-    # variables        = 3
-    chi-square         = 73.2179098
-    reduced chi-square = 7.32179098
-    Akaike info crit   = 28.4703791
-    Bayesian info crit = 30.1652272
-[[Variables]]
-    A:    6.8964e-05 +/- 1.4162e-06 (2.05%) (init = 5e-05)
-    mu:   0.44174570 +/- 2.5087e-04 (0.06%) (init = 0.4417)
-    sig:  0.03010793 +/- 7.5096e-04 (2.49%) (init = 0.03)
-[[Correlations]] (unreported correlations are < 0.100)
-    C(A, sig) = -0.777
-a = 14.223534613687882 +/- 0.008077725349012023
-BeamWidthCorrectedSig = 0.022939868889715203 +/- 0.0011513018675504976
-d_coh = 1720.9521900126063 +/- 86.37082800481649
-#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hep1_2_ai_0-11.h5
+#Date of execution: 2019-01-31 20:14:09.108525
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hex2_2_ai_0-11.h5
 [[Fit Statistics]]
     # fitting method   = leastsq
     # function evals   = 29
-    # data points      = 13
+    # data points      = 33
     # variables        = 3
-    chi-square         = 952.339315
-    reduced chi-square = 95.2339315
-    Akaike info crit   = 61.8216365
-    Bayesian info crit = 63.5164846
+    chi-square         = 157.466277
+    reduced chi-square = 5.24887591
+    Akaike info crit   = 57.5692241
+    Bayesian info crit = 62.0587468
 [[Variables]]
-    A:    1.3671e-04 +/- 7.6552e-06 (5.60%) (init = 5e-05)
-    mu:   0.47467414 +/- 5.7146e-04 (0.12%) (init = 0.477)
-    sig:  0.02449929 +/- 0.00150921 (6.16%) (init = 0.024)
+    A:     3.2964e-06 +/- 7.2105e-08 (2.19%) (init = 5e-05)
+    mu:    0.46170731 +/- 0.00111208 (0.24%) (init = 0.4627277)
+    sigL:  0.11334876 +/- 0.00362011 (3.19%) (init = 0.1109065)
+    sigG:  0.0084 (fixed)
+    c:     2e-07 (fixed)
 [[Correlations]] (unreported correlations are < 0.100)
-    C(A, sig) = -0.774
-a = 13.236839172135086 +/- 0.015935822007223172
-BeamWidthCorrectedSig = 0.014831227836043872 +/- 0.0026574898241899713
-d_coh = 2661.8441871963064 +/- 476.9547012056625
+    C(A, sigL)  =  0.822
+    C(A, mu)    = -0.499
+    C(mu, sigL) = -0.454
+a = 13.60858955438375 +/- 0.03277808659492021
+d_coh = 348.2915748232007 +/- 11.12367528936658
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Pen2_2_ai_0-11.h5
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 29
+    # data points      = 17
+    # variables        = 3
+    chi-square         = 345.405240
+    reduced chi-square = 24.6718029
+    Akaike info crit   = 57.1955849
+    Bayesian info crit = 59.6952249
+[[Variables]]
+    A:     3.2621e-06 +/- 1.0831e-07 (3.32%) (init = 5e-05)
+    mu:    0.43622778 +/- 6.9355e-04 (0.16%) (init = 0.4357351)
+    sigL:  0.03907589 +/- 0.00246355 (6.30%) (init = 0.04453507)
+    sigG:  0.0084 (fixed)
+    c:     2e-07 (fixed)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(A, sigL) =  0.693
+a = 14.40345065606941 +/- 0.022899869853718422
+d_coh = 1010.3012552892365 +/- 63.694694161067595
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hex1_2_ai_0-11.h5
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 29
+    # data points      = 17
+    # variables        = 3
+    chi-square         = 334.844881
+    reduced chi-square = 23.9174915
+    Akaike info crit   = 56.6677186
+    Bayesian info crit = 59.1673587
+[[Variables]]
+    A:     3.0899e-06 +/- 7.8866e-08 (2.55%) (init = 5e-05)
+    mu:    0.44165343 +/- 4.4159e-04 (0.10%) (init = 0.4415658)
+    sigL:  0.02309105 +/- 0.00128369 (5.56%) (init = 0.02555754)
+    sigG:  0.0084 (fixed)
+    c:     2e-07 (fixed)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(A, sigL) =  0.477
+a = 14.226506187869099 +/- 0.014224393480920689
+d_coh = 1709.6851215547442 +/- 95.04596700838626
+#Fitting /home/dominique/PhD/Thesis/data/monolayers/preparation/solventProperties/gisaxs/DD192_Hep1_2_ai_0-11.h5
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 25
+    # data points      = 22
+    # variables        = 3
+    chi-square         = 579.341578
+    reduced chi-square = 30.4916620
+    Akaike info crit   = 77.9586955
+    Bayesian info crit = 81.2318229
+[[Variables]]
+    A:     4.8426e-06 +/- 9.5476e-08 (1.97%) (init = 5e-05)
+    mu:    0.47485749 +/- 3.0040e-04 (0.06%) (init = 0.4748731)
+    sigL:  0.01505015 +/- 6.8246e-04 (4.53%) (init = 0.01489098)
+    sigG:  0.0084 (fixed)
+    c:     2e-07 (fixed)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(A, sigL) =  0.244
+a = 13.231728201407897 +/- 0.008370549278138942
+d_coh = 2623.1252194860954 +/- 118.94762688380564
