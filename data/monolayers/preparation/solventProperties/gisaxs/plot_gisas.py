@@ -155,7 +155,7 @@ def plot_gisas(filepath, sample_name, f, A10, q10, dq10):
       linestyle='-', marker='None', color='black', zorder=10, alpha=0.5
     )
   ax2.set_yscale('log')
-  ax2.get_yaxis().set_visible(False)
+  # ax2.get_yaxis().set_visible(False)
   plt.setp(ax.get_xticklabels(), visible=False)
   # plt.setp(ax2.get_yticklabels(), visible=False)
   # ax.legend(loc='best')

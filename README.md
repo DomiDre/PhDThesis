@@ -28,6 +28,9 @@
 - Ac-CoFe-C : AH11
 - Ac-CoFe-C-2 : YF45
 - Ac-CoFe-C-3 : AH22
+- Ol-CoFe-S: DZ1521
+- Ol-Fe-C-ML: DD199
+
 #### Monolayer Preparation
 - Ol-SV-None   : DD172.1
 - ML-SV-HexTet : DD192.Hex2.2
@@ -40,6 +43,8 @@
 - ML-OA-1t10-4 : DD212.8
 - ML-Ac-CoFe-C : DD205.4
 - ML-Ac-CoFe-C-2 : DD175.28
+- Ol-CoFe-S-HexOct: DD117.3
+- Ol-Fe-C-ML-HepOct: DD200.8
 
 ### Double Layers
 - DL-0.125% : DD213.7

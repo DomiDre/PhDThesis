@@ -109,7 +109,7 @@ ax.text(0.07, 0.85,
   horizontalalignment='left',
   verticalalignment='top',
   transform=ax.transAxes)
-ax.set_xlabel(r'$\mathit{d} \, / \, nm$')
+ax.set_xlabel(r'$\mathit{a} \, / \, nm$')
 ax.set_ylabel('$p(d)$')
 ax.set_xlim([left_xlim, right_xlim])
 ax.set_ylim([0, 0.65])

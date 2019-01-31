@@ -10,6 +10,7 @@ import numpy as np
 from PPMS.ppms import PPMS
 
 datfiles = ['./CO2_HYS.DAT', './MA1588_HYS300K.DAT', './MA15100_HYS300K.DAT', './MSCO28_HYS300K.DAT', './DTOLUENE_HYS300K.DAT']
+datfiles = ['./DTOLUENE_HYS300K.DAT']
 slopes = []
 def get_slope(datfile):
   ppms = PPMS()

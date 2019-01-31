@@ -16,6 +16,8 @@
       Ac-CoFe-C   & TEM, XRD, EDX, SAXS, SANS(POL), VSM \\
       Ac-CoFe-C-2 & TEM, XRD, EDX, SAXS, SANS(POL), VSM \\
       Ac-CoFe-C-3 & TEM, SAXS \\
+      Ol-Fe-C-ML  & TEM \\
+      Ol-CoFe-S   & TEM \\
       \hline
     \end{tabular}
   \end{table}
@@ -71,7 +73,7 @@
     where $N_i$ is the number of atoms of element $i$ in a unit cell, $m_i$ the respective atomic mass read from the periodic table of elements and $a$ the cubic lattice constant.
 
   \paragraphNewLine{Small-Angle Scattering}
-    For the measurement of SAXS the nanoparticle dispersions are filled in borosilicate capillaries (Hilgenberg GmbH) with $1.5 \unit{mm}$ diameter and a $0.01 \unit{mm}$ wall thickness, which are sealed using a plastic stopper and glue gun.
+    For the measurement of SAXS the nanoparticle dispersions Ac-CoFe-C-x and Ol-CoFe-C are filled in borosilicate capillaries (Hilgenberg GmbH) with $1.5 \unit{mm}$ diameter and a $0.01 \unit{mm}$ wall thickness, which are sealed using a plastic stopper and glue gun.
     The used solvents and concentrations are given in \reftab{tab:monolayers:charMethod:sampleConcentrations}.
     The concentrations were roughly estimated by gravimetry, where first a container is measured empty, then the solvent in the dispersion is evaporated within the container and the weight of the particles is given by the additional mass thereafter.
     The stated mass concentration overestimates the inorganic content of the sample as organic contents in the dispersion are not removed.
@@ -152,7 +154,8 @@
       y &\eq \frac{2}{\nu} x + \frac{r \nu - 6}{\nu (1 + r)},\\
         & \textsf{where\,} \hspace{0.5cm} \nu \eq \frac{V_\textsf{w\"ustite}}{V_\mathrm{inv.\,spinell}} \biggl( \frac{a_\mathrm{inv.\,spinell}}{a_\textsf{w\"ustite}} \biggr)^3.
     \end{align}
-    The volumes of the two phases are determined from the particle size, shell thickness and superball exponent on the fly during the fitting process, such that y is readily determined with varied particle dimensions and cobalt content in \ch{Co_x Fe_{3-x}O4}.
+    The volumes of the two phases are determined from the particle size, shell thickness and superball exponent on the fly during the fitting process, such that y is readily determined with varied particle dimensions and cobalt content $x$ in \ch{Co_x Fe_{3-x}O4}.
+
     % As SAXS is also sensitive to the difference of the nanoparticle core and shell size due to a stronger contrast between w\"ustite and spinell phase, the data sets for SAXS and SANS are fitted simultaneously.
     By this method, the combination of SAXS and SANS on Ol-CoFe-C provides the means to determine the particle size and size distribution, the individual core and shell thickness and atomic composition of the two phases, while being self-consistent with EDX and XRD results.
     The scattering length density of the oleic acid surfactant shell and the solvents SLD is fixed to the values tabulated in \refapp{appendix:slds}.
@@ -203,11 +206,20 @@
     \begin{align}
       M_s \eq \frac{\bar{\mu}}{V_p}.
     \end{align}
-    The average particle volume is hereby taken from the previously obtained SAXS data evaluation.
+    The average particle volume is hereby taken from the previously obtained SAXS data evaluation and the data is corrected for the diamagnetic excess susceptibility.
+
+    \begin{figure}[tb]
+      \centering
+      \includegraphics{monolayer_PPMS_Dispersion_ZFC_FC_Ac_CoFe_C}
+      \includegraphics{monolayer_VSM_DispersionHyst_Ac_CoFe_C}
+      \caption{\label{fig:monolayers:charMethods:JumpMagnetization}Example of a field- (left) and temperature-dependent (right) magnetization measurement of nanocubes dispersed in toluene.}
+    \end{figure}
 
     The measurements in the dry state on a substrate are scaled to their saturation value and compared to the dispersion measurements.
-    As the temperature-dependent magnetization of the liquid dispersions showed in all cases a jump in a order of magnitude upon freezing, the rescaling of the dispersion $10 \unit{K}$ is not straight forward.
-    As an increase in the spontaneous magnetization value is still expected for lower temperatures, the observed increase for the dry nanocubes on the substrate is used to rescale the dispersion at $10 \unit{K}$.
+    As the temperature-dependent magnetization of the liquid dispersions showed in all cases jumps upon freezing depicted in \reffig{fig:monolayers:charMethods:JumpMagnetization}, the rescaling of the dispersion $10 \unit{K}$ is not straight forward.
+    It should be noted that a relatively large air bubble is present from the sealing procedure of the vial.
+    Therefore it is possible that parts of the liquid dispersion are distributed over a larger range in the vial during the vibrating measurement, and thus the sensitivity is smaller in the liquid state in comparison to the frozen state \cite{Boekelheide_2016_Artif}.
+    However, an increase in the spontaneous magnetization value is still expected for the magnetization at lower temperatures, hence the observed increase for the dry nanocubes on the substrate is used to rescale the dispersion at $10 \unit{K}$.
 
     Furthermore, the temperature-dependent magnetization of the dried nanocubes on the substrate is measured after zero-field cooling and field cooling at a magnetic field of $10 \unit{mT}$.
     From the maximum of the zero-field cooled curve, the blocking temperature of the nanocubes is estimated.

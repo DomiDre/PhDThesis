@@ -28,5 +28,5 @@ def plot_tiffile(semFilepath, sample_name, x0=None, y0=None, savelabel=None):
   semFFT.fig.savefig(cwd + '/' + savefile, bbox_inches='tight')
   semFFT.fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')
 
-plot_tiffile(cwd+"/DD200_8_05.tif", 'Ol-Fe-C-HepOct', 0.54, 0.9)
+plot_tiffile(cwd+"/DD200_8_05.tif", 'Ol-Fe-C-ML-HepOct', 0.44, 0.9)
 plot_tiffile(cwd+"/DD117_03_09.tif", 'Ol-CoFe-S-HexOct', 0.475, 0.9)

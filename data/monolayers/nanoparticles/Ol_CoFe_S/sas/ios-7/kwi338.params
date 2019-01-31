@@ -1,9 +1,0 @@
-d_c     30e-3
-d_s     8.5e-3
-d_pix   5e-3
-dl/l    0.10
-wave    5.9984
-SAVE    KWi338_N.dat
-#       Path                            L_SD/m           L_c/m
-LSDD    ./KWI338/023564_N.dat            8                7.8
-SSDD    ./KWI338/023567_N.dat            2                5.3
