@@ -20,8 +20,17 @@
     The data is reduced with the COSMOS software, which is maintained by the instrumental scientists \cite{Gutfreund_2018_Towar}.
     Each sample is measured after zero-field cooling at $\mathrm{T} \eq 5 \unit{K}$ with polarized neutrons at a guide field of $B \eq 10 \unit{mT}$, then at saturation of $6 \unit{T}$ and finally at a negative field of $-100 \unit{mT}$.
 
-    For data evaluation the instrumental resolution is used as provided by the COSMOS reduction software.
-
+    \begin{figure}[tb]
+      \centering
+      \includegraphics{doublelayers_structure_verticalModel}
+      \caption{\label{fig:doubleLayers:characterization:doublelayerModel}Depiction of the double layer model used to simulate the expected half-polarized reflectivities for specific magnetic configurations in PNR.}
+    \end{figure}
+    Expected half-polarized reflectivities are simulated using the scattering length density profile model depicted in \reffig{fig:doubleLayers:characterization:doublelayerModel}.
+    The SLD, thickness and roughness of the substrate, silicon dioxide layer, two nanoparticle layers, as well as the oleic acid surfactant layers is used as determined for the monolayer prepared from the same nanocubes in \refsec{sec:monolayers:structure:verticalModel}.
+    The PMMA layer in-between is simulated with a scattering length density of $1.059 \cdot \unit{10^{-6} \angstrom^{-2}}$, with varied thickness.
+    For the simulation, the roughness between PMMA and oleic acid is neglected.
+    An instrumental resolution is included in the simulation with $\sigma_\theta \eq 0.3 \unit{mrad}$ and $\sigma_\lambda / \lambda \eq 2.5 \%$.
+    
   \paragraphNewLine{Vibrating Sample Magnetometry}
     The macroscopic magnetization of the double layers with varied spacer thickness are each measured field- and temperature-dependent using a PPMS Evercool II (\refsec{ch:instruments:laboratoryInstruments:vsm}).
     Each sample is cut with a diamond cutter to a size of approximately $5 \times 5 \unit{mm^2}$ and stuck on a quartz sample holder by a low temperature varnish (GE 7031).

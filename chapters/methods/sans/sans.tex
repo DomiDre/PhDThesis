@@ -5,7 +5,7 @@
   \section{Small-Angle Neutron Scattering (SANS)}
     \label{ch:methods:sans}
     The data acquisition in small-angle neutron scattering experiment is in many ways parallel to the SAXS experiment described in \refsec{ch:methods:saxs}.
-    The SANS experiments of this thesis have all been performed on ILL beamlines, either at D22 \refsec{ch:lss:d22} or D33 \refsec{ch:lss:d33}.
+    The SANS experiments of this thesis have all been performed on ILL beamlines, either at D22 (\refsec{ch:lss:d22}) or D33 (\refsec{ch:lss:d33}).
     Both instruments provide the data in the NeXus data format \cite{Koennecke_2015_Thene}, which is read for data reduction by the MATLAB script GRASP \cite{Dewhurst_2003_Grasp}.
     The script allows to load data sets of the sample, solvent and empty cell and perform essentially the same correction and rescaling to absolute units as described in the SAXS method.
     A background measurement of the blocked beam is subtracted from the sample and the solvent before they are scaled to their respective transmission and subtracted from one another.
@@ -22,7 +22,7 @@
     \end{figure}
 
     When using polarized neutrons in a SANSPOL experiments, two measurements are done for each experiment to obtain the scattering for two neutron spin states.
-    Typically, a field to magnetize the sample is applied perpendicular to the beam direction in the lateral plane and parallel to the neutron spin direction.
+    Typically, a field to magnetize the sample is applied perpendicular to the beam direction in the lateral plane.
     As the magnetic scattering only contributes in the plane where the neutron spin is perpendicular to the scattering vector, the scattered intensity pattern on the detector is anisotropic.
     Along the horizontal direction that is parallel to the magnetic field and the neutron spin, only pure nuclear scattering is measured, whereas on the horizontal direction the sum of both nuclear and magnetic scattering contributes.
     For an arbitrary angle between the scattering vector and the magnetic field $\alpha$, the intensity is thus described by the isotropic intensity from the nuclear form factor amplitude $F_\mathrm{nuc}$ and an anisotropic term that is a combination of both the nuclear and magnetic form factor amplitude $F_\mathrm{mag}$ \cite{Wiedenmann_2001_Small, Kohlbrecher_1997_Magne}
@@ -39,6 +39,7 @@
       P \eq \frac{n^+ - n^-}{n^+ + n^-},
     \end{align}
     with $n^+$ the number of neutrons with spin antiparallel to the field and $n^-$ the number of neutrons parallel to the field.
+    Alternatively, the experimental data $I^\pm(q)$ can directly be corrected for the polarization and flipping efficiency in GRASP during data reduction and then $\epsilon$ and $P$ can be set to $1$ in the calculation of the form factor calculation.
 
     In this thesis, typically a small cake slice of $\pm 10^\circ$ around the vertical axis, as depicted in \reffig{fig:methods:sans:sanspolData}, is azimuthally integrated to obtain $I^\pm$.
     In this case, the $\sin^2(\alpha)$ factor evaluates to

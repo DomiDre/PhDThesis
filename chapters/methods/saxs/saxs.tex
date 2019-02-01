@@ -4,9 +4,10 @@
 \begin{document}
   \section{Small-Angle X-ray Scattering (SAXS)}
     \label{ch:methods:saxs}
-    In the SAXS experiments presented in this work, a X-ray beam with small spot size is directed on nanoparticles in dispersion, which are filled into capillaries, and the scattered intensity is recorded on a position-sensitive detector at a sample-to-detector distance $L_\mathrm{SDD}$ behind the sample.
-    The used capillaries are made of borosilicate glass and have a relatively thin diameter of $d \approx 1.5\unit{mm}$ to minimize multiple scattering events in the dispersion.
+    In SAXS experiments as presented in this work, a X-ray beam with small spot size is directed on nanoparticles in dispersion, which are filled into capillaries, and the scattered intensity is recorded on a position-sensitive detector at a sample-to-detector distance $L_\mathrm{SDD}$ behind the sample.
+    The used capillaries are made of borosilicate glass and have a diameter of $d \approx 1.5\unit{mm}$ to minimize multiple scattering events in the dispersion.
     They are sealed with a small plastic stopper and a glue gun to allow the measurement of the dispersions in a vacuum.
+    All SAXS measurements in this thesis are performed on the GALAXI instrument (\refsec{ch:lss:galaxi}).
     To measure multiple samples over the course of a day automatically within the same setup, the capillaries are placed in a sample holder that can hold up to 11 capillaries, which is shown in \reffig{fig:methods:saxs:samples}.
     The sample holder can be shifted vertically to bring the respective capillary of the dispersion of interest into the beam path.
     \begin{figure}[tb]
@@ -29,7 +30,7 @@
       \caption{\label{fig:methods:saxs:agBH}AgBH calibration measurement to determine the beam center position and sample-to-detector distance. The measured intensity on the detector (left) is transformed to polar coordinates (right), where from the projection on $q$ the optimal parameters for beam position and distance are determined.}
     \end{figure}
 
-    To put the arbitrary count rate of the position-sensitive detector into absolute units of $\unit{cm^{-1}}$, either the instrument needs to be properly calibrated such that a monitor can be used to translate the unit directly, which is usually done for synchrotron instruments, or a pre-characterized calibration sample needs to be measured to determine the conversion factor.
+    To put the arbitrary count rate of the position-sensitive detector into absolute units of $\unit{cm^{-1}}$, a pre-characterized calibration sample needs to be measured to determine the conversion factor.
     For the samples measured at the GALAXI instrument (\refsec{ch:lss:galaxi}), a piece of fluorinated ethylene propylene (FEP) is measured at the largest possible distance before every experiment, which produces a broad ring on the detector where the peak value $I_\mathrm{FEP}^\mathrm{peak}$ is compared to a measurement of FEP that was performed at an ESRF beam line \cite{Meyer_2009_Struk}.
     Furthermore for the scaling of the intensity, parameters specific to the measurement of the sample need to be considered.
     A different sample-to-detector distance $L_\mathrm{SDD}$ for sample and FEP measurement needs to be accounted, as the counting rate drops with the square of the distance.
@@ -53,12 +54,12 @@
     By setting the transmission of the direct beam $T_\mathrm{d.\,b.}$ to one and the transmission of the blocked beam to $T_\mathrm{b.\,b.}$ to zero, the value of the scan at the position where the sample is measured provides the transmission of the sample $T_\mathrm{s}$.
     The width of the sample $d_\mathrm{s}$ is estimated as the width read from the sample profile at the half transmission value between the maximum transmission of the sample profile and the determined transmission value at the center.
 
-    After obtaining the azimuthally integrated and to absolute units scaled intensity, the scattering of the solvent and capillary need to be subtracted from the sample to obtain only the scattering from the nanoparticles.
+    After obtaining the azimuthally integrated and scaled intensity in  absolute units, the scattering of the solvent and capillary need to be subtracted from the sample to obtain only the scattering from the nanoparticles.
     As the scattering from the capillary happens to the major part at the glass material and not the inside of the capillary, here the thickness has to be treated differently than in the aforementioned rescaling factor.
     It is assumed that the glass material of all capillaries have approximately the same thickness.
-    Then the subtraction of the empty capillary from a sample is straight forward, by performing rescaling of the sample to it's respective width only after the empty capillary has been subtracted.
+    Then the subtraction of the empty capillary from a sample is straight forward, by performing the rescaling of the sample to it's respective width only after the empty capillary has been subtracted.
     This is done separately for both the sample measurement and the solvent measurement, which are subtracted from each other hereafter.
-    To increase the measured range of scattering vector magnitudes $q$, each sample is measured at a relatively small sample-to-detector distance for to study the large $q$ range, and a long sample-to-detector distance to study the small $q$ range.
+    To increase the measured range of scattering vector magnitudes $q$, each sample is measured at a relatively small sample-to-detector distance to study the wide $q$ range, and a long sample-to-detector distance to study the low $q$ range.
     Both data sets are merged to a single data set for model calculations.
 
     All of the laborious steps to determine peak intensities, center positions, distances and transmissions, as well as rescaling and subtraction of the data have been mostly automatized for this work, such that only a minimal amount of input needs to be given to reduce the data live at the experimental site.

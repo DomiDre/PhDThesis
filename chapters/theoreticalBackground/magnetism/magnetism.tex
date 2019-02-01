@@ -34,7 +34,7 @@
         M \eq \underbrace{- \frac{n e^2}{6 m_e} \braket{r^2}}_{\eq \chi_D} B,
       \end{align}
       where $\braket{r^2}$ is the mean square distance of the electrons from the nucleus.
-      The diamagnetic susceptibility $\chi_D$ is always negative and for common materials $\mu_0 \chi_D$ is in the order of $10^{-5}$ \cite{Lide_2004_Handb}.
+      The diamagnetic susceptibility $\chi_D$ is always negative and for common materials $\mu_0 \chi_D$ is in the order of $10^{-5}$ \cite{Lide_2004_Handb}, where $\mu_0 \chi_D \eq M/H$ is without unit when the the magnetization is scaled to the volume of the material.
 
       In magnetometry experiments, diamagnetism is observed from non-magnetic background materials such as a silicon substrate that carries the actual sample of interest or a solvent in which magnetic nanoparticles are dispersed.
       As the Langevin diamagnetism is a linear function in $B$ that is largely temperature independent, it can in general be easily separated from other magnetic contributions.
@@ -69,7 +69,7 @@
       \subsubsection{Exchange Interaction}
         A strong quantum mechanical effect between the spins of two electron, the exchange interaction, emerges from the Coulomb interaction and the Pauli exclusion principle.
         Electrons with overlapping states alter their charge distribution by aligning their spins $\vec{S}$ to one another and thus reduce their respective repulsion and the total energy of the system.
-        This can effectively expressed by minimizing the exchange energy given by the Heisenberg model
+        This can effectively be expressed by minimizing the exchange energy given by the Heisenberg model
         \begin{align}
           E_{ex} \eq -\sum_{i \neq j} J_{ij} \vec{S}_i \cdot \vec{S}_j,
         \end{align}
@@ -82,7 +82,7 @@
         Even though the Heisenberg model captures the alignment between magnetic moments, it is isotropic and does not describe observed anisotropies in magnetic materials.
         Due to spin-orbit coupling and dipole-dipole interaction between the electrons, the shape and crystal structure of a material influences the magnetic behaviour and makes some direction in the crystal energetically favorable to another.
         Along this direction, called the easy axis, the magnetization of the material increases stronger upon application of a magnetic field than along another direction, whereas the saturation magnetization reached at high fields is independent of the direction.
-        The anisotropy can be expressed phenomenological as power series in the directional cosines between the easy-axis and the direction of the magnetization in dependence of the crystal system.
+        The anisotropy can be expressed phenomenologically as power series in the directional cosines between the easy-axis and the direction of the magnetization in dependence of the crystal system.
 
         In this work, uniaxial and cubic anisotropies are considered.
         The uniaxial system is used to describe a single preferred direction as easy axis or when higher order terms in the anisotropy are negligible.
@@ -212,7 +212,7 @@
       It is noteworthy that for nanoparticle assemblies this model can become large rather quick as every nanoparticle in the assembly has to be modeled by a number of atomistic magnetic moments.
       However, as one is often not interested in the atomistic details, only the evolution of the nanoparticle superspins is of interest.
       Applying the LLG equation directly to macroscopic spins has some drawbacks in the implementation of thermal effects, as it models only coherent rotations of the superspin with constant magnitude and does not include spin wave dispersion.
-      For this purpose, the stochastic Landau-Lifshitz-Bloch (LLB) equation \cite{Evans_2012_Stoch, Atxitia_2017_Funda} has been developed as extension to describes the mesoscopic evolution of spins coupled on the mesoscopic scale by their exchange interaction such as in the case of nanoparticles. For macroscopic magnetic moment $\vec{\mu} \eq \vec{M} / M_S^0$ that are normalized to their saturation value at $T \eq 0$ it reads
+      For this purpose, the stochastic Landau-Lifshitz-Bloch (LLB) equation \cite{Evans_2012_Stoch, Atxitia_2017_Funda} has been developed as extension to describe the mesoscopic evolution of spins coupled on the mesoscopic scale by their exchange interaction such as in the case of nanoparticles. For macroscopic magnetic moments $\vec{\mu}_i \eq \vec{M}_i / M_S^0$ that are normalized to their saturation value at $T \eq 0$ it reads
       \begin{align}
         \begin{split}
           \frac{\dint \vec{\mu}_i}{\dint t} \eq&
@@ -225,8 +225,8 @@
       This modified differential equation introduces an additional term, damping factor and stochastic variable.
       It was demonstrated that this equation reproduces the Boltzmann distribution and can be applied to nanoparticles at high temperatures.
 
-      A full implementation and analysis of the discussed systems via either the stochastic LLG or LLB equations goes beyond the scope of this work.
-      However, the relevant magnetic field strengths and therefore temperature and time scales can still be estimated from this theory and is discussed in their respective chapters.
+      A full implementation and analysis of the discussed systems via either the stochastic LLG or LLB equations is not presented in this work.
+      However, the relevant magnetic field strengths and therefore temperature and time scales can still be estimated from this theory and are discussed in their respective chapters.
       In the following, we list the equations needed to determine the fields from the magnetic anisotropy and dipole-dipole interaction energy.
 
       For uniaxial and cubic anisotropy, the anisotropy field of a nanoparticle is given by
@@ -241,7 +241,7 @@
 
       The dipole-dipole field is evaluated for each particle by summing the dipole fields produced by the other superspins
       \begin{align}
-        \vec{B}^\mathsf{dip.-dip.}_i \eq \frac{\mu \mu_0}{4 \pi}  \sum_{i \neq j} \frac{3 \hat{r}_{ij}  (\mu_j \cdot \hat{r}_{ij}) - \mu_j}{r_{ij}^3},
+        \vec{B}^\mathsf{dip.-dip.}_i \eq \frac{\mu \mu_0}{4 \pi}  \sum_{i \neq j} \frac{3 \hat{r}_{ij}  (\hat{\mu}_j \cdot \hat{r}_{ij}) - \hat{\mu}_j}{r_{ij}^3},
       \end{align}
       with $\hat{r}_{ij}$ the unit vector describing the direction from the position of $\mu_j$ to $\mu_i$ and $r_{ij}$ the magnitude of the distance.
 \end{document}

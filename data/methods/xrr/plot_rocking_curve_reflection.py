@@ -32,12 +32,18 @@ ax.annotate("",
   arrowprops=dict(facecolor='black', arrowstyle='->'),
   horizontalalignment='left',
   verticalalignment='bottom',)
+
+ax.annotate("",
+  xy=(0.297, 0.05), xytext=(0.32, 0.05),
+  arrowprops=dict(facecolor='black', arrowstyle='->'),
+  horizontalalignment='left',
+  verticalalignment='bottom',)
 # ax.set_xscale('log')
 # ax.set_yscale('log')
 # ax.set_xticks([-0.3, 0, 0.3])
 ax.set_xlim([0.25,0.39])
 ax.set_ylim([0., 1.05])
-ax.set_xlabel(r'$2\alpha_i - \alpha_o \, / \, ^\circ$')
+ax.set_xlabel(r'$2 \mathit{\theta} \, / \, ^\circ$')
 ax.set_ylabel('$\mathit{I}\, / \, a.u.$')
 fig.savefig(cwd + '/' + savefile)
 fig.savefig(thesisimgs+'/'+savefile)
