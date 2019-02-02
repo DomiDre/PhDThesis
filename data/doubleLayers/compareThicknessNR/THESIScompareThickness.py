@@ -52,6 +52,9 @@ ax.errorbar(q_p_2, I_p_2*1e1, sI_p_2*1e1, alpha=0.8, marker='None', capsize=0, l
 ax.errorbar(q_m_2, I_m_2*1e1, sI_m_2*1e1, alpha=0.8, marker='None', capsize=0, label='DL-1.25% R-')
 ax.errorbar(q_p_3, I_p_3, sI_p_3,         alpha=0.8, marker='None', capsize=0, label='DL-2.5% R+')
 ax.errorbar(q_m_3, I_m_3, sI_m_3,         alpha=0.8, marker='None', capsize=0, label='DL-2.5% R-')
+
+ax.plot([0.45, 0.45], [.12, 0.12*3], color='black', ls='-', marker='None')
+ax.plot([0.93, 0.93], [.005, 0.015], color='black', ls='-', marker='None')
 ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel('$\mathit{q_z} \, / \, nm^{-1}$')
@@ -72,4 +75,4 @@ ax.legend(
 
 fig.savefig(cwd+'/'+savefile, bbox_inches='tight')
 fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')
-plt.show()
+# plt.show()

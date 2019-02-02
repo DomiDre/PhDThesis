@@ -6,7 +6,7 @@
     \centering
     \includegraphics{doubleLayers_XRR_compareThickness}
     \includegraphics{doubleLayers_XRR_MinimaPositions}
-    \caption{\label{fig:doublelayers:xrr:thicknessComparison}X-ray reflectivity of double layer samples DL-0.125\%, DL-0.25\%, DL-1.25\%, DL-2.5\% and DL-5\%, which vary in the thickness of the PMMA spacer layer between the nanocube layers.}
+    \caption{\label{fig:doublelayers:xrr:thicknessComparison}X-ray reflectivity (left) of double layer samples DL-0.125\%, DL-0.25\%, DL-1.25\%, DL-2.5\% and DL-5\%, which vary in the thickness of the PMMA spacer layer between the nanocube layers. Additionally marked by black vertical lines are the estimated peak positions visible in every sample from the nanocube thickness. For the samples DL-1.25\% and DL-2.5\% with well defined Kiessig fringes, linear fits through the minima positions of the fringes are performed to estimate the sample thickness (right).}
   \end{figure}
   By measuring the specular reflection of X-rays, the two length scales in the double layer samples are aimed to be quantified.
   \reffig{fig:doublelayers:xrr:thicknessComparison} shows the XRR of the samples with varied spacer thickness in direct comparison in a double logarithmic plot.
@@ -35,13 +35,15 @@
     \centering
     \includegraphics{doubleLayers_NR_compareThickness}
     \includegraphics{doubleLayers_NR_MinimaPositions}
-    \caption{\label{fig:doublelayers:nr:thickness}Neutron reflectivity measured after zero-field cooling at guide field of DL-0.25\%, DL-1.25\% and DL-2.5\%.}
+    \caption{\label{fig:doublelayers:nr:thickness}Neutron reflectivity (left) measured after zero-field cooling at guide field of DL-0.25\%, DL-1.25\% and DL-2.5\%. Analogue to \reffig{fig:doublelayers:xrr:thicknessComparison} the estimated peak positions visible from the nanocube thickness are marked by black vertical lines. The well-defined Kiessig fringe minimas are linearly fit to estimate the total sample thickness (right).}
   \end{figure}
 
   For DL-0.25\%, DL-1.25\% and DL-2.5\% polarized neutron reflectivity was obtained after zero-field cooling at the D17 instrument at ILL at $5 \unit{K}$ and is shown in \reffig{fig:doublelayers:nr:thickness}.
   Again Kiessig fringes are visible in all three cases, from which the sample thickness is determined from performing a linear fit through the observed minima to obtain the periodicity.
   A thickness of $31 \unit{nm}$, $88(1) \unit{nm}$ and $191(1) \unit{nm}$ is obtained respectively.
   For DL-0.25\% only two minima are observed, as to why no error estimation is given.
+  Also visible in the neutron reflectivity is the length scale of the nanocube thickness in each sample.
+  From the estimated peak positions of two peaks a thickness of $13(2) \unit{nm}$ can be estimated qualitatively.
 
   The observed thickness from SEM, XRR and NR are tabulated for comparison in \reftab{tab:doublelayers:ThicknessComparison}.
   In all three cases, the smallest thickness is observed by SEM, and the sample thickness from XRR is the largest.
@@ -51,15 +53,27 @@
   However, also here a difference is observed in the Kiessig fringes period between the neutron reflectivity at $5 \unit{K}$ in comparison to XRR at room temperature.
   For DL-1.25\% the larger period in the Kiessig fringes of the neutron reflectivity translates to a reduced thickness of $24 \unit{nm}$ and for DL-2.5\% even to $40 \unit{nm}$.
 
+  To estimate the interlayer distances in the samples, the estimated thickness of the nanocube layers as determined by SEM, XRR and NR is subtracted from the determined total sample thickness, respectively, in \reftab{tab:doublelayers:ThicknessComparison}.
+  Similar to the sample thickness, smaller values are obtained for the interlayer spacing from the low-temperature NR in comparison to the XRR measurement, which correspond to a contraction of $23(2) \%$ and $17(1) \%$.
+  The linear thermal expansion coefficient of PMMA is in the order of $10^{-4} \unit{K^{-1}}$ \cite{Michel_1986_Therm} and decreases with decreasing temperature to the order of $5 \cdot 10^{-7} \unit{K^{-1}}$ at $5 \unit{K}$ \cite{Lyon_1979_Tunne}.
+  Thus for a temperature difference of $\Delta T \eq 290 \unit{K}$, thermal contraction accounts for less than $3 \%$ of the observed difference.
+  For a better estimate of the layer distances that accounts for the varying contrast in the samples, instrumental resolution, \textit{etc.}, a quantitative evaluation of the data in the future by a scattering length density profile should give more precise data.
+
   \begin{table}[!htbp]
     \centering
-    \caption{\label{tab:doublelayers:ThicknessComparison}Mean sample thickness as determined by SEM, XRR and NR in direct comparison.}
+    \caption{\label{tab:doublelayers:ThicknessComparison}Mean sample thickness as determined by SEM, XRR and NR in direct comparison. An estimate of the interlayer distance is given for SEM by subtracting the linear offset of $14(8) \unit{nm}$, and for XRR and NR by subtracting two times the estimated nanocube layer thickness of $16(1) \unit{nm}$ and $13(2) \unit{nm}$ respectively.}
     \begin{tabular}{ c | l | l | l }
       \rule{0pt}{2ex} \textbf{Thickness}  & $d_\mathrm{SEM} \, / \unit{nm}$ & $d_\mathrm{XRR} \, / \unit{nm}$& $d_\mathrm{NR} \, / \unit{nm}$ \\
       \hline
       DL-0.25\%  & $27(3)$  &           & $31$\\
       DL-1.25\%  & $72(3)$  & $112(1)$  & $88(1)$\\
       DL-2.5\%   & $154(4)$ & $231(2)$  & $191(1)$\\
+      \hline
+      \rule{0pt}{2ex} \textbf{Interlayer Distance}\\
+      \hline
+      DL-0.25\%  & $13(9)$  &           & $5(4)$\\
+      DL-1.25\%  & $58(9)$  & $80(2)$   & $62(4)$\\
+      DL-2.5\%   & $140(9)$ & $199(3)$  & $165(4)$\\
       \hline
     \end{tabular}
   \end{table}
