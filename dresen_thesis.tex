@@ -14,8 +14,6 @@
 \input{\main/bibliography}
 \input{\main/config/config}
 \input{\main/config/aliases}
-\makeglossary
-\loadglsentries{\main/components/glossary/glossary}
 
 \graphicspath{{\main/images/}}
 \begin{document}
@@ -50,12 +48,11 @@
     \begin{appendices}
       \subfile{\main/chapters/appendix/appendix}
     \end{appendices}
+  \cleardoublepage
   \bookmarksetup{startatroot}
-    
   % \listoffigures
   % \listoftables
-  \glsaddall
-  \printglossary[nonumberlist]
+  \subfile{\main/components/glossary/glossary}
   \printbibliography
 
   \cleardoublepage

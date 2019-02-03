@@ -1,146 +1,109 @@
-%math abbreviations
-\newglossaryentry{vector}{%
-  name={\ensuremath{\vec{a} ,\, a ,\, \hat{a}}},
-  description={three dim. vector \ensuremath{\vec{a}}, magnitude \ensuremath{a} and unit direction \ensuremath{\hat{a} = \vec{a}/a}}
-}
-\newglossaryentry{inc_ang}{%
-  name={\ensuremath{\alpha_i}},
-  description={incident angle}
-}
-\newglossaryentry{scat_ang}{%
-  name={\ensuremath{\theta}},
-  description={scattering angle}
-}
-\newglossaryentry{inc_vec}{%
-  name={\ensuremath{\vec{k}_i}},
-  description={incoming wave vector}
-}
-\newglossaryentry{out_vec}{%
-  name={\ensuremath{\vec{k}_o}},
-  description={outgoing wave vector}
-}
-\newglossaryentry{lSSD}{%
-  name={\ensuremath{L_\mathrm{SSD}}},
-  description={sample-to-detector distance}
-}
-\newglossaryentry{lCSD}{%
-  name={\ensuremath{L_\mathrm{CSD}}},
-  description={collimation-to-sample distance}
-}
-\newglossaryentry{magmom}{%
-  name={\ensuremath{\vec{\mu}}},
-  description={magnetic moment}
-}
-\newglossaryentry{FC}{
-  name={FC},
-  description={field cooled}
-}
+\providecommand{\main}{../..}
+\documentclass[\main/dresen_thesis.tex]{subfiles}
+\begin{document}
+  \section*{Glossary}
+  \addcontentsline{toc}{chapter}{Glossary}
 
-\newglossaryentry{ZFC}{
-  name={ZFC},
-  description={zero-field cooled}
-}
+	\noindent \textbf{Abbreviations}
+	\begin{table}[H]
+      \begin{tabular}{p{3cm}l}
+        \textbf{DWBA}           & distorted wave Born approximation \\
+        \textbf{FC}             & field cooled \\
+        \textbf{ZFC}            & zero-field cooled \\
+        \textbf{\textit{bct}}   & body-centered tetragonal \\
+        \textbf{\textit{fcc}}   & face-centered cubic \\
+        \textbf{\textit{hcp}}   & hexagonal close-packed \\
+        \textbf{\textit{sc}}    & simple cubic \\
+			\end{tabular}
+  \end{table}
 
-%exp. Methods
-\newglossaryentry{EDX}{
-  name={EDX},
-  description={Energy-Dispersive X-ray Spectroscopy}
-}
-\newglossaryentry{SAXS}{
-  name={SAXS},
-  description={Small-Angle X-ray Scattering}
-}
-\newglossaryentry{SANS}{
-  name={SANS},
-  description={Small-Angle Neutron Scattering}
-}
-\newglossaryentry{SANSPOL}{
-  name={SANSPOL},
-  description={Small-Angle Scattering with Polarized Neutrons}
-}
-\newglossaryentry{GISAXS}{
-  name={GISAXS},
-  description={Grazing-Incidence Small-Angle X-ray Scattering}
-}
-\newglossaryentry{GISANS}{
-  name={GISANS},
-  description={Grazing-Incidence Small-Angle Neutron Scattering}
-}
-\newglossaryentry{polGISANS}{
-  name={polGISANS},
-  description={Grazing-Incidence Small-Angle Scattering with Polarized Neutrons}
-}
-\newglossaryentry{NR}{
-  name={NR},
-  description={Neutron Reflectometry}
-}
-\newglossaryentry{PNR}{
-  name={PNR},
-  description={Polarized Neutron Reflectometry}
-}
-\newglossaryentry{SEM}{
-  name={SEM},
-  description={Scanning Electron Microscopy}
-}
-\newglossaryentry{TEM}{
-  name={TEM},
-  description={Transmission Electron Microscopy}
-}
-\newglossaryentry{XRD}{
-  name={XRD},
-  description={X-Ray Diffraction}
-}
-\newglossaryentry{XRR}{
-  name={XRR},
-  description={X-ray Reflectometry}
-}
-\newglossaryentry{VSM}{
-  name={VSM},
-  description={Vibrating Sample Magnetometry}
-}
+	\noindent \textbf{Experimental Methods}
+	\begin{table}[H]
+    \begin{tabular}{p{3cm}l}
+      \textbf{EDX}         & Energy-Dispersive X-ray Spectroscopy \\
+      \textbf{GISANS}      & Grazing-Incidence Small-Angle Neutron Scattering \\
+      \textbf{GISAXS}      & Grazing-Incidence Small-Angle X-ray Scattering \\
+      \textbf{NR}          & Neutron Reflectometry \\
+      \textbf{PNR}         & Polarized Neutron Reflectometry \\
+      \textbf{polGISANS}   & GISANS with Polarized Neutrons \\
+      \textbf{SANS}        & Small-Angle Neutron Scattering \\
+      \textbf{SANSPOL}     & Small-Angle Scattering with Polarized Neutrons \\
+      \textbf{SAXS}        & Small-Angle X-ray Scattering \\
+      \textbf{SEM}         & Scanning Electron Microscopy \\
+      \textbf{TEM}         & Transmission Electron Microscopy \\
+      \textbf{VSM}         & Vibrating Sample Magnetometry \\
+      \textbf{XRD}         & X-Ray Diffraction \\
+      \textbf{XRR}         & X-ray Reflectometry \\
+    \end{tabular}
+  \end{table}
 
-%instruments
-\newglossaryentry{GALAXI}{
-  name={GALAXI},
-  description={instrument at the Forschungszentrum J\"ulich for SAXS, GISAXS and XRR}
-}
-\newglossaryentry{MARIA}{
-  name={MARIA},
-  description={neutron reflectometer at MLZ}
-}
-\newglossaryentry{D17}{
-  name={D17},
-  description={neutron reflectometer at ILL}
-}
-\newglossaryentry{D22}{
-  name={D22},
-  description={small-angle neutron scattering instrument at ILL}
-}
-\newglossaryentry{D33}{
-  name={D33},
-  description={small-angle neutron scattering instrument at ILL}
-}
-\newglossaryentry{BM26B}{
-  name={BM26B},
-  description={small-angle X-ray scattering instrument at ESRF}
-}
-\newglossaryentry{SuperADAM}{
-  name={SuperADAM},
-  description={neutron reflectometer at ILL}
-}
-\newglossaryentry{PPMS}{
-  name={PPMS},
-  description={Physical Property Measurement System, used for magnetometry}
-}
-\newglossaryentry{MLZ}{
-  name={MLZ},
-  description={Heinz Maier-Leibnitz Zentrum: facility for neutron research in Garching near Munich, Germany}
-}
-\newglossaryentry{ILL}{
-  name={ILL},
-  description={Institut Laue-Langevin, facility for neutron research in Grenoble, France}
-}
-\newglossaryentry{ESRF}{
-  name={ESRF},
-  description={European Synchrotron Radiation Facility, facility for X-ray research in Grenoble, France}
-}
+	\noindent \textbf{Instruments}
+	\begin{table}[H]
+			\begin{tabular}{p{3cm}l}
+        \textbf{BM26B}        & small-angle X-ray scattering instrument at ESRF \\
+        \textbf{D17}          & neutron reflectometer at ILL \\
+        \textbf{D22}          & small-angle neutron scattering instrument at ILL \\
+        \textbf{D33}          & small-angle neutron scattering instrument at ILL \\
+        \textbf{GALAXI}       & (GI)SAXS/XRR instrument at the Forschungszentrum J\"ulich\\
+        \textbf{MARIA}        & neutron reflectometer at MLZ \\
+        \textbf{SuperADAM}    & neutron reflectometer at ILL \\
+			\end{tabular}
+  \end{table}
+
+	\noindent \textbf{Magnetic Units \& Conversion to SI}
+	\begin{table}[H]
+      \begin{tabular}{p{3cm}l}
+        emu & for magnetic moments in the cgs system, $1 \mathrm{emu} \, = \, 10^{-3} \mathrm{A m^{2}}$ \\
+        $\frac{\mathrm{emu}}{\mathrm{mL}}, \frac{\mathrm{memu}}{\mathrm{\musf L}}$ & magnetization scaled to material volume, $1 \frac{\mathrm{emu}}{\mathrm{mL}} \, = \, \frac{\mathrm{kA}}{\mathrm{m}}$ \\
+			\end{tabular}
+  \end{table}
+
+  \noindent \textbf{Scientific Facilities}
+    \begin{table}[H]
+      \begin{tabular}{p{3cm}l}
+        \textbf{ESRF}         & European Synchrotron Radiation Facility\\
+                              & facility for X-ray research in Grenoble, France \\
+        \textbf{ILL}          & Institut Laue-Langevin\\
+                              & facility for neutron research in Grenoble, France \\
+        \textbf{MLZ}          & Heinz Maier-Leibnitz Zentrum\\
+                              & facility for neutron research in Garching, Germany \\
+      \end{tabular}
+    \end{table}
+
+	\noindent \textbf{Symbols}
+	\begin{table}[H]
+      \begin{tabular}{p{3cm}l}
+        $\vec{a} ,\, a ,\, \hat{a}$     & three dim. vector \ensuremath{\vec{a}}, magnitude \ensuremath{a} and unit direction $\hat{a} = \vec{a}/a$ \\
+        $a$                         & lattice constant\\
+        $a_\mathrm{p-p}$             & interparticle distance\\
+        $A$                         & area\\
+        $\alpha_i$                  & incident angle \\
+        $b$                         & bound scattering length\\
+        $\vec{B},\, \mu_0 \vec{H}$  & magnetic field, $\vec{B} \, = \, \mu_0 (\vec{H} + \vec{M})$ \\
+        $\delta(x)$                 & Dirac delta function \\
+        $d$                         & sample thickness\\
+        $f$                         & atomic form factor\\
+        $E$                         & energy\\
+        $\vec{k}$                   & wave vector\\
+        $k_B$                       & Boltzmann constant\\
+        $K$                         & magnetocrystalline anisotropy density\\
+        $\mathcal{L}(x)$            & Langevin function\\
+        $L_\mathrm{SSD}$            & sample-to-detector distance \\
+        $L_\mathrm{CSD}$            & collimation-to-sample distance \\
+        $\lambda$                   & wavelength \\
+        $\vec{M}$                   & magnetization of a material\\
+        $\vec{\mu}$                 & magnetic moment \\
+        $N$                         & number of particles\\
+        $n$                         & number density\\
+        $\theta$                    & scattering angle \\
+        $p(q),\, P(q)$              & form factor amplitude, form factor intensity $P(q) \eq |p(q)|^2$ \\
+        $\vec{q}$                   & scattering vector\\
+        $r, R$                      & reflection amplitude, reflectivity\\
+        $\vec{r}$                   & position vector\\
+        $\rho$                      & scattering length density\\
+        $S$                         & structure factor\\
+        $T$                         & temperature, or transmission\\
+        $V$                         & volume\\
+			\end{tabular}
+  \end{table}
+\end{document}
