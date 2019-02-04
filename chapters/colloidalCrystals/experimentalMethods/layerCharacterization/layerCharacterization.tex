@@ -45,7 +45,7 @@
     The obtained detector data are evaluated by defining a region of interest around the specular peak, which moves along the detector with increasing incident angle.
     The region of interest is integrated along the dimension on the detector perpendicular to the scattering direction, such that an intensity map with respect to the remaining detector dimension and the incident angle is obtained.
     Using the pixel-splitting rebinning algorithm described in \refapp{ch:appendix:numericalMethods:rebinningPixelSplitting}, the intensity map is transformed and rebinned to a ($\alpha_i - \alpha_o$, $\alpha_i+\alpha_o$) coordinate system, from which the specular intensity is obtained by integrating a box of $0.2 ^\circ$ width around $\alpha_i - \alpha_o \eq 0$.
-    Additionally, the data is corrected for diffuse scattering around the specular peak, by integrating boxes in the range $\alpha_i - \alpha_o \eq \pm (0.1 - 0.2)$, and subtracting the diffuse scattering intensity from the specular intensity.
+    Additionally, the data is corrected for diffuse scattering around the specular peak, by integrating boxes in the range $\alpha_i - \alpha_o \eq \pm (0.1^\circ - 0.2^\circ)$, and subtracting the diffuse scattering intensity from the specular intensity.
 
 
   \paragraphNewLine{Vibrating Sample Magnetometry}
