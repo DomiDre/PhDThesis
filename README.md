@@ -2,11 +2,11 @@
 
 ## Color palette:
 - #0EA8DF --- #MatNat Blau
-- #EE292F #Medizin Rot
-- #FAAB2D #HumWis Orange
-- #76C152 #Wiwi Gruen
-- #7F0128 #Rechtswis Bordeaux
-- #793394 #Philo Violett
+- #EE292F --- #Medizin Rot
+- #FAAB2D --- #HumWis Orange
+- #76C152 --- #Wiwi Gruen
+- #7F0128 --- #Rechtswis Bordeaux
+- #793394 --- #Philo Violett
 
 ## Sample Translation
 ### Loosely Packed Nanospheres
@@ -20,7 +20,7 @@
 - 8BL-40-IOS-11 : ES-S13
 - SC-IOS-7      : ES-S17
 - 8BL-15-IOS-11 : ES-S15
-- 8BL-30-IOS-11 : ES-S13
+- 8BL-30-IOS-11 : ES-S16
 
 ### Monolayer
 #### Nanoparticles
