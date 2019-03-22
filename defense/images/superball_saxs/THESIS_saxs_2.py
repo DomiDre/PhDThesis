@@ -59,7 +59,7 @@ ax.errorbar(q_sphere, I_sphere, sI_sphere,
 
 ax.plot(q_sphere, Imodel_sphere, marker='None', linestyle='-',
         label='Sphere', zorder=1, alpha=0.8)
-ax.plot(q_cube, Imodel_cube, marker='None', linestyle='-',
+ax.plot(q_cube, Imodel_cube, marker='None', linestyle='-', color='#793394',
         label='Cube', zorder=1, alpha=0.8)
 ax.plot(q_superball, Imodel_superball, marker='None', linestyle='-',
         label='Superball', zorder=1, alpha=0.8, color='black')
@@ -91,7 +91,7 @@ ax_inset.errorbar(q_sphere, I_sphere, sI_sphere,
 
 ax_inset.plot(q_sphere, Imodel_sphere, marker='None',
               linestyle='-', zorder=1, alpha=0.8)
-ax_inset.plot(q_cube, Imodel_cube, marker='None',
+ax_inset.plot(q_cube, Imodel_cube, marker='None', color='#793394',
               linestyle='-', zorder=1, alpha=0.8)
 ax_inset.plot(q_superball, Imodel_superball, marker='None',
               linestyle='-', zorder=1, alpha=0.8, color='black')

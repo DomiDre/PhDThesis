@@ -124,12 +124,12 @@ ax.set_ylim([0.8e-2, 1.5e1])
 #   color='#0EA8DF', zorder=1, alpha=0.2)
 
 
-ax_sld.plot(r_part, np.array(sld_part)/4, marker='None', ls=':',
-  color='#FAAB2D', zorder=2, alpha=0.5)
+ax_sld.plot(r_part, np.array(sld_part)/4, marker='None', ls='--',
+  color='black', zorder=2)
 ax_sld.plot(rMag_part, np.array(sldMag_part), marker='None',
   color='#EE292F', zorder=3)
-ax_sld.plot(r_oa, np.array(sld_oa)/4, marker='None', ls=':',
-  color='#0EA8DF', zorder=1, alpha=0.5)
+ax_sld.plot(r_oa, np.array(sld_oa)/4, marker='None', ls='--',
+  color='#0EA8DF', zorder=1)
 
 
 

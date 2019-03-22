@@ -63,7 +63,7 @@ ax.plot(q_sphere, Imodel_sphere, marker='None', linestyle='-',
 # ax.plot(q_superball, Imodel_superball, marker='None', linestyle='-',
 #         label='Superball', zorder=1, alpha=0.8)
 
-ax.plot(q_cube, Imodel_cube, marker='None', linestyle='-',
+ax.plot(q_cube, Imodel_cube, marker='None', linestyle='-', color='#793394',
         label='Cube', zorder=1, alpha=0.8)
 
 ax.text(0.05, 0.42, 'Ac-CoFe-C',
@@ -95,7 +95,7 @@ ax_inset.plot(q_sphere, Imodel_sphere, marker='None',
               linestyle='-', zorder=1, alpha=0.8)
 # ax_inset.plot(q_superball, Imodel_superball, marker='None',
 #               linestyle='-', zorder=1, alpha=0.8)
-ax_inset.plot(q_cube, Imodel_cube, marker='None',
+ax_inset.plot(q_cube, Imodel_cube, marker='None', color='#793394',
               linestyle='-', zorder=1, alpha=0.8)
 ax_inset.yaxis.tick_right()
 

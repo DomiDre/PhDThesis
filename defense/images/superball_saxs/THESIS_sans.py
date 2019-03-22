@@ -71,8 +71,8 @@ ax.text(0.05, 0.18, 'Ac-CoFe-C',
   horizontalalignment='left',
   verticalalignment='bottom',
   transform=ax.transAxes)
-ax_sld.plot(r_part, sld_part, marker='None', color='#FAAB2D', zorder=2, label="NP")
-ax_sld.plot(r_oa, sld_oa, marker='None', color='#0EA8DF', zorder=1, alpha=0.5, label="OA")
+ax_sld.plot(r_part, sld_part, marker='None', color='black', zorder=2, label="NP")
+ax_sld.plot(r_oa, sld_oa, marker='None', color='#0EA8DF', zorder=1, label="OA")
 
 ax_sld.set_xlabel("$\mathit{r} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_{nuc} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)

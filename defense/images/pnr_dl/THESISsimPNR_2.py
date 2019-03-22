@@ -33,6 +33,21 @@ def load_sld(file):
   rhoMag = np.array(rhoMag)*1e6
   return z, rho, rhoMag
 
+def color_variant(hex_color, brightness_offset=1):
+    if len(hex_color) != 7:
+        raise Exception("Passed %s into color_variant(), needs to be in #87c95f format." % hex_color)
+    rgb_hex = [hex_color[x:x+2] for x in [1, 3, 5]]
+    new_rgb_int = [int(hex_value, 16) + brightness_offset for hex_value in rgb_hex]
+    new_rgb_int = [min([255, max([0, i])]) for i in new_rgb_int] # make sure new values are between 0 and 255
+    # hex() produces "0x88", we want just "88"
+    new_rgb_hex = []
+    for i in new_rgb_int:
+      new_hex = hex(i)[2:]
+      if len(new_hex) == 1:
+        new_rgb_hex.append('0')
+      new_rgb_hex.append(new_hex)
+    return "#" + "".join(new_rgb_hex)
+
 fm_file =  './simulation_FM.xy'
 afm_file =  './simulation_AFM.xy'
 afm2_file =  './simulation_AFM2.xy'
@@ -56,8 +71,8 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.plot(q_p_fm, I_p_fm*1e0, alpha=0.8, marker='None', label='FM R+')
 ax.plot(q_m_fm, I_m_fm*1e0, alpha=0.8, marker='None', label='FM R-')
-ax.plot(q_p_afm, I_p_afm*1e-1, alpha=0.8, marker='None', label='AFM R+')
-ax.plot(q_m_afm, I_m_afm*1e-1, alpha=0.8, marker='None', label='AFM R-')
+ax.plot(q_p_afm, I_p_afm*1e-1, alpha=0.8, marker='None', label='AFM R+', color=color_variant('#76C152',-100))
+ax.plot(q_m_afm, I_m_afm*1e-1, alpha=0.8, marker='None', label='AFM R-', color='#7F0128')
 # ax.plot(q_p_afm2, I_p_afm2*1e0, alpha=0.8, marker='None', label='AFM2 R+')
 # ax.plot(q_m_afm2, I_m_afm2*1e0, alpha=0.8, marker='None', label='AFM2 R-')
 ax.set_xscale('log')
@@ -69,7 +84,7 @@ ax.set_ylim(1e-8, 2.5e2)
 
 ax_sld.plot(z_fm, rho_fm, marker='None', ls='-', color='black', alpha=0.5)
 ax_sld.plot(z_fm, rhoMag_fm, marker='None', ls='-', color='#0EA8DF')
-ax_sld.plot(z_afm, rhoMag_afm-0.1, marker='None', ls='-', color='#FAAB2D')
+ax_sld.plot(z_afm, rhoMag_afm-0.1, marker='None', ls='-', color=color_variant('#76C152',-100))
 ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=8)
 ax_sld.set_ylabel(r"$\rho \, / \, 10^{-6} \AA^{-2}$", fontsize=8)
 ax_sld.set_xticks([0, 25, 50, 75, 100])
