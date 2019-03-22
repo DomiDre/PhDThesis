@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 plt.style.use('phdthesis')
 
 from EM.sem_fft import SEM_FFT
-
+import fabio
 semFilepath = cwd+"/ES-S14_side_03.tif"
 chapter = 'looselyPackedNP'
 sample_name = 'SC-IOS-11'
