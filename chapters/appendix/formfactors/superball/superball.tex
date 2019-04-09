@@ -71,7 +71,7 @@
     \begin{align}
       p_\mathrm{orient.}(\vec{q}) \eq& \frac{1}{V_p} \int_{V} \dint \vec{r} e^{i \vec{q} \cdot \vec{r}}\\
       \eq& \frac{R^3}{V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \int_{-\zeta}^{\zeta} \dint z  e^{iR(q_x x + q_y y + q_z z)},\\
-      \eq& \frac{2R^3}{q_z R V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y  e^{i (q_x x R + q_y y R)} sin(q_z R \zeta),\\
+      \eq& \frac{2R^2}{q_z V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y  e^{i (q_x x R + q_y y R)} sin(q_z R \zeta),\\
       \mathrm{with}\nonumber\\
       \gamma \eq& \sqrt[2p]{1-x^{2p}}, \\
       \zeta \eq& \sqrt[2p]{1-x^{2p} -y^{2p}}.
@@ -82,10 +82,16 @@
     \end{align}
     which yields
     \begin{align}
-      \realpart (p_\mathrm{orient.}(\vec{q})) &=& \frac{2R^3}{q_z R V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \cos(R q_x x + R q_y y)  \sin (q_z R \zeta),\\
-      \imagpart (p_\mathrm{orient.}(\vec{q})) &=& \frac{2R^3}{q_z R V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \sin(R q_x x + R q_y y) \sin (q_z R \zeta).
+      \realpart (p_\mathrm{orient.}(\vec{q})) &=& \frac{2R^2}{q_z V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \cos(R q_x x + R q_y y)  \sin (q_z R \zeta),\\
+      \imagpart (p_\mathrm{orient.}(\vec{q})) &=& \frac{2R^2}{q_z V_p} \int_{-1}^{1} \dint x \int_{-\gamma}^{\gamma} \dint y \sin(R q_x x + R q_y y) \sin (q_z R \zeta).
     \end{align}
-    By using that $sin(-x) \eq - sin(x)$ it is straightforward to show that the imaginary part vanishes $\imagpart (\tilde{p}(q)) \eq 0$ and only the integration over the real part has to be solved numerically to obtain the oriented form factor $P_\mathrm{orient.}(q) \eq |p_\mathrm{orient.}(q)|^2$. This form factor is subsequently integrated over all possible orientations and a possible size distribution to obtain the form factor $P(q)$ which can be compared to the scattering pattern obtained from diluted nanoparticles in dispersion.
+    By using that $\sin(-x) \eq - \sin(x)$ it is straightforward to show that the imaginary part vanishes $\imagpart (\tilde{p}(q)) \eq 0$. 
+    The real part can be further transformed to
+    \begin{align}
+      p_\mathrm{orient.}(\vec{q}) = \frac{8R^2}{q_z V_p} \int_{0}^{1} \dint x \cos(R q_x x) \int_{0}^{\gamma} \dint y \cos(R q_y y)  \sin (q_z R \zeta),
+    \end{align}
+    which has to be solved numerically to obtain the oriented form factor $P_\mathrm{orient.}(q) \eq |p_\mathrm{orient.}(q)|^2$.
+    This form factor is subsequently integrated over all possible orientations and a possible size distribution to obtain the form factor $P(q)$ which can be compared to the scattering pattern obtained from diluted nanoparticles in dispersion.
     The particle size distribution is included by integrating
     \begin{align}
       \bar{P}_\mathrm{orient.}(\vec{q}) = \int \dint R \Lambda(R) V_p^2 P_\mathrm{orient.}(\vec{q}; R),
