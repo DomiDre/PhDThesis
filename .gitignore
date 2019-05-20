@@ -232,3 +232,5 @@ TSWLatexianTemp*
 *.int.gz
 
 *~
+
+*.zip
