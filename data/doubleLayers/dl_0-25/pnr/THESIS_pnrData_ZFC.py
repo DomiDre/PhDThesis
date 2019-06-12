@@ -71,11 +71,11 @@ ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 p_gf_p = ax.errorbar(q_gf_p, I_gf_p*sf_gf, sI_gf_p*sf_gf,
   linestyle='None',
   label='ZFC, GF, $R^{+}$',
-  zorder=0, capsize=0, marker='.', markersize=1, color='#793394')
+  zorder=0, capsize=0, marker='.', markersize=1, color='#35978f')
 p_gf_m = ax.errorbar(q_gf_m, I_gf_m*sf_gf, sI_gf_m*sf_gf,
   linestyle='None',
   label='ZFC, GF, $R^{-}$',
-  zorder=0, capsize=0, marker='.', markersize=1, color='#7F0128')
+  zorder=0, capsize=0, marker='.', markersize=1, color='#8c510a')
 
 p_sat_p = ax.errorbar(q_sat_p, I_sat_p*sf_sat, sI_sat_p*sf_sat,
   linestyle='None',
