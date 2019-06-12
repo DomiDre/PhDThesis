@@ -19,8 +19,11 @@ savefile = f'{chapter}_PPMS_10K_{sample_name}'
 
 def load_file(datafile, sf=1, chi=0):
   data = XyeData()
-  data.loadFromFile(datafile)
+  data.loadFromFile(datafile, sort=False)
   B1, M1, sM1 = data.getData()
+  B1 = B1[800:]
+  M1 = M1[800:]
+  sM1 = sM1[800:]
   return B1, (M1-chi*B1)*sf, sM1*sf
 
 B_1, M_1, sM_1 = load_file('../dl_0-125/ppms/rescale/DL_0-125_10K_rescaled.xye')
