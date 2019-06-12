@@ -40,9 +40,16 @@ ax.set_xscale('log')
 ax.set_yscale('log')
 ax.set_xlabel('$\mathit{q_z} \, / \, nm^{-1}$')
 ax.set_ylabel('$\mathit{R}$')
-ax.set_xlim(0.07, 3.1)
+ax.set_xlim(0.07, 3.5)
 ax.set_ylim(5e-7, 2.5e4)
-ax.legend(loc='lower left', fontsize=10)
+leg = ax.legend(loc='lower left', fontsize=10)
+
+plt.draw()
+bb = leg.get_bbox_to_anchor().inverse_transformed(ax.transAxes)
+xOffset = -0.05
+bb.y0 += xOffset
+bb.y1 += xOffset
+leg.set_bbox_to_anchor(bb, transform = ax.transAxes)
 
 fig.savefig(cwd+'/'+savefile, bbox_inches='tight')
 fig.savefig(thesisimgs+'/'+savefile, bbox_inches='tight')
