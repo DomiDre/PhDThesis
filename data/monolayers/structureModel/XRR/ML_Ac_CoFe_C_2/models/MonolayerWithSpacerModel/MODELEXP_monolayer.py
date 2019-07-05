@@ -10,8 +10,6 @@ from modelexp.models.reflectometry import CmplxCubeCSMonolayerOnSpacer, Instrume
 from modelexp.data import XyeData
 from modelexp.fit import LevenbergMarquardt
 
-from thesis_utils.materials import sld_xray_D8
-
 import numpy as np
 app = App()
 
@@ -25,15 +23,15 @@ dataRef.plotData()
 modelRef = app.setModel(CmplxCubeCSMonolayerOnSpacer, [InstrumentalResolution])
 
 
-modelRef.setParam("roughnessSubstrate", 19.400000000000002,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("roughnessSpacer", 11.600000000000001,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("roughnessShellCube", 11.0,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("roughnessCubeShell", 5.1000000000000005,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("roughnessShellAir", 13.9,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("packingDensity", 0.536,  minVal = 0, maxVal = 1, vary = True)
-modelRef.setParam("thicknessShellTop", 16.6,  minVal = 0, maxVal = 100, vary = False)
-modelRef.setParam("thicknessShellLower", 1.3,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("thicknessSpacer", 74.3,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessSubstrate", 18.6,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessSpacer", 12.100000000000001,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessShellCube", 11.3,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessCubeShell", 5.6000000000000005,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessShellAir", 16.1,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("packingDensity", 0.41500000000000004,  minVal = 0, maxVal = 1, vary = True)
+modelRef.setParam("thicknessShellTop", 13.19930712654106,  minVal = 0, maxVal = 100, vary = False)
+modelRef.setParam("thicknessShellLower", 1.8,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("thicknessSpacer", 76.80000000000001,  minVal = 0, maxVal = 100, vary = True)
 
 modelRef.setConstantParam("a", 85.784)
 modelRef.setConstantParam("sigA", 0)

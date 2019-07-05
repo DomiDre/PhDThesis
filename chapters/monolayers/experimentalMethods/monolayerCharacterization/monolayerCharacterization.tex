@@ -36,7 +36,11 @@
     The edge length of the nanocubes has been determined by small-angle scattering experiments and is therefore fixed.
     And the scattering length densities of the materials are fixed to the literature values, where for X-rays the imaginary part of the scattering length density is included to account for absorption by cobalt ferrite.
     The used scattering length densities are tabulated in \reftab{tab:monolayers:charMethod:reflectometryScatteringLenghts}.
-    For the NC layer a packing density factor $\eta$ is multiplied to the scattering length density to account for the particle spacing.
+    The scattering length density of the layer containing the nanocubes is a linear combination of the cobalt ferrite and oleic acid SLD
+    \begin{align}
+      \rho_\mathrm{NC Layer}  &\eq  \eta \rho_\mathrm{NC} + (1 - \eta) \rho_\mathrm{OA},
+    \end{align}
+    where the fraction of the cobalt ferrite SLD defines the packing density $\eta$ of the nanocubes in the layer.
     The model totals therefore to $9$ refined parameters.
 
     \begin{table}[ht]
@@ -60,13 +64,10 @@
     \end{align}
     Due to the strong weight of the reflectivity in the small-$q$ range, the errorbars are ignored for the refinement to focus the algorithm on finding a model that describes the whole dynamic range properly.
 
-    From the refined packing density, the relative particle spacing $a_{p-p}$ is estimated by assuming that the measured surface is fully covered by square lattice of nanocubes with SLD $\rho_\mathrm{NC}$ and the particle spacing is filled with oleic acid of SLD $\rho_\mathrm{OA}$ and thus
+    From the packing density $\eta$, the relative particle spacing $a_{p-p}$ is estimated by assuming that the measured surface is fully covered by a square lattice of nanocubes and the particle spacing is filled with oleic acid and thus
     \begin{align}
       \label{eq:monolayers:characterization:particleSpacing}
-      \begin{split}
-        &\eta \rho_\mathrm{NC}  \eq \frac{a^2}{a_{p-p}^2} \rho_\mathrm{NC} + \frac{a_{p-p}^2 - a^2}{a_{p-p}^2} \rho_\mathrm{OA},\\
-        \Rightarrow& a_{p-p} \eq a \sqrt {\frac{\rho_\mathrm{NC} - \rho_\mathrm{OA} }{\eta \rho_\mathrm{NC} - \rho_\mathrm{OA}}}
-      \end{split}
+      \eta \eq \frac{a^2}{a_{p-p}^2}.
     \end{align}
 
     \paragraphNewLine{Grazing-Incidence Small-Angle X-ray Scattering}

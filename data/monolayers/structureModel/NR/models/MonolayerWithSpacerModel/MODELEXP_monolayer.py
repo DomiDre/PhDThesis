@@ -10,7 +10,6 @@ from modelexp.models.reflectometry import CubeCSMonolayerOnSpacer, Magnetic, Dat
 from modelexp.data import MftData
 from modelexp.fit import LevenbergMarquardt
 
-from thesis_utils.materials import sld_xray_D8
 
 import numpy as np
 app = App()
@@ -33,15 +32,15 @@ modelRef.setConstantParam("polarizationEfficiency", 1.0)
 modelRef.setConstantParam("gamma", 0.0)
 
 
-modelRef.setParam("roughnessSubstrate", 20.041031505537347,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("roughnessSpacer", 23.527612662946385,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("roughnessShellCube", 14.57008761856568,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("roughnessCubeShell", 22.31642583659761,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessSubstrate", 20.041185753774926,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessSpacer", 23.52694515689599,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessShellCube", 14.570243367487063,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("roughnessCubeShell", 22.316437966056185,  minVal = 0, maxVal = 100, vary = True)
 modelRef.setParam("roughnessShellAir", 8.4,  minVal = 0, maxVal = 100, vary = False)
-modelRef.setParam("packingDensity", 0.506358957399347,  minVal = 0, maxVal = 1, vary = True)
+modelRef.setParam("packingDensity", 0.5000645870803766,  minVal = 0, maxVal = 1, vary = True)
 modelRef.setParam("thicknessShellTop", 39.6,  minVal = 0, maxVal = 100, vary = False)
-modelRef.setParam("thicknessShellLower", 36.60100058114454,  minVal = 0, maxVal = 100, vary = True)
-modelRef.setParam("thicknessSpacer", 24.25716072643032,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("thicknessShellLower", 36.6,  minVal = 0, maxVal = 100, vary = True)
+modelRef.setParam("thicknessSpacer", 24.2564768302209,  minVal = 0, maxVal = 100, vary = True)
 modelRef.setParam("bg", 1.3999999999999998e-07,  minVal = 0, maxVal = 2e-06, vary = False)
 
 # modelRef.setParam("roughnessSubstrate", 11.100000000000001,  minVal = 0, maxVal = 100, vary = True)

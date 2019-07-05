@@ -14,14 +14,14 @@ import numpy as np
 import warnings
 from modelexp.data import MultiData, XyemData, XyData
 
-from PlottingTemplates.saxssanssanspol import colors, inset_fontsize, color_variant
+inset_fontsize = 8
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
 
 sample_name = 'ML_Ac-CoFe-C_WithSpacer'
 Chapter = 'monolayers'
-fit_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespreadSymmetric/fit_result.dat"
-sld_file = cwd + "/models/cmplxMonolayerWithSpacerModelLowerWavespreadSymmetric/fit_sld.dat"
+fit_file = cwd + "/models/cmplxMonolayerWithSpacerModel/fit_result.dat"
+sld_file = cwd + "/models/cmplxMonolayerWithSpacerModel/fit_sld.dat"
 
 labeltext = 'ML-Ac-CoFe-C'
 q_min, q_max = 1e-1, 3.99
@@ -62,7 +62,7 @@ fig = plt.figure()
 ax = fig.add_axes([left,bottom, 1-left-0.01, 1-bottom-0.01])
 ax_sld = fig.add_axes([x0in, y0in, widthin, heightin])
 ax.errorbar(q, I, sI,\
-  linestyle='None', color=colors['sanspol_p_sa_data'],
+  linestyle='None', color='#0EA8DF',
   label='XRR', zorder=0, capsize=0, marker='.')
 ax.plot(q, Imodel, zorder=1, color='black', marker='None')
 ax.legend(loc='lower left', fontsize=inset_fontsize)
@@ -75,7 +75,7 @@ ax.set_ylim([I_min, I_max])
 ax.text(0.05, 0.15, labeltext,
   transform=ax.transAxes, fontsize=inset_fontsize)
 ax_sld.plot(r, sld, marker='None',
-  color=colors['sanspol_sld'])
+  color='black')
 ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=inset_fontsize)
 ax_sld.set_ylabel(r"$\rho_\mathrm{el.} \, / \, 10^{-6} \AA^{-2}$", fontsize=inset_fontsize)
 ax_sld.set_xticks([0, 10, 20])
