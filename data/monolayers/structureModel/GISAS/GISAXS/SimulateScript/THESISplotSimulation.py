@@ -6,7 +6,33 @@ plt.style.use('phdthesis')
 
 import numpy as np
 import matplotlib.colors as mcolors
-from uzkBornAgain import Pilatus1M, utils
+def get_cmap():
+  def make_colormap(seq):
+    """Return a LinearSegmentedColormap
+    seq: a sequence of floats and RGB-tuples. The floats should be increasing
+    and in the interval (0,1).
+    """
+    cdict = {'red': [], 'green': [], 'blue': []}
+    for i, item in enumerate(seq):
+      pos, r, g, b = item
+      cdict['red'].append([pos, r, r])
+      cdict['green'].append([pos, g, g])
+      cdict['blue'].append([pos, b, b])
+    return matplotlib.colors.LinearSegmentedColormap('CustomMap', cdict)
+  #Nice Coloring:
+  c = matplotlib.colors.ColorConverter().to_rgb
+  custom_colors = [(0, 0, 0, 0),\
+        (0.18, 0.05, 0.05, 0.2),\
+        (0.28, 0, 0, 1),\
+        (0.4, 0.7, 0.85, 0.9),\
+        (0.45, 0, 0.75, 0),\
+        (0.6, 1, 1, 0),\
+        (0.75, 1, 0, 0),\
+        (0.92 , 0.6, 0.6, 0.6),\
+        (1  , 0.95, 0.95, 0.95)]
+  custom_cmap = make_colormap(custom_colors)
+  custom_cmap.set_bad(color='black')
+  return custom_cmap
 
 
 chapter = 'monolayers'
@@ -126,7 +152,7 @@ ax = fig.add_axes([x0, 0.42, width, 0.57])
 ax2 = fig.add_axes([x0, y0, width, 0.25])
 pcm = ax.pcolormesh(qy, qz, I.T,\
                     norm=mcolors.LogNorm(),\
-                    cmap=utils.get_cmap(), vmin=vmin, vmax=vmax)
+                    cmap=get_cmap(), vmin=vmin, vmax=vmax)
 ax.axhline(qz_min, color='white', marker='None', alpha=0.5)
 ax.axhline(qz_max, color='white', marker='None', alpha=0.5)
 txt = ax.text(0.95, 0.95,\
