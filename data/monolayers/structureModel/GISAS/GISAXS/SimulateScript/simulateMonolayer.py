@@ -1,21 +1,21 @@
 import numpy
 import bornagain as ba
 from bornagain import deg, angstrom, nm, kvector_t
-
+import matplotlib.pyplot as plt
 
 def get_sample():
     # Defining Materials
     material_air       = ba.MaterialBySLD("Air", 0.0, 0.0)
     material_oleicAcid = ba.MaterialBySLD("OleicAcid", 8.52e-06, 1.3e-08)
-    material_nc        = ba.MaterialBySLD("Particle", 4.119e-05, 3e-06)
+    material_nc        = ba.MaterialBySLD("Particle", 4.121e-05, 3e-06)
     material_sio2      = ba.MaterialBySLD("SiO2", 2.26763e-05, 2.232e-07)
     material_si        = ba.MaterialBySLD("Si", 2.0064e-05, 3.5e-07)
 
     # Defining Layers
     layer_air = ba.Layer(material_air)
-    layer_oleicAcid = ba.Layer(material_oleicAcid, 10.18)
+    layer_oleicAcid = ba.Layer(material_oleicAcid, 10.08)
     layer_oleicAcid.setNumberOfSlices(10)
-    layer_sio2 = ba.Layer(material_sio2, 7.4)
+    layer_sio2 = ba.Layer(material_sio2, 7.7)
     layer_si = ba.Layer(material_si)
 
     # Defining Form Factors
