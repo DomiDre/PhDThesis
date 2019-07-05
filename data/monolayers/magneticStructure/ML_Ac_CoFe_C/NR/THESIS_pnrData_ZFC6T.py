@@ -14,9 +14,23 @@ import numpy as np
 import warnings
 from modelexp.data import XyeData, XyemData, MultiData
 import matplotlib.patches as mpatches
-from PlottingTemplates.saxssanssanspol import color_variant, colors
 
 from matplotlib.legend_handler import HandlerTuple
+
+def color_variant(hex_color, brightness_offset=1):
+    if len(hex_color) != 7:
+        raise Exception("Passed %s into color_variant(), needs to be in #87c95f format." % hex_color)
+    rgb_hex = [hex_color[x:x+2] for x in [1, 3, 5]]
+    new_rgb_int = [int(hex_value, 16) + brightness_offset for hex_value in rgb_hex]
+    new_rgb_int = [min([255, max([0, i])]) for i in new_rgb_int] # make sure new values are between 0 and 255
+    # hex() produces "0x88", we want just "88"
+    new_rgb_hex = []
+    for i in new_rgb_int:
+      new_hex = hex(i)[2:]
+      if len(new_hex) == 1:
+        new_rgb_hex.append('0')
+      new_rgb_hex.append(new_hex)
+    return "#" + "".join(new_rgb_hex)
 
 # remove some annoying warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='matplotlib')
@@ -79,8 +93,8 @@ ax.errorbar(q_sat_m_fit, I_sat_m_fit*sf_sat, sI_sat_m_fit*sf_sat,
 
 
 handles, labels = ax.get_legend_handles_labels()
-ax.plot(q_sat_p_fit, Imodel_sat_p_fit*sf_sat, zorder=1, color=color_variant(colors['sanspol_p_sa_data'], -100), marker='None')
-ax.plot(q_sat_m_fit, Imodel_sat_m_fit*sf_sat, zorder=1, color=color_variant(colors['sanspol_m_sa_data'], -100), marker='None')
+ax.plot(q_sat_p_fit, Imodel_sat_p_fit*sf_sat, zorder=1, color=color_variant('#0EA8DF', -100), marker='None')
+ax.plot(q_sat_m_fit, Imodel_sat_m_fit*sf_sat, zorder=1, color=color_variant('#EE292F', -100), marker='None')
 
 ax.text(0.05, 0.26, labeltext,
   transform=ax.transAxes, fontsize=10)
@@ -102,7 +116,7 @@ ax.set_ylabel("$\mathit{R}$")
 ax.set_xlim([q_min, q_max])
 ax.set_ylim([I_min, I_max])
 
-ax_sld.plot(z_sat, sldMag_sat, marker='None', color=color_variant(colors['sanspol_p_sa_data'], -100))
+ax_sld.plot(z_sat, sldMag_sat, marker='None', color=color_variant('#0EA8DF', -100))
 
 ax_sld.set_xlabel("$\mathit{z} \,/\,nm$", fontsize=8)
 ax_sld.set_ylabel(r"$\rho_\mathrm{mag.} \, / \, 10^{-6} \AA^{-2}$", fontsize=8)

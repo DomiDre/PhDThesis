@@ -10,8 +10,6 @@ from modelexp.models.reflectometry import CubeCSMonolayerOnSpacer, Magnetic, Dat
 from modelexp.data import MftData
 from modelexp.fit import LevenbergMarquardt
 
-from thesis_utils.materials import sld_xray_D8
-
 import numpy as np
 app = App()
 expRef = app.setExperiment(PolarizedReflectometry)
