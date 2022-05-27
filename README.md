@@ -1,14 +1,18 @@
 # PhDThesis
 
-## Color palette:
-- #0EA8DF --- #MatNat Blau
-- #EE292F --- #Medizin Rot
-- #FAAB2D --- #HumWis Orange
-- #76C152 --- #Wiwi Gruen
-- #7F0128 --- #Rechtswis Bordeaux
-- #793394 --- #Philo Violett
+Repository I used during the time of writing my PhD Thesis. Maybe it can be of use to somebody in the future.
 
-## Sample Translation
+
+## Used colors (similar to university colors):
+- #0EA8DF --- blue
+- #EE292F --- red
+- #FAAB2D --- orange
+- #76C152 --- green
+- #7F0128 --- bordeaux
+- #793394 --- violet
+
+
+## Sample Translation (Thesis ID - Lab ID)
 ### Loosely Packed Nanospheres
 #### Nanoparticles
 - IOS-11 : PMK18
